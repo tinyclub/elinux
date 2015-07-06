@@ -1,0 +1,12 @@
+{
+    "author": "http://www.celinuxforum.org/",
+    "description": "The GitBook Version of elinux.org",
+    "generator": "site",
+    "links": {
+        "sidebar": {
+            "CE Linux Forum": "http://www.celinuxforum.org/",
+            "Embedded Linux Wiki": "http://elinux.org"
+        }
+    },
+    "title": "Embedded Linux Wiki"
+}
