@@ -1,0 +1,13 @@
+{
+    "author": "http://www.celinuxforum.org/",
+    "description": "这是 elinux.org 的中文版本",
+    "generator": "site",
+    "links": {
+        "sidebar": {
+            "CE Linux Forum": "http://www.celinuxforum.org/",
+            "泰晓科技": "http://www.tinylab.org",
+            "项目首页": "http://www.tinylab.org/project/elinux"
+        }
+    },
+    "title": "嵌入式 Linux 知识库"
+}
