@@ -1,5 +1,5 @@
 
-# elinux.org GitBook Version
+# Embedded Linux Wiki (elinux.org)
 
 This is the gitbook version of the [embedded Linux wiki](http://elinux.org) created by [CE Linux Forum](http://www.celinuxforum.org/).
 
