@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-* Development Portals
+* [Development Portals](development_portals.md)
    * Legal Issues
 * Hardware Pages
 * Embedded Linux Information
