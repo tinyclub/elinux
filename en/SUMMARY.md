@@ -138,7 +138,7 @@
 
     * [Android-based Systems](android_portal/android_based_systems/README.md)
 
-        * [Products (announced & shipped)](android_portal/android_based_systems/Products_announced_shipped).md)
+        * [Products (announced & shipped)](android_portal/android_based_systems/Products_announced_shipped.md)
         * [Porting efforts and issues](android_portal/android_based_systems/Porting_efforts_and_issues.md)
         * [Getting Root (Jailbreaking)](android_portal/android_based_systems/Getting_Root_Jailbreaking.md)
         * [Miscellaneous Hardware Fixes](android_portal/android_based_systems/Miscellaneous_Hardware_Fixes.md)
