@@ -47,13 +47,12 @@
 
         * [Linux Kernel Resources](toolbox/dev_res/Linux_Kernel_Resources.md)
         * [Kernel Subsystems](toolbox/dev_res/Kernel_Subsystems.md)
-        * [The TTY Demystified](toolbox/dev_res/The_TTY_Demystified.md)
-        * [Device Tree](toolbox/dev_res/Device_Tree.md)
+        * [Device Tree](dev_portals/Device_Tree.md)
         * [Online Documentation](toolbox/dev_res/Online_Documentation.md)
-        * [Books](toolbox/dev_res/Books.md)
+        * [Books](toolbox/dev_res/Category:Books.md)
         * [Reference Material](toolbox/dev_res/Reference_Material.md)
         * [Podcasts](toolbox/dev_res/Podcasts.md)
-        * [Device drivers](toolbox/dev_res/Device_drivers.md)
+        * [Device drivers](dev_portals/Device_drivers.md)
         * [Beginning Programming](toolbox/dev_res/Beginning_Programming.md)
 
     * [Tips and Tricks](toolbox/tips_and_tricks/README.md)
