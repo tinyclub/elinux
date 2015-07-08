@@ -37,7 +37,7 @@ cat ${page}.md | \
 #  * Remove from `Navigation Menu` to the end
 
 cat ${page}.md | \
-    sed -e "/^## Content/,/^## Introduction/{s=](#\(.*\)=](#\L\1=g;s=_=-=g;s/.2f//g;s/.2c//g;s/.27//g}" |\
+    sed -e "/^## Content/,/^## Introduction/{s=](#\(.*\)=](#\L\1=g;s=_=-=g;s/.2f//g;s/.2c//g;s/.27//g;s/.5b//g;s/.5d//g;s/.28//g;s/.29//g;}" |\
     sed -e "s=(/=(${target_site}/=g" |\
     sed -e "/^Jump to:/d" |\
     sed -e "/^From eLinux.org/d" |\
