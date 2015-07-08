@@ -89,9 +89,27 @@ EXPORT_SYMBOL_GPL。这里是一些关于这个补丁的信息：
 
 * [USB：将USB驱动标记为只被GPL许可(LWN.net)][1]
  [1]: "http://lwn.net/Articles/266724/" "USB"
-* 
+* [Linux 2.6.25版本没有USB闭源驱动(Linux杂志)][2]
+ [2]:http://www.linux-magazine.com/Online/News/Linux-2.6.25-without-Closed-Source-USB-Drivers "Linux magazine"
+* [在内核版本2.6.25中的USB驱动只受GPL许可(Linux世界)][3]
+ [3]:http://www.networkworld.com/category/opensource-subnet/?q=taxonomy/term/24 "Linux world"
+* [实际的git commit][4]
+[4]:http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/commit/?id=782e70c6fc2290a0395850e8e02583b8b62264d8 "actual commit"
 
+#二进制专有的内核模块
 
+在嵌入式Linux领域中一个很重要的，也是比较显著的一个法律问题就是二进制（非GPL）内
+
+核模块是否违反Linux内核GPL协议。关于这个话题有不同的观点。
+
+下面是一篇有一些有趣信息的文章：
+
+* [支持闭源模块之第一部分：版权软件][1]
+  [1]:http://www.networkworld.com/article/2301697/smb/encouraging-closed-source-modules-part-1--copyright-and-software.html "part 1"
+* [支持闭源模块之第二部分:法律和模块接口][2]
+   [2]:http://www.networkworld.com/article/2301698/smb/encouraging-closed-source-modules-part-2--law-and-the-module-interface.html "part 2"
+* [支持闭源模块之第三部分:消除API更新税][3]
+  [3]:http://www.networkworld.com/article/2301701/smb/encouraging-closed-source-modules-part-3--elimating-the--api-update-tax-.html "part 3"
 
 
 
