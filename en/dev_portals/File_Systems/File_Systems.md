@@ -661,8 +661,6 @@ See
 [http://www.cs.bell-labs.com/magic/man2html/4/wikifs](http//www-cs.bell-labs.com/magic/man2html/4/wikifs)
 for more info.
 
-Retrieved from
-"[http://elinux.org/index.php?title=File\-Systems&oldid=311090](http//elinux-org/index.php?title=File-Systems&oldid=311090)"
 
 [Category](http://eLinux.org/SpecialCategories "Special:Categories"):
 

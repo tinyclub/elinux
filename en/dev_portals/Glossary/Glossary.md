@@ -236,8 +236,6 @@ particular process architecture or CPU.
 
 ## Z
 
-Retrieved from
-"[http://elinux.org/index.php?title=Glossary&oldid=169634](http://elinux.org/index.php?title=Glossary&oldid=169634)"
 
 [Category](http://eLinux.org/Special:Categories "Special:Categories"):
 

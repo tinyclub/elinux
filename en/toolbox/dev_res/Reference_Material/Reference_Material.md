@@ -28,6 +28,4 @@
 -   [Slab\_allocator](http://eLinux.org/Slab_allocator "Slab allocator")
 -   [Size\_Tunables](http://eLinux.org/Size_Tunables "Size Tunables")
 
-Retrieved from
-"[http://elinux.org/index.php?title=Reference\_Material&oldid=74365](http://elinux.org/index.php?title=Reference_Material&oldid=74365)"
 

@@ -60,6 +60,4 @@
 -   [Device Tree](http://eLinux.org/Device_Tree "Device Tree") - information about device
     tree (increasingly required for new embedded drivers)
 
-Retrieved from
-"[http://elinux.org/index.php?title=Device\_drivers&oldid=370490](http://elinux.org/index.php?title=Device_drivers&oldid=370490)"
 

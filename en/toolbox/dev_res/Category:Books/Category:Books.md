@@ -98,8 +98,6 @@ The following 11 pages are in this category, out of 11 total.
 </tbody>
 </table>
 
-Retrieved from
-"[http://elinux.org/index.php?title=Category:Books&oldid=231884](http://elinux.org/index.php?title=Category:Books&oldid=231884)"
 
 [Category](http://eLinux.org/Special:Categories "Special:Categories"):
 

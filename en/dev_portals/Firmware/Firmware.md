@@ -17,8 +17,6 @@ Linux kernel.
 Note that the [Bootloader](http://eLinux.org/Bootloader "Bootloader") page has a list of
 oft-used Linux bootloaders.
 
-Retrieved from
-"[http://elinux.org/index.php?title=Firmware&oldid=74251](http://elinux.org/index.php?title=Firmware&oldid=74251)"
 
 [Categories](http://eLinux.org/Special:Categories "Special:Categories"):
 

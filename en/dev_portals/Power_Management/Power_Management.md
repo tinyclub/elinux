@@ -119,8 +119,6 @@ you may want to look at the following papers:
     [archives](http://lists.osdl.org/pipermail/linux-pm/)).
 -   [Dynamic Power](http://dynamicpower.sourceforge.net) at sourceforge.
 
-Retrieved from
-"[http://elinux.org/index.php?title=Power\_Management&oldid=218720](http://elinux.org/index.php?title=Power_Management&oldid=218720)"
 
 [Category](http://eLinux.org/Special:Categories "Special:Categories"):
 

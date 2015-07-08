@@ -177,6 +177,4 @@ Book: The C Programming language by Brian Kernighan and Dennis Ritchie
 Online Resources: [http://www.learn-c.org/](http//www-learn-c.org/)
 (Interactive)
 
-Retrieved from
-"[http://elinux.org/index.php?title=Beginning\-Programming&oldid=337040](http//elinux-org/index.php?title=Beginning-Programming&oldid=337040)"
 

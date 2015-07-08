@@ -454,8 +454,6 @@ Up through July 2013:
      https://lists.ozlabs.org/listinfo/devicetree-discuss
      archive: http://news.gmane.org/gmane.linux.drivers.devicetree
 
-Retrieved from
-"[http://elinux.org/index.php?title=Device\_Tree&oldid=383461](http://elinux.org/index.php?title=Device_Tree&oldid=383461)"
 
 [Categories](http://eLinux.org/Special:Categories "Special:Categories"):
 

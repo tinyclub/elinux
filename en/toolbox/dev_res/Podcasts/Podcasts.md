@@ -12,6 +12,4 @@
     Linux Link podcast, and it's not on the radio. No longer updates on
     a regular schedule, but the archives are available.)
 
-Retrieved from
-"[http://elinux.org/index.php?title=Podcasts&oldid=74377](http://elinux.org/index.php?title=Podcasts&oldid=74377)"
 

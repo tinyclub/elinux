@@ -195,8 +195,6 @@ available:
 -   [Find a kernel function
     line](http://eLinux.org/Find-a-kernel-function-line "Find a kernel function line")
 
-Retrieved from
-"[http://elinux.org/index.php?title=Linux\-Kernel\-Resources&oldid=338516](http//elinux-org/index.php?title=Linux-Kernel-Resources&oldid=338516)"
 
 [Category](http://eLinux.org/SpecialCategories "Special:Categories"):
 

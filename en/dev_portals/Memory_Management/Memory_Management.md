@@ -232,10 +232,3 @@ Allocation](http://eLinux.org/Memory-Type-Based-Allocation "Memory Type Based Al
 [Excellent paper (2010) by Paul McKenney on how CPU caches
 operate](http//www2-rdrop.com/~paulmck/scalability/paper/whymb.2010.07.23a.pdf)
 
-Retrieved from
-"[http://elinux.org/index.php?title=Memory\-Management&oldid7022](http//elinux-org/index.php?title=Memory-Management&oldid7022)"
-
-[Category](http://eLinux.org/SpecialCategories "Special:Categories"):
-
--   [Linux](http://eLinux.org/CategoryLinux "Category:Linux")
-

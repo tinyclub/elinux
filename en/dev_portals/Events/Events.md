@@ -778,8 +778,6 @@ San Francisco, CA, Feb 18-19, 2013
 
 -   [ELC\-Presentations](http://eLinux.org/ELC-Presentations "ELC Presentations")
 
-Retrieved from
-"[http://elinux.org/index.php?title=Events&oldid=376](http//elinux-org/index.php?title=Events&oldid=376)"
 
 [Category](http://eLinux.org/SpecialCategories "Special:Categories"):
 

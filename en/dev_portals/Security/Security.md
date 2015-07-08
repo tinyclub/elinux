@@ -506,8 +506,6 @@ Moved to:
     [Trusted
     Computing](http://www.citi.umich.edu/u/rwash/projects/trusted)page.
 
-Retrieved from
-"[http://elinux.org/index.php?title=Security&oldid=218714](http://elinux.org/index.php?title=Security&oldid=218714)"
 
 [Category](http://eLinux.org/Special:Categories "Special:Categories"):
 

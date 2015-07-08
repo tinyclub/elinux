@@ -421,8 +421,6 @@
 -   [Mini210](http://eLinux.org/Mini210 "Mini210")
 -   [Tiny210](http://eLinux.org/Tiny210 "Tiny210")
 
-Retrieved from
-"[http://elinux.org/index.php?title=Development\-Platforms&oldid=384301](http//elinux-org/index.php?title=Development-Platforms&oldid=384301)"
 
 [Categories](http://eLinux.org/SpecialCategories "Special:Categories"):
 

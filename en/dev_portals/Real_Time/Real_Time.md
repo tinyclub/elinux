@@ -137,8 +137,6 @@ Tools for PRUSS
     provides a migration path from various RTOSes like VxWorks, PSOS+,
     etc. to Linux based on so-called skins.
 
-Retrieved from
-"[http://elinux.org/index.php?title=Real\_Time&oldid=218702](http://elinux.org/index.php?title=Real_Time&oldid=218702)"
 
 [Category](http://eLinux.org/Special:Categories "Special:Categories"):
 

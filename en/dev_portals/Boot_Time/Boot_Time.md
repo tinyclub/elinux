@@ -720,8 +720,6 @@ this discussion:
     you can use the command hwclock -s at the of the init instead of
     slowing down the kernel.
 
-Retrieved from
-"[http://elinux.org/index.php?title=Boot\_Time&oldid=380581](http://elinux.org/index.php?title=Boot_Time&oldid=380581)"
 
 [Categories](http://eLinux.org/Special:Categories "Special:Categories"):
 

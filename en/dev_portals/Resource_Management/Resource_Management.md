@@ -49,8 +49,6 @@ frameworks which are of interest to embedded developers.
     attempting to focus on infrastructure convergence using a simple
     basic model that more robust implementations can be built on top of.
 
-Retrieved from
-"[http://elinux.org/index.php?title=Resource\-Management&oldid=51559](http//elinux-org/index.php?title=Resource-Management&oldid=51559)"
 
 [Category](http://eLinux.org/SpecialCategories "Special:Categories"):
 

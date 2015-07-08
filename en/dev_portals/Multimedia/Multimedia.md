@@ -360,8 +360,6 @@ around EFL.
 kernel](http://www.kernel.org/pub/linux/kernel/v2.6/) tree, which has a
 "Documentation" sub-directory.
 
-Retrieved from
-"[http://elinux.org/index.php?title=Multimedia&oldid=218726](http://elinux.org/index.php?title=Multimedia&oldid=218726)"
 
 [Categories](http://eLinux.org/Special:Categories "Special:Categories"):
 

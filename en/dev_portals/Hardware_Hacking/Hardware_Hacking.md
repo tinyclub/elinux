@@ -145,8 +145,6 @@ Here is a list of original projects.
 -   [MUSB](http://eLinux.org/MUSB "MUSB") resources
 -   [Hello\-World\-in\-C](http://eLinux.org/Hello-World-in-C "Hello World in C")
 
-Retrieved from
-"[http://elinux.org/index.php?title=Hardware\-Hacking&oldid=252068](http//elinux-org/index.php?title=Hardware-Hacking&oldid=252068)"
 
 [Category](http://eLinux.org/SpecialCategories "Special:Categories"):
 

@@ -25,6 +25,4 @@ category, please click,
 
 [Networking](http://eLinux.org/Category:Networking "Category:Networking")
 
-Retrieved from
-"[http://elinux.org/index.php?title=Networking&oldid=218744](http://elinux.org/index.php?title=Networking&oldid=218744)"
 

@@ -169,8 +169,6 @@ sanitization feature.
     framework to scan open source code: it currently scans for copyright
     and license information and can easily be extended.
 
-Retrieved from
-"[http://elinux.org/index.php?title=Legal\-Issues&oldid=368582](http//elinux-org/index.php?title=Legal-Issues&oldid=368582)"
 
 [Category](http://eLinux.org/SpecialCategories "Special:Categories"):
 

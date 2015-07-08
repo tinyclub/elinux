@@ -610,8 +610,6 @@ system possible.
     only 128K (that's right 'K'!!) of RAM.
     -   [http://olimex.wordpress.com/2012/04/04/unix-on-pic32-meet-retrobsd-for-duinomite/](http://olimex.wordpress.com/2012/04/04/unix-on-pic32-meet-retrobsd-for-duinomite/)
 
-Retrieved from
-"[http://elinux.org/index.php?title=System\_Size&oldid=351980](http://elinux.org/index.php?title=System_Size&oldid=351980)"
 
 [Category](http://eLinux.org/Special:Categories "Special:Categories"):
 

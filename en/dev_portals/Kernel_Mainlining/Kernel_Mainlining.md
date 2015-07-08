@@ -340,8 +340,6 @@ Mainlining](http://eLinux.org/Overcoming-Obstacles-to-Mainlining "Overcoming Obs
 for ELCE 2014. See that page for information about this presentation and
 a link to his slides.
 
-Retrieved from
-"[http://elinux.org/index.php?title=Kernel\-Mainlining&oldid=382631](http//elinux-org/index.php?title=Kernel-Mainlining&oldid=382631)"
 
 [Category](http://eLinux.org/SpecialCategories "Special:Categories"):
 
