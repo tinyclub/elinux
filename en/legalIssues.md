@@ -35,7 +35,7 @@
 
 
 
-##嵌入式中使用linux的法律问题
+#嵌入式中使用linux的法律问题
 
 使用GPL许可证的复杂性已经在很多其他论坛中被多次的讨论过了。
 
@@ -71,6 +71,25 @@ V3版本
 
 ##有关法律分析和合规的资源
 
+* 自由软件法律中心针对GPL有一份有用合规指南：
+  + http://www.softwarefreedom.org/resources/2014/SFLC-Guide_to_GPL_Compliance_2d_ed.pdf -2014年10月
+  
+  + 注意不所有人都同意这份文件中的所有法律解释，但总体而言，这是一份很的资源
+  
+* 有关copyleft和GNU的通用公共许可协议的一份全教程和指南：
+   * http://www.copyleft.org/guide/comprehensive-gpl-guide.html#comprehensive-gpl-guidepa1.html
+
+#EXPORT_SYMBOL_GPL
+
+##针对内核USB API的EXPORT_SYMBOL_GPL
+
+在2008年的1月，Greg Kroah Hartman提交了一个补丁将核心USB API改变为
+
+EXPORT_SYMBOL_GPL。这里是一些关于这个补丁的信息：
+
+* [USB：将USB驱动标记为只被GPL许可(LWN.net)][1]
+ [1]: "http://lwn.net/Articles/266724/" "USB"
+* 
 
 
 
