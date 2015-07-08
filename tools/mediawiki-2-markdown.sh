@@ -56,6 +56,7 @@ cat ${page}.md | \
     sed -e "/Navigation menu/,/\%$/d" |\
     sed -e "/Robot.*png.*ELC2013 Tech Zone Contest/,/^\* \* \* \* \*/d" |\
     sed -e "/ELC2013 Tech Zone Contest/d" |\
+    sed -e "/^Retrieved from/,/oldid=[0-9][0-9]*/d" |\
     sed -e "s/[[:space:]][[:space:]]*$//g" |\
     sed -e "/^[[:space:]][[:space:]]*$/d" > ${page}.md.tmp
 
