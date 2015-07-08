@@ -16,14 +16,98 @@
     * [Resource Management](dev_portals/Resource_Management.md)
     * [Device drivers](dev_portals/Device_drivers.md)
     * [Device Tree](dev_portals/Device_Tree.md)
-    * [Debugging Portal](dev_portals/Debugging_Portal.md)
-    * [Android Portal](dev_portals/Android_Portal.md)
     * [Hardware Hacking](dev_portals/Hardware_Hacking.md)
     * [Development Platforms](dev_portals/Development_Platforms.md)
     * [Kernel Mainlining](dev_portals/Kernel_Mainlining.md)
     * [Legal Issues](dev_portals/Legal_Issues.md)
     * [Events](dev_portals/Events.md)
     * [Glossary](dev_portals/Glossary.md)
+
+* [Debugging Portal](dbg_portal/README.md)
+
+    * [Kernel Debugging](dbg_portal/kernel_dbg/README.md)
+
+        * [Debugging by printing / Printk](dbg_portal/kernel_dbg/Debugging_by_printing_Printk.md)
+        * [Kernel Debugging Tips](dbg_portal/kernel_dbg/Kernel_Debugging_Tips.md)
+        * [Kgdb](dbg_portal/kernel_dbg/Kgdb.md)
+        * [KDB](dbg_portal/kernel_dbg/KDB.md)
+        * [Kdmx](dbg_portal/kernel_dbg/Kdmx.md)
+        * [Debugging The Linux Kernel Using Gdb](dbg_portal/kernel_dbg/Debugging_The_Linux_Kernel_Using_Gdb.md)
+        * [MagicSysRq](dbg_portal/kernel_dbg/MagicSysRq.md)
+        * [External Links](dbg_portal/kernel_dbg/External_Links.md)
+
+    * [Kernel Tracing and Profiling](dbg_portal/kernel_trace_and_profile/README.md)
+
+        * [System Tap](dbg_portal/kernel_trace_and_profile/System_Tap.md)
+        * [Kernel Trace Systems](dbg_portal/kernel_trace_and_profile/Kernel_Trace_Systems.md)
+        * [Linux Trace Toolkit](dbg_portal/kernel_trace_and_profile/Linux_Trace_Toolkit.md)
+        * [LTTng](dbg_portal/kernel_trace_and_profile/LTTng.md)
+        * [Ftrace](dbg_portal/kernel_trace_and_profile/Ftrace.md)
+        * [Using Kernel Function Trace](dbg_portal/kernel_trace_and_profile/Using_Kernel_Function_Trace.md)
+        * [Linux Kernel State Tracer](dbg_portal/kernel_trace_and_profile/Linux_Kernel_State_Tracer.md)
+
+* [Android Portal](android_portal/README.md)
+
+    * [Getting Started](android_portal/getting_started/README.md)
+
+        * [Introduction to Android](android_portal/getting_started/Introduction_to_Android.md)
+        * [Design and Architecture](android_portal/getting_started/Design_and_Architecture.md)
+        * [Necessary tools](android_portal/getting_started/Necessary tools.md)
+        * [Glossary](android_portal/getting_started/Glossary.md)
+        * [Tutorials and Courseware](android_portal/getting_started/Tutorials_and_Courseware.md)
+        * [Android History](android_portal/getting_started/Android_History.md)
+        * [Versions](android_portal/getting_started/Versions.md)
+
+    * [Android Linux Kernel](android_portal/android_linux/README.md)
+
+        * [Where to obtain](android_portal/android_linux/Where_to_obtain.md)
+        * [How to build](android_portal/android_linux/How_to_build.md)
+        * [How to install (on phone, on emulator, etc.)](android_portal/android_linux/How_to_install.md)
+        * [What version to use](android_portal/android_linux/What_version_to_use.md)
+        * [Kernel features](android_portal/android_linux/Kernel_features.md)
+        * [Board Support highlights](android_portal/android_linux/Board_Support_highlights.md)
+
+    * [Android System Information](android_portal/android_sys_info/README.md)
+
+        * [Booting](android_portal/android_sys_info/Booting.md)
+        * [Power Management](android_portal/android_sys_info/Power_Management.md)
+        * [Security](android_portal/android_sys_info/Security.md)
+        * [Memory Usage](android_portal/android_sys_info/Memory_Usage.md)
+        * [Dalvik Virtual Machine](android_portal/android_sys_info/Dalvik_Virtual_Machine.md)
+        * [Packages, Assets and Resources](android_portal/android_sys_info/Packages_Assets_and_Resources.md)
+        * [Networking](android_portal/android_sys_info/Networking.md)
+        * [File Systems](android_portal/android_sys_info/File_Systems.md)
+        * [Android Logging System](android_portal/android_sys_info/Android_Logging_System.md)
+        * [Android Source Code Description](android_portal/android_sys_info/Android_Source_Code_Description.md)
+
+    * [Software development](android_portal/software_dev/README.md)
+
+        * [Software Development Kit](android_portal/software_dev/Software_Development_Kit.md)
+        * [Source Build System](android_portal/software_dev/Source_Build_System.md)
+        * [Development Tools](android_portal/software_dev/Development_Tools.md)
+        * [Application Development Resources](android_portal/software_dev/Application_Development_Resources.md)
+        * [Scripting](android_portal/software_dev/Scripting.md)
+        * [Debugging](android_portal/software_dev/Debugging.md)
+        * [Testing](android_portal/software_dev/Testing.md)
+
+    * [Android-based Systems](android_portal/android_based_systems/README.md)
+
+        * [Products (announced & shipped)](android_portal/android_based_systems/Products_announced_shipped).md)
+        * [Porting efforts and issues](android_portal/android_based_systems/Porting_efforts_and_issues.md)
+        * [Getting Root (Jailbreaking)](android_portal/android_based_systems/Getting_Root_Jailbreaking.md)
+        * [Miscellaneous Hardware Fixes](android_portal/android_based_systems/Miscellaneous_Hardware_Fixes.md)
+        * [Android x86](android_portal/android_based_systems/Android_x86.md)
+        * [Applications and Services](android_portal/android_based_systems/Applications_and_Services.md)
+        * [Android Derivatives](android_portal/android_based_systems/Android Derivatives.md)
+        * [Linux emulators for Android](android_portal/android_based_systems/Linux_emulators_for_Android.md)
+
+    * [Android Community](android_portal/android_community/README.md)
+
+        * [News](android_portal/android_community/News.md)
+        * [Events](android_portal/android_community/Events.md)
+        * [Web/Mailing List Directory](android_portal/android_community/Web_Mailing_List_Directory.md)
+        * [People](android_portal/android_community/People.md)
+        * [Organizations](android_portal/android_community/Organizations.md)
 
 * [Hardware Pages](hardware_pages/README.md)
 
