@@ -17,6 +17,8 @@ target_site=$site
 # Download the printable html page
 wget -O ${page}.html -c "${site}/index.php?title=${page}&printable=yes"
 
+[ $? -ne 0 ] && exit 1
+
 # Convert to strict markdown file
 pandoc -f html -t markdown_strict --atx-headers ${page}.html > ${page}.md
 
