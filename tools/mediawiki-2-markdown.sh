@@ -53,7 +53,9 @@ cat ${page}.md | \
     sed -e "/^From eLinux.org/d" |\
     sed -e "/Navigation menu/,/\%$/d" |\
     sed -e "/Robot.*png.*ELC2013 Tech Zone Contest/,/^\* \* \* \* \*/d" |\
-    sed -e "/ELC2013 Tech Zone Contest/d" > ${page}.md.tmp
+    sed -e "/ELC2013 Tech Zone Contest/d" |\
+    sed -e "s/[[:space:]][[:space:]]*$//g" |\
+    sed -e "/^[[:space:]][[:space:]]*$/d" > ${page}.md.tmp
 
 # Insert From line with URL
 sed -i -e "1i> From: [$from](${site}/${page} \"${site}/${page}\")\n\n" ${page}.md.tmp
