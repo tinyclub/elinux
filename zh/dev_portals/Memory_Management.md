@@ -31,15 +31,15 @@
 - 一些针对ARM架构的内存管理信息见链接:*[Tims关于ARM架构内存分配的建议](http://elinux.org/Tims_Notes_on_ARM_memory_allocation)*
 
 ####巨大页面/大页面/超级页面 
-- 这适用于透明的大页面的使用情况，以及更静态的使用模式，主要涉及到hugetlb接口/ libhugetlbfs的外部工作
-- 嵌入式系统遭受普遍使用PAGE_SIZE'd页（4KB）的覆盖面非常小的TLB。在大多数情况下，这会将系统非常沉重的压力下，任何种类的用户空间的工作，而且很明显降解性能，与大多数应用程序以从任何地方的时间5-40％的CPU服务的页面错误
-- 关于这个问题的其他信息的链接初步讨论，以及正在发生的事情经过这里的维基：*大内存页*
+- 这适用于透明的大页面的使用情况，以及更静态的使用模式，主要涉及到hugetlb接口/ libhugetlbfs的之外工作
+- 嵌入式系统性能普遍受到使用4KB作为页面大小的缓冲区的拖累。在大多数情况下，用户空间的任务造成系统压力巨大和性能下降，并且任何时候大多数应用程序的5-40％CPU时间耗费在处理页面错误上。
+- 关于这个问题初步讨论其他相关信息可以在维基链接上找到：*[巨大页面](http://linux-mm.org/)*
 ####页缓存压缩
-- 这主要与在在运行时使用多种压缩算法进行内存缓存页的压缩和解压缩，此外更要的是达到降低内存压力和提高特定场景中的内存表现。
-- 更多的信息可以在链接*压缩缓存*和*SF压缩缓存*主页中找到。
+- 页缓存压缩主要工作是在运行时使用多种压缩算法进行内存缓存页的压缩和解压缩，此外更要的是达到降低内存压力和提高特定场景中的内存表现。
+- 更多的信息可以在链接*[压缩缓存](http://linux-mm.org/CompressedCaching)*和*[SF压缩缓存](http://linuxcompressed.sourceforge.net/)*主页中找到。
 
 ####启动时预留和访问内存高地址
-引用Todd关于怎么在“mem=”使用保留的物理内存的邮件内容
+引用Todd关于怎么在“mem=”命令中使用保留的物理内存的邮件：
 
 ----------
 假设内存拥有一个固定的地址并且该地址已经是预留的，那么更简单的方法是在dev/memdevice上调用mmap()函数，其中0作为起始地址，保留内存的物理地址作为偏移量。标志位可以是AP_WRITE| MAP_READ。这样的话函数就会返回一个指向内核在用户空间映射的内存指针。例如：  
@@ -51,10 +51,10 @@
 `reserved_memory = (char *) mmap(0,4*1024*1024,PROT_READ|PROT_WRITE,MAP_SHARED,fd,0x83c00000);`  
 
 ####改进的OOM(内存不足)处理
-多种改进OOM(内存耗尽)处理的技术已经被开发出来并被建议在Linux中使用。  
+多种改进OOM处理的技术已经被开发出来并被建议在Linux中使用。  
 见链接:  *<http://linux-mm.org/OOM_Killer>*关于Linux内核中OOM克星的信息  
 避免OOM的发生部分要靠内核对内存使用情况的精确探测。点击链接：[*精确内存探测*](http://elinux.org/Accurate_Memory_Measurement)了解更多关于该领域的技术信息。  
-下面是我了解的集中技术(这些需要进行更好的研究和文档化)：  
+下面是我了解的几种技术(这些需要进行更好的研究和文档化)：  
 
 #####cgroup(控制群组)中的OOM通知  
 - 内存使用限制通知(Embedded Alley开发, CE Linux Forum赞助)  
@@ -86,13 +86,13 @@
 
 >这同样允许做类似于maemo做的事。如果系统收到系统低地址内存不足的通知，那么它可以杀死进入后台状态的进程(保存进程界面状态, 能够恢复进程，并且对用户不可见)。我认为它同样通过D-BUS通知当前应用系统内存不足的情况.对于用户可见或者非后台可杀死的应用应用释放它们的缓存或者关闭功能 从而可以得到更多的内存。如果内存来自于堆内存而不是映射的内存，那么可能没有什么帮助，因为堆内存碎片较多而且需要更多操作时间。
 #####基于LSM的内存不足通知 
-- Paul Mundt提交了一个提供通知用户空间内存耗尽的补丁到内核2.6.12。点击链接：[*精确内存探测和诺基亚内存耗尽通知模块*](http://elinux.org/Accurate_Memory_Measurement#Nokia_out-of-memory_notifier_module)了解更多信息。
+- Paul Mundt提交了一个提供通知用户空间内存的补丁到内核2.6.12。点击链接：[*精确内存探测和诺基亚内存不足通知模块*](http://elinux.org/Accurate_Memory_Measurement#Nokia_out-of-memory_notifier_module)了解更多信息。
 	- 这个模块基于一个Linux中最近从内核中移除的安全模块系统
 ####基于类型的内存分配(废弃)
 这是一个基于用户策略的方法(Sony and Panasonic在内核2.4种定义)，该方法允许内核给不同的代码段分配不同类型的内存。  
 见链接：[*基于类型的内存分配*](http://elinux.org/Memory_Type_Based_Allocation)  
 ##附加的资料和邮件列表	
-- [*LinuxMM*](http://linux-mm.org/) 该链接指向各种子工程并且是讨论内存管理相关话题的中心点([邮件列表](mailto:majordomo@kvack.org)和[存档](http://marc.theaimsgroup.com/?l=linux-mm))
+- [*LinuxMM*](http://linux-mm.org/)：该链接指向各种子工程并且是讨论内存管理相关话题的中心点([邮件列表](mailto:majordomo@kvack.org)和[存档](http://marc.theaimsgroup.com/?l=linux-mm))
 - [*程序员需要知道的所有关于内存的知识*](http://lwn.net/Articles/250967/)
 
 ####关于缓存的文章
