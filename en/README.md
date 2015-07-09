@@ -1,5 +1,5 @@
 > From: [Embedded Linux Wiki](http://elinux.org) (by [CE Linux Forum](http://www.celinuxforum.org))<br>
-> Team: [eLinux.org Chinese Translation Group](http://www.tinylab.org/elinux) (by <TinyLab.org>)<br>
+> Team: [eLinux.org Chinese Translation Group](http://www.tinylab.org/elinux) (by [TinyLab.org](http://tinylab.org))<br>
 > Attend: *Star/fork* [eLinux github repo](https://github.com/tinyclub/elinux); *follow/SMS* [@TinyLab.org](http://weibo.com/tinylaborg); *See More* [Translation Plan](http://www.tinylab.org/elinux) <br>
 
 
