@@ -49,7 +49,7 @@
         * [Kernel Subsystems](toolbox/dev_res/Kernel_Subsystems.md)
         * [Device Tree](dev_portals/Device_Tree.md)
         * [Online Documentation](toolbox/dev_res/Online_Documentation.md)
-        * [Books](toolbox/dev_res/Category:Books.md)
+        * [Books](toolbox/dev_res/Category_Books.md)
         * [Reference Material](toolbox/dev_res/Reference_Material.md)
         * [Podcasts](toolbox/dev_res/Podcasts.md)
         * [Device drivers](dev_portals/Device_drivers.md)
