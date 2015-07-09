@@ -111,7 +111,68 @@ EXPORT_SYMBOL_GPL。这里是一些关于这个补丁的信息：
 * [支持闭源模块之第三部分:消除API更新税][3]
   [3]:http://www.networkworld.com/article/2301701/smb/encouraging-closed-source-modules-part-3--elimating-the--api-update-tax-.html "part 3"
 
+#用户空间中内核头文件的使用
 
+在用户空间是允许使用内核头文件的，它是为了方便用户空间程序通过普通的系统调用与内核
+
+进行交互的。它是允许用户空间程序不可能成为内核的衍生品，因此受限于GPL协议。
+
+一般情况下，头文件的使用不会产生衍生品，尽管也会有例外。过去有不少按照从头文件开始
+
+算起代码的数量(例如：行数)支付金额的，但是似乎没有人关注这个问题这段时间，这也好像
+
+不再是一个问题了。理查德.斯托曼曾表示，针对数据结构，常量还有枚举类型(甚至小内联)的
+
+头文件的使用都不会产生衍生品。请看：
+
+http://lkml.indiana.edu/hypermail/linux/kernel/0301.1/0362.html
+
+用户空间中内核头文件的使用是预料中的也是常见的。它明确的包含了非GPL软件使用这些文
+
+件，并且不受GPL协议的影响。为了安抚直接使用头文件的担心，还有防止内核内部信泄露给
+
+用户空间(可能会被滥用)，主线内核开发者给内核构建系统增加了一个选项，专门打造了一
+
+个"审查"标题，这被用户空间使用是安全的，也不会产生许可问题。
+
+这些是在内核构建系统中“make headers_check”和"make headers_install"的目标。
+
+总的来说，使用这样的审查标题(也即那些被专门去除了大内联宏或用户空间不再需要的头文
+
+件)是合法安全的。
+
+这篇文章解释了怎样使用内核构建系统创建审标题：
+
+
+ http://darmawan-salihun.blogspot.jp/2008/03/sanitizing-linux-kernel-headers-strange.html
+ 
+ 需要注意的是安卓系统开发者是使用不同的过程来为他们的系统的仿来审查标题的。他们的过
+ 
+ 程跟主线标题审查同时开发。
+ 
+ ##其它链接
+ 
+ * http://gpl-violations.org/  —这个gpl-violations.org项目试图解决GPL违规和增强GPL合
+ 
+规性的公共意识。
+
+* http://www.softwarefreedom.org/ —自由软件法律中心为开源项目提供法律代表和围绕开源的法律问题出版信息
+
+* http://www.linuxfoundation.org/programs/legal/compliance —Linux基金会的开放
+
+  式合规计划
+  
+* http://www.binaryanalysis.org/ —一个针对GPL合规调查的二元分析工具
+
+* http://lwn.net/Articles/386280/ —关于二元分析工具的lwn.net的文章(2010/05/06出版)
+* 
+http://fossology.org/ —fossology是一个框架用来扫描开源代码：它目前扫描版权和许
+
+ 可证信息，并能够很容易的进行扩展。
+
+
+
+ 
 
 
 
