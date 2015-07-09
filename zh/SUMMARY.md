@@ -65,7 +65,7 @@
 
     * [Misc & Wishlist](toolbox/misc_wishlist/README.md)
 
-        * [Setting up a Bluetooth Network](toolbox/misc_wishlist/Setting_up_a_Bluetooth_Network.md)
+        * [Setting up a Bluetooth Network](toolbox/misc_wishlist/Bluetooth_Network.md)
         * [Continuous Logging for Watchdog Timer Expiration](toolbox/misc_wishlist/Continuous_Logging_for_Watchdog_Timer_Expiration.md)
         * [Crash Diagnostics](toolbox/misc_wishlist/Crash_Diagnostics.md)
 
@@ -73,7 +73,7 @@
 
     * [Kernel Debugging](dbg_portal/kernel_dbg/README.md)
 
-        * [Debugging by printing / Printk](dbg_portal/kernel_dbg/Debugging_by_printing_Printk.md)
+        * [Debugging by printing / Printk](dbg_portal/kernel_dbg/Debugging_by_printing.md)
         * [Kernel Debugging Tips](dbg_portal/kernel_dbg/Kernel_Debugging_Tips.md)
         * [Kgdb](dbg_portal/kernel_dbg/Kgdb.md)
         * [KDB](dbg_portal/kernel_dbg/KDB.md)

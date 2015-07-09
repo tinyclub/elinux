@@ -73,7 +73,7 @@
 
     * [Kernel Debugging](dbg_portal/kernel_dbg/README.md)
 
-        * [Debugging by printing / Printk](dbg_portal/kernel_dbg/Debugging_by_printing_Printk.md)
+        * [Debugging by printing / Printk](dbg_portal/kernel_dbg/Debugging_by_printing.md)
         * [Kernel Debugging Tips](dbg_portal/kernel_dbg/Kernel_Debugging_Tips.md)
         * [Kgdb](dbg_portal/kernel_dbg/Kgdb.md)
         * [KDB](dbg_portal/kernel_dbg/KDB.md)
