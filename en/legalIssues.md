@@ -141,7 +141,7 @@ http://lkml.indiana.edu/hypermail/linux/kernel/0301.1/0362.html
 
 件)是合法安全的。
 
-这篇文章解释了怎样使用内核构建系统创建审标题：
+这篇文章解释了怎样使用内核构建系统创建审查标题：
 
 
  http://darmawan-salihun.blogspot.jp/2008/03/sanitizing-linux-kernel-headers-strange.html
