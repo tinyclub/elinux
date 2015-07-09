@@ -150,7 +150,7 @@ http://lkml.indiana.edu/hypermail/linux/kernel/0301.1/0362.html
  
  程跟主线标题审查同时开发。
  
- #其它链接
+#其它链接
  
  * http://gpl-violations.org/  —这个gpl-violations.org项目试图解决GPL违规和增强GPL合
  
