@@ -33,7 +33,7 @@ one.
 -   [2 Toolchain components](#toolchain-components)
     -   [2.1 Binutils](#binutils)
     -   [2.2 C, C++, Java, Ada, Fortran, Objective-C
-        compiler](#c-c-2b.2b-java-ada-fortran-objective-c-compiler)
+        compiler](#c-c-java-ada-fortran-objective-c-compiler)
     -   [2.3 C library](#c-library)
     -   [2.4 Debugger](#debugger)
     -   [2.5 Lazarus and Free Pascal](#lazarus-and-free-pascal)

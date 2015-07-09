@@ -46,11 +46,11 @@ cat ${page}.md | \
 #  * gitbook: need to replace "*" with -*
 
 cat ${page}.md | \
-    sed -e "/^## Content/,/^## Introduction/{s=](#\(.*\)=](#\L\1=g;s=_=-=g;s/.2f/-/g;s/.2c//g;s/.27/-/g;s/.5b//g;s/.5d//g;s/.28//g;s/.29//g;s/.7c/-/g;s/.7b/-/g;s/.7d//g;s/--/-/g}" |\
+    sed -e "/^## Content/,/^## Introduction/{s=](#\(.*\)=](#\L\1=g;s=_=-=g;s/.2f/-/g;s/.2c/-/g;s/.27/-/g;s/.5b/-/g;s/.5d/-/g;s/.2b/-/g;s/.28/-/g;s/.29/-/g;s/.7c/-/g;s/.7b/-/g;s/.7d//g;s/--/-/g}" |\
     sed -e "/^## Content/,/^## Introduction/{s/(\([^:]*\):\(.*\))/(\1\2)/g;}" |\
     sed -e "/^## Content/,/^## Introduction/{s/(#\([^\.]*\)\.22\([^\.]*\)\.22\(.*\))/(#-\1\2\3)/g;}" |\
     sed -e "/^## Content/,/^## Introduction/{s/(\([^\.]*\)\.\(.*\))/(\1-\2)/g;}" |\
-    sed -e "/^## Content/,/^## Introduction/{s/--/-/g;s/-)/)/g;s/-\./-/g}" |\
+    sed -e "/^## Content/,/^## Introduction/{s/--/-/g;s/-)/)/g;s/-\./-/g;s/--/-/g;s/--/-/g;}" |\
     sed -e "/^## Content/,/^## Introduction/{s/(\([^(]*\)\./(\1-/g;}" |\
     sed -e "/^## Content/,/^## Introduction/{s/enlightenment-foundation-libraries-efl/enlightenment-foundation-libraries-efl-http-elinux-org-efl-efl/g;}" |\
     sed -e "s=(/=(${target_site}/=g" |\
