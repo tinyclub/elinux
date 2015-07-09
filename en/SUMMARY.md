@@ -65,7 +65,7 @@
 
     * [Misc & Wishlist](toolbox/misc_wishlist/README.md)
 
-        * [Setting up a Bluetooth Network](toolbox/misc_wishlist/Setting_up_a_Bluetooth_Network.md)
+        * [Setting up a Bluetooth Network](toolbox/misc_wishlist/Bluetooth_Network.md)
         * [Continuous Logging for Watchdog Timer Expiration](toolbox/misc_wishlist/Continuous_Logging_for_Watchdog_Timer_Expiration.md)
         * [Crash Diagnostics](toolbox/misc_wishlist/Crash_Diagnostics.md)
 
