@@ -57,7 +57,7 @@
 
     * [Tips and Tricks](toolbox/tips_and_tricks/README.md)
 
-        * [How to Identify IC Markings](toolbox/tips_and_tricks/How_to_Identify_IC_Markings.md)
+        * [How to Identify IC Markings](toolbox/tips_and_tricks/Chip_Identification.md)
         * [Code Styling Tips](toolbox/tips_and_tricks/Code_Styling_Tips.md)
         * [Debugging Tips](toolbox/tips_and_tricks/Debugging_Tips.md)
         * [GDB Tips](toolbox/tips_and_tricks/GDB_Tips.md)
