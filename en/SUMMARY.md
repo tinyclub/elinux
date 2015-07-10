@@ -149,11 +149,11 @@
 
     * [Android Community](android_portal/android_community/README.md)
 
-        * [News](android_portal/android_community/News.md)
-        * [Events](android_portal/android_community/Events.md)
-        * [Web/Mailing List Directory](android_portal/android_community/Web_Mailing_List_Directory.md)
-        * [People](android_portal/android_community/People.md)
-        * [Organizations](android_portal/android_community/Organizations.md)
+        * [News](android_portal/android_community/Android_News.md)
+        * [Events](android_portal/android_community/Android_Events.md)
+        * [Web/Mailing List Directory](android_portal/android_community/Android_Web_Resources.md)
+        * [People](android_portal/android_community/Android_People.md)
+        * [Organizations](android_portal/android_community/Android_Organizations.md)
 
 * [Hardware Pages](hardware_pages/README.md)
 
