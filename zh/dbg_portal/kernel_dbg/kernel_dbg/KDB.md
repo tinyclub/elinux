@@ -1,1 +1,0 @@
-{% include "./KDB/KDB.md" %}

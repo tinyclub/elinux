@@ -1,1 +1,0 @@
-{% include "./Ftrace/Ftrace.md" %}
