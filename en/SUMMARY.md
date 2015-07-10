@@ -138,12 +138,12 @@
 
     * [Android-based Systems](android_portal/android_based_systems/README.md)
 
-        * [Products (announced & shipped)](android_portal/android_based_systems/Products_announced_shipped.md)
-        * [Porting efforts and issues](android_portal/android_based_systems/Porting_efforts_and_issues.md)
+        * [Products (announced & shipped)](android_portal/android_based_systems/Android_Hardware.md)
+        * [Porting efforts and issues](android_portal/android_based_systems/Android_Porting.md)
         * [Getting Root (Jailbreaking)](android_portal/android_based_systems/Getting_Root_Jailbreaking.md)
-        * [Miscellaneous Hardware Fixes](android_portal/android_based_systems/Miscellaneous_Hardware_Fixes.md)
+        * [Miscellaneous Hardware Fixes](android_portal/android_based_systems/Android_Hardware_Fixes.md)
         * [Android x86](android_portal/android_based_systems/Android_x86.md)
-        * [Applications and Services](android_portal/android_based_systems/Applications_and_Services.md)
+        * [Applications and Services](android_portal/android_based_systems/Android_Applications.md)
         * [Android Derivatives](android_portal/android_based_systems/Android_Derivatives.md)
         * [Linux emulators for Android](android_portal/android_based_systems/Linux_emulators_for_Android.md)
 
