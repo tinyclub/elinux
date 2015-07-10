@@ -1,10 +1,12 @@
 " Clean up Markdown file converted from elinux.org
 
-:/^Content/,/^Introduction/s=](#\(.*\)=](#\L\1=
-:/^Content/,/^Introduction/s=_=-=g
-:/^Content/,/^Introduction/s/.2f//g
-:/^Content/,/^Introduction/s/.2c//g
-:/^Content/,/^Introduction/s/.27//g
+:/^## Content/,/^##* /s=](#\(.*\)=](#\L\1=
+:/^## Content/,/^##* /s=_=-=g
+:/^## Content/,/^##* /s/.2f//g
+:/^## Content/,/^##* /s/.2c//g
+:/^## Content/,/^##* /s/.27//g
 :%s#(/#(http:\/\/elinux.org/#g
+:%s#href="/#href="http://elinux.org/#g
+:%s#src="/#src="http://elinux.org/#g
 :/^Jump to:/d
 /Navigation menu/,/\%$/d
