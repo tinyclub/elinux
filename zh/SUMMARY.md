@@ -96,13 +96,13 @@
 
     * [Getting Started](android_portal/getting_started/README.md)
 
-        * [Introduction to Android](android_portal/getting_started/Introduction_to_Android.md)
-        * [Design and Architecture](android_portal/getting_started/Design_and_Architecture.md)
-        * [Necessary tools](android_portal/getting_started/Necessary_tools.md)
-        * [Glossary](android_portal/getting_started/Glossary.md)
-        * [Tutorials and Courseware](android_portal/getting_started/Tutorials_and_Courseware.md)
+        * [Introduction to Android](android_portal/getting_started/Android_Intro.md)
+        * [Design and Architecture](android_portal/getting_started/Android_Architecture.md)
+        * [Necessary tools](android_portal/getting_started/Android_Tools.md)
+        * [Glossary](android_portal/getting_started/Android_Glossary.md)
+        * [Tutorials and Courseware](android_portal/getting_started/Android_Tutorials.md)
         * [Android History](android_portal/getting_started/Android_History.md)
-        * [Versions](android_portal/getting_started/Versions.md)
+        * [Versions](android_portal/getting_started/Android_Versions.md)
 
     * [Android Linux Kernel](android_portal/android_linux/README.md)
 

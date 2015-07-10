@@ -1,4 +1,4 @@
-> From: [Rooting (Android OS)](https://en.wikipedia.org/wiki/Rooting_(Android_OS))
+> From: [wikipedia.org](https://en.wikipedia.org/wiki/Rooting_(Android_OS) "Rooting_(Android_OS)")
 
 # Getting Root (Jailbreaking)
 
