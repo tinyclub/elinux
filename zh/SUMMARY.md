@@ -128,13 +128,13 @@
 
     * [Software development](android_portal/software_dev/README.md)
 
-        * [Software Development Kit](android_portal/software_dev/Software_Development_Kit.md)
-        * [Source Build System](android_portal/software_dev/Source_Build_System.md)
-        * [Development Tools](android_portal/software_dev/Development_Tools.md)
-        * [Application Development Resources](android_portal/software_dev/Application_Development_Resources.md)
-        * [Scripting](android_portal/software_dev/Scripting.md)
-        * [Debugging](android_portal/software_dev/Debugging.md)
-        * [Testing](android_portal/software_dev/Testing.md)
+        * [Software Development Kit](android_portal/software_dev/Android_SDK.md)
+        * [Source Build System](android_portal/software_dev/Android_Build_System.md)
+        * [Development Tools](android_portal/getting_started/Android_Tools.md)
+        * [Application Development Resources](android_portal/software_dev/Android_Application_Development.md)
+        * [Scripting](android_portal/software_dev/Android_Scripting.md)
+        * [Debugging](android_portal/software_dev/Android_Debugging.md)
+        * [Testing](android_portal/software_dev/Android_Testing.md)
 
     * [Android-based Systems](android_portal/android_based_systems/README.md)
 
