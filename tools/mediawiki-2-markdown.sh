@@ -51,7 +51,7 @@ cat ${page}.md | \
     sed -e "/^## Content/,/^## Introduction/{s/(\([^:]*\):\(.*\))/(\1\2)/g;}" |\
     sed -e "/^## Content/,/^## Introduction/{s/(#\([^\.]*\)\.22\([^\.]*\)\.22\(.*\))/(#-\1\2\3)/g;}" |\
     sed -e "/^## Content/,/^## Introduction/{s/(\([^\.]*\)\.\(.*\))/(\1-\2)/g;}" |\
-    sed -e "/^## Content/,/^## Introduction/{s/--/-/g;s/-)/)/g;s/-\./-/g;s/--/-/g;s/--/-/g;}" |\
+    sed -e "/^## Content/,/^## Introduction/{s/--/-/g;s/-)/)/g;s/(#-/(#/g;s/-\./-/g;s/--/-/g;s/--/-/g;}" |\
     sed -e "/^## Content/,/^## Introduction/{s/(\([^(]*\)\./(\1-/g;}" |\
     sed -e "/^## Content/,/^## Introduction/{s/enlightenment-foundation-libraries-efl/enlightenment-foundation-libraries-efl-http-elinux-org-efl-efl/g;}" |\
     sed -e "s=(/=(${target_site}/=g" |\

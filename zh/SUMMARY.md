@@ -115,14 +115,14 @@
 
     * [Android System Information](android_portal/android_sys_info/README.md)
 
-        * [Booting](android_portal/android_sys_info/Booting.md)
-        * [Power Management](android_portal/android_sys_info/Power_Management.md)
-        * [Security](android_portal/android_sys_info/Security.md)
-        * [Memory Usage](android_portal/android_sys_info/Memory_Usage.md)
-        * [Dalvik Virtual Machine](android_portal/android_sys_info/Dalvik_Virtual_Machine.md)
-        * [Packages, Assets and Resources](android_portal/android_sys_info/Packages_Assets_and_Resources.md)
-        * [Networking](android_portal/android_sys_info/Networking.md)
-        * [File Systems](android_portal/android_sys_info/File_Systems.md)
+        * [Booting](android_portal/android_sys_info/Android_Booting.md)
+        * [Power Management](android_portal/android_sys_info/Android_Power_Management.md)
+        * [Security](android_portal/android_sys_info/Android_Security.md)
+        * [Memory Usage](android_portal/android_sys_info/Android_Memory_Usage.md)
+        * [Dalvik Virtual Machine](android_portal/android_sys_info/Android_Dalvik_VM.md)
+        * [Packages, Assets and Resources](android_portal/android_sys_info/Android_Packages.md)
+        * [Networking](android_portal/android_sys_info/Android_Networking.md)
+        * [File Systems](android_portal/android_sys_info/Android_File_Systems.md)
         * [Android Logging System](android_portal/android_sys_info/Android_Logging_System.md)
         * [Android Source Code Description](android_portal/android_sys_info/Android_Source_Code_Description.md)
 
