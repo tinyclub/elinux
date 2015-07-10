@@ -1,0 +1,10 @@
+" Clean up Markdown file converted from elinux.org
+
+:/^Content/,/^Introduction/s=](#\(.*\)=](#\L\1=
+:/^Content/,/^Introduction/s=_=-=g
+:/^Content/,/^Introduction/s/.2f//g
+:/^Content/,/^Introduction/s/.2c//g
+:/^Content/,/^Introduction/s/.27//g
+:%s#(/#(http:\/\/elinux.org/#g
+:/^Jump to:/d
+/Navigation menu/,/\%$/d

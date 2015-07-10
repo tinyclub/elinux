@@ -1,0 +1,61 @@
+# Hardware Hacking
+## Contents
+# Project Devices
+* Literati
+* InnoTab
+* Opensourcemid
+* CR48
+* TCube_Info
+* Mobile_Pro
+* Didj
+* Leapster_Explorer
+* Leappad_Explorer
+* Leapster
+* DCT_5000
+* Pixter
+* Pixter_Multimedia
+* TvNow
+* ZipIt
+* JuiceBox
+* DHT-Walnut
+* FX3002
+* Hisense
+* Enc28j60
+* R8610_Based_WAP
+* SMC_WSKP100
+* EBR-1000EP
+* VGF-CP1
+* Peek
+* Reciva_Barracuda
+* Wavefinder
+* CT-PC89E
+* Programmers_Hardware_Database
+# Supported Devices
+* AML_Products
+# Automotive
+* NaviEngine
+* Automotive_Communications
+* CAN_Bus
+* BEAN_Bus
+* AVC-LAN
+# Industrial
+* Industrial_Communications
+* CAN_Bus
+# Miniclusters
+# Hardware Tools and Information
+* Flameman
+* Flyswatter
+* Sparkfun_Camera
+* Ez_Usb
+* Mini_LA
+* NTSC_Bitbang
+* Lithium_Ion_Charger
+* Libertas_SDIO
+* Nand_Flash256
+* Nor_vs_Nand
+* TUSB2046B
+# Software Tools and Information
+* SM501-User_Level_Device_Driver
+* Board_Bringup_Utilities
+* MUSB
+* Hello_World_in_C
