@@ -22,7 +22,7 @@
 ## Versions
 
 For a lot more detail, you should see the [wikipedia page for Android
-version history](http//en-wikipedia-org/wiki/Android-version-history)
+version history](http://en.wikipedia.org/wiki/Android_version_history)
 
 The following different Android versions have been released:
 
@@ -76,7 +76,7 @@ The following different Android versions have been released:
 </table>
 
 See the [wikipedia
-article](http//en-wikipedia-org/wiki/Android-(operating-system)#Update-history)
+article](http://en.wikipedia.org/wiki/Android_(operating_system)#Update_history)
 for some good information about different versions.
 
 ### Version 1.1
@@ -87,19 +87,19 @@ SDK released February, 2009
 
 SDK released April, 2009
 
-Kernel version: 2.6-
+Kernel version: 2.6.27
 
 ### Version 1.6 (donut)
 
 SDK released September, 2009
 
-Kernel version: 2.6-
+Kernel version: 2.6.29
 
 ### Version 2.1 (eclair)
 
 SDK released October, 2009
 
-Kernel version: 2.6-
+Kernel version: 2.6.29
 
 ### Version 2.2 (froyo)
 
@@ -116,17 +116,17 @@ Kernel version: 3.10?
 Links to Android 4.4 information
 
 -   Official Android Blog post:
-    -   [http://officialandroid.blogspot.com/2013/10/android-for-all-and-new-nexus-5.html](http//officialandroid-blogspot.com/2013/10/android-for-all-and-new-nexus-5-html)
+    -   [http://officialandroid.blogspot.com/2013/10/android-for-all-and-new-nexus-5.html](http://officialandroid.blogspot.com/2013/10/android-for-all-and-new-nexus-5.html)
 -   Consumer facing highlights:
-    -   [http://www.android.com/versions/kit-kat-4-4/](http//www-android-com/versions/kit-kat-4-4/)
+    -   [http://www.android.com/versions/kit-kat-4-4/](http://www.android.com/versions/kit-kat-4-4/)
 -   Platform highlights:
-    -   [http://developer.android.com/about/versions/kitkat.html](http//developer-android.com/about/versions/kitkat-html)
+    -   [http://developer.android.com/about/versions/kitkat.html](http://developer.android.com/about/versions/kitkat.html)
 -   Android Developers Blog post:
-    -   [http://android-developers.blogspot.com/2013/10/android-44-kitkat-and-updated-developer.html](http//android-developers-blogspot.com/2013/10/android-44-kitkat-and-updated-developer-html)
+    -   [http://android-developers.blogspot.com/2013/10/android-44-kitkat-and-updated-developer.html](http://android-developers.blogspot.com/2013/10/android-44-kitkat-and-updated-developer.html)
 -   API highlights:
-    -   [http://developer.android.com/about/versions/android-4.4.html](http//developer-android.com/about/versions/android-4.4-html)
+    -   [http://developer.android.com/about/versions/android-4.4.html](http://developer.android.com/about/versions/android-4.4.html)
 -   SDK updates:
-    -   [http://developer.android.com/tools/revisions/platforms.html](http//developer-android.com/tools/revisions/platforms-html)
+    -   [http://developer.android.com/tools/revisions/platforms.html](http://developer.android.com/tools/revisions/platforms.html)
 
 ## Fragmentation
 
@@ -136,7 +136,7 @@ Developers should specify which API level their application requires or
 is known to work with.
 
 See
-[http://developer.android.com/guide/appendix/api-levels.html](http//developer-android.com/guide/appendix/api-levels-html)
+[http://developer.android.com/guide/appendix/api-levels.html](http://developer.android.com/guide/appendix/api-levels.html)
 
 ### Need to support multiple versions
 
@@ -188,7 +188,7 @@ you compare us against another company that say releases a major
 platform update every year... we're not that bad. Look at the devices
 that have been out... how many at this point haven't received a
 significant platform update in the year since they came out? I think not
-many - very few of them have been around for more than a year, and at
+many -- very few of them have been around for more than a year, and at
 this point the bulk of those have received at least one update. The main
 difference is that Android has gone through 3-4 significant updates in a
 year... so sure, not every one of those goes to every device, but I do
@@ -202,4 +202,9 @@ At the end of the day Android is not a single monolithic uniform
 environment. That isn't what Android is intended to be, and honestly I
 think that this is something that should be pretty clear from day one. I
 consider that one of Android's strengths.
+
+
+[Category](http://eLinux.org/Special:Categories "Special:Categories"):
+
+-   [Android](http://eLinux.org/Category:Android "Category:Android")
 

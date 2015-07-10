@@ -25,10 +25,10 @@ differences in performance for different software configurations on the
 FYI, the URL to the UnixBench is as follows;
 
 OLD site:
-[http://www.tux.org/pub/tux/benchmarks/System/unixbench/](http//www-tux.org/pub/tux/benchmarks/System/unixbench/)
+[http://www.tux.org/pub/tux/benchmarks/System/unixbench/](http://www.tux.org/pub/tux/benchmarks/System/unixbench/)
 
 NEW site:
-[http://code.google.com/p/byte-unixbench/](http//code-google.com/p/byte-unixbench/)
+[http://code.google.com/p/byte-unixbench/](http://code.google.com/p/byte-unixbench/)
 
 UnixBench contains 9 kinds of tests:
 
@@ -45,15 +45,15 @@ UnixBench contains 9 kinds of tests:
 ## lmbench
 
 The LMBench home page is at:
-[http://www.bitmover.com/lmbench/](http//www-bitmover.com/lmbench/)
+[http://www.bitmover.com/lmbench/](http://www.bitmover.com/lmbench/)
 and/or
-[http://lmbench.sourceforge.net/](http//lmbench-sourceforge.net/)
+[http://lmbench.sourceforge.net/](http://lmbench.sourceforge.net/)
  The sourceforge project page is at:
-[http://sourceforge.net/projects/lmbench](http//sourceforge-net/projects/lmbench)
+[http://sourceforge.net/projects/lmbench](http://sourceforge.net/projects/lmbench)
 
 ### Instructions for lmbench-3.0-a9
 
-(Adjust CC and OS according to your needs-)
+(Adjust CC and OS according to your needs.)
 
     cd lmbench-3.0-a9/src
     make CC=arm-linux-gcc OS=arm-linux TARGET=linux
@@ -88,11 +88,11 @@ A list of benchmark results would be useful:
 
 -   Comparing performance of different FFT implementations on
     Beagleboard-XM:
-    [http://pmeerw.dyndns.org/blog/programming/arm\-fft.html](http//pmeerw-dyndns.org/blog/programming/arm-fft.html)
+    [http://pmeerw.dyndns.org/blog/programming/arm\_fft.html](http://pmeerw.dyndns.org/blog/programming/arm_fft.html)
 
 
-[Category](http://eLinux.org/SpecialCategories "Special:Categories"):
+[Category](http://eLinux.org/Special:Categories "Special:Categories"):
 
 -   [Development
-    Tools](http://eLinux.org/CategoryDevelopment-Tools "Category:Development Tools")
+    Tools](http://eLinux.org/Category:Development_Tools "Category:Development Tools")
 

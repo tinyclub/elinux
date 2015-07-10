@@ -30,13 +30,13 @@ products.
 
 ### 2.6.25
 
-The original (version 1-0) of Android for the G1/ADP1 used Linux version
+The original (version 1.0) of Android for the G1/ADP1 used Linux version
 2.6.25
 
-### 2.6.26
+### 2.6.27
 
 The 1.5 release of Android (cupcake) for the G1/ADP1 used Linux version
-2.6.26
+2.6.27
 
 ### 2.6.29
 
@@ -58,12 +58,12 @@ This article has good information on porting Android to a new device.
 Note that it debates which kernel tree is appropriate to start with, for
 porting to a new device:
 
--   [http://www.linuxfordevices.com/c/a/Linux-For-Devices-Articles/Porting-Android-to-a-new-device/](http//www-linuxfordevices-com/c/a/Linux-For-Devices-Articles/Porting-Android-to-a-new-device/)
+-   [http://www.linuxfordevices.com/c/a/Linux-For-Devices-Articles/Porting-Android-to-a-new-device/](http://www.linuxfordevices.com/c/a/Linux-For-Devices-Articles/Porting-Android-to-a-new-device/)
 
 ## Android git kernel trees
 
 As of July 2010, the [android repository on
-kernel.org](http//android-git.kernel-org/) had the following kernel
+kernel.org](http://android.git.kernel.org/) had the following kernel
 trees:
 
  kernel/common.git 
@@ -92,7 +92,7 @@ OMAP chip can use this kernel port.
 nvidia kernel tree
 
 
-[Category](http://eLinux.org/SpecialCategories "Special:Categories"):
+[Category](http://eLinux.org/Special:Categories "Special:Categories"):
 
--   [Android](http://eLinux.org/CategoryAndroid "Category:Android")
+-   [Android](http://eLinux.org/Category:Android "Category:Android")
 

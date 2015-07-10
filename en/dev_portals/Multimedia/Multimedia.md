@@ -39,7 +39,7 @@
         -   [6.1.15 MPlayer](#mplayer)
         -   [6.1.16 Documentation](#documentation)
     -   [6.2 Video in](#video-in)
-        -   [6.2.1 V4L[2]](#v4l2)
+        -   [6.2.1 V4L[2]](#v4l-2)
         -   [6.2.2 OpenML](#openml)
         -   [6.2.3 LinuxTV (DVB API)](#linuxtv-dvb-api)
     -   [6.3 Audio in/out](#audio-in-out)

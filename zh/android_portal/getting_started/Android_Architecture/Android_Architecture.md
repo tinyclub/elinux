@@ -27,12 +27,12 @@ about Android technical topics (with the exception of my own).
 ## Architecture Diagram
 
 Here is the Android Architecture Diagram, obtained from
-[here](http//developer-android.com/images/system-architecture.jpg)-
+[here](http://developer.android.com/images/system-architecture.jpg).
 
-[![Android-system-architecture.jpg](http://eLinux.org/images/c/c2/Android-system-architecture-jpg)](http://eLinux.org/FileAndroid-system-architecture-jpg)
+[![Android-system-architecture.jpg](http://eLinux.org/images/c/c2/Android-system-architecture.jpg)](http://eLinux.org/File:Android-system-architecture.jpg)
 
 See also [Android internals
-diagram](http//www-makelinux-net/android/internals/)
+diagram](http://www.makelinux.net/android/internals/)
 
 Basically Android has the following layers:
 
@@ -48,12 +48,12 @@ Basically Android has the following layers:
 ## Overview presentations
 
 -   [Android is not just Java on
-    Linux](http//kobablog-wordpress-com/2011/05/22/android-is-not-just-java-on-linux/)
+    Linux](http://kobablog.wordpress.com/2011/05/22/android-is-not-just-java-on-linux/)
     -   Great presentation by Tetsuyuki Kobayashi overview of Android
 -   See this Android Internals presentation by Karim Yaghmour
-    -   [http://www.opersys.com/blog/android-internals-101103](http//www-opersys-com/blog/android-internals-101103)
+    -   [http://www.opersys.com/blog/android-internals-101103](http://www.opersys.com/blog/android-internals-101103)
     -   You'll find both the video and the slides there
--   [Mythbusters\-Android.pdf](http://eLinux.org/images/2/2d/Mythbusters-Android-pdf "Mythbusters Android-pdf")
+-   [Mythbusters\_Android.pdf](http://eLinux.org/images/2/2d/Mythbusters_Android.pdf "Mythbusters Android.pdf")
     Presentation by Matt Porter at ELC Europe
     -   Has bits and pieces showing problematic Android code and
         policies
@@ -63,12 +63,12 @@ Basically Android has the following layers:
 A quick look at Android contents and programs running when Android
 starts is at:
 
--   [http://benno.id.au/blog/2007/11/13/android-under-the-hood](http//benno-id-au/blog/2007/11/13/android-under-the-hood)
+-   [http://benno.id.au/blog/2007/11/13/android-under-the-hood](http://benno.id.au/blog/2007/11/13/android-under-the-hood)
 
 ## Relation to the Linux kernel
 
 Here is [Greg Kroah-Hartmans presentation on
-Android](http//github-com/gregkh/android-presentation/downloads) from
+Android](http://github.com/gregkh/android-presentation/downloads) from
 the CELF conference 2010, discussing how Google/Android work (or don't
 work) with the Linux community.
 
@@ -76,7 +76,7 @@ work) with the Linux community.
 
 Java is used as a language for application programming, but it is
 converted into a non-java byte code for runtime interpretation by a
-custom interpreter (Dalvik)-
+custom interpreter (Dalvik).
 
 ### Java/Object Oriented Philosophy
 
@@ -108,7 +108,7 @@ Android framework... well, then the world is a different place.
 
 
 
-[Category](http://eLinux.org/SpecialCategories "Special:Categories"):
+[Category](http://eLinux.org/Special:Categories "Special:Categories"):
 
--   [Android](http://eLinux.org/CategoryAndroid "Category:Android")
+-   [Android](http://eLinux.org/Category:Android "Category:Android")
 

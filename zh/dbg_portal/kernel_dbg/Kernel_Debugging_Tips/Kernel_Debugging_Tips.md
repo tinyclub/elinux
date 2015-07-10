@@ -39,7 +39,7 @@ To add your own debug message to the kernel, you can place a "printk()"
 in the kernel code.
 
 See [Debugging by printing -\>
-Usage](http://eLinux.org/Debugging-by-printing#Usage "Debugging by printing") for more
+Usage](http://eLinux.org/Debugging_by_printing#Usage "Debugging by printing") for more
 details.
 
 ### Log levels
@@ -48,7 +48,7 @@ Each kernel message can be pre-pended with a tag indicating the
 importance of the message.
 
 See [Debugging by printing -\>
-Log\-Levels](http://eLinux.org/Debugging-by-printing#Log-Levels "Debugging by printing")
+Log\_Levels](http://eLinux.org/Debugging_by_printing#Log_Levels "Debugging by printing")
 for more details.
 
 ### Adding timing information
@@ -57,7 +57,7 @@ Sometimes, it is useful to add timing information to the printk values,
 so you can see when a particular event occurred. The kernel includes an
 feature for doing this called printk times.
 
-See the help for CONFIG\-PRINTK\-TIMES in the file lib/Kconfig.debug for
+See the help for CONFIG\_PRINTK\_TIMES in the file lib/Kconfig.debug for
 more information on this feature. This option is found on the "Kernel
 Hacking" menu when configuring the kernel.
 
@@ -67,10 +67,10 @@ operation (or from the start of kernel timekeeping).
 
 There is also tool in the kernel source which will convert the timestamp
 values to relative values (so you can see the interval between events).
-This tools is called show\-delta and is located in the kernel 'scripts'
+This tools is called show\_delta and is located in the kernel 'scripts'
 directory.
 
-See [Printk Times](http://eLinux.org/Printk-Times "Printk Times") for more information.
+See [Printk Times](http://eLinux.org/Printk_Times "Printk Times") for more information.
 
 ### Viewing log messages
 
@@ -93,10 +93,10 @@ more quickly, it is sometimes useful to control the amount of messages
 displayed to the console during boot. You can do this by setting the
 kernel log level at boot time via a kernel command line option. See the
 "loglevel=" argument in
-[`Documentation/kernel-parameters.txt`](https//www-kernel.org/doc/Documentation/kernel-parameters.txt).
+[`Documentation/kernel-parameters.txt`](https://www.kernel.org/doc/Documentation/kernel-parameters.txt).
 
 You can turn off all messages using the kernel command line option
-"quiet". See [Disable Console](http://eLinux.org/Disable-Console "Disable Console") for
+"quiet". See [Disable Console](http://eLinux.org/Disable_Console "Disable Console") for
 information on how much time this can save at boot up.
 
 Note that even if the log level is changed, or "quiet" is used, although
@@ -108,15 +108,15 @@ using the `dmesg` command.
 
 See [Debugging by printing -\> Internals / Changing the size of the
 printk
-buffer](http://eLinux.org/Debugging-by-printing#Internals-2F-Changing-the-size-of-the-printk-buffer "Debugging by printing")
+buffer](http://eLinux.org/Debugging_by_printing#Internals_.2F_Changing_the_size_of_the_printk_buffer "Debugging by printing")
 
 ## Using kernel symbols
 
 You can look up the source code for a function address using your
 toolchain's addr2line program. See [Find a kernel function
-line](http://eLinux.org/Find-a-kernel-function-line "Find a kernel function line") or
+line](http://eLinux.org/Find_a_kernel_function_line "Find a kernel function line") or
 [Addr2line for kernel
-debugging](http://eLinux.org/Addr2line-for-kernel-debugging "Addr2line for kernel debugging").
+debugging](http://eLinux.org/Addr2line_for_kernel_debugging "Addr2line for kernel debugging").
 
 ## Using a kernel debugger
 
@@ -127,14 +127,14 @@ You can use the in-kernel remote debugger: [Kgdb](http://eLinux.org/Kgdb "Kgdb")
 Also, you can use QEMU and gdb (and a high-level IDE like eclipse).
 
 See [Debugging the Linux kernel using Eclipse/CDT and
-Qemu](http//issaris-blogspot.com/2007/12/download-linux-kernel-sourcecode-from.html)
+Qemu](http://issaris.blogspot.com/2007/12/download-linux-kernel-sourcecode-from.html)
 for a great article on using Eclipse (with the CDT plugin) to debug the
 Linux kernel.
 
 ## Debugging early boot problems
 
 See
-[Debugging\-by\-printing\#Debugging\-early\-boot\-problems](http://eLinux.org/Debugging-by-printing#Debugging-early-boot-problems "Debugging by printing")
+[Debugging\_by\_printing\#Debugging\_early\_boot\_problems](http://eLinux.org/Debugging_by_printing#Debugging_early_boot_problems "Debugging by printing")
 
 ## Triggering a kernel event
 
@@ -148,7 +148,7 @@ overload an existing function. One function not used very often is sync.
 space programs (or during standard linux booting).
 
 It is quite easy to put a hook to your own kernel program in the
-sys\-sync() routine (located in fs/sync-c) and cause it to execute by
+sys\_sync() routine (located in fs/sync.c) and cause it to execute by
 issuing 'sync' from the shell command line. This is handy as a temporary
 mechanism to test things that you have put in the kernel.
 
@@ -159,9 +159,9 @@ message. Here are some tips on using the Oops message to find the source
 of the problem.
 
 -   See
-    [Documentation/oops-tracing.txt](http//git-kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=blob-plain;f=Documentation/oops-tracing.txt;hb=HEAD)
+    [Documentation/oops-tracing.txt](http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=blob_plain;f=Documentation/oops-tracing.txt;hb=HEAD)
 -   See [HOWTO find oops
-    location](http//vmlinux-org/jocke/linux/howto-find-oops-location.shtml)
+    location](http://vmlinux.org/jocke/linux/howto-find-oops-location.shtml)
     by Denis Vlasenko
 
 ## Compilation tricks for the kernel
@@ -213,7 +213,7 @@ you might get more information using the '-S' option with objdump:
 You can also request that the toolchain show mixed source and assembly,
 by passing extra flags:
 
-    make EXTRA-CFLAGS="-g -Wa,-a,-ad -fverbose-asm" fs/buffer.o >fs/buffer.mixed
+    make EXTRA_CFLAGS="-g -Wa,-a,-ad -fverbose-asm" fs/buffer.o >fs/buffer.mixed
 
 ### Alter the flags for a compilation
 
@@ -221,7 +221,7 @@ Sometimes, you need to alter the compilation flags for an individual
 file. There are two ways to do this. One is to add the extra flags on
 the make command line:
 
-    make EXTRA-CFLAGS="-g -finstrument-functions" fs/buffer.o
+    make EXTRA_CFLAGS="-g -finstrument-functions" fs/buffer.o
 
 This will work if the flags can be appended to the regular set of C
 flags used for compiling the object.
@@ -240,22 +240,22 @@ For me, this produced something like this:
 
 mipsel-linux-gcc -Wp,-MD,fs/.buffer.o.d -nostdinc -isystem
 /home/usr/local/mipsel-linux-glibc/bin/../lib/gcc/mipsisa32el-linux/3.4.3/include
--D\-\-KERNEL\-\- -Iinclude -Iinclude2 -I/home/tbird/work/linux/include
+-D\_\_KERNEL\_\_ -Iinclude -Iinclude2 -I/home/tbird/work/linux/include
 -I/home/tbird/work/linux/fs -Ifs -Wall -Wstrict-prototypes
 -Wno-trigraphs -fno-strict-aliasing -fno-common -ffreestanding -O2
 -fomit-frame-pointer -g -I/home/tbird/work/linux/ -I
 /home/tbird/work/linux/include/asm/gcc -G 0 -mno-abicalls -fno-pic -pipe
 -finline-limit=100000 -mabi=32 -march=mips32r2 -Wa,-32
--Wa,-march=mips32r2 -Wa,-mips32r2 -Wa,-trap
+-Wa,-march=mips32r2 -Wa,-mips32r2 -Wa,--trap
 -I/home/tbird/work/linux/include/asm-mips/ati -Iinclude/asm-mips/ati
 -I/home/tbird/work/linux/include/asm-mips/mach-generic
 -Iinclude/asm-mips/mach-generic -Wdeclaration-after-statement
--DKBUILD\-BASENAME=buffer -DKBUILD\-MODNAME=buffer -c -o fs/buffer.o
+-DKBUILD\_BASENAME=buffer -DKBUILD\_MODNAME=buffer -c -o fs/buffer.o
 /home/tbird/work/linux/fs/buffer.c
 
 
-[Category](http://eLinux.org/SpecialCategories "Special:Categories"):
+[Category](http://eLinux.org/Special:Categories "Special:Categories"):
 
 -   [Development
-    Tools](http://eLinux.org/CategoryDevelopment-Tools "Category:Development Tools")
+    Tools](http://eLinux.org/Category:Development_Tools "Category:Development Tools")
 

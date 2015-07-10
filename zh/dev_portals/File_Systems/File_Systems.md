@@ -16,7 +16,7 @@
     -   [2.1 AXFS](#axfs)
     -   [2.2 Btrfs](#btrfs)
     -   [2.3 CramFS](#cramfs)
-    -   [2.4 F2FS](#-s)
+    -   [2.4 F2FS](#f2fs)
     -   [2.5 InitRAMFS](#initramfs)
     -   [2.6 JFFS2](#jffs2)
     -   [2.7 LogFS](#logfs)
@@ -58,7 +58,7 @@
 # Introduction
 
 Most embedded devices use [flash
-memory](http//en-wikipedia.org/wiki/Flash-memory) as storage media.
+memory](http://en.wikipedia.org/wiki/Flash_memory) as storage media.
 Also, size and bootup time are very important in many consumer
 electronics products. Therefore, special file systems are often used
 with differrent features, such as enhanced compression, or the ability
@@ -68,21 +68,21 @@ to execute files directly from flash.
 
 Note that flash memory may be managed by the Memory Technology Devices
 (MTD) system of Linux. See the [MTD/Flash
-FAQ](http//www-linux-mtd.infradead.org/faq/general.html) for more
+FAQ](http://www.linux-mtd.infradead.org/faq/general.html) for more
 information. Most of the filesystems mentioned here are built on top of
 the MTD system.
 
 ## UBI
 
 The [Unsorted Block
-Images](http//www-linux-mtd.infradead.org/doc/ubi.html) (UBI) system in
+Images](http://www.linux-mtd.infradead.org/doc/ubi.html) (UBI) system in
 the Linux kernel manages multiple logical volumes on a single flash
 device. It provides a mapping from logical blocks to physical erase
 blocks, via the MTD layer. UBI provides a flexible partitioning concept
 which allows for wear-leveling across the whole flash device.
 
-See the [UBI](http//www-linux-mtd.infradead.org/doc/ubi.html) page or
-[UBI FAX and Howto](http//www-linux-mtd.infradead.org/faq/ubi.html) for
+See the [UBI](http://www.linux-mtd.infradead.org/doc/ubi.html) page or
+[UBI FAX and Howto](http://www.linux-mtd.infradead.org/faq/ubi.html) for
 more information.
 
 ## Partitioning
@@ -126,9 +126,9 @@ blocks. Therefore, the method of mapping, re-arranging and garbage
 collecting the allocation of blocks in the system is quite important.
 
 These chips are run with a block-based, rather than flash-based
-filesystem (e-g. ext4). As of 2012, optimizing the ext4 file system for
+filesystem (e.g. ext4). As of 2012, optimizing the ext4 file system for
 use with these systems is a hot topic area of file system research. See
-[http://lwn.net/Articles/502472](http//lwn-net/Articles/502472)
+[http://lwn.net/Articles/502472](http://lwn.net/Articles/502472)
 
 # Embedded Filesystems
 
@@ -139,7 +139,7 @@ devices, sorted in alphabetical order:
 
 -   [AXFS](http://eLinux.org/AXFS "AXFS") - Advanced XIP File System
     -   Website:
-        [http://axfs.sourceforge.net/](http//axfs-sourceforge.net/)
+        [http://axfs.sourceforge.net/](http://axfs.sourceforge.net/)
     -   This file system is designed specifically to support
         Execute-in-place operations. It uses a bi-phased approach. The
         first phase is to have the filesystem in flash and run it to
@@ -152,38 +152,38 @@ devices, sorted in alphabetical order:
 
 ## Btrfs
 
--   [btrfs](https//btrfs-wiki.kernel.org/index.php/Main-Page) is a new
+-   [btrfs](https://btrfs.wiki.kernel.org/index.php/Main_Page) is a new
     copy-on-write filesystem that first appeared in the kernel in
-    2.6-rc1 and [was merged in
-    2.6.30](http//lwn-net/Articles/392/).
+    2.6.29-rc1 and [was merged in
+    2.6.30](http://lwn.net/Articles/342892/).
 -   Btrfs is [not yet supported by many popular Linux filesystem tools
-    such as gparted](http//gparted-sourceforge.net/features.php) as of
+    such as gparted](http://gparted.sourceforge.net/features.php) as of
     April 2011.
 -   Btrfs has been adopted as the [MeeGo platform's
-    filesystem](http//lwn-net/Articles/387196/).
+    filesystem](http://lwn.net/Articles/387196/).
 -   [Nice Introduction Video on btrfs by Chris
-    Mason](http//training-linuxfoundation.org/linux-tutorials/introduction-to-btrfs)
+    Mason](http://training.linuxfoundation.org/linux-tutorials/introduction-to-btrfs)
 
 ## CramFS
 
--   [CRAMFS](http//en-wikipedia.org/wiki/Cramfs) - A compressed
+-   [CRAMFS](http://en.wikipedia.org/wiki/Cramfs) - A compressed
     read-only file system for Linux. The maximum size of CRAMFS is
     256MB.
     -   "Linear Cramfs" is the name of a special feature to use
         uncompressed file, in a linear block layout with the Cramfs file
         system. This is useful for storing files which can be executed
         in-place. For more information on Linear Cramfs, see
-        [Application XIP](http://eLinux.org/Application-XIP "Application XIP")
+        [Application XIP](http://eLinux.org/Application_XIP "Application XIP")
 
 ## F2FS
 
 -   [F2FS](http://eLinux.org/F2FS "F2FS")[(wikipedia
-    entry)](http//en-wikipedia.org/wiki/F2FS) is a flash-friendly file
+    entry)](http://en.wikipedia.org/wiki/F2FS) is a flash-friendly file
     system for Linux, developed by Samsung.
 
 ## InitRAMFS
 
-From March 2006 [Linux Devices](http://eLinux.org/Linux-Devices "Linux Devices"):
+From March 2006 [Linux Devices](http://eLinux.org/Linux_Devices "Linux Devices"):
 
 INTRODUCING INITRAMFS, A NEW MODEL FOR INITIAL RAM DISKS This clear,
 technical article introduces initramfs, a Linux 2.6 feature that enables
@@ -194,30 +194,30 @@ efficiency, and simplicity, the author says. One especially interesting
 feature for embedded Linux developers is that relatively simple, deeply
 embedded systems can use initramfs as their sole filesystem.
 
-[http://www.linuxfordevices.com/c/a/Linux-For-Devices-Articles/Introducing-initramfs-a-new-model-for-initial-RAM-disks/](http//www-linuxfordevices.com/c/a/Linux-For-Devices-Articles/Introducing-initramfs-a-new-model-for-initial-RAM-disks/)
+[http://www.linuxfordevices.com/c/a/Linux-For-Devices-Articles/Introducing-initramfs-a-new-model-for-initial-RAM-disks/](http://www.linuxfordevices.com/c/a/Linux-For-Devices-Articles/Introducing-initramfs-a-new-model-for-initial-RAM-disks/)
 
 Here is a good article about how to build an initramfs:
 
--   [http://www.landley.net/writing/rootfs-howto.html](http//www-landley.net/writing/rootfs-howto.html)
+-   [http://www.landley.net/writing/rootfs-howto.html](http://www.landley.net/writing/rootfs-howto.html)
 
 For more information, look in: Documentation/early-userspace/README
 
 ## JFFS2
 
--   [JFFS2](http//sourceware-org/jffs2/) - The Journalling Flash File
+-   [JFFS2](http://sourceware.org/jffs2/) - The Journalling Flash File
     System, version 2. This is the most commonly used flash filesystem.
-    -   The maximum size of JFFS2 is MB.
-    -   [http://sourceforge.net/projects/mtd-mods](http//sourceforge-net/projects/mtd-mods)
+    -   The maximum size of JFFS2 is 128MB.
+    -   [http://sourceforge.net/projects/mtd-mods](http://sourceforge.net/projects/mtd-mods)
         has some patches by Alexey Korolev for improvements to JFFS2
         -   See the presentation on Alexey's patches at:
     -   To improve mount time substantially verify that the erase block
         summary patch is in your image. This patch is part of the jffs2
         driver since 2005-09-07. A patch for an earlier version can be
         found at:
-        [http://www.inf.u-szeged.hu/jffs2/jffs2-summary-20050211.patch](http//www-inf.u-szeged.hu/jffs2/jffs2-summary-20050211.patch)
+        [http://www.inf.u-szeged.hu/jffs2/jffs2-summary-20050211.patch](http://www.inf.u-szeged.hu/jffs2/jffs2-summary-20050211.patch)
         (or try your luck at
-        [http://web.archive.org/web/\*/http://www.inf.u-szeged.hu/jffs2/mount.php](http//web-archive.org/web/*/http://www.inf.u-szeged.hu/jffs2/mount.php)).
-    -   [JFFS2](http://eLinux.org/index-php?title=JFFS2&action=edit&redlink=1 "JFFS2 (page does not exist)")
+        [http://web.archive.org/web/\*/http://www.inf.u-szeged.hu/jffs2/mount.php](http://web.archive.org/web/*/http://www.inf.u-szeged.hu/jffs2/mount.php)).
+    -   [JFFS2](http://eLinux.org/index.php?title=JFFS2&action=edit&redlink=1 "JFFS2 (page does not exist)")
         has undergone improvement since early versions (\~2.4.30).
         Modern versions of the driver in newer kernels have show
         stopping bugs fixed.
@@ -257,7 +257,7 @@ kernel.
 
 ## PRAMFS
 
--   [PRAMFS](http://eLinux.org/Pram-Fs "Pram Fs") - Persistent and protected RAM File
+-   [PRAMFS](http://eLinux.org/Pram_Fs "Pram Fs") - Persistent and protected RAM File
     System
 
 The Persistent/Protected RAM Special Filesystem (PRAMFS) is a
@@ -266,30 +266,30 @@ fast I/O memory, and if the memory is non-volatile, the filesystem will
 be persistent. In addition, it has Execute-in-place support.
 
 Info on the PRAMFS specification can be found at [Pram Fs
-Specification](http://eLinux.org/Pram-Fs-Specification "Pram Fs Specification")
+Specification](http://eLinux.org/Pram_Fs_Specification "Pram Fs Specification")
 
 ## Romfs
 
--   [RomFs](http//romfs-sourceforge.net) - A small space-efficient
+-   [RomFs](http://romfs.sourceforge.net) - A small space-efficient
     read-only filesystem. A description can be found in
     Documentation/filesystems/romfs.txt or
-    [http://lxr.linux.no/linux/Documentation/filesystems/romfs.txt](http//lxr-linux.no/linux/Documentation/filesystems/romfs.txt)
+    [http://lxr.linux.no/linux/Documentation/filesystems/romfs.txt](http://lxr.linux.no/linux/Documentation/filesystems/romfs.txt)
 
 ## SquashFS
 
-[Squash Fs](http://eLinux.org/Squash-Fs "Squash Fs") is a (more) compressed read-only
+[Squash Fs](http://eLinux.org/Squash_Fs "Squash Fs") is a (more) compressed read-only
 file system for Linux. This file system has better compression than
 JFFS2 or CRAMFS. After spending a long time outside of the mainline
 kernel, Squashfs have finally been merged and released with [kernel
-2.6](http//kernelnewbies-org/LinuxChanges#head-5ca2504b2b4f4e6583f50dcdf23b2e3832-).
+2.6.29](http://kernelnewbies.org/LinuxChanges#head-5ca2504b2b4f4e6583f50dcdf23b2e75b383252f).
 
 It is possible to tune the amount of compression when running
 mksquashfs. The -b option allows you to specify the block size. A
 smaller block size generally gives less compression and a larger -b
 option gives more compression. However there is a downside to this. Data
-is read from the flash using blocks. So if you use a block size of k,
-and you need a page of 4k, still the compressed equivalent of k data
-will be read from flash. As k comprises 32 pages, it will result in
+is read from the flash using blocks. So if you use a block size of 128k,
+and you need a page of 4k, still the compressed equivalent of 128k data
+will be read from flash. As 128k comprises 32 pages, it will result in
 32 pages being read into the buffer cache, even though at the moment of
 reading you only need one. Often the other 31 pages will be needed as
 well, but if not you wasted some tiem to read and decompress the unused
@@ -304,7 +304,7 @@ might want to experiment a little bit to see what works out best for you
 options: -noInodeCompression, -noDataCompression and
 –noFragmentCompression to control this). If you also applied function
 reordering (see [Boot Time\#User-space and application
-speedups](http://eLinux.org/Boot-Time#User-space-and-application-speedups "Boot Time") a
+speedups](http://eLinux.org/Boot_Time#User-space_and_application_speedups "Boot Time") a
 large block size will probably work out well for you.
 
 The table below gives an idea of the amount of compression that is
@@ -322,7 +322,7 @@ embedded device.
 <tbody>
 <tr class="odd">
 <td align="left">Initial</td>
-<td align="left">53K</td>
+<td align="left">53128K</td>
 <td align="left">100 %</td>
 </tr>
 <tr class="even">
@@ -338,30 +338,30 @@ embedded device.
 <tr class="even">
 <td align="left">16K</td>
 <td align="left">15780K</td>
-<td align="left".7 %</td>
+<td align="left">29.7 %</td>
 </tr>
 <tr class="odd">
 <td align="left">32K</td>
 <td align="left">15204K</td>
-<td align="left".6 %</td>
+<td align="left">28.6 %</td>
 </tr>
 <tr class="even">
 <td align="left">64K</td>
 <td align="left">14812K</td>
-<td align="left".9 %</td>
+<td align="left">27.9 %</td>
 </tr>
 </tbody>
 </table>
 
 A presentation on Squash FS by Phillip Lougher at ELC Europe 2008:
-[slides](http//tree-celinuxforum.org/CelfPubWiki/ELCEurope2008Presentations?action=AttachFile&do=get&target=squashfs-elce.pdf)
+[slides](http://tree.celinuxforum.org/CelfPubWiki/ELCEurope2008Presentations?action=AttachFile&do=get&target=squashfs-elce.pdf)
 and
-[video](http//free-electrons-com/pub/video/2008/elce/elce2008-lougher-squashfs.ogv).
+[video](http://free-electrons.com/pub/video/2008/elce/elce2008-lougher-squashfs.ogv).
 
 ## UBIFS
 
 [UBIFS](http://eLinux.org/UBIFS "UBIFS") is a flash-based filesystem, implemented on top
-of the Unsorted Block Images ([UBI](http://eLinux.org/File-Systems#UBI "File Systems"))
+of the Unsorted Block Images ([UBI](http://eLinux.org/File_Systems#UBI "File Systems"))
 interface.
 
 It has good performance compared to Jffs2 and yaffs.
@@ -370,7 +370,7 @@ Please see the [UBIFS](http://eLinux.org/UBIFS "UBIFS") page for more details.
 
 ## YAFFS2
 
--   [YAFFS](http//www-yaffs.net/yaffs-overview) - Yet Another Flash
+-   [YAFFS](http://www.yaffs.net/yaffs-overview) - Yet Another Flash
     File System - a file system designed specifically for NAND flash.
 
 YAFFS2 is simple, portable, reliable and self-contained. It is widely
@@ -396,10 +396,10 @@ Despite having been in use on Linux in real products since 2004 it has
 not yet made it to the mainline.
 
 -   -   Presentation on YAFFS2 by Wookey at ELC Europe 2007:
-        [yaffs.pdf](http//tree-celinuxforum.org/CelfPubWiki/ELCEurope2007Presentations?action=AttachFile&do=get&target=yaffs.pdf)
+        [yaffs.pdf](http://tree.celinuxforum.org/CelfPubWiki/ELCEurope2007Presentations?action=AttachFile&do=get&target=yaffs.pdf)
     -   Presentation from CELF Jamboree 17 comparing YAFFS and JFFS2 on
         2.6.10:
-        [celf\-flash.pdf](http//tree-celinuxforum.org/CelfPubWiki/JapanTechnicalJamboree17?action=AttachFile&do=view&target=celf-flashfs.pdf)
+        [celf\_flash.pdf](http://tree.celinuxforum.org/CelfPubWiki/JapanTechnicalJamboree17?action=AttachFile&do=view&target=celf_flashfs.pdf)
 
 YAFFS2 is GPLed, but is also available under dual-licensing terms for
 use in non-free contexts from Aleph One Ltd.
@@ -438,7 +438,7 @@ images, mtdram needs to be used instead. Usually three modules are
 needed to get it working:
 
 -   mtdram: Provides an MTD partition in RAM. The size can be defined
-    with the total\-size parameter in kilobytes.
+    with the total\_size parameter in kilobytes.
 
 -   mtdblock: This will create a block device for access to the
     partition.
@@ -448,7 +448,7 @@ needed to get it working:
 
 <!-- -->
 
-    modprobe mtdram total-size=16384
+    modprobe mtdram total_size=16384
     modprobe mtdblock
     modprobe jffs2
 
@@ -471,10 +471,10 @@ Mounting is done in the usuall way.
 ## Mounting UBI Image on PC using nandsim
 
 First create a simulated NAND device (this one is 256MB, 2048 page
-size). \<number\>\-id\-byte= corresponds to the ID bytes sent back from
+size). \<number\>\_id\_byte= corresponds to the ID bytes sent back from
 the NAND.
 
-    $ sudo modprobe nandsim first-id-byte=0x20 second-id-byte=0xaa third-id-byte=0x00 fourth-id-byte=0x15
+    $ sudo modprobe nandsim first_id_byte=0x20 second_id_byte=0xaa third_id_byte=0x00 fourth_id_byte=0x15
 
 Check it was created.
 
@@ -488,13 +488,13 @@ Next, attach it to a mtd device.
 
 I had to detach it prior to formatting it.
 
-    $ sudo ubidetach /dev/ubi-ctrl -m 0
+    $ sudo ubidetach /dev/ubi_ctrl -m 0
 
 If that ubidetach step fails when you enter it, just proceed to the next
 step to format the mtd device.
 
     $ sudo ubiformat /dev/mtd0 -f <image>.ubi
-    ubiformat: mtd0 (nand), size 268435456 bytes (256-0 MiB), 2048 eraseblocks of 131072 bytes (.0 KiB), min. I/O size 2048 bytes
+    ubiformat: mtd0 (nand), size 268435456 bytes (256.0 MiB), 2048 eraseblocks of 131072 bytes (128.0 KiB), min. I/O size 2048 bytes
     libscan: scanning eraseblock 2047 -- 100 % complete
     ubiformat: 2048 eraseblocks have valid erase counter, mean value is 1
     ubiformat: flashing eraseblock 455 -- 100 % complete
@@ -502,8 +502,8 @@ step to format the mtd device.
 
 Then, attach it.
 
-    $ sudo ubiattach /dev/ubi-ctrl -m 0
-    UBI device number 0, total 2048 LEBs (264241152 bytes, 252-0 MiB), available 0 LEBs (0 bytes), LEB size 024 bytes (126.0 KiB)
+    $ sudo ubiattach /dev/ubi_ctrl -m 0
+    UBI device number 0, total 2048 LEBs (264241152 bytes, 252.0 MiB), available 0 LEBs (0 bytes), LEB size 129024 bytes (126.0 KiB)
 
 Make a target directory, and mount the device.
 
@@ -525,10 +525,10 @@ Some work is in progress to survey characterize these attributes, and to
 adapt Linux to be able to use these devices more efficiently.
 
 See
-[https://wiki.linaro.org/WorkingGroups/KernelConsolidation/Projects/FlashCardSurvey](https//wiki-linaro.org/WorkingGroups/KernelConsolidation/Projects/FlashCardSurvey)
+[https://wiki.linaro.org/WorkingGroups/KernelConsolidation/Projects/FlashCardSurvey](https://wiki.linaro.org/WorkingGroups/KernelConsolidation/Projects/FlashCardSurvey)
 
 and
-[https://wiki.linaro.org/WorkingGroups/KernelConsolidation/Projects/FlashDeviceMapper](https//wiki-linaro.org/WorkingGroups/KernelConsolidation/Projects/FlashDeviceMapper)
+[https://wiki.linaro.org/WorkingGroups/KernelConsolidation/Projects/FlashDeviceMapper](https://wiki.linaro.org/WorkingGroups/KernelConsolidation/Projects/FlashDeviceMapper)
 (These projects appear to be the work of Arnd Bergmann)
 
 
@@ -540,7 +540,7 @@ and
 The Active Block I/O Scheduling System is a file system designed to be
 able to provide real-time features for file system I/O activities.
 
-See [ABISS](http//abiss-sourceforge.net/)
+See [ABISS](http://abiss.sourceforge.net/)
 
 ## Layered Filesystems
 
@@ -564,25 +564,25 @@ UnionFS is a project to provide such a system (providing a "union" of
 multiple file systems).
 
 See
-[http://www.filesystems.org/project-unionfs.html](http//www-filesystems.org/project-unionfs.html)
+[http://www.filesystems.org/project-unionfs.html](http://www.filesystems.org/project-unionfs.html)
 
 See also union mounts, which are described at
-[http://lkml.org/lkml/2007/6/20/18](http//lkml-org/lkml/2007/6/20/18)
+[http://lkml.org/lkml/2007/6/20/18](http://lkml.org/lkml/2007/6/20/18)
 (and also in Documentation/union-mounts.txt in the kernel source tree -
 or will be, when this feature is merged.)
 
 ### aufs
 
 Another UnionFS. Go to
-[http://aufs.sourceforge.net](http//aufs-sourceforge.net) for more
+[http://aufs.sourceforge.net](http://aufs.sourceforge.net) for more
 details.
 
-### mini\-fo
+### mini\_fo
 
 minifo = mini fanout overlay file system.
 
 Go to
-[http://www.denx.de/wiki/Know.MiniFOHome](http//www-denx.de/wiki/Know.MiniFOHome)
+[http://www.denx.de/wiki/Know.MiniFOHome](http://www.denx.de/wiki/Know.MiniFOHome)
 for more details.
 
 Apparently this is not maintained any more. Last information is from
@@ -598,22 +598,22 @@ page cache, and reads the file back:
 
 -   dd if=/dev/zero of=test bs=1048576 count=2048
 -   sync
--   sudo echo 3 \>/proc/sys/vm/drop\-caches
+-   sudo echo 3 \>/proc/sys/vm/drop\_caches
 -   dd if=test of=/dev/null bs=1048576
 
 You can also use IOZone to measure the performance of a Linux
 filesystem.
 
-See [http://www.iozone.org/](http//www-iozone.org/)
+See [http://www.iozone.org/](http://www.iozone.org/)
 
 Some benchmark systems that are commonly used with desktop linux are
 
--   [bonnie](http//www-coker.com.au/bonnie++/)
--   [dbench](http//samba-org/ftp/tridge/dbench/)
+-   [bonnie](http://www.coker.com.au/bonnie++/)
+-   [dbench](http://samba.org/ftp/tridge/dbench/)
 -   [Portable, fully-threaded I/O benchmark program
-    (tiobench)](http//sourceforge-net/projects/tiobench/)
+    (tiobench)](http://sourceforge.net/projects/tiobench/)
 -   [Flexible File System Benchmark
-    (ffsb)](http//sourceforge-net/projects/ffsb/)
+    (ffsb)](http://sourceforge.net/projects/ffsb/)
 
 ## Comparison of flash filesystems
 
@@ -622,11 +622,11 @@ Some benchmark systems that are commonly used with desktop linux are
 This section has links to benchmarks, testing and tuning information.
 
 -   [eMMC/SSD Filesystem Tuning Methodology
-    v1.0](http://eLinux.org/images/b/b6/EMMC-SSD-File-System-Tuning-Methodology-v1-0.pdf "EMMC-SSD File System Tuning Methodology v1.0.pdf")
+    v1.0](http://eLinux.org/images/b/b6/EMMC-SSD_File_System_Tuning_Methodology_v1.0.pdf "EMMC-SSD File System Tuning Methodology v1.0.pdf")
     document
     -   Contains testing methodology, and results (performance and
         robustness) for tuning different filesystems (btrfs, ext3, and
-        -s) on different flash media
+        f2fs) on different flash media
 
 ### Free Electrons tests (2011)
 
@@ -635,7 +635,7 @@ systematic testing of multiple flash filesystems over multiple kernel
 versions.
 
 The results are here:
-[Flash\-Filesystem\-Benchmarks](http://eLinux.org/Flash-Filesystem-Benchmarks "Flash Filesystem Benchmarks")
+[Flash\_Filesystem\_Benchmarks](http://eLinux.org/Flash_Filesystem_Benchmarks "Flash Filesystem Benchmarks")
 
 # Other projects
 
@@ -651,18 +651,18 @@ The results are here:
 A mountable virtual filesystem that allows accessing mediawiki based
 sites as regular files using a regular editor. Currently this filesystem
 is unmaintained. See
-[http://wikipediafs.sourceforge.net/](http//wikipediafs-sourceforge.net/)
+[http://wikipediafs.sourceforge.net/](http://wikipediafs.sourceforge.net/)
 for more info.
 
 ## wikifs
 
 This one seems similar to WikipediaFS, but aimed at Plan9 and inferno.
 See
-[http://www.cs.bell-labs.com/magic/man2html/4/wikifs](http//www-cs.bell-labs.com/magic/man2html/4/wikifs)
+[http://www.cs.bell-labs.com/magic/man2html/4/wikifs](http://www.cs.bell-labs.com/magic/man2html/4/wikifs)
 for more info.
 
 
-[Category](http://eLinux.org/SpecialCategories "Special:Categories"):
+[Category](http://eLinux.org/Special:Categories "Special:Categories"):
 
--   [File Systems](http://eLinux.org/CategoryFile-Systems "Category:File Systems")
+-   [File Systems](http://eLinux.org/Category:File_Systems "Category:File Systems")
 

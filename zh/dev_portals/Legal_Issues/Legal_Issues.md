@@ -44,7 +44,7 @@ This means it is unlikely that the kernel will switch to GPL version
 3.0.
 
 In September of 2006, a group of Linux kernel developers signed a
-[position statement](http//lwn-net/Articles/200422/) indicating that
+[position statement](http://lwn.net/Articles/200422/) indicating that
 they objected to GPL version 3.0 (as then drafted). This further
 indicates the unlikelyhood of any change of the kernel to the GPL v3
 license.
@@ -57,39 +57,39 @@ declare the work (to the best of their knowledge) to be either original,
 or derivative of something compatible with GPL v2.
 
 See the [Developer Certificate Of
-Origin](http://eLinux.org/Developer-Certificate-Of-Origin "Developer Certificate Of Origin")
+Origin](http://eLinux.org/Developer_Certificate_Of_Origin "Developer Certificate Of Origin")
 which is contained in the kernel's
-[Documentation/SubmittingPatches](http//git-kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=blob;f=Documentation/SubmittingPatches)
+[Documentation/SubmittingPatches](http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=blob;f=Documentation/SubmittingPatches)
 file.
 
 ### Resources for legal analysis and compliance
 
 -   The Software Freedom Law Center has a compliance guide for GPL that
     is useful:
-    -   [http://www.softwarefreedom.org/resources/2014/SFLC-Guide\-to\-GPL\-Compliance\-2d\-ed.pdf](http//www-softwarefreedom.org/resources/2014/SFLC-Guide-to-GPL-Compliance-2d-ed.pdf)
+    -   [http://www.softwarefreedom.org/resources/2014/SFLC-Guide\_to\_GPL\_Compliance\_2d\_ed.pdf](http://www.softwarefreedom.org/resources/2014/SFLC-Guide_to_GPL_Compliance_2d_ed.pdf)
         - October 2014
     -   Note that not everyone agrees with all legal interpretations
         included in this document, but overall it's a good resource.
 -   Copyleft and the GNU General Public License: A Comprehensive
     Tutorial and Guide
-    -   [http://www.copyleft.org/guide/comprehensive-gpl-guide.html\#comprehensive-gpl-guidepa1.html](http//www-copyleft.org/guide/comprehensive-gpl-guide.html#comprehensive-gpl-guidepa1.html)
+    -   [http://www.copyleft.org/guide/comprehensive-gpl-guide.html\#comprehensive-gpl-guidepa1.html](http://www.copyleft.org/guide/comprehensive-gpl-guide.html#comprehensive-gpl-guidepa1.html)
 
-## EXPORT\-SYMBOL\-GPL
+## EXPORT\_SYMBOL\_GPL
 
-### EXPORT\-SYMBOL\-GPL for kernel USB API
+### EXPORT\_SYMBOL\_GPL for kernel USB API
 
 In January of 2008, Greg Kroah Hartman submitted a patch to change the
-core USB API to EXPORT\-SYMBOL\-GPL. Here is some information about that
+core USB API to EXPORT\_SYMBOL\_GPL. Here is some information about that
 change:
 
 -   [USB: mark USB drivers as being GPL only
-    (LWN-net)](http//lwn.net/Articles/266724/)
+    (LWN.net)](http://lwn.net/Articles/266724/)
 -   [Linux 2.6.25 without Closed Source USB Drivers (Linux
-    Magazine)](http//www-linux-magazine.com/online/news/linux-2-6-25-without-closed-source-usb-drivers)
+    Magazine)](http://www.linux-magazine.com/online/news/linux_2_6_25_without_closed_source_usb_drivers)
 -   [USB drivers going GPL-only in 2.6.25
-    (LinuxWorld)](http//www-linuxworld.com/community/?q=taxonomy/term/24)
+    (LinuxWorld)](http://www.linuxworld.com/community/?q=taxonomy/term/24)
 -   [the actual git
-    commit](http//git-kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=782e70c6fc0a0395850e8e02583b8b62264d8)
+    commit](http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=782e70c6fc2290a0395850e8e02583b8b62264d8)
 
 ## Binary proprietary kernel modules
 
@@ -102,11 +102,11 @@ Opinions on this topic differ.
 Here is an article with some interesting information:
 
 -   [Encouraging closed source modules part 1: copyright and
-    software](http//www-networkworld.com/news/2006/120606-closed-modules1.html)
+    software](http://www.networkworld.com/news/2006/120606-closed-modules1.html)
 -   [Encouraging closed source modules part 2: law and the module
-    interface](http//www-networkworld.com/news/2006/120806-closed-modules2.html)
+    interface](http://www.networkworld.com/news/2006/120806-closed-modules2.html)
 -   [Encouraging closed source modules part 3: elimating the "API update
-    tax"](http//www-networkworld.com/news/2006/121106-closed-modules3.html)
+    tax"](http://www.networkworld.com/news/2006/121106-closed-modules3.html)
 
 ## Use of kernel header files in user-space
 
@@ -117,12 +117,12 @@ becomes a derivative work of the kernel and therefore subject to GPL.
 
 In general, use of header files do not create derivative works, although
 there can be exceptions. There used to be a lot of attention paid to the
-amount of code (e-g. number of lines) included from a header file, but
+amount of code (e.g. number of lines) included from a header file, but
 no one seems to care about that these days, and this is almost never a
 problem. Richard Stallman has stated that use of header files for data
 structures, constant definitions, and enumerations (and even small
 inlines) does not create a derivative work. See:
-[http://lkml.indiana.edu/hypermail/linux/kernel/0301.1/0362.html](http//lkml-indiana.edu/hypermail/linux/kernel/0301.1/0362.html)
+[http://lkml.indiana.edu/hypermail/linux/kernel/0301.1/0362.html](http://lkml.indiana.edu/hypermail/linux/kernel/0301.1/0362.html)
 
 The user-space use of the kernel header files is expected and ordinary.
 This explicitly encompasses non-GPL software using these files, and not
@@ -133,7 +133,7 @@ added an option to the kernel build system to specifically create
 "sanitized" headers that are deemed safe for use by user-space programs,
 without incurring licensing issues.
 
-These are the "make headers\-check" and "make headers\-install" targets
+These are the "make headers\_check" and "make headers\_install" targets
 in the kernel build system.
 
 In general, it is legally safest to use such sanitized headers (that is,
@@ -142,7 +142,7 @@ anything not required for user space.)
 
 This article explains how to create sanitized kernel headers using the
 kernel build system.
-[http://darmawan-salihun.blogspot.jp/2008/03/sanitizing-linux-kernel-headers-strange.html](http//darmawan-salihun-blogspot.jp/2008/03/sanitizing-linux-kernel-headers-strange.html)
+[http://darmawan-salihun.blogspot.jp/2008/03/sanitizing-linux-kernel-headers-strange.html](http://darmawan-salihun.blogspot.jp/2008/03/sanitizing-linux-kernel-headers-strange.html)
 
 Note that a different process was used by the developers of the Android
 operating system, to sanitize headers for bionic for their system. Their
@@ -151,27 +151,27 @@ sanitization feature.
 
 ## Other Links
 
--   [http://gpl-violations.org/](http//gpl-violations-org/) - The
+-   [http://gpl-violations.org/](http://gpl-violations.org/) - The
     gpl-violations.org project tries to resolve GPL violations and
     raises public awareness about GPL compliance.
--   [http://www.softwarefreedom.org/](http//www-softwarefreedom.org/) -
+-   [http://www.softwarefreedom.org/](http://www.softwarefreedom.org/) -
     The Software Freedom Law Center provides legal representation for
     open source projects and publishes information on legal issues
     around open source.
--   [http://www.linuxfoundation.org/programs/legal/compliance](http//www-linuxfoundation.org/programs/legal/compliance)
+-   [http://www.linuxfoundation.org/programs/legal/compliance](http://www.linuxfoundation.org/programs/legal/compliance)
     - Linux Foundation's Open Compliance Program
--   [http://www.binaryanalysis.org/](http//www-binaryanalysis.org/) - A
+-   [http://www.binaryanalysis.org/](http://www.binaryanalysis.org/) - A
     binary analysis tool for GPL compliance investigations
--   [http://lwn.net/Articles/380/](http//lwn-net/Articles/380/) -
+-   [http://lwn.net/Articles/386280/](http://lwn.net/Articles/386280/) -
     LWN.net article about the binary analysis tool (published on
     2010/05/06)
--   [http://fossology.org/](http//fossology-org/) - FOSSology is a
+-   [http://fossology.org/](http://fossology.org/) - FOSSology is a
     framework to scan open source code: it currently scans for copyright
     and license information and can easily be extended.
 
 
-[Category](http://eLinux.org/SpecialCategories "Special:Categories"):
+[Category](http://eLinux.org/Special:Categories "Special:Categories"):
 
 -   [OpenSource
-    Licensing](http://eLinux.org/CategoryOpenSource-Licensing "Category:OpenSource Licensing")
+    Licensing](http://eLinux.org/Category:OpenSource_Licensing "Category:OpenSource Licensing")
 

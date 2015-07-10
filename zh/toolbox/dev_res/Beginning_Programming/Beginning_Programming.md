@@ -31,18 +31,18 @@ to get involved with software development or game development.
     This has numerous examples and tutorials, and is highly recommended
     as an excellent starting place for beginning programmers.
     -   Free download available from:
-        [http://scratch.mit.edu/](http//scratch-mit.edu/)
-    -   [http://www.youtube.com/watch?v=pkhjX792yVI](http//www-youtube.com/watch?v=pkhjX792yVI)
+        [http://scratch.mit.edu/](http://scratch.mit.edu/)
+    -   [http://www.youtube.com/watch?v=pkhjX792yVI](http://www.youtube.com/watch?v=pkhjX792yVI)
         - a good starter tutorial on scratch
     -   [Scratch Getting Started
-        Guide](http//info-scratch.mit.edu/sites/infoscratch.media.mit.edu/files/file/ScratchGettingStartedv14.pdf)
+        Guide](http://info.scratch.mit.edu/sites/infoscratch.media.mit.edu/files/file/ScratchGettingStartedv14.pdf)
     -   SNAP is scratch implemented in javascript -
-        [http://snap.berkeley.edu/](http//snap-berkeley.edu/)
+        [http://snap.berkeley.edu/](http://snap.berkeley.edu/)
 
 -   Kahn Academy - Excellent online introductory course for computer
     science and programming, using interactive javascript
     -   [Computer Science tutorials and
-        videos](https//www-khanacademy.org/cs) - Start by clicking on
+        videos](https://www.khanacademy.org/cs) - Start by clicking on
         the Introductory Video.
     -   Note that the bottom area of the screen is a tabbed dialog with
         different areas:
@@ -54,11 +54,11 @@ statements you can use in your programs.
 
 ## Online resources
 
--   [http://www.codeacademy.com/](http//www-codeacademy.com/) - this
+-   [http://www.codeacademy.com/](http://www.codeacademy.com/) - this
     site has good starting tutorials for javascript, html, php, python
     and ruby.
 
--   [http://www.w3schools.com/](http//www-w3schools.com/)
+-   [http://www.w3schools.com/](http://www.w3schools.com/)
 
 ## Programming checklist
 
@@ -129,7 +129,7 @@ computer screen (usually, inside the browser window).
 
 The words on a web page are part of a language called HTML (HyperText
 Markup Language). You can learn about this language here:
-[http://www.w3schools.com/html/default.asp](http//www-w3schools.com/html/default.asp)
+[http://www.w3schools.com/html/default.asp](http://www.w3schools.com/html/default.asp)
 
 Basically, the words and symbols are put into a file (or returned from a
 program running on the web server), and these words tell the web browser
@@ -139,21 +139,21 @@ is called "rendering" the page.
 ### Scratch
 
 Here is a tutorial for a bouncing ball demo in scratch:
-[http://scratch-time.blogspot.com/2008/12/how-to-make-bouncing-ball.html](http//scratch-time-blogspot.com/2008/12/how-to-make-bouncing-ball.html)
+[http://scratch-time.blogspot.com/2008/12/how-to-make-bouncing-ball.html](http://scratch-time.blogspot.com/2008/12/how-to-make-bouncing-ball.html)
 
 ### Javascript
 
 Here is a tutorial for a bouncing ball demo in Javascript:
-[http://sixrevisions.com/html/bouncing-a-ball-around-with-html5-and-javascript/](http//sixrevisions-com/html/bouncing-a-ball-around-with-html5-and-javascript/)
+[http://sixrevisions.com/html/bouncing-a-ball-around-with-html5-and-javascript/](http://sixrevisions.com/html/bouncing-a-ball-around-with-html5-and-javascript/)
 
 Before you understand this language, and how it works, you first have to
 understand HTML.
 
 #### Javascript resources
 
--   [http://www.webmonkey.com/2010/02/javascript\-tutorial/](http//www-webmonkey.com/2010/02/javascript-tutorial/)
+-   [http://www.webmonkey.com/2010/02/javascript\_tutorial/](http://www.webmonkey.com/2010/02/javascript_tutorial/)
     - 5-part introductory tutorial
--   [http://www.w3schools.com/js/](http//www-w3schools.com/js/) - nice
+-   [http://www.w3schools.com/js/](http://www.w3schools.com/js/) - nice
     series of exercises on javascript
 
 ### Python (with PyGame)
@@ -161,7 +161,7 @@ understand HTML.
 Here is an introduction to pygame, which has an bouncing ball demo as
 part of the intro.
 
-[http://www.pygame.org/docs/tut/intro/intro.html](http//www-pygame.org/docs/tut/intro/intro.html)
+[http://www.pygame.org/docs/tut/intro/intro.html](http://www.pygame.org/docs/tut/intro/intro.html)
 
 ### C
 
@@ -174,7 +174,7 @@ developer. The linux kernel is written in 'C'.
 
 Book: The C Programming language by Brian Kernighan and Dennis Ritchie
 
-Online Resources: [http://www.learn-c.org/](http//www-learn-c.org/)
+Online Resources: [http://www.learn-c.org/](http://www.learn-c.org/)
 (Interactive)
 
 

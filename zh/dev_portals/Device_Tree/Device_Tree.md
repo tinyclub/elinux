@@ -11,9 +11,9 @@
 
 -   [1 Introduction](#introduction)
     -   [1.1 The Flattened Device Tree
-        is...](#the-flattened-device-tree-is-..)
+        is...](#the-flattened-device-tree-is)
     -   [1.2 The Flattened Device Tree is
-        not...](#the-flattened-device-tree-is-not-..)
+        not...](#the-flattened-device-tree-is-not)
     -   [1.3 History](#history)
     -   [1.4 Future](#future)
 -   [2 Advantages](#advantages)

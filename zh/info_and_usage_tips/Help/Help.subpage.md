@@ -1,0 +1,40 @@
+# Help:Contents
+## Reading
+* Help:Navigation
+* Help:Searching
+* Help:Tracking_changes
+* Help:Watchlist
+## Editing
+* Help:Editing_pages
+* Help:Starting_a_new_page
+* Help:Formatting
+* Help:Links
+* Help:User_page
+* Help:Talk_pages
+* Help:Signatures
+### Advanced editing
+* Help:Images
+* Help:Tables
+* Help:Subpages
+* Help:Managing_files
+* Help:Moving_a_page
+* Help:Redirects
+* Help:Deleting_a_page
+* Help:Protected_pages
+* Help:Templates
+* Help:Variables
+* Help:Namespaces
+* Help:Special_pages
+* Help:External_searches
+* Help:Bots
+### Personal customization
+* Help:Preferences
+* Help:Skins
+## Wiki administration
+* Help:Sysops_and_permissions
+* Help:Protecting_and_unprotecting_pages
+* Help:Sysop_deleting_and_undeleting
+* Help:Patrolled_edits
+* Help:Blocking_users
+* Help:Range_blocks
+* Help:Assigning_permissions

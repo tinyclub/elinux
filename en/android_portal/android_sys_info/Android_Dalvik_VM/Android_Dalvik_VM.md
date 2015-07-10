@@ -48,7 +48,7 @@ of dex classes in /data/dalvik-cache.
 
 There is some documentation on Dalvik in the source code in the
 dalvik/docs directory. See the [Android dalvik docs git
-repository](http//android-git.kernel.org/?p=platform/dalvik.git;a=tree;f=docs;)-
+repository](http://android.git.kernel.org/?p=platform/dalvik.git;a=tree;f=docs;).
 
 The source code has some rather large comments, including near the top
 of Thread.c and Exception.c. The "mterp" directory has some notes
@@ -70,14 +70,14 @@ From fadden on the android-platform list:
 
 -   Is there a profiler inside Dalvik, which enable us to follow each
     step in the dalvik execution ?
-    -   You could turn on LOG\-INSTR to see each instruction as it is
+    -   You could turn on LOG\_INSTR to see each instruction as it is
         executed. This results in a rather dramatic amount of logging.
         If you try to do this on a device you will overrun the 64KB
         kernel log buffer pretty quickly and drop lots of stuff, so it's
-        really only suitable for a "desktop" build (e-g. sim-eng)-
+        really only suitable for a "desktop" build (e.g. sim-eng).
     -   Also, Dalvik does include instrumentation to allow for tracing
         and profiling. See
-        [http://elinux.org/Android\-Tools\#traceview](http//elinux-org/Android-Tools#traceview)
+        [http://elinux.org/Android\_Tools\#traceview](http://elinux.org/Android_Tools#traceview)
 
 
 
@@ -87,15 +87,15 @@ As of version 2.2 (*Froyo*), Dalvik includes a Just-In-Time compiler (or
 JIT).
 
 -   See [A JIT Compiler for Android's Dalvik
-    VM](http//code-google.com/events/io/2010/sessions/jit-compiler-androids-dalvik-vm-html)
+    VM](http://code.google.com/events/io/2010/sessions/jit-compiler-androids-dalvik-vm.html)
     - video of presentation by Ben Cheng and Bill Buzbee at Google IO,
     2010
     -   [Slides, in
-        PDF](http//dl-google.com/googleio/2010/android-jit-compiler-androids-dalvik-vm-pdf)
+        PDF](http://dl.google.com/googleio/2010/android-jit-compiler-androids-dalvik-vm.pdf)
 
 The Dalvik JIT, as of version 2.2, is a "trace-granularity JIT", which
 means that it compiles individual code fragments that it discovers at
-runtime to be "hot spots". (That is, it does not compile whole methods)
+runtime to be "hot spots". (That is, it does not compile whole methods.)
 The Dalvik bytecode interpreter is constantly profiling the code it is
 executing, and when a piece of code is determined to be running a lot,
 it is passed to a compiler to turn into native code. Several
@@ -126,7 +126,7 @@ building the Android system and add-on Android applications.
 
 -   Myriad Alien Dalvik - an implementation of the Dalvik VM for other
     platforms (demonstrated first on Meego)
-    -   [http://www.linuxfordevices.com/c/a/News/Myriad-Group-Myriad-Alien-Dalvik/?kc=LNXDEVNL020911](http//www-linuxfordevices-com/c/a/News/Myriad-Group-Myriad-Alien-Dalvik/?kc=LNXDEVNL020911)
+    -   [http://www.linuxfordevices.com/c/a/News/Myriad-Group-Myriad-Alien-Dalvik/?kc=LNXDEVNL020911](http://www.linuxfordevices.com/c/a/News/Myriad-Group-Myriad-Alien-Dalvik/?kc=LNXDEVNL020911)
 
 ## Debugging the VM
 
@@ -134,7 +134,7 @@ There are a number of properties you can set, to control operation of
 the VM and allow for debugging various aspects of the system:
 
 See
-[http://netmite.com/android/mydroid/dalvik/docs/embedded-vm-control.html](http//netmite-com/android/mydroid/dalvik/docs/embedded-vm-control-html)
+[http://netmite.com/android/mydroid/dalvik/docs/embedded-vm-control.html](http://netmite.com/android/mydroid/dalvik/docs/embedded-vm-control.html)
 
 (Note that this is in \<aosp-root\>/dalvik/docs, along with a whole
 bunch of other files with information about Dalvik.)
@@ -165,25 +165,25 @@ the VM to run certain check and report problems when it sees certain
 errors occuring from code called via JNI.
 
 See
-[http://android-developers.blogspot.com/2011/07/debugging-android-jni-with-checkjni.html](http//android-developers-blogspot.com/2011/07/debugging-android-jni-with-checkjni-html)
+[http://android-developers.blogspot.com/2011/07/debugging-android-jni-with-checkjni.html](http://android-developers.blogspot.com/2011/07/debugging-android-jni-with-checkjni.html)
 
 ## Resources
 
 -   [Dalvik wikipedia
-    entry](http//en-wikipedia-org/wiki/Dalvik-(software))
+    entry](http://en.wikipedia.org/wiki/Dalvik_(software))
 
 -   [Dalvik VM
-    Internals](http//sites-google-com/site/io/dalvik-vm-internals) -
+    Internals](http://sites.google.com/site/io/dalvik-vm-internals) -
     video of presentation by Dan Bornstein at Google IO, 2008
 
--   [DEX file format](http//www-retrodev.com/android/dexformat-html),
+-   [DEX file format](http://www.retrodev.com/android/dexformat.html),
     reverse engineered by Michael Pavone
 
 -   [Dalvik
-    bytecodes](http//developer-android.com/reference/dalvik/bytecode/Opcodes-html)
+    bytecodes](http://developer.android.com/reference/dalvik/bytecode/Opcodes.html)
 
 
-[Category](http://eLinux.org/SpecialCategories "Special:Categories"):
+[Category](http://eLinux.org/Special:Categories "Special:Categories"):
 
--   [Android](http://eLinux.org/CategoryAndroid "Category:Android")
+-   [Android](http://eLinux.org/Category:Android "Category:Android")
 

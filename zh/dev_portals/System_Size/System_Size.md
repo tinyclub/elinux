@@ -51,7 +51,7 @@
     -   [3.3 How to measure the memory usage at
         runtime](#how-to-measure-the-memory-usage-at-runtime)
     -   [3.4 Linux size increase from 2.4 to
-        2.6](#linux-size-increase-from-2-4-to-2.6)
+        2.6](#linux-size-increase-from-2-4-to-2-6)
     -   [3.5 GCC Code-Size Benchmarking](#gcc-code-size-benchmarking)
 -   [4 Case Studies](#case-studies)
     -   [4.1 uClinux](#uclinux)

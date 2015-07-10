@@ -28,126 +28,126 @@ up-to-date information*
 -   [3 Documentation](#documentation)
     -   [3.1 Online](#online)
     -   [3.2 Books](#books)
--   [4 Cross-reference / code online](#cross-reference---code-online)
+-   [4 Cross-reference / code online](#cross-reference-code-online)
 
 ## Vanilla Linux kernel
 
--   [www.kernel.org](http//www-kernel.org/)
--   [Linux Kernel Source Tarballs](http//kernel-org/pub/linux/kernel/)
+-   [www.kernel.org](http://www.kernel.org/)
+-   [Linux Kernel Source Tarballs](http://kernel.org/pub/linux/kernel/)
 -   [Linus' Git
-    Repository](http//git-kernel.org/?p=linux/kernel/git/torvalds/linux.git;a=summary)
+    Repository](http://git.kernel.org/?p=linux/kernel/git/torvalds/linux.git;a=summary)
 
 ### Mailing List (lkml)
 
 -   [The Big List of Linux Kernel mailing lists, and where to find their
-    archives](http//vger-kernel.org/vger-lists.html)
-    -   [LKML](http//vger-kernel.org/vger-lists.html#linux-kernel) -
+    archives](http://vger.kernel.org/vger-lists.html)
+    -   [LKML](http://vger.kernel.org/vger-lists.html#linux-kernel) -
         The Linux Kernel Mailing List (where the big boys hang out)
-    -   [linux-embedded](http//vger-kernel.org/vger-lists.html#linux-embedded)
+    -   [linux-embedded](http://vger.kernel.org/vger-lists.html#linux-embedded)
         - Embedded Linux Kernel List
 -   [How to subscribe to these
-    lists](http//vger-kernel.org/majordomo-info.html)
+    lists](http://vger.kernel.org/majordomo-info.html)
 
 ### LKML summaries
 
--   [LWN Kernel page](http//lwn-net/Kernel/) - Linux Weekly News kernel
+-   [LWN Kernel page](http://lwn.net/Kernel/) - Linux Weekly News kernel
     coverage
 
 ### Repository access
 
--   [Kernel Git repositories](http//git-kernel.org)
+-   [Kernel Git repositories](http://git.kernel.org)
 -   [Vanilla Linux Git
-    Tree](http//git-kernel.org/?p=linux/kernel/git/torvalds/linux.git;a=summary)
+    Tree](http://git.kernel.org/?p=linux/kernel/git/torvalds/linux.git;a=summary)
     - This is "upstream". Get your code into here, please.
     -   But [this
-        one](http//padator-org/linux/full-history-linux.git.tar) has
+        one](http://padator.org/linux/full-history-linux.git.tar) has
         all the going back to 0.0.1, and updates itself from Linus's
         tree when you do a "git pull". (This is really cool. You want
         this.)
 
 ### News
 
--   [Linux Weekly News, Kernel page](http//lwn-net/Kernel/)
+-   [Linux Weekly News, Kernel page](http://lwn.net/Kernel/)
 
 ### Changelog
 
 -   Comprehensible changelog of the linux kernel
-    -   [http://wiki.kernelnewbies.org/LinuxChanges](http//wiki-kernelnewbies.org/LinuxChanges)
+    -   [http://wiki.kernelnewbies.org/LinuxChanges](http://wiki.kernelnewbies.org/LinuxChanges)
 
 -   LWN atricles for spcific releases
     -   2.6.3
-        [http://lwn.net/Articles/71669/](http//lwn-net/Articles/71669/)
+        [http://lwn.net/Articles/71669/](http://lwn.net/Articles/71669/)
     -   2.6.10
-        [http://lwn.net/Articles/117187/](http//lwn-net/Articles/117187/)
+        [http://lwn.net/Articles/117187/](http://lwn.net/Articles/117187/)
     -   2.6.12
-        [http://lwn.net/Articles/140165/](http//lwn-net/Articles/140165/)
+        [http://lwn.net/Articles/140165/](http://lwn.net/Articles/140165/)
     -   2.6.15
-        [http://lwn.net/Articles/166130/](http//lwn-net/Articles/166130/)
+        [http://lwn.net/Articles/166130/](http://lwn.net/Articles/166130/)
 
 -   LWN aricles on 2.6 API changes
     -   2.6 API changes
-        [http://lwn.net/Articles/2.6-kernel-api/](http//lwn-net/Articles/2.6-kernel-api/)
+        [http://lwn.net/Articles/2.6-kernel-api/](http://lwn.net/Articles/2.6-kernel-api/)
     -   2.6.12 API changes
-        [http://lwn.net/Articles/140164/](http//lwn-net/Articles/140164/)
+        [http://lwn.net/Articles/140164/](http://lwn.net/Articles/140164/)
 
 ## Architecture Sites
 
 ### MIPS
 
 -   web site =
-    [http://www.linux-mips.org/wiki/Main\-Page](http//www-linux-mips.org/wiki/Main-Page)
+    [http://www.linux-mips.org/wiki/Main\_Page](http://www.linux-mips.org/wiki/Main_Page)
 -   mailing list =
-    [http://www.linux-mips.org/wiki/Net\-Resources\#Mailing\-lists](http//www-linux-mips.org/wiki/Net-Resources#Mailing-lists)
+    [http://www.linux-mips.org/wiki/Net\_Resources\#Mailing\_lists](http://www.linux-mips.org/wiki/Net_Resources#Mailing_lists)
 -   Maintainer = Ralph Baechle
 
 -   there's an alternate site on [Source
-    Forge](http://eLinux.org/Source-Forge "Source Forge")
+    Forge](http://eLinux.org/Source_Forge "Source Forge")
 -   the site is:
-    [http://sourceforge.net/projects/linux-mips](http//sourceforge-net/projects/linux-mips)
+    [http://sourceforge.net/projects/linux-mips](http://sourceforge.net/projects/linux-mips)
 -   Note that this is used for experimental stuff that hasn't been
     merged into the official mips tree by Ralph Baechle
 
 ### ARM
 
 -   web site =
-    [http://www.arm.linux.org.uk/](http//www-arm.linux.org.uk/)
+    [http://www.arm.linux.org.uk/](http://www.arm.linux.org.uk/)
 -   cvs access =
-    [http://cvs.arm.linux.org.uk/](http//cvs-arm.linux.org.uk/)
+    [http://cvs.arm.linux.org.uk/](http://cvs.arm.linux.org.uk/)
 -   mailing list =
-    [http://www.arm.linux.org.uk/armlinux/mailinglists.php](http//www-arm.linux.org.uk/armlinux/mailinglists.php)
--   wiki = [http://www.linux-arm.org/](http//www-linux-arm.org/)
+    [http://www.arm.linux.org.uk/armlinux/mailinglists.php](http://www.arm.linux.org.uk/armlinux/mailinglists.php)
+-   wiki = [http://www.linux-arm.org/](http://www.linux-arm.org/)
 -   Maintainer = Russell King
 
 ### [PowerPC](http://eLinux.org/PowerPC "PowerPC")
 
--   web site = [http://penguinppc.org/](http//penguinppc-org/)
+-   web site = [http://penguinppc.org/](http://penguinppc.org/)
 -   mailing lists =
-    [http://penguinppc.org/about/community.php\#lists](http//penguinppc-org/about/community.php#lists)
+    [http://penguinppc.org/about/community.php\#lists](http://penguinppc.org/about/community.php#lists)
 -   Git repository =
     kernel.org:/pub/scm/linux/kernel/git/paulus/powerpc.git
 -   Maintainer = Paul Mackerras
 -   Power Macintosh Maintainer = Benjamin Herrenschmidt
 
 -   cross-compiler mini-howto:
-    [http://penguinppc.org/embedded/cross-compiling/](http//penguinppc-org/embedded/cross-compiling/)
+    [http://penguinppc.org/embedded/cross-compiling/](http://penguinppc.org/embedded/cross-compiling/)
 
 See the following for information on different linuxppc source trees
 available:
-[http://www.penguinppc.org/dev/kernel.shtml](http//www-penguinppc.org/dev/kernel.shtml)
+[http://www.penguinppc.org/dev/kernel.shtml](http://www.penguinppc.org/dev/kernel.shtml)
 
 ### SuperH (SH)
 
--   [www.linux-sh.org](http//www-linux-sh.org/)
--   [oss.renesas.com/](http//oss-renesas.com/)
+-   [www.linux-sh.org](http://www.linux-sh.org/)
+-   [oss.renesas.com/](http://oss.renesas.com/)
 -   Git repository =
     kernel.org:/pub/scm/linux/kernel/git/lethal/sh-2.6.git
 -   mailing list address = linux-sh@vger.kernel.org
 -   mailing list page =
-    [http://vger.kernel.org/vger-lists.html\#linux-sh](http//vger-kernel.org/vger-lists.html#linux-sh)
+    [http://vger.kernel.org/vger-lists.html\#linux-sh](http://vger.kernel.org/vger-lists.html#linux-sh)
 -   mailing list archives =
-    [http://news.gmane.org/gmane.linux.ports.sh.devel](http//news-gmane.org/gmane.linux.ports.sh.devel)
+    [http://news.gmane.org/gmane.linux.ports.sh.devel](http://news.gmane.org/gmane.linux.ports.sh.devel)
 -   wiki =
-    [http://linux-sh.org/shwiki/FrontPage](http//linux-sh-org/shwiki/FrontPage)
+    [http://linux-sh.org/shwiki/FrontPage](http://linux-sh.org/shwiki/FrontPage)
 -   Maintainer = Paul Mundt
 
 ## Documentation
@@ -155,11 +155,11 @@ available:
 ### Online
 
 -   Rusty Russell's [Unreliable Guide to
-    Locking](http//kernelbook-sourceforge.net/kernel-locking.html)
+    Locking](http://kernelbook.sourceforge.net/kernel-locking.html)
 -   Embedded Linux kernel and driver development - [Free Tutorials at
-    Free Electrons](http//free-electrons-com/training/drivers)
+    Free Electrons](http://free-electrons.com/training/drivers)
 -   Linux USB drivers - [USB Driver Tutorial at Free
-    Electrons](http//free-electrons-com/articles/linux-usb)
+    Electrons](http://free-electrons.com/articles/linux-usb)
 
 ### Books
 
@@ -169,9 +169,9 @@ available:
     Greg Kroah-Hartman
     -   Great book for getting started with Linux device drivers
     -   Free online pdf edition:
-        [http://lwn.net/images/pdf/LDD3/](http//lwn-net/images/pdf/LDD3/)
+        [http://lwn.net/images/pdf/LDD3/](http://lwn.net/images/pdf/LDD3/)
     -   online html
-        [http://www.makelinux.net/ldd3/](http//www-makelinux.net/ldd3/)
+        [http://www.makelinux.net/ldd3/](http://www.makelinux.net/ldd3/)
 -   *Essential Linux Device Drivers* by Sreekrishnan Venkateswaran
     -   Introduction to driver development for major subsystems
 -   *Professional Linux Kernel Architecture* by Wolfgang Mauerer
@@ -183,21 +183,21 @@ available:
 -   *Linux Kernel in a Nutshell* by Greg Kroah-Hartman
     -   Overview of kernel configuration and building
     -   Free online edition:
-        [http://www.kroah.com/lkn/](http//www-kroah.com/lkn/)
+        [http://www.kroah.com/lkn/](http://www.kroah.com/lkn/)
 
 ## Cross-reference / code online
 
--   [http://www.makelinux.net/kernel\-map](http//www-makelinux.net/kernel-map)
--   [http://lxr.free-electrons.com/](http//lxr-free-electrons.com/)
--   [http://sosdg.org/\~coywolf/lxr/source/](http//sosdg-org/~coywolf/lxr/source/)
--   [http://lxr.linux.no/source/](http//lxr-linux.no/source/)
--   [http://lxr.devzen.net/source/](http//lxr-devzen.net/source/)
+-   [http://www.makelinux.net/kernel\_map](http://www.makelinux.net/kernel_map)
+-   [http://lxr.free-electrons.com/](http://lxr.free-electrons.com/)
+-   [http://sosdg.org/\~coywolf/lxr/source/](http://sosdg.org/~coywolf/lxr/source/)
+-   [http://lxr.linux.no/source/](http://lxr.linux.no/source/)
+-   [http://lxr.devzen.net/source/](http://lxr.devzen.net/source/)
 -   [Find a kernel function
-    line](http://eLinux.org/Find-a-kernel-function-line "Find a kernel function line")
+    line](http://eLinux.org/Find_a_kernel_function_line "Find a kernel function line")
 
 
-[Category](http://eLinux.org/SpecialCategories "Special:Categories"):
+[Category](http://eLinux.org/Special:Categories "Special:Categories"):
 
 -   [Development
-    Tools](http://eLinux.org/CategoryDevelopment-Tools "Category:Development Tools")
+    Tools](http://eLinux.org/Category:Development_Tools "Category:Development Tools")
 

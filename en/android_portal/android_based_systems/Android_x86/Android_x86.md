@@ -50,13 +50,13 @@ Android-x86 3.2-r2], based upon Honeycomb.
 ### Build on ubuntu 11.10
 
 see [Building Android 4.0 on Ubuntu
-11.10](http//www-android-dev-ro/2011/12/13/building-android-4-0-on-ubuntu-11-10/)
+11.10](http://www.android-dev.ro/2011/12/13/building-android-4-0-on-ubuntu-11-10/)
 
 install old version of gcc 4.4 with : sudo apt-get install gcc-4.4
 g++-4.4 g++-4.4-multilib gcc-4.4-multilib
 
-run make with : make CC=gcc-4.4 CXX=g++-4.4 -j4 iso\-img
-TARGET\-PRODUCT=generic\-x86
+run make with : make CC=gcc-4.4 CXX=g++-4.4 -j4 iso\_img
+TARGET\_PRODUCT=generic\_x86
 
 
 
@@ -75,13 +75,13 @@ AVM GmbH AVM Fritz!WLAN N [Atheros AR9001U]
 ### Running the system from boot medium CD or USB-Stick
 
 -   download CD-Image
-    [android-x86-1.6-r2.iso](http//www-android-x86-org/download) or
+    [android-x86-1.6-r2.iso](http://www.android-x86.org/download) or
     USB-Image
-    [android-x86-1.6-r2\-usb.img.gz](http//www-android-x86-org/download)
+    [android-x86-1.6-r2\_usb.img.gz](http://www.android-x86.org/download)
 -   burn cd image or for the usb-image use the following commands on a
     linux box "gunzip
-    [http://www.android-x86.org/download](http//www-android-x86-org/download)"
-    and "dd if=android-x86-1.6-r2\-usb.img of=/dev/sda" (of=/dev/sda is
+    [http://www.android-x86.org/download](http://www.android-x86.org/download)"
+    and "dd if=android-x86-1.6-r2\_usb.img of=/dev/sda" (of=/dev/sda is
     depending on where your linux mounted your usb-stick)
 -   boot from created medium and choose the first menu entry "Live USB -
     Run Android-x86 without Installation"
@@ -91,7 +91,7 @@ AVM GmbH AVM Fritz!WLAN N [Atheros AR9001U]
 ### run the system from harddisk
 
 s. as well the [installation section on
-android-x86.org](http//www-android-x86-org/)
+android-x86.org](http://www.android-x86.org/)
 
 -   boot from CD or USB-Stick android x86 boot menu choose the fourth
     option "Installation - Install Android-x86 1.6-r2 to harddisk"
@@ -111,7 +111,7 @@ android-x86.org](http//www-android-x86-org/)
 ### SD-card
 
 for mounting an sd card see
-[[1]](http//www-android-x86-org/documents/sdcardhowto)
+[[1]](http://www.android-x86.org/documents/sdcardhowto)
 
 ### navigation
 
@@ -146,22 +146,22 @@ functions
 
     * change screen to console 1, press Alt+F1
     * enter
-      "alsa-amixer cset numid=1 31" for 'Front Playback Volume' and/or
-      "alsa-amixer cset numid=20 31" for 'Master Playback Volume'  and/or
-      "alsa-amixer cset numid=3 31" for 'Speaker Playback Volume'
+      "alsa_amixer cset numid=1 31" for 'Front Playback Volume' and/or
+      "alsa_amixer cset numid=20 31" for 'Master Playback Volume'  and/or
+      "alsa_amixer cset numid=3 31" for 'Speaker Playback Volume'
     * go back to graphic screen,  press Alt+F7
 
 **x86 PCs with normal keyboard**
 
 rear panel audio jack and front panel audio jack depend on the setting
-of 'Front Playback Volume' alsa\-amixer sound setting
+of 'Front Playback Volume' alsa\_amixer sound setting
 
 ### video
 
 ### application errors
 
 -   menu /settings/about phone/System tutorial -\> Sorry! The
-    application settings (process com-android-settings) has stopped
+    application settings (process com.android.settings) has stopped
     unexpectedly. Please try again.
 
 ## Development
@@ -183,7 +183,7 @@ keyboard layouts see /system/usr/keylayout/
 command to get events: getevent
 
 [Keymaps and Keyboard Input, a detailed
-description](http//www-kandroid.org/android-pdk/keymaps-keyboard-input-html)
+description](http://www.kandroid.org/android_pdk/keymaps_keyboard_input.html)
 
 ### File Infos
 
@@ -214,7 +214,7 @@ description](http//www-kandroid.org/android-pdk/keymaps-keyboard-input-html)
     .
     2 directories, 11 files
 
-steps to change files in system.sfs (system-img)
+steps to change files in system.sfs (system.img)
 
     * Ubuntu 10.4 box
     * change to shell, press strg+alt+F1
@@ -232,25 +232,25 @@ steps to change files in system.sfs (system-img)
 now cd to systemimg directory and make the changes
 
 eg. change \*.kl files for sound F7 (scanncode=65) = mute; F8
-(scanncode=66) = volume\-down; F9 (scanncode=67) = volume\-up
+(scanncode=66) = volume\_down; F9 (scanncode=67) = volume\_up
 
     * cd usr/keylayout
     * vi *.kl
     * change lines
-      key 113   VOLUME-MUTE
-      key 114   VOLUME-DOWN
-      key 115   VOLUME-UP
+      key 113   VOLUME_MUTE
+      key 114   VOLUME_DOWN
+      key 115   VOLUME_UP
 
-      key 65   VOLUME-MUTE
-      key 66   VOLUME-DOWN
-      key 67   VOLUME-UP
+      key 65   VOLUME_MUTE
+      key 66   VOLUME_DOWN
+      key 67   VOLUME_UP
 
 ### sound
 
 s.
 
-1.  [http://wiki.archlinux.org/index.php/Advanced\-Linux\-Sound\-Architecture](http//wiki-archlinux.org/index-php/Advanced-Linux-Sound-Architecture)
-2.  [http://www.alsa-project.org/main/index.php/Main\-Page](http//www-alsa-project.org/main/index-php/Main-Page)
+1.  [http://wiki.archlinux.org/index.php/Advanced\_Linux\_Sound\_Architecture](http://wiki.archlinux.org/index.php/Advanced_Linux_Sound_Architecture)
+2.  [http://www.alsa-project.org/main/index.php/Main\_Page](http://www.alsa-project.org/main/index.php/Main_Page)
 
 ### yaffs2 - filesystem
 
@@ -264,11 +264,11 @@ s.
 
 ### Links
 
-[http://androidoniphone.blogspot.com/2010/04/install-android-on-iphone-guide.html](http//androidoniphone-blogspot.com/2010/04/install-android-on-iphone-guide-html)
-[http://android-dls.com/wiki/index.php?title=Main\-Page](http//android-dls-com/wiki/index-php?title=Main-Page)
+[http://androidoniphone.blogspot.com/2010/04/install-android-on-iphone-guide.html](http://androidoniphone.blogspot.com/2010/04/install-android-on-iphone-guide.html)
+[http://android-dls.com/wiki/index.php?title=Main\_Page](http://android-dls.com/wiki/index.php?title=Main_Page)
 
 
-[Category](http://eLinux.org/SpecialCategories "Special:Categories"):
+[Category](http://eLinux.org/Special:Categories "Special:Categories"):
 
--   [Android](http://eLinux.org/CategoryAndroid "Category:Android")
+-   [Android](http://eLinux.org/Category:Android "Category:Android")
 

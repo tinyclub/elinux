@@ -75,7 +75,7 @@ perform different actions.
 The build output is placed in 'out/host' and 'out/target' Stuff under
 'out/host' are things compiled for your host platform (your desktop
 machine). Stuff under 'out/target/product/\<platform-name\>' eventually
-makes it's way to a target device (or emulator)-
+makes it's way to a target device (or emulator).
 
 The directory 'out/target/product/\<platform-name\>/obj' is used for
 staging "object" files, which are intermediate binary images used for
@@ -98,10 +98,10 @@ libraries will be used to build programs and tools that will run on the
 host. A different toolchain is used to compile the C and C++ code that
 will wind up on the target (which is an embedded board, device or the
 emulator). This is usually a "cross" toolchain that runs on an X86
-platform, but produces code for some other platform (most commonly ARM)-
+platform, but produces code for some other platform (most commonly ARM).
 The kernel is compiled as a standalone binary (it does not use a program
 loader or link to any outside libraries). Other items, like native
-programs (e-g- init or toolbox), daemons or libraries will link against
+programs (e.g. init or toolbox), daemons or libraries will link against
 bionic or other system libraries.
 
 You will be using a Java compiler and a bunch of java-related tools to
@@ -116,7 +116,7 @@ Before you build anything, you have to tell the Android build system
 where your Java SDK is. (Installing a Java SDK is a pre-requisite for
 building).
 
-Do this by setting a JAVA\-HOME environment variable.
+Do this by setting a JAVA\_HOME environment variable.
 
 ### Specifying what to build
 
@@ -166,11 +166,11 @@ The items that have to be defined for a build are:
 -   the build type ('release' or 'debug')
 
 Descriptions of these different build variants are at
-[http://source.android.com/porting/build\-system.html\#androidBuildVariants](http//source-android.com/porting/build-system-html#androidBuildVariants)
+[http://source.android.com/porting/build\_system.html\#androidBuildVariants](http://source.android.com/porting/build_system.html#androidBuildVariants)
 
 The build process from a user perspective is described pretty well in
 this blog post: [First Android platform
-build](http//blog-codepainters-com/2009/12/18/first-android-platform-build/)
+build](http://blog.codepainters.com/2009/12/18/first-android-platform-build/)
 by CodePainters, December 2009
 
 ### Actually building the system
@@ -211,15 +211,15 @@ parts of the system:
 -   make droid - make droid is the normal build.
 -   make all - make everything, whether it is included in the product
     definition or not
--   make clean - remove all built files (prepare for a new build)- Same
+-   make clean - remove all built files (prepare for a new build). Same
     as rm -rf out/\<configuration\>/
 -   make modules - shows a list of submodules that can be built (List of
-    all LOCAL\-MODULE definitions)
--   make \<local\-module\> - make a specific module (note that this is
-    not the same as directory name. It is the LOCAL\-MODULE definition
+    all LOCAL\_MODULE definitions)
+-   make \<local\_module\> - make a specific module (note that this is
+    not the same as directory name. It is the LOCAL\_MODULE definition
     in the Android.mk file)
--   make clean-\<local\-module\> - clean a specific module
--   make bootimage TARGET\-PREBUILT\-KERNEL=/path/to/bzImage - create a
+-   make clean-\<local\_module\> - clean a specific module
+-   make bootimage TARGET\_PREBUILT\_KERNEL=/path/to/bzImage - create a
     new boot image with custom bzImage
 
 ### Helper macros and functions
@@ -251,7 +251,7 @@ they are hyperthreaded (meaning you have 4 virtual processors), try
 
 You can also specify to use the 'ccache' compiler cache, which will
 speed up things once you have built things a first time. To do this,
-specify 'export USE\-CCACHE=1' at your shell command line. (Note that
+specify 'export USE\_CCACHE=1' at your shell command line. (Note that
 ccache is included in the prebuilt section of the repository, and does
 not have to be installed on your host separately.)
 
@@ -271,26 +271,26 @@ snod' builds a new system image from current binaries.
 ### Setting module-specific build parameters
 
 Some code in Android system can be customized in the way they are built
-(separate from the build variant and release vs- debug options)- You can
+(separate from the build variant and release vs. debug options). You can
 set variables that control individual build options, either by setting
 them in the environment or by passing them directly to 'make' (or the
 'm...' functions which call 'make'.)
 
 For example, the 'init' program can be built with support for bootchart
-logging by setting the INIT\-BOOTCHART variable. (See [Using Bootchart
-on Android](http://eLinux.org/Using-Bootchart-on-Android "Using Bootchart on Android")
+logging by setting the INIT\_BOOTCHART variable. (See [Using Bootchart
+on Android](http://eLinux.org/Using_Bootchart_on_Android "Using Bootchart on Android")
 for why you might want to do this.)
 
 You can accomplish either with:
 
     $ touch system/init/init.c
-    $ export INIT-BOOTCHART=true
+    $ export INIT_BOOTCHART=true
     $ make
 
 or
 
     $ touch system/init/init.c
-    $ m INIT-BOOTCHART=true
+    $ m INIT_BOOTCHART=true
 
 ## Makefile tricks
 
@@ -322,7 +322,7 @@ The following line, extracted from
 prebuilt/android-arm/gdbserver/Android.mk copies a list of files to the
 EXECUTABLES directory in the output area:
 
-    $(call add-prebuilt-files, EXECUTABLES, $(prebuilt-files))
+    $(call add-prebuilt-files, EXECUTABLES, $(prebuilt_files))
 
 ## Adding a new program to build
 
@@ -344,7 +344,7 @@ EXECUTABLES directory in the output area:
         the target (not do a whole install)
 
 See
-[http://www.aton.com/android-native-development-using-the-android-open-source-project/](http//www-aton-com/android-native-development-using-the-android-open-source-project/)
+[http://www.aton.com/android-native-development-using-the-android-open-source-project/](http://www.aton.com/android-native-development-using-the-android-open-source-project/)
 for a lot more detail.
 
 ## Building the kernel
@@ -353,11 +353,11 @@ The kernel is "outside" of the normal Android build system (indeed, the
 kernel is not included by default in the Android Open Source Project).
 However, there are tools in AOSP for building a kernel. If you are
 building the kernel, start on this page:
-[http://source.android.com/source/building-kernels.html](http//source-android.com/source/building-kernels-html)
+[http://source.android.com/source/building-kernels.html](http://source.android.com/source/building-kernels.html)
 
 If you are building the kernel for the emulator, you may also want to
 look at:
-[http://stackoverflow.com/questions/1809774/android-kernel-compile-and-test-with-android-emulator](http//stackoverflow-com/questions/1809774/android-kernel-compile-and-test-with-android-emulator)
+[http://stackoverflow.com/questions/1809774/android-kernel-compile-and-test-with-android-emulator](http://stackoverflow.com/questions/1809774/android-kernel-compile-and-test-with-android-emulator)
 
 And, Ron M wrote (on the android-kernel mailing list, on May 21, 2012):
 
@@ -368,11 +368,11 @@ when building for QEMU:
 There is actually a nice and shorter way to build the kernel for your
 QEMU target provided by the AOSP:
 
-1. cd to your kernel source dir (Only goldfish 2-6- works out of the
+1. cd to your kernel source dir (Only goldfish 2.6.29 works out of the
 box for the emulator)
 
-2. \${ANDROID\-BUILD\-TOP}/external/qemu/distrib/build-kernel.sh -j=64
--arch=x86 -out=\$YourOutDir
+2. \${ANDROID\_BUILD\_TOP}/external/qemu/distrib/build-kernel.sh -j=64
+--arch=x86 --out=\$YourOutDir
 
 3. emulator -kernel \${YourOutDir}/kernel-qemu \# run emulator:
 
@@ -395,23 +395,23 @@ An example for building the same emulator is below:
     # Have make refer to the QEMU wrapper script for building android over x86
     (eliminates the errors listed above)
     export
-    CROSS-COMPILE=${ANDROID-BUILD-TOP}/external/qemu/distrib/kernel-toolchain/android-kernel-toolchain-
+    CROSS_COMPILE=${ANDROID_BUILD_TOP}/external/qemu/distrib/kernel-toolchain/android-kernel-toolchain-
     # Put your cross compiler here. I am using the AOSP prebuilt one in this example
     export
-    REAL-CROSS-COMPILE=${ANDROID-BUILD-TOP}/prebuilt/linux-x86/toolchain/i686-android-linux-4.4.3/bin/i686-android-linux-
-    # Configure your kernel - here I am taking the default goldfish-defconfig
-    make goldfish-defconfig
+    REAL_CROSS_COMPILE=${ANDROID_BUILD_TOP}/prebuilt/linux-x86/toolchain/i686-android-linux-4.4.3/bin/i686-android-linux-
+    # Configure your kernel - here I am taking the default goldfish_defconfig
+    make goldfish_defconfig
     # build
     make -j64
     # Run emulator:
     emulator -kernel arch/x86/boot/bzImage -show-kernel
 
 
- This works for the 2.6- goldfish branch. If anyone is using the
+ This works for the 2.6.29 goldfish branch. If anyone is using the
 emulator with a 3+ kernel I would be like to hear about it.
 
 
-[Category](http://eLinux.org/SpecialCategories "Special:Categories"):
+[Category](http://eLinux.org/Special:Categories "Special:Categories"):
 
--   [Android](http://eLinux.org/CategoryAndroid "Category:Android")
+-   [Android](http://eLinux.org/Category:Android "Category:Android")
 

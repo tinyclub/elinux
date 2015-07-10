@@ -24,14 +24,14 @@ processors
 
 This overview of porting steps was seen on the android-porting list:
  See
-[http://www.mail-archive.com/android-porting@googlegroups.com/msg06721.html](http//www-mail-archive.com/android-porting@googlegroups.com/msg06721-html)
+[http://www.mail-archive.com/android-porting@googlegroups.com/msg06721.html](http://www.mail-archive.com/android-porting@googlegroups.com/msg06721.html)
 
 This glosses over all the kernel work for a new board, and the
 android-specific kernel patches, but has some good discussion about the
 flash partitioning and file system bringup process.
 
     If the linux kernel is up and running with all drivers in.
-    (particularly touchscreen and display) it shouldn't be too bad-
+    (particularly touchscreen and display) it shouldn't be too bad.
 
     IHMO, the easiest way to get you running is to aggregate the initial
     ramfs built into the kernel with the Android build, the root Android
@@ -86,47 +86,47 @@ flash partitioning and file system bringup process.
 ## Porting Tutorials
 
 -   [Porting Android to a new
-    Device](http//www-linuxfordevices-com/c/a/Linux-For-Devices-Articles/Porting-Android-to-a-new-device/)
+    Device](http://www.linuxfordevices.com/c/a/Linux-For-Devices-Articles/Porting-Android-to-a-new-device/)
     - excellent and thorough paper on porting Android to the Nokia N810.
     -   Has a detailed list of kernel changes and annotated diffs.
--   [http://wiki.kldp.org/wiki.php/AndroidPortingOnRealTarget](http//wiki-kldp.org/wiki-php/AndroidPortingOnRealTarget)
--   [Android on OMAP](http://eLinux.org/Android-on-OMAP "Android on OMAP") - excellent
+-   [http://wiki.kldp.org/wiki.php/AndroidPortingOnRealTarget](http://wiki.kldp.org/wiki.php/AndroidPortingOnRealTarget)
+-   [Android on OMAP](http://eLinux.org/Android_on_OMAP "Android on OMAP") - excellent
     tutorial covering lots of different issues for porting Android to
     platforms based on the TI OMAP (ARM) processor
 -   Some cursory notes on a port to a PXA board are at:
-    [http://letsgoustc.spaces.live.com/blog/cns!89A-DFB5E249BA!320.entry](http//letsgoustc-spaces.live.com/blog/cns!89A-DFB5E249BA!320-entry)
+    [http://letsgoustc.spaces.live.com/blog/cns!89AD27DFB5E249BA!320.entry](http://letsgoustc.spaces.live.com/blog/cns!89AD27DFB5E249BA!320.entry)
 -   Adding a new device or changing the configuration of an existing
-    device [Android Device](http://eLinux.org/Android-Device "Android Device")
+    device [Android Device](http://eLinux.org/Android_Device "Android Device")
 
 ## Porting Issues
 
 -   Matt Porter (Mentor Graphics) gave a presentation on difficulties
     encountered while they were porting Android to MIPS and PPC
     processors at [ELC Europe
-    2009](http//www-embeddedlinuxconference.com/elc-europe09/index.html)-
+    2009](http://www.embeddedlinuxconference.com/elc_europe09/index.html).
     His talk was called "Mythbusters: Android" and has lots of good
     information.
     -   See
-        [Mythbusters\-Android.pdf](http://eLinux.org/images/2/2d/Mythbusters-Android-pdf "Mythbusters Android-pdf")
+        [Mythbusters\_Android.pdf](http://eLinux.org/images/2/2d/Mythbusters_Android.pdf "Mythbusters Android.pdf")
 
 -   [Dalvik porting
-    guide](http//android-git.kernel.org/?p=platform/dalvik.git;a=blob-plain;f=docs/porting-guide-html;hb=HEAD)
+    guide](http://android.git.kernel.org/?p=platform/dalvik.git;a=blob_plain;f=docs/porting-guide.html;hb=HEAD)
 
 -   Matthias Brugger presented his personal "war story" on porting
     Android at ELC Europe 2012. See his
-    [slides](http//www-slideshare-net/MatthiasBrugger/porting-android-40toacustomboard)
+    [slides](http://www.slideshare.net/MatthiasBrugger/porting-android-40toacustomboard)
     on slideshare.
 
 ### Android Hardware Abstraction Layer
 
 Android talks to standard devices through its hardware abstraction
-layer, which overlays the kernel interfaces to devices (e.g- devices
+layer, which overlays the kernel interfaces to devices (e.g. devices
 nodes, Linux system calls, etc.). To add support for your own hardware,
 or, in particular, to add support to Android for some new type of
 hardware, you need to understand this abstraction layer.
 
 Karim Yaghmour has a good blog entry describing the Android HAL layer:
-[http://www.opersys.com/blog/extending-android-hal](http//www-opersys-com/blog/extending-android-hal)
+[http://www.opersys.com/blog/extending-android-hal](http://www.opersys.com/blog/extending-android-hal)
 
 ## Porting to New Processors
 
@@ -135,7 +135,7 @@ Karim Yaghmour has a good blog entry describing the Android HAL layer:
     -   Nina Wilner talked about this work, and gave a demo at ELC
         Europe 2009
     -   see
-        [Android\-On\-Power.pdf](http://eLinux.org/images/0/07/Android-On-Power-pdf "Android On Power-pdf")
+        [Android\_On\_Power.pdf](http://eLinux.org/images/0/07/Android_On_Power.pdf "Android On Power.pdf")
 
 ## Virtualization environments
 
@@ -147,14 +147,19 @@ Here is some information about different systems known to exist:
 
 -   OpenMobile ACL (Application Compatibility Layer)
     -   LinuxDevices article:
-        [http://www.linuxfordevices.com/c/a/News/OpenMobile-ACL-for-MeeGo/?kc=LNXDEVNL0-11](http//www-linuxfordevices-com/c/a/News/OpenMobile-ACL-for-MeeGo/?kc=LNXDEVNL0-11)
+        [http://www.linuxfordevices.com/c/a/News/OpenMobile-ACL-for-MeeGo/?kc=LNXDEVNL092811](http://www.linuxfordevices.com/c/a/News/OpenMobile-ACL-for-MeeGo/?kc=LNXDEVNL092811)
     -   OpenMobile product
-        page:[http://openmobile.co/products.php](http//openmobile-co/products-php)
+        page:[http://openmobile.co/products.php](http://openmobile.co/products.php)
 -   Myriad Alien Dalvik
     -   LinuxDevices article:
-        [http://www.linuxfordevices.com/c/a/News/Myriad-Group-Myriad-Alien-Dalvik/](http//www-linuxfordevices-com/c/a/News/Myriad-Group-Myriad-Alien-Dalvik/)
+        [http://www.linuxfordevices.com/c/a/News/Myriad-Group-Myriad-Alien-Dalvik/](http://www.linuxfordevices.com/c/a/News/Myriad-Group-Myriad-Alien-Dalvik/)
     -   Myried Group page:
-        [http://www.myriadgroup.com/Device-Manufacturers/Android-solutions/\~/media/D42B513FB5114FF2B4CA13A2D8CE313E.ashx](http//www-myriadgroup.com/Device-Manufacturers/Android-solutions/~/media/D42B513FB5114FF2B4CA13A2D8CE313E-ashx)
+        [http://www.myriadgroup.com/Device-Manufacturers/Android-solutions/\~/media/D42B513FB5114FF2B4CA13A2D8CE313E.ashx](http://www.myriadgroup.com/Device-Manufacturers/Android-solutions/~/media/D42B513FB5114FF2B4CA13A2D8CE313E.ashx)
 -   [FIXTHIS - should add tetsuyuki presentation about running Android
     on Ubuntu here]
+
+
+[Category](http://eLinux.org/Special:Categories "Special:Categories"):
+
+-   [Android](http://eLinux.org/Category:Android "Category:Android")
 

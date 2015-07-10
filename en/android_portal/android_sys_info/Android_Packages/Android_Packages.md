@@ -25,7 +25,7 @@ directories and files in a gzip'ed archive.
 A package usually contains the following items:
 
  META-INF/MANIFEST.MF 
-The manifest file for the package file (apk) itself-
+The manifest file for the package file (apk) itself.
 
  META-INF/CERT.SF 
 A security certificate
@@ -55,22 +55,22 @@ libraries and security permissions neede by the app, messages used by
 the app, what icon to use to represent the app, and more.
 
 See
-[http://developer.android.com/guide/topics/manifest/manifest-intro.html](http//developer-android.com/guide/topics/manifest/manifest-intro-html)
+[http://developer.android.com/guide/topics/manifest/manifest-intro.html](http://developer.android.com/guide/topics/manifest/manifest-intro.html)
 for details.
 
 ### Tools for managing packages
 
-The [aapt](http://eLinux.org/Android-aapt "Android aapt") tool is used to create, inspect
+The [aapt](http://eLinux.org/Android_aapt "Android aapt") tool is used to create, inspect
 and modify Android packages.
 
 ## Resources
 
 An overview of application resources is at:
-[http://developer.android.com/guide/topics/resources/index.html](http//developer-android.com/guide/topics/resources/index-html)
+[http://developer.android.com/guide/topics/resources/index.html](http://developer.android.com/guide/topics/resources/index.html)
 
 It is possible to use a raw file as a resource (without it getting
 compiled by the build system). See this article on [using raw files as
-resources](http//thedevelopersinfo-com/2009/11-/using-files-as-raw-resources-in-android/)
+resources](http://thedevelopersinfo.com/2009/11/27/using-files-as-raw-resources-in-android/)
 in Android.
 
 ## Assets
@@ -80,7 +80,7 @@ they are listed in the 'assets' directory of a package, rather than the
 'res' directory.
 
 
-[Category](http://eLinux.org/SpecialCategories "Special:Categories"):
+[Category](http://eLinux.org/Special:Categories "Special:Categories"):
 
--   [Android](http://eLinux.org/CategoryAndroid "Category:Android")
+-   [Android](http://eLinux.org/Category:Android "Category:Android")
 

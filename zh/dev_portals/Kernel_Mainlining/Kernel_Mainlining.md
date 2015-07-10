@@ -27,10 +27,10 @@ patches to the Linux kernel.
 
 ## General Resources
 
--   [Documentation/HOWTO](https//www-kernel.org/doc/Documentation/HOWTO)
+-   [Documentation/HOWTO](https://www.kernel.org/doc/Documentation/HOWTO)
     - kernel document describing how to code for the kernel and
     contribute
--   [Documentation/development-process](https//www-kernel.org/doc/Documentation/development-process/)
+-   [Documentation/development-process](https://www.kernel.org/doc/Documentation/development-process/)
     - kernel documents describing the kernel development process
 
 ### Presentations
@@ -39,13 +39,13 @@ Greg KH has a great presentation about how the community works, with
 links to references for getting started:
 
 -   [Linux Kernel Development
-    (pdf)](https//github-com/gregkh/kernel-development/blob/master/kernel-development.pdf?raw=true)
+    (pdf)](https://github.com/gregkh/kernel-development/blob/master/kernel-development.pdf?raw=true)
 
 An older talk (2008) by Andrew Morton discusses the reasons to
 contribute, and best practices for contributing to the upstream kernel
 
 -   [Session:kernel.org development and the embedded
-    world](http://eLinux.org/Sessionkernel-org-development-and-the-embedded-world "Session:kernel.org development and the embedded world")
+    world](http://eLinux.org/Session:kernel.org_development_and_the_embedded_world "Session:kernel.org development and the embedded world")
     -   In this seminal talk from 2008, Andrew lays out the case for
         involvement of embedded companies in kernel development. He
         describes the overall process, but more importantly what to
@@ -59,7 +59,7 @@ Here is a list of talks about mainlining and community involvement, from
 previous Linux conferences:
 
 -   [How to Participate in the Kernel Development Process
-    (PDF)](http://eLinux.org/images/0/00/Corbet-dev-process-pdf "Corbet-dev-process.pdf")
+    (PDF)](http://eLinux.org/images/0/00/Corbet-dev-process.pdf "Corbet-dev-process.pdf")
     - ELC-2007, April 2007, Jonathan Corbet
     -   This talk is an attempt to identify the factors which lead to
         success or failure and present them in a way that will help
@@ -78,7 +78,7 @@ previous Linux conferences:
         successful code adoption into the kernel.org tree.
     -   (presentation not available)
 -   [Embedded maintainers: Community and Embedded
-    Linux](http://eLinux.org/images/c/c5/Dwmw2-community-and-embedded-linux-pdf "Dwmw2-community and embedded linux.pdf")
+    Linux](http://eLinux.org/images/c/c5/Dwmw2-community_and_embedded_linux.pdf "Dwmw2-community and embedded linux.pdf")
     ELCE-2008, David Woodhouse
     -   This presentation introduces and discusses the new community
         rôle of 'embedded maintainer', present David's ideas and seek
@@ -93,7 +93,7 @@ previous Linux conferences:
         gatekeeper and arbiter of taste for it. It's more about bringing
         people together and getting them to collaborate better.
 -   [Embedded Linux and Mainline
-    Kernel](http://eLinux.org/images/c/c5/Dwmw2-ELC-2009-04-pdf "Dwmw2-ELC-2009-04.pdf")
+    Kernel](http://eLinux.org/images/c/c5/Dwmw2-ELC-2009-04.pdf "Dwmw2-ELC-2009-04.pdf")
     - ELC-2009, April 2009, David Woodhouse
     -   Embedded Linux has more in common, technologically, with other
         Linux use areas than many embedded developers realize. In this
@@ -108,16 +108,16 @@ previous Linux conferences:
         embedded. Virtualized systems is a good place to look, as they
         often have resource constraints as well.
 -   [Cooperative Development Inside
-    Communities](http://eLinux.org/images/5/50/CommunityDevelopment-pdf "CommunityDevelopment.pdf")
+    Communities](http://eLinux.org/images/5/50/CommunityDevelopment.pdf "CommunityDevelopment.pdf")
     ELC-2009 Jeff Osier-Mixon
     -   This is the talk introducing MELD.
 -   [Becoming Part of the Linux Kernel
-    Community](http://eLinux.org/images/6/63/Elc2011-bergmann-keynote-pdf "Elc2011 bergmann keynote.pdf")
+    Community](http://eLinux.org/images/6/63/Elc2011_bergmann_keynote.pdf "Elc2011 bergmann keynote.pdf")
     ELC-2011, April, 2011, Arnd Bergmann
     -   This talk give the benefits of beign integrated with the
         community (it was the "hippy" talk)
 -   [Developer's Diary: Helping the
-    Process](http://eLinux.org/images/f/fe/Elc2011-sang-pdf "Elc2011 sang.pdf") ELC-2011,
+    Process](http://eLinux.org/images/f/fe/Elc2011_sang.pdf "Elc2011 sang.pdf") ELC-2011,
     April 2011, Wolfram Sang
     -   include notes on best practices for contributing to mainline
 -   Contributing to the Community? Does your manager support you? -
@@ -127,43 +127,43 @@ previous Linux conferences:
 -   ELC-2013 chalmers
 -   ELC-2014 maupin
 -   [Two years of ARM SoC support Mainlining: Lessons
-    Learned](http://eLinux.org/images/d/dc/Petazzoni-soc-mainlining-lessons-learned-pdf "Petazzoni-soc-mainlining-lessons-learned.pdf")
+    Learned](http://eLinux.org/images/d/dc/Petazzoni-soc-mainlining-lessons-learned.pdf "Petazzoni-soc-mainlining-lessons-learned.pdf")
     ELC-2014, April 2014, Thomas Petazzoni
     -   Give many good tips, including social ones
 
 ### Training, tutorials and challenges
 
--   The [KernelNewbies web site](http//kernelnewbies-org/) is
+-   The [KernelNewbies web site](http://kernelnewbies.org/) is
     specifically dedicated to helping developers learn how to make
     contributions to the Linux kernel
     -   There's a "To Do" list of small tasks that are ready for
         development, here
-        [http://kernelnewbies.org/KernelJanitors/Todo](http//kernelnewbies-org/KernelJanitors/Todo)
+        [http://kernelnewbies.org/KernelJanitors/Todo](http://kernelnewbies.org/KernelJanitors/Todo)
     -   See their excellent [Guide to Upstream
-        Merging](http//kernelnewbies-org/UpstreamMerge) for a lot of
+        Merging](http://kernelnewbies.org/UpstreamMerge) for a lot of
         good technical and social tips.
 
 -   The Outreach Program For Women has an excellent tutorial on the
     steps for contributing one's first patch to the kernel
     -   [OPFW First Patch
-        tutorial](http//kernelnewbies-org/OPWfirstpatch)
+        tutorial](http://kernelnewbies.org/OPWfirstpatch)
 
--   [Eudyptula Challenge](http//eudyptula-challenge-org/)
+-   [Eudyptula Challenge](http://eudyptula-challenge.org/)
     -   This is a series of 20 tasks, managed via e-mail, that help
         people learn how to work with the kernel and submit patches
     -   LWN.net article
-        [http://lwn.net/Articles/599231/](http//lwn-net/Articles/599231/)
+        [http://lwn.net/Articles/599231/](http://lwn.net/Articles/599231/)
 
--   [http://www.tuxradar.com/content/newbies-guide-hacking-linux-kernel](http//www-tuxradar.com/content/newbies-guide-hacking-linux-kernel)
+-   [http://www.tuxradar.com/content/newbies-guide-hacking-linux-kernel](http://www.tuxradar.com/content/newbies-guide-hacking-linux-kernel)
 
 ## Specific Projects
 
 -   [CE Workgroup Device Mainlining
-    Project](http://eLinux.org/CE-Workgroup-Device-Mainlining-Project "CE Workgroup Device Mainlining Project")
+    Project](http://eLinux.org/CE_Workgroup_Device_Mainlining_Project "CE Workgroup Device Mainlining Project")
 -   [Qualcomm SOC Mainlining
-    Project](http://eLinux.org/Qualcomm-SOC-Mainlining-Project "Qualcomm SOC Mainlining Project")
+    Project](http://eLinux.org/Qualcomm_SOC_Mainlining_Project "Qualcomm SOC Mainlining Project")
 -   [Allwinner mainlining
-    effort](http//linux-sunxi-org/Linux-mainlining-effort)
+    effort](http://linux-sunxi.org/Linux_mainlining_effort)
     -   this is a really good page with a write-up of the status of
         mainlined items for each kernel, and what tasks remain
 
@@ -282,7 +282,7 @@ previous Linux conferences:
 
 ### From David Arlie
 
-[http://airlied.livejournal.com/80112.html](http//airlied-livejournal.com/80112.html)
+[http://airlied.livejournal.com/80112.html](http://airlied.livejournal.com/80112.html)
 
 * * * * *
 
@@ -336,12 +336,12 @@ think a lot of vendors are guilty of this).
 ## Overcoming Obstacles to Mainlining
 
 Tim Bird has prepared a talk about [Overcoming Obstacles to
-Mainlining](http://eLinux.org/Overcoming-Obstacles-to-Mainlining "Overcoming Obstacles to Mainlining")
+Mainlining](http://eLinux.org/Overcoming_Obstacles_to_Mainlining "Overcoming Obstacles to Mainlining")
 for ELCE 2014. See that page for information about this presentation and
 a link to his slides.
 
 
-[Category](http://eLinux.org/SpecialCategories "Special:Categories"):
+[Category](http://eLinux.org/Special:Categories "Special:Categories"):
 
--   [Kernel](http://eLinux.org/CategoryKernel "Category:Kernel")
+-   [Kernel](http://eLinux.org/Category:Kernel "Category:Kernel")
 
