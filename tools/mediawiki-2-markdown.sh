@@ -44,6 +44,7 @@ cat ${page}.md | \
 #  * gitbook: need to replace . with -
 #  * gitbook: need to replace ' with -
 #  * gitbook: need to replace "*" with -*
+#  * the handling of .xx is wrong, need to build toc automatically instead of ugly workarounds.
 
 cat ${page}.md | \
     sed -e "/^## Content/,/^## Introduction/{s=](#\(.*\)=](#\L\1=g;s=_=-=g;s/.2f/-/g;s/.2c/-/g;s/.27/-/g;s/.5b/-/g;s/.5d/-/g;s/.2b/-/g;s/.28/-/g;s/.29/-/g;s/.7c/-/g;s/.7b/-/g;s/.7d//g;s/--/-/g}" |\

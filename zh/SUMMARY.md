@@ -106,12 +106,12 @@
 
     * [Android Linux Kernel](android_portal/android_linux/README.md)
 
-        * [Where to obtain](android_portal/android_linux/Where_to_obtain.md)
-        * [How to build](android_portal/android_linux/How_to_build.md)
-        * [How to install (on phone, on emulator, etc.)](android_portal/android_linux/How_to_install.md)
-        * [What version to use](android_portal/android_linux/What_version_to_use.md)
-        * [Kernel features](android_portal/android_linux/Kernel_features.md)
-        * [Board Support highlights](android_portal/android_linux/Board_Support_highlights.md)
+        * [Where to obtain](android_portal/android_linux/Android_Kernel_Download.md)
+        * [How to build](android_portal/android_linux/Android_Kernel_Build.md)
+        * [How to install (on phone, on emulator, etc.)](android_portal/android_linux/Android_Kernel_Installation.md)
+        * [What version to use](android_portal/android_linux/Android_Kernel_Versions.md)
+        * [Kernel features](android_portal/android_linux/Android_Kernel_Features.md)
+        * [Board Support highlights](android_portal/android_linux/Android_Board_Support.md)
 
     * [Android System Information](android_portal/android_sys_info/README.md)
 
