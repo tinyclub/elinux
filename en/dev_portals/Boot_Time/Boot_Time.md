@@ -52,13 +52,13 @@ end user experience. Turning on a device is Use Case \#1.
 
 Booting up a device involves numerous steps and sequences of events. In
 order to use consistent terminology, the [Bootup Time Working
-Group](http://eLinux.org/Bootup_Time_Working_Group "Bootup Time Working Group") of the CE
+Group](../.././dev_portals/Boot_Time/Bootup_Time_Working_Group/Bootup_Time_Working_Group.md "Bootup Time Working Group") of the CE
 Linux Forum came up with a list of terms and their widely accepted
 definitions for this functionality area. See the following page for
 these terms:
 
 -   [Boot-up Time Definition Of
-    Terms](http://eLinux.org/Boot-up_Time_Definition_Of_Terms "Boot-up Time Definition Of Terms")
+    Terms](../.././dev_portals/Boot_Time/Boot-up_Time_Definition_Of_Terms/Boot-up_Time_Definition_Of_Terms.md "Boot-up Time Definition Of Terms")
 
 ## Technology/Project Pages
 
@@ -69,38 +69,38 @@ or patches maintained elsewhere.
 
 ### Measuring Boot-up Time
 
--   [Printk Times](http://eLinux.org/Printk_Times "Printk Times") - simple system for
+-   [Printk Times](../.././dev_portals/Boot_Time/Printk_Times/Printk_Times.md "Printk Times") - simple system for
     showing timing information for each printk.
 -   [Kernel Function
-    Trace](http://eLinux.org/Kernel_Function_Trace "Kernel Function Trace") - system for
+    Trace](../.././dev_portals/Boot_Time/Kernel_Function_Trace/Kernel_Function_Trace.md "Kernel Function Trace") - system for
     reporting function timings in the kernel.
--   [Linux Trace Toolkit](http://eLinux.org/Linux_Trace_Toolkit "Linux Trace Toolkit") -
+-   [Linux Trace Toolkit](../../dbg_portal/kernel_trace_and_profile/Linux_Trace_Toolkit/Linux_Trace_Toolkit.md "Linux Trace Toolkit") -
     system for reporting timing data for certain kernel and process
     events.
 -   [Oprofile](http://oprofile.sourceforge.net/news/) - system-wide
     profiler for Linux.
--   [Bootchart](http://eLinux.org/Bootchart "Bootchart") - a tool for performance
+-   [Bootchart](../.././dev_portals/Boot_Time/Bootchart/Bootchart.md "Bootchart") - a tool for performance
     analysis and visualization of the Linux boot process. Resource
     utilization and process information are collected during the
     user-space portion of the boot process and are later rendered in a
     PNG, SVG or EPS encoded chart.
 -   [Bootprobe](http://people.redhat.com/berrange/systemtap/bootprobe/)
-    - a set of [System Tap](http://eLinux.org/System_Tap "System Tap") scripts for
+    - a set of [System Tap](../../dbg_portal/kernel_trace_and_profile/System_Tap/System_Tap.md "System Tap") scripts for
     analyzing system bootup.
 -   and, let us not forget: "cat /proc/uptime"
--   [grabserial](http://eLinux.org/Tims_Fastboot_Tools#grabserial "Tims Fastboot Tools")
+-   [grabserial](../.././dev_portals/Boot_Time/Tims_Fastboot_Tools/Tims_Fastboot_Tools.md#grabserial "Tims Fastboot Tools")
     - a nice utility from Tim Bird to log and timestamp console output
 -   [process
-    trace](http://eLinux.org/Tims_Fastboot_Tools#Tim.27s_quick_and_dirty_process_trace "Tims Fastboot Tools")
+    trace](../.././dev_portals/Boot_Time/Tims_Fastboot_Tools/Tims_Fastboot_Tools.md#Tim.27s_quick_and_dirty_process_trace "Tims Fastboot Tools")
     - a simple patch from Tim Bird to log exec, fork and exit system
     calls.
 -   [ptx\_ts](http://pengutronix.de/software/ptx_ts/index_en.html) -
     Pengutronix' TimeStamper: A small filter prepending timestamps to
     STDOUT; a bit similar to grabserial but not limited to serial ports
--   [Initcall Debug](http://eLinux.org/Initcall_Debug "Initcall Debug") - a kernel
+-   [Initcall Debug](../.././dev_portals/Boot_Time/Initcall_Debug/Initcall_Debug.md "Initcall Debug") - a kernel
     command line option to show time taken for initcalls.
 -   See also: [Kernel
-    Instrumentation](http://eLinux.org/Kernel_Instrumentation "Kernel Instrumentation")
+    Instrumentation](../.././dev_portals/Boot_Time/Kernel_Instrumentation/Kernel_Instrumentation.md "Kernel Instrumentation")
     which lists some known kernel instrumentation tools. These are of
     interest for measuring kernel startup time.
 
@@ -108,47 +108,47 @@ or patches maintained elsewhere.
 
 #### Bootloader speedups
 
--   [Kernel XIP](http://eLinux.org/Kernel_XIP "Kernel XIP") - Allow kernel to be executed
+-   [Kernel XIP](../.././dev_portals/Boot_Time/Kernel_XIP/Kernel_XIP.md "Kernel XIP") - Allow kernel to be executed
     in-place in ROM or FLASH.
 -   [DMA Copy Of Kernel On
-    Startup](http://eLinux.org/DMA_Copy_Of_Kernel_On_Startup "DMA Copy Of Kernel On Startup")
+    Startup](../.././dev_portals/Boot_Time/DMA_Copy_Of_Kernel_On_Startup/DMA_Copy_Of_Kernel_On_Startup.md "DMA Copy Of Kernel On Startup")
     - Copy kernel from Flash to RAM using DMA
--   [Uncompressed kernel](http://eLinux.org/Uncompressed_kernel "Uncompressed kernel") -
+-   [Uncompressed kernel](../.././dev_portals/Boot_Time/Uncompressed_kernel/Uncompressed_kernel.md "Uncompressed kernel") -
     An uncompressed kernel might boot faster
 -   [Fast Kernel
-    Decompression](http://eLinux.org/Fast_Kernel_Decompression "Fast Kernel Decompression")
+    Decompression](../.././dev_portals/Boot_Time/Fast_Kernel_Decompression/Fast_Kernel_Decompression.md "Fast Kernel Decompression")
 
 #### Kernel speedups
 
--   [Disable Console](http://eLinux.org/Disable_Console "Disable Console") - Avoid
+-   [Disable Console](../.././dev_portals/Boot_Time/Disable_Console/Disable_Console.md "Disable Console") - Avoid
     overhead of console output during system startup.
 -   Disable bug and printk - Avoid the overhead of bug and printk.
     Disadvantage is that you lose a lot of info.
--   [RTC No Sync](http://eLinux.org/RTC_No_Sync "RTC No Sync") - Avoid delay to
+-   [RTC No Sync](../.././dev_portals/Boot_Time/RTC_No_Sync/RTC_No_Sync.md "RTC No Sync") - Avoid delay to
     synchronize system time with RTC clock edge on startup.
--   [Short IDE Delays](http://eLinux.org/Short_IDE_Delays "Short IDE Delays") - Reduce
+-   [Short IDE Delays](../.././dev_portals/Boot_Time/Short_IDE_Delays/Short_IDE_Delays.md "Short IDE Delays") - Reduce
     duration of IDE startup delays (this is effective but possibly
     dangerous).
 -   [Hardcode kernel module
-    info](http://eLinux.org/Hardcode_kernel_module_info "Hardcode kernel module info") -
+    info](../.././dev_portals/Boot_Time/Hardcode_kernel_module_info/Hardcode_kernel_module_info.md "Hardcode kernel module info") -
     Reduce the overhead of loading a module, by hardcoding some
     information used for loading the relocation information
--   [IDE No Probe](http://eLinux.org/IDE_No_Probe "IDE No Probe") - Force kernel to
+-   [IDE No Probe](../.././dev_portals/Boot_Time/IDE_No_Probe/IDE_No_Probe.md "IDE No Probe") - Force kernel to
     observe the ide\<x\>=noprobe option.
--   [Preset LPJ](http://eLinux.org/Preset_LPJ "Preset LPJ") - Allow the use of a preset
+-   [Preset LPJ](../.././dev_portals/Boot_Time/Preset_LPJ/Preset_LPJ.md "Preset LPJ") - Allow the use of a preset
     loops\_per\_jiffy value.
 -   [Asynchronous function
-    calls](http://eLinux.org/Asynchronous_function_calls "Asynchronous function calls") -
+    calls](../.././dev_portals/Boot_Time/Asynchronous_function_calls/Asynchronous_function_calls.md "Asynchronous function calls") -
     Allow probing or other functions to proceed in parallel, to overlap
     time-consuming boot-up activities.
     -   [Threaded Device
-        Probing](http://eLinux.org/Threaded_Device_Probing "Threaded Device Probing") -
+        Probing](../.././dev_portals/Boot_Time/Threaded_Device_Probing/Threaded_Device_Probing.md "Threaded Device Probing") -
         Allow drivers to probe devices in parallel. (not mainlined, now
         deprecated?)
 -   [Reordering of driver
-    initialization](http://eLinux.org/Reordering_of_driver_initialization "Reordering of driver initialization")
+    initialization](../.././dev_portals/Boot_Time/Reordering_of_driver_initialization/Reordering_of_driver_initialization.md "Reordering of driver initialization")
     - Allow driver bus probing to start as soon as possible.
--   [Deferred Initcalls](http://eLinux.org/Deferred_Initcalls "Deferred Initcalls") -
+-   [Deferred Initcalls](../.././dev_portals/Boot_Time/Deferred_Initcalls/Deferred_Initcalls.md "Deferred Initcalls") -
     defer non-essential module initialization routines to after primary
     boot
 -   NAND ECC improvement - The pre 2.6.28 nand\_ecc.c has room for
@@ -188,30 +188,30 @@ read from storage into RAM or not, and what algorithms are used during
 the mount procedure.
 
 -   [Filesystem
-    Information](http://eLinux.org/Filesystem_Information "Filesystem Information") - has
+    Information](../.././dev_portals/Boot_Time/Filesystem_Information/Filesystem_Information.md "Filesystem Information") - has
     information about boot-up times of various file systems
--   [File Systems](http://eLinux.org/File_Systems "File Systems") - has information on
+-   [File Systems](../../dev_portals/File_Systems/File_Systems.md "File Systems") - has information on
     various file systems that are interesting for embedded systems. Also
     includes some improvement suggestions.
--   [Avoid Initramfs](http://eLinux.org/Avoid_Initramfs "Avoid Initramfs") - explains on
+-   [Avoid Initramfs](../.././dev_portals/Boot_Time/Avoid_Initramfs/Avoid_Initramfs.md "Avoid Initramfs") - explains on
     why initramfs should be avoided if you want to minimize boot time
 -   Split partitions. If mounting a file system takes long, you can
     consider splitting that filesystem in two parts, one with the info
     that is needed during or immediately after boot, and one which can
     be mounted later on.
--   [Ramdisks demasked](http://eLinux.org/Ramdisks_demasked "Ramdisks demasked") -
+-   [Ramdisks demasked](../.././dev_portals/Boot_Time/Ramdisks_demasked/Ramdisks_demasked.md "Ramdisks demasked") -
     explains why using a ram disk generally results in a longer boot
     time, not a shorter one.
 
 #### User-space and application speedups
 
--   [Optimize RC Scripts](http://eLinux.org/Optimize_RC_Scripts "Optimize RC Scripts") -
+-   [Optimize RC Scripts](../.././dev_portals/Boot_Time/Optimize_RC_Scripts/Optimize_RC_Scripts.md "Optimize RC Scripts") -
     Reduce overhead of running RC scripts
--   [Parallel RC Scripts](http://eLinux.org/Parallel_RC_Scripts "Parallel RC Scripts") -
+-   [Parallel RC Scripts](../.././dev_portals/Boot_Time/Parallel_RC_Scripts/Parallel_RC_Scripts.md "Parallel RC Scripts") -
     Run RC scripts in parallel instead of sequentially
--   [Application XIP](http://eLinux.org/Application_XIP "Application XIP") - Allow
+-   [Application XIP](../.././dev_portals/Boot_Time/Application_XIP/Application_XIP.md "Application XIP") - Allow
     programs and libraries to be executed in-place in ROM or FLASH
--   [Pre Linking](http://eLinux.org/Pre_Linking "Pre Linking") - Avoid cost of runtime
+-   [Pre Linking](../.././dev_portals/Boot_Time/Pre_Linking/Pre_Linking.md "Pre Linking") - Avoid cost of runtime
     linking on first program load
 -   Statically link applications. This avoids the costs of runtime
     linking. Useful if you have only a few applications. In that case it
@@ -221,12 +221,12 @@ the mount procedure.
     -   See
         [http://sourceware.org/ml/binutils/2006-06/msg00418.html](http://sourceware.org/ml/binutils/2006-06/msg00418.html)
 -   [Application Init
-    Optimizations](http://eLinux.org/Application_Init_Optimizations "Application Init Optimizations")
+    Optimizations](../.././dev_portals/Boot_Time/Application_Init_Optimizations/Application_Init_Optimizations.md "Application Init Optimizations")
     - Improvements in program load and init time via:
     -   use of mmap vs. read
     -   control over page mapping characteristics.
 -   [Include modules in kernel
-    image](http://eLinux.org/Include_modules_in_kernel_image "Include modules in kernel image")
+    image](../.././dev_portals/Boot_Time/Include_modules_in_kernel_image/Include_modules_in_kernel_image.md "Include modules in kernel image")
     - Avoid extra overhead of module loading by adding the modules to
     the kernel image
 -   Speed up module loading - Use Alessio Igor Bogani's kernel patches
@@ -299,7 +299,7 @@ mechanism. Two approaches are known.
     quite a while.
 -   Implementing snapshot boot. This is done by Hiroki Kaminaga from
     Sony and is described at [snapshot boot for
-    ARM](http://eLinux.org/Suspend_To_Disk_For_ARM "Suspend To Disk For ARM") and
+    ARM](../.././dev_portals/Boot_Time/Suspend_To_Disk_For_ARM/Suspend_To_Disk_For_ARM.md "Suspend To Disk For ARM") and
     [http://elinux.org/upload/3/37/Snapshot-boot-final.pdf](http://elinux.org/upload/3/37/Snapshot-boot-final.pdf)
     This is similar to hibernate and resume, but the hibernate file is
     retained and used upon every boot. Disadvantage is that no writable
@@ -310,7 +310,7 @@ mechanism. Two approaches are known.
 
 #### Miscellaneous topics
 
-[About Compression](http://eLinux.org/About_Compression "About Compression") discusses
+[About Compression](../.././dev_portals/Boot_Time/About_Compression/About_Compression.md "About Compression") discusses
 the effects of compression on boot time. This can affect both the kernel
 boot time as well as user-space startup.
 
@@ -388,7 +388,7 @@ work.
     -   Tim Bird has presented at ELC Europe, on November 7, 2008, his
         latest collection of tips and tricks for reducing bootup time
     -   [Tims Fastboot
-        Tools](http://eLinux.org/Tims_Fastboot_Tools "Tims Fastboot Tools") has online
+        Tools](../.././dev_portals/Boot_Time/Tims_Fastboot_Tools/Tims_Fastboot_Tools.md "Tims Fastboot Tools") has online
         materials in support of this presentation
 -   [Christopher
     Hallinan](http://www.mvista.com/download/author.php?a=37) has done a
@@ -491,7 +491,7 @@ inittab(5) man page](http://linux.die.net/man/5/inittab).
 
 #### busybox init
 
-An 'init' applet is often included in [BusyBox](http://eLinux.org/BusyBox "BusyBox")
+An 'init' applet is often included in [BusyBox](../.././dev_portals/Boot_Time/BusyBox/BusyBox.md "BusyBox")
 
 There used to be (as of 2000) some slight differences in the supported
 features of the 'inittab' file between busybox init and full-blown init.
@@ -574,7 +574,7 @@ See
 
 -   [![Alert.gif](http://eLinux.org/images/e/e7/Alert.gif)](http://eLinux.org/File:Alert.gif) *in
     progress* - [Boot-up Time Reduction
-    Howto](http://eLinux.org/Boot-up_Time_Reduction_Howto "Boot-up Time Reduction Howto")
+    Howto](../.././dev_portals/Boot_Time/Boot-up_Time_Reduction_Howto/Boot-up_Time_Reduction_Howto.md "Boot-up Time Reduction Howto")
     - this is a project to catalog existing boot-up time reduction
     techniques.
     -   Was originally intended to be the authoritative source for
@@ -582,7 +582,7 @@ See
     -   No one maintains it any more (as of Aug, 2008)
 -   [![Alert.gif](http://eLinux.org/images/e/e7/Alert.gif)](http://eLinux.org/File:Alert.gif)*no content
     yet* - [Boot-up Time Delay
-    Taxonomy](http://eLinux.org/Boot-up_Time_Delay_Taxonomy "Boot-up Time Delay Taxonomy")
+    Taxonomy](../.././dev_portals/Boot_Time/Boot-up_Time_Delay_Taxonomy/Boot-up_Time_Delay_Taxonomy.md "Boot-up Time Delay Taxonomy")
     - list of delays categorized by boot phase, type and magnitude
     -   Was to be a survey of common bootup delays found in embedded
         devices.
@@ -590,17 +590,17 @@ See
 
 ???
 
--   [Bootup Time Spec](http://eLinux.org/Bootup_Time_Spec "Bootup Time Spec")
+-   [Bootup Time Spec](../.././dev_portals/Boot_Time/Bootup_Time_Spec/Bootup_Time_Spec.md "Bootup Time Spec")
 -   [Bootup Time Things To
-    Investigate](http://eLinux.org/Bootup_Time_Things_To_Investigate "Bootup Time Things To Investigate")
+    Investigate](../.././dev_portals/Boot_Time/Bootup_Time_Things_To_Investigate/Bootup_Time_Things_To_Investigate.md "Bootup Time Things To Investigate")
 -   [Bootup Time Working
-    Group](http://eLinux.org/Bootup_Time_Working_Group "Bootup Time Working Group")
+    Group](../.././dev_portals/Boot_Time/Bootup_Time_Working_Group/Bootup_Time_Working_Group.md "Bootup Time Working Group")
 -   [Bootup Time Task
-    List](http://eLinux.org/Bootup_Time_Task_List "Bootup Time Task List")
+    List](../.././dev_portals/Boot_Time/Bootup_Time_Task_List/Bootup_Time_Task_List.md "Bootup Time Task List")
 -   [Bootup Time Howto Task
-    List](http://eLinux.org/Bootup_Time_Howto_Task_List "Bootup Time Howto Task List")
+    List](../.././dev_portals/Boot_Time/Bootup_Time_Howto_Task_List/Bootup_Time_Howto_Task_List.md "Bootup Time Howto Task List")
 -   [Fast Booting
-    Translation](http://eLinux.org/Fast_Booting_Translation "Fast Booting Translation")
+    Translation](../.././dev_portals/Boot_Time/Fast_Booting_Translation/Fast_Booting_Translation.md "Fast Booting Translation")
 
 ## Companies, individuals or projects working on fast booting
 

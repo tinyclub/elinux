@@ -13,14 +13,14 @@ existing glossary pages:
 Here are pages that have list of terms for specific technology areas:
 
 -   [Boot-up Time Definition Of
-    Terms](http://eLinux.org/Boot-up_Time_Definition_Of_Terms "Boot-up Time Definition Of Terms")
+    Terms](../.././dev_portals/Boot_Time/Boot-up_Time_Definition_Of_Terms/Boot-up_Time_Definition_Of_Terms.md "Boot-up Time Definition Of Terms")
     - terms related to the Linux boot-up process
 -   [Power Management Definition Of
-    Terms](http://eLinux.org/Power_Management_Definition_Of_Terms "Power Management Definition Of Terms")
+    Terms](../.././dev_portals/Glossary/Power_Management_Definition_Of_Terms/Power_Management_Definition_Of_Terms.md "Power Management Definition Of Terms")
     - Definition of Terms for the CELF Power Management working group
--   [Real Time Terms](http://eLinux.org/Real_Time_Terms "Real Time Terms") - terms
+-   [Real Time Terms](../.././dev_portals/Glossary/Real_Time_Terms/Real_Time_Terms.md "Real Time Terms") - terms
     related to systems with real-time performance
--   [Security Terms](http://eLinux.org/Security_Terms "Security Terms") - terms related
+-   [Security Terms](../.././dev_portals/Glossary/Security_Terms/Security_Terms.md "Security Terms") - terms related
     to Linux security and security frameworks
 
 <table>
@@ -88,7 +88,7 @@ in order to target a different platform than the one it's compiled on.
  ELC 
 Embedded Linux Conference. This is one of the major technical
 conferences each year for developers of embedded Linux. See the
-[Events](http://eLinux.org/Events "Events") page for references to past events.
+[Events](../../dev_portals/Events/Events.md "Events") page for references to past events.
 
  Embedded 
 An "embedded" device usually means one with fixed functionality,
@@ -139,10 +139,10 @@ circuitry (both wired and wireless), to name just a few.
 
 ## J
 
- [JTAG](http://eLinux.org/JTAG "JTAG") 
+ [JTAG](../.././dev_portals/Glossary/JTAG/JTAG.md "JTAG") 
 Short for "Joint Test Action Group", JTAG refers to a debugging
 interface used to validate hardware and debug software on an embedded
-board. See [JTAG](http://eLinux.org/JTAG "JTAG")
+board. See [JTAG](../.././dev_portals/Glossary/JTAG/JTAG.md "JTAG")
 
 ## K
 

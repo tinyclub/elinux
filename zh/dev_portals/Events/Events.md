@@ -79,7 +79,7 @@ Here are links to events of interest to embedded Linux developers.
 ## Past events
 
 Some information is at: [Embedded linux
-events](http://eLinux.org/Embedded_linux_events "Embedded linux events")
+events](../.././dev_portals/Events/Embedded_linux_events/Embedded_linux_events.md "Embedded linux events")
 
 Here is a list of past Embedded-related events:
 
@@ -92,17 +92,17 @@ Here is a list of past Embedded-related events:
     -   [Linux Foundation
         archive](http://events.linuxfoundation.org/events/archive/2014/linuxcon-japan)
     -   [CE Workgroup Projects - LinuxCon Japan
-        2015](http://eLinux.org/CE_Workgroup_Projects_-_LinuxCon_Japan_2015 "CE Workgroup Projects - LinuxCon Japan 2015")
+        2015](../.././dev_portals/Events/CE_Workgroup_Projects_-_LinuxCon_Japan_2015/CE_Workgroup_Projects_-_LinuxCon_Japan_2015.md "CE Workgroup Projects - LinuxCon Japan 2015")
 
 -   Regional conference in Japan - Tokyo, Japan, June 19, 2015 (Nakano
     Sunplaza Room 6) - [Japan Technical Jamboree
-    53](http://eLinux.org/Japan_Technical_Jamboree_53 "Japan Technical Jamboree 53")
+    53](../.././dev_portals/Events/Japan_Technical_Jamboree_53/Japan_Technical_Jamboree_53.md "Japan Technical Jamboree 53")
 
 ### April 2015
 
 -   Regional conference in Japan - Tokyo, Japan, April 10, 2015 (Nakano
     Sunplaza Room 6) - [Japan Technical Jamboree
-    52](http://eLinux.org/Japan_Technical_Jamboree_52 "Japan Technical Jamboree 52")
+    52](../.././dev_portals/Events/Japan_Technical_Jamboree_52/Japan_Technical_Jamboree_52.md "Japan Technical Jamboree 52")
 
 ### March 2015
 
@@ -114,7 +114,7 @@ Here is a list of past Embedded-related events:
     -   [http://events.linuxfoundation.org/events/embedded-linux-conference](http://events.linuxfoundation.org/events/embedded-linux-conference)
     -   [Linux Foundation
         archive](http://events.linuxfoundation.org/events/archive/2015/embedded-linux-conference)
-    -   [Presentations](http://eLinux.org/ELC_2015_Presentations "ELC 2015 Presentations")
+    -   [Presentations](../.././dev_portals/Events/ELC_2015_Presentations/ELC_2015_Presentations.md "ELC 2015 Presentations")
     -   Videos of Presentations:
         [YouTube](https://www.youtube.com/playlist?list=PLGeM09tlguZTPUxEvsQiDgX0XDjfOL6oR)
 
@@ -124,7 +124,7 @@ Here is a list of past Embedded-related events:
 
 -   Regional conference in Japan - Tokyo, Japan, December 19, 2014
     (Nakano Sunplaza Room 6) - [Japan Technical Jamboree
-    51](http://eLinux.org/Japan_Technical_Jamboree_51 "Japan Technical Jamboree 51")
+    51](../.././dev_portals/Events/Japan_Technical_Jamboree_51/Japan_Technical_Jamboree_51.md "Japan Technical Jamboree 51")
 
 ### October 2014
 
@@ -134,11 +134,11 @@ Here is a list of past Embedded-related events:
     -   [Linux Foundation
         archive](http://events.linuxfoundation.org/events/archive/2014/embedded-linux-conference-europe)
     -   [ELC Europe 2014
-        Presentations](http://eLinux.org/ELC_Europe_2014_Presentations "ELC Europe 2014 Presentations")
+        Presentations](../.././dev_portals/Events/ELC_Europe_2014_Presentations/ELC_Europe_2014_Presentations.md "ELC Europe 2014 Presentations")
 
 -   Regional conference in Japan - Tokyo, Japan, October 24, 2014
     (Nakano Sunplaza Room 6) - [Japan Technical Jamboree
-    50](http://eLinux.org/Japan_Technical_Jamboree_50 "Japan Technical Jamboree 50")
+    50](../.././dev_portals/Events/Japan_Technical_Jamboree_50/Japan_Technical_Jamboree_50.md "Japan Technical Jamboree 50")
 
 ### September 2014
 
@@ -150,7 +150,7 @@ Here is a list of past Embedded-related events:
 
 -   Regional conference in Japan - Tokyo, Japan, July 25, 2014 (Nakano
     Sunplaza Room 8) - [Japan Technical Jamboree
-    49](http://eLinux.org/Japan_Technical_Jamboree_49 "Japan Technical Jamboree 49")
+    49](../.././dev_portals/Events/Japan_Technical_Jamboree_49/Japan_Technical_Jamboree_49.md "Japan Technical Jamboree 49")
 
 ### May 2014
 
@@ -161,7 +161,7 @@ Here is a list of past Embedded-related events:
 
 -   Regional conference in Japan - Tokyo, Japan, May 23, 2014 (Nakano
     Sunplaza Room 6) - [Japan Technical Jamboree
-    48](http://eLinux.org/Japan_Technical_Jamboree_48 "Japan Technical Jamboree 48")
+    48](../.././dev_portals/Events/Japan_Technical_Jamboree_48/Japan_Technical_Jamboree_48.md "Japan Technical Jamboree 48")
 
 ### April 2014
 
@@ -170,9 +170,9 @@ Here is a list of past Embedded-related events:
     -   [Linux Foundation
         archive](http://events.linuxfoundation.org/events/archive/2014/embedded-linux-conference)
     -   Presentations at: [ELC 2014
-        Presentations](http://eLinux.org/ELC_2014_Presentations "ELC 2014 Presentations")
+        Presentations](../.././dev_portals/Events/ELC_2014_Presentations/ELC_2014_Presentations.md "ELC 2014 Presentations")
     -   Videos of Presentations: [ELC 2014
-        Presentations](http://eLinux.org/ELC_2014_Presentations "ELC 2014 Presentations")
+        Presentations](../.././dev_portals/Events/ELC_2014_Presentations/ELC_2014_Presentations.md "ELC 2014 Presentations")
 
 ## 2013
 
@@ -180,7 +180,7 @@ Here is a list of past Embedded-related events:
 
 -   Regional conference in Japan - Tokyo, Japan, December 11, 2013
     (Nakano Sunplaza Room 2) - [Japan Technical Jamboree
-    47](http://eLinux.org/Japan_Technical_Jamboree_47 "Japan Technical Jamboree 47")
+    47](../.././dev_portals/Events/Japan_Technical_Jamboree_47/Japan_Technical_Jamboree_47.md "Japan Technical Jamboree 47")
 
 ### October 2013
 
@@ -190,13 +190,13 @@ Here is a list of past Embedded-related events:
     -   [Linux Foundation
         archive](http://events.linuxfoundation.org/events/archive/2013/embedded-linux-conference-europe)
     -   [ELC Europe 2013
-        Presentations](http://eLinux.org/ELC_Europe_2013_Presentations "ELC Europe 2013 Presentations")
+        Presentations](../.././dev_portals/Events/ELC_Europe_2013_Presentations/ELC_Europe_2013_Presentations.md "ELC Europe 2013 Presentations")
 
 ### September 2013
 
 -   Regional conference in Japan - Tokyo, Japan, September 13, 2013
     (Nakano Sunplaza Room 2) - [Japan Technical Jamboree
-    46](http://eLinux.org/Japan_Technical_Jamboree_46 "Japan Technical Jamboree 46")
+    46](../.././dev_portals/Events/Japan_Technical_Jamboree_46/Japan_Technical_Jamboree_46.md "Japan Technical Jamboree 46")
 
 ### August 2013
 
@@ -206,7 +206,7 @@ Here is a list of past Embedded-related events:
 
 -   Regional conference in Japan - Tokyo, Japan, June 7, 2013 (Nakano
     Sunplaza Room 2) - [Japan Technical Jamboree
-    45](http://eLinux.org/Japan_Technical_Jamboree_45 "Japan Technical Jamboree 45")
+    45](../.././dev_portals/Events/Japan_Technical_Jamboree_45/Japan_Technical_Jamboree_45.md "Japan Technical Jamboree 45")
 
 ### May 2013
 
@@ -221,7 +221,7 @@ Here is a list of past Embedded-related events:
 
 -   Regional conference in Japan - Tokyo, Japan, March 8, 2013 (Nakano
     Sunplaza Room 2) - [Japan Technical Jamboree
-    44](http://eLinux.org/Japan_Technical_Jamboree_44 "Japan Technical Jamboree 44")
+    44](../.././dev_portals/Events/Japan_Technical_Jamboree_44/Japan_Technical_Jamboree_44.md "Japan Technical Jamboree 44")
 
 ### February 2013
 
@@ -246,7 +246,7 @@ San Francisco, CA, Feb 18-19, 2013
     -   [Linux Foundation
         archive](http://events.linuxfoundation.org/events/archive/2013/embedded-linux-conference)
     -   Presentations at: [ELC 2013
-        Presentations](http://eLinux.org/ELC_2013_Presentations "ELC 2013 Presentations")
+        Presentations](../.././dev_portals/Events/ELC_2013_Presentations/ELC_2013_Presentations.md "ELC 2013 Presentations")
     -   Videos of Presentations: [Videos by Free
         Electrons](http://free-electrons.com/blog/elc-2013-videos/)
 
@@ -256,7 +256,7 @@ San Francisco, CA, Feb 18-19, 2013
 
 -   Regional conference in Japan - Tokyo, Japan, December 7, 2012
     (Nakano Sunplaza Room 2) - [Japan Technical Jamboree
-    43](http://eLinux.org/Japan_Technical_Jamboree_43 "Japan Technical Jamboree 43")
+    43](../.././dev_portals/Events/Japan_Technical_Jamboree_43/Japan_Technical_Jamboree_43.md "Japan Technical Jamboree 43")
 
 ### November 2012
 
@@ -264,7 +264,7 @@ San Francisco, CA, Feb 18-19, 2013
     2012
     -   [http://events.linuxfoundation.org/events/embedded-linux-conference-europe](http://events.linuxfoundation.org/events/embedded-linux-conference-europe)
     -   Presentations at: [ELCE Europe 2012
-        Presentations](http://eLinux.org/ELCE_Europe_2012_Presentations "ELCE Europe 2012 Presentations")
+        Presentations](../.././dev_portals/Events/ELCE_Europe_2012_Presentations/ELCE_Europe_2012_Presentations.md "ELCE Europe 2012 Presentations")
     -   Videos of Presentations: [ELCE 2012
         Videos](http://free-electrons.com/blog/elce-2012-videos/)
 -   LinuxCon Europe - Barcelona, Spain, November 5-7, 2012
@@ -277,7 +277,7 @@ San Francisco, CA, Feb 18-19, 2013
 -   Regional conference in Japan - Tokyo, Japan, **September 20 (date
     changed)**, 2012 (Nakano Sunplaza Room 2) - [Japan Technical
     Jamboree
-    42](http://eLinux.org/Japan_Technical_Jamboree_42 "Japan Technical Jamboree 42")
+    42](../.././dev_portals/Events/Japan_Technical_Jamboree_42/Japan_Technical_Jamboree_42.md "Japan Technical Jamboree 42")
 
 ### August 2012
 
@@ -290,7 +290,7 @@ San Francisco, CA, Feb 18-19, 2013
     Portland, Oregon Convention Center July 16-20, 2012. The Call for
     Papers is scheduled to be posted in November 2011. Please add your
     suggestions for a [proposed OSCON 2012 Embedded Linux
-    track](http://eLinux.org/Proposed_OSCON_2012_Embedded_Linux_track "Proposed OSCON 2012 Embedded Linux track")
+    track](../.././dev_portals/Events/Proposed_OSCON_2012_Embedded_Linux_track/Proposed_OSCON_2012_Embedded_Linux_track.md "Proposed OSCON 2012 Embedded Linux track")
     (or a satellite meeting)?
 -   [RMLL](http://2012.rmll.info) - Geneva, Switzerland, July 7-12,
     2012. Call for Paper is open :
@@ -303,11 +303,11 @@ San Francisco, CA, Feb 18-19, 2013
 
 -   Regional workshop in Japan - Osaka, Japan, June 15, 2012 (Osaka, ATC
     Hall Room B5) - [LTSI workshop in
-    Osaka](http://eLinux.org/LTSI_workshop_in_Osaka "LTSI workshop in Osaka")
+    Osaka](../.././dev_portals/Events/LTSI_workshop_in_Osaka/LTSI_workshop_in_Osaka.md "LTSI workshop in Osaka")
 -   Regional conference in Japan - Tokyo, Japan, **June 21 (date
     changed)**, 2012 (Nakano Sunplaza Room 1) - [Japan Technical
     Jamboree
-    41](http://eLinux.org/Japan_Technical_Jamboree_41 "Japan Technical Jamboree 41")
+    41](../.././dev_portals/Events/Japan_Technical_Jamboree_41/Japan_Technical_Jamboree_41.md "Japan Technical Jamboree 41")
 -   LinuxCon Japan - Yokohama, Japan, June 6-8, 2012
     -   [http://events.linuxfoundation.org/events/linuxcon-japan](http://events.linuxfoundation.org/events/linuxcon-japan)
 
@@ -320,7 +320,7 @@ San Francisco, CA, Feb 18-19, 2013
 
 -   Regional conference in Japan - Tokyo, Japan, March 23, 2012 - [Japan
     Technical Jamboree
-    40](http://eLinux.org/Japan_Technical_Jamboree_40 "Japan Technical Jamboree 40")
+    40](../.././dev_portals/Events/Japan_Technical_Jamboree_40/Japan_Technical_Jamboree_40.md "Japan Technical Jamboree 40")
 
 ### February 2012
 
@@ -340,34 +340,34 @@ San Francisco, CA, Feb 18-19, 2013
 
 -   Regional conference in Japan - Tokyo, Japan, December 9, 2011 -
     [Japan Technical Jamboree
-    39](http://eLinux.org/Japan_Technical_Jamboree_39 "Japan Technical Jamboree 39")
+    39](../.././dev_portals/Events/Japan_Technical_Jamboree_39/Japan_Technical_Jamboree_39.md "Japan Technical Jamboree 39")
 -   LinuxCon Brazil - São Paulo, Brazil, November 17-18, 2011
 -   [Kernel Summit
     2011](http://events.linuxfoundation.org/archive/2011/linux-kernel-summit)
     - Prague, Czech Republic, October 23-25, 2011
     -   ARM Subarchitecture Maintainership Workshop - [Events/Kernel
         Summit 2011 ARM Subarch Maintainership
-        Workshop](http://eLinux.org/Events/Kernel_Summit_2011_ARM_Subarch_Maintainership_Workshop "Events/Kernel Summit 2011 ARM Subarch Maintainership Workshop")
+        Workshop](../.././dev_portals/Events/Events/Kernel_Summit_2011_ARM_Subarch_Maintainership_Workshop/Events/Kernel_Summit_2011_ARM_Subarch_Maintainership_Workshop.md "Events/Kernel Summit 2011 ARM Subarch Maintainership Workshop")
 -   Embedded Linux Conference Europe - Prague, Czech Republic, October
     26-28, 2011
     -   [Linux Foundation
         archive](http://events.linuxfoundation.org/archive/2011/embedded-linux-conference-europe)
     -   Presentations at:
-        [ELCE\_2011\_Presentations](http://eLinux.org/ELCE_2011_Presentations "ELCE 2011 Presentations")
+        [ELCE\_2011\_Presentations](../.././dev_portals/Events/ELCE_2011_Presentations/ELCE_2011_Presentations.md "ELCE 2011 Presentations")
     -   [ELCE 2011 Technical
-        Showcase](http://eLinux.org/ELCE_2011_Technical_Showcase "ELCE 2011 Technical Showcase")
+        Showcase](../.././dev_portals/Events/ELCE_2011_Technical_Showcase/ELCE_2011_Technical_Showcase.md "ELCE 2011 Technical Showcase")
     -   [Videos](http://free-electrons.com/blog/elce-2011-videos/)
         recorded and encoded by [Free
         Electrons](http://free-electrons.com)
     -   [Long Term Support Kernel Meeting
-        2011](http://eLinux.org/Long_Term_Support_Kernel_Meeting_2011 "Long Term Support Kernel Meeting 2011")
+        2011](../.././dev_portals/Events/Long_Term_Support_Kernel_Meeting_2011/Long_Term_Support_Kernel_Meeting_2011.md "Long Term Support Kernel Meeting 2011")
         - this is a private meeting for discussion about the LTSI
         project by the CEWG
 -   LinuxCon Europe - Prague, Czech Republic, October 26-28, 2011
     -   [http://events.linuxfoundation.org/events/linuxcon-europe](http://events.linuxfoundation.org/events/linuxcon-europe)
 -   Regional conference in Japan - Tokyo, Japan, September 30, 2011 -
     [Japan Technical Jamboree
-    38](http://eLinux.org/Japan_Technical_Jamboree_38 "Japan Technical Jamboree 38")
+    38](../.././dev_portals/Events/Japan_Technical_Jamboree_38/Japan_Technical_Jamboree_38.md "Japan Technical Jamboree 38")
 -   [LinuxCon North America
     2011](http://events.linuxfoundation.org/archive/2011/linuxcon/) -
     Vancouver, Canada, August 17-19, 2011 -
@@ -375,7 +375,7 @@ San Francisco, CA, Feb 18-19, 2013
     -   [http://events.linuxfoundation.org/events/linuxcon-japan](http://events.linuxfoundation.org/events/linuxcon-japan)
 -   Regional conference in Japan - Tokyo, Japan, May 20, 2011 - [Japan
     Technical Jamboree
-    37](http://eLinux.org/Japan_Technical_Jamboree_37 "Japan Technical Jamboree 37")
+    37](../.././dev_portals/Events/Japan_Technical_Jamboree_37/Japan_Technical_Jamboree_37.md "Japan Technical Jamboree 37")
 -   [Android Builders
     Summit](https://events.linuxfoundation.org/archive/2011/android-builders-summit)
     (ABS) - San Francisco, April 13-14, 2011
@@ -387,7 +387,7 @@ San Francisco, CA, Feb 18-19, 2013
     -   [Linux Foundation
         archive](https://events.linuxfoundation.org/archive/2011/embedded-linux-conference)
     -   Presentations at: [ELC 2011
-        Presentations](http://eLinux.org/ELC_2011_Presentations "ELC 2011 Presentations")
+        Presentations](../.././dev_portals/Events/ELC_2011_Presentations/ELC_2011_Presentations.md "ELC 2011 Presentations")
     -   [Videos](http://free-electrons.com/blog/elc-2011-videos/),
         recorded and encoded by Free Electrons
 
@@ -395,7 +395,7 @@ San Francisco, CA, Feb 18-19, 2013
     Queensland, Australia. 16th-22nd of January 2010.
 -   Regional conference in Japan - Tokyo, Japan, March 18, 2011 - [Japan
     Technical Jamboree
-    36](http://eLinux.org/Japan_Technical_Jamboree_36 "Japan Technical Jamboree 36")
+    36](../.././dev_portals/Events/Japan_Technical_Jamboree_36/Japan_Technical_Jamboree_36.md "Japan Technical Jamboree 36")
     -   **Due to unstable electrical and public transportation situation
         in Greater Tokyo area, this event was canceled.**
 
@@ -409,7 +409,7 @@ San Francisco, CA, Feb 18-19, 2013
 
 -   Regional conference in Japan - Tokyo, Japan, December 10, 2010 -
     [Japan Technical Jamboree
-    35](http://eLinux.org/Japan_Technical_Jamboree_35 "Japan Technical Jamboree 35")
+    35](../.././dev_portals/Events/Japan_Technical_Jamboree_35/Japan_Technical_Jamboree_35.md "Japan Technical Jamboree 35")
 -   [Linux Plumbers Conference
     2010](http://www.linuxplumbersconf.org/2010) - Cambridge, MA on
     November 3-5, 2010.
@@ -417,16 +417,16 @@ San Francisco, CA, Feb 18-19, 2013
     2010
     -   [ELC-Europe](http://www.embeddedlinuxconference.com/elc_europe10/)
     -   Presentations at: [ELC Europe 2010
-        Presentations](http://eLinux.org/ELC_Europe_2010_Presentations "ELC Europe 2010 Presentations")
+        Presentations](../.././dev_portals/Events/ELC_Europe_2010_Presentations/ELC_Europe_2010_Presentations.md "ELC Europe 2010 Presentations")
 -   [LinuxCon Japan
     2010](http://events.linuxfoundation.org/archive/2010/linuxcon-japan)
     - Tokyo, Japan, September 27-29, 2010
     -   [Embedded Developer BoF
-        2010](http://eLinux.org/Embedded_Developer_BoF_2010 "Embedded Developer BoF 2010")
+        2010](../.././dev_portals/Events/Embedded_Developer_BoF_2010/Embedded_Developer_BoF_2010.md "Embedded Developer BoF 2010")
         - (same place as LinuxCon Japan), September 28, 2010
 -   Regional conference in Japan - Tokyo, Japan, September 3, 2010 -
     [Japan Technical Jamboree
-    34](http://eLinux.org/Japan_Technical_Jamboree_34 "Japan Technical Jamboree 34")
+    34](../.././dev_portals/Events/Japan_Technical_Jamboree_34/Japan_Technical_Jamboree_34.md "Japan Technical Jamboree 34")
 -   [LinuxCon North America
     2010](http://events.linuxfoundation.org/events/linuxcon/) - Boston,
     Massachusetts, USA, August 10-12, 2010
@@ -444,32 +444,32 @@ San Francisco, CA, Feb 18-19, 2013
         topic.
 -   Regional conference in Japan - Tokyo, Japan, June 4, 2010 - [Japan
     Technical Jamboree
-    33](http://eLinux.org/Japan_Technical_Jamboree_33 "Japan Technical Jamboree 33")
+    33](../.././dev_portals/Events/Japan_Technical_Jamboree_33/Japan_Technical_Jamboree_33.md "Japan Technical Jamboree 33")
 -   [Embedded Linux Conference
     2010](http://www.embeddedlinuxconference.com/elc_2010/index.html) -
     San Francisco, California, USA, April 12-14, 2010
     -   Home page -
         [http://www.embeddedlinuxconference.com/elc\_2010/index.html](http://www.embeddedlinuxconference.com/elc_2010/index.html)
     -   Call for Presentations - [ELC 2010 Call for
-        Presentations](http://eLinux.org/ELC_2010_Call_for_Presentations "ELC 2010 Call for Presentations")
+        Presentations](../.././dev_portals/Events/ELC_2010_Call_for_Presentations/ELC_2010_Call_for_Presentations.md "ELC 2010 Call for Presentations")
     -   Presentations at: [ELC 2010
-        Presentations](http://eLinux.org/ELC_2010_Presentations "ELC 2010 Presentations")
+        Presentations](../.././dev_portals/Events/ELC_2010_Presentations/ELC_2010_Presentations.md "ELC 2010 Presentations")
     -   [Videos of
         Presentations](http://free-electrons.com/blog/elc-2010-videos/)
 -   Regional conference in Japan - Tokyo, Japan, March 5, 2010 - [Japan
     Technical Jamboree
-    32](http://eLinux.org/Japan_Technical_Jamboree_32 "Japan Technical Jamboree 32")
+    32](../.././dev_portals/Events/Japan_Technical_Jamboree_32/Japan_Technical_Jamboree_32.md "Japan Technical Jamboree 32")
 -   Embedded World 2010 - Nürnberg, Germany, March 2-4, 2010 - [Embedded
     World 2010](http://www.embedded-world.de)
--   [GStreamer\_2010\_Presentations](http://eLinux.org/GStreamer_2010_Presentations "GStreamer 2010 Presentations")
--   [Embedded\_Linux\_Summit\_2010](http://eLinux.org/Embedded_Linux_Summit_2010 "Embedded Linux Summit 2010")
--   [ELCE\_2010\_Technical\_Showcase](http://eLinux.org/ELCE_2010_Technical_Showcase "ELCE 2010 Technical Showcase")
+-   [GStreamer\_2010\_Presentations](../.././dev_portals/Events/GStreamer_2010_Presentations/GStreamer_2010_Presentations.md "GStreamer 2010 Presentations")
+-   [Embedded\_Linux\_Summit\_2010](../.././dev_portals/Events/Embedded_Linux_Summit_2010/Embedded_Linux_Summit_2010.md "Embedded Linux Summit 2010")
+-   [ELCE\_2010\_Technical\_Showcase](../.././dev_portals/Events/ELCE_2010_Technical_Showcase/ELCE_2010_Technical_Showcase.md "ELCE 2010 Technical Showcase")
 
 ### 2009
 
 -   Regional conference in Japan - Tokyo, Japan, December 18, 2009 -
     [Japan Technical Jamboree
-    31](http://eLinux.org/Japan_Technical_Jamboree_31 "Japan Technical Jamboree 31")
+    31](../.././dev_portals/Events/Japan_Technical_Jamboree_31/Japan_Technical_Jamboree_31.md "Japan Technical Jamboree 31")
 -   Korean Technical Conference - Seoul, Korea, November 6, 2009 -
     [Korea Technical Jamboree
     5](http://tree.celinuxforum.org/CelfPubWiki/KoreaTechJamboree5)
@@ -477,25 +477,25 @@ San Francisco, CA, Feb 18-19, 2013
     -   Home page -
         [http://events.linuxfoundation.org/events/japan-linux-symposium](http://events.linuxfoundation.org/events/japan-linux-symposium)
         -   [Japan Linux Symposium 2009 for Embedded System
-            Developers](http://eLinux.org/Japan_Linux_Symposium_2009_for_Embedded_System_Developers "Japan Linux Symposium 2009 for Embedded System Developers")
+            Developers](../.././dev_portals/Events/Japan_Linux_Symposium_2009_for_Embedded_System_Developers/Japan_Linux_Symposium_2009_for_Embedded_System_Developers.md "Japan Linux Symposium 2009 for Embedded System Developers")
             (A special note for embedded system developers).
 -   CE Linux Forum Project BoF and Plenary meeting - Tokyo, Japan,
     October 22, 2009
     -   Colocated with Japan Linux Symposium
-    -   [CELF\_BOF\_and\_Plenary\_2009](http://eLinux.org/CELF_BOF_and_Plenary_2009 "CELF BOF and Plenary 2009")
+    -   [CELF\_BOF\_and\_Plenary\_2009](../.././dev_portals/Events/CELF_BOF_and_Plenary_2009/CELF_BOF_and_Plenary_2009.md "CELF BOF and Plenary 2009")
 -   Embedded Linux Conference Europe 2009 - Grenoble, France, October
     15-16, 2009
     -   Home page -
         [http://www.embeddedlinuxconference.com/elc\_europe09/index.html](http://www.embeddedlinuxconference.com/elc_europe09/index.html)
     -   [Videos](http://free-electrons.com/blog/elce-2009-videos/)
     -   All presentations at
-        [ELC\_Europe\_2009\_Presentations](http://eLinux.org/ELC_Europe_2009_Presentations "ELC Europe 2009 Presentations")
+        [ELC\_Europe\_2009\_Presentations](../.././dev_portals/Events/ELC_Europe_2009_Presentations/ELC_Europe_2009_Presentations.md "ELC Europe 2009 Presentations")
 -   Regional conference in Japan - Tokyo, Japan, October 2, 2009 -
     [Japan Technical Jamboree
-    30](http://eLinux.org/Japan_Technical_Jamboree_30 "Japan Technical Jamboree 30")
+    30](../.././dev_portals/Events/Japan_Technical_Jamboree_30/Japan_Technical_Jamboree_30.md "Japan Technical Jamboree 30")
 -   Regional conference in Japan - Tokyo, Japan, July 17, 2009 - [Japan
     Technical Jamboree
-    29](http://eLinux.org/Japan_Technical_Jamboree_29 "Japan Technical Jamboree 29")
+    29](../.././dev_portals/Events/Japan_Technical_Jamboree_29/Japan_Technical_Jamboree_29.md "Japan Technical Jamboree 29")
 -   Linux Symposium 2009 - Montreal, Canada, July 15-18, 2009
     -   Home page -
         [http://www.linuxsymposium.org/2009/](http://www.linuxsymposium.org/2009/)
@@ -503,7 +503,7 @@ San Francisco, CA, Feb 18-19, 2013
         Ftrace](http://eLinux.org/images/d/d6/Measuring-function-duration-with-ftrace.pdf "Measuring-function-duration-with-ftrace.pdf")
         Presentation by Tim Bird
         -   [Ftrace Function Graph
-            ARM](http://eLinux.org/Ftrace_Function_Graph_ARM "Ftrace Function Graph ARM")
+            ARM](../.././dev_portals/Events/Ftrace_Function_Graph_ARM/Ftrace_Function_Graph_ARM.md "Ftrace Function Graph ARM")
             - presentation, paper, patches and ftd tool from talk
     -   [Embedded Linux Status
         Presentation](http://eLinux.org/images/4/43/Embedded-Linux-Status-OLS2009.pdf "Embedded-Linux-Status-OLS2009.pdf")
@@ -516,19 +516,19 @@ San Francisco, CA, Feb 18-19, 2013
             papers](http://free-electrons.com/fr/blog/videos-rmll-2009/)
 -   Regional conference in Japan - Osaka, Japan, June 12, 2009 - [Japan
     Technical Jamboree
-    28](http://eLinux.org/Japan_Technical_Jamboree_28 "Japan Technical Jamboree 28")
+    28](../.././dev_portals/Events/Japan_Technical_Jamboree_28/Japan_Technical_Jamboree_28.md "Japan Technical Jamboree 28")
 -   [FreedomHEC Taipei](http://freedomhectaipei.pbworks.com/) - Taipei,
     Taiwan, June 10 \~ 11, 2009
 -   Regional conference in Japan - Tokyo, Japan, May 22, 2009 - [Japan
     Technical Jamboree
-    27](http://eLinux.org/Japan_Technical_Jamboree_27 "Japan Technical Jamboree 27")
+    27](../.././dev_portals/Events/Japan_Technical_Jamboree_27/Japan_Technical_Jamboree_27.md "Japan Technical Jamboree 27")
 -   [Embedded Linux Conference
-    2009](http://eLinux.org/Embedded_Linux_Conference_2009 "Embedded Linux Conference 2009")
+    2009](../.././dev_portals/Events/Embedded_Linux_Conference_2009/Embedded_Linux_Conference_2009.md "Embedded Linux Conference 2009")
     - San Francisco, California, April 6-8, 2009
     -   Home page -
         [http://www.embeddedlinuxconference.com/elc\_2009/](http://www.embeddedlinuxconference.com/elc_2009/)
     -   Presentations -
-        [ELC\_2009\_Presentations](http://eLinux.org/ELC_2009_Presentations "ELC 2009 Presentations")
+        [ELC\_2009\_Presentations](../.././dev_portals/Events/ELC_2009_Presentations/ELC_2009_Presentations.md "ELC 2009 Presentations")
 -   Regional conference in Japan - Tokyo, Japan, March 26, 2009 - [Japan
     Technical Jamboree
     26](http://tree.celinuxforum.org/CelfPubWiki/JapanTechnicalJamboree26)
@@ -555,10 +555,10 @@ San Francisco, CA, Feb 18-19, 2013
     -   Home page -
         [http://www.embeddedlinuxconference.com/elc\_europe08/index.html](http://www.embeddedlinuxconference.com/elc_europe08/index.html)
     -   [ELC Europe 2008
-        Presentations](http://eLinux.org/ELC_Europe_2008_Presentations "ELC Europe 2008 Presentations")
+        Presentations](../.././dev_portals/Events/ELC_Europe_2008_Presentations/ELC_Europe_2008_Presentations.md "ELC Europe 2008 Presentations")
         page.
     -   [Videos](http://free-electrons.com/blog/elce-2008-videos/) page.
--   [Open source DLNA Summit](http://eLinux.org/DLNA_Summit_2008 "DLNA Summit 2008") in
+-   [Open source DLNA Summit](../.././dev_portals/Events/DLNA_Summit_2008/DLNA_Summit_2008.md "DLNA Summit 2008") in
     Ede, The Netherlands, November 8, 2008
 -   Regional conference in Japan - Tokyo, Japan, October 30, 2008 -
     [Japan Technical Jamboree
@@ -579,7 +579,7 @@ San Francisco, CA, Feb 18-19, 2013
         Presentation](http://eLinux.org/images/d/d0/Embedded-Linux-BOF-OLS2008.ppt "Embedded-Linux-BOF-OLS2008.ppt")
         by Tim Bird
     -   [OLS 2008 CELF Embedded Developer
-        BOF](http://eLinux.org/OLS_2008_CELF_Embedded_Developer_BOF "OLS 2008 CELF Embedded Developer BOF")
+        BOF](../.././dev_portals/Events/OLS_2008_CELF_Embedded_Developer_BOF/OLS_2008_CELF_Embedded_Developer_BOF.md "OLS 2008 CELF Embedded Developer BOF")
 -   Regional conference in Korea - Seoul, Korea, July 11, 2008 - [Korea
     Technical Jamboree
     3](http://tree.celinuxforum.org/CelfPubWiki/KoreaTechJamboree3)
@@ -593,7 +593,7 @@ San Francisco, CA, Feb 18-19, 2013
     2008](http://www.embeddedlinuxconference.com/elc2008/index.html) -
     Mountain View, California, USA, April 15-17, 2008
     -   [ELC 2008
-        Presentations](http://eLinux.org/ELC_2008_Presentations "ELC 2008 Presentations")
+        Presentations](../.././dev_portals/Events/ELC_2008_Presentations/ELC_2008_Presentations.md "ELC 2008 Presentations")
     -   [Videos](http://free-electrons.com/blog/fosdem-elc-2008-videos)
         page.
 -   Regional conference in Japan - Tokyo, Japan, February 21, 2008 -
@@ -614,7 +614,7 @@ San Francisco, CA, Feb 18-19, 2013
     2007](http://www.celinux.org/elc_europe07/elc_europe_index.html) -
     Linz, Austria, November 2-4, 2007
     -   Presentations have been collected and posted at [ELC Europe 2007
-        Presentations](http://eLinux.org/ELC_Europe_2007_Presentations "ELC Europe 2007 Presentations")
+        Presentations](../.././dev_portals/Events/ELC_Europe_2007_Presentations/ELC_Europe_2007_Presentations.md "ELC Europe 2007 Presentations")
 -   Regional conference in Japan - Tokyo, Japan, October 25, 2007 -
     [Japan Technical Jamboree
     17](http://tree.celinuxforum.org/CelfPubWiki/JapanTechnicalJamboree17)
@@ -623,14 +623,14 @@ San Francisco, CA, Feb 18-19, 2013
     16](http://tree.celinuxforum.org/CelfPubWiki/JapanTechnicalJamboree16)
 -   Ottawa Linux Symposium 2007 - Ottawa, Canada, June 27-30, 2007
     -   [Ottawa Linux Symposium
-        2007](http://eLinux.org/Ottawa_Linux_Symposium_2007 "Ottawa Linux Symposium 2007")
+        2007](../.././dev_portals/Events/Ottawa_Linux_Symposium_2007/Ottawa_Linux_Symposium_2007.md "Ottawa Linux Symposium 2007")
     -   [OLS 2007 Embedded Linux
-        BOF](http://eLinux.org/OLS_2007_Embedded_Linux_BOF "OLS 2007 Embedded Linux BOF")
+        BOF](../.././dev_portals/Events/OLS_2007_Embedded_Linux_BOF/OLS_2007_Embedded_Linux_BOF.md "OLS 2007 Embedded Linux BOF")
         - June 27
     -   [OLS 2007 Embedded Linux Wiki
-        BOF](http://eLinux.org/OLS_2007_Embedded_Linux_Wiki_BOF "OLS 2007 Embedded Linux Wiki BOF")
+        BOF](../.././dev_portals/Events/OLS_2007_Embedded_Linux_Wiki_BOF/OLS_2007_Embedded_Linux_Wiki_BOF.md "OLS 2007 Embedded Linux Wiki BOF")
         - June 27
-    -   [OLS 2007 CELF BOF](http://eLinux.org/OLS_2007_CELF_BOF "OLS 2007 CELF BOF") -
+    -   [OLS 2007 CELF BOF](../.././dev_portals/Events/OLS_2007_CELF_BOF/OLS_2007_CELF_BOF.md "OLS 2007 CELF BOF") -
         June 29, 7-9pm, Westin Hotel
 -   Regional conference in Japan - Tokyo, Japan, June 29, 2007 - [Japan
     Technical Jamboree
@@ -641,9 +641,9 @@ San Francisco, CA, Feb 18-19, 2013
     14](http://tree.celinuxforum.org/CelfPubWiki/JapanTechnicalJamboree14)
 -   Embedded Linux Conference, 2007 - San Jose, California, April 17-19,
     2007 [ELC 2007](http://www.celinux.org/elc2007/index.html)
-    -   [ELC\_2007\_Call\_For\_Presentations](http://eLinux.org/ELC_2007_Call_For_Presentations "ELC 2007 Call For Presentations")
+    -   [ELC\_2007\_Call\_For\_Presentations](../.././dev_portals/Events/ELC_2007_Call_For_Presentations/ELC_2007_Call_For_Presentations.md "ELC 2007 Call For Presentations")
     -   Presentations are available at
-        [ELC\_2007\_Presentations](http://eLinux.org/ELC_2007_Presentations "ELC 2007 Presentations")
+        [ELC\_2007\_Presentations](../.././dev_portals/Events/ELC_2007_Presentations/ELC_2007_Presentations.md "ELC 2007 Presentations")
 -   Regional conference in Japan - Tokyo, Japan, February 22, 2007 -
     [Japan Technical Jamboree
     13](http://tree.celinuxforum.org/CelfPubWiki/JapanTechnicalJamboree13)
@@ -654,7 +654,7 @@ San Francisco, CA, Feb 18-19, 2013
     [Japan Technical Jamboree
     12](http://tree.celinuxforum.org/CelfPubWiki/JapanTechnicalJamboree12)
     -   (Page copied locally at: [Japan Technical Jamboree
-        12](http://eLinux.org/Japan_Technical_Jamboree_12 "Japan Technical Jamboree 12")
+        12](../.././dev_portals/Events/Japan_Technical_Jamboree_12/Japan_Technical_Jamboree_12.md "Japan Technical Jamboree 12")
 -   Embedded Technology 2006 - Yokohama, Japan, November 15..17,
 -   Regional conference in Japan - Tokyo, Japan, October 27, 2006 -
     [Japan Technical Jamboree
@@ -670,7 +670,7 @@ San Francisco, CA, Feb 18-19, 2013
     -   We had a great time in Ottawa! See the following pages for more
         information:
     -   [Ottawa Linux Symposium
-        2006](http://eLinux.org/Ottawa_Linux_Symposium_2006 "Ottawa Linux Symposium 2006")
+        2006](../.././dev_portals/Events/Ottawa_Linux_Symposium_2006/Ottawa_Linux_Symposium_2006.md "Ottawa Linux Symposium 2006")
     -   [OLS 2006 CELF
         Demos](http://tree.celinuxforum.org/CelfPubWiki/OLS2006Demos)
 -   Regional conference in Japan - Tokyo, Japan, July 13, 2006 - [Japan
@@ -679,7 +679,7 @@ San Francisco, CA, Feb 18-19, 2013
 -   Embedded System Expo & Conference in Japan - Tokyo, Japan, June
     28-30, 2006
     -   Information for visitors to CELF booth: [Japan ESEC
-        2006](http://eLinux.org/Japan_ESEC_2006 "Japan ESEC 2006")
+        2006](../.././dev_portals/Events/Japan_ESEC_2006/Japan_ESEC_2006.md "Japan ESEC 2006")
 -   Regional conference in Japan - Tokyo, Japan, May 26, 2006 - [Japan
     Technical Jamboree
     8](http://tree.celinuxforum.org/CelfPubWiki/JapanTechnicalJamboree8)
@@ -687,11 +687,11 @@ San Francisco, CA, Feb 18-19, 2013
     2006 - [elc2006](http://www.celinux.org/elc2006/index.html)
     -   Presentations from the conference are being collected at: [ELC
         2006
-        Presentations](http://eLinux.org/ELC_2006_Presentations "ELC 2006 Presentations")
+        Presentations](../.././dev_portals/Events/ELC_2006_Presentations/ELC_2006_Presentations.md "ELC 2006 Presentations")
     -   Biographies of ELC 2006 presenters at: [ELC 2006
-        Biographies](http://eLinux.org/ELC_2006_Biographies "ELC 2006 Biographies")
+        Biographies](../.././dev_portals/Events/ELC_2006_Biographies/ELC_2006_Biographies.md "ELC 2006 Biographies")
     -   Instructions for visitors from Japan: [Japan Jamboree To WELC
-        2006](http://eLinux.org/Japan_Jamboree_To_WELC_2006 "Japan Jamboree To WELC 2006")
+        2006](../.././dev_portals/Events/Japan_Jamboree_To_WELC_2006/Japan_Jamboree_To_WELC_2006.md "Japan Jamboree To WELC 2006")
 -   Regional conference in Japan - Tokyo, Japan, March 24, 2006 [Japan
     Technical Jamboree
     7](http://tree.celinuxforum.org/CelfPubWiki/JapanTechnicalJamboree7)
@@ -718,13 +718,13 @@ San Francisco, CA, Feb 18-19, 2013
         Also, CELF handed out some prizes at the final address.
 -   Regional conference in Japan - Tokyo, Japan, July 15, 2005 [Japan
     Technical Jamboree
-    3](http://eLinux.org/Japan_Technical_Jamboree_3 "Japan Technical Jamboree 3")
+    3](../.././dev_portals/Events/Japan_Technical_Jamboree_3/Japan_Technical_Jamboree_3.md "Japan Technical Jamboree 3")
 -   International technical conference - Yokohama, Japan, June 2005
     [International Technical
-    Jamboree](http://eLinux.org/International_Technical_Jamboree "International Technical Jamboree")
+    Jamboree](../.././dev_portals/Events/International_Technical_Jamboree/International_Technical_Jamboree.md "International Technical Jamboree")
 -   Regional conference in Korea - Seoul, Korea, May 14, 2005 - [CELF
     Korea Tech
-    Conference](http://eLinux.org/CELF_Korea_Tech_Conference "CELF Korea Tech Conference")
+    Conference](../.././dev_portals/Events/CELF_Korea_Tech_Conference/CELF_Korea_Tech_Conference.md "CELF Korea Tech Conference")
 -   Linux Conf Australia - Canberra, Australia, April 18, 2005
     -   A few individuals attended, and Tim put up a poster of
         bootup-time results
@@ -732,7 +732,7 @@ San Francisco, CA, Feb 18-19, 2013
     -   Conference program: [CELF Technical Conference
         2005](http://tree.celinuxforum.org/CelfPubWiki/TechnicalConference2005)
     -   (local copy here: [Technical Conference
-        2005](http://eLinux.org/Technical_Conference_2005 "Technical Conference 2005"))
+        2005](../.././dev_portals/Events/Technical_Conference_2005/Technical_Conference_2005.md "Technical Conference 2005"))
     -   Presentations from various sessions: [Tech Conference 2005
         Docs](http://tree.celinuxforum.org/CelfPubWiki/TechConference2005Docs)
 -   RMLL : July,Dijon, France
@@ -743,11 +743,11 @@ San Francisco, CA, Feb 18-19, 2013
 
 -   Regional conference in Japan - December, 2004 - [Japan Technical
     Jamboree
-    2](http://eLinux.org/Japan_Technical_Jamboree_2 "Japan Technical Jamboree 2")
+    2](../.././dev_portals/Events/Japan_Technical_Jamboree_2/Japan_Technical_Jamboree_2.md "Japan Technical Jamboree 2")
 -   Regional conference in Japan - October, 2004 - [Japan Technical
-    Jamboree](http://eLinux.org/Japan_Technical_Jamboree "Japan Technical Jamboree")
--   [Geek\_Cruises](http://eLinux.org/Geek_Cruises "Geek Cruises")
--   [Ottawa Linux Symposium](http://eLinux.org/OLS2004 "OLS2004"), July 2004 - Tim gave a
+    Jamboree](../.././dev_portals/Events/Japan_Technical_Jamboree/Japan_Technical_Jamboree.md "Japan Technical Jamboree")
+-   [Geek\_Cruises](../.././dev_portals/Events/Geek_Cruises/Geek_Cruises.md "Geek Cruises")
+-   [Ottawa Linux Symposium](../.././dev_portals/Events/OLS2004/OLS2004.md "OLS2004"), July 2004 - Tim gave a
     talk, and CELF held a BOF and gave out prizes
     -   see
         [OLS2004](http://www.linuxsymposium.org/proceedings/reprints/Reprint-Bird-OLS2004.pdf)
@@ -768,15 +768,15 @@ San Francisco, CA, Feb 18-19, 2013
 
 ### Presentations at Kernel Summits
 
--   See [Kernel Summit 2009](http://eLinux.org/Kernel_Summit_2009 "Kernel Summit 2009")
+-   See [Kernel Summit 2009](../.././dev_portals/Events/Kernel_Summit_2009/Kernel_Summit_2009.md "Kernel Summit 2009")
 
 ## Event Planning Pages
 
--   [Event Planning Pages](http://eLinux.org/Event_Planning_Pages "Event Planning Pages")
+-   [Event Planning Pages](../.././dev_portals/Events/Event_Planning_Pages/Event_Planning_Pages.md "Event Planning Pages")
 
 ## ELC Conference Presentations
 
--   [ELC\_Presentations](http://eLinux.org/ELC_Presentations "ELC Presentations")
+-   [ELC\_Presentations](../.././dev_portals/Events/ELC_Presentations/ELC_Presentations.md "ELC Presentations")
 
 
 [Category](http://eLinux.org/Special:Categories "Special:Categories"):

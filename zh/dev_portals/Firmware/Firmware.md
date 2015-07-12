@@ -10,11 +10,11 @@ Firmware is software that resides in non-volatile memory.
 See the [Wikipedia entry for
 firmware](http://en.wikipedia.org/wiki/Firmware)
 
-One form of firmware is the [Bootloader](http://eLinux.org/Bootloader "Bootloader") used
+One form of firmware is the [Bootloader](../.././dev_portals/Firmware/Bootloader/Bootloader.md "Bootloader") used
 to initialize the machine and load additional software, such as the
 Linux kernel.
 
-Note that the [Bootloader](http://eLinux.org/Bootloader "Bootloader") page has a list of
+Note that the [Bootloader](../.././dev_portals/Firmware/Bootloader/Bootloader.md "Bootloader") page has a list of
 oft-used Linux bootloaders.
 
 

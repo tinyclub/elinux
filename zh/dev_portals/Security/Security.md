@@ -41,17 +41,17 @@ Linux.
 ## Technology/Project pages
 
 -   [Security Hardware
-    Resources](http://eLinux.org/Security_Hardware_Resources "Security Hardware Resources")
+    Resources](../.././dev_portals/Security/Security_Hardware_Resources/Security_Hardware_Resources.md "Security Hardware Resources")
 -   [Bootloader Security
-    Resources](http://eLinux.org/Bootloader_Security_Resources "Bootloader Security Resources")
+    Resources](../.././dev_portals/Security/Bootloader_Security_Resources/Bootloader_Security_Resources.md "Bootloader Security Resources")
 -   [Mandatory Access Control
-    Comparison](http://eLinux.org/Mandatory_Access_Control_Comparison "Mandatory Access Control Comparison")
+    Comparison](../.././dev_portals/Security/Mandatory_Access_Control_Comparison/Mandatory_Access_Control_Comparison.md "Mandatory Access Control Comparison")
 
 ## Security Systems in Linux Kernel
 
 ### SELinux
 
--   [SELinux](http://eLinux.org/SELinux "SELinux") - This provides an implementation of
+-   [SELinux](../.././dev_portals/Security/SELinux/SELinux.md "SELinux") - This provides an implementation of
     the Flask Flux Advanced Security Kernel for Linux. SELinux started
     as a kernel patch which was presented by the NSA to kernel
     developers during the 2001 kernel summit. Feeback from this
@@ -65,12 +65,12 @@ Linux.
 
 ### Tomoyo
 
--   [TOMOYO Linux](http://eLinux.org/TomoyoLinux "TomoyoLinux") is a technology to
+-   [TOMOYO Linux](../.././dev_portals/Security/TomoyoLinux/TomoyoLinux.md "TomoyoLinux") is a technology to
     improve Linux's security originally developed by [NTT DATA
     CORPORATION, Japan](http://www.nttdata.co.jp/en/index.html). [TOMOYO
-    Linux](http://eLinux.org/TomoyoLinux "TomoyoLinux") was released on November, 11,
+    Linux](../.././dev_portals/Security/TomoyoLinux/TomoyoLinux.md "TomoyoLinux") was released on November, 11,
     2005 as an open source software under the GPL. [TOMOYO
-    Linux](http://eLinux.org/TomoyoLinux "TomoyoLinux") is a mechanism called Secure OS,
+    Linux](../.././dev_portals/Security/TomoyoLinux/TomoyoLinux.md "TomoyoLinux") is a mechanism called Secure OS,
     which can perform fine grained access control by breaking access
     permissions into parts like SELinux.
     -   [ELC2007
@@ -279,8 +279,8 @@ provided.
     various platforms. For some introductory information see Seiji
     Munetoh and Nicholas Szeto's presentation, TCGOverviewPDF, on the
     [Tech Conference
-    2005Docs](http://eLinux.org/Tech_Conference_2005Docs "Tech Conference 2005Docs")
-    page. The Trusted Platform Module ([TPM](http://eLinux.org/TPM "TPM")) is a security
+    2005Docs](../.././dev_portals/Security/Tech_Conference_2005Docs/Tech_Conference_2005Docs.md "Tech Conference 2005Docs")
+    page. The Trusted Platform Module ([TPM](../.././dev_portals/Security/TPM/TPM.md "TPM")) is a security
     chip bound to the platform and a key component of this architecture.
     TCG has a Mobile Phone WG which has released a use cases document
     that is applicable to many generic CE devices in addition to the
@@ -289,7 +289,7 @@ provided.
 
 ### Security Components
 
--   [SELinux](http://eLinux.org/SELinux "SELinux") - This provides an implementation of
+-   [SELinux](../.././dev_portals/Security/SELinux/SELinux.md "SELinux") - This provides an implementation of
     the Flask Flux Advanced Security Kernel for Linux. SELinux started
     as a kernel patch which was presented by the NSA to kernel
     developers during the 2001 kernel summit. Feeback from this
@@ -317,12 +317,12 @@ provided.
     Enforcement(TDE). These are useful to create a sandbox. LIDS is
     released under GPL.
 
--   [TOMOYO Linux](http://eLinux.org/TomoyoLinux "TomoyoLinux") is a technology to
+-   [TOMOYO Linux](../.././dev_portals/Security/TomoyoLinux/TomoyoLinux.md "TomoyoLinux") is a technology to
     improve Linux's security originally developed by [NTT DATA
     CORPORATION, Japan](http://www.nttdata.co.jp/en/index.html). [TOMOYO
-    Linux](http://eLinux.org/TomoyoLinux "TomoyoLinux") was released on November, 11,
+    Linux](../.././dev_portals/Security/TomoyoLinux/TomoyoLinux.md "TomoyoLinux") was released on November, 11,
     2005 as an open source software under the GPL. [TOMOYO
-    Linux](http://eLinux.org/TomoyoLinux "TomoyoLinux") is a mechanism called Secure OS,
+    Linux](../.././dev_portals/Security/TomoyoLinux/TomoyoLinux.md "TomoyoLinux") is a mechanism called Secure OS,
     which can perform fine grained access control by breaking access
     permissions into parts like SELinux.
     -   [ELC2007
@@ -443,9 +443,9 @@ It offers among many other features:
 
 -   Trusted Boot
     -   Security Hardware Resources -- [Security Hardware
-        Resources](http://eLinux.org/Security_Hardware_Resources "Security Hardware Resources")
+        Resources](../.././dev_portals/Security/Security_Hardware_Resources/Security_Hardware_Resources.md "Security Hardware Resources")
     -   Bootloader Security Resources -- [Bootloader Security
-        Resources](http://eLinux.org/Bootloader_Security_Resources "Bootloader Security Resources")
+        Resources](../.././dev_portals/Security/Bootloader_Security_Resources/Bootloader_Security_Resources.md "Bootloader Security Resources")
 
 #### Security Activities
 

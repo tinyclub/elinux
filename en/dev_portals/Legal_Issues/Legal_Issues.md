@@ -57,7 +57,7 @@ declare the work (to the best of their knowledge) to be either original,
 or derivative of something compatible with GPL v2.
 
 See the [Developer Certificate Of
-Origin](http://eLinux.org/Developer_Certificate_Of_Origin "Developer Certificate Of Origin")
+Origin](../.././dev_portals/Legal_Issues/Developer_Certificate_Of_Origin/Developer_Certificate_Of_Origin.md "Developer Certificate Of Origin")
 which is contained in the kernel's
 [Documentation/SubmittingPatches](http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=blob;f=Documentation/SubmittingPatches)
 file.

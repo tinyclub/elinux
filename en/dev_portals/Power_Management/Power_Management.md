@@ -39,9 +39,9 @@ on a single battery charge.
         [powertop](http://www.lesswatts.org/projects/powertop/) tool,
         which helps to identify some power hogs.
 -   [OMAP Power
-    Management](http://eLinux.org/OMAP_Power_Management "OMAP Power Management")
+    Management](../.././dev_portals/Power_Management/OMAP_Power_Management/OMAP_Power_Management.md "OMAP Power Management")
     -   For Power Management on processors in the [Texas
-        Instruments](http://eLinux.org/Texas_Instruments "Texas Instruments") OMAP
+        Instruments](../.././dev_portals/Power_Management/Texas_Instruments/Texas_Instruments.md "Texas Instruments") OMAP
         family.
 
 ## Linux Power Management Mini-Summit
@@ -62,9 +62,9 @@ See here [CELF PM Requirements
 
 ## Documents
 
--   [Device\_Power\_Management\_Specification](http://eLinux.org/Device_Power_Management_Specification "Device Power Management Specification")
+-   [Device\_Power\_Management\_Specification](../.././dev_portals/Power_Management/Device_Power_Management_Specification/Device_Power_Management_Specification.md "Device Power Management Specification")
 
--   [Dynamic\_Power\_Management\_Specification](http://eLinux.org/Dynamic_Power_Management_Specification "Dynamic Power Management Specification")
+-   [Dynamic\_Power\_Management\_Specification](../.././dev_portals/Power_Management/Dynamic_Power_Management_Specification/Dynamic_Power_Management_Specification.md "Dynamic Power Management Specification")
 
 -   Mapping of ACPI states to omap power states: [ACPI to OMAP2
     Mapping](http://eLinux.org/images/0/02/Acpi-to-omap2-mapping.pdf "Acpi-to-omap2-mapping.pdf")
@@ -108,9 +108,9 @@ you may want to look at the following papers:
     and
     [video](http://free-electrons.com/pub/video/2008/elce/elce2008-jonker-power-management-arm11.ogv).
 
--   [Power\_Management\_Specification](http://eLinux.org/Power_Management_Specification "Power Management Specification")
+-   [Power\_Management\_Specification](../.././dev_portals/Power_Management/Power_Management_Specification/Power_Management_Specification.md "Power Management Specification")
 
--   [Static\_Power\_Management\_Specification](http://eLinux.org/Static_Power_Management_Specification "Static Power Management Specification")
+-   [Static\_Power\_Management\_Specification](../.././dev_portals/Power_Management/Static_Power_Management_Specification/Static_Power_Management_Specification.md "Static Power Management Specification")
 
 ## Open Source Projects/Mailing Lists
 

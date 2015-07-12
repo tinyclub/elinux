@@ -1,61 +1,51 @@
-# Hardware Hacking
-## Contents
-# Project Devices
-* Literati
-* InnoTab
-* Opensourcemid
-* CR48
-* TCube_Info
-* Mobile_Pro
-* Didj
-* Leapster_Explorer
-* Leappad_Explorer
-* Leapster
-* DCT_5000
-* Pixter
-* Pixter_Multimedia
-* TvNow
-* ZipIt
-* JuiceBox
-* DHT-Walnut
-* FX3002
-* Hisense
-* Enc28j60
-* R8610_Based_WAP
-* SMC_WSKP100
-* EBR-1000EP
-* VGF-CP1
-* Peek
-* Reciva_Barracuda
-* Wavefinder
-* CT-PC89E
-* Programmers_Hardware_Database
-# Supported Devices
-* AML_Products
-# Automotive
-* NaviEngine
-* Automotive_Communications
-* CAN_Bus
-* BEAN_Bus
-* AVC-LAN
-# Industrial
-* Industrial_Communications
-* CAN_Bus
-# Miniclusters
-# Hardware Tools and Information
-* Flameman
-* Flyswatter
-* Sparkfun_Camera
-* Ez_Usb
-* Mini_LA
-* NTSC_Bitbang
-* Lithium_Ion_Charger
-* Libertas_SDIO
-* Nand_Flash256
-* Nor_vs_Nand
-* TUSB2046B
-# Software Tools and Information
-* SM501-User_Level_Device_Driver
-* Board_Bringup_Utilities
-* MUSB
-* Hello_World_in_C
+AML_Products
+Automotive_Communications
+AVC-LAN
+BEAN_Bus
+Board_Bringup_Utilities
+CAN_Bus
+CR48
+CT-PC89E
+DCT_5000
+DHT-Walnut
+Didj
+EBR-1000EP
+Enc28j60
+Ez_Usb
+Flameman
+Flyswatter
+FX3002
+Hello_World_in_C
+Hisense
+Industrial_Communications
+InnoTab
+JuiceBox
+Leappad_Explorer
+Leapster
+Leapster_Explorer
+Libertas_SDIO
+Literati
+Lithium_Ion_Charger
+Mini_LA
+Mobile_Pro
+MUSB
+Nand_Flash256
+NaviEngine
+Nor_vs_Nand
+NTSC_Bitbang
+Opensourcemid
+Peek
+Pixter
+Pixter_Multimedia
+Programmers_Hardware_Database
+R8610_Based_WAP
+Reciva_Barracuda
+SM501-User_Level_Device_Driver
+SMC_WSKP100
+Sparkfun_Camera
+TCube_Info
+TUSB2046B
+TvNow
+VGF-CP1
+Wavefinder
+ZipIt

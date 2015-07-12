@@ -21,48 +21,48 @@ devices and project devices (or devices that unofficially run Linux).
 
 # Project Devices
 
--   [Literati](http://eLinux.org/Literati "Literati")
--   [InnoTab](http://eLinux.org/InnoTab "InnoTab")
--   [Opensourcemid](http://eLinux.org/Opensourcemid "Opensourcemid") K7 MID OMAP3530
+-   [Literati](../.././dev_portals/Hardware_Hacking/Literati/Literati.md "Literati")
+-   [InnoTab](../.././dev_portals/Hardware_Hacking/InnoTab/InnoTab.md "InnoTab")
+-   [Opensourcemid](../.././dev_portals/Hardware_Hacking/Opensourcemid/Opensourcemid.md "Opensourcemid") K7 MID OMAP3530
     tablet
--   [CR48](http://eLinux.org/CR48 "CR48") Google Netbook
+-   [CR48](../.././dev_portals/Hardware_Hacking/CR48/CR48.md "CR48") Google Netbook
 -   [Ben NanoNote](http://en.qi-hardware.com/wiki/Ben_NanoNote)
--   [TCube](http://eLinux.org/TCube_Info "TCube Info")
--   [Mobile Pro](http://eLinux.org/Mobile_Pro "Mobile Pro")
+-   [TCube](../.././dev_portals/Hardware_Hacking/TCube_Info/TCube_Info.md "TCube Info")
+-   [Mobile Pro](../.././dev_portals/Hardware_Hacking/Mobile_Pro/Mobile_Pro.md "Mobile Pro")
 -   LeapFrog Products
-    -   [Didj](http://eLinux.org/Didj "Didj")
-    -   [Leapster Explorer](http://eLinux.org/Leapster_Explorer "Leapster Explorer")
-    -   [Leappad Explorer](http://eLinux.org/Leappad_Explorer "Leappad Explorer")
-    -   [Leapster](http://eLinux.org/Leapster "Leapster")
--   [DCT 5000](http://eLinux.org/DCT_5000 "DCT 5000")
--   [Pixter](http://eLinux.org/Pixter "Pixter")
--   [Pixter Multimedia](http://eLinux.org/Pixter_Multimedia "Pixter Multimedia")
--   [TvNow](http://eLinux.org/TvNow "TvNow")
--   [ZipIt](http://eLinux.org/ZipIt "ZipIt")
+    -   [Didj](../.././dev_portals/Hardware_Hacking/Didj/Didj.md "Didj")
+    -   [Leapster Explorer](../.././dev_portals/Hardware_Hacking/Leapster_Explorer/Leapster_Explorer.md "Leapster Explorer")
+    -   [Leappad Explorer](../.././dev_portals/Hardware_Hacking/Leappad_Explorer/Leappad_Explorer.md "Leappad Explorer")
+    -   [Leapster](../.././dev_portals/Hardware_Hacking/Leapster/Leapster.md "Leapster")
+-   [DCT 5000](../.././dev_portals/Hardware_Hacking/DCT_5000/DCT_5000.md "DCT 5000")
+-   [Pixter](../.././dev_portals/Hardware_Hacking/Pixter/Pixter.md "Pixter")
+-   [Pixter Multimedia](../.././dev_portals/Hardware_Hacking/Pixter/Pixter.md_Multimedia "Pixter Multimedia")
+-   [TvNow](../.././dev_portals/Hardware_Hacking/TvNow/TvNow.md "TvNow")
+-   [ZipIt](../.././dev_portals/Hardware_Hacking/ZipIt/ZipIt.md "ZipIt")
 -   [Zipit2](http://zipit2system.sf.net) - the new Zipit with better
     hardware
--   [JuiceBox](http://eLinux.org/JuiceBox "JuiceBox")
--   [DHT-Walnut](http://eLinux.org/DHT-Walnut "DHT-Walnut")
--   [FX3002](http://eLinux.org/FX3002 "FX3002") watch from fossil.
--   [Hisense](http://eLinux.org/Hisense "Hisense") - USDTV HDTV Tuner DB-2010 running
+-   [JuiceBox](../.././dev_portals/Hardware_Hacking/JuiceBox/JuiceBox.md "JuiceBox")
+-   [DHT-Walnut](../.././dev_portals/Hardware_Hacking/DHT-Walnut/DHT-Walnut.md "DHT-Walnut")
+-   [FX3002](../.././dev_portals/Hardware_Hacking/FX3002/FX3002.md "FX3002") watch from fossil.
+-   [Hisense](../.././dev_portals/Hardware_Hacking/Hisense/Hisense.md "Hisense") - USDTV HDTV Tuner DB-2010 running
     Linux
--   [enc28j60](http://eLinux.org/Enc28j60 "Enc28j60") - single chip 10baseT ethernet with
+-   [enc28j60](../.././dev_portals/Hardware_Hacking/Enc28j60/Enc28j60.md "Enc28j60") - single chip 10baseT ethernet with
     SPI interface
--   [R8610\_Based\_WAP](http://eLinux.org/R8610_Based_WAP "R8610 Based WAP") - tiny x86
+-   [R8610\_Based\_WAP](../.././dev_portals/Hardware_Hacking/R8610_Based_WAP/R8610_Based_WAP.md "R8610 Based WAP") - tiny x86
     compatible WAPs with internal 2.5" HD runs Linux
--   [SMC WSKP100](http://eLinux.org/SMC_WSKP100 "SMC WSKP100") - A wifi Skype phone from
+-   [SMC WSKP100](../.././dev_portals/Hardware_Hacking/SMC_WSKP100/SMC_WSKP100.md "SMC WSKP100") - A wifi Skype phone from
     SMC
 -   [OpenTom](http://www.opentom.org) - community project around GPS
     TomTom devices
--   [EBR-1000EP](http://eLinux.org/EBR-1000EP "EBR-1000EP") - Sony Librié
--   [VGF-CP1](http://eLinux.org/VGF-CP1 "VGF-CP1") - Sony VAIO Digital Picture Frame with
+-   [EBR-1000EP](../.././dev_portals/Hardware_Hacking/EBR-1000EP/EBR-1000EP.md "EBR-1000EP") - Sony Librié
+-   [VGF-CP1](../.././dev_portals/Hardware_Hacking/VGF-CP1/VGF-CP1.md "VGF-CP1") - Sony VAIO Digital Picture Frame with
     WiFi
--   [Peek](http://eLinux.org/Peek "Peek")
--   [Reciva\_Barracuda](http://eLinux.org/Reciva_Barracuda "Reciva Barracuda")
--   [Wavefinder](http://eLinux.org/Wavefinder "Wavefinder") Software Defined Radio
--   [CT-PC89E](http://eLinux.org/CT-PC89E "CT-PC89E") - 8.9" netbook powered by S3C6410
+-   [Peek](../.././dev_portals/Hardware_Hacking/Peek/Peek.md "Peek")
+-   [Reciva\_Barracuda](../.././dev_portals/Hardware_Hacking/Reciva_Barracuda/Reciva_Barracuda.md "Reciva Barracuda")
+-   [Wavefinder](../.././dev_portals/Hardware_Hacking/Wavefinder/Wavefinder.md "Wavefinder") Software Defined Radio
+-   [CT-PC89E](../.././dev_portals/Hardware_Hacking/CT-PC89E/CT-PC89E.md "CT-PC89E") - 8.9" netbook powered by S3C6410
 -   [Programmers Hardware
-    Database](http://eLinux.org/Programmers_Hardware_Database "Programmers Hardware Database")
+    Database](../.././dev_portals/Hardware_Hacking/Programmers_Hardware_Database/Programmers_Hardware_Database.md "Programmers Hardware Database")
     - various hardware information including hardware hacking projects
 -   [DF3210](http://sites.google.com/site/repurposelinux/df3120) -
     Parrot bluetooth digital photo frame
@@ -80,23 +80,23 @@ devices and project devices (or devices that unofficially run Linux).
 -   [Sharp Zaurus](http://en.wikipedia.org/wiki/Sharp_Zaurus) and
     [NetWalker](http://en.wikipedia.org/wiki/Netwalker#Sharp_Netwalker)
     running Ubuntu
--   [AML Handheld devices](http://eLinux.org/AML_Products "AML Products")
+-   [AML Handheld devices](../.././dev_portals/Hardware_Hacking/AML_Products/AML_Products.md "AML Products")
 -   [Pandora handheld console](http://www.openpandora.org/)
 
 # Automotive
 
--   [NaviEngine](http://eLinux.org/NaviEngine "NaviEngine")
+-   [NaviEngine](../.././dev_portals/Hardware_Hacking/NaviEngine/NaviEngine.md "NaviEngine")
 -   [Automotive
-    Communications](http://eLinux.org/Automotive_Communications "Automotive Communications")
-    -   [CAN Bus](http://eLinux.org/CAN_Bus "CAN Bus")
-    -   [BEAN Bus](http://eLinux.org/BEAN_Bus "BEAN Bus")
-    -   [AVC-LAN](http://eLinux.org/AVC-LAN "AVC-LAN")
+    Communications](../.././dev_portals/Hardware_Hacking/Automotive_Communications/Automotive_Communications.md "Automotive Communications")
+    -   [CAN Bus](../.././dev_portals/Hardware_Hacking/CAN_Bus/CAN_Bus.md "CAN Bus")
+    -   [BEAN Bus](../.././dev_portals/Hardware_Hacking/BEAN_Bus/BEAN_Bus.md "BEAN Bus")
+    -   [AVC-LAN](../.././dev_portals/Hardware_Hacking/AVC-LAN/AVC-LAN.md "AVC-LAN")
 
 # Industrial
 
 -   [Industrial
-    Communications](http://eLinux.org/Industrial_Communications "Industrial Communications")
-    -   [CAN Bus](http://eLinux.org/CAN_Bus "CAN Bus")
+    Communications](../.././dev_portals/Hardware_Hacking/Industrial_Communications/Industrial_Communications.md "Industrial Communications")
+    -   [CAN Bus](../.././dev_portals/Hardware_Hacking/CAN_Bus/CAN_Bus.md "CAN Bus")
 
 # Miniclusters
 
@@ -119,31 +119,31 @@ Here is a list of original projects.
 
 # Hardware Tools and Information
 
--   [Flameman](http://eLinux.org/Flameman "Flameman") & legacy's hardware hacking pages
+-   [Flameman](../.././dev_portals/Hardware_Hacking/Flameman/Flameman.md "Flameman") & legacy's hardware hacking pages
     (68k, mips, powerpc, blackfin, avr, and much more)
--   [Flyswatter](http://eLinux.org/Flyswatter "Flyswatter") USB JTAG and RS-232 adapter
--   [Sparkfun\_Camera](http://eLinux.org/Sparkfun_Camera "Sparkfun Camera") - Low cost
+-   [Flyswatter](../.././dev_portals/Hardware_Hacking/Flyswatter/Flyswatter.md "Flyswatter") USB JTAG and RS-232 adapter
+-   [Sparkfun\_Camera](../.././dev_portals/Hardware_Hacking/Sparkfun_Camera/Sparkfun_Camera.md "Sparkfun Camera") - Low cost
     cmos camera
--   [Ez\_Usb](http://eLinux.org/Ez_Usb "Ez Usb") - 8051 based usb devices
--   [Mini\_LA](http://eLinux.org/Mini_LA "Mini LA") - open source logic analyzer
--   [NTSC\_Bitbang](http://eLinux.org/NTSC_Bitbang "NTSC Bitbang") - detailed concepts on
+-   [Ez\_Usb](../.././dev_portals/Hardware_Hacking/Ez_Usb/Ez_Usb.md "Ez Usb") - 8051 based usb devices
+-   [Mini\_LA](../.././dev_portals/Hardware_Hacking/Mini_LA/Mini_LA.md "Mini LA") - open source logic analyzer
+-   [NTSC\_Bitbang](../.././dev_portals/Hardware_Hacking/NTSC_Bitbang/NTSC_Bitbang.md "NTSC Bitbang") - detailed concepts on
     NTSC
--   [Lithium\_Ion\_Charger](http://eLinux.org/Lithium_Ion_Charger "Lithium Ion Charger")
+-   [Lithium\_Ion\_Charger](../.././dev_portals/Hardware_Hacking/Lithium_Ion_Charger/Lithium_Ion_Charger.md "Lithium Ion Charger")
     - Li-Ion battery charger design
--   [Libertas SDIO](http://eLinux.org/Libertas_SDIO "Libertas SDIO") - Marvell Libertas
+-   [Libertas SDIO](../.././dev_portals/Hardware_Hacking/Libertas_SDIO/Libertas_SDIO.md "Libertas SDIO") - Marvell Libertas
     SDIO information
--   [Nand\_Flash256](http://eLinux.org/Nand_Flash256 "Nand Flash256") - common 256MB nand
+-   [Nand\_Flash256](../.././dev_portals/Hardware_Hacking/Nand_Flash256/Nand_Flash256.md "Nand Flash256") - common 256MB nand
     flash devices
--   [Nor\_vs\_Nand](http://eLinux.org/Nor_vs_Nand "Nor vs Nand") - data comparisons
+-   [Nor\_vs\_Nand](../.././dev_portals/Hardware_Hacking/Nor_vs_Nand/Nor_vs_Nand.md "Nor vs Nand") - data comparisons
     between Nor and Nand Flash
--   [TUSB2046B](http://eLinux.org/TUSB2046B "TUSB2046B") - four port usb chipset
+-   [TUSB2046B](../.././dev_portals/Hardware_Hacking/TUSB2046B/TUSB2046B.md "TUSB2046B") - four port usb chipset
 
 # Software Tools and Information
 
--   [SM501-User\_Level\_Device\_Driver](http://eLinux.org/SM501-User_Level_Device_Driver "SM501-User Level Device Driver")
--   [Board\_Bringup\_Utilities](http://eLinux.org/Board_Bringup_Utilities "Board Bringup Utilities")
--   [MUSB](http://eLinux.org/MUSB "MUSB") resources
--   [Hello\_World\_in\_C](http://eLinux.org/Hello_World_in_C "Hello World in C")
+-   [SM501-User\_Level\_Device\_Driver](../.././dev_portals/Hardware_Hacking/SM501-User_Level_Device_Driver/SM501-User_Level_Device_Driver.md "SM501-User Level Device Driver")
+-   [Board\_Bringup\_Utilities](../.././dev_portals/Hardware_Hacking/Board_Bringup_Utilities/Board_Bringup_Utilities.md "Board Bringup Utilities")
+-   [MUSB](../.././dev_portals/Hardware_Hacking/MUSB/MUSB.md "MUSB") resources
+-   [Hello\_World\_in\_C](../.././dev_portals/Hardware_Hacking/Hello_World_in_C/Hello_World_in_C.md "Hello World in C")
 
 
 [Category](http://eLinux.org/Special:Categories "Special:Categories"):

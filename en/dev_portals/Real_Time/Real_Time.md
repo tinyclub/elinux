@@ -34,21 +34,21 @@ communications)
 
 ## Software Projects
 
--   [Realtime Preemption](http://eLinux.org/Realtime_Preemption "Realtime Preemption") -
+-   [Realtime Preemption](../.././dev_portals/Real_Time/Realtime_Preemption/Realtime_Preemption.md "Realtime Preemption") -
     Ingo Molnar's patchset to add realtime preemption to the 2.6 Linux
     kernel
--   [Kernel Timer Systems](http://eLinux.org/Kernel_Timer_Systems "Kernel Timer Systems")
+-   [Kernel Timer Systems](../.././dev_portals/Real_Time/Kernel_Timer_Systems/Kernel_Timer_Systems.md "Kernel Timer Systems")
     - Various new proposals for changing the kernel timing system
--   [Soft IRQ Threads](http://eLinux.org/Soft_IRQ_Threads "Soft IRQ Threads") -
+-   [Soft IRQ Threads](../.././dev_portals/Real_Time/Soft_IRQ_Threads/Soft_IRQ_Threads.md "Soft IRQ Threads") -
     Technology to put SoftIRQs in threads so they can be preempted.
     -   ***NOTE:** Soft IRQ threads are now (Oct 2007) incorporated into
         the [Realtime
-        Preemption](http://eLinux.org/Realtime_Preemption "Realtime Preemption") patch*
+        Preemption](../.././dev_portals/Real_Time/Realtime_Preemption/Realtime_Preemption.md "Realtime Preemption") patch*
 -   [High Resolution
-    Timers](http://eLinux.org/High_Resolution_Timers "High Resolution Timers") - A system
+    Timers](../.././dev_portals/Real_Time/High_Resolution_Timers/High_Resolution_Timers.md "High Resolution Timers") - A system
     to support timers with sub-jiffy resolution
 -   [Variable Scheduling
-    Timeouts](http://eLinux.org/Variable_Scheduling_Timeouts "Variable Scheduling Timeouts")
+    Timeouts](../.././dev_portals/Real_Time/Variable_Scheduling_Timeouts/Variable_Scheduling_Timeouts.md "Variable Scheduling Timeouts")
     - A system to support variable timeouts for periodic system
     activities (also known as Tickless)
 
@@ -56,7 +56,7 @@ communications)
 
 Ti AM18XX PRUSSv1
 
-[Ti\_AM33XX\_PRUSSv2](http://eLinux.org/Ti_AM33XX_PRUSSv2 "Ti AM33XX PRUSSv2")
+[Ti\_AM33XX\_PRUSSv2](../.././dev_portals/Real_Time/Ti_AM33XX_PRUSSv2/Ti_AM33XX_PRUSSv2.md "Ti AM33XX PRUSSv2")
 
 Tools for PRUSS
 
@@ -74,7 +74,7 @@ Tools for PRUSS
     Conference -
     [Media:Real-Time-Preemption-Patchset.pdf](http://eLinux.org/images/4/4e/Real-Time-Preemption-Patchset.pdf "Real-Time-Preemption-Patchset.pdf")
 -   [Realtime Testing Best
-    Practices](http://eLinux.org/Realtime_Testing_Best_Practices "Realtime Testing Best Practices")
+    Practices](../.././dev_portals/Real_Time/Realtime_Testing_Best_Practices/Realtime_Testing_Best_Practices.md "Realtime Testing Best Practices")
     - a document to show recent testing results, and give hints for how
     different tests are conducted and what pitfalls to avoid.
 -   [Real time in embedded Linux
@@ -123,7 +123,7 @@ Tools for PRUSS
         and dual-kernel approaches).
     -   The paper has an extensive list of references.
 -   Tutorial [RT-Preempt
-    Tutorial](http://eLinux.org/RT-Preempt_Tutorial "RT-Preempt Tutorial")
+    Tutorial](../.././dev_portals/Real_Time/RT-Preempt_Tutorial/RT-Preempt_Tutorial.md "RT-Preempt Tutorial")
 -   [OSADL Realtime
     Page](https://www.osadl.org/Realtime-Linux.projects-realtime-linux.0.html)
     with realtime latency
