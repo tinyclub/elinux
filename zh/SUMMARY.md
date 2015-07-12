@@ -47,12 +47,10 @@
 
         * [Linux Kernel Resources](toolbox/dev_res/Linux_Kernel_Resources/Linux_Kernel_Resources.md)
         * [Kernel Subsystems](toolbox/dev_res/Kernel_Subsystems/Kernel_Subsystems.md)
-        * [Device Tree](dev_portals/Device_Tree/Device_Tree.md)
         * [Online Documentation](toolbox/dev_res/Online_Documentation/Online_Documentation.md)
         * [Books](toolbox/dev_res/Category_Books/Category_Books.md)
         * [Reference Material](toolbox/dev_res/Reference_Material/Reference_Material.md)
         * [Podcasts](toolbox/dev_res/Podcasts/Podcasts.md)
-        * [Device drivers](dev_portals/Device_drivers/Device_drivers.md)
         * [Beginning Programming](toolbox/dev_res/Beginning_Programming/Beginning_Programming.md)
 
     * [Tips and Tricks](toolbox/tips_and_tricks/README.md)
@@ -130,7 +128,6 @@
 
         * [Software Development Kit](android_portal/software_dev/Android_SDK/Android_SDK.md)
         * [Source Build System](android_portal/software_dev/Android_Build_System/Android_Build_System.md)
-        * [Development Tools](android_portal/getting_started/Android_Tools/Android_Tools.md)
         * [Application Development Resources](android_portal/software_dev/Android_Application_Development/Android_Application_Development.md)
         * [Scripting](android_portal/software_dev/Android_Scripting/Android_Scripting.md)
         * [Debugging](android_portal/software_dev/Android_Debugging/Android_Debugging.md)
