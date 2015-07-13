@@ -305,11 +305,11 @@ UDOO\_GPIO\_Pinout](http://eLinux.org/UDOO_GPIO_Pinout "UDOO GPIO Pinout")
 <li>Image transfer rate</li>
 </ul>
 <p>VGA (320x480) @120fps VGA (640x480) @90fps 720p @60fps 1280x960 @45fps 1080p @30fps QSXGA (2592x1944) @15fps</p>
-<p><a href="/UDOO_Camera_Module" title="UDOO Camera Module">More informations about UDOO Camera Modules</a></p>
+<p><a href="http://www.eLinux.org/UDOO_Camera_Module" title="UDOO Camera Module">More informations about UDOO Camera Modules</a></p>
 <p><a href="http://udoo.org/download/files/datasheets/datasheet_camera.pdf">UDOO Camera Module Datasheet</a></p>
 <p><br /></p></td>
-<td align="left"><a href="/File:UDOO_Camera.jpg"><img src="/images/thumb/b/b3/UDOO_Camera.jpg/300px-UDOO_Camera.jpg" alt="UDOO Camera.jpg" /></a>
-<a href="/File:UDOO_Camera.jpg" title="Enlarge"></a></td>
+<td align="left"><a href="http://www.eLinux.org/File:UDOO_Camera.jpg"><img src="http://www.eLinux.org/images/thumb/b/b3/UDOO_Camera.jpg/300px-UDOO_Camera.jpg" alt="UDOO Camera.jpg" /></a>
+<a href="http://www.eLinux.org/File:UDOO_Camera.jpg" title="Enlarge"></a></td>
 </tr>
 </tbody>
 </table>
@@ -335,8 +335,8 @@ UDOO\_GPIO\_Pinout](http://eLinux.org/UDOO_GPIO_Pinout "UDOO GPIO Pinout")
 </ul>
 <p>How to <a href="http://www.elinux.org/UDOO_setup_lvds_panels">setup lvds panels</a></p>
 <p><a href="http://udoo.org/download/files/datasheets/datasheet7.pdf">UDOO 7&quot; Touch Panel Display Kit Datasheet</a></p></td>
-<td align="left"><a href="/File:UDOO_LVDS_7.jpg"><img src="/images/thumb/b/be/UDOO_LVDS_7.jpg/300px-UDOO_LVDS_7.jpg" alt="UDOO LVDS 7.jpg" /></a>
-<a href="/File:UDOO_LVDS_7.jpg" title="Enlarge"></a></td>
+<td align="left"><a href="http://www.eLinux.org/File:UDOO_LVDS_7.jpg"><img src="http://www.eLinux.org/images/thumb/b/be/UDOO_LVDS_7.jpg/300px-UDOO_LVDS_7.jpg" alt="UDOO LVDS 7.jpg" /></a>
+<a href="http://www.eLinux.org/File:UDOO_LVDS_7.jpg" title="Enlarge"></a></td>
 </tr>
 </tbody>
 </table>
@@ -361,8 +361,8 @@ UDOO\_GPIO\_Pinout](http://eLinux.org/UDOO_GPIO_Pinout "UDOO GPIO Pinout")
 </ul>
 <p><br /> How to <a href="http://www.elinux.org/UDOO_setup_lvds_panels">setup lvds panels</a></p>
 <p><a href="http://udoo.org/download/files/datasheets/datasheet15.pdf">UDOO 15&quot; Touch Panel Display Kit Datasheet</a></p></td>
-<td align="left"><a href="/File:UDOO_LVDS_15.jpg"><img src="/images/thumb/f/fb/UDOO_LVDS_15.jpg/300px-UDOO_LVDS_15.jpg" alt="UDOO LVDS 15.jpg" /></a>
-<a href="/File:UDOO_LVDS_15.jpg" title="Enlarge"></a></td>
+<td align="left"><a href="http://www.eLinux.org/File:UDOO_LVDS_15.jpg"><img src="http://www.eLinux.org/images/thumb/f/fb/UDOO_LVDS_15.jpg/300px-UDOO_LVDS_15.jpg" alt="UDOO LVDS 15.jpg" /></a>
+<a href="http://www.eLinux.org/File:UDOO_LVDS_15.jpg" title="Enlarge"></a></td>
 </tr>
 </tbody>
 </table>
