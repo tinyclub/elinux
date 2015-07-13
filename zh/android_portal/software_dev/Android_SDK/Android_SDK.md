@@ -1,5 +1,5 @@
 > From: [eLinux.org](http://eLinux.org/Android_SDK "http://eLinux.org/Android_SDK")
-
+> 摘自: [eLinux.org](http://eLinux.org/Android_SDK "http://eLinux.org/Android_SDK")
 
 # Android SDK
 #安卓SDK
