@@ -48,16 +48,16 @@ Analyzing the amount of system memory in use and available is trickier
 than it sounds.
 
 -   See [Runtime Memory
-    Measurement](http://eLinux.org/Runtime_Memory_Measurement "Runtime Memory Measurement")
+    Measurement](../.././dev_portals/Memory_Management/Runtime_Memory_Measurement/Runtime_Memory_Measurement.md "Runtime Memory Measurement")
     for different methods of measuring and analyzing system memory.
 
 -   See [Accurate Memory
-    Measurement](http://eLinux.org/Accurate_Memory_Measurement "Accurate Memory Measurement")
+    Measurement](../.././dev_portals/Memory_Management/Accurate_Memory_Measurement/Accurate_Memory_Measurement.md "Accurate Memory Measurement")
     for some different techniques for dealing with inadequacies in
     current memory measurement systems.
 
 -   See [Tims Notes on ARM memory
-    allocation](http://eLinux.org/Tims_Notes_on_ARM_memory_allocation "Tims Notes on ARM memory allocation")
+    allocation](../.././dev_portals/Memory_Management/Tims_Notes_on_ARM_memory_allocation/Tims_Notes_on_ARM_memory_allocation.md "Tims Notes on ARM memory allocation")
     for some ARM-specific memory management information.
 
 ### Huge/large/superpages
@@ -121,7 +121,7 @@ for information about the OOM killer in the Linux kernel.
 
 Part of OOM avoidance is for the kernel to have an accurate measure of
 memory utilization. See [Accurate Memory
-Measurement](http://eLinux.org/Accurate_Memory_Measurement "Accurate Memory Measurement")
+Measurement](../.././dev_portals/Memory_Management/Accurate_Memory_Measurement/Accurate_Memory_Measurement.md "Accurate Memory Measurement")
 for information on technology in this area.
 
 Here are some technologies that I know about (these need to be
@@ -203,7 +203,7 @@ researched and documented better):
 
 -   Paul Mundt submitted a patch to CELF for the 2.6.12 kernel which
     provided low-memory notifications to user space. See
-    [Accurate\_Memory\_Measurement\#Nokia\_out-of-memory\_notifier\_module](http://eLinux.org/Accurate_Memory_Measurement#Nokia_out-of-memory_notifier_module "Accurate Memory Measurement")
+    [Accurate\_Memory\_Measurement\#Nokia\_out-of-memory\_notifier\_module](../.././dev_portals/Memory_Management/Accurate_Memory_Measurement/Accurate_Memory_Measurement.md#Nokia_out-of-memory_notifier_module "Accurate Memory Measurement")
     for more information.
     -   This module was based on the Linux Security Module system, which
         has been removed from recent kernels.
@@ -215,7 +215,7 @@ to allow the kernel to allocate different types of memory for different
 sections of a program, based on user policy.
 
 See [Memory Type Based
-Allocation](http://eLinux.org/Memory_Type_Based_Allocation "Memory Type Based Allocation")
+Allocation](../.././dev_portals/Memory_Management/Memory_Type_Based_Allocation/Memory_Type_Based_Allocation.md "Memory Type Based Allocation")
 
 ## Additional Resources/Mailing Lists
 

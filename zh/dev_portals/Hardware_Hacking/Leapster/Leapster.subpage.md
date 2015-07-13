@@ -1,0 +1,2 @@
+# Leapster
+## Technical Specifications

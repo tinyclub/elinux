@@ -25,7 +25,7 @@ frameworks which are of interest to embedded developers.
 -   [UBC, OpenVZ User
     beancounters.](http://wiki.openvz.org/Category:UBC)
 -   [OpenSourceMID.org](http://www.opensourcemid.org)
-    [Opensourcemid](http://eLinux.org/Opensourcemid "Opensourcemid")
+    [Opensourcemid](../.././dev_portals/Hardware_Hacking/Opensourcemid/Opensourcemid.md "Opensourcemid")
 
 ## CKRM/RG
 

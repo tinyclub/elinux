@@ -7,26 +7,26 @@
 
 ## 目录
 
--   [2 简介](#简介)
--   [3 技术/项目主页](#技术/项目主页)
--   [4 Linux Kernel中的安全子系统](#Linux Kernel中的安全子系统)
+-   [2 简介](#Introduction)
+-   [3 技术/项目主页](#Technology/Project pages)
+-   [4 Linux Kernel中的安全子系统](#security-systems-in-linux-kernel)
     -   [4.1 SELinux](#selinux)
     -   [4.2 Tomoyo](#tomoyo)
     -   [4.3 SMACK](#smack)
--   [5 比较老的信息 (2005年前来自于 CELF 调查信息)](#2005年前来自于 CELF 调查信息)
-    -   [5.1 文档](#文档)
-    -   [5.2 关键需求与相关技术点](#关键需求与相关技术点)
-    -   [5.3 资源](#资源)
-        -   [5.3.1 安全框架](#安全框架)
-        -   [5.3.2 安全组件](#安全组件)
-        -   [5.3.3 安全特性](#安全特性)
-        -   [5.3.4 其他资源](#其他资源)
-            -   [5.3.4.1 安全活动](#安全活动)
-            -   [5.3.4.2 邮件列表](#邮件列表)
-            -   [5.3.4.3 会议](#会议)
-            -   [5.3.4.4 与安全相关的文章](#与安全相关的文章)
-            -   [5.3.4.5 论文](#论文)
-            -   [5.3.4.6 简单的开源代码](#简单的开源代码)
+-   [5 比较老的信息 (2005年前来自于 CELF 调查信息)](#older-information-from-celf-investigations-prior-to-2005)
+    -   [5.1 文档](#documents)
+    -   [5.2 关键需求与相关技术点](#key-requirements-and-the-related-technologies)
+    -   [5.3 资源](#resources)
+        -   [5.3.1 安全框架](#security-frameworks)
+        -   [5.3.2 安全组件](#security-components)
+        -   [5.3.3 安全特性](#security-features)
+        -   [5.3.4 其他资源](#other-resources)
+            -   [5.3.4.1 安全活动](#security-activities)
+            -   [5.3.4.2 邮件列表](#mailing-lists)
+            -   [5.3.4.3 会议](#conferences)
+            -   [5.3.4.4 与安全相关的文章](#security-articles)
+            -   [5.3.4.5 论文](#papers)
+            -   [5.3.4.6 简单的开源代码](#sample-and-opensource-code)
 
 
 ## 简介
@@ -35,15 +35,15 @@
 
 ## 技术/项目主页
 
--   [与硬件安全相关的资源](http://eLinux.org/Security_Hardware_Resources "Security Hardware Resources")
--   [与Bootloader 安全相关的资源](http://eLinux.org/Bootloader_Security_Resources "Bootloader Security Resources")
--   [强制访问控制技术的比较](http://eLinux.org/Mandatory_Access_Control_Comparison "Mandatory Access Control Comparison")
+-   [与硬件安全相关的资源](../.././dev_portals/Security/Security_Hardware_Resources/Security_Hardware_Resources.md "Security Hardware Resources")
+-   [与Bootloader 安全相关的资源](../.././dev_portals/Security/Bootloader_Security_Resources/Bootloader_Security_Resources.md "Bootloader Security Resources")
+-   [强制访问控制技术的比较](../.././dev_portals/Security/Mandatory_Access_Control_Comparison/Mandatory_Access_Control_Comparison.md "Mandatory Access Control Comparison")
 
 ## Linux Kernel中的安全子系统
 
 ### SELinux
 
--   [SELinux](http://eLinux.org/SELinux "SELinux") - 这个功能主要用来实现对Linux Kernel的高级安全瓶通量。
+-   [SELinux](../.././dev_portals/Security/SELinux/SELinux.md "SELinux") - 这个功能主要用来实现对Linux Kernel的高级安全瓶通量。
     SELinux 主要起始于NSA在2001给kernel 提交的补丁，并且这个补丁的讨论来自于LSM 项目，目前SELinux已经
 	定义了大量的LSM接口。
     -   OLS 2008 paper: [消费者电子设备下的SELinux](http://eLinux.org/images/8/88/Nakamura-reprint.pdf "Nakamura-reprint.pdf")
@@ -52,16 +52,12 @@
 
 ### Tomoyo
 
--   [TOMOYO Linux](http://eLinux.org/TomoyoLinux "TomoyoLinux") 
+-   [TOMOYO Linux](../.././dev_portals/Security/TomoyoLinux/TomoyoLinux.md "TomoyoLinux") 
 	主要用来提高Linux自身的安全性，这个特性是由[NTT DATA
     CORPORATION, Japan](http://www.nttdata.co.jp/en/index.html)开发。 [TOMOYO
-    Linux](http://eLinux.org/TomoyoLinux "TomoyoLinux") 是在2005年11月11日，以GPL许可证的形式开源的。 [TOMOYO
-    Linux](http://eLinux.org/TomoyoLinux "TomoyoLinux") 是一个机制，可以被称为安全操作系统，
+    Linux](../.././dev_portals/Security/TomoyoLinux/TomoyoLinux.md "TomoyoLinux") 是在2005年11月11日，以GPL许可证的形式开源的。 [TOMOYO
+    Linux](../.././dev_portals/Security/TomoyoLinux/TomoyoLinux.md "TomoyoLinux") 是一个机制，可以被称为安全操作系统，
 	这个机制可以通过打破现有的访问控制，从而做到更好粒度的访问控制，与SELinux非常类似。
-    -   [ELC2007
-        presentation](http://eLinux.org/images/b/b5/Elc2007-presentation-20070418-for_linux.pdf "Elc2007-presentation-20070418-for linux.pdf")
-    -   [OLS2007 BoF
-        slides](http://eLinux.org/images/e/eb/Ols2007-tomoyo-20070629.pdf "Ols2007-tomoyo-20070629.pdf")
 
 Tomoyo在kernel 2.6.28时被合并到kernel主线中。
 
@@ -225,14 +221,14 @@ RSBAC框架是建立在通用的权限访问控制框架之上的，该框架是
 	，这是一种非常有效的方式建立在多种平台上的可信计算。更多的介绍请查看Seiji
     Munetoh 与 Nicholas Szeto的演示, TCGOverviewPDF, 这个演示是在
     [Tech Conference
-    2005Docs](http://eLinux.org/Tech_Conference_2005Docs "Tech Conference 2005Docs")
-    页面上. 可信平台模块([TPM](http://eLinux.org/TPM "TPM")) 是一个安全的芯片绑定平台级别的关键架构组件。
+    2005Docs](../.././dev_portals/Security/Tech_Conference_2005Docs/Tech_Conference_2005Docs.md "Tech Conference 2005Docs")
+    页面上. 可信平台模块([TPM](../.././dev_portals/Security/TPM/TPM.md "TPM")) 是一个安全的芯片绑定平台级别的关键架构组件。
 	TCG 拥有移动电话WG，通过WG发布了用户用例文档，这个文档可以满足大量通用的CE设备（包括移动电话）-- [MPWG User
     Cases](https://www.trustedcomputinggroup.org/groups/mobile/MPWG_Use_Cases.pdf)
 
 ### 安全组件
 
--   [SELinux](http://eLinux.org/SELinux "SELinux") - 这个功能主要用来实现对Linux Kernel的高级安全瓶通量。
+-   [SELinux](../.././dev_portals/Security/SELinux/SELinux.md "SELinux") - 这个功能主要用来实现对Linux Kernel的高级安全瓶通量。
     SELinux 主要起始于NSA在2001给kernel 提交的补丁，并且这个补丁的讨论来自于LSM 项目，目前SELinux已经
     定义了大量的LSM接口。
 
@@ -246,11 +242,12 @@ RSBAC框架是建立在通用的权限访问控制框架之上的，该框架是
 	LIDS 1.2支持kernel 2.4 与新的功能，Trusted Path Execution(TPE)与Trusted Domain Enforcement(TDE) 。这些可以有效的
 	创建沙盒环境，目前LIDS以GPL许可证开源。
 
--   [TOMOYO Linux](http://eLinux.org/TomoyoLinux "TomoyoLinux") 主要用来提高Linux自身的安全性，这个特性是由[NTT DATA
+-   [TOMOYO Linux](../.././dev_portals/Security/TomoyoLinux/TomoyoLinux.md "TomoyoLinux") 主要用来提高Linux自身的安全性，这个特性是由[NTT DATA
     CORPORATION, Japan](http://www.nttdata.co.jp/en/index.html)开发。 [TOMOYO
-    Linux](http://eLinux.org/TomoyoLinux "TomoyoLinux") 是在2005年11月11日，以GPL许可证的形式开源的。 [TOMOYO
-    Linux](http://eLinux.org/TomoyoLinux "TomoyoLinux") 是一个机制，可以被称为安全操作系统，
+    Linux](../.././dev_portals/Security/TomoyoLinux/TomoyoLinux.md "TomoyoLinux") 是在2005年11月11日，以GPL许可证的形式开源的。 [TOMOYO
+    Linux](../.././dev_portals/Security/TomoyoLinux/TomoyoLinux.md "TomoyoLinux") 是一个机制，可以被称为安全操作系统，
     这个机制可以通过打破现有的访问控制，从而做到更好粒度的访问控制，与SELinux非常类似。
+
     -   [ELC2007
         presentation](http://sourceforge.jp/projects/tomoyo/document/elc2007-presentation-20070418-for_linux.pdf/en/4/elc2007-presentation-20070418-for_linux.pdf)
     -   [OLS2007 BoF
@@ -338,8 +335,8 @@ LOMAC 的目标是创建权限访问控制用来保护特定的用户。LOMAC实
 ### 其他资源
 
 -   启动设备的安全性
-    -   安全硬件资源 -- [安全硬件资源](http://eLinux.org/Security_Hardware_Resources "Security Hardware Resources")
-    -   与Bootloader安全相关的资源 -- [与Bootloader安全相关的资源](http://eLinux.org/Bootloader_Security_Resources "Bootloader Security Resources")
+    -   安全硬件资源 -- [安全硬件资源](../.././dev_portals/Security/Security_Hardware_Resources/Security_Hardware_Resources.md "Security Hardware Resources")
+    -   与Bootloader安全相关的资源 -- [与Bootloader安全相关的资源](../.././dev_portals/Security/Bootloader_Security_Resources/Bootloader_Security_Resources.md "Bootloader Security Resources")
 
 #### 安全活动
 

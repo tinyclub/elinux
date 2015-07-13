@@ -19,35 +19,35 @@
 
 # Popular Devices
 
--   [Via APC 8750](http://eLinux.org/VIA_APC_8750 "VIA APC 8750")
--   [Raspberry Pi](http://eLinux.org/RaspberryPi "RaspberryPi") from the RaspberryPi
+-   [Via APC 8750](../.././dev_portals/Development_Platforms/VIA_APC_8750/VIA_APC_8750.md "VIA APC 8750")
+-   [Raspberry Pi](../.././dev_portals/Development_Platforms/RaspberryPi/RaspberryPi.md "RaspberryPi") from the RaspberryPi
     foundation based on on BCM2835 from Broadcom
 -   [CraneBoard from Mistral Solutions based on AM3517 from Texas
     Instruments](http://www.mistralsolutions.com/craneboard)
 -   [AM/DM37x EVM from Mistral Solutions based on AM/DM35x processors
     from Texas Instruments](http://www.mistralsolutions.com/AM37x_EVM)
--   [BeagleBoard](http://eLinux.org/BeagleBoard "BeagleBoard") Texas Instruments
+-   [BeagleBoard](../../hardware_pages/BeagleBoard/BeagleBoard.md "BeagleBoard") Texas Instruments
     OMAP3(Cortex-A8) based
--   [Devkit8000](http://eLinux.org/Devkit8000 "Devkit8000") Texas Instruments
+-   [Devkit8000](../.././dev_portals/Development_Platforms/Devkit8000/Devkit8000.md "Devkit8000") Texas Instruments
     OMAP3530(Cortex-A8) based board
 -   [Devkit8500D](http://www.armkits.com/product/devkit8500d.asp) TI
     DM3730 ARM Cortex-A8 based board
 -   [Devkit7000](http://www.armkits.com/product/devkit7000.asp) Samsung
     S5PV210 ARM Cortex-A8 based board
--   [Hawkboard](http://eLinux.org/Hawkboard "Hawkboard") Texas Instruments OMAP L138(ARM9
+-   [Hawkboard](../.././dev_portals/Development_Platforms/Hawkboard/Hawkboard.md "Hawkboard") Texas Instruments OMAP L138(ARM9
     and C674X Floating Point DSP) based
--   [Hammer\_Board](http://eLinux.org/Hammer_Board "Hammer Board") ARM9 based Samsung
-    [S3C2410](http://eLinux.org/S3C2410 "S3C2410")
--   [Jetson TK1](http://eLinux.org/Jetson_TK1 "Jetson TK1") NVIDIA Tegra K1 quad-core
+-   [Hammer\_Board](../.././dev_portals/Development_Platforms/Hammer_Board/Hammer_Board.md "Hammer Board") ARM9 based Samsung
+    [S3C2410](../.././dev_portals/Development_Platforms/S3C2410/S3C2410.md "S3C2410")
+-   [Jetson TK1](../../hardware_pages/Jetson_TK1/Jetson_TK1.md "Jetson TK1") NVIDIA Tegra K1 quad-core
     Cortex-A15 CPU + **192-core Kepler GPU** mobile super-computer. With
-    [U-Boot](http://eLinux.org/Tegra/Mainline_SW/U-Boot "Tegra/Mainline SW/U-Boot") +
+    [U-Boot](../.././dev_portals/Development_Platforms/Tegra/Mainline_SW/U-Boot/Tegra/Mainline_SW/U-Boot.md "Tegra/Mainline SW/U-Boot") +
     [Nouveau](http://nouveau.freedesktop.org/wiki/) it becomes the first
     [**100% fully
     open-source**](http://www.codethink.co.uk/2014/06/12/no-secret-sauce-just-open-source)
     GPU-accelerated Linux development board!
--   [LeopardBoard](http://eLinux.org/LeopardBoard "LeopardBoard") Texas Instruments
+-   [LeopardBoard](../.././dev_portals/Development_Platforms/LeopardBoard/LeopardBoard.md "LeopardBoard") Texas Instruments
     TMS320DM355 based
--   [Opensourcemid](http://eLinux.org/Opensourcemid "Opensourcemid") K7 MID OMAP3530
+-   [Opensourcemid](../.././dev_portals/Hardware_Hacking/Opensourcemid/Opensourcemid.md "Opensourcemid") K7 MID OMAP3530
     tablet from [OpenSourceMID.org](http://www.opensourcemid.org)
 -   [OMAP3 EVM from Mistral
     Solutions](http://www.mistralsolutions.com/products/omap_3evm.php)
@@ -72,7 +72,7 @@
 -   [MYD-SAM9X5-V2 board for Atmel AT91SAM9G15/G25/G35/X25/X35 (ARM9)
     designed by MYIR](http://www.myirtech.com/list.asp?id=444)
 
-# [ARM](http://eLinux.org/ARM_Processor "ARM Processor")
+# [ARM](../.././dev_portals/Development_Platforms/ARM_Processor/ARM_Processor.md "ARM Processor")
 
 -   [Forlinx Embedded](http://www.forlinx.net) ARM series boards
     -   [FL2440 boards based on Samsung ARM9
@@ -98,7 +98,7 @@
 -   [ARM cortex A8 board 1GHz 512M
     DDR3](http://www.quickembed.com/Tools/Shop/A8/201202/245.html)
     Samsung S5PV210 based
--   [Devkit8000](http://eLinux.org/Devkit8000 "Devkit8000") OMAP3530 based board from
+-   [Devkit8000](../.././dev_portals/Development_Platforms/Devkit8000/Devkit8000.md "Devkit8000") OMAP3530 based board from
     [Embest](http://www.armkits.com)
 -   [Devkit8500D](http://www.armkits.com/Product/devkit8500d.asp) TI
     DM3730 based board
@@ -106,57 +106,57 @@
     S5PV210 based board
 -   [CraneBoard from Mistral
     Solutions](http://www.mistralsolutions.com/craneboard)
--   [PandaBoard](http://eLinux.org/PandaBoard "PandaBoard")
+-   [PandaBoard](../.././dev_portals/Development_Platforms/PandaBoard/PandaBoard.md "PandaBoard")
 -   [AM/DM37x EVM from Mistral
     Solutions](http://www.mistralsolutions.com/AM37x_EVM)
 -   Digi JumpStart Kits -
     [http://www.digi.com/products/embeddedsolutions/softwareservices/digiembeddedlinux.jsp](http://www.digi.com/products/embeddedsolutions/softwareservices/digiembeddedlinux.jsp)
--   [SheevaPlug](http://eLinux.org/SheevaPlug "SheevaPlug")
+-   [SheevaPlug](../.././dev_portals/Development_Platforms/SheevaPlug/SheevaPlug.md "SheevaPlug")
 -   GuruPlug -
     [http://hackaday.com/2010/02/08/guruplug-the-next-generation-of-sheevaplug/](http://hackaday.com/2010/02/08/guruplug-the-next-generation-of-sheevaplug/)
--   [ARM Integrator](http://eLinux.org/ARM_Integrator_Info "ARM Integrator Info")
--   [OSK](http://eLinux.org/OSK "OSK") - OMAP Starter Kit
+-   [ARM Integrator](../.././dev_portals/Development_Platforms/ARM_Integrator_Info/ARM_Integrator_Info.md "ARM Integrator Info")
+-   [OSK](../.././dev_portals/Development_Platforms/OSK/OSK.md "OSK") - OMAP Starter Kit
 -   GAO Engineering Inc. -
     [http://www.gaoengineering.com](http://www.gaoengineering.com)
--   [DaVinci](http://eLinux.org/DaVinci "DaVinci") DVEVM Evaluation module -
+-   [DaVinci](../.././dev_portals/Development_Platforms/DaVinci/DaVinci.md "DaVinci") DVEVM Evaluation module -
     [http://www.spectrumdigital.com/](http://www.spectrumdigital.com/)
--   [ITSY](http://eLinux.org/ITSY "ITSY")
--   [LART Project](http://eLinux.org/LART_Project "LART Project")
--   [Hammer\_Board](http://eLinux.org/Hammer_Board "Hammer Board")
+-   [ITSY](../.././dev_portals/Development_Platforms/ITSY/ITSY.md "ITSY")
+-   [LART Project](../.././dev_portals/Development_Platforms/LART_Project/LART_Project.md "LART Project")
+-   [Hammer\_Board](../.././dev_portals/Development_Platforms/Hammer_Board/Hammer_Board.md "Hammer Board")
 -   Simtec Electronics -
     [http://www.simtec.co.uk/](http://www.simtec.co.uk/)
 -   Open AT91RM9200 Evaluation Board -
     [http://wiki.emqbit.com/free-ecb-at91](http://wiki.emqbit.com/free-ecb-at91)
--   [BeagleBoard](http://eLinux.org/BeagleBoard "BeagleBoard")
+-   [BeagleBoard](../../hardware_pages/BeagleBoard/BeagleBoard.md "BeagleBoard")
 -   [ODROID](http://eLinux.org/index.php?title=ODROID&action=edit&redlink=1 "ODROID (page does not exist)")
     Samsung Exynos based [development boards and
     tablets](http://www.hardkernel.com/)
--   [Balloonboard](http://eLinux.org/Balloonboard "Balloonboard")
+-   [Balloonboard](../.././dev_portals/Development_Platforms/Balloonboard/Balloonboard.md "Balloonboard")
 -   KB9202 -
     [http://www.kwikbyte.com/KB9202.html](http://www.kwikbyte.com/KB9202.html)
 -   Luminary Micro's **LM3S6965** is an ARM Cortex M3 MCU. There is an
     inexpensive development board available for it called the **LM3S6965
     Ethernet Evaluation Kit**, which is available from
     [Mouser](http://www.mouser.com/) and others for around \$69.00 USD.
--   [TechnologicSystems](http://eLinux.org/TechnologicSystems "TechnologicSystems")
+-   [TechnologicSystems](../.././dev_portals/Development_Platforms/TechnologicSystems/TechnologicSystems.md "TechnologicSystems")
 -   [OMAP3 EVM from Mistral
     Solutions](http://www.mistralsolutions.com/products/omap_3evm.php)
--   [NaviEngine](http://eLinux.org/NaviEngine "NaviEngine") NEC ARM11MPCore (4 x ARM11)
+-   [NaviEngine](../.././dev_portals/Hardware_Hacking/NaviEngine/NaviEngine.md "NaviEngine") NEC ARM11MPCore (4 x ARM11)
     based
 -   Freescale i.MX based [Armadeus APF
-    boards](http://eLinux.org/Armadeus_APF_boards "Armadeus APF boards")
+    boards](../.././dev_portals/Development_Platforms/Armadeus_APF_boards/Armadeus_APF_boards.md "Armadeus APF boards")
 -   Zoom OMAP34x & 36x Development Kit -
     [http://omapzoom.org](https://omapzoom.org/)
--   [Tegra2](http://eLinux.org/Tegra2 "Tegra2")
+-   [Tegra2](../.././dev_portals/Development_Platforms/Tegra2/Tegra2.md "Tegra2")
 -   [Arm11 development
-    board](http://eLinux.org/Arm11_development_board "Arm11 development board")
+    board](../.././dev_portals/Development_Platforms/Arm11_development_board/Arm11_development_board.md "Arm11 development board")
 -   [Snowball SDK & PDK (Dual Cortex A9 + Mali
     400)](http://www.igloocommunity.org/)
--   [Raspberry Pi](http://eLinux.org/RaspberryPiBoard "RaspberryPiBoard")
--   [Freescale IMX53QSB](http://eLinux.org/Freescale_IMX53QSB "Freescale IMX53QSB")
+-   [Raspberry Pi](../.././dev_portals/Development_Platforms/RaspberryPi/RaspberryPi.mdBoard "RaspberryPiBoard")
+-   [Freescale IMX53QSB](../.././dev_portals/Development_Platforms/Freescale_IMX53QSB/Freescale_IMX53QSB.md "Freescale IMX53QSB")
     [[1]](http://imxcommunity.org/group/imx53quickstartboard)
 -   [Calao Atmel AT91 development
-    board](http://eLinux.org/Calao_Atmel_AT91_development_board "Calao Atmel AT91 development board")
+    board](../.././dev_portals/Development_Platforms/Calao_Atmel_AT91_development_board/Calao_Atmel_AT91_development_board.md "Calao Atmel AT91 development board")
     [[2]](http://www.calao-systems.com/articles.php?lng=fr&pg=5940)
     -   USB A9260
     -   USB A9263
@@ -170,13 +170,13 @@
     -   [Tiny6410 | S3C6410 ARM11
         Board](http://www.hycshop.com/tiny6410-c-1_10/)
 -   [Basi and Dingo DaVinci dm365
-    boards](http://eLinux.org/Basi_and_Dingo_DaVinci_dm365_boards "Basi and Dingo DaVinci dm365 boards")
+    boards](../.././dev_portals/Development_Platforms/Basi_and_Dingo_DaVinci_dm365_boards/Basi_and_Dingo_DaVinci_dm365_boards.md "Basi and Dingo DaVinci dm365 boards")
 -   [Gumstix Overo](http://gumstix.com)
 -   [Embedded Open Modular
-    Architecture/EOMA-68](http://eLinux.org/Embedded_Open_Modular_Architecture/EOMA-68 "Embedded Open Modular Architecture/EOMA-68")
--   [List of OMAP boards](http://eLinux.org/BeagleBoard#Other_OMAP_boards "BeagleBoard")
--   [Dragonboard](http://eLinux.org/Dragonboard "Dragonboard")
--   [WandBoard](http://eLinux.org/WandBoard "WandBoard")
+    Architecture/EOMA-68](../.././dev_portals/Development_Platforms/Embedded_Open_Modular_Architecture/EOMA-68/Embedded_Open_Modular_Architecture/EOMA-68.md "Embedded Open Modular Architecture/EOMA-68")
+-   [List of OMAP boards](../../hardware_pages/BeagleBoard/BeagleBoard.md#Other_OMAP_boards "BeagleBoard")
+-   [Dragonboard](../.././dev_portals/Development_Platforms/Dragonboard/Dragonboard.md "Dragonboard")
+-   [WandBoard](../.././dev_portals/Development_Platforms/WandBoard/WandBoard.md "WandBoard")
 -   [Colibri Evaluation Board for Nvidia Tegra T20, T30 and Freescale
     iMX6, VF50, VF61 by Toradex Switzerland and Seattle,
     WA](https://www.toradex.com/products/carrier-boards/colibri-evaluation-carrier-board)
@@ -198,7 +198,7 @@
     Switzerland and Seattle,
     WA](https://www.toradex.com/products/carrier-boards/orchid-carrier-board)
 -   [PengPod](http://pengpod.com/)
--   [A13 OLinuXino-MICRO](http://eLinux.org/A13_OLinuXino-MICRO "A13 OLinuXino-MICRO")
+-   [A13 OLinuXino-MICRO](../.././dev_portals/Development_Platforms/A13_OLinuXino-MICRO/A13_OLinuXino-MICRO.md "A13 OLinuXino-MICRO")
     Allwinner A13 development board
 -   [Boundary Devices i.MX6
     boards](http://boundarydevices.com/products/)
@@ -245,14 +245,14 @@
 
 # [AVR32](http://eLinux.org/Processors#AVR32 "Processors")
 
--   [ATNGW100](http://eLinux.org/ATNGW100 "ATNGW100") Network Gateway Kit
+-   [ATNGW100](../.././dev_portals/Development_Platforms/ATNGW100/ATNGW100.md "ATNGW100") Network Gateway Kit
     [http://www.atmel.com/dyn/products/tools\_card.asp?tool\_id=4102](http://www.atmel.com/dyn/products/tools_card.asp?tool_id=4102)
 -   [AVR dev kit
     board](http://www.quickembed.com/Tools/Shop/MCU/201004/89.html)
 -   [AVR JTAG
     Emulator](http://www.quickembed.com/Tools/Shop/MCU/201002/70.html)
 
-# [Blackfin](http://eLinux.org/Blackfin "Blackfin")
+# [Blackfin](../.././dev_portals/Development_Platforms/Blackfin/Blackfin.md "Blackfin")
 
 -   [ADI Blackfin
     Boards](http://www.quickembed.com/Tools/Shop/DSP/200907/36.html)
@@ -268,9 +268,9 @@
 # MIPS
 
 -   mips-1 little endian -
-    [Flameman/routerboard-rb532](http://eLinux.org/Flameman/routerboard-rb532 "Flameman/routerboard-rb532")
+    [Flameman/routerboard-rb532](../.././dev_portals/Development_Platforms/Flameman/routerboard-rb532/Flameman/routerboard-rb532.md "Flameman/routerboard-rb532")
 -   [Ben NanoNote](http://en.qi-hardware.com/wiki/Ben_NanoNote)
--   [MIPS Creator CI20](http://eLinux.org/MIPS_Creator_CI20 "MIPS Creator CI20")
+-   [MIPS Creator CI20](../../hardware_pages/MIPS_Creator_CI20/MIPS_Creator_CI20.md "MIPS Creator CI20")
     development board
 -   Opendreambox DVB/PVR set-top-box family
     [http://www.opendreambox.org](http://www.opendreambox.org)
@@ -398,7 +398,7 @@
 
 # i386 and compatible
 
--   [CR48](http://eLinux.org/CR48 "CR48") Google netbook
+-   [CR48](../.././dev_portals/Hardware_Hacking/CR48/CR48.md "CR48") Google netbook
 -   [Bifferboard](http://bifferos.co.uk/)
 
 # Unclassified
@@ -410,16 +410,16 @@
 -   [http://leaf.sourceforge.net/mod.php?mod=userpage&menu=908&page\_id=27](http://leaf.sourceforge.net/mod.php?mod=userpage&menu=908&page_id=27)
 -   [http://www.myirtech.com/](http://www.myirtech.com/)
 -   [http://www.1st-safety.com/arm/Tiny6410/](http://www.1st-safety.com/arm/Tiny6410/)
--   [StalkerBoard](http://eLinux.org/StalkerBoard "StalkerBoard")
--   [SBC3530](http://eLinux.org/SBC3530 "SBC3530")
--   [SBC8100](http://eLinux.org/SBC8100 "SBC8100")
--   [SFFSDR](http://eLinux.org/SFFSDR "SFFSDR")
+-   [StalkerBoard](../.././dev_portals/Development_Platforms/StalkerBoard/StalkerBoard.md "StalkerBoard")
+-   [SBC3530](../.././dev_portals/Development_Platforms/SBC3530/SBC3530.md "SBC3530")
+-   [SBC8100](../.././dev_portals/Development_Platforms/SBC8100/SBC8100.md "SBC8100")
+-   [SFFSDR](../.././dev_portals/Development_Platforms/SFFSDR/SFFSDR.md "SFFSDR")
 -   [SOM1808](http://openembed.org/wiki/SOM1808)
--   [MINI2440v2\_developmentboard](http://eLinux.org/MINI2440v2_developmentboard "MINI2440v2 developmentboard")
--   [Launchpad](http://eLinux.org/Launchpad "Launchpad")
--   [Micro2440](http://eLinux.org/Micro2440 "Micro2440")
--   [Mini210](http://eLinux.org/Mini210 "Mini210")
--   [Tiny210](http://eLinux.org/Tiny210 "Tiny210")
+-   [MINI2440v2\_developmentboard](../.././dev_portals/Development_Platforms/MINI2440v2_developmentboard/MINI2440v2_developmentboard.md "MINI2440v2 developmentboard")
+-   [Launchpad](../.././dev_portals/Development_Platforms/Launchpad/Launchpad.md "Launchpad")
+-   [Micro2440](../.././dev_portals/Development_Platforms/Micro2440/Micro2440.md "Micro2440")
+-   [Mini210](../.././dev_portals/Development_Platforms/Mini210/Mini210.md "Mini210")
+-   [Tiny210](../.././dev_portals/Development_Platforms/Tiny210/Tiny210.md "Tiny210")
 
 
 [Categories](http://eLinux.org/Special:Categories "Special:Categories"):

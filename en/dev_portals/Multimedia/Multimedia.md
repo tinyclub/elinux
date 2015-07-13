@@ -73,7 +73,7 @@ Here are some miscellaneous resources related to audio, video and
 graphics systems under Linux:
 
 Also see the section on [User
-Interfaces](http://eLinux.org/User_Interfaces "User Interfaces").
+Interfaces](../.././dev_portals/Multimedia/User_Interfaces/User_Interfaces.md "User Interfaces").
 
 ## CELF 2.0 Specification for AVG
 
@@ -92,21 +92,21 @@ Please see the CELF wiki for more information: [Audio Video Graphics
 Working
 Group](http://www.celinuxforum.org/CelfPubWiki/AudioVideoGraphicsWorkingGroup)
 
-Some AVWG related [Outdated pages](http://eLinux.org/Outdated_pages "Outdated pages")
+Some AVWG related [Outdated pages](../.././dev_portals/Multimedia/Outdated_pages/Outdated_pages.md "Outdated pages")
 
 ## DirectFB study
 
 ### What is DirectFB, How Does DirectFB Work
 
-[DirectFB](http://eLinux.org/DirectFB "DirectFB")
+[DirectFB](../.././dev_portals/Multimedia/DirectFB/DirectFB.md "DirectFB")
 
 ### Sample Implementation of DirectFB on an embedded Linux platform
 
-[Porting DirectFB](http://eLinux.org/Porting_DirectFB "Porting DirectFB")
+[Porting DirectFB](../.././dev_portals/Multimedia/Porting_DirectFB/Porting_DirectFB.md "Porting DirectFB")
 
 ### Some DirectFB benchmark on embedded Linux platform
 
-[Benchmark DirectFB](http://eLinux.org/Benchmark_DirectFB "Benchmark DirectFB")
+[Benchmark DirectFB](../.././dev_portals/Multimedia/Benchmark_DirectFB/Benchmark_DirectFB.md "Benchmark DirectFB")
 
 ## Related Projects
 
@@ -125,7 +125,7 @@ Some AVWG related [Outdated pages](http://eLinux.org/Outdated_pages "Outdated pa
 
 -   [http://www.directfb.org/](http://www.directfb.org/)
 -   [http://www.directfb.org/documentation/DirectFB\_overview\_V0.2.pdf](http://www.directfb.org/documentation/DirectFB_overview_V0.2.pdf)
--   [DirectFB](http://eLinux.org/DirectFB "DirectFB")
+-   [DirectFB](../.././dev_portals/Multimedia/DirectFB/DirectFB.md "DirectFB")
 
 #### V4L2
 
@@ -135,7 +135,7 @@ Some AVWG related [Outdated pages](http://eLinux.org/Outdated_pages "Outdated pa
 #### X11
 
 -   [http://www.x.org/](http://www.x.org/)
--   [X11](http://eLinux.org/X11 "X11")
+-   [X11](../.././dev_portals/Multimedia/X11/X11.md "X11")
 
 #### NanoX
 
@@ -171,7 +171,7 @@ Some AVWG related [Outdated pages](http://eLinux.org/Outdated_pages "Outdated pa
     Clutter-based intefaces in near future, like Intel's Moblin, Ubuntu
     Mobile and Maemo.
 
-#### Enlightenment Foundation Libraries ([EFL](http://eLinux.org/EFL "EFL"))
+#### Enlightenment Foundation Libraries ([EFL](../.././dev_portals/Multimedia/EFL/EFL.md "EFL"))
 
 [The Enlightenment Foundation Libraries](http://www.enlightenment.org/)
 contains Evas, an object-oriented 2d canvs on top of OpenGL/X11,
@@ -346,7 +346,7 @@ around EFL.
 
 #### UPnP
 
--   see [UPnP](http://eLinux.org/UPnP "UPnP")
+-   see [UPnP](../.././dev_portals/Multimedia/UPnP/UPnP.md "UPnP")
 
 #### TV Anytime
 

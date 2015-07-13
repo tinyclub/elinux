@@ -1,0 +1,2 @@
+# SparkfunCameraFPGA
+## Structure

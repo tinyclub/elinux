@@ -137,7 +137,7 @@ devices, sorted in alphabetical order:
 
 ## AXFS
 
--   [AXFS](http://eLinux.org/AXFS "AXFS") - Advanced XIP File System
+-   [AXFS](../.././dev_portals/File_Systems/AXFS/AXFS.md "AXFS") - Advanced XIP File System
     -   Website:
         [http://axfs.sourceforge.net/](http://axfs.sourceforge.net/)
     -   This file system is designed specifically to support
@@ -173,17 +173,17 @@ devices, sorted in alphabetical order:
         uncompressed file, in a linear block layout with the Cramfs file
         system. This is useful for storing files which can be executed
         in-place. For more information on Linear Cramfs, see
-        [Application XIP](http://eLinux.org/Application_XIP "Application XIP")
+        [Application XIP](../.././dev_portals/Boot_Time/Application_XIP/Application_XIP.md "Application XIP")
 
 ## F2FS
 
--   [F2FS](http://eLinux.org/F2FS "F2FS")[(wikipedia
+-   [F2FS](../.././dev_portals/File_Systems/F2FS/F2FS.md "F2FS")[(wikipedia
     entry)](http://en.wikipedia.org/wiki/F2FS) is a flash-friendly file
     system for Linux, developed by Samsung.
 
 ## InitRAMFS
 
-From March 2006 [Linux Devices](http://eLinux.org/Linux_Devices "Linux Devices"):
+From March 2006 [Linux Devices](../.././dev_portals/File_Systems/Linux_Devices/Linux_Devices.md "Linux Devices"):
 
 INTRODUCING INITRAMFS, A NEW MODEL FOR INITIAL RAM DISKS This clear,
 technical article introduces initramfs, a Linux 2.6 feature that enables
@@ -229,7 +229,7 @@ uses.
 
 Unfortunately, it seems to be abandoned at present.
 
-See [LogFS](http://eLinux.org/LogFS "LogFS") for details.
+See [LogFS](../.././dev_portals/File_Systems/LogFS/LogFS.md "LogFS") for details.
 
 
 
@@ -257,7 +257,7 @@ kernel.
 
 ## PRAMFS
 
--   [PRAMFS](http://eLinux.org/Pram_Fs "Pram Fs") - Persistent and protected RAM File
+-   [PRAMFS](../.././dev_portals/File_Systems/Pram_Fs/Pram_Fs.md "Pram Fs") - Persistent and protected RAM File
     System
 
 The Persistent/Protected RAM Special Filesystem (PRAMFS) is a
@@ -266,7 +266,7 @@ fast I/O memory, and if the memory is non-volatile, the filesystem will
 be persistent. In addition, it has Execute-in-place support.
 
 Info on the PRAMFS specification can be found at [Pram Fs
-Specification](http://eLinux.org/Pram_Fs_Specification "Pram Fs Specification")
+Specification](../.././dev_portals/File_Systems/Pram_Fs/Pram_Fs.md_Specification "Pram Fs Specification")
 
 ## Romfs
 
@@ -277,7 +277,7 @@ Specification](http://eLinux.org/Pram_Fs_Specification "Pram Fs Specification")
 
 ## SquashFS
 
-[Squash Fs](http://eLinux.org/Squash_Fs "Squash Fs") is a (more) compressed read-only
+[Squash Fs](../.././dev_portals/File_Systems/Squash_Fs/Squash_Fs.md "Squash Fs") is a (more) compressed read-only
 file system for Linux. This file system has better compression than
 JFFS2 or CRAMFS. After spending a long time outside of the mainline
 kernel, Squashfs have finally been merged and released with [kernel
@@ -360,13 +360,13 @@ and
 
 ## UBIFS
 
-[UBIFS](http://eLinux.org/UBIFS "UBIFS") is a flash-based filesystem, implemented on top
+[UBIFS](../.././dev_portals/File_Systems/UBIFS/UBIFS.md "UBIFS") is a flash-based filesystem, implemented on top
 of the Unsorted Block Images ([UBI](http://eLinux.org/File_Systems#UBI "File Systems"))
 interface.
 
 It has good performance compared to Jffs2 and yaffs.
 
-Please see the [UBIFS](http://eLinux.org/UBIFS "UBIFS") page for more details.
+Please see the [UBIFS](../.././dev_portals/File_Systems/UBIFS/UBIFS.md "UBIFS") page for more details.
 
 ## YAFFS2
 
@@ -635,7 +635,7 @@ systematic testing of multiple flash filesystems over multiple kernel
 versions.
 
 The results are here:
-[Flash\_Filesystem\_Benchmarks](http://eLinux.org/Flash_Filesystem_Benchmarks "Flash Filesystem Benchmarks")
+[Flash\_Filesystem\_Benchmarks](../.././dev_portals/File_Systems/Flash_Filesystem_Benchmarks/Flash_Filesystem_Benchmarks.md "Flash Filesystem Benchmarks")
 
 # Other projects
 

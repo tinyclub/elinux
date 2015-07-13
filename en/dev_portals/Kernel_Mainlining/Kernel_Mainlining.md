@@ -45,7 +45,7 @@ An older talk (2008) by Andrew Morton discusses the reasons to
 contribute, and best practices for contributing to the upstream kernel
 
 -   [Session:kernel.org development and the embedded
-    world](http://eLinux.org/Session:kernel.org_development_and_the_embedded_world "Session:kernel.org development and the embedded world")
+    world](../.././dev_portals/Kernel_Mainlining/Session:kernel.org_development_and_the_embedded_world/Session:kernel.org_development_and_the_embedded_world.md "Session:kernel.org development and the embedded world")
     -   In this seminal talk from 2008, Andrew lays out the case for
         involvement of embedded companies in kernel development. He
         describes the overall process, but more importantly what to
@@ -159,9 +159,9 @@ previous Linux conferences:
 ## Specific Projects
 
 -   [CE Workgroup Device Mainlining
-    Project](http://eLinux.org/CE_Workgroup_Device_Mainlining_Project "CE Workgroup Device Mainlining Project")
+    Project](../.././dev_portals/Kernel_Mainlining/CE_Workgroup_Device_Mainlining_Project/CE_Workgroup_Device_Mainlining_Project.md "CE Workgroup Device Mainlining Project")
 -   [Qualcomm SOC Mainlining
-    Project](http://eLinux.org/Qualcomm_SOC_Mainlining_Project "Qualcomm SOC Mainlining Project")
+    Project](../.././dev_portals/Kernel_Mainlining/Qualcomm_SOC_Mainlining_Project/Qualcomm_SOC_Mainlining_Project.md "Qualcomm SOC Mainlining Project")
 -   [Allwinner mainlining
     effort](http://linux-sunxi.org/Linux_mainlining_effort)
     -   this is a really good page with a write-up of the status of
@@ -336,7 +336,7 @@ think a lot of vendors are guilty of this).
 ## Overcoming Obstacles to Mainlining
 
 Tim Bird has prepared a talk about [Overcoming Obstacles to
-Mainlining](http://eLinux.org/Overcoming_Obstacles_to_Mainlining "Overcoming Obstacles to Mainlining")
+Mainlining](../.././dev_portals/Kernel_Mainlining/Overcoming_Obstacles_to_Mainlining/Overcoming_Obstacles_to_Mainlining.md "Overcoming Obstacles to Mainlining")
 for ELCE 2014. See that page for information about this presentation and
 a link to his slides.
 

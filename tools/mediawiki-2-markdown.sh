@@ -14,6 +14,8 @@ from=eLinux.org
 site=http://$from
 target_site=$site
 
+page=$(echo ${page} | sed -e "s/\.md//g")
+
 # Download the printable html page
 wget -O ${page}.html -c "${site}/index.php?title=${page}&printable=yes"
 
@@ -47,7 +49,7 @@ cat ${page}.md | \
 #  * the handling of .xx is wrong, need to build toc automatically instead of ugly workarounds.
 
 cat ${page}.md | \
-    sed -e "/^## Content/,/^##* /{s=](#\(.*\)=](#\L\1=g;s=_=-=g;s/\.2f/-/g;s/\.2c/-/g;s/\.27/-/g;s/\.5b/-/g;s/\.5d/-/g;s/\.2b/-/g;s/\.28/-/g;s/\.29/-/g;s/\.7c/-/g;s/\.7b/-/g;s/\.7d//g;s/--/-/g;}" |\
+    sed -e "/^## Content/,/^##* /{s=](#\(.*\)=](#\L\1=g;s=_=-=g;s/\.2f/-/g;s/\.2c/-/g;s/\.27/-/g;s/\.23/-/g;s/\.5b/-/g;s/\.5d/-/g;s/\.2b/-/g;s/\.28/-/g;s/\.29/-/g;s/\.7c/-/g;s/\.7b/-/g;s/\.7d//g;s/--/-/g;}" |\
     sed -e "/^## Content/,/^##* /{s/(\([^:]*\):\(.*\))/(\1\2)/g;}" |\
     sed -e "/^## Content/,/^##* /{s/(#\([^\.]*\)\.22\([^\.]*\)\.22\(.*\))/(#-\1\2\3)/g;}" |\
     sed -e "/^## Content/,/^##* /{s/(\([^\.]*\)\.\(.*\))/(\1-\2)/g;}" |\
