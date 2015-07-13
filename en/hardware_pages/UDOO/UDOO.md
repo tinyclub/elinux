@@ -290,81 +290,81 @@ UDOO\_GPIO\_Pinout](http://eLinux.org/UDOO_GPIO_Pinout "UDOO GPIO Pinout")
 ### UDOO Camera Module
 
 <table>
-<col width="50%" />
-<col width="50%" />
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-<td align="left"><p><br /></p>
+
+<tr>
+<td>  </td>
+<td>
+<p><br />
+</p>
 <table>
-<col width="50%" />
-<col width="50%" />
-<tbody>
-<tr class="odd">
-<td align="left"><ul>
-<li>Auto focus control (AFC) with embedded AF VCM driver</li>
+
+<tr>
+<td>
+<ul><li>Auto focus control (AFC) with embedded AF VCM driver</li>
 <li>Sensitivity: 600mV/lux-sec</li>
 <li>Video capture in Full Field of View (FOV): double sensitivity,improved signal-to.noise ratio (SNR)</li>
 <li>Post-binning re-sampling filter for sharper, crisper contours and colours</li>
 <li>Internal anti-shaking engine</li>
-<li>Image transfer rate</li>
-</ul>
-<p>VGA (320x480) @120fps VGA (640x480) @90fps 720p @60fps 1280x960 @45fps 1080p @30fps QSXGA (2592x1944) @15fps</p>
-<p><a href="http://elinux.org/UDOO_Camera_Module" title="UDOO Camera Module">More informations about UDOO Camera Modules</a></p>
-<p><a href="http://udoo.org/download/files/datasheets/datasheet_camera.pdf">UDOO Camera Module Datasheet</a></p>
-<p><br /></p></td>
-<td align="left"><a href="http://elinux.org/File:UDOO_Camera.jpg"><img src="http://elinux.org/images/thumb/b/b3/UDOO_Camera.jpg/300px-UDOO_Camera.jpg" alt="UDOO Camera.jpg" /></a>
-<a href="http://elinux.org/File:UDOO_Camera.jpg" title="Enlarge"></a></td>
-</tr>
-</tbody>
-</table>
-<p><br /></p>
-<h2>UDOO LVDS Touch Screens</h2>
-<p><strong>7&quot; Touch Panel Kit</strong></p>
+<li>Image transfer rate</li></ul>
+<p>VGA (320x480) @120fps
+VGA (640x480) @90fps
+720p @60fps
+1280x960 @45fps
+1080p @30fps
+QSXGA (2592x1944) @15fps
+</p><p><a href="/UDOO_Camera_Module" title="UDOO Camera Module">More informations about UDOO Camera Modules</a>
+</p><p><a rel="nofollow" class="external text" href="http://udoo.org/download/files/datasheets/datasheet_camera.pdf">UDOO Camera Module Datasheet</a>
+</p><p><br />
+</p>
+</td>
+<td> <div class="thumb tleft"><div class="thumbinner" style="width:302px;"><a href="/File:UDOO_Camera.jpg" class="image"><img alt="UDOO Camera.jpg" src="/images/thumb/b/b3/UDOO_Camera.jpg/300px-UDOO_Camera.jpg" width="300" height="169" class="thumbimage" srcset="/images/thumb/b/b3/UDOO_Camera.jpg/450px-UDOO_Camera.jpg 1.5x, /images/thumb/b/b3/UDOO_Camera.jpg/600px-UDOO_Camera.jpg 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/File:UDOO_Camera.jpg" class="internal" title="Enlarge"></a></div></div></div></div>
+</td></tr></table>
+<p><br />
+</p>
+
+### UDOO LVDS Touch Screens
+
+<p><b>7" Touch Panel Kit</b>
+</p>
 <table>
-<col width="50%" />
-<col width="50%" />
-<tbody>
-<tr class="odd">
-<td align="left"><ul>
-<li>7&quot; TFT RGB Display</li>
+
+<tr>
+<td>
+<ul><li>7" TFT RGB Display</li>
 <li>I2C Touch Screen</li>
 <li>Dual Touch</li>
 <li>Resolution 800X480</li>
 <li>UDOO_VK-7T video cable for UDOO</li>
-<li>LCD BOARD ADAPTER</li>
-</ul>
-<p>How to <a href="http://www.elinux.org/UDOO_setup_lvds_panels">setup lvds panels</a></p>
-<p><a href="http://udoo.org/download/files/datasheets/datasheet7.pdf">UDOO 7&quot; Touch Panel Display Kit Datasheet</a></p></td>
-<td align="left"><a href="http://elinux.org/File:UDOO_LVDS_7.jpg"><img src="http://elinux.org/images/thumb/b/be/UDOO_LVDS_7.jpg/300px-UDOO_LVDS_7.jpg" alt="UDOO LVDS 7.jpg" /></a>
-<a href="http://elinux.org/File:UDOO_LVDS_7.jpg" title="Enlarge"></a></td>
-</tr>
-</tbody>
-</table>
-<p><br /></p>
-<p><br /> <strong>15&quot; Touch Panel Kit</strong></p>
+<li>LCD BOARD ADAPTER  </li></ul>
+<p>How to <a rel="nofollow" class="external text" href="http://www.elinux.org/UDOO_setup_lvds_panels">setup lvds panels</a>
+</p><p><a rel="nofollow" class="external text" href="http://udoo.org/download/files/datasheets/datasheet7.pdf">UDOO 7" Touch Panel Display Kit Datasheet</a>
+</p>
+</td>
+<td> <div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="/File:UDOO_LVDS_7.jpg" class="image"><img alt="UDOO LVDS 7.jpg" src="/images/thumb/b/be/UDOO_LVDS_7.jpg/300px-UDOO_LVDS_7.jpg" width="300" height="169" class="thumbimage" srcset="/images/thumb/b/be/UDOO_LVDS_7.jpg/450px-UDOO_LVDS_7.jpg 1.5x, /images/thumb/b/be/UDOO_LVDS_7.jpg/600px-UDOO_LVDS_7.jpg 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/File:UDOO_LVDS_7.jpg" class="internal" title="Enlarge"></a></div></div></div></div>
+</td></tr></table>
+<p><br />
+</p><p><br />
+<b>15" Touch Panel Kit</b>
+</p>
 <table>
-<col width="50%" />
-<col width="50%" />
-<tbody>
-<tr class="odd">
-<td align="left"><ul>
-<li>15,6&quot; LVDS Display</li>
+
+<tr>
+<td>
+<ul><li>15,6" LVDS Display</li>
 <li>USB Capacitive Touch Screen</li>
 <li>Resolution 1366X768 24bit</li>
 <li>UDOO_VK-15T video cable for UDOO</li>
 <li>USB CABLE for Third UDOO'USB</li>
-<li>Touch Controller Board</li>
-</ul>
-<p><br /> How to <a href="http://www.elinux.org/UDOO_setup_lvds_panels">setup lvds panels</a></p>
-<p><a href="http://udoo.org/download/files/datasheets/datasheet15.pdf">UDOO 15&quot; Touch Panel Display Kit Datasheet</a></p></td>
-<td align="left"><a href="http://elinux.org/File:UDOO_LVDS_15.jpg"><img src="http://elinux.org/images/thumb/f/fb/UDOO_LVDS_15.jpg/300px-UDOO_LVDS_15.jpg" alt="UDOO LVDS 15.jpg" /></a>
-<a href="http://elinux.org/File:UDOO_LVDS_15.jpg" title="Enlarge"></a></td>
-</tr>
-</tbody>
-</table>
-<p><br /></p>
-<p><br /></p>
+<li>Touch Controller Board </li></ul>
+<p><br />
+How to <a rel="nofollow" class="external text" href="http://www.elinux.org/UDOO_setup_lvds_panels">setup lvds panels</a>
+</p><p><a rel="nofollow" class="external text" href="http://udoo.org/download/files/datasheets/datasheet15.pdf">UDOO 15" Touch Panel Display Kit Datasheet</a>
+</p>
+</td>
+<td> <div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="/File:UDOO_LVDS_15.jpg" class="image"><img alt="UDOO LVDS 15.jpg" src="/images/thumb/f/fb/UDOO_LVDS_15.jpg/300px-UDOO_LVDS_15.jpg" width="300" height="169" class="thumbimage" srcset="/images/thumb/f/fb/UDOO_LVDS_15.jpg/450px-UDOO_LVDS_15.jpg 1.5x, /images/thumb/f/fb/UDOO_LVDS_15.jpg/600px-UDOO_LVDS_15.jpg 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/File:UDOO_LVDS_15.jpg" class="internal" title="Enlarge"></a></div></div></div></div>
+</td></tr></table>
+
+
 <h1>Community</h1>
 <p><strong>Forums</strong> The official UDOO forums can be found at <a href="http://www.udoo.org/forum">http://www.udoo.org/forum</a></p>
 <p>The forum search facility has been tweaked to allow more general searching. <strong>Please</strong> do a search before making a post as the issue may already have been raised and answered.</p>
