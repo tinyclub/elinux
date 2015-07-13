@@ -94,71 +94,79 @@ external), here:
 
 ## Hardware Summary
 
-Netbook Specifications
-
-Display
-
-8.9" 1024x600 LCD
-
-Weight
-
-720g (0.72kg)
-
-Dimensions
-
-23.5 x 16.5 x 2.5 cm
-(9.25 x 6.5 x 1 in) *(aprox.)*
-
-Battery
-
-7.4V 15.5wh 2100mAh
-
-AC Adapter
-
-9V 2A
-
-
-
-Main board
-
-Audio Controller
-
-AC97 (*Wolfson WM9715G*)
-
-Ethernet Controller
-
-Davicom DM9000DEP
-dongle required
-
-VGA Controller
-
-Chrontel 7026B-TF *(optional)*
-dongle required
-
-
-
-[200-pin SO-DIMM](http://eLinux.org/CT-PC89E_SO-DIMM "CT-PC89E SO-DIMM")
- (*seatron-cpu-v1.1*)
-
-SoC
-
-[Samsung ARM11
-S3C6410](http://www.samsung.com/global/business/semiconductor/productInfo.do?fmly_id=229&partnum=S3C6410)
-667mhz (*s3c6410XH-66*)
-
-NAND
-
-SanDisk 2GB (*SDIN2C2-2G*)
-
-RAM
-
-256M DDR1 (2 x [Hynix
-H5MS1G62MFP](http://www.hynix.co.kr/datasheet/eng/mobile/details/mobile_17_H5MS1G62MFP.jsp))
-
-Boot Switch
-
-boot from NAND or SD *(optional)*
- *(outer means NAND, inner means SD)*
+<table style="border:1px solid; border-spacing:0px;">
+<caption> Netbook Specifications
+</caption>
+<tr>
+<th style="background:#cccccc;"> Display
+</th>
+<td> 8.9" 1024x600 LCD
+</td></tr>
+<tr>
+<th style="background:#cccccc;"> Weight
+</th>
+<td> 720g (0.72kg)
+</td></tr>
+<tr>
+<th style="background:#cccccc; vertical-align: top;"> Dimensions
+</th>
+<td> 23.5 x 16.5 x 2.5 cm<br />(9.25 x 6.5 x 1 in) <i>(aprox.)</i>
+</td></tr>
+<tr>
+<th style="background:#cccccc;"> Battery
+</th>
+<td> 7.4V 15.5wh 2100mAh
+</td></tr>
+<tr>
+<th style="background:#cccccc;"> AC Adapter
+</th>
+<td> 9V 2A
+</td></tr></table>
+<p><br />
+</p>
+<table style="border:1px solid; border-spacing:0px;">
+<caption> Main board
+</caption>
+<tr>
+<th style="background:#cccccc;vertical-align: top;"> Audio Controller
+</th>
+<td> AC97 (<i>Wolfson WM9715G</i>)
+</td></tr>
+<tr>
+<th style="background:#cccccc;vertical-align: top;"> Ethernet Controller
+</th>
+<td> Davicom DM9000DEP<br />dongle required
+</td></tr>
+<tr>
+<th style="background:#cccccc;vertical-align: top;"> VGA Controller
+</th>
+<td> Chrontel 7026B-TF <i>(optional)</i><br />dongle required
+</td></tr></table>
+<p><br />
+</p>
+<table style="border:1px solid; border-spacing:0px;">
+<caption> <a href="http://eLinux.org/CT-PC89E_SO-DIMM" title="CT-PC89E SO-DIMM">200-pin SO-DIMM</a> <br /> (<i>seatron-cpu-v1.1</i>)
+</caption>
+<tr>
+<th style="background:#cccccc;"> SoC
+</th>
+<td> <a rel="nofollow" class="external text" href="http://www.samsung.com/global/business/semiconductor/productInfo.do?fmly_id=229&amp;partnum=S3C6410">Samsung ARM11 S3C6410</a> 667mhz  (<i>s3c6410XH-66</i>)
+</td></tr>
+<tr>
+<th style="background:#cccccc;"> NAND
+</th>
+<td> SanDisk 2GB (<i>SDIN2C2-2G</i>)
+</td></tr>
+<tr>
+<th style="background:#cccccc;"> RAM
+</th>
+<td> 256M DDR1 (2 x <a rel="nofollow" class="external text" href="http://www.hynix.co.kr/datasheet/eng/mobile/details/mobile_17_H5MS1G62MFP.jsp">Hynix H5MS1G62MFP</a>)
+</td></tr>
+<tr>
+<th style="background:#cccccc; vertical-align: top"> Boot Switch
+</th>
+<td> boot from NAND or SD <i>(optional)</i><br /> <i>(outer means NAND, inner means SD)</i>
+</td></tr></table>
 
 ## Info Pages
 
