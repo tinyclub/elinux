@@ -684,39 +684,32 @@ development or on a deployed product.
 In review, there are basically 3 different settings combinations for
 CONFIG\_PRINTK\_FUNC and CONFIG\_PRINTK that make sense:
 
-**Settings**
-
-**Explanation**
-
-**CONFIG\_PRINTK\_FUNC**
-
-**CONFIG\_PRINTK**
-
-Y
-
-Y
-
-This is the default setting for the kernel configuration. In this
-setting the `printk` code is compiled into the kernel, and all printk
-calls throughout the entire source code are also compiled as part of the
-kernel.
-
-Y
-
-N
-
-This leaves the actual printk() routine in the kernel, but disables all
-calls to printk throughout the entire source code. However, you can use
-DO\_PRINTK in individual modules to enable the printk calls from those
-modules.
-
-N
-
-N
-
-This removes the printk() routine from the kernel, and disables all
-kernel printk messages, and gives the smallest kernel code and data
-size. DO\_PRINTK will NOT enable any module-specific printk calls.
+<table border="1" cellpadding="5" cellspacing="0" align="center">
+<tr>
+<th style="background:#ffffcc;" colspan="2"><b>Settings</b>
+</th>
+<th style="background:#ffffcc;" rowspan="2"><b>Explanation</b>
+</th></tr>
+<tr>
+<th style="background:#ffffcc;"><b>CONFIG_PRINTK_FUNC</b>
+</th>
+<th style="background:#ffffcc;"><b>CONFIG_PRINTK</b>
+</th></tr>
+<tr>
+<td>Y</td>
+<td>Y</td>
+<td>This is the default setting for the kernel configuration.  In this setting the <code>printk</code> code is compiled into the kernel, and all printk calls throughout the entire source code are also compiled as part of the kernel.
+</td></tr>
+<tr>
+<td>Y</td>
+<td>N</td>
+<td>This leaves the actual printk() routine in the kernel, but disables all calls to printk throughout the entire source code.  However, you can use DO_PRINTK in individual modules to enable the printk calls from those modules.
+</td></tr>
+<tr>
+<td>N</td>
+<td>N</td>
+<td>This removes the printk() routine from the kernel, and disables all kernel printk messages, and gives the smallest kernel code and data size.  DO_PRINTK will NOT enable any module-specific printk calls.
+</td></tr></table>
 
 #### Booting without SysFS
 
