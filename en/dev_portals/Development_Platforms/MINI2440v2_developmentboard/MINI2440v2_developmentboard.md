@@ -62,44 +62,43 @@ The S3C2440 includes the following components:
 
 **Development Boards with MINI2440V2**
 
-Product Name
-
-Company Name
-
-Year
-Introduced
-
-RAM
-MB
-
-Flash
-MB
-
-Processor
-
-Source
-
-Download Area
-
-[[1]](http://www.developmentboard.net/index.php/productdetail/Development+board/ARM9/SAMSUNG/S3C2440/MINI2440v2+with+MegaDisplay+3.5/info/1)
-
-[[2]](http://www.developmentboard.net)
-
-2009
-
-up to 256
-
-up to 512
-
-i.MX27 400MHz + Spartan3a
-
-[[3]](http://www.developmentboard.net/index.php/productdetail/Development+board/ARM9/SAMSUNG/S3C2440/MINI2440v2+with+MegaDisplay+3.5/info/1)
-
-[Developer Site](http://www.developmentboard.net)
-
-
-
-
+<table border="1" cellspacing="0" cellpadding="5">
+<caption><b>Development Boards with MINI2440V2</b>
+</caption>
+<tr style="background:#CCCCCC">
+<th style="width:100px"> Product Name
+</th>
+<th> Company Name
+</th>
+<th> Year<br />Introduced
+</th>
+<th> RAM<br />MB
+</th>
+<th> Flash<br />MB
+</th>
+<th> Processor
+</th>
+<th style="width:150px"> Source
+</th>
+<th style="width:250px"> Download Area
+</th></tr>
+<a rel="nofollow" class="external autonumber" href="http://www.developmentboard.net/index.php/productdetail/Development+board/ARM9/SAMSUNG/S3C2440/MINI2440v2+with+MegaDisplay+3.5/info/1">[1]</a>
+<tr align="center">
+<td> <a rel="nofollow" class="external autonumber" href="http://www.developmentboard.net">[2]</a>
+</td>
+<td> 2009
+</td>
+<td> up to 256
+</td>
+<td> up to 512
+</td>
+<td> i.MX27 400MHz + Spartan3a
+</td>
+<td> <a rel="nofollow" class="external autonumber" href="http://www.developmentboard.net/index.php/productdetail/Development+board/ARM9/SAMSUNG/S3C2440/MINI2440v2+with+MegaDisplay+3.5/info/1">[3]</a>
+</td>
+<td> <a rel="nofollow" class="external text" href="http://www.developmentboard.net">Developer Site</a>
+</td></tr>
+</table>
 
 
  Beside the powerful CPU module, The MINI2440 development board also
