@@ -58,13 +58,13 @@ cat ${page}.md | \
     sed -e "/^## Content/,/^##* /{s/enlightenment-foundation-libraries-efl/enlightenment-foundation-libraries-efl-http-elinux-org-efl-efl/g;}" |\
     sed -e "s=(/=(${target_site}/=g" |\
     sed -e "/^Jump to:/d" |\
-    sed -e "/^From eLinux.org/d" |\
+    sed -e "/^From ${from}/d" |\
     sed -e "/Navigation menu/,/\%$/d" |\
     sed -e "/Robot.*png.*ELC2013 Tech Zone Contest/,/^\* \* \* \* \*/d" |\
     sed -e "/ELC2013 Tech Zone Contest/d" |\
     sed -e "/^Retrieved from/,/oldid=[0-9][0-9]*/d" |\
-    sed -e "s# href=\"/# href=\"http://eLinux.org/#g" |\
-    sed -e "s# src=\"/# src=\"http://eLinux.org/#g" |\
+    sed -e "s# href=\"/# href=\"${site}/#g" |\
+    sed -e "s# src=\"/# src=\"${site}/#g" |\
     sed -e "s#/Category::#/Category:#g" |\
     sed -e "s/}}}/\`\`\`/g" |\
     sed -e "s/{{{/\`\`\`/g" |\
