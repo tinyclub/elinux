@@ -146,10 +146,10 @@ not started, researched, implemented, measured, documented, accepted
 
 -   Architecture Support:
 
-(for each arch, one of: unknown, patches apply, compiles, runs, works,
+    (for each arch, one of: unknown, patches apply, compiles, runs, works,
 accepted)
 
--   -   i386: unknown
+    -   i386: unknown
     -   ARM: unknown
     -   PPC: unknown
     -   MIPS: unknown
