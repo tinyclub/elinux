@@ -3,12 +3,6 @@
 
 # Realtime Preemption
 
-
-
-Table Of Contents:
-
-
-
 ## Contents
 
 -   [1 Description](#description)
