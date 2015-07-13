@@ -343,12 +343,12 @@ powerful software development environment for embedded and real-time
 systems. It is available for ARM, PowerPC and MIPS processors and
 consists of:
 
-       * Cross Development Tools (Compiler, Assembler, Linker etc.) to develop software for the target system.
-       * Native Tools (Shell, commands and libraries) which provide a standard Linux development environment that runs on the target system.
-       * U-Boot - Firmware that can be easily ported to new boards and processors.
-       * Linux - Kernel including the complete source-code with all device drivers, board-support functions etc.
-       * Xenomai - Real-Time and RTOS Emulation Framework
-       * SELF (Simple Embedded Linux Framework) as fundament to build your embedded systems on.
+* Cross Development Tools (Compiler, Assembler, Linker etc.) to develop software for the target system.
+* Native Tools (Shell, commands and libraries) which provide a standard Linux development environment that runs on the target system.
+* U-Boot - Firmware that can be easily ported to new boards and processors.
+* Linux - Kernel including the complete source-code with all device drivers, board-support functions etc.
+* Xenomai - Real-Time and RTOS Emulation Framework
+* SELF (Simple Embedded Linux Framework) as fundament to build your embedded systems on.
 
 All components of the ELDK are available for free with complete source
 code under GPL and other Free Software Licenses. Also, detailed
