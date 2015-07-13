@@ -288,104 +288,115 @@ is that we used timer register for measurement and the timer is
 initialized during kernel booting. You can just add the values for 2
 phases to get the total kernel booting time.
 
-
-
-Boot stage
-
-NOR
-
-OneNAND
-
-XIP
-
-Shadowing
-
-Normal
-
-Tuning
-
-Compressed
-
-Uncompressed
-
-**Boot loader CPU frequency**
-
-96MHz
-
-96 MHz
-
-**Boot loader (IPL)**
-
-0
-
-0
-
-5,999
-
-5,999
-
-**Boot loader (u-boot)**
-
-388,146
-
-372,538
-
-356,821
-
-356,810
-
-**Copy kernel to RAM**
-
-0
-
-0
-
-35,029
-
-56,884
-
-**Decompress kernel**
-
-0
-
-0
-
-1,178,481
-
-0
-
-**Kernel time to initialize - 1 phase**
-
-18,964
-
-12,826
-
-9,091
-
-9,119
-
-**Kernel time to initialize - 2 phase**
-
-61,176
-
-51,263
-
-50,118
-
-50,126
-
-**Total**
-
-468,287
-
-436,626
-
-1,635,540
-
-478,938
-
-*times are in microseconds*
-
+<table border="1" cellpadding="5" cellspacing="0" align="center">
+<tr>
+<th style="background:#80c0c0;" rowspan="3">Boot stage
+</th>
+<th colspan="2" style="background:#80c0c0;">NOR
+</th>
+<th colspan="2" style="background:#80c0c0;">OneNAND
+</th></tr>
+<tr>
+<th colspan="2" align="center">XIP
+</th>
+<th colspan="2" align="center">Shadowing
+</th></tr>
+<tr>
+<th>Normal
+</th>
+<th>Tuning
+</th>
+<th>Compressed
+</th>
+<th>Uncompressed
+</th></tr>
+<tr>
+<td><b>Boot loader CPU frequency</b>
+</td>
+<td colspan="2" align="center">96MHz
+</td>
+<td colspan="2" align="center">96 MHz
+</td></tr>
+<tr>
+<td><b>Boot loader (IPL)</b>
+</td>
+<td align="right">0
+</td>
+<td align="right">0
+</td>
+<td align="right">5,999
+</td>
+<td align="right">5,999
+</td></tr>
+<tr>
+<td><b>Boot loader (u-boot)</b>
+</td>
+<td align="right">388,146
+</td>
+<td align="right">372,538
+</td>
+<td align="right">356,821
+</td>
+<td align="right">356,810
+</td></tr>
+<tr>
+<td><b>Copy kernel to RAM</b>
+</td>
+<td align="right">0
+</td>
+<td align="right">0
+</td>
+<td align="right">35,029
+</td>
+<td align="right">56,884
+</td></tr>
+<tr>
+<td><b>Decompress kernel</b>
+</td>
+<td align="right">0
+</td>
+<td align="right">0
+</td>
+<td align="right">1,178,481
+</td>
+<td align="right">0
+</td></tr>
+<tr>
+<td><b>Kernel time to initialize - 1 phase</b>
+</td>
+<td align="right">18,964
+</td>
+<td align="right">12,826
+</td>
+<td align="right">9,091
+</td>
+<td align="right">9,119
+</td></tr>
+<tr>
+<td><b>Kernel time to initialize - 2 phase</b>
+</td>
+<td align="right">61,176
+</td>
+<td align="right">51,263
+</td>
+<td align="right">50,118
+</td>
+<td align="right">50,126
+</td></tr>
+<tr>
+<td><b>Total</b>
+</td>
+<td align="right">468,287
+</td>
+<td align="right">436,626
+</td>
+<td align="right">1,635,540
+</td>
+<td align="right">478,938
+</td></tr>
+<tr>
+<td align="center" colspan="5"><i>times are in microseconds</i>
+</td></tr></table>
 
 
 -   Related info
