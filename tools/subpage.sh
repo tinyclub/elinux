@@ -36,12 +36,13 @@ do
 	line=$(echo "$line" | tr -d '*' | tr -d '#' | tr -d ' ')
 	title=$(echo $line | tr '_' ' ')
 
-	tmp="$(grep -m1 /${line}.md ${BOOK_SUMMARY})"
+	base=$(basename $line)
+	tmp="$(grep -m1 /${base}.md ${BOOK_SUMMARY})"
 	if [ $? -ne 0 ]; then
-		grep -q -m1 ".${rel_path}/${line}/${line}.md" toc.tmp
+		grep -q -m1 ".${rel_path}/${line}/${base}.md" toc.tmp
 		if [ $? -ne 0 ]; then
 			eval "printf '    %.0s' {1..$tmp_indent}"
-			echo "- [$title](.${rel_path}/${line}/${line}.md)" | tee -a toc.tmp
+			echo "- [$title](.${rel_path}/${line}/${base}.md)" | tee -a toc.tmp
 		fi
 	fi
 done < ${subpage}

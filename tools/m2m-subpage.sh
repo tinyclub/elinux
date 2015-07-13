@@ -86,7 +86,8 @@ sed -i -e "${line_num}r toc.md" ${BOOK_SUMMARY}
 for subpage in `cat ${subpage_list_md} | grep -v ^# | tr -d '*' | tr -d ' ' | sort -u | uniq`
 do
 	# Check if the subpage already exist
-	tmp="$(grep -m1 /${subpage}.md ${BOOK_SUMMARY})"
+	base=$(basename $subpage)
+	tmp="$(grep -m1 /${base}.md ${BOOK_SUMMARY})"
 	if [ $? -eq 0 ]; then
 		subpage_url=$(echo "$tmp" | sed -e "s/.*(\(.*\))/\1/g")
 		echo $subpage_url

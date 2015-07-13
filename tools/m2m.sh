@@ -8,11 +8,13 @@ page=$1
 
 page=$(echo ${page} | sed -e "s/\.md//g")
 
-mkdir $page
+mkdir -p $page
+
+base=$(basename $page)
 
 # echo "{% include \"./${page}/${page}.md\" %}" > ${page}.md
-git rm ${page}.md 2> /dev/null
-rm -rf ${page}.md 2> /dev/null
+git rm ${base}.md 2> /dev/null
+rm -rf ${base}.md 2> /dev/null
 
 pushd $page
 

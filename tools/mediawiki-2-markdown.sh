@@ -14,10 +14,12 @@ from=eLinux.org
 site=http://$from
 target_site=$site
 
+orig_page=$(echo ${page} | sed -e "s/\.md//g")
 page=$(echo ${page} | sed -e "s/\.md//g")
+page=$(basename $page)
 
 # Download the printable html page
-wget -O ${page}.html -c "${site}/index.php?title=${page}&printable=yes"
+wget -O ${page}.html -c "${site}/index.php?title=${orig_page}&printable=yes"
 
 [ $? -ne 0 ] && exit 1
 
