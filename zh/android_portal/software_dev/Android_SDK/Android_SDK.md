@@ -22,7 +22,7 @@ Used for creating high level portable Java code.
 2.  [Eclipse](http://www.eclipse.org/downloads/) Classic or greater (Not
     technically required
 2.  [Eclipse](http://www.eclipse.org/downloads/) 经典版或更高级版本 (技术上非要求安装)
-3.  
+
 3.  [Eclipse ADT
     Plugin](http://developer.android.com/sdk/eclipse-adt.html) (Required
     if using Eclipse)
