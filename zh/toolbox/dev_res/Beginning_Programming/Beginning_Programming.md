@@ -1,180 +1,133 @@
 > From: [eLinux.org](http://eLinux.org/Beginning_Programming "http://eLinux.org/Beginning_Programming")
 
 
-# Beginning Programming
+# 编程入门
+
+这个页面的目的是为了帮助初学者开始学习编程。最后，我还提供了编程相关的一系列的步骤，练习和教程来帮助任何想学习软件开发或者游戏开发的朋友。
 
 
+## 目录
 
-This page is intended to help beginners get started with learning
-programming. Eventually, I'd like to provide a whole series of steps,
-exercises and tutorials about programming, to help anyone who would like
-to get involved with software development or game development.
-
-## Contents
-
--   [1 Programming toolkits](#programming-toolkits)
--   [2 Online resources](#online-resources)
--   [3 Programming checklist](#programming-checklist)
-    -   [3.1 The very basics](#the-very-basics)
--   [4 Languages](#languages)
-    -   [4.1 Web Programming](#web-programming)
+-   [1 编程工具箱](#programming-toolkits)
+-   [2 在线资源](#online-resources)
+-   [3 编程学习列表](#programming-checklist)
+    -   [3.1 基础知识](#the-very-basics)
+-   [4 编程语言](#languages)
+    -   [4.1 Web开发](#web-programming)
         -   [4.1.1 HTML](#html)
     -   [4.2 Scratch](#scratch)
     -   [4.3 Javascript](#javascript)
-        -   [4.3.1 Javascript resources](#javascript-resources)
+        -   [4.3.1 Javascript资源](#javascript-resources)
     -   [4.4 Python (with PyGame)](#python-with-pygame)
     -   [4.5 C](#c)
 
-## Programming toolkits
+## 编程工具箱
 
--   scratch - This is a beginning programming toolkit produced by MIT.
-    This has numerous examples and tutorials, and is highly recommended
-    as an excellent starting place for beginning programmers.
-    -   Free download available from:
+-   scratch - 这是由MIT开发的一个编程入门工具箱。这个工具箱包含了许多例子和教程。强烈推荐它是因为它是一个非常好的编程初学者开始学习的地方。
+    -   免费下载列表:
         [http://scratch.mit.edu/](http://scratch.mit.edu/)
     -   [http://www.youtube.com/watch?v=pkhjX792yVI](http://www.youtube.com/watch?v=pkhjX792yVI)
-        - a good starter tutorial on scratch
-    -   [Scratch Getting Started
-        Guide](http://info.scratch.mit.edu/sites/infoscratch.media.mit.edu/files/file/ScratchGettingStartedv14.pdf)
-    -   SNAP is scratch implemented in javascript -
+        - 一个开始学习scratch非常好的教程。
+    -   [Scratch入门指南](http://info.scratch.mit.edu/sites/infoscratch.media.mit.edu/files/file/ScratchGettingStartedv14.pdf)
+    -   SNAP是scratch的javascritp实现-
         [http://snap.berkeley.edu/](http://snap.berkeley.edu/)
 
--   Kahn Academy - Excellent online introductory course for computer
-    science and programming, using interactive javascript
+
+-  Kahn Academy - 计算机科学和编程方面非常棒的在线教程，该教程使javascritp交互语。
     -   [Computer Science tutorials and
-        videos](https://www.khanacademy.org/cs) - Start by clicking on
-        the Introductory Video.
-    -   Note that the bottom area of the screen is a tabbed dialog with
-        different areas:
+        videos](https://www.khanacademy.org/cs) - 点击开始观看介绍视频。
+    -   注意屏幕上的按钮区域是一个选择不同区域的分页对话框。
 
-"Questions Tips & Feedback Spin-Offs Documentation". "Spin-Offs" has
-sample programs related to the tutorial, video or program you're looking
-at, and "Documentation" has description of different functions or
-statements you can use in your programs.
 
-## Online resources
+"Questions Tips & Feedback Spin-Offs Documentation". "Spin-Offs"有该教程或视频相关的示例程序，或者是你正在看的代码，"Documentation"有可以在你程序中所使用的不同函数或声明的解释。
 
--   [http://www.codeacademy.com/](http://www.codeacademy.com/) - this
-    site has good starting tutorials for javascript, html, php, python
-    and ruby.
+## 在线资源
+
+-   [http://www.codeacademy.com/](http://www.codeacademy.com/) - 这个网站有许多与javascritp,html,php,python和ruby相关的好的入门教程。
 
 -   [http://www.w3schools.com/](http://www.w3schools.com/)
 
-## Programming checklist
+## 编程学习列表
 
-Follow these steps to learn how to program:
+参照下面步骤学习编程：
 
-### The very basics
+### 基础知识
 
--   learn what a program statement is (and what a "computer language"
-    is)
--   learn what a variable is
--   learn what a conditional (if statement) is
--   learn what a loop is
--   learn what input is
-    -   different kinds of input (key press, mouse move, mouse button)
--   learn what output is
-    -   different kinds of output (text, image, sound)
+-   学习什么是程序语句（什么是“计算机语言”）
+-   学习变量是什么
+-   学习条件语句是什么（if语句）
+-   学习循环语句时什么
+-   学习如何输入
+    -   不同输入方法（按键，鼠标移动，鼠标按钮）
+-   学习如何输出
+    -   不同输出方法（文本，图像，声音）
 
-Simple program 1: Write a program that counts how many times someone
-presses the space bar.
 
-Simple program 2: Write a program that counts how many times someone
-presses each arrow key.
+简单程序1: 编写一个统计空格键按压次数的程序。
 
-program 3: Write a program that starts counting when someone presses the
-space bar, and stops counting when they hit it a second time (like a
-stop-watch).
+简单程序2: 编写一个统计按压每个方向键的次数的程序。
 
-Program 4: Write a program that moves a ball to the right on the screen,
-when the right arrow is pressed.
+程序3: 编写一个程序，按下空格键后开始计时，当再次按下空格键后停止计时（类似秒表）。
 
-Program 5: Write a program that starts a ball moving when key is
-pressed. The ball should keep moving until it hits a wall.
+程序4: 编写一个程序，当右键被按下后在屏幕上移动一个球到屏幕右边。
 
-Note: For any of these programs, you can start with the program you used
-previously, and expand or modify it to do the next task. You should save
-it under a new name.
+程序5: 编写一个程序，当有按键被按下后，桌面上的球开始不停移动，当球碰到边界时停止移动，其停止移动。
 
-Program 6: Write a program that starts a ball moving in a different
-direction, depending on which arrow key (up, down, left, right) is
-pressed.
+注意：上面的这些程序，你都可以在你之前的程序上扩展或修改来实现，然后保存一个新的文件名。
 
-Program 7: Write a program that starts with a moving ball. When the ball
-hits a wall, it moves in the opposite direction.
+程序6: 编写一个可以用方向键控制球移动方向的程序，球的移动方向和按下的方向键相同（上，下，左，右）。
 
-Program 8: Combine programs 6 and 7. Write a program that starts a ball
-in a direction based on the key pressed. The ball should keep moving
-after the key is released. It should bounce off the wall and go the
-other direction when it hits a wall.
+程序7: 编写一个程序，程序开始后随机移动球，当这个球碰到墙后，其移动方向改变为原来的反方向。
 
-## Languages
+程序8: 结合程序6和程序7，编写一个新的程序，程序开始时球的移动方向由按下的方向键决定，当方向键释放后，球开始移动。当球撞到墙后开始反弹并往相反的方向移动。
 
-Programming can be done in many different computer languages.
+## 编程语言
 
-### Web Programming
+程序设计可以使用不同的计算机语言来实现。
 
-Programming can be done in a web browser. This is a computer program,
-like Internet Explorer, Firefox or Chrome, that reads web pages from the
-Internet and shows them on your screen. Embedded devices, like phones,
-tablets and TVs also have web browsers.
+### Web编程
 
-In order to do web programming, you first need to learn how the browser
-presents information from a web page on your computer screen. It does
-this by processing the words on the web page (called "parsing" the
-page), and then drawing things like text, lines and images on your
-computer screen (usually, inside the browser window).
+程序设计可以在浏览器中完成。浏览器是一个计算机程序，像Internet Explorer，Firefox 和 Chrome，它们可以从因特网上读取网络页面并显示在你的屏幕上。嵌入式设备，像手机，平板电脑和电视同样有浏览器。
+为了开始Web编程，首先需要学习浏览器如何将网页信息呈现到你的电脑屏幕上。它通过处理Web页面上的单词（称为“解析”页面），然后在电脑屏幕上绘制文本，线条和图片（通常是在浏览器窗口中）。
 
 #### HTML
 
-The words on a web page are part of a language called HTML (HyperText
-Markup Language). You can learn about this language here:
-[http://www.w3schools.com/html/default.asp](http://www.w3schools.com/html/default.asp)
+网页上的字符是一种称为HTML(超文本标记语言)的语言的一部分。你可以从这里了解跟多信息：[http://www.w3schools.com/html/default.asp](http://www.w3schools.com/html/default.asp)
 
-Basically, the words and symbols are put into a file (or returned from a
-program running on the web server), and these words tell the web browser
-what to draw on the screen. The process of drawing things on the screen
-is called "rendering" the page.
+实际上，这些文字和符号被存放到一个文件（或者由服务器上的程序运行生成的结果），这些字符会告诉浏览器将在屏幕上显示什么，这个过程被称为“翻译”该页面。
 
 ### Scratch
 
-Here is a tutorial for a bouncing ball demo in scratch:
+这是一个使用scrath实现的弹力球演示程序的教程：
 [http://scratch-time.blogspot.com/2008/12/how-to-make-bouncing-ball.html](http://scratch-time.blogspot.com/2008/12/how-to-make-bouncing-ball.html)
 
 ### Javascript
 
-Here is a tutorial for a bouncing ball demo in Javascript:
-[http://sixrevisions.com/html/bouncing-a-ball-around-with-html5-and-javascript/](http://sixrevisions.com/html/bouncing-a-ball-around-with-html5-and-javascript/)
+这是一个使用Javascript实现的弹力球演示程序的教程：[http://sixrevisions.com/html/bouncing-a-ball-around-with-html5-and-javascript/](http://sixrevisions.com/html/bouncing-a-ball-around-with-html5-and-javascript/)
 
-Before you understand this language, and how it works, you first have to
-understand HTML.
+在你想要了解这门语言，搞清楚它是怎么工作之前，你需要先了解HTML.
 
-#### Javascript resources
+#### Javascript资源
 
 -   [http://www.webmonkey.com/2010/02/javascript\_tutorial/](http://www.webmonkey.com/2010/02/javascript_tutorial/)
-    - 5-part introductory tutorial
--   [http://www.w3schools.com/js/](http://www.w3schools.com/js/) - nice
-    series of exercises on javascript
+    - 一个包含5个部分的初级教程
+-   [http://www.w3schools.com/js/](http://www.w3schools.com/js/)
+    - 一系列非常好的javascritp的练习例子
 
 ### Python (with PyGame)
 
-Here is an introduction to pygame, which has an bouncing ball demo as
-part of the intro.
+这是一个pygame的介绍教程，而且其包含了一个弹力球的实例。
 
 [http://www.pygame.org/docs/tut/intro/intro.html](http://www.pygame.org/docs/tut/intro/intro.html)
 
 ### C
 
-One of the primitive programming languages it was developed by Dennis
-Ritchie, it has set the base for the languages that we see now. It is
-extensively used in system programming (Operating Systems, Device
-Drivers etc.). C is a powerful language with a primitive syntax, it is a
-compiled language unlike python. It is the lingua franca for a system
-developer. The linux kernel is written in 'C'.
+这是一门由Dennis Ritchie开发的原始编程语言，它为我们如今看到的一些语言建立了基础。它被广泛的应用于系统编程（操作系统，设备驱动等）。C语言是一门非常强大的原始语言，它不像Python，它是一种编译型语言。它是系统开发者的通用语言，Linux Kernel 就是使用'C'语言编写的。
 
-Book: The C Programming language by Brian Kernighan and Dennis Ritchie
+书籍: The C Programming language by Brian Kernighan and Dennis Ritchie
 
-Online Resources: [http://www.learn-c.org/](http://www.learn-c.org/)
+在线资源:
+[http://www.learn-c.org/](http://www.learn-c.org/)
 (Interactive)
 
 
