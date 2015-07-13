@@ -19,6 +19,7 @@ diff_depth=$((cur_depth-root_depth))
 rel_path="$(eval printf '../%.0s' {1..$diff_depth})"
 
 site=http://eLinux.org
+lowcase_site=http://elinux.org
 
 page=$1
 [ -z "$page" ] && page=`basename $PWD`
@@ -90,6 +91,8 @@ do
 		subpage_url=$(echo "$tmp" | sed -e "s/.*(\(.*\))/\1/g")
 		echo $subpage_url
 		sed -i -e "s=${site}/${subpage}=${rel_path}${subpage_url}=g" ${page}.md
+		sed -i -e "s=${lowcase_site}/${subpage}=${rel_path}${subpage_url}=g" ${page}.md
+
 	else
 		echo $subpage
 		# echo ${M2M} $subpage
