@@ -5,9 +5,9 @@
 
 
 
-***Notice:** The Raspberry Pi Wiki pages on this site is collaborative
+**Notice:** The Raspberry Pi Wiki pages on this site is collaborative
 work - the Raspberry Pi Foundation is **not** responsible for content on
-these pages.*
+these pages.
 
 ## Contents
 
