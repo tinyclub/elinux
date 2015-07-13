@@ -117,83 +117,75 @@ com
 
 Current List of Attendees
 
-Attendee
-
-Company
-
-Email
-
-Tim Bird
-
-Sony, Chair of CE Linux Forum Architecture Group
-
-Tim dot Bird (at) am dot Sony dot com
-
-Rahul Saxena
-
-Intel
-
-Rahul dot Saxena (at) Intel dot com
-
-Frank Scholz
-
-Beebits
-
-fs (at) beebits dot net
-
-Olivier Carmona
-
-AWOX, Chair of the DLNA Certification and Test Committee
-
-ocarmona (at) awox dot com
-
-Philippe Normad
-
-Fluendo
-
-philippe (at) fluendo dot com
-
-Gustavo Sverzut Barbieri
-
-Profusion Embedded Systems
-
-barbieri (at) profusion dot mobi
-
-Christian Schaller
-
-Collabora
-
-christian dot schaller (at) collabora dot co dot uk
-
-Zeeshan Ali
-
-Nokia
-
-zeeshan dot ali (at) nokia dot com
-
-Jussi Kukkonen
-
-Intel
-
-jku (at) linux dot intel dot com
-
-Ruud Derwig
-
-NXP
-
-ruud dot derwig (at) nxp dot com
-
-Armijn Hemel
-
-Loohuis Consulting
-
-armijn (at) uulug dot nl
-
-Young Sun Park
-
-LG Electronics
-
-yspark (at) lge dot com
+<table border="1" cellpadding="5" cellspacing="0" align="center">
+<tr>
+<th style="background:#e0c0c0;"> Attendee
+</th>
+<th style="background:#e0c0c0;"> Company
+</th>
+<th style="background:#e0c0c0;"> Email
+</th></tr>
+<tr>
+<td>Tim Bird </td>
+<td>Sony, Chair of CE Linux Forum Architecture Group</td>
+<td>Tim dot Bird (at) am dot Sony dot com
+</td></tr>
+<tr>
+<td>Rahul Saxena </td>
+<td> Intel </td>
+<td> Rahul dot Saxena (at) Intel dot com
+</td></tr>
+<tr>
+<td>Frank Scholz  </td>
+<td> Beebits </td>
+<td> fs (at) beebits dot net
+</td></tr>
+<tr>
+<td>Olivier Carmona </td>
+<td> AWOX, Chair of the DLNA Certification and Test Committee</td>
+<td> ocarmona (at) awox dot com </td>
+<td>
+</td></tr>
+<tr>
+<td>Philippe Normad </td>
+<td> Fluendo </td>
+<td> philippe (at) fluendo dot com
+</td></tr>
+<tr>
+<td>Gustavo Sverzut Barbieri </td>
+<td> Profusion Embedded Systems </td>
+<td> barbieri (at) profusion dot mobi
+</td></tr>
+<tr>
+<td>Christian Schaller </td>
+<td> Collabora </td>
+<td> christian dot schaller (at) collabora dot co dot uk
+</td></tr>
+<tr>
+<td>Zeeshan Ali </td>
+<td> Nokia </td>
+<td> zeeshan dot ali (at) nokia dot com
+</td></tr>
+<tr>
+<td>Jussi Kukkonen </td>
+<td> Intel </td>
+<td> jku (at) linux dot intel dot com
+</td></tr>
+<tr>
+<td>Ruud Derwig </td>
+<td> NXP </td>
+<td> ruud dot derwig (at) nxp dot com
+</td></tr>
+<tr>
+<td>Armijn Hemel </td>
+<td> Loohuis Consulting </td>
+<td> armijn (at) uulug dot nl
+</td></tr>
+<tr>
+<td>Young Sun Park </td>
+<td> LG Electronics </td>
+<td> yspark (at) lge dot com
+</td></tr></table>
 
 ## Venue/Hotel Information
 
