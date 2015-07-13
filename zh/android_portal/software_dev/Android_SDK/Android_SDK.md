@@ -35,10 +35,8 @@
 用于您的Java应用程序中创建一个可移植的共享对象库文件的C / c++或
 asm代码
 
-1.  [Android NDK](http://developer.android.com/sdk/ndk/index.html)
+1.  [安卓 NDK](http://developer.android.com/sdk/ndk/index.html)
 
-
-[Category](http://eLinux.org/Special:Categories "Special:Categories"):
-
--   [Android](http://eLinux.org/Category:Android "Category:Android")
+[分类](http://eLinux.org/Special:Categories "Special:Categories"):
+-   [安卓](http://eLinux.org/Category:Android "Category:Android")
 
