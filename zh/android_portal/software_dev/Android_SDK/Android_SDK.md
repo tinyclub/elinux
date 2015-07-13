@@ -2,14 +2,17 @@
 
 
 # Android SDK
-
+#安卓SDK
 
 
 [Android Developers Homepage](http://developer.android.com/index.html)
+[安卓开发者主页](http://developer.android.com/index.html)
 
 ## Application SDK
+## 应用SDK
 
 Used for creating high level portable Java code.
+
 
 1.  [Android SDK](http://developer.android.com/sdk/index.html)
     (Required)
