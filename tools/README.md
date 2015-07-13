@@ -32,3 +32,8 @@ mediawiki-2-markdown.sh at first.
 
     $ cd en/dev_portals/Boot_Time/
     $ ../../../tools/m2m-subpage.sh
+
+### Build the table of content for a specified markdown file
+
+    $ cd en/dev_portals/Boot_Time/
+    $ ../../../tools/build-toc.sh Boot_Time.md
