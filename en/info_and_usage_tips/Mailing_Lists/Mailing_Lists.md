@@ -9,11 +9,11 @@
 
 -   [1 eLinux.org Lists](#elinux-org-lists)
     -   [1.1
-        elinux-discuss@lists.elinux.org](#elinux-discuss-lists.elinux-org)
+        elinux-discuss@lists.elinux.org](#elinux-discuss-lists-elinux-org)
     -   [1.2
-        elinux-announce@lists.elinux.org](#elinux-announce-lists.elinux-org)
+        elinux-announce@lists.elinux.org](#elinux-announce-lists-elinux-org)
     -   [1.3
-        elinux-wiki-dev@lists.elinux.org](#elinux-wiki-dev-lists.elinux-org)
+        elinux-wiki-dev@lists.elinux.org](#elinux-wiki-dev-lists-elinux-org)
 -   [2 Project Lists](#project-lists)
 -   [3 External Embedded Linux Lists](#external-embedded-linux-lists)
 -   [4 Deprecated discussion list](#deprecated-discussion-list)
