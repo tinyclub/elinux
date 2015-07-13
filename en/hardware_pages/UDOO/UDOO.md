@@ -12,8 +12,8 @@ raising \$641,614 in sixty days thanks to 4,172 backers.
 
 [![UDOO](http://eLinux.org/images/thumb/b/be/UDOO-icons2.png/400px-UDOO-icons2.png)](http://eLinux.org/File:UDOO-icons2.png "UDOO")
 
-***Notice:** The UDOO Wiki pages on this site is collaborative work -
-the UDOO Team is **not** responsible for content on these pages.*
+**Notice:** The UDOO Wiki pages on this site is collaborative work -
+the UDOO Team is **not** responsible for content on these pages.
 
 ## Contents
 
