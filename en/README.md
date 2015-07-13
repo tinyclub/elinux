@@ -5,7 +5,9 @@
 
 # Embedded Linux Wiki (elinux.org)
 
-This is the gitbook version of the [embedded Linux wiki](http://elinux.org) created by [CE Linux Forum](http://www.celinuxforum.org/).
+This is the gitbook version of the [embedded Linux wiki](http://elinux.org).
+
+The mediawiki version is created by [CE Linux Forum](http://www.celinuxforum.org/), this gitbook version is created by the [eLinux.org Chinese Translation Group](http://www.tinylab.org/elinux).
 
 ## Introduction
 
