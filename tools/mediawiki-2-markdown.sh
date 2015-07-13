@@ -63,8 +63,8 @@ cat ${page}.md | \
     sed -e "/Robot.*png.*ELC2013 Tech Zone Contest/,/^\* \* \* \* \*/d" |\
     sed -e "/ELC2013 Tech Zone Contest/d" |\
     sed -e "/^Retrieved from/,/oldid=[0-9][0-9]*/d" |\
-    sed -e "s# href=\"/# href=\"http://elinux.org/#g" |\
-    sed -e "s# src=\"/# src=\"http://elinux.org/#g" |\
+    sed -e "s# href=\"/# href=\"http://eLinux.org/#g" |\
+    sed -e "s# src=\"/# src=\"http://eLinux.org/#g" |\
     sed -e "s#/Category::#/Category:#g" |\
     sed -e "s/[[:space:]][[:space:]]*$//g" |\
     sed -e "/^[[:space:]][[:space:]]*$/d" > ${page}.md.tmp
