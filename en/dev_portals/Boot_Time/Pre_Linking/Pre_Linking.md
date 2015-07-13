@@ -117,21 +117,16 @@ used a 2.4.x Linux kernel, for an ARM processor. Measuring the time to
 load a single multimedia application with regular dynamic linking and
 pre-linking, showed that pre-linking could save a lot of time.
 
- Hardware 
-ARM9 (unspecified CPU frequency)
-
- Kernel Version 
-2.4.20 (based on Monta Vista Linux CEE 3.1), glibc 2.3
-
- Time without change 
-2479 ms
-
- Time with change 
-125 ms
-
- Source 
-page 19 of [Making Mobile Phone with CE
-Linux](http://tree.celinuxforum.org/CelfPubWiki/ITJ2005Detail1-2?action=AttachFile&do=get&target=CELF_Technical_Jamboree_June13.pdf)
+<dl><dt> Hardware&#160;</dt>
+<dd> ARM9 (unspecified CPU frequency)</dd>
+<dt> Kernel Version&#160;</dt>
+<dd> 2.4.20 (based on Monta Vista Linux CEE 3.1), glibc 2.3</dd>
+<dt> Time without change&#160;</dt>
+<dd> 2479 ms</dd>
+<dt> Time with change&#160;</dt>
+<dd> 125 ms</dd>
+<dt> Source&#160;</dt>
+<dd> page 19 of <a rel="nofollow" class="external text" href="http://tree.celinuxforum.org/CelfPubWiki/ITJ2005Detail1-2?action=AttachFile&amp;do=get&amp;target=CELF_Technical_Jamboree_June13.pdf">Making Mobile Phone with CE Linux</a></dd></dl>
 
 ### Case 2
 
