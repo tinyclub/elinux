@@ -16,18 +16,31 @@ Used for creating high level portable Java code.
 
 1.  [Android SDK](http://developer.android.com/sdk/index.html)
     (Required)
+1.  [安卓 SDK](http://developer.android.com/sdk/index.html)
+    (要求安装)
+
 2.  [Eclipse](http://www.eclipse.org/downloads/) Classic or greater (Not
     technically required
+2.  [Eclipse](http://www.eclipse.org/downloads/) 经典版或更高级版本 (技术上非要求安装)
+3.  
 3.  [Eclipse ADT
     Plugin](http://developer.android.com/sdk/eclipse-adt.html) (Required
     if using Eclipse)
+3.  [Eclipse ADT
+    Plugin](http://developer.android.com/sdk/eclipse-adt.html) (若使用Eclipse则要求安装)
+
 4.  [Netbeans plugin](http://kenai.com/projects/nbandroid/) (No official
     support)
+4.  [Netbeans plugin](http://kenai.com/projects/nbandroid/) (无官方支持)
+
 5.  [Windows USB Driver](http://developer.android.com/sdk/win-usb.html)
     (Only need if using Windows)
+5.  [Windows USB Driver](http://developer.android.com/sdk/win-usb.html)
+    (只有在使用Windows时要求安装)
 
 **Versions** [Regularly Updated
 Dashboard](http://developer.android.com/resources/dashboard/platform-versions.html)
+**各个版本** [常规更新面板](http://developer.android.com/resources/dashboard/platform-versions.html)
 
 Top 3 SDK in used by users as of 4/13/2010
 
