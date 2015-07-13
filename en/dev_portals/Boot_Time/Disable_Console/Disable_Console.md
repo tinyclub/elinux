@@ -70,57 +70,73 @@ None
 
 ### Case 1
 
-Hardware
-
-KMC SH board, using VGA console
-
-Kernel Version
-
-CELF-1 (040126)
-
-Configuration
-
-relatively small configuration (*details not available*)
-
-Time without "quiet" option
-
-637878 usec
-
-Time with "quiet" option
-
-461893 usec
-
-Time savings
-
-176 milliseconds
-
-From data submitted by Maruyama Kiyoyasu of Mitsubishi.
+<table border="1">
+<tr>
+<th>Hardware
+</th>
+<td>KMC SH board, using VGA console
+</td></tr>
+<tr>
+<th>Kernel Version
+</th>
+<td>CELF-1 (040126)
+</td></tr>
+<tr>
+<th>Configuration
+</th>
+<td>relatively small configuration (<i>details not available</i>)
+</td></tr>
+<tr>
+<th>Time without "quiet" option
+</th>
+<td>637878 usec
+</td></tr>
+<tr>
+<th>Time with "quiet" option
+</th>
+<td>461893 usec
+</td></tr>
+<tr>
+<th>Time savings
+</th>
+<td>176 milliseconds
+</td></tr></table>
+<p>From data submitted by Maruyama Kiyoyasu of Mitsubishi.
+</p>
 
 ## Case 2
 
-Hardware
-
-TI OMAP board, using serial console
-
-Kernel Version
-
-CELF-1 (040126)
-
-Configuration
-
-Kernel booted with XIP, CRAMFS root file system, with preset-LPJ
-
-Time without "quiet" option
-
-551735 usec
-
-Time with "quiet" option
-
-280676 usec
-
-Time savings
-
-271 milliseconds
+<table border="1">
+<tr>
+<th>Hardware
+</th>
+<td>TI OMAP board, using serial console
+</td></tr>
+<tr>
+<th>Kernel Version
+</th>
+<td>CELF-1 (040126)
+</td></tr>
+<tr>
+<th>Configuration
+</th>
+<td>Kernel booted with XIP, CRAMFS root file system, with preset-LPJ
+</td></tr>
+<tr>
+<th>Time without "quiet" option
+</th>
+<td>551735 usec
+</td></tr>
+<tr>
+<th>Time with "quiet" option
+</th>
+<td>280676 usec
+</td></tr>
+<tr>
+<th>Time savings
+</th>
+<td>271 milliseconds
+</td></tr></table>
 
 From data submitted by Noboru Wakabayashi of Hitachi.
 
