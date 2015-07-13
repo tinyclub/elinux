@@ -115,213 +115,233 @@ uncompressed).
 The size and performance results from running these commands are in the
 tables below.
 
-Image file:
-
-initrd-2.6.5-1.358
-
-method
-
-UCL
-
-GZIP
-
-improved %
-
-parameter
-
--b4194304
-
--8
-
-.
-
-source file size
-
-819200
-
-819200
-
-.
-
-compressed size
-
-187853
-
-189447
-
-.
-
-compression rate
-
-77.1%
-
-76.9%
-
-0.3%
-
-compression time: user (sec)
-
-5.13
-
-2.03
-
--152.5%
-
-sys (sec)
-
-0.09
-
-0.06
-
--36.5%
-
-total (sec)
-
-5.22
-
-2.09
-
--149.0%
-
-decompression time: user (sec)
-
-0.12
-
-0.3
-
-59.7%
-
-sys (sec)
-
-0.1
-
-0.08
-
--16.9%
-
-total (sec)
-
-0.22
-
-0.39
-
-43.0%
-
-.
-
-.
-
-.
-
-.
-
-Image file:
-
-vmlinux-2.4.20 for ibm-440gp
-
-method
-
-UCL
-
-GZIP
-
-improved %
-
-parameter
-
--b4194304
-
--8
-
-.
-
-source file size
-
-1810351
-
-1810351
-
-.
-
-compressed size
-
-790250
-
-776807
-
-.
-
-compression rate
-
-56.3%
-
-57.1%
-
--1.3%
-
-compression time: user (sec)
-
-17.29
-
-6.07
-
--185.0%
-
-sys (sec)
-
-0.04
-
-0.02
-
--92.4%
-
-total (sec)
-
-17.33
-
-6.09
-
--184.6%
-
-decompression time: user (sec)
-
-0.12
-
-0.16
-
-26.1%
-
-sys (sec)
-
-0.03
-
-0.04
-
-35.8%
-
-total (sec)
-
-0.15
-
-0.2
-
-28.2%
-
- Hardware 
-PPC440GP - 300 MHZ
-
- Kernel Version 
-Linux kernel running on target was 2.6.11, kernel which was compressed
-with Linux 2.4.20
-
- Configuration 
-See above tables for parameters to gzip and ucl
-
- Time without change 
-[put that here]
-
- Time with change 
-[put that here]
+<table border="1" cellspacing="0">
+
+<tr>
+<td>  Image file:
+</td>
+<td>  initrd-2.6.5-1.358
+</td></tr>
+<tr>
+<td>  method
+</td>
+<td>  UCL
+</td>
+<td>  GZIP
+</td>
+<td>  improved&#160;%
+</td></tr>
+<tr>
+<td>  parameter
+</td>
+<td>  -b4194304
+</td>
+<td>  -8
+</td>
+<td>  .
+</td></tr>
+<tr>
+<td>  source file size
+</td>
+<td>  819200
+</td>
+<td>  819200
+</td>
+<td>  .
+</td></tr>
+<tr>
+<td>  compressed size
+</td>
+<td>  187853
+</td>
+<td>  189447
+</td>
+<td>  .
+</td></tr>
+<tr>
+<td>  compression rate
+</td>
+<td>  77.1%
+</td>
+<td>  76.9%
+</td>
+<td>  0.3%
+</td></tr>
+<tr>
+<td>  compression time: user (sec)
+</td>
+<td>  5.13
+</td>
+<td>  2.03
+</td>
+<td>  -152.5%
+</td></tr>
+<tr>
+<td>  sys (sec)
+</td>
+<td>  0.09
+</td>
+<td>  0.06
+</td>
+<td>  -36.5%
+</td></tr>
+<tr>
+<td>  total (sec)
+</td>
+<td>  5.22
+</td>
+<td>  2.09
+</td>
+<td>  -149.0%
+</td></tr>
+<tr>
+<td>  decompression    time: user (sec)
+</td>
+<td>  0.12
+</td>
+<td>  0.3
+</td>
+<td>  59.7%
+</td></tr>
+<tr>
+<td>  sys (sec)
+</td>
+<td>  0.1
+</td>
+<td>  0.08
+</td>
+<td>  -16.9%
+</td></tr>
+<tr>
+<td>  total (sec)
+</td>
+<td>  0.22
+</td>
+<td>  0.39
+</td>
+<td bgcolor="#ffc0c0"> 43.0%
+</td></tr>
+<tr>
+<td>.</td>
+<td>.</td>
+<td>.</td>
+<td>.
+</td></tr>
+<tr>
+<td>  Image file:
+</td>
+<td>  vmlinux-2.4.20 for ibm-440gp
+</td></tr>
+<tr>
+<td>  method
+</td>
+<td>  UCL
+</td>
+<td>  GZIP
+</td>
+<td>  improved&#160;%
+</td></tr>
+<tr>
+<td>  parameter
+</td>
+<td>  -b4194304
+</td>
+<td>  -8
+</td>
+<td>  .
+</td></tr>
+<tr>
+<td>  source file size
+</td>
+<td>  1810351
+</td>
+<td>  1810351
+</td>
+<td>  .
+</td></tr>
+<tr>
+<td>  compressed size
+</td>
+<td>  790250
+</td>
+<td>  776807
+</td>
+<td>  .
+</td></tr>
+<tr>
+<td>  compression rate
+</td>
+<td>  56.3%
+</td>
+<td>  57.1%
+</td>
+<td>  -1.3%
+</td></tr>
+<tr>
+<td>  compression time: user (sec)
+</td>
+<td>  17.29
+</td>
+<td>  6.07
+</td>
+<td>  -185.0%
+</td></tr>
+<tr>
+<td>  sys (sec)
+</td>
+<td>  0.04
+</td>
+<td>  0.02
+</td>
+<td>  -92.4%
+</td></tr>
+<tr>
+<td>  total (sec)
+</td>
+<td>  17.33
+</td>
+<td>  6.09
+</td>
+<td>  -184.6%
+</td></tr>
+<tr>
+<td>  decompression    time: user (sec)
+</td>
+<td>  0.12
+</td>
+<td>  0.16
+</td>
+<td>  26.1%
+</td></tr>
+<tr>
+<td>  sys (sec)
+</td>
+<td>  0.03
+</td>
+<td>  0.04
+</td>
+<td>  35.8%
+</td></tr>
+<tr>
+<td>  total (sec)
+</td>
+<td>  0.15
+</td>
+<td>  0.2
+</td>
+<td bgcolor="#ffc0c0"> 28.2%
+</td></tr></table>
+
+<dl><dt>  Hardware&#160;</dt>
+<dd> PPC440GP - 300 MHZ</dd></dl>
+<dl><dt>  Kernel Version&#160;</dt>
+<dd> Linux kernel running on target was 2.6.11, kernel which was compressed with Linux 2.4.20</dd></dl>
+<dl><dt>  Configuration&#160;</dt>
+<dd> See above tables for parameters to gzip and ucl</dd></dl>
+<dl><dt>  Time without change&#160;</dt>
+<dd> [put that here]</dd></dl>
+<dl><dt>  Time with change&#160;</dt>
+<dd> [put that here]</dd></dl>
 
 ### Case 2
 
