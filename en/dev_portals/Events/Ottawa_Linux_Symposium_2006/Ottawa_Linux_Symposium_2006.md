@@ -103,7 +103,7 @@ file for the full presentation.
 
     -   Security
         -   -   App'***Armour***
-                -   -   -   Lighter than [SELinux](http://eLinux.org/SELinux "SELinux")
+                -   -   -   Lighter than [SELinux](../../.././dev_portals/Security/SELinux/SELinux.md "SELinux")
                         -   Good enough for embedded work??
 
             -   LSM in peril?
@@ -132,7 +132,7 @@ file for the full presentation.
         -   -   Big direct rendering update -
                 [http://lwn.net/Articles/167315/](http://lwn.net/Articles/167315/)
             -   New CELF AVG Spec. (2.0)
-                -   -   [DirectFB](http://eLinux.org/DirectFB "DirectFB"), ALSA,
+                -   -   [DirectFB](../../.././dev_portals/Multimedia/DirectFB/DirectFB.md "DirectFB"), ALSA,
                         [OpenGL](http://eLinux.org/OpenGL "OpenGL")/ES, UHAPI
 
     -   Mobile phone stuff
@@ -141,7 +141,7 @@ file for the full presentation.
                 Forum, the new foundation
 
     -   Tools
-        -   -   Tracing - [LTTng](http://eLinux.org/LTTng "LTTng") just recently re-added
+        -   -   Tracing - [LTTng](../../../dbg_portal/kernel_trace_and_profile/LTTng/LTTng.md "LTTng") just recently re-added
                 lots of architecture support
             -   Memory Leak Tracker
             -   Function re-ordering -
@@ -214,7 +214,7 @@ about the CELF Test Lab:
         -   -   Linux-tiny mainlining, and
                 [bloatwatch](http://testlab.celinuxforum.org/bloatwatch/index.cgi)
                 (via Selenic Consulting - Matt Mackall)
-            -   UHAPI/[DirectFB](http://eLinux.org/DirectFB "DirectFB") integration (via
+            -   UHAPI/[DirectFB](../../.././dev_portals/Multimedia/DirectFB/DirectFB.md "DirectFB") integration (via
                 Dennis Kropp)
             -   CELF Open Test Lab (via Nomad Global Solutions)
             -   Embedded Linux Conference - to be held April 17,18,19,

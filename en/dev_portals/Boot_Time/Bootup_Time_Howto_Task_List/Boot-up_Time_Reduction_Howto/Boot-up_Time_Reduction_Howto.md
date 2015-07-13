@@ -168,7 +168,7 @@ document.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><a href="http://elinux.org/Kernel_XIP" title="Kernel XIP">Kernel XIP</a></td>
+<td align="left"><a href="../../../.././dev_portals/Boot_Time/Kernel_XIP/Kernel_XIP.md" title="Kernel XIP">Kernel XIP</a></td>
 <td align="left">Firmware</td>
 <td align="left">Kernel Execute-In-Place - avoids kernel copy and decompression time</td>
 <td align="left">250 ms</td>
@@ -189,14 +189,14 @@ document.
 <td align="left">Not possible if the kernel is loaded from hard drive.</td>
 </tr>
 <tr class="even">
-<td align="left"><a href="http://elinux.org/DMA_Copy_Of_Kernel_On_Startup" title="DMA Copy Of Kernel On Startup">DMA Copy Of Kernel On Startup</a></td>
+<td align="left"><a href="../../../.././dev_portals/Boot_Time/DMA_Copy_Of_Kernel_On_Startup/DMA_Copy_Of_Kernel_On_Startup.md" title="DMA Copy Of Kernel On Startup">DMA Copy Of Kernel On Startup</a></td>
 <td align="left">Firmware</td>
 <td align="left">Use DMA to copy kernel from flash to RAM</td>
 <td align="left">180 ms</td>
 <td align="left">.</td>
 </tr>
 <tr class="odd">
-<td align="left"><a href="http://elinux.org/Preset_LPJ" title="Preset LPJ">Preset LPJ</a></td>
+<td align="left"><a href="../../../.././dev_portals/Boot_Time/Preset_LPJ/Preset_LPJ.md" title="Preset LPJ">Preset LPJ</a></td>
 <td align="left">Kernel</td>
 <td align="left">Use a hardcoded loops_per_jiffy value to avoid cost of calibration.</td>
 <td align="left">250 ms</td>
@@ -238,7 +238,7 @@ document.
 <td align="left">Only works for drivers that can be loaded as modules late in the boot cycle.</td>
 </tr>
 <tr class="odd">
-<td align="left"><a href="http://elinux.org/IDE_No_Probe" title="IDE No Probe">IDE No Probe</a></td>
+<td align="left"><a href="../../../.././dev_portals/Boot_Time/IDE_No_Probe/IDE_No_Probe.md" title="IDE No Probe">IDE No Probe</a></td>
 <td align="left">Drivers</td>
 <td align="left">Use &quot;noprobe&quot; on kernel command line for IDE driver</td>
 <td align="left">3 sec.</td>
@@ -252,7 +252,7 @@ document.
 <td align="left">.</td>
 </tr>
 <tr class="odd">
-<td align="left"><a href="http://elinux.org/Short_IDE_Delays" title="Short IDE Delays">Short IDE Delays</a></td>
+<td align="left"><a href="../../../.././dev_portals/Boot_Time/Short_IDE_Delays/Short_IDE_Delays.md" title="Short IDE Delays">Short IDE Delays</a></td>
 <td align="left">Drivers</td>
 <td align="left">Reduce length of IDE initialization delays</td>
 <td align="left">5 sec.</td>
@@ -280,7 +280,7 @@ document.
 <td align="left">Depends on required scripts</td>
 </tr>
 <tr class="odd">
-<td align="left"><a href="http://elinux.org/Parallel_RC_Scripts" title="Parallel RC Scripts">Parallel RC Scripts</a></td>
+<td align="left"><a href="../../../.././dev_portals/Boot_Time/Parallel_RC_Scripts/Parallel_RC_Scripts.md" title="Parallel RC Scripts">Parallel RC Scripts</a></td>
 <td align="left">RC scripts</td>
 <td align="left">Start init scripts in parallel</td>
 <td align="left">??</td>
@@ -294,7 +294,7 @@ document.
 <td align="left">.</td>
 </tr>
 <tr class="odd">
-<td align="left"><a href="http://elinux.org/Optimize_RC_Scripts" title="Optimize RC Scripts">Optimize RC Scripts</a></td>
+<td align="left"><a href="../../../.././dev_portals/Boot_Time/Optimize_RC_Scripts/Optimize_RC_Scripts.md" title="Optimize RC Scripts">Optimize RC Scripts</a></td>
 <td align="left">RC scripts</td>
 <td align="left">Use busybox, smaller shell, builtins, adjusted scripts</td>
 <td align="left">3 sec.</td>
@@ -308,7 +308,7 @@ document.
 <td align="left">requires long-term maintenance of the program</td>
 </tr>
 <tr class="odd">
-<td align="left"><a href="http://elinux.org/Application_XIP" title="Application XIP">Application XIP</a></td>
+<td align="left"><a href="../../../.././dev_portals/Boot_Time/Application_XIP/Application_XIP.md" title="Application XIP">Application XIP</a></td>
 <td align="left">User Space</td>
 <td align="left">Use Execute-In-Place for applications and libraries.</td>
 <td align="left">??</td>

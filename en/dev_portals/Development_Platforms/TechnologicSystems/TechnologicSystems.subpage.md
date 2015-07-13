@@ -1,2 +1,0 @@
-# TechnologicSystems
-# Technologic Systems

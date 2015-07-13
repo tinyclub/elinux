@@ -61,7 +61,7 @@ Documentation for KFT is available (as of 2.6.12) in
 Documentation/kft.txt, after applying the kft-all-in-one.patch.
 
 An online guide is provided at [Using Kernel Function
-Trace](http://eLinux.org/Using_Kernel_Function_Trace "Using Kernel Function Trace")
+Trace](../../../dbg_portal/kernel_trace_and_profile/Using_Kernel_Function_Trace/Using_Kernel_Function_Trace.md "Using Kernel Function Trace")
 
 Here's a presentation about KFT usage:
 
@@ -159,7 +159,7 @@ Platform was: SH7751R 240MHz (Memory Clock 80MHz)
 
 There are other technologies for doing call traces or kernel profiling
 that are similar to KFT. Some of these are mentioned on the [Kernel
-Instrumentation](http://eLinux.org/Kernel_Instrumentation "Kernel Instrumentation") page.
+Instrumentation](../../.././dev_portals/Boot_Time/Kernel_Instrumentation/Kernel_Instrumentation.md "Kernel Instrumentation") page.
 One that is very similar is a kernel trace mechanism for use with KDB. A
 patch was posted to LKML in January of 2002. See the message:
 [http://www.uwsg.iu.edu/hypermail/linux/kernel/0201.3/0888.html](http://www.uwsg.iu.edu/hypermail/linux/kernel/0201.3/0888.html)

@@ -22,7 +22,7 @@ Features:
 Through the expansion headers it is possible to attach an lcd display to
 it, as well as ps/2 keyboard.
 
-It uses [U-Boot](http://eLinux.org/U-Boot "U-Boot") as a bootloader.
+It uses [U-Boot](../../.././dev_portals/Development_Platforms/Tegra/Mainline_SW/U-Boot/Tegra/Mainline_SW/U-Boot.md "U-Boot") as a bootloader.
 
 [Buildroot](http://eLinux.org/Toolchains#Buildroot "Toolchains") offers out-of-the box
 support for this board. AVR32 support was removed in 02.2015.

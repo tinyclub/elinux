@@ -44,7 +44,7 @@ is part of the mainline kernel enabled by CONFIG\_PRINTK\_TIME. Previous
 versions can add it via a very simple patch. It works for bootup time
 measurements, or other places where you can just jam in a printk or two.
 
-See [Printk Times](http://eLinux.org/Printk_Times "Printk Times")
+See [Printk Times](../../.././dev_portals/Boot_Time/Printk_Times/Printk_Times.md "Printk Times")
 
 ### Boot Tracer
 

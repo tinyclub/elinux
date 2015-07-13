@@ -67,7 +67,7 @@ kernel = CE-LINUX-2.4.20
 
 loader = SH-LILO
 
-[DirectFB](http://eLinux.org/DirectFB "DirectFB") = DirectFB-0.9.20
+[DirectFB](../../.././dev_portals/Multimedia/DirectFB/DirectFB.md "DirectFB") = DirectFB-0.9.20
 
 [http://www.directfb.org/download/DirectFB/DirectFB-0.9.20.tar.gz](http://www.directfb.org/download/DirectFB/DirectFB-0.9.20.tar.gz)
 

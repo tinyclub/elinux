@@ -1,1 +1,0 @@
-# LART Project

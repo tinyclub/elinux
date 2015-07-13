@@ -1,4 +1,4 @@
-> From: [eLinux.org](http://eLinux.org/Japan_Technical_Jamboree_2 "http://eLinux.org/Japan_Technical_Jamboree_2")
+> From: [eLinux.org](../../.././dev_portals/Events/Japan_Technical_Jamboree/Japan_Technical_Jamboree.md_2 "../../.././dev_portals/Events/Japan_Technical_Jamboree/Japan_Technical_Jamboree.md_2")
 
 
 # Japan Technical Jamboree 2
@@ -98,11 +98,11 @@ JAPANESE LANGUAGE ONLY***
 <tbody>
 <tr class="odd">
 <td align="left">The 1st of Japan Technical Jamboree (including Announce, Memos)</td>
-<td align="left"><a href="http://elinux.org/Japan_Technical_Jamboree" title="Japan Technical Jamboree">Japan Technical Jamboree</a></td>
+<td align="left"><a href="../../.././dev_portals/Events/Japan_Technical_Jamboree/Japan_Technical_Jamboree.md" title="Japan Technical Jamboree">Japan Technical Jamboree</a></td>
 </tr>
 <tr class="even">
 <td align="left">The follow up meeting after the 1st Jamboree</td>
-<td align="left"><a href="http://elinux.org/Japan_Technical_Jamboree_Follow_Up" title="Japan Technical Jamboree Follow Up">Japan Technical Jamboree Follow Up</a></td>
+<td align="left"><a href="../../.././dev_portals/Events/Japan_Technical_Jamboree/Japan_Technical_Jamboree.md_Follow_Up" title="Japan Technical Jamboree Follow Up">Japan Technical Jamboree Follow Up</a></td>
 </tr>
 </tbody>
 </table>
@@ -258,13 +258,13 @@ JAPANESE LANGUAGE ONLY***
 
 -   それらをふまえて今回更に深い技術討論の場を持つ事とします。今回は皆様からサンプルコードや技術概要がわかる資料をお持ち頂ければと存じます。前回のミーティングに関しては、
     [Japan Technical
-    Jamboree](http://eLinux.org/Japan_Technical_Jamboree "Japan Technical Jamboree")
+    Jamboree](../../.././dev_portals/Events/Japan_Technical_Jamboree/Japan_Technical_Jamboree.md "Japan Technical Jamboree")
     を参照してください。
     -   -   -   Based on them, we are going to have deeper technical
                 discussion. This time, we would like you to attend with
                 your sample code or documents which present technical
                 issues. For the previous meeting, see [Japan Technical
-                Jamboree](http://eLinux.org/Japan_Technical_Jamboree "Japan Technical Jamboree").
+                Jamboree](../../.././dev_portals/Events/Japan_Technical_Jamboree/Japan_Technical_Jamboree.md "Japan Technical Jamboree").
 
 -   また、事前にどのような技術テーマについてディスカッションしたいかを皆様にお伝えできればそれぞれ事前準備も可能かと思います。**採り上げたいテーマを是非コーディネータにあらかじめお伝えください**。Wikiページのこのセクションに記載させていただきます。直接このセクションを編集していただいても結構です。
     -   -   -   If attendees know beforehand what technical issue you
@@ -299,27 +299,27 @@ JAPANESE LANGUAGE ONLY***
 
 ### A study how to register unusual device list (Toshiba)
 
-### [DirectFB](http://eLinux.org/DirectFB "DirectFB") 及び 3D Graphics （ルネサス提案） / (Renesus proposal)
+### [DirectFB](../../.././dev_portals/Multimedia/DirectFB/DirectFB.md "DirectFB") 及び 3D Graphics （ルネサス提案） / (Renesus proposal)
 
--   [DirectFB](http://eLinux.org/DirectFB "DirectFB") の実装状況説明
+-   [DirectFB](../../.././dev_portals/Multimedia/DirectFB/DirectFB.md "DirectFB") の実装状況説明
     （最新ベンチマークデータの公開など）
     -   -   -   Implementation status of
-                [DirectFB](http://eLinux.org/DirectFB "DirectFB") (The latest benchmark
+                [DirectFB](../../.././dev_portals/Multimedia/DirectFB/DirectFB.md "DirectFB") (The latest benchmark
                 result, etc.)
 
 -   組み込み Linux における 3D Graphics への要求などの審議
     -   -   -   Discussion on requirements for 3D Graphics in embedded
                 Linux.
 
--   [DirectFB](http://eLinux.org/DirectFB "DirectFB") による 2D／3D API
+-   [DirectFB](../../.././dev_portals/Multimedia/DirectFB/DirectFB.md "DirectFB") による 2D／3D API
     の統合の可能性審議
     -   -   -   Discussion on the possibility to integrate 2D/3D API
-                with [DirectFB](http://eLinux.org/DirectFB "DirectFB")
+                with [DirectFB](../../.././dev_portals/Multimedia/DirectFB/DirectFB.md "DirectFB")
 
--   このセッションで議論した内容を [DirectFB](http://eLinux.org/DirectFB "DirectFB")
+-   このセッションで議論した内容を [DirectFB](../../.././dev_portals/Multimedia/DirectFB/DirectFB.md "DirectFB")
     開発者等に Feedback しようと考えています
     -   -   -   The result of discussion in this session will be
-                feedbacked to the [DirectFB](http://eLinux.org/DirectFB "DirectFB")
+                feedbacked to the [DirectFB](../../.././dev_portals/Multimedia/DirectFB/DirectFB.md "DirectFB")
                 developers etc..
 
 ## ゲスト / Guests

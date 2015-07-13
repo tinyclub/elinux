@@ -136,7 +136,7 @@ Here is a short shell script for making a tiny-quilt release:
 ## How to use
 
 In the [Kernel Size Tuning
-Guide](http://eLinux.org/Kernel_Size_Tuning_Guide "Kernel Size Tuning Guide"), there is a
+Guide](../../.././dev_portals/System_Size/Kernel_Size_Tuning_Guide/Kernel_Size_Tuning_Guide.md "Kernel Size Tuning Guide"), there is a
 lot of information about how to measure kernel size, and how to use the
 kernel patches and configuration items provided by Linux-tiny.
 

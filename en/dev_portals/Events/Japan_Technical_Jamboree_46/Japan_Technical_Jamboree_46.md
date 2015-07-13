@@ -73,7 +73,7 @@
 
 -   Please look into the wiki page. / 下記のWikiページをご覧ください。
     -   [Japan Technical Jamboree
-        45](http://eLinux.org/Japan_Technical_Jamboree_45 "Japan Technical Jamboree 45")
+        45](../../.././dev_portals/Events/Japan_Technical_Jamboree_45/Japan_Technical_Jamboree_45.md "Japan Technical Jamboree 45")
 
 ## Hash tag on Twitter
 

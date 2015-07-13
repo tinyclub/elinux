@@ -56,7 +56,7 @@ From the UCL web page, it states:
 
 Another method of speeding up the kernel load phase of bootup is to use
 [DMA Copy Of Kernel On
-Startup](http://eLinux.org/DMA_Copy_Of_Kernel_On_Startup "DMA Copy Of Kernel On Startup")
+Startup](../../.././dev_portals/Boot_Time/DMA_Copy_Of_Kernel_On_Startup/DMA_Copy_Of_Kernel_On_Startup.md "DMA Copy Of Kernel On Startup")
 
 ## How to implement or use
 

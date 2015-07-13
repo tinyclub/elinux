@@ -86,7 +86,7 @@ project fall into 4 categories:
 ### Train and Educate participants
 
 -   Collect resource for mainlinining training
-    -   See [Kernel Mainlining](http://eLinux.org/Kernel_Mainlining "Kernel Mainlining")
+    -   See [Kernel Mainlining](../../../../dev_portals/Kernel_Mainlining/Kernel_Mainlining.md "Kernel Mainlining")
 -   Convince management to provide funding and/or resources for this
     work
     -   Produce a white paper on obstacles (see above)

@@ -1,2 +1,1 @@
-# Reciva Barracuda
-* S3C2410
+S3C2410

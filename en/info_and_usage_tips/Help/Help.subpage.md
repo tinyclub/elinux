@@ -1,40 +1,34 @@
-# Help:Contents
-## Reading
-* Help:Navigation
-* Help:Searching
-* Help:Tracking_changes
-* Help:Watchlist
-## Editing
-* Help:Editing_pages
-* Help:Starting_a_new_page
-* Help:Formatting
-* Help:Links
-* Help:User_page
-* Help:Talk_pages
-* Help:Signatures
-### Advanced editing
-* Help:Images
-* Help:Tables
-* Help:Subpages
-* Help:Managing_files
-* Help:Moving_a_page
-* Help:Redirects
-* Help:Deleting_a_page
-* Help:Protected_pages
-* Help:Templates
-* Help:Variables
-* Help:Namespaces
-* Help:Special_pages
-* Help:External_searches
-* Help:Bots
-### Personal customization
-* Help:Preferences
-* Help:Skins
-## Wiki administration
-* Help:Sysops_and_permissions
-* Help:Protecting_and_unprotecting_pages
-* Help:Sysop_deleting_and_undeleting
-* Help:Patrolled_edits
-* Help:Blocking_users
-* Help:Range_blocks
-* Help:Assigning_permissions
+Help:Assigning_permissions
+Help:Blocking_users
+Help:Bots
+Help:Deleting_a_page
+Help:Editing_pages
+Help:External_searches
+Help:Formatting
+Help:Images
+Help:Links
+Help:Managing_files
+Help:Moving_a_page
+Help:Namespaces
+Help:Navigation
+Help:Patrolled_edits
+Help:Preferences
+Help:Protected_pages
+Help:Protecting_and_unprotecting_pages
+Help:Range_blocks
+Help:Redirects
+Help:Searching
+Help:Signatures
+Help:Skins
+Help:Special_pages
+Help:Starting_a_new_page
+Help:Subpages
+Help:Sysop_deleting_and_undeleting
+Help:Sysops_and_permissions
+Help:Tables
+Help:Talk_pages
+Help:Templates
+Help:Tracking_changes
+Help:User_page
+Help:Variables
+Help:Watchlist

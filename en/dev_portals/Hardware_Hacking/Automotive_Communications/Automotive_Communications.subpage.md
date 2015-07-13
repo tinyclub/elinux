@@ -1,4 +1,3 @@
-# Automotive Communications
-* CAN_Bus
-* BEAN_Bus
-* AVC-LAN
+AVC-LAN
+BEAN_Bus
+CAN_Bus

@@ -214,8 +214,8 @@ follows security conferences and competitions.
 
 Since November 2005, he has become the maintainer of the Linux Trace
 Toolkit (LTT) project, taking over the development with the new
-[LTTng](http://eLinux.org/LTTng "LTTng"). He is the author of Linux Trace Toolkit Next
-Generation ([LTTng](http://eLinux.org/LTTng "LTTng")) project which started in may 2005
+[LTTng](../../../dbg_portal/kernel_trace_and_profile/LTTng/LTTng.md "LTTng"). He is the author of Linux Trace Toolkit Next
+Generation ([LTTng](../../../dbg_portal/kernel_trace_and_profile/LTTng/LTTng.md "LTTng")) project which started in may 2005
 ([http://ltt.polymtl.ca](http://ltt.polymtl.ca)). He is the main
 developer of Linux Trace Toolkit Viewer (LTTV) since the project started
 in 2003. He is currently completing a M.Sc.A. in Computer Engineering at
@@ -237,7 +237,7 @@ Ecole Polytechnique de Montr�al.
 
 Rob Landley is a Senior Linux Engineer at [Time
 Sys](http://eLinux.org/Time_Sys "Time Sys") Corporation and the new maintainer of
-[BusyBox](http://eLinux.org/BusyBox "BusyBox"). He first encountered Linux when the SLS
+[BusyBox](../../.././dev_portals/Boot_Time/BusyBox/BusyBox.md "BusyBox"). He first encountered Linux when the SLS
 disks came across Fidonet in 1993, and has been building various Linux
 systems from source code for six years. He co-founded a combination
 Linux Expo and Science Fiction convention (Penguicon) because that

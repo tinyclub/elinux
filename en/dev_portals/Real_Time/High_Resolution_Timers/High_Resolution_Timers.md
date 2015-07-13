@@ -153,7 +153,7 @@ similar) during startup.
 
 You can also examine the timer\_list, and see whether specific clocks
 are listed as supporting high resolution. Here is a dump of
-/proc/timer\_list on an [OSK](http://eLinux.org/OSK "OSK") (ARM-based) development board,
+/proc/timer\_list on an [OSK](../../.././dev_portals/Development_Platforms/OSK/OSK.md "OSK") (ARM-based) development board,
 showing the clocks configured for high resolution.
 
 -   -   cat /proc/timer\_list

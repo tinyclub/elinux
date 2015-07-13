@@ -1,15 +1,14 @@
-# Help:Editing
-* Help:Editing_pages
-* Help:Starting_a_new_page
-* Help:Formatting
-* Help:Links
-* Help:User_page
-* Help:Talk_pages
-* Help:Images
-* Help:Tables
-* Help:Templates
-* Help:Variables
-* Help:Managing_files
-* Help:Moving_a_page
-* Help:Redirects
-* Help:Deleting_a_page
+Help:Deleting_a_page
+Help:Editing_pages
+Help:Formatting
+Help:Images
+Help:Links
+Help:Managing_files
+Help:Moving_a_page
+Help:Redirects
+Help:Starting_a_new_page
+Help:Tables
+Help:Talk_pages
+Help:Templates
+Help:User_page
+Help:Variables

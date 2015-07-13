@@ -131,7 +131,7 @@ TOMOYO
 
 RSBAC
 
-[SELinux](http://eLinux.org/SELinux "SELinux")
+[SELinux](../../.././dev_portals/Security/SELinux/SELinux.md "SELinux")
 
 Kernel size (Image)
 
@@ -189,7 +189,7 @@ TOMOYO
 
 RSBAC
 
-[SELinux](http://eLinux.org/SELinux "SELinux")
+[SELinux](../../.././dev_portals/Security/SELinux/SELinux.md "SELinux")
 
 null call
 
@@ -401,7 +401,7 @@ TOMOYO
 
 RSBAC
 
-[SELinux](http://eLinux.org/SELinux "SELinux")
+[SELinux](../../.././dev_portals/Security/SELinux/SELinux.md "SELinux")
 
 execl
 
@@ -548,7 +548,7 @@ shell scripts (16)
 <td align="left">LIDS</td>
 <td align="left">TOMOYO</td>
 <td align="left">RSBAC</td>
-<td align="left"><a href="http://elinux.org/SELinux" title="SELinux">SELinux</a></td>
+<td align="left"><a href="../../.././dev_portals/Security/SELinux/SELinux.md" title="SELinux">SELinux</a></td>
 <td align="left">App Armor</td>
 </tr>
 <tr class="even">

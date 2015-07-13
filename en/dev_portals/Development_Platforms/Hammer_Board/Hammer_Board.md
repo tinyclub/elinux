@@ -22,7 +22,7 @@
 [TinCanTools Website](http://www.tincantools.com)
 
 The Hammer CPU board from [TinCanTools](http://www.tincantools.com),is
-based upon Samsung’s [S3C2410](http://eLinux.org/S3C2410 "S3C2410") ARM920T processor. It
+based upon Samsung’s [S3C2410](../../.././dev_portals/Development_Platforms/S3C2410/S3C2410.md "S3C2410") ARM920T processor. It
 gives you the power of an ARM9 processor in an easy to use modular
 package. The Hammer CPU board fits into a standard 40 pin DIP socket. It
 is an ideal platform for code development and prototyping in an embedded

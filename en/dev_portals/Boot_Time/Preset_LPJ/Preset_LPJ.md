@@ -189,7 +189,7 @@ Details:
 -   CPU: FR-V FR450 core running at 360 MHz
 
 Please also refer to the graphic chart in [DMA Copy Of Kernel On
-Startup](http://eLinux.org/DMA_Copy_Of_Kernel_On_Startup "DMA Copy Of Kernel On Startup").
+Startup](../../.././dev_portals/Boot_Time/DMA_Copy_Of_Kernel_On_Startup/DMA_Copy_Of_Kernel_On_Startup.md "DMA Copy Of Kernel On Startup").
 
 ## Future Work
 
