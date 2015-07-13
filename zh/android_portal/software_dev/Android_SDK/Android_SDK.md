@@ -12,7 +12,7 @@
 ## 应用SDK
 
 Used for creating high level portable Java code.
-
+用于开发高层可移植Java代码
 
 1.  [Android SDK](http://developer.android.com/sdk/index.html)
     (Required)
@@ -43,15 +43,19 @@ Dashboard](http://developer.android.com/resources/dashboard/platform-versions.ht
 **各个版本** [常规更新面板](http://developer.android.com/resources/dashboard/platform-versions.html)
 
 Top 3 SDK in used by users as of 4/13/2010
+截止到4/13/2010用户使用最多的SDK前三位
 
 1.  1.5
 2.  1.6
 3.  2.0
 
 ## Native SDK
+## 原生SDK
 
 Used to create a portable shared object library file for your C/C++ or
 asm code inside your Java application
+用于您的Java应用程序中创建一个可移植的共享对象库文件的C / c++或
+asm代码
 
 1.  [Android NDK](http://developer.android.com/sdk/ndk/index.html)
 
