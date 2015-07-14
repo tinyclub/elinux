@@ -1,11 +1,15 @@
 
 # 嵌入式 Linux 知识库翻译小组用户手册
 
+* [翻译计划](#plan)
+* [翻译过程](#procedure)
+
+<span id="pan"></span>
 ## 翻译计划
 
 该翻译计划由 [@泰晓科技](http://elinux.org) 于 2015年7月3日 发起：
 
-> \#泰晓原译\# \#eLinux翻译计划\# 现筹备10人小组，进行 eLinux.org 的翻译工作，持续发布为 gitbook 电子书，并在获得 Linux 基金会许可后出版为纸质书。参与翻译，您将：1，系统学习嵌入式Linux，2，结识业界一线工程师，3，获得更多发展机会。关注@泰晓科技 微博私信报名，择优录取。
+> \#泰晓原译\# [\#eLinux翻译计划\#](http://t.cn/RLqNvGt) 现筹备10人小组，进行 eLinux.org 的翻译工作，持续发布为 gitbook 电子书，并在获得 Linux 基金会许可后出版为纸质书。参与翻译，您将：1，系统学习嵌入式Linux，2，结识业界一线工程师，3，获得更多发展机会。关注@泰晓科技 微博私信报名，择优录取。
 
 随后做了大量准备工作：
 
@@ -28,6 +32,7 @@
 
 * 理清一些基本的翻译约定
 
+<span id="procedure"></span>
 ## 翻译过程
 
 * 注册并登录 github fork [代码仓库](https://github.com/tinyclub/elinux)
@@ -35,8 +40,9 @@
 * 注册 gitbook.com，在 gitbook.com 建立书籍并绑定到 github.com 刚 fork 的仓库。
 
 * clone 代码仓库并切到 develop 分支
-    * `$ git clone https://github.com/tinyclub/elinux.git`
-    * `$ cd elinux && git checkout develop`
+
+        git clone https://github.com/tinyclub/elinux.git
+        cd elinux && git checkout develop
 
 * 找到自己认领的模块，先翻译一级链接，再翻译二级链接
 
@@ -48,17 +54,20 @@
         * 部分代码显示混乱，请缩进或者用两个 \`\`\` 括起来。
         * 部分内部目录链接无法跳转到文章中或者外链失效，请检查修复。
 
-* 把 `en/` 下的英文原稿同步到 `zh/` 下
+* 把 `en/` 下的英文原稿同步到 `zh/` 下。
+
+    * *注*：请不要直接翻译 `en/` 下的内容，只翻译 `zh/` 下的即可。
+
 
 * 翻译前请参照如下安装 gitbook 环境，以 Ubuntu 为例
 
-    * `$ sudo apt-get install nodejs`
-    * `$ sudo ln -fs /usr/bin/nodejs /usr/bin/node`
-    * `$ sudo /usr/bin/npm install gitbook-cli -g`
-    * `$ sudo apt-get install calibre`
-    * `$ sudo apt-get install fonts-arphic-gbsn00lp`
+        $ sudo aptitude install -y retext git nodejs npm
+        $ sudo ln -fs /usr/bin/nodejs /usr/bin/node
+        $ aptitude install -y calibre fonts-arphic-gbsn00lp
+        $ npm install gitbook-cli -g
 
     *注*：calibre 提供 ebook-converter，用于生成 pdf 等格式。
+
 
 * 开始翻译
 
@@ -69,7 +78,7 @@
 * 翻译时
 
     * 请尽量遵守英文原稿的格式
-    * 请保留：(#xxxx)，这个内容会用于自动构建中文链接
+    * 不要翻译目录里头的：`(#xxxx)`，`build-toc.sh` 用它自动重构中文链接
     * 请规范使用 [Markdown 语法][markdown]
     * 英文短语前后须加空格，以便获得更好的视觉感受
     * 代码片段上下须加空行，代码片段可以用 \`\`\` 前后括起来，请参考[Markdown][markdown] `Code and Syntax Highlighting` 一节。
@@ -77,21 +86,30 @@
     * 碰到专业名词，特定缩写，不需要翻译。
     * 不保留英文原文。
     * 请在文件头注明如下信息（校订请列出所有提供了反馈并被采纳的同学，翻译和校订以@lzufalcon为例）：
-```
-                > 来自：[eLinux.org](http://elinux.org/Boot_Time.md)
-                > 翻译：[@lzulfacon](https://github.com/lzufalcon)
-                > 校订：[@lzulfacon](https://github.com/lzufalcon)
 
-```
+	> 来源：[eLinux.org](http://elinux.org/Boot_Time.md)<br/>
+	> 翻译：[@lzulfacon](https://github.com/lzufalcon)<br/>
+	> 校订：[@lzulfacon](https://github.com/lzufalcon)<br/>
+
+    * 重构文章内目录
+
+                export PATH=$PATH:/path/to/elinux/tools
+                build-toc.sh xxx.md
 
 * 翻译后预览和编译
 
     * 在本地编写可用 Retext 预览，也可用 pandoc 转为 html
-        * `$ pandoc -f markdown -t html xxx.markdown > xxx.html`
+
+                pandoc -f markdown -t html xxx.markdown > xxx.html
+
     * 编译可选方案
+
         * 本地编译
-            * `$ make && make pdf` 或者 `gitbook build && gitbook pdf`
+
+                make && make pdf 或者 gitbook build && gitbook pdf
+
         * 直接提交到 github，会自动触发 gitbook.com 构建
+
         * 添加 Travis-CI 自动构建支持
             * 登录 <https://travis-ci.org/>
             * 绑定 github 帐号并添加上述 fork 过来的 elinux 项目
@@ -104,8 +122,9 @@
 * 根据评审人员反馈重新修改，直到被 Merge 到主线
 
 * 及时同步远程 master 分支并 rebase develop 到 master 上
-    * `$ git checkout master && git pull`
-    * `$ git checkout develop`
-    * `$ git rebase --onto master --root`
+
+        git checkout master && git pull
+        git checkout develop
+        git rebase --onto master --root
 
 [markdown]:http://help.gitbook.com/format/markdown.html

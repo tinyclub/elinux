@@ -3,9 +3,14 @@
 
 ## Install
 
-    $ aptitude install -y npm
-    $ npm install gitbook-cli -g
+    $ sudo aptitude install -y retext git nodejs npm
+    $ sudo ln -fs /usr/bin/nodejs /usr/bin/node
     $ aptitude install -y calibre fonts-arphic-gbsn00lp
+    $ npm install gitbook-cli -g
+
+## Download
+
+    $ git clone https://github.com/tinyclub/elinux.git && cd elinux/
 
 ## Build
 

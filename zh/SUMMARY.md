@@ -1,5 +1,10 @@
 # Summary
 
+* 译者须知
+
+    * [如何编译](doc/BUILD.md)
+    * [译者手册](doc/README.md)
+
 * [Development Portals](dev_portals/README.md)
 
     * [Firmware](dev_portals/Firmware/Firmware.md)
