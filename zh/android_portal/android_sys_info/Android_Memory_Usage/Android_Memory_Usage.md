@@ -36,7 +36,7 @@ Here's a screenshot:
 
 [![Android memory usage on an OMAP EVM platform, running eclair, as
 shown by
-ddms](http://eLinux.org/images/4/49/Ddms-memory-usage1-png)](http://eLinux.org/FileDdms-memory-usage1-png "Android memory usage on an OMAP EVM platform, running eclair, as shown by ddms")
+ddms](http://eLinux.org/images/4/49/Ddms-memory-usage1.png)](http://eLinux.org/File:Ddms-memory-usage1.png "Android memory usage on an OMAP EVM platform, running eclair, as shown by ddms")
 
 Note that you can get the numbers for each process by hovering your
 mouse over a particular pie slice. Numbers are shown in K and
@@ -97,8 +97,8 @@ Here is procrank's usage:
         -r  Sort by RSS.
         -p  Sort by PSS.
         -u  Sort by USS.
-            (Default sort order is PSS)
-        -R  Reverse sort order (default is descending)-
+            (Default sort order is PSS.)
+        -R  Reverse sort order (default is descending).
         -w  Display statistics for working set only.
         -W  Reset working set of all processes.
         -h  Display this help screen.
@@ -107,13 +107,13 @@ And here is some sample output:
 
     # procrank
       PID      Vss      Rss      Pss      Uss  cmdline
-     1217   36848K   35648K   17983K   13956K  system-server
-     -6   32200K   32200K   14048K   10116K  android.process.acore
-     1189   26920K   26920K    -3K    5500K  zygote
-     1321   20-K   20-K    4743K    2344K  android.process.media
+     1217   36848K   35648K   17983K   13956K  system_server
+     1276   32200K   32200K   14048K   10116K  android.process.acore
+     1189   26920K   26920K    9293K    5500K  zygote
+     1321   20328K   20328K    4743K    2344K  android.process.media
      1356   20360K   20360K    4621K    2148K  com.android.email
      1303   20184K   20184K    4381K    1724K  com.android.settings
-     -1   19888K   19888K    -7K    1764K  com.android.inputmethod.latin
+     1271   19888K   19888K    4297K    1764K  com.android.inputmethod.latin
      1332   19560K   19560K    3993K    1620K  com.android.alarmclock
      1187    5068K    5068K    2119K    1476K  /system/bin/mediaserver
      1384     436K     436K     248K     236K  procrank
@@ -125,7 +125,7 @@ And here is some sample output:
       757     352K     352K     117K      92K  /system/bin/dbus-daemon
       760     404K     404K     104K      80K  /system/bin/keystore
       759     312K     312K     102K      88K  /system/bin/installd
-      749    -8K    -8K      96K      84K  /system/bin/servicemanager
+      749     288K     288K      96K      84K  /system/bin/servicemanager
       752     244K     244K      71K      60K  /system/bin/debuggerd
 
 In this example, it shows that the native daemons and programs are an
@@ -139,7 +139,7 @@ You can see very detailed per-process or systemwide memory information
 with smem.
 
 See [Using smem on
-Android](http://eLinux.org/Using-smem-on-Android "Using smem on Android")
+Android](http://eLinux.org/Using_smem_on_Android "Using smem on Android")
 
 ## Dalvik Heap
 
@@ -154,7 +154,7 @@ collection on the heap. There appears to be a separate thread (called
 the HeapWorker) in each VM process that performs the garbage collection
 actions. (See toolbox ps -t) [need more notes on the garbage collection]
 
-Dan Borstein said this about heap sharing<sup>[[1]](#cite-note-1)</sup>:
+Dan Borstein said this about heap sharing<sup>[[1]](#cite_note-1)</sup>:
 
 It's used in Android to amortize the RAM footprint of the large amount
 of effectively-read-only data (technically writable but rarely actually
@@ -163,7 +163,7 @@ processes. 1000+ classes get preloaded by the system at boot time, and
 each class consumes at least a little heap for itself, including often
 pointing off to a constellation of other objects. The heap created by
 the preloading process gets shared copy-on-write with each spawned VM
-process (but again doesn't in practice get written much)- This saves
+process (but again doesn't in practice get written much). This saves
 hundreds of kB of dirty unpageable RAM per process and also helps speed
 up process startup.
 
@@ -172,7 +172,7 @@ up process startup.
 ## Debugging Android application memory usage
 
 See an excellent article by Dianne Hackborn at:
-[http://stackoverflow.com/questions/-8208/how-to-discover-memory-usage-of-my-application-in-android/-9813\#-9813](http//stackoverflow-com/questions/-8208/how-to-discover-memory-usage-of-my-application-in-android/-9813#-9813)
+[http://stackoverflow.com/questions/2298208/how-to-discover-memory-usage-of-my-application-in-android/2299813\#2299813](http://stackoverflow.com/questions/2298208/how-to-discover-memory-usage-of-my-application-in-android/2299813#2299813)
 
 ### How to debug native process memory allocations
 
@@ -200,14 +200,14 @@ be used in the emulator.)
 By default, the standard malloc/free/calloc/realloc/memalign routines
 are used. By setting libc.debug.malloc, different routines are used,
 which check for certain kinds of memory errors (such as leaks and
-overruns). This is done by loading a separate shared library (-so) with
+overruns). This is done by loading a separate shared library (.so) with
 these different routines.
 
-The shared libraries are named: /system/lib/libc\-malloc\-debug\-leak.so
-and /system/lib/libc\-malloc\-debug\-qemu.so
+The shared libraries are named: /system/lib/libc\_malloc\_debug\_leak.so
+and /system/lib/libc\_malloc\_debug\_qemu.so
 
 (Information was obtained by looking at
-\<android-source-root\>/bionic/libc/bionic/malloc\-debug\-common.c)
+\<android-source-root\>/bionic/libc/bionic/malloc\_debug\_common.c)
 
 Supported values for libc.debug.malloc (debug level values) are:
 
@@ -221,12 +221,12 @@ devices.
 
 ## References
 
-1.  [↑](#cite-ref-1) comment by dan borstein, jan 2009 to blog article
+1.  [↑](#cite_ref-1) comment by Dan Borstein, Jan 2009 to blog article
     [Dalvik vs.
-    Mono](http//www-koushikdutta.com/2009/01/dalvik-vs-mono-html)
+    Mono](http://www.koushikdutta.com/2009/01/dalvik-vs-mono.html)
 
 
-[Category](http://eLinux.org/SpecialCategories "Special:Categories"):
+[Category](http://eLinux.org/Special:Categories "Special:Categories"):
 
--   [Android](http://eLinux.org/CategoryAndroid "Category:Android")
+-   [Android](http://eLinux.org/Category:Android "Category:Android")
 

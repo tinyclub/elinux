@@ -1,35 +1,6 @@
-# Glossary
-## Topic-specific Glossaries
-* Boot-up_Time_Definition_Of_Terms
-* Power_Management_Definition_Of_Terms
-* Real_Time_Terms
-* Security_Terms
-## A
-## B
-## C
-## D
-## E
-* Events
-## F
-## G
-## H
-## I
-## J
-* JTAG
-* JTAG
-## K
-## L
-## M
-## N
-## O
-## P
-## Q
-## R
-## S
-## T
-## U
-## V
-## W
-## X
-## Y
-## Z
+Boot-up_Time_Definition_Of_Terms
+Events
+JTAG
+Power_Management_Definition_Of_Terms
+Real_Time_Terms
+Security_Terms

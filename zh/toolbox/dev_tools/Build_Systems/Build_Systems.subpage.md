@@ -1,9 +1,6 @@
-# Build Systems
-* Open_Embedded
-* Yocto_Project
-* Buildroot
-* Scratchbox
-* Open_Wrt
-* Yocto_Project
-* Open_Embedded
-* Toolchains
+Buildroot
+Open_Embedded
+Open_Wrt
+Scratchbox
+Toolchains
+Yocto_Project

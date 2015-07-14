@@ -31,7 +31,7 @@ allocations. A log file is created, which can then be scanned by the
 allocations. If source is available it can show the source line where
 the problem occurred. mtrace can be used on both C and C++ programs.
 
-See the [mtrace wikipedia article](http//wikipedia-org/wiki/Mtrace) for
+See the [mtrace wikipedia article](http://wikipedia.org/wiki/Mtrace) for
 more information.
 
 ### memwatch
@@ -48,7 +48,7 @@ has been freed and reading data from outside the allocated memory.
 
 mpatrol appears to be like memwatch.
 
-See [http://mpatrol.sourceforge.net/](http//mpatrol-sourceforge.net/)
+See [http://mpatrol.sourceforge.net/](http://mpatrol.sourceforge.net/)
 
 ### dmalloc
 
@@ -63,7 +63,7 @@ This library can be used without modifying the existing program, and
 uses environment variables to control it's operation and set of issues
 to log.
 
-It's home page is at: [http://dmalloc.com/](http//dmalloc-com/)
+It's home page is at: [http://dmalloc.com/](http://dmalloc.com/)
 
 See Cal Erickson's article (link below, page 2) for information about
 using this system.
@@ -73,7 +73,7 @@ using this system.
 dbgmem looks like another dynamic library replacement tool, similar to
 dmalloc (but possibly having less features)
 
-See [http://dbgmem.sourceforge.net/](http//dbgmem-sourceforge.net/)
+See [http://dbgmem.sourceforge.net/](http://dbgmem.sourceforge.net/)
 
 ### valgrind
 
@@ -86,18 +86,18 @@ See [Valgrind](http://eLinux.org/Valgrind "Valgrind")
 
 ### Electric Fence
 
-See [Electric Fence](http://eLinux.org/Electric-Fence "Electric Fence")
+See [Electric Fence](http://eLinux.org/Electric_Fence "Electric Fence")
 
 ## Tutorials or Overviews
 
 -   [Memory Leak Detection in Embedded
-    Systems](http//www-linuxjournal.com/article/6059) by Cal Erickson,
+    Systems](http://www.linuxjournal.com/article/6059) by Cal Erickson,
     Linux Journal, September 2002
     -   This article mentions mtrace, memwatch and dmalloc
 
 
-[Category](http://eLinux.org/SpecialCategories "Special:Categories"):
+[Category](http://eLinux.org/Special:Categories "Special:Categories"):
 
 -   [Development
-    Tools](http://eLinux.org/CategoryDevelopment-Tools "Category:Development Tools")
+    Tools](http://eLinux.org/Category:Development_Tools "Category:Development Tools")
 

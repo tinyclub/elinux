@@ -1,14 +1,20 @@
 #!/bin/bash
 
-m2m=mediawiki-2-markdown.sh
+TOP_DIR=$(dirname `readlink -f $0`)
+
+m2m=${TOP_DIR}/mediawiki-2-markdown.sh
 
 page=$1
 
 page=$(echo ${page} | sed -e "s/\.md//g")
 
-mkdir $page
+mkdir -p $page
 
-echo "{% include \"./${page}/${page}.md\" %}" > ${page}.md
+base=$(basename $page)
+
+# echo "{% include \"./${page}/${page}.md\" %}" > ${page}.md
+git rm ${base}.md 2> /dev/null
+rm -rf ${base}.md 2> /dev/null
 
 pushd $page
 

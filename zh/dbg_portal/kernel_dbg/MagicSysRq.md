@@ -1,1 +1,0 @@
-{% include "./MagicSysRq/MagicSysRq.md" %}

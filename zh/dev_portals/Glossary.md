@@ -1,1 +1,0 @@
-{% include "./Glossary/Glossary.md" %}

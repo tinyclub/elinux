@@ -26,7 +26,7 @@ The steps mentioned here are with reference to 2.6.26 Kernel. The main
 reason is KGDB code is merged into Linux tree from 2.6.26-RC5 kernel.
 (As a side note, for kernel \< 2.6.26-RC5, you have to get kgdb patch
 from [
-[http://kgdb.linsyssoft.com/kernel.htm](http//kgdb-linsyssoft.com/kernel.htm)]
+[http://kgdb.linsyssoft.com/kernel.htm](http://kgdb.linsyssoft.com/kernel.htm)]
 and apply them to kernel)
 
 ## Hardware Requirements
@@ -40,24 +40,24 @@ each. Basically, you will be sending "Debugging Commands" from
 
 ## Preparing Kernel to be Debugged
 
-1. Download the source of kernel (for e-g., 2.6.26.2)from kernel.org
+1. Download the source of kernel (for e.g., 2.6.26.2)from kernel.org
 
 2. Recompile the Kernel on "DEVELOPMENT MACHINE". Go to Kernel Hacking
 and Enable the following options:
 
     -*- Magic SysRq key
     [*] Compile the kernel with debug info
-    [*] KGDB: kernel debugging with remote gdb  ->
+    [*] KGDB: kernel debugging with remote gdb  --->
 
 And in KGDB:
 
-    - KGDB: kernel debugging with remote gdb
+    --- KGDB: kernel debugging with remote gdb
     <*>   KGDB: use kgdb over the serial console
     [ ]   KGDB: internal test suite
 
 3. Build kernel and modules
 
-        make -j 12 && make modules && make modules-install
+        make -j 12 && make modules && make modules_install
 
 4. Transfer the vmlinux and system.map and initrd.img files on "TEST
 MACHINE".
@@ -65,10 +65,10 @@ MACHINE".
 5. Now, edit the GRUB entry for that kernel on "TEST MACHINE". Add
 kernel options/kernel parameters like kgdbwait and kgdboc=ttyS0,115200
 
-       For e.g., kernel /vmlinux ro root=LABEL=/ rhgb quiet crashkernel=M@16M kgdbwait kgdboc=ttyS0,115200
+       For e.g., kernel /vmlinux ro root=LABEL=/ rhgb quiet crashkernel=128M@16M kgdbwait kgdboc=ttyS0,115200
 
-kgdbwait - \> This will make Kernel to wait on boot time and will
-expect someone to connect to it and give further commands kgdboc -\>
+kgdbwait -- \> This will make Kernel to wait on boot time and will
+expect someone to connect to it and give further commands kgdboc --\>
 This is a KGDB I/O driver and we are supplying two arguments. ttyS0 will
 tell that communication will happen on Serial Port 0 and 115200 is the
 baudrate.
@@ -97,7 +97,7 @@ over your running kernel from "DEVELOPMENT MACHINE", You have to send
 MANUALLY on TEST machine SysRq command. So, on "TEST MACHINE" press
 SysRq + g
 
-       (i-e., press "ALT" key then Press "PrintScreen" Key and then Press "g" key)
+       (i.e., press "ALT" key then Press "PrintScreen" Key and then Press "g" key)
 
 ## There are several possible problems that you may face
 
@@ -121,7 +121,7 @@ between the console and kgdb.
        The kgdb Docbook refers to using a proxy to split the serial port data stream
        between gdb and the console terminal emulator.  proxy programs include:
 
-         kgdb demux (kdmx) Media:Kdmx-v140904a.tar.gz
+         kgdb demux (kdmx) Media:Kdmx_v140904a.tar.gz
                             (moved to agent-proxy git)
          kgdb demux (kdmx)
                             kdmx at elinux.org
@@ -131,18 +131,18 @@ between the console and kgdb.
                             https://git.kernel.org/cgit/utils/kernel/kgdb/agent-proxy.git/
                             git clone git://git.kernel.org/pub/scm/utils/kernel/kgdb/agent-proxy.git/
 
-       (frowand I have been using kdmx successfully-  I have not tried using agent-proxy.)
+       (frowand: I have been using kdmx successfully.  I have not tried using agent-proxy.)
 
 ## Using an IDE
 
 You can debug Linux Kernel over KGDB with Visual Studio using the
 VisualKernel plugin. [This
-tutorial](http//visualkernel-com/tutorials/kgdb) shows how to use it
+tutorial](http://visualkernel.com/tutorials/kgdb) shows how to use it
 with KGDB.
 
 
-[Category](http://eLinux.org/SpecialCategories "Special:Categories"):
+[Category](http://eLinux.org/Special:Categories "Special:Categories"):
 
 -   [Development
-    Tools](http://eLinux.org/CategoryDevelopment-Tools "Category:Development Tools")
+    Tools](http://eLinux.org/Category:Development_Tools "Category:Development Tools")
 

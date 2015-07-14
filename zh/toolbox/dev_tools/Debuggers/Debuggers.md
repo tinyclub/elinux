@@ -12,8 +12,8 @@ Here are some debuggers howto and links:
     -   [OpenOCD](http://eLinux.org/OpenOCD "OpenOCD") local pages.
 -   [GDB - The GNU debugger](http://eLinux.org/GDB "GDB")
 -   [DDD - Data Display Debugger](http://www.gnu.org/software/ddd/)
--   [kgdb - kernel source level debugger](http://eLinux.org/Kgdb "Kgdb")
--   [KDB](http://eLinux.org/KDB "KDB") - In-kernel debugger
+-   [kgdb - kernel source level debugger](../../../dbg_portal/kernel_dbg/Kgdb/Kgdb.md "Kgdb")
+-   [KDB](../../../dbg_portal/kernel_dbg/KDB/KDB.md "KDB") - In-kernel debugger
 -   [valgrind - memory, cache and other debuggers and
     profilers](http://eLinux.org/Valgrind "Valgrind")
 

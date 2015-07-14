@@ -1,0 +1,2 @@
+# Leapster Explorer Camera
+## Chips

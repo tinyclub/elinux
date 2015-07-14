@@ -31,7 +31,7 @@ separate from the Linux kernel's own logging system, which is accessed
 using 'dmesg' or '/proc/kmsg'. However, the logging system does store
 messages in kernel buffers.
 
-[![](http://eLinux.org/images/c/c9/Android-logging-kmc-kobayashi-png)](http://eLinux.org/FileAndroid-logging-kmc-kobayashi-png)
+[![](http://eLinux.org/images/c/c9/Android-logging-kmc-kobayashi.png)](http://eLinux.org/File:Android-logging-kmc-kobayashi.png)
 
 image by Tetsuyuki Kobabayshi, of Kyoto Microcomputer Co.
 
@@ -78,36 +78,36 @@ buffers when the the log class or library for that buffer is used.
 ## Kernel driver
 
 The kernel driver for logging is called the 'logger'. See [Android
-logger](http://eLinux.org/Android-logger "Android logger")
+logger](http://eLinux.org/Android_logger "Android logger")
 
 ## System and Application logging
 
 ### Application log
 
 An Android application includes the [android.util.Log
-class](http//developer-android.com/reference/android/util/Log-html),
+class](http://developer.android.com/reference/android/util/Log.html),
 and uses methods of this class to write messages of different priority
 into the log.
 
 Java classes declare their tag statically as a string, which they pass
 to the log method. The log method used indicates the message "severity"
-(or log level)- Messages can be filtered by tag or priority when the
-logs are processed by retrieval tools (logcat)-
+(or log level). Messages can be filtered by tag or priority when the
+logs are processed by retrieval tools (logcat).
 
 ### Event log
 
 Event logs messages are created using [android.util.EventLog
-class](http//developer-android.com/reference/android/util/EventLog-html),
+class](http://developer.android.com/reference/android/util/EventLog.html),
 which create binary-formatted log messages. Log entries consist of
 binary tag codes, followed by binary parameters. The message tag codes
 are stored on the system at: /system/etc/event-log-tags. Each message
 has the string for the log message, as well as codes indicating the
-values associated with (stored with) that entry-
+values associated with (stored with) that entry.
 
 ### System log
 
 Many classes in the Android framework utilize the system log to keep
-their messages separate from (possibly noisy) application log messages-
+their messages separate from (possibly noisy) application log messages.
 These programs use the android.util.Slog class, with its associated
 messages.
 
@@ -139,7 +139,7 @@ The logwrapper usage is:
 
     Forks and executes BINARY ARGS, redirecting stdout and stderr to
     the Android logging system. Tag is set to BINARY, priority is
-    always LOG-INFO.
+    always LOG_INFO.
 
     -x: Causes logwrapper to SIGSEGV when BINARY terminates
         fault address is set to the status of wait()
@@ -153,7 +153,7 @@ located in /system/bin in the local filesystem, or you can access the
 functionality using the 'adb logcat' command.
 
 Documentation on the use of this command is at:
-[http://developer.android.com/guide/developing/tools/adb.html](http//developer-android.com/guide/developing/tools/adb-html)
+[http://developer.android.com/guide/developing/tools/adb.html](http://developer.android.com/guide/developing/tools/adb.html)
 
 Some quick notes:
 
@@ -178,7 +178,7 @@ from init, like below:
           oneshot
 
 (See
-[http://groups.google.com/group/android-kernel/browse\-thread/thread/-863ce7-e/f8b0da9ed6376-?pli=1](http//groups-google-com/group/android-kernel/browse-thread/thread/-863ce7-e/f8b0da9ed6376-?pli=1))
+[http://groups.google.com/group/android-kernel/browse\_thread/thread/87d929863ce7c29e/f8b0da9ed6376b2f?pli=1](http://groups.google.com/group/android-kernel/browse_thread/thread/87d929863ce7c29e/f8b0da9ed6376b2f?pli=1))
 
 I'm not sure why you'd want to do this (maybe to put all messages into a
 single stream? With the same timestamp, if kernel message timestamping
@@ -187,16 +187,16 @@ is on?)
 ## Resources
 
 -   [Android Debug Bridge reference
-    page](http//developer-android.com/guide/developing/tools/adb-html)
+    page](http://developer.android.com/guide/developing/tools/adb.html)
     - has 'adb logcat' usage information
 -   [Logging System Of
-    Android](http//blog-kmckk.com/archives-36958-html) Presentation
+    Android](http://blog.kmckk.com/archives/2936958.html) Presentation
     by Tetsuyuki Kobayashi, September, 2010 at CELF's [Japan Technical
     Jamboree
-    34](http://eLinux.org/Japan-Technical-Jamboree-34 "Japan Technical Jamboree 34")
+    34](../../.././dev_portals/Events/Japan_Technical_Jamboree_34/Japan_Technical_Jamboree_34.md "Japan Technical Jamboree 34")
 
 
-[Category](http://eLinux.org/SpecialCategories "Special:Categories"):
+[Category](http://eLinux.org/Special:Categories "Special:Categories"):
 
--   [Android](http://eLinux.org/CategoryAndroid "Category:Android")
+-   [Android](http://eLinux.org/Category:Android "Category:Android")
 

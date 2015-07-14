@@ -1,3 +1,1 @@
-# Firmware
-* Bootloader
-* Bootloader
+Bootloader

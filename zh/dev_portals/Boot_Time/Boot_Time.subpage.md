@@ -1,72 +1,44 @@
-# Boot Time
-## Contents
-## Introduction
-* Bootup_Time_Working_Group
-* Boot-up_Time_Definition_Of_Terms
-## Technology/Project Pages
-### Measuring Boot-up Time
-* Printk_Times
-* Kernel_Function_Trace
-* Linux_Trace_Toolkit
-* Bootchart
-* System_Tap
-* Initcall_Debug
-* Kernel_Instrumentation
-### Technologies and Techniques for Reducing Boot Time
-#### Bootloader speedups
-* Kernel_XIP
-* DMA_Copy_Of_Kernel_On_Startup
-* Uncompressed_kernel
-* Fast_Kernel_Decompression
-#### Kernel speedups
-* Disable_Console
-* RTC_No_Sync
-* Short_IDE_Delays
-* Hardcode_kernel_module_info
-* IDE_No_Probe
-* Preset_LPJ
-* Asynchronous_function_calls
-* Threaded_Device_Probing
-* Reordering_of_driver_initialization
-* Deferred_Initcalls
-##### File System issues
-* Filesystem_Information
-* File_Systems
-* Avoid_Initramfs
-* Ramdisks_demasked
-#### User-space and application speedups
-* Optimize_RC_Scripts
-* Parallel_RC_Scripts
-* Application_XIP
-* Pre_Linking
-* Application_Init_Optimizations
-* Include_modules_in_kernel_image
-#### Suspend related improvements
-* Suspend_To_Disk_For_ARM
-#### Miscellaneous topics
-* About_Compression
-#### Uninvestigated speedups
-## Articles and Presentations
-* Tims_Fastboot_Tools
-### Case Studies
-## Additional Projects/Mailing Lists/Resources
-### Replacements for SysV 'init'
-#### busybox init
-* BusyBox
-#### upstart
-#### Android init
-#### systemd
-### Kexec
-### Splash Screen projects
-### Others
-#### Apparently obsolete or abandoned material
-* Boot-up_Time_Reduction_Howto
-* Boot-up_Time_Delay_Taxonomy
-* Bootup_Time_Spec
-* Bootup_Time_Things_To_Investigate
-* Bootup_Time_Working_Group
-* Bootup_Time_Task_List
-* Bootup_Time_Howto_Task_List
-* Fast_Booting_Translation
-## Companies, individuals or projects working on fast booting
-## Boot time check list
+About_Compression
+Application_Init_Optimizations
+Application_XIP
+Asynchronous_function_calls
+Avoid_Initramfs
+Bootchart
+Boot-up_Time_Definition_Of_Terms
+Boot-up_Time_Delay_Taxonomy
+Bootup_Time_Howto_Task_List
+Boot-up_Time_Reduction_Howto
+Bootup_Time_Spec
+Bootup_Time_Task_List
+Bootup_Time_Things_To_Investigate
+Bootup_Time_Working_Group
+BusyBox
+Deferred_Initcalls
+Disable_Console
+DMA_Copy_Of_Kernel_On_Startup
+Fast_Booting_Translation
+Fast_Kernel_Decompression
+Filesystem_Information
+File_Systems
+Hardcode_kernel_module_info
+IDE_No_Probe
+Include_modules_in_kernel_image
+Initcall_Debug
+Kernel_Function_Trace
+Kernel_Instrumentation
+Kernel_XIP
+Linux_Trace_Toolkit
+Optimize_RC_Scripts
+Parallel_RC_Scripts
+Pre_Linking
+Preset_LPJ
+Printk_Times
+Ramdisks_demasked
+Reordering_of_driver_initialization
+RTC_No_Sync
+Short_IDE_Delays
+Suspend_To_Disk_For_ARM
+System_Tap
+Threaded_Device_Probing
+Tims_Fastboot_Tools
+Uncompressed_kernel

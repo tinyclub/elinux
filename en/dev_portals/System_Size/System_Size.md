@@ -51,7 +51,7 @@
     -   [3.3 How to measure the memory usage at
         runtime](#how-to-measure-the-memory-usage-at-runtime)
     -   [3.4 Linux size increase from 2.4 to
-        2.6](#linux-size-increase-from-2-4-to-2.6)
+        2.6](#linux-size-increase-from-2-4-to-2-6)
     -   [3.5 GCC Code-Size Benchmarking](#gcc-code-size-benchmarking)
 -   [4 Case Studies](#case-studies)
     -   [4.1 uClinux](#uclinux)
@@ -85,13 +85,13 @@ kernel size.
 #### Configuration Options
 
 -   [Kernel Size Tuning
-    Guide](http://eLinux.org/Kernel_Size_Tuning_Guide "Kernel Size Tuning Guide") -
+    Guide](../.././dev_portals/System_Size/Kernel_Size_Tuning_Guide/Kernel_Size_Tuning_Guide.md "Kernel Size Tuning Guide") -
     document about measuring kernel size and configuring the kernel for
     smallest size
 
 #### The Linux-tiny patchset
 
--   The [Linux Tiny](http://eLinux.org/Linux_Tiny "Linux Tiny") patch set is a collection
+-   The [Linux Tiny](../.././dev_portals/System_Size/Linux_Tiny/Linux_Tiny.md "Linux Tiny") patch set is a collection
     of patches which can be used to make the Linux kernel consume less
     space. The long-term goal of the Linux-tiny project is to mainline
     these patches. Several patches have been mainlined over the last few
@@ -140,7 +140,7 @@ John Rigby
 
 See [[1]](http://gcc.gnu.org/onlinedocs/gcc/Optimize-Options.html) for
 all available optimization switches. See
-[Compiler\_Optimization](http://eLinux.org/Compiler_Optimization "Compiler Optimization")
+[Compiler\_Optimization](../.././dev_portals/System_Size/Compiler_Optimization/Compiler_Optimization.md "Compiler Optimization")
 for more details on effects of optimization options.
 
 #### Section garbage collection patchset
@@ -166,51 +166,48 @@ approximate size for a 2.6 kernel. (Table taken from page 25 of
 [http://logfs.org/\~joern/data\_structures.pdf](http://logfs.org/~joern/data_structures.pdf)
 )
 
-Hash Table
+<table border="1" cellspacing="0" cellpadding="5" align="center">
+<tr>
+<th>Hash Table         </th>
+<th>memory &lt; 512MiB RAM </th>
+<th> memory &gt;=512MiB RAM
+</th></tr>
+<tr>
+<th>                   </th>
+<th>32b/64b       </th>
+<th>32b/64b
+</th></tr>
+<tr>
+<td>TCP established    </td>
+<td>96k/192k      </td>
+<td>384k/768k
+</td></tr>
+<tr>
+<td>TCP bind           </td>
+<td> 64k/128k     </td>
+<td> 256k/512k
+</td></tr>
+<tr>
+<td>IP route cache     </td>
+<td> 128k/256k    </td>
+<td>   512k/1M
+</td></tr>
+<tr>
+<td>Inode-cache        </td>
+<td>  64k/128k    </td>
+<td>   64k/128k
+</td></tr>
+<tr>
+<td>Dentry cache       </td>
+<td>   32k/64k    </td>
+<td>    32k/64k
+</td></tr>
+<tr>
+<td>Total             </td>
+<td>  384k/768k   </td>
+<td> 1248k/2496k
+</td></tr></table>
 
-memory \< 512MiB RAM
-
-memory \>=512MiB RAM
-
-32b/64b
-
-32b/64b
-
-TCP established
-
-96k/192k
-
-384k/768k
-
-TCP bind
-
-64k/128k
-
-256k/512k
-
-IP route cache
-
-128k/256k
-
-512k/1M
-
-Inode-cache
-
-64k/128k
-
-64k/128k
-
-Dentry cache
-
-32k/64k
-
-32k/64k
-
-Total
-
-384k/768k
-
-1248k/2496k
 
 ##### kernel stack size
 
@@ -220,7 +217,7 @@ default kernel stack size is 8K. If you have a lot of processes, then
 using 4K stacks can reduce the kernel stack usage.
 
 Some notes about this are at: [Kernel Small
-Stacks](http://eLinux.org/Kernel_Small_Stacks "Kernel Small Stacks")
+Stacks](../.././dev_portals/System_Size/Kernel_Small_Stacks/Kernel_Small_Stacks.md "Kernel Small Stacks")
 
 #### Auto-reduction
 
@@ -238,15 +235,15 @@ re-writing and cold-code compression. Tim's work was presented at
 LinuxCon Japan in May, 2013.
 
 A draft outline and completed slides for the talk are at [System Size
-Auto-Reduction](http://eLinux.org/System_Size_Auto-Reduction "System Size Auto-Reduction")
+Auto-Reduction](../.././dev_portals/System_Size/System_Size_Auto-Reduction/System_Size_Auto-Reduction.md "System Size Auto-Reduction")
 
 #### Compressed printk messages
 
 The open project proposal [Compressed printk
-messages](http://eLinux.org/Compressed_printk_messages "Compressed printk messages")
+messages](../.././dev_portals/System_Size/Compressed_printk_messages/Compressed_printk_messages.md "Compressed printk messages")
 evaluated this technique in 2014. The results can be found on the
 [Compressed printk messages -
-Results](http://eLinux.org/Compressed_printk_messages_-_Results "Compressed printk messages - Results")
+Results](../.././dev_portals/System_Size/Compressed_printk_messages/Compressed_printk_messages.md_-_Results "Compressed printk messages - Results")
 page.
 
 #### Reduction Ideas and recent work
@@ -255,7 +252,7 @@ A group of developers is (as of 2014) doing continued size reduction
 work on the Linux kernel. A page has been set up to categorize recent
 work and ideas for future kernel size reductions. The page is: [Kernel
 Size Reduction
-Work](http://eLinux.org/Kernel_Size_Reduction_Work "Kernel Size Reduction Work")
+Work](../.././dev_portals/System_Size/Kernel_Size_Reduction_Work/Kernel_Size_Reduction_Work.md "Kernel Size Reduction Work")
 
 ### File system compression
 
@@ -268,7 +265,7 @@ The following are used heavily in embedded systems:
 Note that Cramfs and Squashfs, due to their "write-only-once" nature,
 can also be used on MTD storage.
 
-See the [File Systems](http://eLinux.org/File_Systems "File Systems") page for more
+See the [File Systems](../../dev_portals/File_Systems/File_Systems.md "File Systems") page for more
 information.
 
 
@@ -413,21 +410,21 @@ You can save RAM memory by using some text or data directly from flash.
 By executing the kernel in-place from flash, it is possible to save RAM
 space.
 
--   see [Kernel XIP](http://eLinux.org/Kernel_XIP "Kernel XIP")
+-   see [Kernel XIP](../.././dev_portals/Boot_Time/Kernel_XIP/Kernel_XIP.md "Kernel XIP")
 
 #### Application XIP
 
 By executing applications in-place from flash, it is possible to save
 RAM space.
 
--   see [Application XIP](http://eLinux.org/Application_XIP "Application XIP")
+-   see [Application XIP](../.././dev_portals/Boot_Time/Application_XIP/Application_XIP.md "Application XIP")
 
 #### Data Read In Place (DRIP)
 
 This is a technique for keeping data in flash, until it is written to,
 and then making a RAM page for it.
 
--   see [Data Read In Place](http://eLinux.org/Data_Read_In_Place "Data Read In Place")
+-   see [Data Read In Place](../.././dev_portals/System_Size/Data_Read_In_Place/Data_Read_In_Place.md "Data Read In Place")
 
 ## Size measurement tools and techniques
 
@@ -478,11 +475,11 @@ and then making a RAM page for it.
 ### How to measure the memory usage at runtime
 
 See [Runtime Memory
-Measurement](http://eLinux.org/Runtime_Memory_Measurement "Runtime Memory Measurement")
+Measurement](../.././dev_portals/Memory_Management/Runtime_Memory_Measurement/Runtime_Memory_Measurement.md "Runtime Memory Measurement")
 for a description of ways to measure runtime memory usage in Linux.
 
 Also, see [Accurate Memory
-Measurement](http://eLinux.org/Accurate_Memory_Measurement "Accurate Memory Measurement")
+Measurement](../.././dev_portals/Memory_Management/Accurate_Memory_Measurement/Accurate_Memory_Measurement.md "Accurate Memory Measurement")
 for a description of techniques (and patches) which can be used to
 measure the runtime memory more accurately.
 
@@ -493,10 +490,10 @@ This incremental growth in kernel size has been a big concern by forum
 members.
 
 Please see the [Szwg Linux
-26Data](http://eLinux.org/Szwg_Linux_26Data "Szwg Linux 26Data") page for supporting
+26Data](../.././dev_portals/System_Size/Szwg_Linux_26Data/Szwg_Linux_26Data.md "Szwg Linux 26Data") page for supporting
 data.
 
--   [Size Tunables](http://eLinux.org/Size_Tunables "Size Tunables")
+-   [Size Tunables](../.././dev_portals/System_Size/Size_Tunables/Size_Tunables.md "Size Tunables")
 
 ### GCC Code-Size Benchmarking
 

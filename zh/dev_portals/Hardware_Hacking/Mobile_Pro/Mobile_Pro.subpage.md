@@ -1,0 +1,2 @@
+Compact_Flash
+IrDA

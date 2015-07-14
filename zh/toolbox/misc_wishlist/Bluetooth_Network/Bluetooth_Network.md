@@ -48,9 +48,9 @@ providing network access to low power embedded devices.
 ## Background
 
 Information on piconets can be found on
-[Wikipedia](http//en-wikipedia.org/wiki/Piconet)
+[Wikipedia](http://en.wikipedia.org/wiki/Piconet)
  Basic information on BlueZ PAN support can be found here:
-[[1]](http//bluez-sourceforge.net/contrib/HOWTO-PAN)
+[[1]](http://bluez.sourceforge.net/contrib/HOWTO-PAN)
 
 ## Limitations
 
@@ -64,9 +64,9 @@ To setup a home piconet, you'll need:
 -   A Bluetooth device, such as a USB dongle, preferably Class 1 for
     range purposes.
 -   A kernel that supports the Bluez stack including BNEP.
--   [bluez-utils](http//www-bluez.org/) (testing with 3.36).
+-   [bluez-utils](http://www.bluez.org/) (testing with 3.36).
 -   Kernel ethernet bridging support.
--   [bridge-utils](http//www-linuxfoundation.org/en/Net:Bridge) (tested
+-   [bridge-utils](http://www.linuxfoundation.org/en/Net:Bridge) (tested
     with 1.4).
 
 These instructions are based on a Debian/Sid system, but the setup
@@ -76,7 +76,7 @@ should be similar for other distributions.
 
 ### Setup /etc/bluetooth/hcid.conf
 
-[hcid.conf(5)](http//linux-die.net/man/5/hcid.conf)
+[hcid.conf(5)](http://linux.die.net/man/5/hcid.conf)
  Your piconet server should advertise itself appropriately. Modify the
 class parameter within the device section so that the host presents
 itself as a network access point device offering network service:
@@ -95,12 +95,12 @@ Make your piconet server permanently discoverable:
 
 ### Daemon Configuration
 
-[pand(1)](http//linux-die.net/man/1/pand)
+[pand(1)](http://linux.die.net/man/1/pand)
  Setup the command line options for the pand daemon. Within Debian, this
 is done through the file /etc/default/bluetooth. The command lines for
 the pand daemon should be:
 
-    -listen -role NAP -u /etc/bluetooth/pan/dev-up -o /etc/bluetooth/pan/dev-down
+    --listen --role NAP -u /etc/bluetooth/pan/dev-up -o /etc/bluetooth/pan/dev-down
 
 ### End Result (When host is connected)
 
@@ -110,9 +110,9 @@ ifconfig bnep0
               inet6 addr: fe80::211:f6ff:fe05:7995/64 Scope:Link
               UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
               RX packets:23661 errors:0 dropped:0 overruns:0 frame:0
-              TX packets381 errors:0 dropped:0 overruns:0 carrier:0
+              TX packets:29381 errors:0 dropped:0 overruns:0 carrier:0
               collisions:0 txqueuelen:1000
-              RX bytes76646 (2-8 MiB)  TX bytes-249215 (25.9 MiB)
+              RX bytes:2976646 (2.8 MiB)  TX bytes:27249215 (25.9 MiB)
 
 hcitool con
 
@@ -129,9 +129,9 @@ device can be created.
 
 ### Setup /etc/network/interfaces
 
-[interfaces(5)](http//web-iesrodeira.com/cgi-bin/man/man2html?5+interfaces)
+[interfaces(5)](http://web.iesrodeira.com/cgi-bin/man/man2html?5+interfaces)
 
-[bridge-utils-interfaces(5)](http//web-iesrodeira.com/cgi-bin/man/man2html?bridge-utils-interfaces+5)
+[bridge-utils-interfaces(5)](http://web.iesrodeira.com/cgi-bin/man/man2html?bridge-utils-interfaces+5)
  On Debian systems, network interfaces are configured through this file.
 An example configuration would be:
 
@@ -140,9 +140,9 @@ An example configuration would be:
             address 10.1.0.1
             netmask 255.255.255.0
             broadcast 10.1.0.255
-            bridge-ports none
-            bridge-fd 0
-            bridge-stp off
+            bridge_ports none
+            bridge_fd 0
+            bridge_stp off
 
 Alternatively, the pan0 interface can be configured manually:
 
@@ -185,7 +185,7 @@ ifconfig pan0
               RX packets:30706 errors:0 dropped:0 overruns:0 frame:0
               TX packets:40037 errors:0 dropped:0 overruns:0 carrier:0
               collisions:0 txqueuelen:0
-              RX bytes:3681538 (3-5 MiB)  TX bytes34573855 (32.9 MiB)
+              RX bytes:3681538 (3.5 MiB)  TX bytes:34573855 (32.9 MiB)
 
 ## Setup DHCP
 
@@ -224,17 +224,17 @@ configured
 
 ### Shorewall
 
-Adding your piconet to an existing [Shorewall](http//www-shorewall.net)
+Adding your piconet to an existing [Shorewall](http://www.shorewall.net)
 configuration is by far the easiest method.
 
 #### params
 
-    BLUE-IF=pan0
+    BLUE_IF=pan0
 
 #### interfaces
 
     #ZONE   INTERFACE       BROADCAST       OPTIONS
-    blue    $BLUE-IF    detect      tcpflags,dhcp,detectnets,nosmurfs
+    blue    $BLUE_IF    detect      tcpflags,dhcp,detectnets,nosmurfs
 
 #### zones
 
@@ -265,12 +265,12 @@ DROP rule.
 Allow local network to access piconet masquerading as piconet server:
 
     #INTERFACE              SUBNET          ADDRESS         PROTO   PORT(S) IPSEC
-    $BLUE-IF        $LOC-IF
+    $BLUE_IF        $LOC_IF
 
 Masquerade piconet network access to Internet
 
     #INTERFACE              SUBNET          ADDRESS         PROTO   PORT(S) IPSEC
-    $NET-IF         $BLUE-IF
+    $NET_IF         $BLUE_IF
 
 #### rules
 
@@ -285,7 +285,7 @@ Cable modem is probably a good thing.
 ### Netfilter
 
 A very basic [Netfilter
-setup](http//www-netfilter.org/documentation/HOWTO/NAT-HOWTO-4.html),
+setup](http://www.netfilter.org/documentation/HOWTO/NAT-HOWTO-4.html),
 assuming that eth1 connects to the Internet, and eth0 connects to the
 local network.
 
@@ -294,11 +294,11 @@ local network.
     # Enable masquerading access to the piconet from the local net
     iptables -t nat -A POSTROUTING -i eth0 -o pan0 -j MASQUERADE
     # Enable routing (may already exist)
-    echo 1 > /proc/sys/net/ipv4/ip-forward
+    echo 1 > /proc/sys/net/ipv4/ip_forward
 
 ### Network Manager 0.7
 
-[Network Manager](http//projects-gnome.org/NetworkManager/) provides
+[Network Manager](http://projects.gnome.org/NetworkManager/) provides
 connection sharing functionality. From the "Edit Connections" dialog,
 select "Add". Name the connection bnep0 and enter the Bluetooth device's
 MAC address into the Wired tab. Select "Shared to other computers" on
@@ -308,11 +308,11 @@ the "IPv4 Settings" tab.
 
 Embedded devices should execute the command:
 
-    pand -connect <bdaddr of piconet server> -persist -u ifup -o ifdown
+    pand --connect <bdaddr of piconet server> --persist -u ifup -o ifdown
 
 Upon boot, alternatively, the following command can be used:
 
-    pand -search -persist -u ifup -o ifdown
+    pand --search --persist -u ifup -o ifdown
 
 ### /etc/network/interfaces file
 
@@ -330,10 +330,10 @@ ifconfig bnep0
     bnep0     Link encap:Ethernet  HWaddr 00:1B:DC:0F:A8:AE
               inet addr:10.1.0.100  Bcast:10.1.0.255  Mask:255.255.255.0
               UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
-              RX packets:2-2 errors:0 dropped:0 overruns:0 frame:0
+              RX packets:29272 errors:0 dropped:0 overruns:0 frame:0
               TX packets:23598 errors:0 dropped:0 overruns:0 carrier:0
               collisions:0 txqueuelen:1000
-              RX bytes-242050 (25-9 MiB)  TX bytes64918 (2.8 MiB)
+              RX bytes:27242050 (25.9 MiB)  TX bytes:2964918 (2.8 MiB)
 
 route -n
 
@@ -348,7 +348,7 @@ hcitool con
         < ACL 00:11:F6:05:79:95 handle 42 state 1 lm SLAVE
 
 
-[Category](http://eLinux.org/SpecialCategories "Special:Categories"):
+[Category](http://eLinux.org/Special:Categories "Special:Categories"):
 
--   [Networking](http://eLinux.org/CategoryNetworking "Category:Networking")
+-   [Networking](http://eLinux.org/Category:Networking "Category:Networking")
 

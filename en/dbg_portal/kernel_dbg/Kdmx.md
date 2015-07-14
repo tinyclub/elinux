@@ -1,1 +1,0 @@
-{% include "./Kdmx/Kdmx.md" %}

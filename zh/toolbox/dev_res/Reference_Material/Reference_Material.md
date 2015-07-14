@@ -16,7 +16,7 @@
     televisions, set top boxes, DVD players and recorders, personal
     video recorders (PVRs), home servers and other consumer audio/video
     (A/V) devices.
--   [Hello\_World\_in\_C](http://eLinux.org/Hello_World_in_C "Hello World in C")
+-   [Hello\_World\_in\_C](../../.././dev_portals/Hardware_Hacking/Hello_World_in_C/Hello_World_in_C.md "Hello World in C")
 -   [How traceroute
     works!](http://eLinux.org/Traceroute_-_Tracing_Route "Traceroute - Tracing Route")
 -   [How DNS
@@ -26,6 +26,6 @@
 -   [Subset\_Libc\_Specification](http://eLinux.org/Subset_Libc_Specification "Subset Libc Specification")
 -   [Extern\_Vs\_Static\_Inline](http://eLinux.org/Extern_Vs_Static_Inline "Extern Vs Static Inline")
 -   [Slab\_allocator](http://eLinux.org/Slab_allocator "Slab allocator")
--   [Size\_Tunables](http://eLinux.org/Size_Tunables "Size Tunables")
+-   [Size\_Tunables](../../.././dev_portals/System_Size/Size_Tunables/Size_Tunables.md "Size Tunables")
 
 

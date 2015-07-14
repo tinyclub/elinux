@@ -53,10 +53,10 @@ program, making it easy to experiment with tweaks to the linker or
 assembler.
 
     Reading specs from /opt/timesys/toolchains/ppc7xx-linux/lib/gcc/powerpc-linux/3.4.1/specs
-    Configured with: ../configure --prefix=/opt/timesys/toolchains/ppc7xx-linux --mandir=/opt/timesys/toolchains/ppc7xx-linux/share/man --infodir=/opt/timesys/toolchains/ppc7xx-linux/share/info --enable-shared --enable-threads=posix --disable-checking --with-system-zlib --enable---cxa-atexit --disable-libunwind-exceptions --enable-languages=c,c++ --with-sysroot=/here/workdir/i386-x-ppc7xx/deleteme --disable-libgcj --build=i686-timesys-linux --host=i686-timesys-linux --target=powerpc-linux --program-prefix=ppc7xx-linux-
+    Configured with: ../configure --prefix=/opt/timesys/toolchains/ppc7xx-linux --mandir=/opt/timesys/toolchains/ppc7xx-linux/share/man --infodir=/opt/timesys/toolchains/ppc7xx-linux/share/info --enable-shared --enable-threads=posix --disable-checking --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-languages=c,c++ --with-sysroot=/here/workdir/i386-x-ppc7xx/deleteme --disable-libgcj --build=i686-timesys-linux --host=i686-timesys-linux --target=powerpc-linux --program-prefix=ppc7xx-linux-
     Thread model: posix
-    gcc version 3.4.1 20040714 (TimeSys 3-4.1-7)
-     /opt/timesys/toolchains/ppc7xx-linux/libexec/gcc/powerpc-linux/3.4.1/cc1 -quiet -v -D--unix-- -D--gnu-linux-- -D--linux-- -Dunix -D--unix -Dlinux -D--linux -Asystem=linux -Asystem=unix -Asystem=posix -I/opt/timesys/toolchains/ppc7xx-linux/powerpc-linux/include/nptl file.c -quiet -dumpbase file.c -auxbase file -version -o /tmp/ccShiHn4.s
+    gcc version 3.4.1 20040714 (TimeSys 3.4.1-7)
+     /opt/timesys/toolchains/ppc7xx-linux/libexec/gcc/powerpc-linux/3.4.1/cc1 -quiet -v -D__unix__ -D__gnu_linux__ -D__linux__ -Dunix -D__unix -Dlinux -D__linux -Asystem=linux -Asystem=unix -Asystem=posix -I/opt/timesys/toolchains/ppc7xx-linux/powerpc-linux/include/nptl file.c -quiet -dumpbase file.c -auxbase file -version -o /tmp/ccShiHn4.s
     ignoring nonexistent directory "/here/workdir/i386-x-ppc7xx/deleteme/usr/local/include"
     ignoring nonexistent directory "/here/workdir/i386-x-ppc7xx/deleteme/usr/include"
     #include "..." search starts here:
@@ -65,12 +65,12 @@ assembler.
      /opt/timesys/toolchains/ppc7xx-linux/lib/gcc/powerpc-linux/3.4.1/include
      /opt/timesys/toolchains/ppc7xx-linux/lib/gcc/powerpc-linux/3.4.1/../../../../powerpc-linux/include
     End of search list.
-    GNU C version 3.4.1 20040714 (TimeSys 3-4.1-7) (powerpc-linux)
-     compiled by GNU C version 3.2.2 20030222 (Red Hat Linux 3-2.2-5).
+    GNU C version 3.4.1 20040714 (TimeSys 3.4.1-7) (powerpc-linux)
+     compiled by GNU C version 3.2.2 20030222 (Red Hat Linux 3.2.2-5).
     GGC heuristics: --param ggc-min-expand=47 --param ggc-min-heapsize=32138
      /opt/timesys/toolchains/ppc7xx-linux/lib/gcc/powerpc-linux/3.4.1/../../../../powerpc-linux/bin/as -mppc -many -V -Qy -o /tmp/ccWeV3a3.o /tmp/ccShiHn4.s
     GNU assembler version 2.15.90.0.3 (powerpc-linux) using BFD version 2.15.90.0.3 20040415
-     /opt/timesys/toolchains/ppc7xx-linux/libexec/gcc/powerpc-linux/3.4.1/collect2 --eh-frame-hdr -V -Qy -L/opt/timesys/toolchains/ppc7xx-linux/powerpc-linux/lib/nptl --rpath-link /opt/timesys/toolchains/ppc7xx-linux/powerpc-linux/lib/tls -m elf32ppclinux -dynamic-linker /lib/ld.so.1 -o file /opt/timesys/toolchains/ppc7xx-linux/lib/gcc/powerpc-linux/3.4.1/../../../../powerpc-linux/lib/crt1.o /opt/timesys/toolchains/ppc7xx-linux/lib/gcc/powerpc-linux/3.4.1/../../../../powerpc-linux/lib/crti.o /opt/timesys/toolchains/ppc7xx-linux/lib/gcc/powerpc-linux/3.4.1/crtbegin.o -L/opt/timesys/toolchains/ppc7xx-linux/lib/gcc/powerpc-linux/3.4.1 -L/opt/timesys/toolchains/ppc7xx-linux/lib/gcc/powerpc-linux/3.4.1/../../../../powerpc-linux/lib /tmp/ccWeV3a3.o -lgcc --as-needed -lgcc-s --no-as-needed -lc -lgcc --as-needed -lgcc-s --no-as-needed /opt/timesys/toolchains/ppc7xx-linux/lib/gcc/powerpc-linux/3.4.1/crtsavres.o /opt/timesys/toolchains/ppc7xx-linux/lib/gcc/powerpc-linux/3.4.1/crtend.o /opt/timesys/toolchains/ppc7xx-linux/lib/gcc/powerpc-linux/3.4.1/../../../../powerpc-linux/lib/crtn.o
+     /opt/timesys/toolchains/ppc7xx-linux/libexec/gcc/powerpc-linux/3.4.1/collect2 --eh-frame-hdr -V -Qy -L/opt/timesys/toolchains/ppc7xx-linux/powerpc-linux/lib/nptl --rpath-link /opt/timesys/toolchains/ppc7xx-linux/powerpc-linux/lib/tls -m elf32ppclinux -dynamic-linker /lib/ld.so.1 -o file /opt/timesys/toolchains/ppc7xx-linux/lib/gcc/powerpc-linux/3.4.1/../../../../powerpc-linux/lib/crt1.o /opt/timesys/toolchains/ppc7xx-linux/lib/gcc/powerpc-linux/3.4.1/../../../../powerpc-linux/lib/crti.o /opt/timesys/toolchains/ppc7xx-linux/lib/gcc/powerpc-linux/3.4.1/crtbegin.o -L/opt/timesys/toolchains/ppc7xx-linux/lib/gcc/powerpc-linux/3.4.1 -L/opt/timesys/toolchains/ppc7xx-linux/lib/gcc/powerpc-linux/3.4.1/../../../../powerpc-linux/lib /tmp/ccWeV3a3.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /opt/timesys/toolchains/ppc7xx-linux/lib/gcc/powerpc-linux/3.4.1/crtsavres.o /opt/timesys/toolchains/ppc7xx-linux/lib/gcc/powerpc-linux/3.4.1/crtend.o /opt/timesys/toolchains/ppc7xx-linux/lib/gcc/powerpc-linux/3.4.1/../../../../powerpc-linux/lib/crtn.o
     GNU ld version 2.15.90.0.3 20040415
       Supported emulations:
        elf32ppclinux
@@ -88,22 +88,22 @@ command:
 
     $ gcc -xc -E -v -
     Using built-in specs.
-    COLLECT-GCC=gcc
-    COLLECT-LTO-WRAPPER=/usr/lib/gcc/x86-64-linux-gnu/4.6/lto-wrapper
-    Target: x86-64-linux-gnu
-    Configured with: ../src/configure -v --with-pkgversion='Ubuntu/Linaro 4.6.3-1ubuntu5' --with-bugurl=file:///usr/share/doc/gcc-4.6/README.Bugs --enable-languages=c,c++,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-4.6 --enable-shared --enable-linker-build-id --with-system-zlib --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --with-gxx-include-dir=/usr/include/c++/4.6 --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --enable-gnu-unique-object --enable-plugin --enable-objc-gc --disable-werror --with-arch-32=i686 --with-tune=generic --enable-checking=release --build=x86-64-linux-gnu --host=x86-64-linux-gnu --target=x86-64-linux-gnu
+    COLLECT_GCC=gcc
+    COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/4.6/lto-wrapper
+    Target: x86_64-linux-gnu
+    Configured with: ../src/configure -v --with-pkgversion='Ubuntu/Linaro 4.6.3-1ubuntu5' --with-bugurl=file:///usr/share/doc/gcc-4.6/README.Bugs --enable-languages=c,c++,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-4.6 --enable-shared --enable-linker-build-id --with-system-zlib --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --with-gxx-include-dir=/usr/include/c++/4.6 --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --enable-gnu-unique-object --enable-plugin --enable-objc-gc --disable-werror --with-arch-32=i686 --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
     Thread model: posix
-    gcc version 4.6.3 (Ubuntu/Linaro 4-6.3-1ubuntu5)
-    COLLECT-GCC-OPTIONS='-E' '-v' '-mtune=generic' '-march=x86-64'
-     /usr/lib/gcc/x86-64-linux-gnu/4.6/cc1 -E -quiet -v -imultilib . -imultiarch x86-64-linux-gnu - -mtune=generic -march=x86-64 -fstack-protector
-    ignoring nonexistent directory "/usr/local/include/x86-64-linux-gnu"
-    ignoring nonexistent directory "/usr/lib/gcc/x86-64-linux-gnu/4.6/../../../../x86-64-linux-gnu/include"
+    gcc version 4.6.3 (Ubuntu/Linaro 4.6.3-1ubuntu5)
+    COLLECT_GCC_OPTIONS='-E' '-v' '-mtune=generic' '-march=x86-64'
+     /usr/lib/gcc/x86_64-linux-gnu/4.6/cc1 -E -quiet -v -imultilib . -imultiarch x86_64-linux-gnu - -mtune=generic -march=x86-64 -fstack-protector
+    ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
+    ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../x86_64-linux-gnu/include"
     #include "..." search starts here:
     #include <...> search starts here:
-     /usr/lib/gcc/x86-64-linux-gnu/4.6/include
+     /usr/lib/gcc/x86_64-linux-gnu/4.6/include
      /usr/local/include
-     /usr/lib/gcc/x86-64-linux-gnu/4.6/include-fixed
-     /usr/include/x86-64-linux-gnu
+     /usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed
+     /usr/include/x86_64-linux-gnu
      /usr/include
     End of search list.
 
@@ -155,15 +155,15 @@ project that depends on files linking in a certain order that suddenly
 breaks because of a small (probably viewed as not noteworthy) change in
 a makefile somewhere.
 
-    /usr/bin/ld: mode elf-i386
+    /usr/bin/ld: mode elf_i386
     /usr/lib/gcc-lib/i386-redhat-linux/3.3.3/../../../crt1.o
     /usr/lib/gcc-lib/i386-redhat-linux/3.3.3/../../../crti.o
     /usr/lib/gcc-lib/i386-redhat-linux/3.3.3/crtbegin.o
     /tmp/cc37FxnS.o
-    -lgcc-s (http://eLinux.org/usr/lib/gcc-lib/i386-redhat-linux/3-3.3/libgcc-s.so)
+    -lgcc_s (http://eLinux.org/usr/lib/gcc-lib/i386-redhat-linux/3.3.3/libgcc_s.so)
     /lib/libc.so.6
-    (http://eLinux.org/usr/lib/libc-nonshared-a)elf-init.oS
-    -lgcc-s (http://eLinux.org/usr/lib/gcc-lib/i386-redhat-linux/3-3.3/libgcc-s.so)
+    (http://eLinux.org/usr/lib/libc_nonshared.a)elf-init.oS
+    -lgcc_s (http://eLinux.org/usr/lib/gcc-lib/i386-redhat-linux/3.3.3/libgcc_s.so)
     /usr/lib/gcc-lib/i386-redhat-linux/3.3.3/crtend.o
     /usr/lib/gcc-lib/i386-redhat-linux/3.3.3/../../../crtn.o
 
@@ -173,28 +173,28 @@ a makefile somewhere.
 
 Very handy when porting code. Lets you know if your target processor has
 some missing defines or if something is different (like
-\-\-INT\-MAX\-\-) that can have interesting effects on your project.
+\_\_INT\_MAX\_\_) that can have interesting effects on your project.
 Diff the output from the old to the new compiler so you can easily see
 the differences, makes it easy to spot problems before getting started.
 
 Sample output, from a compiler targeting an ARM processor.
 
-    --APCS-32-- 1
-    --arm-- 1
-    --ARM-ARCH-4T-- 1
-    --ARMEL-- 1
-    --CHAR-BIT-- 8
-    --CHAR-UNSIGNED-- 1
-    --DBL-DENORM-MIN-- 4.9406564584124654e-324
-    --DBL-DIG-- 15
-    --DBL-EPSILON-- 2.2204460492503131e-16
-    --DBL-HAS-DENORM-- 1
-    --DBL-HAS-INFINITY-- 1
-    --DBL-HAS-QUIET-NAN-- 1
-    --DBL-MANT-DIG-- 53
-    --DBL-MAX-10-EXP-- 308
-    --DBL-MAX-- 1.7976931348623157e+308
-    --DBL-MAX-EXP-- 1024
+    __APCS_32__ 1
+    __arm__ 1
+    __ARM_ARCH_4T__ 1
+    __ARMEL__ 1
+    __CHAR_BIT__ 8
+    __CHAR_UNSIGNED__ 1
+    __DBL_DENORM_MIN__ 4.9406564584124654e-324
+    __DBL_DIG__ 15
+    __DBL_EPSILON__ 2.2204460492503131e-16
+    __DBL_HAS_DENORM__ 1
+    __DBL_HAS_INFINITY__ 1
+    __DBL_HAS_QUIET_NAN__ 1
+    __DBL_MANT_DIG__ 53
+    __DBL_MAX_10_EXP__ 308
+    __DBL_MAX__ 1.7976931348623157e+308
+    __DBL_MAX_EXP__ 1024
 
 ### Mixed Assembler and Source Output
 
@@ -215,16 +215,16 @@ Here's an example of what objdump produces for a few lines of code:
     10000958:       80 7f 00 10     lwz     r3,16(r31)
     1000095c:       38 80 00 00     li      r4,0
     10000960:       38 a0 00 00     li      r5,0
-    10000964:       48 01 09 31     bl      10014 <shmat@plt>
+    10000964:       48 01 09 31     bl      10011294 <shmat@plt>
     10000968:       7c 60 1b 78     mr      r0,r3
     1000096c:       3d 20 10 01     lis     r9,4097
     10000970:       90 09 11 d0     stw     r0,4560(r9)
       if (errno != 0) {
-    10000974:       48 01 08 d1     bl      10011244 <--errno-location@plt>
+    10000974:       48 01 08 d1     bl      10011244 <__errno_location@plt>
     10000978:       7c 60 1b 78     mr      r0,r3
     1000097c:       7c 09 03 78     mr      r9,r0
     10000980:       80 09 00 00     lwz     r0,0(r9)
-    10000984:      - 80 00 00     cmpwi   cr7,r0,0
+    10000984:       2f 80 00 00     cmpwi   cr7,r0,0
     10000988:       41 9e 00 50     beq-    cr7,100009d8 <main+0x10c>
 
 ### Specify Language
@@ -254,10 +254,10 @@ something like this for a basic hello world program
       /usr/lib/gcc-lib/i386-redhat-linux/3.3.3/include/stddef.h \
       /usr/include/bits/types.h /usr/include/bits/wordsize.h \
       /usr/include/bits/typesizes.h /usr/include/libio.h \
-      /usr/include/-G-config.h /usr/include/wchar.h /usr/include/bits/wchar.h \
+      /usr/include/_G_config.h /usr/include/wchar.h /usr/include/bits/wchar.h \
       /usr/include/gconv.h \
       /usr/lib/gcc-lib/i386-redhat-linux/3.3.3/include/stdarg.h \
-      /usr/include/bits/stdio-lim.h /usr/include/bits/sys-errlist.h
+      /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 
     gcc -MM <file name>
 
@@ -311,11 +311,11 @@ dealing with complicated makefiles to peek at the preprocessed output
 without having to figure out how to do a -E option by hand.
 
 
-[Categories](http://eLinux.org/SpecialCategories "Special:Categories"):
+[Categories](http://eLinux.org/Special:Categories "Special:Categories"):
 
 -   [Development
-    Tools](http://eLinux.org/CategoryDevelopment-Tools "Category:Development Tools")
+    Tools](http://eLinux.org/Category:Development_Tools "Category:Development Tools")
 -   [Tips and
-    Tricks](http://eLinux.org/CategoryTips-and-Tricks "Category:Tips and Tricks")
--   [Compiler](http://eLinux.org/CategoryCompiler "Category:Compiler")
+    Tricks](http://eLinux.org/Category:Tips_and_Tricks "Category:Tips and Tricks")
+-   [Compiler](http://eLinux.org/Category:Compiler "Category:Compiler")
 

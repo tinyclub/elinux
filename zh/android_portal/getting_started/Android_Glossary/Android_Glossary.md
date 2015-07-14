@@ -38,7 +38,7 @@ Back to [Android Portal](http://eLinux.org/Android_Portal "Android Portal")
 
 ## A
 
- [aapt](http://eLinux.org/Android-aapt "Android aapt") 
+ [aapt](http://eLinux.org/Android_aapt "Android aapt") 
 Android Asset Packaging Tool - a tool for creating, inspecting and
 modifying Android application packages.
 
@@ -46,15 +46,15 @@ modifying Android application packages.
 A single focused thing the user can do on an Android device. Also, a
 java class in the Android framework, which is used as the superclass for
 an Activity implementation. See
-[http://developer.android.com/reference/android/app/Activity.html](http//developer-android.com/reference/android/app/Activity.html)-
+[http://developer.android.com/reference/android/app/Activity.html](http://developer.android.com/reference/android/app/Activity.html).
 "An Activity presents a visual user interface for one focused endeavor
 the user can undertake." See Activity on the page:
-[http://developer.android.com/guide/topics/fundamentals.html](http//developer-android.com/guide/topics/fundamentals-html)
+[http://developer.android.com/guide/topics/fundamentals.html](http://developer.android.com/guide/topics/fundamentals.html)
 
  adb 
 Android Debug Bridge - a tool for communicating between the host and a
-target Android system (including an emulator running on the host)- See
-[http://developer.android.com/guide/developing/tools/adb.html](http//developer-android.com/guide/developing/tools/adb-html)
+target Android system (including an emulator running on the host). See
+[http://developer.android.com/guide/developing/tools/adb.html](http://developer.android.com/guide/developing/tools/adb.html)
 
  ADP1 
 Android Developer Phone 1
@@ -72,7 +72,7 @@ original founders of Android, Inc. loves robots.
  AndroidManifest.xml 
 A file describing the contents, permissions and other attributes of an
 Android application package. See
-[http://developer.android.com/guide/topics/manifest/manifest-intro.html](http//developer-android.com/guide/topics/manifest/manifest-intro-html)
+[http://developer.android.com/guide/topics/manifest/manifest-intro.html](http://developer.android.com/guide/topics/manifest/manifest-intro.html)
 
  Android, Inc. 
 A company founded by Andy Rubin and others to create a mobile phone
@@ -80,15 +80,15 @@ operating system. Android, Inc. was acquired by Google in 2005.
 
  ASE 
 Android Scripting Environment - the old name of Scripting Layer for
-Android. See [Android Scripting](http://eLinux.org/Android-Scripting "Android Scripting")
+Android. See [Android Scripting](../../../android_portal/software_dev/Android_Scripting/Android_Scripting.md "Android Scripting")
 
 ## B
 
  Binder 
-An Interprocess Communication (IPC) mechanism- See
-[http://cs736-android.pbworks.com/IPC-Binder](http//cs736-android-pbworks-com/IPC-Binder)
+An Interprocess Communication (IPC) mechanism. See
+[http://cs736-android.pbworks.com/IPC-Binder](http://cs736-android.pbworks.com/IPC-Binder)
 and
-[http://groups.google.com/group/android-developers/msg/dc0e0e872de9b0d2](http//groups-google-com/group/android-developers/msg/dc0e0e872de9b0d2)
+[http://groups.google.com/group/android-developers/msg/dc0e0e872de9b0d2](http://groups.google.com/group/android-developers/msg/dc0e0e872de9b0d2)
 
  Bionic 
 small C library used in Android devices
@@ -96,7 +96,7 @@ small C library used in Android devices
  Bootchart 
 A mechanism to create visual charts of a Linux boot sequence, including
 the timing of process start and execution. See [Using Bootchart on
-Android](http://eLinux.org/Using-Bootchart-on-Android "Using Bootchart on Android")
+Android](http://eLinux.org/Using_Bootchart_on_Android "Using Bootchart on Android")
 
 ## C
 
@@ -105,11 +105,11 @@ The US name for the Motorola Android phone.
 
  Content Provider 
 An piece of software on an Android system that provides information
-(content) to other software elements- See
-[http://developer.android.com/guide/topics/providers/content-providers.html](http//developer-android.com/guide/topics/providers/content-providers.html)-
+(content) to other software elements. See
+[http://developer.android.com/guide/topics/providers/content-providers.html](http://developer.android.com/guide/topics/providers/content-providers.html).
 Also, a class which is the superclass for code which acts as a content
 provider. See the [ContentProvider class
-documentation](http//developer-android.com/reference/android/content/ContentProvider-html)
+documentation](http://developer.android.com/reference/android/content/ContentProvider.html)
 
  Cupcake 
 The code name for Android version 1.5.
@@ -119,17 +119,17 @@ The code name for Android version 1.5.
  Dalvik 
 Virtual Machine in which Android applications are run. This VM executes
 Dalvik bytecode, which is compiled from programs written in the Java
-language. Note that the Dalvik VM is not a Java VM (JVM)-
+language. Note that the Dalvik VM is not a Java VM (JVM).
 
 Every Android application runs in its own process, with its own instance
 of the Dalvik virtual machine. Dalvik has been written so that a device
 can run multiple VMs efficiently. The Dalvik VM executes files in the
-Dalvik Executable (-dex) format which is optimized for minimal memory
+Dalvik Executable (.dex) format which is optimized for minimal memory
 footprint. The VM is register-based, and runs classes compiled by a Java
 language compiler that have been transformed into the .dex format by the
 included "dx" tool.
 
-See [Android Dalvik VM](http://eLinux.org/Android-Dalvik-VM "Android Dalvik VM") for more
+See [Android Dalvik VM](../../../android_portal/android_sys_info/Android_Dalvik_VM/Android_Dalvik_VM.md "Android Dalvik VM") for more
 information
 
  Donut 
@@ -154,7 +154,7 @@ The code name for Android version 2.1
 a program which communicates with the developer firmware, and which is
 capable of loading new software on the ADP1 phone (including re-writing
 the flash partitions on the device). See [Android
-Fastboot](http://eLinux.org/Android-Fastboot "Android Fastboot")
+Fastboot](http://eLinux.org/Android_Fastboot "Android Fastboot")
 
  FreeType 
 An open-source set of fonts and font system
@@ -177,7 +177,7 @@ The code name for Android version 2.3
 The name of a virtual ARM platform provided by the emulator.
 
 Goldfish executes ARM926T instructions and has hooks for input and
-output - such as reading key presses from or displaying video output in
+output -- such as reading key presses from or displaying video output in
 the emulator. There is a "goldfish" configuration file for compiling the
 Linux kernel to run with this emulated platform.
 
@@ -195,14 +195,14 @@ computers
  Ice Cream Sandwhich 
 Android version 2.4 or 3.1 - the successor to Gingerbread and/or
 Honeycomb (possibly indicating a development fork) See
-[http://techcrunch.com/2011/01/11/android-ice-cream-sandwich/](http//techcrunch-com/2011/01/11/android-ice-cream-sandwich/)
+[http://techcrunch.com/2011/01/11/android-ice-cream-sandwich/](http://techcrunch.com/2011/01/11/android-ice-cream-sandwich/)
 
  init 
 the first user-space program run in the Android system. It is not a
 standard Linux-style 'init' program (which processes an /etc/inittab
 file). Rather, it processes a script called init.rc in the root
 directory of the file system. See [Android
-Booting\#'init'](http://eLinux.org/Android-Booting#-init- "Android Booting")
+Booting\#'init'](http://eLinux.org/Android_Booting#.27init.27 "Android Booting")
 
  Intent 
 A facility to send messages between different Android components. A
@@ -228,7 +228,7 @@ The code name for Android versions 4.1, 4.2 and 4.3
 
  JNI 
 Java Native Interface ([wikipedia
-entry](http//wikipedia-org/wiki/Java-Native-Interface)) is a
+entry](http://wikipedia.org/wiki/Java_Native_Interface)) is a
 programming framework that allows Java code to call or be called by
 "native" code (that is, code compiled in another language such as C, C++
 or assembly).
@@ -246,12 +246,12 @@ Torvalds, but over time by many thousands of developers worldwide.
 
  Live-android 
 A project to create an [Android
-live-CD](http//code-google-com/p/live-android/), for running Android on
+live-CD](http://code.google.com/p/live-android/), for running Android on
 generic x86 platforms.
 
  logcat
 A command to view messages in one of the system logs. See [Android
-logger](http://eLinux.org/Android-logger "Android logger")
+logger](http://eLinux.org/Android_logger "Android logger")
 
 ## M
 
@@ -271,10 +271,10 @@ Desire/Nexus One).
 
  NDK 
 [Native Development
-Kit](http//developer-android.com/sdk/ndk/index.html)- A set of tools,
+Kit](http://developer.android.com/sdk/ndk/index.html). A set of tools,
 build files and instructions to generate native code (usually libraries)
 to be used with Android systems. Native libraries are most often used as
-part of JNI (to allow Java code to call C code, or vice versa)-
+part of JNI (to allow Java code to call C code, or vice versa).
 
 ## O
 
@@ -287,7 +287,7 @@ part of JNI (to allow Java code to call C code, or vice versa)-
 Android repository manager. This is a wrapper program (written in
 Python) over the git tool, for managing the multiple git repositories
 that make up the entire Android code base. See
-[http://source.android.com/download/using-repo](http//source-android-com/download/using-repo)
+[http://source.android.com/download/using-repo](http://source.android.com/download/using-repo)
 
  rild 
 Radio-Interface-Link daemon. This is the daemon which handles
@@ -304,7 +304,7 @@ Saphire
 Scripting Layer for Android - an execution environment that let's users
 use scripting languages (such as Python or Ruby), instead of Java, to
 write programs for Android. See [Android
-Scripting](http://eLinux.org/Android-Scripting "Android Scripting")
+Scripting](../../../android_portal/software_dev/Android_Scripting/Android_Scripting.md "Android Scripting")
 
  SGL 
 2D graphics layer for Android applications
@@ -315,17 +315,17 @@ Android system components, and available to all Android applications.
 
 ## T
 
- TARGET\-PRODUCT 
+ TARGET\_PRODUCT 
 An environment variable used by the build system to indicate the product
-that the software should be built for. This and other TARGET\-\*
-variables are set using the choosecombo() function in build/envsetup.sh-
-If not set, the TARGET\-\* variables will use defaults when you run the
+that the software should be built for. This and other TARGET\_\*
+variables are set using the choosecombo() function in build/envsetup.sh.
+If not set, the TARGET\_\* variables will use defaults when you run the
 'm' alias, after source-ing build/envsetup.sh into your shell
-environment. Otherwise, use the choosecombo() function to set them-
+environment. Otherwise, use the choosecombo() function to set them.
 
 ex: \$ cd mydroid ; source build/envsetup.sh ; choosecombo
 
-The options for TARGET\-PRODUCT depend on entries in the
+The options for TARGET\_PRODUCT depend on entries in the
 AndroidProducts.mk files under build/target/products and
 vendor/\*/\*/AndroidProducts.mk in your repository.
 
@@ -343,7 +343,7 @@ ARM linux kernel machine ID for the HTC Dream hardware (used in the
 t-Mobile G1 and the ADP1)
 
 See
-[http://www.arm.linux.org.uk/developer/machines/list.php?id=1440](http//www-arm.linux.org.uk/developer/machines/list-php?id=1440)
+[http://www.arm.linux.org.uk/developer/machines/list.php?id=1440](http://www.arm.linux.org.uk/developer/machines/list.php?id=1440)
 
 ## V
 
@@ -357,7 +357,7 @@ mounting and unmounting file system (volumes)
 A kernel mechanism for Android power management. When a thread holds a
 wakelock, the kernel will refrain from entering a low-power state.
 
-Back to [Android Portal](http://eLinux.org/Android-Portal "Android Portal")
+Back to [Android Portal](http://eLinux.org/Android_Portal "Android Portal")
 
 ## Z
 
@@ -366,7 +366,7 @@ The first Dalvik virtual machine instance. All other java applications
 that are started in the system are spawned from zygote.
 
 
-[Category](http://eLinux.org/SpecialCategories "Special:Categories"):
+[Category](http://eLinux.org/Special:Categories "Special:Categories"):
 
--   [Android](http://eLinux.org/CategoryAndroid "Category:Android")
+-   [Android](http://eLinux.org/Category:Android "Category:Android")
 

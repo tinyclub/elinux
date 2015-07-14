@@ -56,7 +56,7 @@
         and the build scripts in the recipe files, there is some truth
         to this.
 
-See also [Toolchains](http://eLinux.org/Toolchains "Toolchains")
+See also [Toolchains](../../../toolbox/dev_tools/Toolchains/Toolchains.md "Toolchains")
 
 
 [Category](http://eLinux.org/Special:Categories "Special:Categories"):

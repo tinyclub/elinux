@@ -73,10 +73,10 @@ notable additions, including "%pf", which will print the symbol name in
 place of the numeric pointer value, if available.
 
 The supported format strings are quite extensively documented in
-[Documentation/printk-formats.txt](http//git-kernel.org/?p=linux/kernel/git/torvalds/linux.git;a=blob;f=Documentation/printk-formats.txt;hb=HEAD)
+[Documentation/printk-formats.txt](http://git.kernel.org/?p=linux/kernel/git/torvalds/linux.git;a=blob;f=Documentation/printk-formats.txt;hb=HEAD)
 
 However please **note**: always use *%zu*, *%zd* or *%zx* for printing
-*size\-t* and *ssize\-t* values. ssize\-t and size\-t are quite common
+*size\_t* and *ssize\_t* values. ssize\_t and size\_t are quite common
 values in the kernel, so please use the *%z* to avoid annoying compile
 warnings.
 
@@ -85,13 +85,13 @@ warnings.
 * * * * *
 
 **Author's practical advice:**
- If you want to debug an oops (e-g caused by releasing a resource twice)
+ If you want to debug an oops (e.g caused by releasing a resource twice)
 in your driver and you don't have a clue where the oops happens, simply
 add this line
 
-    printk(KERN-ALERT "DEBUG Passed %s %d \n",-FUNCTION-,-LINE);
+    printk(KERN_ALERT "DEBUG: Passed %s %d \n",__FUNCTION__,__LINE__);
 
-after each possibly offending statement. Recompile and (re)load the
+after each possibly offending statement. Recompile and (re-)load the
 module and trigger the error condition - your log now shows you the last
 line that was successfully executed before the oops happened.
 
@@ -106,13 +106,13 @@ your module ;)
 
 If you look into real kernel code you will always see something like:
 
-    printk(KERN-ERR "something went wrong, return code %d\n",ret);
+    printk(KERN_ERR "something went wrong, return code: %d\n",ret);
 
-where "*KERN\-ERR*" is one of the eight different log levels defined in
-[include/linux/kern\-levels.h](http//git-kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/include/linux/kern-levels.h?id=HEAD)
+where "*KERN\_ERR*" is one of the eight different log levels defined in
+[include/linux/kern\_levels.h](http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/include/linux/kern_levels.h?id=HEAD)
 and specifies the severity of the error message.
 
-Note that there is **NO** comma between the *KERN\-ERR* and the format
+Note that there is **NO** comma between the *KERN\_ERR* and the format
 string (as the preprocessor concatenates both strings)
 
 The log levels are:
@@ -128,88 +128,88 @@ The log levels are:
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">KERN-EMERG</td>
+<td align="left">KERN_EMERG</td>
 <td align="left">&quot;0&quot;</td>
 <td align="left">Emergency messages, system is about to crash or is unstable</td>
-<td align="left">pr-emerg</td>
+<td align="left">pr_emerg</td>
 </tr>
 <tr class="even">
-<td align="left">KERN-ALERT</td>
+<td align="left">KERN_ALERT</td>
 <td align="left">&quot;1&quot;</td>
 <td align="left">Something bad happened and action must be taken immediately</td>
-<td align="left">pr-alert</td>
+<td align="left">pr_alert</td>
 </tr>
 <tr class="odd">
-<td align="left">KERN-CRIT</td>
+<td align="left">KERN_CRIT</td>
 <td align="left">&quot;2&quot;</td>
 <td align="left">A critical condition occurred like a serious hardware/software failure</td>
-<td align="left">pr-crit</td>
+<td align="left">pr_crit</td>
 </tr>
 <tr class="even">
-<td align="left">KERN-ERR</td>
+<td align="left">KERN_ERR</td>
 <td align="left">&quot;3&quot;</td>
 <td align="left">An error condition, often used by drivers to indicate difficulties with the hardware</td>
-<td align="left">pr-err</td>
+<td align="left">pr_err</td>
 </tr>
 <tr class="odd">
-<td align="left">KERN-WARNING</td>
+<td align="left">KERN_WARNING</td>
 <td align="left">&quot;4&quot;</td>
 <td align="left">A warning, meaning nothing serious by itself but might indicate problems</td>
-<td align="left">pr-warning</td>
+<td align="left">pr_warning</td>
 </tr>
 <tr class="even">
-<td align="left">KERN-NOTICE</td>
+<td align="left">KERN_NOTICE</td>
 <td align="left">&quot;5&quot;</td>
 <td align="left">Nothing serious, but notably nevertheless. Often used to report security events.</td>
-<td align="left">pr-notice</td>
+<td align="left">pr_notice</td>
 </tr>
 <tr class="odd">
-<td align="left">KERN-INFO</td>
+<td align="left">KERN_INFO</td>
 <td align="left">&quot;6&quot;</td>
 <td align="left">Informational message e.g. startup information at driver initialization</td>
-<td align="left">pr-info</td>
+<td align="left">pr_info</td>
 </tr>
 <tr class="even">
-<td align="left">KERN-DEBUG</td>
+<td align="left">KERN_DEBUG</td>
 <td align="left">&quot;7&quot;</td>
 <td align="left">Debug messages</td>
-<td align="left">pr-debug, pr-devel if DEBUG is defined</td>
+<td align="left">pr_debug, pr_devel if DEBUG is defined</td>
 </tr>
 <tr class="odd">
-<td align="left">KERN-DEFAULT</td>
+<td align="left">KERN_DEFAULT</td>
 <td align="left">&quot;d&quot;</td>
 <td align="left">The default kernel loglevel</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left">KERN-CONT</td>
+<td align="left">KERN_CONT</td>
 <td align="left">&quot;&quot;</td>
 <td align="left">&quot;continued&quot; line of log printout (only done after a line that had no enclosing \n) <a href="http://lwn.net/Articles/252651/">[1]</a></td>
-<td align="left">pr-cont</td>
+<td align="left">pr_cont</td>
 </tr>
 </tbody>
 </table>
 
 Note that the actual values of the log levels are prepended by the
-KERN\-SOH character whose ASCII value is '\\001'. Read the source for
+KERN\_SOH character whose ASCII value is '\\001'. Read the source for
 more details.
 
 
- The pr\-\* macros (with exception of pr\-debug) are simple shorthand
+ The pr\_\* macros (with exception of pr\_debug) are simple shorthand
 definitions in *include/linux/printk.h* for their respective printk call
 and should probably be used in newer drivers.
 
-*pr\-devel* and *pr\-debug* are replaced with *printk(KERN\-DEBUG ...*
+*pr\_devel* and *pr\_debug* are replaced with *printk(KERN\_DEBUG ...*
 if the kernel was compiled with *DEBUG*, otherwise replaced with an
 empty statement.
 
-For drivers the pr\-debug should not be used anymore (use dev\-dbg
+For drivers the pr\_debug should not be used anymore (use dev\_dbg
 instead).
 
 
  If you don't specify a log level in your message it defaults to
-*DEFAULT\-MESSAGE\-LOGLEVEL* (usually *"4"*=*KERN\-WARNING*) which can
-be set via the *CONFIG\-DEFAULT\-MESSAGE\-LOGLEVEL* kernel config option
+*DEFAULT\_MESSAGE\_LOGLEVEL* (usually *"4"*=*KERN\_WARNING*) which can
+be set via the *CONFIG\_DEFAULT\_MESSAGE\_LOGLEVEL* kernel config option
 (*make menuconfig-\> Kernel Hacking -\> Default message log level*)
 
 
@@ -219,21 +219,21 @@ immediately, by printing it to the current console (where console could
 also be a serial line or even a printer, not an xterm).
 
 For this the kernel compares the log level of the message to the
-*console\-loglevel* (a kernel variable) and if the priority is higher
-(i-e. a lower value) than the *console\-loglevel* the message will be
+*console\_loglevel* (a kernel variable) and if the priority is higher
+(i.e. a lower value) than the *console\_loglevel* the message will be
 printed to the current console.
 
-To determine your current *console\-loglevel* you simply enter:
+To determine your current *console\_loglevel* you simply enter:
 
     $ cat /proc/sys/kernel/printk
         7       4       1       7
         current default minimum boot-time-default
 
-The first integer shows you your current console\-loglevel; the second
+The first integer shows you your current console\_loglevel; the second
 the default log level that you have seen above.
 
 
- To change your current console\-loglevel simply write to this file, so
+ To change your current console\_loglevel simply write to this file, so
 in order to get all messages printed to the console do a simple
 
     # echo 8 > /proc/sys/kernel/printk
@@ -243,15 +243,15 @@ and every kernel message will appear on your console.
 Another way to change the console log level is to use *dmesg* with the
 *-n* parameter
 
-    # #set console-loglevel to print KERN-WARNING (4) or more severe messages
+    # #set console_loglevel to print KERN_WARNING (4) or more severe messages
     # dmesg -n 5
 
 Only messages with a value lower (**not** lower equal) than the
-console\-loglevel will be printed.
+console\_loglevel will be printed.
 
-You can also specify the console\-loglevel at boot time using the
+You can also specify the console\_loglevel at boot time using the
 *loglevel* boot parameter. (see
-[Documentation/kernel-parameters.txt](http//git-kernel.org/?p=linux/kernel/git/torvalds/linux.git;a=blob;f=Documentation/kernel-parameters.txt;hb=HEAD#l1334)
+[Documentation/kernel-parameters.txt](http://git.kernel.org/?p=linux/kernel/git/torvalds/linux.git;a=blob;f=Documentation/kernel-parameters.txt;hb=HEAD#l1334)
 for more details)
 
 * * * * *
@@ -259,10 +259,10 @@ for more details)
 **Author's practical advice:**
  Of course you should always specify an appropriate log level for your
 messages, but for **debugging**, I guess most developers leave the
-console\-loglevel unchanged and simply use KERN\-ERR or KERN\-CRIT to
+console\_loglevel unchanged and simply use KERN\_ERR or KERN\_CRIT to
 ensure the message reaches the console.
 
-    pr-err("REMOVE ME my debug statement that I swear to remove when I'm done\");
+    pr_err("REMOVE ME: my debug statement that I swear to remove when I'm done\");
 
 Please make sure to remove these 'inappropriately' tagged messages
 before shipping the module ;)
@@ -270,21 +270,21 @@ before shipping the module ;)
 * * * * *
 
 
- *KERN\-CONT* and *pr\-cont* are special cases since they do not specify
+ *KERN\_CONT* and *pr\_cont* are special cases since they do not specify
 an urgency but rather indicate a 'continued message' e.g.:
 
-    printk(KERN-ERR "Doing something was ");
+    printk(KERN_ERR "Doing something was ");
     /* <100 lines of whatever>*/
     if (success)
-       printk(KERN-CONT "successful\n");
+       printk(KERN_CONT "successful\n");
     else
-       printk(KERN-CONT "NOT successful\n");
+       printk(KERN_CONT "NOT successful\n");
 
     -> "Doing something was successful"
 
-**Important Note:** *KERN\-CONT* and *pr\-cont* should only be used by
+**Important Note:** *KERN\_CONT* and *pr\_cont* should only be used by
 core/arch code during early bootup (a continued line is not SMP-safe
-otherwise).[[2]](http//lwn-net/Articles/252651/)
+otherwise).[[2]](http://lwn.net/Articles/252651/)
 
 ## Rate limiting and one time messages
 
@@ -296,30 +296,30 @@ avoided.
 As always the kernel already provides you with nice functions that solve
 your problems:
 
-    printk-ratelimited(-.)
+    printk_ratelimited(...)
 
 and
 
-    printk-once(-.)
+    printk_once(...)
 
-*printk\-once* is fairly trivial - no matter how often you call it, it
+*printk\_once* is fairly trivial - no matter how often you call it, it
 prints once and never again.
 
-*printk\-ratelimited* is a little bit more complicated - it prints by
+*printk\_ratelimited* is a little bit more complicated - it prints by
 default not more than 10 times in every 5 seconds (for each function it
 is called in).
 
 If you need other values for the maximum burst count and the timeout,
 you can always setup your own ratelimit using the
-*DEFINE\-RATELIMIT\-STATE* macro and the *\-\-ratelimit* function - see
-the implementation of *printk\-ratelimited* for an example.
+*DEFINE\_RATELIMIT\_STATE* macro and the *\_\_ratelimit* function - see
+the implementation of *printk\_ratelimited* for an example.
 
 Be sure to *\#include \<kernel/ratelimit.h\>* in order to use
-*printk\-ratelimited()*
+*printk\_ratelimited()*
 
-Both functions have also their *pr\-\** equivalents like
-*pr\-info\-ratelimited* for *printk\-ratelimited(KERN\-INFO...* and
-*pr\-crit\-once* for *printk\-once(KERN\-CRIT...*
+Both functions have also their *pr\_\** equivalents like
+*pr\_info\_ratelimited* for *printk\_ratelimited(KERN\_INFO...* and
+*pr\_crit\_once* for *printk\_once(KERN\_CRIT...*
 
 
  **Note: both did not work as expected in my tests here, will probably
@@ -336,7 +336,7 @@ It is as simple as
     # echo "Hello Kernel-World" > /dev/kmsg
 
 Of course this messages gets the default log level assigned, if you want
-e.g. to issue a KERN\-CRIT message you have to use the string
+e.g. to issue a KERN\_CRIT message you have to use the string
 representation of the log level - in this case "2"
 
     # echo "2Writing critical printk messages from userspace" >/dev/kmsg
@@ -353,13 +353,13 @@ If /dev/kmsg does not exist, it can be created with: 'mknod -m 600
 ## Internals / Changing the size of the printk buffer
 
 Printk is implemented by using a ring buffer in the kernel with a size
-of *\-\-LOG\-BUF\-LEN* bytes where *\-\-LOG\-BUF\-LEN* equals *(1 \<\<*
-CONFIG\-LOG\-BUF\-SHIFT)*(see*
-[kernel/printk.c](http//git-kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=blob;f=kernel/printk.c;hb=HEAD)
+of *\_\_LOG\_BUF\_LEN* bytes where *\_\_LOG\_BUF\_LEN* equals *(1 \<\<*
+CONFIG\_LOG\_BUF\_SHIFT)*(see*
+[kernel/printk.c](http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=blob;f=kernel/printk.c;hb=HEAD)
 for details).
 
 You can specify the size of the buffer in your kernel config by setting
-*CONFIG\-LOG\-BUF\-SHIFT* to an appropriate value (e-g. 17 for Kb)
+*CONFIG\_LOG\_BUF\_SHIFT* to an appropriate value (e.g. 17 for 128Kb)
 (*make menuconfig -\> General Setup -\> Kernel log buffer size*).
 
 Using a ring buffer implies that older messages get overwritten once the
@@ -375,8 +375,8 @@ are overwritten.
 use a larger logbuffer you have to invoke dmesg with the *-s* parameter
 e.g.:
 
-    ### CONFIG-LOG-BUF-SHIFT 17 = k
-    $ dmesg -s 000
+    ### CONFIG_LOG_BUF_SHIFT 17 = 128k
+    $ dmesg -s 128000
 
 The kernel log buffer is accessible for reading from userspace by
 */proc/kmsg*. */proc/kmsg* behaves more or less like a FIFO and blocks
@@ -398,10 +398,10 @@ It is just there and just works. The only precondition is that you have
 some kind of working console to display the messages.
 
 For the early stages in the boot process, where no console is available
-yet, there is a special function named *early\-printk*, this function
+yet, there is a special function named *early\_printk*, this function
 writes directly to the VGA buffer or a serial line but otherwise works
-just like printk - you have to enable this function by setting
-*CONFIG\-EARLY\-PRINTK* in your kernel config (*make menuconfig -\>
+just like printk -- you have to enable this function by setting
+*CONFIG\_EARLY\_PRINTK* in your kernel config (*make menuconfig -\>
 Kernel Hacking -\> Early printk*).
 
 The major drawback is that printk is quite static, so you have to figure
@@ -437,10 +437,10 @@ The tricky parts of doing this are:
     *can* do a cold boot, but if the memory is left unpowered for very
     long, you will start to see memory corruption.
 2.  figuring out the address to use in the bootloader, based on the
-    address of \-\-log\-buf in System.map. You will probably need to
-    subtract the value of CONFIG\-PAGE\-OFFSET from the \-\-log\-buf
+    address of \_\_log\_buf in System.map. You will probably need to
+    subtract the value of CONFIG\_PAGE\_OFFSET from the \_\_log\_buf
     address. However, there may be other offsets present as well (such
-    as TEXT\-OFFSET). Sometimes you can find the buffer by dumping the
+    as TEXT\_OFFSET). Sometimes you can find the buffer by dumping the
     memory in a suspected area and locating the kernel messages visually
     in the dump. Note that the mapping offset between the kernel map of
     memory and the bootloader map of memory should not change. So once
@@ -456,11 +456,11 @@ boot loader maps memory compared to the kernel.
 
 Quinn says: Here's what I do with Redboot on i.MX31:
 
-    fgrep printk-buf System.map
+    fgrep printk_buf System.map
 
-this shows the linked address of the printk\-buf, e.g.:
+this shows the linked address of the printk\_buf, e.g.:
 
-    c02338f0 b printk-buf.16194
+    c02338f0 b printk_buf.16194
 
 The address "c02338f0" is in kernel virtual, which, in the case of
 i.MX31 ADS, redboot will have mapped to 0x802338f0. So, after resetting
@@ -476,26 +476,26 @@ Knowing what's there can be **very** useful in debugging your console.
 
 Tim Bird tried these steps and they worked:
 
-    grep -log-buf System.map
+    grep __log_buf System.map
 
 or
 
-    grep -log-buf /proc/kallsyms
+    grep __log_buf /proc/kallsyms
 
 These show:
 
-    c0352d88 B -log-buf
+    c0352d88 B __log_buf
 
 In the case of the OSK, this address maps to 0x10352d88. So I reset the
 target board and use the following:
 
     OMAP5912 OSK # md 10352d88
     10352d88: 4c3e353c 78756e69 72657620 6e6f6973    <5>Linux version
-    10352d98: 362e3220 2e32322e 612d3631 6e5f706c     2.6.22.16-alp-n
-    10352da8: 7206c 64726962 6d697440 6b736564    l (tbird@timdesk
-    10352db8: 2e6d612e 796e6f73 6d6f632e 62    .am.sony.com) (g
+    10352d98: 362e3220 2e32322e 612d3631 6e5f706c     2.6.22.16-alp_n
+    10352da8: 7428206c 64726962 6d697440 6b736564    l (tbird@timdesk
+    10352db8: 2e6d612e 796e6f73 6d6f632e 67282029    .am.sony.com) (g
     10352dc8: 76206363 69737265 33206e6f 342e342e    cc version 3.4.4
-    10352dd8: 34232 45525020 54504d45 65755420    ) #4 PREEMPT Tue
+    10352dd8: 34232029 45525020 54504d45 65755420    ) #4 PREEMPT Tue
     ...
 
 #### Grub
@@ -507,28 +507,28 @@ prompt.
 
 
 
-### Using CONFIG\-DEBUG\-LL and printascii() (ARM only)
+### Using CONFIG\_DEBUG\_LL and printascii() (ARM only)
 
 If the kernel fails before the serial console is enabled, you can use
-CONFIG\-DEBUG\-LL to add extra debug output routines to the kernel.
+CONFIG\_DEBUG\_LL to add extra debug output routines to the kernel.
 These are printascii, printch and printhex. These routines print
 directly to the serial port, bypassing the console code, and are
 available earlier in machine initialization.
 
 To see printks earlier in the boot sequence (before the console is
-initialized), set CONFIG\-DEBUG\-LL=y and CONFIG\-EARLY\-PRINTK=y.
+initialized), set CONFIG\_DEBUG\_LL=y and CONFIG\_EARLY\_PRINTK=y.
 
 Alternatively, add your own calls to printascii, printch, and printhex
 where you believe the problems are located.
 
 Here is an e-mail exchange seen on the linux-embedded mailing list (with
 answer by George
-Davis):[[3]](http//www-mail-archive.com/linux-embedded@vger.kernel.org/msg00223.html)
+Davis):[[3]](http://www.mail-archive.com/linux-embedded@vger.kernel.org/msg00223.html)
 
     > When we try to boot a 2.6.21 kernel after uncompressing the kernel the boot process dies somehow.
-    > We've figured out so far that the kernel dies somewhere between the gunzip and start-kernel.
+    > We've figured out so far that the kernel dies somewhere between the gunzip and start_kernel.
 
-    Try enabling DEBUG-LL to see if it's an machine ID error.  If you see:
+    Try enabling DEBUG_LL to see if it's an machine ID error.  If you see:
 
     Error: unrecognized/unsupported processor variant.
 
@@ -538,7 +538,7 @@ Davis):[[3]](http//www-mail-archive.com/linux-embedded@vger.kernel.org/msg00223.
 
     Then you either don't have proper processor support enabled for your target or your bootloader is passing in the wrong machine number.
 
-    If you still don't see anything, try hacking printk.c to call printascii() (enabled for the DEBUG-LL case) to print directly to the serial port w/o a driver, etc.,.  You can find more details on these low-level debugging hacks via a little googling...
+    If you still don't see anything, try hacking printk.c to call printascii() (enabled for the DEBUG_LL case) to print directly to the serial port w/o a driver, etc.,.  You can find more details on these low-level debugging hacks via a little googling...
 
 ## NetConsole
 
@@ -549,7 +549,7 @@ you could either hook up a serial line to your crashing target machine
 (if a serial port is available) or use the kernels netconsole feature to
 enable printk logging via UDP.
 
-In order to use it you have to enable the *CONFIG\-NETCONSOLE* kernel
+In order to use it you have to enable the *CONFIG\_NETCONSOLE* kernel
 config option (*make menuconfig -\> Device Drivers -\> Network device
 support -\> Network core driver support -\> Network console logging
 support*) and configure it appropriately by using the *netconsole*
@@ -588,7 +588,7 @@ e.g.
 and see the printk messages from your target dribbling in.
 
 If you don't see any messages you might have to set the
-console\-loglevel to a higher value (see above) or test the connection
+console\_loglevel to a higher value (see above) or test the connection
 via telnet e.g. from the target type
 
     $ telnet 10.0.0.2 6666
@@ -598,11 +598,11 @@ via telnet e.g. from the target type
 ### Netconsole resources
 
 See
-[Documentation/networking/netconsole.txt](http//git-kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=blob;f=Documentation/networking/netconsole.txt;hb=HEAD)
+[Documentation/networking/netconsole.txt](http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=blob;f=Documentation/networking/netconsole.txt;hb=HEAD)
 for more details.
 
 See [Sarah Sharp's blog entry about using
-netconsole](http//sarah-thesharps.us/2009-02-22-09-00)
+netconsole](http://sarah.thesharps.us/2009-02-22-09-00)
 
 ## Misc
 
@@ -615,7 +615,7 @@ buffer, so you will only see new messages when you invoke *dmesg*
 
 ### Printk Timestamps
 
-    CONFIG-PRINTK-TIME
+    CONFIG_PRINTK_TIME
 
 Setting this kernel config option prepends every printk statement with a
 timestamp representing the time since boot. This is particularly useful
@@ -627,43 +627,43 @@ this, or you can enable it any time at runtime by doing the following:
      $echo 1 >/sys/module/printk/parameters/time
 
 Also, there are tools available to use the information to show relative
-times between printks (scripts/show\-delta) and create graphs of
-durations in the kernel (scripts/bootgraph-pl)
+times between printks (scripts/show\_delta) and create graphs of
+durations in the kernel (scripts/bootgraph.pl)
 
-See [Printk Times](http://eLinux.org/Printk-Times "Printk Times") for more details
+See [Printk Times](../../.././dev_portals/Boot_Time/Printk_Times/Printk_Times.md "Printk Times") for more details
 
 ### Printing buffers as hex
 
 If you want to print a buffer as hex within the kernel, don't reinvent
-the wheel use *printk\-hex\-dump\-bytes()* instead.
+the wheel use *printk\_hex\_dump\_bytes()* instead.
 
-    print-hex-dump-bytes(const char *prefix-str, int prefix-type, const void *buf, size-t len)
+    print_hex_dump_bytes(const char *prefix_str, int prefix_type, const void *buf, size_t len)
 
 this function prints a buffer as hex values to the kernel log buffer
-(with level KERN\-DEBUG) Example:
+(with level KERN\_DEBUG) Example:
 
     Kernel Code:
     char mybuf[] = "abcdef";
-    print-hex-dump-bytes("", DUMP-PREFIX-NONE, mybuf, ARRAY-SIZE(mybuf));
+    print_hex_dump_bytes("", DUMP_PREFIX_NONE, mybuf, ARRAY_SIZE(mybuf));
 
     dmesg output:
     61 62 63 64 65 66 00                             abcdef.
 
 If you need something more sophisticated and flexible maybe have a look
-at *print\-hex\-dump()* and *hex\-dump\-to\-buffer()*
+at *print\_hex\_dump()* and *hex\_dump\_to\_buffer()*
 
 ### Dynamic Debugging
 
 It is also possible to enable/disable debug information at runtime using
 the dynamic debug functionality of the kernel. For this the
-*CONFIG\-DYNAMIC\-DEBUG* kernel config option must be set. See
-[Documentation/dynamic-debug-howto.txt](http//git-kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=blob;f=Documentation/dynamic-debug-howto.txt;hb=HEAD)
+*CONFIG\_DYNAMIC\_DEBUG* kernel config option must be set. See
+[Documentation/dynamic-debug-howto.txt](http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=blob;f=Documentation/dynamic-debug-howto.txt;hb=HEAD)
 for more information.
 
 ## Disabling printk messages at compile time
 
 There is a configuration option which allows you to turn off all the
-printk messages in the whole kernel (*CONFIG\-PRINTK*). This reduces the
+printk messages in the whole kernel (*CONFIG\_PRINTK*). This reduces the
 size the kernel, usually by at least 100k, since all message strings are
 not compiled into the kernel binary image.
 
@@ -674,49 +674,49 @@ last thing you do when you are tuning your kernel for size.
 ## References and external links
 
 -   [Linux Kernel
-    Development](http://eLinux.org/Linux-Kernel-Development-by-Robert-Love "Linux Kernel Development - by Robert Love"),
+    Development](http://eLinux.org/Linux_Kernel_Development_-_by_Robert_Love "Linux Kernel Development - by Robert Love"),
     Robert Love, 3rd Edition, Chapter 18 Debugging
 -   [Linux Device
-    Drivers](http://eLinux.org/Linux-Device-Drivers "Linux Device Drivers"), Corbet,
+    Drivers](http://eLinux.org/Linux_Device_Drivers "Linux Device Drivers"), Corbet,
     Rubini and Kroah-Hartmann, 3rd Edition, Chapter 4 Section 2
 -   [Essential Linux Device
-    Drivers](http://eLinux.org/Essential-Linux-Device-Drivers "Essential Linux Device Drivers")
+    Drivers](http://eLinux.org/Essential_Linux_Device_Drivers "Essential Linux Device Drivers")
 
 
 
--   [Documentation/printk-formats.txt](http//git-kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=blob;f=Documentation/printk-formats.txt;hb=HEAD)
--   [Documentation/dynamic-debug-howto.txt](http//git-kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=blob;f=Documentation/dynamic-debug-howto.txt;hb=HEAD)
--   [Documentation/networking/netconsole.txt](http//git-kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=blob;f=Documentation/networking/netconsole.txt;hb=HEAD)
--   [kernel/printk.c](http//git-kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=blob;f=kernel/printk.c;hb=HEAD)
+-   [Documentation/printk-formats.txt](http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=blob;f=Documentation/printk-formats.txt;hb=HEAD)
+-   [Documentation/dynamic-debug-howto.txt](http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=blob;f=Documentation/dynamic-debug-howto.txt;hb=HEAD)
+-   [Documentation/networking/netconsole.txt](http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=blob;f=Documentation/networking/netconsole.txt;hb=HEAD)
+-   [kernel/printk.c](http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=blob;f=kernel/printk.c;hb=HEAD)
     Implementation of printk and others
--   [include/linux/printk.h](http//git-kernel.org/?p=linux/kernel/git/torvalds/linux.git;a=blob;f=include/linux/printk.h;hb=HEAD)
+-   [include/linux/printk.h](http://git.kernel.org/?p=linux/kernel/git/torvalds/linux.git;a=blob;f=include/linux/printk.h;hb=HEAD)
     printk header file
--   [include/linux/kern\-levels.h](http//git-kernel.org/?p=linux/kernel/git/torvalds/linux.git;a=blob;f=include/linux/kern-levels.h;hb=HEAD)
+-   [include/linux/kern\_levels.h](http://git.kernel.org/?p=linux/kernel/git/torvalds/linux.git;a=blob;f=include/linux/kern_levels.h;hb=HEAD)
     logging levels header file
 -   [Blog Entry about the different %p format
-    specifiers](http//www-embedded-bits.co.uk/2010/printk-format-specifiers/)
--   [LWN.net: The perils of pr\-info()](http//lwn-net/Articles/487437/)
+    specifiers](http://www.embedded-bits.co.uk/2010/printk-format-specifiers/)
+-   [LWN.net: The perils of pr\_info()](http://lwn.net/Articles/487437/)
 -   [Kernel logging: APIs and implementation, Tim Jones (for
-    IBM)](http//www-ibm.com/developerworks/linux/library/l-kernel-logging-apis/index.html)
+    IBM)](http://www.ibm.com/developerworks/linux/library/l-kernel-logging-apis/index.html)
     (nice article)
 
 
  Some page related to printk:
 
--   [Printk Times](http://eLinux.org/Printk-Times "Printk Times") - has information about
+-   [Printk Times](../../.././dev_portals/Boot_Time/Printk_Times/Printk_Times.md "Printk Times") - has information about
     how to turn on timestamps for each printk message
     -   [printk time stamps
-        sample](http://eLinux.org/Printk-Times-Sample-4 "Printk Times Sample 4")
--   [printk size information](http://eLinux.org/Printk-Size-Info "Printk Size Info")
--   [Do Printk](http://eLinux.org/Do-Printk "Do Printk") - has information about a method
+        sample](../../.././dev_portals/Boot_Time/Printk_Times/Printk_Times.md_Sample_4 "Printk Times Sample 4")
+-   [printk size information](http://eLinux.org/Printk_Size_Info "Printk Size Info")
+-   [Do Printk](http://eLinux.org/Do_Printk "Do Printk") - has information about a method
     of disabling printk messages on a per-module basis
 
 
-[Categories](http://eLinux.org/SpecialCategories "Special:Categories"):
+[Categories](http://eLinux.org/Special:Categories "Special:Categories"):
 
 -   [Development
-    Tools](http://eLinux.org/CategoryDevelopment-Tools "Category:Development Tools")
+    Tools](http://eLinux.org/Category:Development_Tools "Category:Development Tools")
 -   [Tips and
-    Tricks](http://eLinux.org/CategoryTips-and-Tricks "Category:Tips and Tricks")
--   [Printk](http://eLinux.org/CategoryPrintk "Category:Printk")
+    Tricks](http://eLinux.org/Category:Tips_and_Tricks "Category:Tips and Tricks")
+-   [Printk](http://eLinux.org/Category:Printk "Category:Printk")
 

@@ -1,0 +1,2 @@
+LeopardBoard_FAQ
+RidgeRun_LeopardBoard_SDK_Hints

@@ -17,7 +17,7 @@
             memory](#loading-a-kernel-in-memory)
         -   [1.2.4 Getting the kernel log
             buffer](#getting-the-kernel-log-buffer)
-        -   [1.2.5 Debugging a kernel module (.o and .ko
+        -   [1.2.5 Debugging a kernel module (.o and -ko
             )](#debugging-a-kernel-module-o-and-ko)
     -   [1.3 Determining the module load
         address](#determining-the-module-load-address)
@@ -30,11 +30,11 @@
 The majority of day to day kernel debugging is done by adding print
 statements to code by using the famous printk function. This technique
 is well described in [Kernel Debugging
-Tips](http://eLinux.org/Kernel-Debugging-Tips "Kernel Debugging Tips"). Using printk is a
+Tips](../../../dbg_portal/kernel_dbg/Kernel_Debugging_Tips/Kernel_Debugging_Tips.md "Kernel Debugging Tips"). Using printk is a
 relatively simple, effective and cheap way to find problems. But there
 are also many other Linux-grown techniques that take debugging and
 profiling to a higher level. On this page, we will discuss using the GNU
-debugger (GDB) to do kernel debugging- The [GDB](http://eLinux.org/GDB "GDB") page
+debugger (GDB) to do kernel debugging. The [GDB](http://eLinux.org/GDB "GDB") page
 describes some basic gdb command and also gives good links to
 documentation. Overall, starting using gdb to do kernel debugging is
 relatively easy.
@@ -47,7 +47,7 @@ you can go on and try it right away!
 The open source JTAG debugging world is not that big. One project that
 stands out in terms of debugging capabilities is OpenOCD and this is the
 tool used in this documentation.
-[OpenOCD](http//openocd-berlios.de/web/) is pretty usable on the ARM11
+[OpenOCD](http://openocd.berlios.de/web/) is pretty usable on the ARM11
 and ARM9 targets we tested.
 
 ## Requirements
@@ -57,9 +57,9 @@ GDB:
 You need to get a GDB that is capable of understanding your target
 architecture. Often, this comes with your cross-compiler, but if you
 have to, you can compile it yourself, but you need to understand the
-difference between -target and -host configure options. GDB will be
-running on the host (e-g. x86) but will be able to understand the target
-(e-g. armv6). You may also want to have the gdbserver that can serve as
+difference between --target and --host configure options. GDB will be
+running on the host (e.g. x86) but will be able to understand the target
+(e.g. armv6). You may also want to have the gdbserver that can serve as
 a stub for your user land debugging.
 
 OpenOCD:
@@ -73,7 +73,7 @@ TODO...
 ## The basics
 
 [![Kernel gdb debugging component overvierw
-small.png](http://eLinux.org/images/3/3c/Kernel-gdb-debugging-component-overvierw-small-png)](http://eLinux.org/FileKernel-gdb-debugging-component-overvierw-small.png)
+small.png](http://eLinux.org/images/3/3c/Kernel_gdb_debugging_component_overvierw_small.png)](http://eLinux.org/File:Kernel_gdb_debugging_component_overvierw_small.png)
 
 To debug the kernel, you will need to configure it to have debug
 symbols. Once this is done, you can do your normal kernel development.
@@ -98,7 +98,7 @@ under arch/arm/boot
 
     vmlinux
     arch/arm/boot
-    `- zImage
+    `-- zImage
 
 vmlinux is what we will be using during debugging of the Linux kernel.
 
@@ -129,7 +129,7 @@ Execute the following:
 
     (gdb) file vmlinux
     (gdb) target remote :3333
-    (gdb) break -init-begin
+    (gdb) break __init_begin
     (gdb) cont
     (gdb) mon reset #perhaps this needs to be done from the openocd telnet session..
     Breakpoint 1, 0xc0008000 in stext ()
@@ -137,13 +137,13 @@ Execute the following:
     Loading section .text.head, size 0x240 lma 0xc0008000
     Loading section .init, size 0xe4dc0 lma 0xc0008240
     Loading section .text, size 0x219558 lma 0xc00ed000
-    Loading section .text.init, size 0- lma 0xc0306558
-    Loading section -ksymtab, size 0x4138 lma 0xc0307000
-    Loading section -ksymtab-gpl, size 0x1150 lma 0xc030b138
-    Loading section -kcrctab, size 0x209c lma 0xc0308
-    Loading section -kcrctab-gpl, size 0x8a8 lma 0xc030e324
-    Loading section -ksymtab-strings, size 0xc040 lma 0xc030ebcc
-    Loading section -param, size 0x2e4 lma 0xc031ac0c
+    Loading section .text.init, size 0x7c lma 0xc0306558
+    Loading section __ksymtab, size 0x4138 lma 0xc0307000
+    Loading section __ksymtab_gpl, size 0x1150 lma 0xc030b138
+    Loading section __kcrctab, size 0x209c lma 0xc030c288
+    Loading section __kcrctab_gpl, size 0x8a8 lma 0xc030e324
+    Loading section __ksymtab_strings, size 0xc040 lma 0xc030ebcc
+    Loading section __param, size 0x2e4 lma 0xc031ac0c
     Loading section .data, size 0x1e76c lma 0xc031c000
     Start address 0xc0008000, load size 3345456
     Transfer rate: 64 KB/sec, 15632 bytes/write.
@@ -155,40 +155,40 @@ This will boot your kernel that was loaded into memory via JTAG.
 
 Sometimes the kernel will panic before the serial is up and running. In
 such situations is it **very** handy to be able to dump the kernel log
-buffer. This can be done by looking at the content of the \-\-log\-buf
+buffer. This can be done by looking at the content of the \_\_log\_buf
 in the kernel. In gdb this can be done by issuing
 
-    p (char*) &-log-buf[log-start]
+    p (char*) &__log_buf[log_start]
 
 There must be a simple way of printing the memory area between
-log\-start and log\-end.
+log\_start and log\_end.
 
 The problem is that gdb stops after the first line. Currently we use
 this routine that copied from wchar.gdb until something "normal" came
 out. We defined dmesg it like this:
 
     define dmesg
-            set $-log-buf = $arg0
-            set $log-start = $arg1
-            set $log-end = $arg2
-            set $x = $log-start
+            set $__log_buf = $arg0
+            set $log_start = $arg1
+            set $log_end = $arg2
+            set $x = $log_start
             echo "
-            while ($x < $log-end)
-                    set $c = (char)(($-log-buf)[$x++])
+            while ($x < $log_end)
+                    set $c = (char)(($__log_buf)[$x++])
                     printf "%c" , $c
             end
             echo "\n
     end
     document dmesg
-    dmesg -log-buf log-start log-end
+    dmesg __log_buf log_start log_end
     Print the content of the kernel message buffer
     end
 
 and call it like this:
 
-    dmesg -log-buf log-start log-end
+    dmesg __log_buf log_start log_end
 
-### Debugging a kernel module (-o and .ko )
+### Debugging a kernel module (.o and .ko )
 
 Debugging a kernel module is harder.
 
@@ -209,13 +209,13 @@ information. Here are 3 ways:
      #gdb implementation of the linux lsmod
      define lsmod
             set $current = modules.next
-            set $offset =  ((int)&((struct module *)0)-list)
+            set $offset =  ((int)&((struct module *)0).list)
         printf "Module\tAddress\n"
      
-        while($current-next != modules.next)
+        while($current.next != modules.next)
                     printf "%s\t%p\n",  \
                             ((struct module *) (((void *) ($current)) - $offset ) )->name ,\
-                            ((struct module *) (((void *) ($current)) - $offset ) )->module-core
+                            ((struct module *) (((void *) ($current)) - $offset ) )->module_core
                     set $current = $current.next
             end
     end
@@ -246,8 +246,8 @@ few interesting .gdbinit files that apparently can perform low level
 initialization.
 
 
-[Category](http://eLinux.org/SpecialCategories "Special:Categories"):
+[Category](http://eLinux.org/Special:Categories "Special:Categories"):
 
 -   [Development
-    Tools](http://eLinux.org/CategoryDevelopment-Tools "Category:Development Tools")
+    Tools](http://eLinux.org/Category:Development_Tools "Category:Development Tools")
 

@@ -32,8 +32,8 @@ Most ports of Android are to ARM-based platforms.
 
 -   Mentor Graphics and Texas Instruments support Android on OMAP
     processors via the
-    [project](http//code-google-com/p/rowboat/%7CRowboat)
--   See also [Android on OMAP](http://eLinux.org/Android-on-OMAP "Android on OMAP"),
+    [project](http://code.google.com/p/rowboat/%7CRowboat)
+-   See also [Android on OMAP](http://eLinux.org/Android_on_OMAP "Android on OMAP"),
     which has a very thorough listing of issues faced in initially
     porting Android to OMAP
 
@@ -41,20 +41,20 @@ Most ports of Android are to ARM-based platforms.
 
 Mentor Graphics did a port of Android to MIPS.
 
-See [http://www.mipsandroid.org](http//www-mipsandroid-org)
+See [http://www.mipsandroid.org](http://www.mipsandroid.org)
 
-(Unfortunately, this site requires registration)
+(Unfortunately, this site requires registration.)
 
 -   MIPS now has support for SMP on Android - see [MIPS Supports
     Symmetric Multiprocessing on Android
-    Platform](http//edageek-com/2010/06/01/smartphones-smp/) - Posted
+    Platform](http://edageek.com/2010/06/01/smartphones-smp/) - Posted
     by Ken Cheung in IP Cores on Tuesday, June 1, 2010
 
 ### x86
 
 There is a whole well-developed project for Android on x86.
 
-See [http://www.android-x86.org/](http//www-android-x86-org/)
+See [http://www.android-x86.org/](http://www.android-x86.org/)
 
 At least one major product (Sony Internet TV) is reported to be
 x86-based. Intel has a team of developers working on Android issues. See
@@ -62,13 +62,13 @@ Mark Gross' presentation from ELC 2010 for some tips from them about
 using Android
 
 -   [Experiences in Android Porting, Lessons Learned,Tips and
-    Tricks](http://eLinux.org/images/e/ee/ELC2010-android-xp-tips-tricks-pdf "ELC2010-android-xp-tips-tricks-pdf")
+    Tricks](http://eLinux.org/images/e/ee/ELC2010-android-xp-tips-tricks.pdf "ELC2010-android-xp-tips-tricks.pdf")
     by Mark Gross, April 2010, Embedded Linux Conference 2010
 
 -   Intel is working on "native" Android support. See [Intel prepping
     x86 port for Android
-    2.2](http//www-linuxfordevices-com/c/a/News/Intel-x86-port-and-Sprint-upgrade-plans/?kc=LNXDEVNL063010)
-    By Eric Brown, lwn.net, 2010-06-
+    2.2](http://www.linuxfordevices.com/c/a/News/Intel-x86-port-and-Sprint-upgrade-plans/?kc=LNXDEVNL063010)
+    By Eric Brown, lwn.net, 2010-06-28
 
 ## Individual Platform Support
 
@@ -77,15 +77,15 @@ using Android
 #### Unlocking the phone
 
 Bryan Swetland says:
-([here](http//torvalds-family-blogspot.com/2010/02/happy-camper-html?showCom))
+([here](http://torvalds-family.blogspot.com/2010/02/happy-camper.html?showCom))
 
 All Nexus One devices have an unlockable bootloader (% fastboot oem
 unlock), which, once unlocked will allow you to reflash the boot
-partition (kernel + ramdisk), system partition, etc-
+partition (kernel + ramdisk), system partition, etc.
 
 Full kernel sources are available here:
-[http://android.git.kernel.org/?p=kernel/msm.git;a=shortlog;h=refs/heads/android-msm-2.6-nexusone](http//android-git.kernel.org/?p=kernel/msm.git;a=shortlog;h=refs/heads/android-msm-2-6-nexusone)
-(make mahimahi\-defconfig to configure just like the production kernel)-
+[http://android.git.kernel.org/?p=kernel/msm.git;a=shortlog;h=refs/heads/android-msm-2.6.29-nexusone](http://android.git.kernel.org/?p=kernel/msm.git;a=shortlog;h=refs/heads/android-msm-2.6.29-nexusone)
+(make mahimahi\_defconfig to configure just like the production kernel).
 We're in the process of rebasing up to .32, on our way to .33 and
 beyond.
 
@@ -95,12 +95,12 @@ There are some serial port pins available on the micro-USB connector,
 which you can access if you have the right hardware.
 
 See this [discussion on
-xda-developers](http//forum-xda-developers.com/showthread-php?t=625434)
+xda-developers](http://forum.xda-developers.com/showthread.php?t=625434)
 for detailed information and links.
 
-Brian Swetland says: TTL level (\~3-3v?) serial is present on the D+/D-
+Brian Swetland says: TTL level (\~3.3v?) serial is present on the D+/D-
 pins of the micro USB connector whenever VBUS (usb +5v power) is not
-present. This is physical UART1 (ttyMSM0)- In standard builds the FIQ
+present. This is physical UART1 (ttyMSM0). In standard builds the FIQ
 kernel debugger runs there. You'll have to disable the FIQ debugger and
 enable the serial device in your kernel config if you want to use it as
 a regular serial port.
@@ -112,9 +112,9 @@ a regular serial port.
 Dianne Hackborn had this to say (in August, 2009) about RAM requirements
 for Android:
 
-I would recommend at least -MB available to the \*kernel\*. In many
+I would recommend at least 128MB available to the \*kernel\*. In many
 architectures, a big chunk of RAM will be dedicated to the radio, so you
-need to take that into account, and the -MB recommendation does not
+need to take that into account, and the 128MB recommendation does not
 cover that. Also if your architecture allocates graphics surfaces in
 user space, bump it up by 16MB or so (The Qualcomm devices I have
 experience do their allocations in RAM outside of that accessible to the
@@ -133,7 +133,7 @@ you'll have a much better running device, with a lot fewer headaches as
 you try to get everything working well. That is from painful
 experience. :)
 
-Another reference point - the Droid has 256MB RAM, which runs the
+Another reference point -- the Droid has 256MB RAM, which runs the
 system well, but it also does its graphics allocations in user space and
 has a high density screen so you can still end up not keeping as many
 processes running as you'd like if loading large pages with the browser,
@@ -147,7 +147,7 @@ keep way more processes than was useful. That was never an issue on
 Droid. ;)
 
 
-[Category](http://eLinux.org/SpecialCategories "Special:Categories"):
+[Category](http://eLinux.org/Special:Categories "Special:Categories"):
 
--   [Android](http://eLinux.org/CategoryAndroid "Category:Android")
+-   [Android](http://eLinux.org/Category:Android "Category:Android")
 

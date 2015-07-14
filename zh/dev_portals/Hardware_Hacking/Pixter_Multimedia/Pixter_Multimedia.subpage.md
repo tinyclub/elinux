@@ -1,0 +1,7 @@
+Chip_On_Board
+LH79524
+Pixter_Multimedia_Developer_Board
+Pixter_Multimedia_Expansion_Cartridge
+Pixter_Multimedia_Expansion_Slot
+PixterMultimediaJTAG
+PixterMultimediaLCD

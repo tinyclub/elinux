@@ -1,0 +1,10 @@
+APEX
+Barebox
+Blob
+Bootloader_Security_Resources
+Coreboot
+Grub
+Kexecboot
+Lilo
+Syslinux
+U-Boot

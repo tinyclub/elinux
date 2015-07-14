@@ -11,9 +11,9 @@
 
 -   [1 Introduction](#introduction)
     -   [1.1 The Flattened Device Tree
-        is...](#the-flattened-device-tree-is-..)
+        is...](#the-flattened-device-tree-is)
     -   [1.2 The Flattened Device Tree is
-        not...](#the-flattened-device-tree-is-not-..)
+        not...](#the-flattened-device-tree-is-not)
     -   [1.3 History](#history)
     -   [1.4 Future](#future)
 -   [2 Advantages](#advantages)
@@ -113,12 +113,12 @@ into the kernel or passed to the kernel at boot time.
 ### History
 
 -   [How device tree got into Linux and how it has
-    evolved](http://eLinux.org/Device_tree_history "Device tree history")
+    evolved](../.././dev_portals/Device_Tree/Device_tree_history/Device_tree_history.md "Device tree history")
 
 ### Future
 
 -   [How device tree is changing and where it is
-    headed](http://eLinux.org/Device_tree_future "Device tree future")
+    headed](../.././dev_portals/Device_Tree/Device_tree_future/Device_tree_future.md "Device tree future")
 
 ## Advantages
 
@@ -310,12 +310,12 @@ Some especially useful files are:
 ### FAQ, tips and/or best practices
 
 See the [Linux Drivers Device Tree
-Guide](http://eLinux.org/Linux_Drivers_Device_Tree_Guide "Linux Drivers Device Tree Guide").
+Guide](../.././dev_portals/Device_Tree/Linux_Drivers_Device_Tree_Guide/Linux_Drivers_Device_Tree_Guide.md "Linux Drivers Device Tree Guide").
 
 ### Presentations, Papers and Articles
 
 -   [Solving Device Tree
-    Issues](http://eLinux.org/Device_Tree_frowand "Device Tree frowand"), LinuxCon Japan
+    Issues](../.././dev_portals/Device_Tree/Device_Tree_frowand/Device_Tree_frowand.md "Device Tree frowand"), LinuxCon Japan
     2015 by Frank Rowand
 -   "The Device Tree as a Stable ABI: A Fairy Tale?", ELC 2015 by Thomas
     Petazzoni

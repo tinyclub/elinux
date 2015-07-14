@@ -1,0 +1,12 @@
+CI20_Availability
+CI20_Beginners_Guide
+CI20_Dev_Zone
+CI20_Distros
+CI20_Downloads
+CI20_Hardware
+CI20_Hardware/Documentation
+CI20_Projects
+CI20_Troubleshooting
+CI20_Tutorials
+CI20_upstream
+Template:CI20

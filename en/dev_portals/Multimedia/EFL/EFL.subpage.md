@@ -1,0 +1,3 @@
+Ecore
+Edje
+Evas

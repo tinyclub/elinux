@@ -1,0 +1,14 @@
+Help:Deleting_a_page
+Help:Editing_pages
+Help:Formatting
+Help:Images
+Help:Links
+Help:Managing_files
+Help:Moving_a_page
+Help:Redirects
+Help:Starting_a_new_page
+Help:Tables
+Help:Talk_pages
+Help:Templates
+Help:User_page
+Help:Variables

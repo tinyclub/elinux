@@ -1,1 +1,0 @@
-{% include "./LTTng/LTTng.md" %}

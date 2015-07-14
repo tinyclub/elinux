@@ -32,30 +32,30 @@ intends to collect descriptions and links to these projects
 
 ### Test Automation Tools
 
--   [Autotest](http//test-kernel.org/autotest)
--   [LAVA](https//launchpad-net/lava) - Linaro's test framework
--   [Opentest](http//arago-project-org/wiki/index.php/Opentest)
--   [Red Hat Test Project](https//testing-108.redhat.com/)
+-   [Autotest](http://test.kernel.org/autotest)
+-   [LAVA](https://launchpad.net/lava) - Linaro's test framework
+-   [Opentest](http://arago-project.org/wiki/index.php/Opentest)
+-   [Red Hat Test Project](https://testing.108.redhat.com/)
 -   [Ktest](http://eLinux.org/Ktest "Ktest") Automate kernel testing
 -   [Jenkins-based Test
-    Automation](http://eLinux.org/index-php?title=Jenkins-based-Test-Automation&action=edit&redlink=1 "Jenkins-based Test Automation (page does not exist)")
+    Automation](http://eLinux.org/index.php?title=Jenkins-based_Test_Automation&action=edit&redlink=1 "Jenkins-based Test Automation (page does not exist)")
     - the official test framework for the LTSI project
 
 ### Papers on testing
 
 -   Paper on finding bugs in Unix programs using random input:
-    [http://ftp.cs.wisc.edu/paradyn/technical\-papers/fuzz.pdf](http//ftp-cs.wisc.edu/paradyn/technical-papers/fuzz.pdf)
+    [http://ftp.cs.wisc.edu/paradyn/technical\_papers/fuzz.pdf](http://ftp.cs.wisc.edu/paradyn/technical_papers/fuzz.pdf)
 
 ### Test Suites
 
--   [Linux Test Project](http//ltp-sourceforge.net/)
--   [LTP-DDT](http//processors-wiki.ti.com/index.php/LTP-DDT)
+-   [Linux Test Project](http://ltp.sourceforge.net/)
+-   [LTP-DDT](http://processors.wiki.ti.com/index.php/LTP-DDT)
 
 ### Static Analysis
 
--   [Sparse](http//tree-celinuxforum.org/CelfPubWiki/Sparse)
--   [Smatch](http//smatch-sourceforge.net/)
--   [clang](http//clang-llvm.org/StaticAnalysis.html)
+-   [Sparse](http://tree.celinuxforum.org/CelfPubWiki/Sparse)
+-   [Smatch](http://smatch.sourceforge.net/)
+-   [clang](http://clang.llvm.org/StaticAnalysis.html)
 
 ## Automated kernel compilation results
 
@@ -64,7 +64,7 @@ be viewed:
 
 ### L4X
 
--   [http://l4x.org/k/](http//l4x-org/k/) - Jan Dittmer's page showing
+-   [http://l4x.org/k/](http://l4x.org/k/) - Jan Dittmer's page showing
     the build status and kernel size of the defconfigs of many
     architectures. Running since 2004 or 2005
 
@@ -76,21 +76,21 @@ multiple boards, and reports compile errors/warnings, module size,
 kernel size etc.
 
 -   Kautobuild for ARM -
-    [http://armlinux.simtec.co.uk/kautobuild/](http//armlinux-simtec.co.uk/kautobuild/)
+    [http://armlinux.simtec.co.uk/kautobuild/](http://armlinux.simtec.co.uk/kautobuild/)
 -   mail archive version of results is at:
-    [http://lists.simtec.co.uk/pipermail/kautobuild/](http//lists-simtec.co.uk/pipermail/kautobuild/)
+    [http://lists.simtec.co.uk/pipermail/kautobuild/](http://lists.simtec.co.uk/pipermail/kautobuild/)
 -   Article about the Simtel site is at:
-    [http://www.linuxdevices.com/news/NS4646877354.html](http//www-linuxdevices.com/news/NS4646877354.html)
+    [http://www.linuxdevices.com/news/NS4646877354.html](http://www.linuxdevices.com/news/NS4646877354.html)
     (2006)
 
 ### ABAT
 
 ABAT -
-[https://sourceforge.net/projects/abat/](https//sourceforge-net/projects/abat/)
+[https://sourceforge.net/projects/abat/](https://sourceforge.net/projects/abat/)
 
     - does a download/build/boot regression test for several mainline kernel trees, as soon as new versions are available
     - test results matrix is available here:
-       - http://ftp.kernel.org/pub/linux/kernel/people/mbligh/abat/regression-matrix.html
+       - http://ftp.kernel.org/pub/linux/kernel/people/mbligh/abat/regression_matrix.html
 
 ## Bug tracking system
 
@@ -144,14 +144,14 @@ in place.)
 
 ### External links
 
--   [Trac](http//trac-edgewall.org/) - Web-based software project
+-   [Trac](http://trac.edgewall.org/) - Web-based software project
     management and bug/issue tracking system.
--   [Bugzilla](http//www-bugzilla.org/) - Bug tracking used by the
+-   [Bugzilla](http://www.bugzilla.org/) - Bug tracking used by the
     Mozilla projects. Inherently web-based, written in Perl , and uses
     MySQL as its database back-end. Open-Source.
 -   [Bugreport is a place to publish the security
-    advisories](http//www-bugreport.ir/?)
+    advisories](http://www.bugreport.ir/?)
 -   [How to Report Bugs
-    Effectively](http//www-chiark.greenend.org.uk/~sgtatham/bugs.html)
+    Effectively](http://www.chiark.greenend.org.uk/~sgtatham/bugs.html)
 
 

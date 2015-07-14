@@ -65,19 +65,19 @@ applications interact on the system.
 Here is some information about LKST:
 
 -   project home page:
-    [http://lkst.sourceforge.net/](http//lkst-sourceforge.net/)
+    [http://lkst.sourceforge.net/](http://lkst.sourceforge.net/)
 
 ### Documents and presentations
 
--   [Media:CELF\-LKST\-SH\-Presen-2005-1.pdf](http://eLinux.org/images/a/a4/CELF-LKST-SH-Presen-2005-1-pdf "CELF LKST SH Presen-2005-1.pdf")
+-   [Media:CELF\_LKST\_SH\_Presen-2005-1.pdf](http://eLinux.org/images/a/a4/CELF_LKST_SH_Presen-2005-1.pdf "CELF LKST SH Presen-2005-1.pdf")
     - presentation given by Hitachi at CELF Jan 2005 technical
     conference.
--   [Media:CELF\-LKST\-SH\-Lineo-2005-2.pdf](http://eLinux.org/images/b/b2/CELF-LKST-SH-Lineo-2005-2-pdf "CELF LKST SH Lineo-2005-2.pdf")
+-   [Media:CELF\_LKST\_SH\_Lineo-2005-2.pdf](http://eLinux.org/images/b/b2/CELF_LKST_SH_Lineo-2005-2.pdf "CELF LKST SH Lineo-2005-2.pdf")
     - presentation given by Lineo at CELF Jan 2005 technical conference.
--   [Media:HITACHI-LKST-CELF-200601.pdf](http://eLinux.org/images/4/46/HITACHI-LKST-CELF-200601-pdf "HITACHI-LKST-CELF-200601.pdf")
+-   [Media:HITACHI-LKST-CELF-200601.pdf](http://eLinux.org/images/4/46/HITACHI-LKST-CELF-200601.pdf "HITACHI-LKST-CELF-200601.pdf")
     - presentation given at International Technical Conference, June
     2006
--   [Media:CELFTokyoJam6\-LkstUpdate\-Lineo.pdf](http://eLinux.org/images/1/13/CELFTokyoJam6-LkstUpdate-Lineo-pdf "CELFTokyoJam6 LkstUpdate Lineo.pdf")
+-   [Media:CELFTokyoJam6\_LkstUpdate\_Lineo.pdf](http://eLinux.org/images/1/13/CELFTokyoJam6_LkstUpdate_Lineo.pdf "CELFTokyoJam6 LkstUpdate Lineo.pdf")
     - presentation 'Features of lkslogtools' given at CELF Jan 2006
     technical jamboree (6)
 
@@ -88,9 +88,9 @@ Here is some information about LKST:
 ### Patch
 
 -   You can acquire patches at:
-    [http://sourceforge.net/projects/lkst/](http//sourceforge-net/projects/lkst/)
+    [http://sourceforge.net/projects/lkst/](http://sourceforge.net/projects/lkst/)
 -   and click the link of |Patches|:
-    [http://sourceforge.net/tracker/?group\-id=41854&atid=431465](http//sourceforge-net/tracker/?group-id=41854&atid=431465)
+    [http://sourceforge.net/tracker/?group\_id=41854&atid=431465](http://sourceforge.net/tracker/?group_id=41854&atid=431465)
 
 ### Utility programs
 
@@ -114,18 +114,18 @@ Here is some information about LKST:
 
 -   Status: [implemented]
 
-<!- ->
+<!-- -->
 
-     (one of not started, researched, implemented, measured, documented, accepted)
+     (one of: not started, researched, implemented, measured, documented, accepted)
 
 -   Architecture Support:
 
-<!- ->
+<!-- -->
 
-      (for each arch, one of unknown, patches apply, compiles, runs, works, accepted)
+      (for each arch, one of: unknown, patches apply, compiles, runs, works, accepted)
 
 -   -   i386: works
-    -   x86\-64: works
+    -   x86\_64: works
     -   ia64: works
     -   ARM: runs
     -   PPC: unknown
@@ -137,8 +137,8 @@ Here is some information about LKST:
 Here is a list of things that could be worked on for this feature:
 
 
-[Category](http://eLinux.org/SpecialCategories "Special:Categories"):
+[Category](http://eLinux.org/Special:Categories "Special:Categories"):
 
 -   [Development
-    Tools](http://eLinux.org/CategoryDevelopment-Tools "Category:Development Tools")
+    Tools](http://eLinux.org/Category:Development_Tools "Category:Development Tools")
 

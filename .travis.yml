@@ -1,0 +1,12 @@
+sudo: required
+language: node_js
+node_js:
+  - "0.11"
+  - "0.10"
+calibre:
+  - "1.25"
+install:
+  - npm install gitbook-cli -g
+
+script:
+  - make

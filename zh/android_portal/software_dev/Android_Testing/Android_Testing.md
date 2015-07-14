@@ -27,11 +27,11 @@ Google provides an integrated test framework for testing Android
 applications, based on the JUnit test framework from java.
 
 See [Android Testing
-Fundamentals](http//developer-android.com/guide/topics/testing/testing-android-html)
+Fundamentals](http://developer.android.com/guide/topics/testing/testing_android.html)
 
 ## Application testing resources
 
--   [monkeyrunner](http//developer-android.com/guide/developing/tools/monkeyrunner-concepts-html)
+-   [monkeyrunner](http://developer.android.com/guide/developing/tools/monkeyrunner_concepts.html)
     -   The monkeyrunner tool provides an API for writing programs that
         control an Android device or emulator from outside of Android
         code. It allows you to write a program, which runs on your host
@@ -42,7 +42,7 @@ Fundamentals](http//developer-android.com/guide/topics/testing/testing-android-h
         keystrokes to it, takes screenshots of its user interface, and
         stores screenshots on the host.
 
--   [Monkey](http//developer-android.com/guide/developing/tools/monkey-html)
+-   [Monkey](http://developer.android.com/guide/developing/tools/monkey.html)
     is a user interface and application tester for Android applications.
     -   It is a command-line tool that sends pseudo-random streams of
         keystrokes, touches, and gestures to a device.
@@ -50,7 +50,7 @@ Fundamentals](http//developer-android.com/guide/topics/testing/testing-android-h
         (It runs on the target, and monkeyrunner-based programs run on
         the development host machine.)
 
--   [Robotium](http//code-google-com/p/robotium/) test framework
+-   [Robotium](http://code.google.com/p/robotium/) test framework
     -   Robotium is a test framework created to make it easy to write
         powerful and robust automatic black-box test cases for Android
         applications. With the support of Robotium, test case developers
@@ -59,7 +59,7 @@ Fundamentals](http//developer-android.com/guide/topics/testing/testing-android-h
     -   Robotium has full support for Activities, Dialogs, Toasts, Menus
         and Context Menus.
 
--   [Roboelectric](http//pivotal-github-com/robolectric) test framework
+-   [Roboelectric](http://pivotal.github.com/robolectric) test framework
     -   Roboelectric allow you to test-drive the development of your
         Android app inside the JVM on your workstation in seconds,
         instead of in the emulator on on a device (which can be slow)
@@ -68,7 +68,7 @@ Fundamentals](http//developer-android.com/guide/topics/testing/testing-android-h
         code. It has more flexibility than Google's testing framework in
         some areas.
 
--   [Ranorex](http//www-ranorex.com/mobile-automation-testing/android-test-automation-html)
+-   [Ranorex](http://www.ranorex.com/mobile-automation-testing/android-test-automation.html)
     test framework
     -   Ranorex provides a .Net based test automation framework which
         allows to record test scenarios directly on real mobile devices
@@ -85,7 +85,7 @@ There are a number of benchmarks you can use to test operating system,
 hardware and graphics performance.
 
 For information about performance testing and benchmarks, see: [Android
-Benchmarks](http://eLinux.org/Android-Benchmarks "Android Benchmarks")
+Benchmarks](http://eLinux.org/Android_Benchmarks "Android Benchmarks")
 
 ## Compliance Test Suite
 
@@ -93,11 +93,11 @@ Google provides a suite of tests to validate that a device complies with
 the Android standard.
 
 See [Android Compliance Test
-Suite](http://eLinux.org/Android-Compliance-Test-Suite "Android Compliance Test Suite")
+Suite](http://eLinux.org/Android_Compliance_Test_Suite "Android Compliance Test Suite")
 for more informaton.
 
 
-[Category](http://eLinux.org/SpecialCategories "Special:Categories"):
+[Category](http://eLinux.org/Special:Categories "Special:Categories"):
 
--   [Android](http://eLinux.org/CategoryAndroid "Category:Android")
+-   [Android](http://eLinux.org/Category:Android "Category:Android")
 

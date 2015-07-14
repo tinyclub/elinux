@@ -57,7 +57,7 @@
 
 ## Resources
 
--   [Device Tree](http://eLinux.org/Device_Tree "Device Tree") - information about device
+-   [Device Tree](../../dev_portals/Device_Tree/Device_Tree.md "Device Tree") - information about device
     tree (increasingly required for new embedded drivers)
 
 

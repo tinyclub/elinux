@@ -1,0 +1,7 @@
+Devkit8000_Android
+Devkit8000_Angstrom
+Devkit8000_DVSDK
+Devkit8000_FAQ
+Devkit8000_QT
+Devkit8000_Ubuntu
+DevKit8500
