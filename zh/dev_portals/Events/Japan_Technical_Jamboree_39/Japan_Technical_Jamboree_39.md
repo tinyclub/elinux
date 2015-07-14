@@ -64,7 +64,7 @@
 
 -   Please look into the wiki page. / 下記のWikiページをご覧ください。
     -   [Japan Technical Jamboree
-        38](http://eLinux.org/Japan_Technical_Jamboree_38 "Japan Technical Jamboree 38")
+        38](../../.././dev_portals/Events/Japan_Technical_Jamboree_38/Japan_Technical_Jamboree_38.md "Japan Technical Jamboree 38")
 
 # Date and venue... / 日付・場所...
 

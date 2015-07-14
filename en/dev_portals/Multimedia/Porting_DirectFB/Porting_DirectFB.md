@@ -44,74 +44,77 @@
 
 #### SH-4 target platform environment
 
-**Item**
-
-**Element**
-
-**Resources**
-
-Hardware
-
-Renesas \`RTS7751R2D\` (Renesas SH-4 processor board)
-
-[RTS7751R2D Handling
-Manual](http://eLinux.org/RTS7751R2D_Handling_Manual "RTS7751R2D Handling Manual")
-
-Silicon Motion Inc SM501 (Renesas platform on board graphics)
-
-Software
-
-kernel = CE-LINUX-2.4.20
-
-[Tool Chains](http://eLinux.org/Tool_Chain "Tool Chain")
-
-loader = SH-LILO
-
-[DirectFB](http://eLinux.org/DirectFB "DirectFB") = DirectFB-0.9.20
-
-[http://www.directfb.org/download/DirectFB/DirectFB-0.9.20.tar.gz](http://www.directfb.org/download/DirectFB/DirectFB-0.9.20.tar.gz)
-
-freetype = freetype-2.1.3
-
-[http://heanet.dl.sourceforge.net/sourceforge/freetype/freetype-2.1.3.tar.gz](http://heanet.dl.sourceforge.net/sourceforge/freetype/freetype-2.1.3.tar.gz)
-
-libjpeg = jpeg-6b
-
-[ftp://ftp.uu.net/graphics/jpeg/jpegsrc.v6b.tar.gz](ftp://ftp.uu.net/graphics/jpeg/jpegsrc.v6b.tar.gz)
-
-libpng = png-1.2.2
-
-[http://keihanna.dl.sourceforge.net/sourceforge/libpng/libpng-1.2.2.tar.gz](http://keihanna.dl.sourceforge.net/sourceforge/libpng/libpng-1.2.2.tar.gz)
-
-zlib = zlib-1.1.4
-
-[http://www.zlib.net/zlib-1.1.4.tar.gz](http://www.zlib.net/zlib-1.1.4.tar.gz)
+<table border="1" cellpadding="5" cellspacing="0" align="center">
+<tr>
+<td style="background:#d0a0a0;"><b>Item</b>
+</td>
+<th style="background:#d0a0a0;"><b>Element</b>
+</th>
+<th style="background:#d0a0a0;"><b>Resources</b>
+</th></tr>
+<tr>
+<td rowspan="2">Hardware</td>
+<td> Renesas `RTS7751R2D` (Renesas SH-4 processor board)</td>
+<td rowspan="2"><a href="http://eLinux.org/RTS7751R2D_Handling_Manual" title="RTS7751R2D Handling Manual">RTS7751R2D Handling Manual</a>
+</td></tr>
+<tr>
+<td> Silicon Motion Inc SM501 (Renesas platform on board graphics)
+</td></tr>
+<tr>
+<td rowspan="7">Software</td>
+<td> kernel   = CE-LINUX-2.4.20</td>
+<td rowspan="2"><a href="http://eLinux.org/Tool_Chain" title="Tool Chain"> Tool Chains</a>
+</td></tr>
+<tr>
+<td> loader   = SH-LILO
+</td></tr>
+<tr>
+<td> <a href="../../.././dev_portals/Multimedia/DirectFB/DirectFB.md" title="DirectFB">DirectFB</a> = DirectFB-0.9.20 </td>
+<td><a rel="nofollow" class="external free" href="http://www.directfb.org/download/DirectFB/DirectFB-0.9.20.tar.gz">http://www.directfb.org/download/DirectFB/DirectFB-0.9.20.tar.gz</a>
+</td></tr>
+<tr>
+<td> freetype = freetype-2.1.3 </td>
+<td> <a rel="nofollow" class="external free" href="http://heanet.dl.sourceforge.net/sourceforge/freetype/freetype-2.1.3.tar.gz">http://heanet.dl.sourceforge.net/sourceforge/freetype/freetype-2.1.3.tar.gz</a>
+</td></tr>
+<tr>
+<td> libjpeg  = jpeg-6b </td>
+<td><a rel="nofollow" class="external free" href="ftp://ftp.uu.net/graphics/jpeg/jpegsrc.v6b.tar.gz">ftp://ftp.uu.net/graphics/jpeg/jpegsrc.v6b.tar.gz</a>
+</td></tr>
+<tr>
+<td> libpng   = png-1.2.2 </td>
+<td> <a rel="nofollow" class="external free" href="http://keihanna.dl.sourceforge.net/sourceforge/libpng/libpng-1.2.2.tar.gz">http://keihanna.dl.sourceforge.net/sourceforge/libpng/libpng-1.2.2.tar.gz</a>
+</td></tr>
+<tr>
+<td> zlib     = zlib-1.1.4 </td>
+<td> <a rel="nofollow" class="external free" href="http://www.zlib.net/zlib-1.1.4.tar.gz">http://www.zlib.net/zlib-1.1.4.tar.gz</a>
+</td></tr></table>
 
 ### x86 host machine environment
 
-**Item**
+<table border="1" cellpadding="5" cellspacing="0" align="center">
+<tr>
+<td style="background:#d0a0a0;"><b>Item</b>
+</td>
+<th style="background:#d0a0a0;"><b>Element</b>
+</th>
+<th style="background:#d0a0a0;"><b>Resources</b>
+</th></tr>
+<tr>
+<td>OS</td>
+<td> Linux ( Redhat 7.3 ) </td>
+<td><a rel="nofollow" class="external autonumber" href="http://ftp.redhat.com/pub/redhat/linux/7.3/">[1]</a>
+</td></tr>
+<tr>
+<td>host  compiler	</td>
+<td> gcc 2.9.6 </td>
+<td><a rel="nofollow" class="external autonumber" href="http://www.gnu.org/software/gcc/">[2]</a>
+</td></tr>
+<tr>
+<td>cross compiler	</td>
+<td> gcc 3.2.3 ( CELF sh-4 compiler posted by Lineo Solutions )</td>
+<td><a href="http://eLinux.org/Tool_Chain" title="Tool Chain">Tool Chains</a>
+</td></tr></table>
 
-**Element**
-
-**Resources**
-
-OS
-
-Linux ( Redhat 7.3 )
-
-[[1]](http://ftp.redhat.com/pub/redhat/linux/7.3/)
-
-host compiler
-
-gcc 2.9.6
-
-[[2]](http://www.gnu.org/software/gcc/)
-
-cross compiler
-
-gcc 3.2.3 ( CELF sh-4 compiler posted by Lineo Solutions )
-
-[Tool Chains](http://eLinux.org/Tool_Chain "Tool Chain")
 
 ## Install DirectFB
 

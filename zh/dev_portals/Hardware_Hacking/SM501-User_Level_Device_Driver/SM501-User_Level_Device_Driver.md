@@ -71,213 +71,230 @@ Linux 2.6.16.4 / 2.4.20
 
 ### 結果
 
-2" | **IRQ Delivering Method**
-
-2" | **Scheduling Policy**
-
-2" | **Disturbance Task**
-
-**Linux 2.6.16.4 (CONFIG\_PREEMPT=y)**
-
-**Linux 2.4.20**
-
-**MAX (us)**
-
-**AVG (us)**
-
-**MIN (us)**
-
-**Plot**
-
-**MAX (us)**
-
-**AVG (us)**
-
-**MIN (us)**
-
-**Plot**
-
-File I/O (sync)
-
-SCHED\_OTHER
-
-(none)
-
-39.80
-
-17.52
-
-13.73
-
-①
-
-14.93
-
-6.98
-
-6.87
-
-⑬
-
-SCHED\_OTHER
-
-*lat\_proc*
-
-253.27
-
-42.57
-
-10.93
-
-②
-
-2808.13
-
-478.43
-
-6.53
-
-⑭
-
-*SCHED\_RR*
-
-(none)
-
-38.13
-
-15.73
-
-14.07
-
-③
-
-17.13
-
-6.34
-
-6.20
-
-⑮
-
-*SCHED\_RR*
-
-*lat\_proc*
-
-33.73
-
-14.32
-
-8.80
-
-④
-
-2697.13
-
-485.29
-
-6.60
-
-⑯
-
-SIGIO (async)
-
-SCHED\_OTHER
-
-(none)
-
-524.00
-
-62.84
-
-45.47
-
-⑤
-
-SCHED\_OTHER
-
-*lat\_proc*
-
-72317.40
-
-2185.96
-
-83.33
-
-⑥
-
-*SCHED\_RR*
-
-(none)
-
-81.40
-
-47.12
-
-43.67
-
-⑦
-
-*SCHED\_RR*
-
-*lat\_proc*
-
-280.93
-
-102.89
-
-79.40
-
-⑧
-
-SIGRT (async)
-
-SCHED\_OTHER
-
-(none)
-
-83.47
-
-50.00
-
-44.80
-
-⑨
-
-SCHED\_OTHER
-
-*lat\_proc*
-
-85973.93
-
-2528.19
-
-85.40
-
-⑩
-
-*SCHED\_RR*
-
-(none)
-
-75.93
-
-46.71
-
-43.07
-
-⑪
-
-*SCHED\_RR*
-
-*lat\_proc*
-
-290.80
-
-102.18
-
-78.87
-
-⑫
+<table>
+
+<tr>
+<td>2" | <b>IRQ Delivering Method</b>
+</td>
+<td>2" | <b>Scheduling Policy</b>
+</td>
+<td>2" | <b>Disturbance Task</b>
+</td>
+<td bgcolor="&#39;#E0E0FF&#39;-4:"> <b>Linux 2.6.16.4 (CONFIG_PREEMPT=y)</b>
+</td>
+<td bgcolor="&#39;#E0E0FF&#39;-4:"> <b>Linux 2.4.20</b>
+</td></tr>
+<tr>
+<td bgcolor="&#39;#E0E0FF&#39;:"> <b>MAX (us)</b>
+</td>
+<td bgcolor="&#39;#E0E0FF&#39;:"> <b>AVG (us)</b>
+</td>
+<td bgcolor="&#39;#E0E0FF&#39;:"> <b>MIN (us)</b>
+</td>
+<td bgcolor="&#39;#E0E0FF&#39;:"> <b>Plot</b>
+</td>
+<td bgcolor="&#39;#E0E0FF&#39;:"> <b>MAX (us)</b>
+</td>
+<td bgcolor="&#39;#E0E0FF&#39;:"> <b>AVG (us)</b>
+</td>
+<td bgcolor="&#39;#E0E0FF&#39;:"> <b>MIN (us)</b>
+</td>
+<td bgcolor="&#39;#E0E0FF&#39;:"> <b>Plot</b>
+</td></tr>
+<tr>
+<td>  File I/O (sync)
+</td>
+<td>  SCHED_OTHER
+</td>
+<td>  (none)
+</td>
+<td align="right"> 39.80
+</td>
+<td align="right"> 17.52
+</td>
+<td align="right"> 13.73
+</td>
+<td>  ①
+</td>
+<td align="right"> 14.93
+</td>
+<td align="right"> 6.98
+</td>
+<td align="right"> 6.87
+</td>
+<td>  ⑬
+</td></tr>
+<tr>
+<td>  SCHED_OTHER
+</td>
+<td>  <i>lat_proc</i>
+</td>
+<td align="right"> 253.27
+</td>
+<td align="right"> 42.57
+</td>
+<td align="right"> 10.93
+</td>
+<td>  ②
+</td>
+<td align="right"> 2808.13
+</td>
+<td align="right"> 478.43
+</td>
+<td align="right"> 6.53
+</td>
+<td>  ⑭
+</td></tr>
+<tr>
+<td>  <i>SCHED_RR</i>
+</td>
+<td>  (none)
+</td>
+<td align="right"> 38.13
+</td>
+<td align="right"> 15.73
+</td>
+<td align="right"> 14.07
+</td>
+<td>  ③
+</td>
+<td align="right"> 17.13
+</td>
+<td align="right"> 6.34
+</td>
+<td align="right"> 6.20
+</td>
+<td>  ⑮
+</td></tr>
+<tr>
+<td>  <i>SCHED_RR</i>
+</td>
+<td>  <i>lat_proc</i>
+</td>
+<td align="right"> 33.73
+</td>
+<td align="right"> 14.32
+</td>
+<td align="right"> 8.80
+</td>
+<td>  ④
+</td>
+<td align="right"> 2697.13
+</td>
+<td align="right"> 485.29
+</td>
+<td align="right"> 6.60
+</td>
+<td>  ⑯
+</td></tr>
+<tr>
+<td>  SIGIO (async)
+</td>
+<td>  SCHED_OTHER
+</td>
+<td>  (none)
+</td>
+<td align="right"> 524.00
+</td>
+<td align="right"> 62.84
+</td>
+<td align="right"> 45.47
+</td>
+<td>  ⑤
+</td></tr>
+<tr>
+<td>  SCHED_OTHER
+</td>
+<td>  <i>lat_proc</i>
+</td>
+<td align="right"> 72317.40
+</td>
+<td align="right"> 2185.96
+</td>
+<td align="right"> 83.33
+</td>
+<td>  ⑥
+</td></tr>
+<tr>
+<td>  <i>SCHED_RR</i>
+</td>
+<td>  (none)
+</td>
+<td align="right"> 81.40
+</td>
+<td align="right"> 47.12
+</td>
+<td align="right"> 43.67
+</td>
+<td>  ⑦
+</td></tr>
+<tr>
+<td>  <i>SCHED_RR</i>
+</td>
+<td>  <i>lat_proc</i>
+</td>
+<td align="right"> 280.93
+</td>
+<td align="right"> 102.89
+</td>
+<td align="right"> 79.40
+</td>
+<td>  ⑧
+</td></tr>
+<tr>
+<td>  SIGRT (async)
+</td>
+<td>  SCHED_OTHER
+</td>
+<td>  (none)
+</td>
+<td align="right"> 83.47
+</td>
+<td align="right"> 50.00
+</td>
+<td align="right"> 44.80
+</td>
+<td>  ⑨
+</td></tr>
+<tr>
+<td>  SCHED_OTHER
+</td>
+<td>  <i>lat_proc</i>
+</td>
+<td align="right"> 85973.93
+</td>
+<td align="right"> 2528.19
+</td>
+<td align="right"> 85.40
+</td>
+<td>  ⑩
+</td></tr>
+<tr>
+<td>  <i>SCHED_RR</i>
+</td>
+<td>  (none)
+</td>
+<td align="right"> 75.93
+</td>
+<td align="right"> 46.71
+</td>
+<td align="right"> 43.07
+</td>
+<td>  ⑪
+</td></tr>
+<tr>
+<td>  <i>SCHED_RR</i>
+</td>
+<td>  <i>lat_proc</i>
+</td>
+<td align="right"> 290.80
+</td>
+<td align="right"> 102.18
+</td>
+<td align="right"> 78.87
+</td>
+<td>  ⑫
+</td></tr></table>
 
 [![Ulddexp-fio-nort-nodt-26.JPG](http://eLinux.org/images/8/87/Ulddexp-fio-nort-nodt-26.JPG)](http://eLinux.org/File:Ulddexp-fio-nort-nodt-26.JPG)
 

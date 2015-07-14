@@ -10,7 +10,7 @@
 -   [ltrace](http://eLinux.org/index.php?title=Ltrace&action=edit&redlink=1 "Ltrace (page does not exist)")
     - trace library calls
 -   see [Kernel Trace
-    Systems](http://eLinux.org/Kernel_Trace_Systems "Kernel Trace Systems")
+    Systems](../../../dbg_portal/kernel_trace_and_profile/Kernel_Trace_Systems/Kernel_Trace_Systems.md "Kernel Trace Systems")
 -   see [Profilers](http://eLinux.org/Profilers "Profilers")
 
 

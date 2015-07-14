@@ -15,7 +15,7 @@ doesn't already exist, a new page should be created using
 the !HowtoTemplate. Links listed in red below are pages that are not
 created yet. To sign up for a task related to this HOWTO, please see the
 [Bootup Time Howto Task
-List](http://eLinux.org/Bootup_Time_Howto_Task_List "Bootup Time Howto Task List").
+List](../../.././dev_portals/Boot_Time/Bootup_Time_Howto_Task_List/Bootup_Time_Howto_Task_List.md "Bootup Time Howto Task List").
 
 ## Contents
 
@@ -80,13 +80,13 @@ organized by the boot phase where they are applied.
 Here ase some techniques for speeding up the Firmware phase of the boot
 sequence:
 
--   [Kernel XIP](http://eLinux.org/Kernel_XIP "Kernel XIP") - Kernel Execute-In-Place
--   SkipFirmware - Disable [firmware](http://eLinux.org/Firmware "Firmware") features to
+-   [Kernel XIP](../../.././dev_portals/Boot_Time/Kernel_XIP/Kernel_XIP.md "Kernel XIP") - Kernel Execute-In-Place
+-   SkipFirmware - Disable [firmware](../../../dev_portals/Firmware/Firmware.md "Firmware") features to
     eliminate diagnostics, memory counts, etc.
 -   [Parallel HDSpin Up](http://eLinux.org/Parallel_HDSpin_Up "Parallel HDSpin Up") -
     Parallelize Hard Disk spinup with Kernel load
 -   [DMA Copy Of Kernel On
-    Startup](http://eLinux.org/DMA_Copy_Of_Kernel_On_Startup "DMA Copy Of Kernel On Startup")
+    Startup](../../.././dev_portals/Boot_Time/DMA_Copy_Of_Kernel_On_Startup/DMA_Copy_Of_Kernel_On_Startup.md "DMA Copy Of Kernel On Startup")
     - Use DMA to copy kernel from flash to RAM
 
 ## Kernel Phase
@@ -95,10 +95,10 @@ The following are techniques used to speed up the initialization of the
 kernel:
 
 -   DisableConsole - Turn off serial console output during boot
--   [Preset LPJ](http://eLinux.org/Preset_LPJ "Preset LPJ") - Use pre-set
+-   [Preset LPJ](../../.././dev_portals/Boot_Time/Preset_LPJ/Preset_LPJ.md "Preset LPJ") - Use pre-set
     loops\_per\_jiffy (avoid calibrate\_delay())
 -   Preconfigure PCI - Preconfigure some PCI bus slots
--   [IDE No Probe](http://eLinux.org/IDE_No_Probe "IDE No Probe") - Don't probe some IDE
+-   [IDE No Probe](../../.././dev_portals/Boot_Time/IDE_No_Probe/IDE_No_Probe.md "IDE No Probe") - Don't probe some IDE
     devices -
 -   No Probe Missing Devices - Disable probes for non-existent devices
     (including keyboards, etc.)
@@ -106,7 +106,7 @@ kernel:
 -   Reduce Driver Busy Waits - Shorten device probes by reducing the
     amount of time the driver busywaits
     -   A special case of this is [Short IDE
-        Delays](http://eLinux.org/Short_IDE_Delays "Short IDE Delays"), with IDE driver
+        Delays](../../.././dev_portals/Boot_Time/Short_IDE_Delays/Short_IDE_Delays.md "Short IDE Delays"), with IDE driver
         delays
 -   Threaded Init - Perform threaded initialization - replace driver
     busywaits with yields
@@ -120,16 +120,16 @@ kernel:
 The following are techniques for reducing the bootup time for user-space
 programs:
 
--   [Application XIP](http://eLinux.org/Application_XIP "Application XIP") -
+-   [Application XIP](../../.././dev_portals/Boot_Time/Application_XIP/Application_XIP.md "Application XIP") -
     Execute-In-Place for applications and librarys
 -   Reduce RC Scripts - Eliminate unneeded RC scripts
 -   Custom Init Program - Use a custom initialization program
     -   (This is a special case of eliminating unneeded RC scripts)
--   [Optimize RC Scripts](http://eLinux.org/Optimize_RC_Scripts "Optimize RC Scripts") -
+-   [Optimize RC Scripts](../../.././dev_portals/Boot_Time/Optimize_RC_Scripts/Optimize_RC_Scripts.md "Optimize RC Scripts") -
     Optimize RC script execution
--   [Parallel RC Scripts](http://eLinux.org/Parallel_RC_Scripts "Parallel RC Scripts") -
+-   [Parallel RC Scripts](../../.././dev_portals/Boot_Time/Parallel_RC_Scripts/Parallel_RC_Scripts.md "Parallel RC Scripts") -
     Execute RC scripts in parallel, instead of in sequence
--   [Pre Linking](http://eLinux.org/Pre_Linking "Pre Linking") - Avoid overhead of
+-   [Pre Linking](../../.././dev_portals/Boot_Time/Pre_Linking/Pre_Linking.md "Pre Linking") - Avoid overhead of
     runtime link fixups during first program/library load
 -   Reduce Flash Writes - Reduce writes to flash. (In particular,
     perhaps you want to "disable the date of last access" with noatime
@@ -168,7 +168,7 @@ document.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><a href="http://elinux.org/Kernel_XIP" title="Kernel XIP">Kernel XIP</a></td>
+<td align="left"><a href="../../.././dev_portals/Boot_Time/Kernel_XIP/Kernel_XIP.md" title="Kernel XIP">Kernel XIP</a></td>
 <td align="left">Firmware</td>
 <td align="left">Kernel Execute-In-Place - avoids kernel copy and decompression time</td>
 <td align="left">250 ms</td>
@@ -189,14 +189,14 @@ document.
 <td align="left">Not possible if the kernel is loaded from hard drive.</td>
 </tr>
 <tr class="even">
-<td align="left"><a href="http://elinux.org/DMA_Copy_Of_Kernel_On_Startup" title="DMA Copy Of Kernel On Startup">DMA Copy Of Kernel On Startup</a></td>
+<td align="left"><a href="../../.././dev_portals/Boot_Time/DMA_Copy_Of_Kernel_On_Startup/DMA_Copy_Of_Kernel_On_Startup.md" title="DMA Copy Of Kernel On Startup">DMA Copy Of Kernel On Startup</a></td>
 <td align="left">Firmware</td>
 <td align="left">Use DMA to copy kernel from flash to RAM</td>
 <td align="left">180 ms</td>
 <td align="left">.</td>
 </tr>
 <tr class="odd">
-<td align="left"><a href="http://elinux.org/Preset_LPJ" title="Preset LPJ">Preset LPJ</a></td>
+<td align="left"><a href="../../.././dev_portals/Boot_Time/Preset_LPJ/Preset_LPJ.md" title="Preset LPJ">Preset LPJ</a></td>
 <td align="left">Kernel</td>
 <td align="left">Use a hardcoded loops_per_jiffy value to avoid cost of calibration.</td>
 <td align="left">250 ms</td>
@@ -238,7 +238,7 @@ document.
 <td align="left">Only works for drivers that can be loaded as modules late in the boot cycle.</td>
 </tr>
 <tr class="odd">
-<td align="left"><a href="http://elinux.org/IDE_No_Probe" title="IDE No Probe">IDE No Probe</a></td>
+<td align="left"><a href="../../.././dev_portals/Boot_Time/IDE_No_Probe/IDE_No_Probe.md" title="IDE No Probe">IDE No Probe</a></td>
 <td align="left">Drivers</td>
 <td align="left">Use &quot;noprobe&quot; on kernel command line for IDE driver</td>
 <td align="left">3 sec.</td>
@@ -252,7 +252,7 @@ document.
 <td align="left">.</td>
 </tr>
 <tr class="odd">
-<td align="left"><a href="http://elinux.org/Short_IDE_Delays" title="Short IDE Delays">Short IDE Delays</a></td>
+<td align="left"><a href="../../.././dev_portals/Boot_Time/Short_IDE_Delays/Short_IDE_Delays.md" title="Short IDE Delays">Short IDE Delays</a></td>
 <td align="left">Drivers</td>
 <td align="left">Reduce length of IDE initialization delays</td>
 <td align="left">5 sec.</td>
@@ -280,7 +280,7 @@ document.
 <td align="left">Depends on required scripts</td>
 </tr>
 <tr class="odd">
-<td align="left"><a href="http://elinux.org/Parallel_RC_Scripts" title="Parallel RC Scripts">Parallel RC Scripts</a></td>
+<td align="left"><a href="../../.././dev_portals/Boot_Time/Parallel_RC_Scripts/Parallel_RC_Scripts.md" title="Parallel RC Scripts">Parallel RC Scripts</a></td>
 <td align="left">RC scripts</td>
 <td align="left">Start init scripts in parallel</td>
 <td align="left">??</td>
@@ -294,7 +294,7 @@ document.
 <td align="left">.</td>
 </tr>
 <tr class="odd">
-<td align="left"><a href="http://elinux.org/Optimize_RC_Scripts" title="Optimize RC Scripts">Optimize RC Scripts</a></td>
+<td align="left"><a href="../../.././dev_portals/Boot_Time/Optimize_RC_Scripts/Optimize_RC_Scripts.md" title="Optimize RC Scripts">Optimize RC Scripts</a></td>
 <td align="left">RC scripts</td>
 <td align="left">Use busybox, smaller shell, builtins, adjusted scripts</td>
 <td align="left">3 sec.</td>
@@ -308,7 +308,7 @@ document.
 <td align="left">requires long-term maintenance of the program</td>
 </tr>
 <tr class="odd">
-<td align="left"><a href="http://elinux.org/Application_XIP" title="Application XIP">Application XIP</a></td>
+<td align="left"><a href="../../.././dev_portals/Boot_Time/Application_XIP/Application_XIP.md" title="Application XIP">Application XIP</a></td>
 <td align="left">User Space</td>
 <td align="left">Use Execute-In-Place for applications and libraries.</td>
 <td align="left">??</td>

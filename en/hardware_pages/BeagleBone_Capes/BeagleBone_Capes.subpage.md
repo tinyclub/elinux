@@ -1,91 +1,81 @@
-# Beagleboard:BeagleBone Capes
-## Contents
-## Compatibility Between Different Capes Matrix
-* File:BeagleBone-Cape-Compatibility-Matrix-12-09-11.xls
-## BeagleBone Black Compatibilty Matrix
-* Beagleboard:BeagleBone_Black_Capes
-## BeagleBone Capes Catalog
-* BeagleBone_Proto_Cape
-* Tigal:BeagleBone_ProtoCape
-* BeagleBone_eeProto_Cape
-* CircuitCo:BeagleBone_Breadboard
-* CircuitCo:Basic_Proto_Cape
-* CircuitCo:Generic_Proto_Cape
-* CircuitCo:Extended_Proto_Cape
-* AndiceLabs:PowerCape
-* AndiceLabs:PowerBar
-* CircuitCo:PowerSupply_Cape
-* CircuitCo:BeagleBone_Battery
-* BeagleBone_TTL-RS232_Micro_Cape
-* CircuitCo:RS232_Cape_RevB
-* CircuitCo:Audio_Cape_RevB
-* CircuitCo:BeagleBone_Weather
-* Beagleboard:TT3201_CAN_Cape
-* BeagleBone_Serial_CAN_RS485_RS232_Cape
-* CircuitCo:CAN_Bus_Cape_RevB
-* CircuitCo:RS485_Cape_RevB
-* Beagleboard:BeBoPr_Cape
-* Beagleboard:BeBoPr-Plus
-* BeBoPr%2B%2B
-* Beagleboard:Osso
-* CircuitCo:Bacon_Cape
-* CircuitCo:BeagleBone_Ninja
-* CircuitCo:BeagleBone_ROV
-* Beagleboard:Inertial_Navigation_System_Cape
-* Impressx:BeagleIO
-* USB_HUB_Cape
-* Impressx:Arduino_Shield_Adapter
-* Tigal:BeagleBone_mikrobuscape
-* Beagleboard:Smart_Dual_Relay_Cape
-* BeagleBone_M2M_Cape
-* CircuitCo:Relay_Cape
-* BeagleBone_Dual_Relay_Plus_IO
-* Beagleboard:Radarcape
-* CircuitCo:ADC_Cape
-* Escherlogic_DogHouse
-* Beagleboard:BeagleBone_8_Port_1-Wire
-* Nimbelink:SkywireCape
-* BeagleBone_GPS/GPRS_Cape
-* User:EACH
-* CiudadOscura:TrackingCape
-* BeagleBone_XBee_proto_cape
-* Ppolstra:XBee_Cape
-* CircuitCo:RTC_Cape
-* CircuitCo:PWM_Cape
-* CircuitCo:Moto_Cape
-* CircuitCo:MiniDisplay_Cape
-* CircuitCo:BeagleBone_LCD3
-* CircuitCo:BeagleBone_LCD4
-* CircuitCo:BeagleBone_LCD7
-* Nh7Cape
-* Beagleboard:BeagleBone_LVDS_LCD_Cape
-* Alcdcape
-* Nh5cape
-* User:Witztronics
-* CircuitCo:BeagleBone_4Gb_16-Bit_NAND_Module
-* Embedded_Toys_Robo_Cape
-* CircuitCo:BeagleBone_Motor_w/_NXT_Connectors
-* CircuitCo:BeagleBone_Motor_w/_Screw_Blocks
-* Beagleboard:BeagleBone_MSTP
-* CircuitCo:BeagleBone_DVI-D
-* CircuitCo:BeagleBone_VGA
-* CircuitCo:BeagleBone_RF
-* CircuitCo:BeagleBone_Memory_Expansion
-* CircuitCo:BeagleBone_TiWi-5E_w/_Chip_Antenna
-* CircuitCo:BeagleBone_TiWi-5E_w/_EXT._Antenna
-* CircuitCo:BeagleBone_TiWi-BLE_w/_Chip_Antenna
-* CircuitCo:BeagleBone_TiWi-BLE_w/_EXT._Antenna
-* CircuitCo:WL1835MOD_w/_Chip_Antenna
-* Beagleboard:BeagleBone_HD_Camera_Cape
-* CircuitCo:BeagleBone_3.1MP_Camera
-* Beagleboard:BeagleBone-HDMI_CAPE
-* CircuitCo:BeagleBone_DVI-D_with_Audio
-* CircuitCo:BeagleBone_DVI-D
-* Qinno:BBB_cape_iCOM
-* BBB-GVS
-* Cryptotronix:CryptoCape
-* CircuitCo:BeagleBone_128Mb_16-Bit_NOR_Module
-* CircuitCo:BeagleBone_ProfiBus
-## Capes Listing
-* Beagleboard:BeagleBone
-* Beagleboard:BeagleBoneBlack
+Alcdcape
+AndiceLabs:PowerBar
+AndiceLabs:PowerCape
+BBB-GVS
+Beagleboard:BeagleBone
+Beagleboard:BeagleBone_8_Port_1-Wire
+Beagleboard:BeagleBoneBlack
+Beagleboard:BeagleBone_Black_Capes
+Beagleboard:BeagleBone_HD_Camera_Cape
+Beagleboard:BeagleBone-HDMI_CAPE
+Beagleboard:BeagleBone_LVDS_LCD_Cape
+Beagleboard:BeagleBone_MSTP
+Beagleboard:BeBoPr_Cape
+Beagleboard:BeBoPr-Plus
+Beagleboard:Inertial_Navigation_System_Cape
+Beagleboard:Osso
+Beagleboard:Radarcape
+Beagleboard:Smart_Dual_Relay_Cape
+Beagleboard:TT3201_CAN_Cape
+BeagleBone_Dual_Relay_Plus_IO
+BeagleBone_eeProto_Cape
+BeagleBone_GPS/GPRS_Cape
+BeagleBone_M2M_Cape
+BeagleBone_Proto_Cape
+BeagleBone_Serial_CAN_RS485_RS232_Cape
+BeagleBone_TTL-RS232_Micro_Cape
+BeagleBone_XBee_proto_cape
+BeBoPr%2B%2B
+CircuitCo:ADC_Cape
+CircuitCo:Audio_Cape_RevB
+CircuitCo:Bacon_Cape
+CircuitCo:Basic_Proto_Cape
+CircuitCo:BeagleBone_128Mb_16-Bit_NOR_Module
+CircuitCo:BeagleBone_3.1MP_Camera
+CircuitCo:BeagleBone_4Gb_16-Bit_NAND_Module
+CircuitCo:BeagleBone_Battery
+CircuitCo:BeagleBone_Breadboard
+CircuitCo:BeagleBone_DVI-D
+CircuitCo:BeagleBone_DVI-D_with_Audio
+CircuitCo:BeagleBone_LCD3
+CircuitCo:BeagleBone_LCD4
+CircuitCo:BeagleBone_LCD7
+CircuitCo:BeagleBone_Memory_Expansion
+CircuitCo:BeagleBone_Motor_w/_NXT_Connectors
+CircuitCo:BeagleBone_Motor_w/_Screw_Blocks
+CircuitCo:BeagleBone_Ninja
+CircuitCo:BeagleBone_ProfiBus
+CircuitCo:BeagleBone_RF
+CircuitCo:BeagleBone_ROV
+CircuitCo:BeagleBone_TiWi-5E_w/_Chip_Antenna
+CircuitCo:BeagleBone_TiWi-5E_w/_EXT._Antenna
+CircuitCo:BeagleBone_TiWi-BLE_w/_Chip_Antenna
+CircuitCo:BeagleBone_TiWi-BLE_w/_EXT._Antenna
+CircuitCo:BeagleBone_VGA
+CircuitCo:BeagleBone_Weather
+CircuitCo:CAN_Bus_Cape_RevB
+CircuitCo:Extended_Proto_Cape
+CircuitCo:Generic_Proto_Cape
+CircuitCo:MiniDisplay_Cape
+CircuitCo:Moto_Cape
+CircuitCo:PowerSupply_Cape
+CircuitCo:PWM_Cape
+CircuitCo:Relay_Cape
+CircuitCo:RS232_Cape_RevB
+CircuitCo:RS485_Cape_RevB
+CircuitCo:RTC_Cape
+CircuitCo:WL1835MOD_w/_Chip_Antenna
+CiudadOscura:TrackingCape
+Cryptotronix:CryptoCape
+Embedded_Toys_Robo_Cape
+Escherlogic_DogHouse
+Impressx:Arduino_Shield_Adapter
+Impressx:BeagleIO
+Nh5cape
+Nh7Cape
+Nimbelink:SkywireCape
+Ppolstra:XBee_Cape
+Qinno:BBB_cape_iCOM
+Tigal:BeagleBone_mikrobuscape
+Tigal:BeagleBone_ProtoCape
+USB_HUB_Cape

@@ -27,9 +27,9 @@ Some major Linux general-purpose tracing systems are:
 -   ptrace - ability to trace syscall entry and exit, and signal
     delivery, to a process (also used for debugging a process)
     -   see "man ptrace" and "man strace"
--   [Ftrace](http://eLinux.org/Ftrace "Ftrace")
+-   [Ftrace](../../../dbg_portal/kernel_trace_and_profile/Ftrace/Ftrace.md "Ftrace")
     -   [Ftrace Function Graph
-        ARM](http://eLinux.org/Ftrace_Function_Graph_ARM "Ftrace Function Graph ARM") -
+        ARM](../../../dbg_portal/kernel_trace_and_profile/Ftrace/Ftrace.md_Function_Graph_ARM "Ftrace Function Graph ARM") -
         presentations and patches by Tim Bird to add function graph and
         duration tracing to ARM systems
         -   The presentation has good introductory material on ftrace,
@@ -41,27 +41,27 @@ Some major Linux general-purpose tracing systems are:
     -   See [Measuring Function Duration with
         FTrace](http://eLinux.org/Measuring_Function_Duration_with_FTrace "Measuring Function Duration with FTrace")
         - outline of presentation by Tim Bird for Linux Symposium 2009
--   [System Tap](http://eLinux.org/System_Tap "System Tap") - System Tap is a system for
+-   [System Tap](../../../dbg_portal/kernel_trace_and_profile/System_Tap/System_Tap.md "System Tap") - System Tap is a system for
     building and executing tracing and sampling systems that can be
     applied to a running Linux system
 -   LTTng - [Linux Trace
-    Toolkit](http://eLinux.org/Linux_Trace_Toolkit "Linux Trace Toolkit"), next
+    Toolkit](../../../dbg_portal/kernel_trace_and_profile/Linux_Trace_Toolkit/Linux_Trace_Toolkit.md "Linux Trace Toolkit"), next
     generation
 -   LKST - [Linux Kernel State
-    Tracer](http://eLinux.org/Linux_Kernel_State_Tracer "Linux Kernel State Tracer")
+    Tracer](../../../dbg_portal/kernel_trace_and_profile/Linux_Kernel_State_Tracer/Linux_Kernel_State_Tracer.md "Linux Kernel State Tracer")
 
 ## Special Purpose tracing systems
 
 There are some other notable special-purpose kernel tracing systems:
 
 -   KFT - [Kernel Function
-    Trace](http://eLinux.org/Kernel_Function_Trace "Kernel Function Trace") - traces
+    Trace](../../.././dev_portals/Boot_Time/Kernel_Function_Trace/Kernel_Function_Trace.md "Kernel Function Trace") - traces
     functions to show function durations and call graphs
 -   latency trace - RT-preempt tool for measuring interrupt and mutex
     latency
     -   The latency tracer is embedded in the RT-preempt patch - see
         [Realtime
-        Preemption](http://eLinux.org/Realtime_Preemption "Realtime Preemption") and
+        Preemption](../../.././dev_portals/Real_Time/Realtime_Preemption/Realtime_Preemption.md "Realtime Preemption") and
         [RT-preempt Article](http://lwn.net/Articles/97811/)
 -   block tracer (blktrace) - allows you to see exactly what is going on
     in the block layer for a given queue
@@ -110,7 +110,7 @@ major ones for Linux are:
         IBM](http://www-128.ibm.com/developerworks/linux/library/l-oprof.html)
 -   BootChart - samples bootup and provides visualization of process
     startup and system utilization
-    -   see [Bootchart](http://eLinux.org/Bootchart "Bootchart")
+    -   see [Bootchart](../../.././dev_portals/Boot_Time/Bootchart/Bootchart.md "Bootchart")
 
 ## Related facilities
 

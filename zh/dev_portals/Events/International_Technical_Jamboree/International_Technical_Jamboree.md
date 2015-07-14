@@ -75,7 +75,7 @@ available
 
 12:30-13:20
 
-**Writing custom gfx\_driver for [DirectFB](http://eLinux.org/DirectFB "DirectFB")**- by
+**Writing custom gfx\_driver for [DirectFB](../../.././dev_portals/Multimedia/DirectFB/DirectFB.md "DirectFB")**- by
 Katsuya Matsubara(Renesas/iGel)
 
 [ITJ2005Detail 1-3](http://eLinux.org/ITJ2005Detail_1-3 "ITJ2005Detail 1-3") Presentation

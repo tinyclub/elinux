@@ -12,7 +12,7 @@ interest for consumer electronics products. The projects may be the
 topics of discussion at CELF meetings, and we plan to watch and report
 the status of these technologies.
 
-    Please add any information you have about the technology items listed below!!
+Please add any information you have about the technology items listed below!!
 
 ## Contents
 

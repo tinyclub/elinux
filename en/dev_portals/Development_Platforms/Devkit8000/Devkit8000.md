@@ -551,114 +551,112 @@ Available from [Embest](http://www.armkits.com/product/xds100.asp)
 [DevKit8000](http://www.armkits.com/Product/devkit8000.asp) supports for
 both Linux2.6.28 and WinCE6.0 operating systems.
 
-OS
+<table border="1" cellspacing="0" cellpadding="0" width="90%">
+            <tr>
+              <td valign="top">OS </td>
+              <td valign="top">Item </td>
+              <td valign="top">Features </td>
+              <td valign="top">Description</td>
+            </tr>
+            <tr>
+              <td rowspan="11">Linux </td>
+              <td rowspan="3">Boot  </td>
+              <td> Version  </td>
+              <td valign="top"> x-load-1.41, u-boot 1.3.3 </td>
+            </tr>
+            <tr>
+              <td> Boot Mode  </td>
+              <td valign="top">Boot Linux from SD card, NAND Flash or Ethernet</td>
+            </tr>
 
-Item
+            <tr>
+              <td> Image Update  </td>
+              <td valign="top"> Support updating image from SD card or Ethernet</td>
+            </tr>
+            <tr>
+              <td rowspan="3"> Kernel and Drivers  </td>
+              <td> Version  </td>
+              <td valign="top"> Linux 2.6.28 </td>
+            </tr>
+            <tr>
+              <td> Support file systems  </td>
+              <td valign="top"> ROM/CRAM/EXT2/EXT3/FAT/NFS/JFFS2/UBIFS </td>
+            </tr>
+            <tr>
 
-Features
+              <td> Drivers  </td>
+              <td valign="top"> Serial, RTC, NET, Nand, LCD, Touch Screen, SD, USB Host, USB OTG, DVI, Keypad, LED, Audio </td>
+            </tr>
+            <tr>
+              <td rowspan="2"> File system  </td>
+              <td> Format </td>
+              <td valign="top"> Ramdisk, UBI  </td>
+            </tr>
+            <tr>
+              <td> Characteristic  </td>
+              <td valign="top"> Provided Lib (ALSA -lib, tslib, glibc), udev support </td>
+            </tr>
+            <tr>
+              <td rowspan="3"> Demo </td>
+              <td> Angstrom </td>
+              <td valign="top"> Audio (XMMS), network (firefox), graphics editor (gimp) and document processing software (Abiword) </td>
+            </tr>
+            <tr>
+              <td> Android </td>
+              <td valign="top">Google developed a platform based on Linux open-source mobile phone operating system.  </td>
+            </tr>
 
-Description
+            <tr>
+              <td> DVSDK </td>
+              <td valign="top">Support MPEG4, MPEG2, H264, mp3, aac audio/video formats and Codecs </td>
+            </tr>
+            <tr>
+              <td rowspan="11"> WinCE </td>
+              <td rowspan="3"> Boot  </td>
+              <td> Version  </td>
+              <td valign="top"> x-load-1.41, Eboot </td>
+            </tr>
+            <tr>
+              <td> Boot Mode </td>
+              <td valign="top"> Boot WinCE from SD card, NAND Flash or Ethernet   </td>
+            </tr>
 
-Linux
+            <tr>
+              <td> Image Update  </td>
+              <td valign="top">Support updating image from SD card or Ethernet </td>
+            </tr>
+            <tr>
+              <td rowspan="8"> System  </td>
+              <td> Characteristic </td>
+              <td valign="top"> KITL kernel debug, Reboot, Watchdog, RTC</td>
+            </tr>
+            <tr>
+              <td rowspan="2"> Drivers </td>
+              <td valign="top"> Display driver（DVI, TFT LCD） </td>
+            </tr>
+            <tr>
 
-Boot
+              <td valign="top"> SD card, Keyboard, McSPI, McBSP, Audio, NET, NLED, USB Host, USB OTG, WiFi, GPS, GPRS, CDMA </td>
+            </tr>
+            <tr>
+              <td rowspan="3"> Function </td>
+              <td valign="top"> Power Management (backlight drive, battery-driven, sleep/wake-up function) </td>
+            </tr>
+            <tr>
 
-Version
-
-x-load-1.41, u-boot 1.3.3
-
-Boot Mode
-
-Boot Linux from SD card, NAND Flash or Ethernet
-
-Image Update
-
-Support updating image from SD card or Ethernet
-
-Kernel and Drivers
-
-Version
-
-Linux 2.6.28
-
-Support file systems
-
-ROM/CRAM/EXT2/EXT3/FAT/NFS/JFFS2/UBIFS
-
-Drivers
-
-Serial, RTC, NET, Nand, LCD, Touch Screen, SD, USB Host, USB OTG, DVI,
-Keypad, LED, Audio
-
-File system
-
-Format
-
-Ramdisk, UBI
-
-Characteristic
-
-Provided Lib (ALSA -lib, tslib, glibc), udev support
-
-Demo
-
-Angstrom
-
-Audio (XMMS), network (firefox), graphics editor (gimp) and document
-processing software (Abiword)
-
-Android
-
-Google developed a platform based on Linux open-source mobile phone
-operating system.
-
-DVSDK
-
-Support MPEG4, MPEG2, H264, mp3, aac audio/video formats and Codecs
-
-WinCE
-
-Boot
-
-Version
-
-x-load-1.41, Eboot
-
-Boot Mode
-
-Boot WinCE from SD card, NAND Flash or Ethernet
-
-Image Update
-
-Support updating image from SD card or Ethernet
-
-System
-
-Characteristic
-
-KITL kernel debug, Reboot, Watchdog, RTC
-
-Drivers
-
-Display driver（DVI, TFT LCD）
-
-SD card, Keyboard, McSPI, McBSP, Audio, NET, NLED, USB Host, USB OTG,
-WiFi, GPS, GPRS, CDMA
-
-Function
-
-Power Management (backlight drive, battery-driven, sleep/wake-up
-function)
-
-Hive registry support
-
-ROM file system support
-
-Software features
-
-Mediaplayer 9.0, Word and Internet Explorer 6.0
-
-.NET Compact Framework 3.5
+              <td valign="top">Hive registry support </td>
+            </tr>
+            <tr>
+              <td valign="top">ROM file system support</td>
+            </tr>
+            <tr>
+              <td rowspan="2">Software features</td>
+              <td valign="top"> Mediaplayer 9.0, Word and Internet Explorer 6.0</td>
+            </tr>
+            <tr>
+              <td height="20" valign="top">.NET Compact Framework 3.5</td>
+            </tr>
+</table>
 
 Now Linux2.6.29 is ported. Source code download from
 [here](http://code.google.com/p/devkit8000/wiki/DVSDK_3_00_02_44_linux_2_6_29?ts=1264641072&updated=DVSDK_3_00_02_44_linux_2_6_29)

@@ -1,2 +1,1 @@
-# Mini LA
-* Mini_LAParts
+Mini_LAParts

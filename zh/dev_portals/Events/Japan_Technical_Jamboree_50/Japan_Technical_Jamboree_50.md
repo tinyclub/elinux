@@ -84,7 +84,7 @@
 
 -   Please look into the wiki page. / 下記のWikiページをご覧ください。
     -   [Japan Technical Jamboree
-        49](http://eLinux.org/Japan_Technical_Jamboree_49 "Japan Technical Jamboree 49")
+        49](../../.././dev_portals/Events/Japan_Technical_Jamboree_49/Japan_Technical_Jamboree_49.md "Japan Technical Jamboree 49")
     -   [http://togetter.com/li/697556](http://togetter.com/li/697556)
 
 ## Hash tag on Twitter

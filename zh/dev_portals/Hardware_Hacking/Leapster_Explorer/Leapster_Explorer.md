@@ -39,14 +39,14 @@ some basic How To's and Tutorials to get you started.
 
 ## Project Summary
 
-The Leapster Explorer (like its predecessor the [Didj](http://eLinux.org/Didj "Didj")) is
+The Leapster Explorer (like its predecessor the [Didj](../../.././dev_portals/Hardware_Hacking/Didj/Didj.md "Didj")) is
 a toy produced by Leapfrog marketed as an educational handheld gaming
 console for kids aged 4-9. Although it has a proprietary graphical front
 end, it runs a generic Linux distribution on the same ARM9-based
 processor as the Didj. Console access to the Explorer is achieved using
 the same method as found on the Didj.
 
-[Lots more information on the Didj](http://eLinux.org/Didj "Didj")
+[Lots more information on the Didj](../../.././dev_portals/Hardware_Hacking/Didj/Didj.md "Didj")
 
 ## Bootloader
 
@@ -116,27 +116,27 @@ the same method as found on the Didj.
 **Kernel/RootFS/Firmware**
 
 -   [Building
-    libSDL](http://eLinux.org/Didj_and_Explorer_libSDL "Didj and Explorer libSDL")
+    libSDL](../../.././dev_portals/Hardware_Hacking/Didj/Didj.md_and_Explorer_libSDL "Didj and Explorer libSDL")
 -   [Building SDL\_ttf font
-    library](http://eLinux.org/Didj_and_Explorer_SDL_ttf "Didj and Explorer SDL ttf")
+    library](../../.././dev_portals/Hardware_Hacking/Didj/Didj.md_and_Explorer_SDL_ttf "Didj and Explorer SDL ttf")
 -   [Building SDL\_image library with jpg and png
-    support](http://eLinux.org/Didj_and_Explorer_SDL_image "Didj and Explorer SDL image")
+    support](../../.././dev_portals/Hardware_Hacking/Didj/Didj.md_and_Explorer_SDL_image "Didj and Explorer SDL image")
 -   [Building SDL\_mixer audio
-    library](http://eLinux.org/Didj_and_Explorer_SDL_mixer "Didj and Explorer SDL mixer")
+    library](../../.././dev_portals/Hardware_Hacking/Didj/Didj.md_and_Explorer_SDL_mixer "Didj and Explorer SDL mixer")
 -   [Building
     tslib](http://eLinux.org/Leapster_Explorer:_tslib_Touchscreen_Library "Leapster Explorer: tslib Touchscreen Library")
 -   [SDL
     Resources](http://eLinux.org/Leapster_Explorer:_SDL_resources "Leapster Explorer: SDL resources")
 -   [Boot Kernel and Rootfs from SD
-    w/Framebuffer](http://eLinux.org/Didj_Explorer_SD_Kernel "Didj Explorer SD Kernel")
+    w/Framebuffer](../../.././dev_portals/Hardware_Hacking/Didj/Didj.md_Explorer_SD_Kernel "Didj Explorer SD Kernel")
 -   [Linux Framebuffer
     Driver](http://eLinux.org/Leapster_Explorer_Framebuffer_Driver "Leapster Explorer Framebuffer Driver")
 -   [Enable SD Card
-    Module](http://eLinux.org/Didj_and_Explorer_MMC_Patch "Didj and Explorer MMC Patch")
+    Module](../../.././dev_portals/Hardware_Hacking/Didj/Didj.md_and_Explorer_MMC_Patch "Didj and Explorer MMC Patch")
 -   [Building The Explorer Root File
     System](http://eLinux.org/Leapster_Explorer_Root_File_System "Leapster Explorer Root File System")
 -   [Changing the fb driver to display the boot logo
-    correctly](http://eLinux.org/Didj_and_Explorer:_boot_pixel_format "Didj and Explorer: boot pixel format")
+    correctly](../../.././dev_portals/Hardware_Hacking/Didj/Didj.md_and_Explorer:_boot_pixel_format "Didj and Explorer: boot pixel format")
 -   [TV
     Out](http://eLinux.org/LeapFrog_Pollux_Platform:_TV_Out "LeapFrog Pollux Platform: TV Out")
 

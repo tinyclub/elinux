@@ -1,3 +1,2 @@
-# Mobile Pro
-* Compact_Flash
-* IrDA
+Compact_Flash
+IrDA

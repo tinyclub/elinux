@@ -64,10 +64,10 @@
 
 -   Please look into the wiki page. / 下記のWikiページをご覧ください。
     -   [Japan Technical Jamboree
-        27](http://eLinux.org/Japan_Technical_Jamboree_27 "Japan Technical Jamboree 27")
+        27](../../.././dev_portals/Events/Japan_Technical_Jamboree_27/Japan_Technical_Jamboree_27.md "Japan Technical Jamboree 27")
         (Tokyo)
     -   [Japan Technical Jamboree
-        28](http://eLinux.org/Japan_Technical_Jamboree_28 "Japan Technical Jamboree 28")
+        28](../../.././dev_portals/Events/Japan_Technical_Jamboree_28/Japan_Technical_Jamboree_28.md "Japan Technical Jamboree 28")
         (Osaka)
 
 # Date and venue... / 日付・場所...

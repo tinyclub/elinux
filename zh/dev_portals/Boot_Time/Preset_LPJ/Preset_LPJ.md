@@ -15,11 +15,11 @@
     -   [2.1 Patch](#patch)
 -   [3 How To Use](#how-to-use)
 -   [4 Sample Results](#sample-results)
-    -   [4.1 case 1\*2.6.7 with patch](#case-1-2a2.6-7-with-patch)
+    -   [4.1 case 1\*2.6.7 with patch](#case-1-2-6-7-with-patch)
     -   [4.2 case 2](#case-2)
     -   [4.3 case 3](#case-3)
     -   [4.4 case 4](#case-4)
-    -   [4.5 case 5\*2.6.8-rc1-mm1](#case-5-2a2.6-8-rc1-mm1)
+    -   [4.5 case 5\*2.6.8-rc1-mm1](#case-5-2-6-8-rc1-mm1)
     -   [4.6 case 6](#case-6)
 -   [5 Future Work](#future-work)
 -   [6 Testing](#testing)
@@ -189,7 +189,7 @@ Details:
 -   CPU: FR-V FR450 core running at 360 MHz
 
 Please also refer to the graphic chart in [DMA Copy Of Kernel On
-Startup](http://eLinux.org/DMA_Copy_Of_Kernel_On_Startup "DMA Copy Of Kernel On Startup").
+Startup](../../.././dev_portals/Boot_Time/DMA_Copy_Of_Kernel_On_Startup/DMA_Copy_Of_Kernel_On_Startup.md "DMA Copy Of Kernel On Startup").
 
 ## Future Work
 

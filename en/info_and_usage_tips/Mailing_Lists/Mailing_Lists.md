@@ -9,11 +9,11 @@
 
 -   [1 eLinux.org Lists](#elinux-org-lists)
     -   [1.1
-        elinux-discuss@lists.elinux.org](#elinux-discuss-40lists.elinux-org)
+        elinux-discuss@lists.elinux.org](#elinux-discuss-lists-elinux-org)
     -   [1.2
-        elinux-announce@lists.elinux.org](#elinux-announce-40lists.elinux-org)
+        elinux-announce@lists.elinux.org](#elinux-announce-lists-elinux-org)
     -   [1.3
-        elinux-wiki-dev@lists.elinux.org](#elinux-wiki-dev-40lists.elinux-org)
+        elinux-wiki-dev@lists.elinux.org](#elinux-wiki-dev-lists-elinux-org)
 -   [2 Project Lists](#project-lists)
 -   [3 External Embedded Linux Lists](#external-embedded-linux-lists)
 -   [4 Deprecated discussion list](#deprecated-discussion-list)
@@ -46,8 +46,7 @@ This list is reserved for occasional announcements. It is read only.
  **elinux-announce@lists.elinux.org**
 
 
- To filter this mailing list, use the following:
- List-Id: \<elinux-announce.lists.elinux.org\>
+ To filter this mailing list, use the following: List-Id: `<elinux-announce.lists.elinux.org>`
 
 * * * * *
 
@@ -61,8 +60,7 @@ wiki.
  **elinux-wiki-dev@lists.elinux.org**
 
 
- To filter this mailing list, use the following:
- List-Id: \<elinux-wiki-dev.lists.elinux.org\>
+ To filter this mailing list, use the following: List-Id: `<elinux-wiki-dev.lists.elinux.org>`
 
 ## Project Lists
 
@@ -74,8 +72,7 @@ This list is for discussion of the
  **elinux-minnowboard@lists.elinux.org**
 
 
- To filter this mailing list, use the following:
- List-Id: \<elinux-minnowboard.lists.elinux.org\>
+ To filter this mailing list, use the following: List-Id: `<elinux-minnowboard.lists.elinux.org>`
 
 ## External Embedded Linux Lists
 

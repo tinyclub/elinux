@@ -1,2 +1,1 @@
-# Industrial Communications
-* CAN_Bus
+CAN_Bus

@@ -104,7 +104,7 @@ JAPANESE LANGUAGE ONLY***
 </tr>
 <tr class="odd">
 <td align="left">International Technilca Conference, June 2005</td>
-<td align="left"><a href="http://elinux.org/International_Technical_Jamboree" title="International Technical Jamboree">International Technical Jamboree</a></td>
+<td align="left"><a href="../../.././dev_portals/Events/International_Technical_Jamboree/International_Technical_Jamboree.md" title="International Technical Jamboree">International Technical Jamboree</a></td>
 </tr>
 </tbody>
 </table>
@@ -376,7 +376,7 @@ from CELF (may be cancelled, if not on schedule))
     Japanese, and we hope to have more discussion.)
     -   International Techinical Conference・・・[International
         Technical
-        Jamboree](http://eLinux.org/International_Technical_Jamboree "International Technical Jamboree")
+        Jamboree](../../.././dev_portals/Events/International_Technical_Jamboree/International_Technical_Jamboree.md "International Technical Jamboree")
     -   水山さんのプレゼン資料はここにあります(Mizuyama's presentation
         material)・・・[ITJ2005Detail1-2](http://eLinux.org/ITJ2005Detail1-2 "ITJ2005Detail1-2")
 

@@ -1,18 +1,3 @@
-# Japan Technical Jamboree 38
-## Contents
-# Introduction / はじめに
-* Japan_Technical_Jamboree_Guidance
-## Special remarks for non Japanese speakers
-## Previous Jamboree
-* Japan_Technical_Jamboree_37
-# Date and venue... / 日付・場所...
-## Registration / 参加登録
-# Main Topics
-# Agenda / 進行
-## Agenda
-* File:CELF_2011_09_30_in_English.pdf
-* Japan_TJ_Session_Proposal
-## Special Remarks
-# Ask for your help / お願い
-## Presentation Materials
-## English Translation Volunteer
+Japan_Technical_Jamboree_37
+Japan_Technical_Jamboree_Guidance
+Japan_TJ_Session_Proposal

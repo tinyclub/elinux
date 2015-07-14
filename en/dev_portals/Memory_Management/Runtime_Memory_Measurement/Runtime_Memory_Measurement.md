@@ -11,7 +11,7 @@ measuring runtime memory of a Linux system.
 Unfortunately, the existing memory measurement techniques do not give a
 100% accurate accounting of memory pages (since some pages are counted
 more than once by some measures). See [Accurate Memory
-Measurement](http://eLinux.org/Accurate_Memory_Measurement "Accurate Memory Measurement")
+Measurement](../../.././dev_portals/Memory_Management/Accurate_Memory_Measurement/Accurate_Memory_Measurement.md "Accurate Memory Measurement")
 - that page describes techniques (and patches) which can be used to
 measure the runtime memory more accurately.
 
@@ -287,7 +287,7 @@ due to not recording sufficient information about the true state of the
 system. Here are some random notes on these inaccuracies. To see
 information on different methods of getting more accurate memory
 information, see [Accurate Memory
-Measurement](http://eLinux.org/Accurate_Memory_Measurement "Accurate Memory Measurement")
+Measurement](../../.././dev_portals/Memory_Management/Accurate_Memory_Measurement/Accurate_Memory_Measurement.md "Accurate Memory Measurement")
 
 -   "copy-on-write" pages - an mmap'ed file may be very large in the
     process address space, but empty until written to.
@@ -364,7 +364,7 @@ double free.
 Several tools are available to analyze memory allocations, watch for
 reading and writing beyond the end of allocated memory, and do other
 tasks which help with debugging and tuning memory operations of a
-program. See [Memory Debuggers](http://eLinux.org/Memory_Debuggers "Memory Debuggers")
+program. See [Memory Debuggers](../../../toolbox/dev_tools/Memory_Debuggers/Memory_Debuggers.md "Memory Debuggers")
 for a list of different tools and their features.
 
 ## Measuring kernel memory use
@@ -372,7 +372,7 @@ for a list of different tools and their features.
 ### Kernel Stack Usage
 
 -   Tim is adding a stack checking function to KFT (See [Kernel Function
-    Trace](http://eLinux.org/Kernel_Function_Trace "Kernel Function Trace"))
+    Trace](../../.././dev_portals/Boot_Time/Kernel_Function_Trace/Kernel_Function_Trace.md "Kernel Function Trace"))
     -   -   This new feature has not yet been published
 
 -   Recent -mm tree added stack-corruption-detector.patch (8th March,

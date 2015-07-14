@@ -34,7 +34,7 @@ The Didj was a toy produced by Leapfrog marketed for educational games
 for children aged 5-10.
 
 Didj was end-of-lifed by Leapfrog in mid-2010. It has been replaced by
-the [Leapster Explorer](http://eLinux.org/Leapster_Explorer "Leapster Explorer").
+the [Leapster Explorer](../../.././dev_portals/Hardware_Hacking/Leapster_Explorer/Leapster_Explorer.md "Leapster Explorer").
 
 Although Didj has a proprietary graphical front end, it runs a generic
 Linux distribution on an Arm based processor. Soon after the Didj's
@@ -148,9 +148,9 @@ Tutorials to get you started.
 -   [Building SDL\_mixer audio
     library](http://eLinux.org/Didj_and_Explorer_SDL_mixer "Didj and Explorer SDL mixer")
 -   [Building
-    tslib](http://eLinux.org/Leapster_Explorer:_tslib_Touchscreen_Library "Leapster Explorer: tslib Touchscreen Library")
+    tslib](../../.././dev_portals/Hardware_Hacking/Leapster_Explorer/Leapster_Explorer.md:_tslib_Touchscreen_Library "Leapster Explorer: tslib Touchscreen Library")
 -   [SDL
-    Resources](http://eLinux.org/Leapster_Explorer:_SDL_resources "Leapster Explorer: SDL resources")
+    Resources](../../.././dev_portals/Hardware_Hacking/Leapster_Explorer/Leapster_Explorer.md:_SDL_resources "Leapster Explorer: SDL resources")
 -   [Didj Kernel 2.6.31
     Upgrade](http://eLinux.org/Didj_2.6.31_Kernel "Didj 2.6.31 Kernel")
 -   [2.6.31 Kernel for
@@ -158,11 +158,11 @@ Tutorials to get you started.
 -   [Boot Kernel and Rootfs from SD
     w/Framebuffer](http://eLinux.org/Didj_Explorer_SD_Kernel "Didj Explorer SD Kernel")
 -   [Linux Framebuffer
-    Driver](http://eLinux.org/Leapster_Explorer_Framebuffer_Driver "Leapster Explorer Framebuffer Driver")
+    Driver](../../.././dev_portals/Hardware_Hacking/Leapster_Explorer/Leapster_Explorer.md_Framebuffer_Driver "Leapster Explorer Framebuffer Driver")
 -   [Enable SD Card
     Module](http://eLinux.org/Didj_and_Explorer_MMC_Patch "Didj and Explorer MMC Patch")
 -   [Building The Explorer Root File
-    System](http://eLinux.org/Leapster_Explorer_Root_File_System "Leapster Explorer Root File System")
+    System](../../.././dev_portals/Hardware_Hacking/Leapster_Explorer/Leapster_Explorer.md_Root_File_System "Leapster Explorer Root File System")
 -   [Changing the fb driver to display the boot logo
     correctly](http://eLinux.org/Didj_and_Explorer:_boot_pixel_format "Didj and Explorer: boot pixel format")
 -   [TV

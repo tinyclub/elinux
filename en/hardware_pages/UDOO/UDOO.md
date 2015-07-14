@@ -12,8 +12,8 @@ raising \$641,614 in sixty days thanks to 4,172 backers.
 
 [![UDOO](http://eLinux.org/images/thumb/b/be/UDOO-icons2.png/400px-UDOO-icons2.png)](http://eLinux.org/File:UDOO-icons2.png "UDOO")
 
-***Notice:** The UDOO Wiki pages on this site is collaborative work -
-the UDOO Team is **not** responsible for content on these pages.*
+**Notice:** The UDOO Wiki pages on this site is collaborative work -
+the UDOO Team is **not** responsible for content on these pages.
 
 ## Contents
 
@@ -289,13 +289,8 @@ UDOO\_GPIO\_Pinout](http://eLinux.org/UDOO_GPIO_Pinout "UDOO GPIO Pinout")
 
 ### UDOO Camera Module
 
-<table>
-<col width="50%" />
-<col width="50%" />
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-<td align="left"><p><br /></p>
+  
+
 <table>
 <col width="50%" />
 <col width="50%" />
@@ -310,17 +305,21 @@ UDOO\_GPIO\_Pinout](http://eLinux.org/UDOO_GPIO_Pinout "UDOO GPIO Pinout")
 <li>Image transfer rate</li>
 </ul>
 <p>VGA (320x480) @120fps VGA (640x480) @90fps 720p @60fps 1280x960 @45fps 1080p @30fps QSXGA (2592x1944) @15fps</p>
-<p><a href="http://elinux.org/UDOO_Camera_Module" title="UDOO Camera Module">More informations about UDOO Camera Modules</a></p>
+<p><a href="http://www.eLinux.org/UDOO_Camera_Module" title="UDOO Camera Module">More informations about UDOO Camera Modules</a></p>
 <p><a href="http://udoo.org/download/files/datasheets/datasheet_camera.pdf">UDOO Camera Module Datasheet</a></p>
 <p><br /></p></td>
-<td align="left"><a href="http://elinux.org/File:UDOO_Camera.jpg"><img src="http://elinux.org/images/thumb/b/b3/UDOO_Camera.jpg/300px-UDOO_Camera.jpg" alt="UDOO Camera.jpg" /></a>
-<a href="http://elinux.org/File:UDOO_Camera.jpg" title="Enlarge"></a></td>
+<td align="left"><a href="http://www.eLinux.org/File:UDOO_Camera.jpg"><img src="http://www.eLinux.org/images/thumb/b/b3/UDOO_Camera.jpg/300px-UDOO_Camera.jpg" alt="UDOO Camera.jpg" /></a>
+<a href="http://www.eLinux.org/File:UDOO_Camera.jpg" title="Enlarge"></a></td>
 </tr>
 </tbody>
 </table>
-<p><br /></p>
-<h2>UDOO LVDS Touch Screens</h2>
-<p><strong>7&quot; Touch Panel Kit</strong></p>
+
+  
+
+### UDOO LVDS Touch Screens
+
+**7" Touch Panel Kit**
+
 <table>
 <col width="50%" />
 <col width="50%" />
@@ -336,13 +335,17 @@ UDOO\_GPIO\_Pinout](http://eLinux.org/UDOO_GPIO_Pinout "UDOO GPIO Pinout")
 </ul>
 <p>How to <a href="http://www.elinux.org/UDOO_setup_lvds_panels">setup lvds panels</a></p>
 <p><a href="http://udoo.org/download/files/datasheets/datasheet7.pdf">UDOO 7&quot; Touch Panel Display Kit Datasheet</a></p></td>
-<td align="left"><a href="http://elinux.org/File:UDOO_LVDS_7.jpg"><img src="http://elinux.org/images/thumb/b/be/UDOO_LVDS_7.jpg/300px-UDOO_LVDS_7.jpg" alt="UDOO LVDS 7.jpg" /></a>
-<a href="http://elinux.org/File:UDOO_LVDS_7.jpg" title="Enlarge"></a></td>
+<td align="left"><a href="http://www.eLinux.org/File:UDOO_LVDS_7.jpg"><img src="http://www.eLinux.org/images/thumb/b/be/UDOO_LVDS_7.jpg/300px-UDOO_LVDS_7.jpg" alt="UDOO LVDS 7.jpg" /></a>
+<a href="http://www.eLinux.org/File:UDOO_LVDS_7.jpg" title="Enlarge"></a></td>
 </tr>
 </tbody>
 </table>
-<p><br /></p>
-<p><br /> <strong>15&quot; Touch Panel Kit</strong></p>
+
+  
+
+  
+ **15" Touch Panel Kit**
+
 <table>
 <col width="50%" />
 <col width="50%" />
@@ -358,32 +361,46 @@ UDOO\_GPIO\_Pinout](http://eLinux.org/UDOO_GPIO_Pinout "UDOO GPIO Pinout")
 </ul>
 <p><br /> How to <a href="http://www.elinux.org/UDOO_setup_lvds_panels">setup lvds panels</a></p>
 <p><a href="http://udoo.org/download/files/datasheets/datasheet15.pdf">UDOO 15&quot; Touch Panel Display Kit Datasheet</a></p></td>
-<td align="left"><a href="http://elinux.org/File:UDOO_LVDS_15.jpg"><img src="http://elinux.org/images/thumb/f/fb/UDOO_LVDS_15.jpg/300px-UDOO_LVDS_15.jpg" alt="UDOO LVDS 15.jpg" /></a>
-<a href="http://elinux.org/File:UDOO_LVDS_15.jpg" title="Enlarge"></a></td>
+<td align="left"><a href="http://www.eLinux.org/File:UDOO_LVDS_15.jpg"><img src="http://www.eLinux.org/images/thumb/f/fb/UDOO_LVDS_15.jpg/300px-UDOO_LVDS_15.jpg" alt="UDOO LVDS 15.jpg" /></a>
+<a href="http://www.eLinux.org/File:UDOO_LVDS_15.jpg" title="Enlarge"></a></td>
 </tr>
 </tbody>
 </table>
-<p><br /></p>
-<p><br /></p>
-<h1>Community</h1>
-<p><strong>Forums</strong> The official UDOO forums can be found at <a href="http://www.udoo.org/forum">http://www.udoo.org/forum</a></p>
-<p>The forum search facility has been tweaked to allow more general searching. <strong>Please</strong> do a search before making a post as the issue may already have been raised and answered.</p>
-<p><br /> <strong>IRC</strong> There is an (unofficial) UDOO discussion channel on IRC. Using the IRC client of your choice, use server information: irc.freenode.net. Room name is #udoo.</p>
-<h2>Home site and community</h2>
-<ol>
-<li>Official web site <a href="http://www.udoo.org">http://www.udoo.org</a></li>
-<li>Official forum <a href="http://www.udoo.org/forum/index.php">http://www.udoo.org/forum/index.php</a></li>
-</ol>
-<h2>Social account</h2>
-<ol>
-<li>Facebook fan page <a href="http://www.facebook.com/udooboard">http://www.facebook.com/udooboard</a></li>
-<li>Twitter <a href="http://twitter.com/UDOO_Board">http://twitter.com/UDOO_Board</a></li>
-<li>Google+ <a href="https://plus.google.com/u/0/110742692974455430878/posts">https://plus.google.com/u/0/110742692974455430878/posts</a></li>
-<li>YouTube <a href="http://www.youtube.com/channel/UCXv5UyGn5jArK8xOAmuSeHg">http://www.youtube.com/channel/UCXv5UyGn5jArK8xOAmuSeHg</a></li>
-</ol></td>
-</tr>
-</tbody>
-</table>
+
+
+
+
+## Community
+
+
+**Forums** The official UDOO forums can be found at
+[http://www.udoo.org/forum](http://www.udoo.org/forum)
+
+The forum search facility has been tweaked to allow more general
+searching. **Please** do a search before making a post as the issue may
+already have been raised and answered.
+
+  
+ **IRC** There is an (unofficial) UDOO discussion channel on IRC. Using
+the IRC client of your choice, use server information: irc.freenode.net.
+Room name is \#udoo.
+
+### Home site and community
+
+1.  Official web site [http://www.udoo.org](http://www.udoo.org)
+2.  Official forum
+    [http://www.udoo.org/forum/index.php](http://www.udoo.org/forum/index.php)
+
+### Social account
+
+1.  Facebook fan page
+    [http://www.facebook.com/udooboard](http://www.facebook.com/udooboard)
+2.  Twitter
+    [http://twitter.com/UDOO\_Board](http://twitter.com/UDOO_Board)
+3.  Google+
+    [https://plus.google.com/u/0/110742692974455430878/posts](https://plus.google.com/u/0/110742692974455430878/posts)
+4.  YouTube
+    [http://www.youtube.com/channel/UCXv5UyGn5jArK8xOAmuSeHg](http://www.youtube.com/channel/UCXv5UyGn5jArK8xOAmuSeHg)
 
 
 [Category](http://eLinux.org/Special:Categories "Special:Categories"):

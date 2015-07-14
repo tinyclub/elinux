@@ -39,7 +39,7 @@ included).
 # Specifications
 
 -   GPL32902 processor
-    -   [ARM11](http://eLinux.org/ARM_Processor "ARM Processor") @ 180MHz
+    -   [ARM11](../../.././dev_portals/Development_Platforms/ARM_Processor/ARM_Processor.md "ARM Processor") @ 180MHz
     -   [Manufacturer GeneralPlus](http://www.generalplus.com)
     -   [GPL3900 Development
         Platform](http://translate.google.com/translate?sl=auto&tl=en&js=n&prev=_t&hl=en&ie=UTF-8&layout=2&eotf=1&u=http%3A%2F%2Fwww.threeway.cc%2Fsitecn%2FInfo.aspx%3Ftid%3D1413%26pid%3D1611&act=url)

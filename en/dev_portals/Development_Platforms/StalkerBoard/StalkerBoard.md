@@ -153,111 +153,112 @@ A2](http://www.ema-tech.com/home/shownews.php?a_id=77)评估板采用[OMAP3530](
 
 **软件资源**
 
-系统
+<table border="1" cellspacing="0" cellpadding="0">
+            <tr>
+              <td valign="top">系统 </td>
+              <td valign="top">项目 </td>
+              <td valign="top">特性 </td>
+              <td valign="top">描述 </td>
+            </tr>
+            <tr>
+              <td rowspan="11">Linux </td>
+              <td rowspan="3">启动代码  </td>
+              <td> 版本  </td>
+              <td valign="top"> x-load-1.42，U-Boot 2009.06-svn14 </td>
+            </tr>
+            <tr>
+              <td> 启动方式  </td>
+              <td valign="top"> 支持网络、SD卡或NAND Flash中启动引导Linux系统  </td>
+            </tr>
 
-项目
+            <tr>
+              <td> 映像更新  </td>
+              <td valign="top"> 支持网络或SD卡更新映像  </td>
+            </tr>
+            <tr>
+              <td rowspan="3"> 内核与驱动  </td>
+              <td> 版本  </td>
+              <td valign="top"> Linux 2.6.29 </td>
+            </tr>
+            <tr>
+              <td> 支持文件系统格式  </td>
+              <td valign="top"> ROM/CRAM/EXT2/EXT3/FAT/NFS/JFFS2/UBIFS </td>
+            </tr>
+            <tr>
 
-特性
+              <td> 驱动支持  </td>
+              <td valign="top"> Serial, RTC, NET, NAND, LCD, Touch Screen, MMD/SD,USB OTG, DVI, Keypad</td>
+            </tr>
+            <tr>
+              <td rowspan="2"> 文件系统  </td>
+              <td> 文件系统格式  </td>
+              <td valign="top"> Ramdisk文件系统、UBI文件系统  </td>
+            </tr>
+            <tr>
+              <td> 系统特性  </td>
+              <td valign="top"> 库支持（ALSA -lib, tslib, glibc）,udev设备管理支持  </td>
+            </tr>
+            <tr>
+              <td rowspan="3"> Demo </td>
+              <td> Angstrom </td>
+              <td valign="top"> 音频（XMMS），网络（Firefox），图形编辑器（gimp）及文档处理软件( Abiword) </td>
+            </tr>
+            <tr>
+              <td> Android </td>
+              <td valign="top"> Google开发的基于Linux平台的开源手机操作系统  </td>
+            </tr>
 
-描述
+            <tr>
+              <td> DVSDK软件  </td>
+              <td valign="top"> 支持MPEG4，MPEG2，H264，mp3，aac音\视频格式解码  </td>
+            </tr>
+            <tr>
+              <td rowspan="11"> WinCE </td>
+              <td rowspan="3"> 启动代码  </td>
+              <td> 版本  </td>
+              <td valign="top"> x-load-1.42、Eboot </td>
+            </tr>
+            <tr>
+              <td> 启动方式  </td>
+              <td valign="top"> 支持网络、SD卡或NAND Flash中启动引导wince系统  </td>
+            </tr>
 
-Linux
+            <tr>
+              <td> 映像更新  </td>
+              <td valign="top"> 支持网络或SD卡更新映像  </td>
+            </tr>
+            <tr>
+              <td rowspan="8"> 系统特性  </td>
+              <td> 内核特性  </td>
+              <td valign="top"> KITL内核调试, Reboot, Watchdog, RTC </td>
+            </tr>
+            <tr>
+              <td rowspan="2"> 驱动支持  </td>
+              <td valign="top"> 显示驱动（DVI, TFT LCD）  </td>
+            </tr>
+            <tr>
 
-启动代码
+              <td valign="top"> SD卡, 键盘, McSPI, McBSP, 音频,网络, NLED, USB OTG </td>
+            </tr>
+            <tr>
+              <td rowspan="3"> 系统功能  </td>
+              <td valign="top"> 电源管理（背光驱动、电池驱动、休眠\唤醒功能）  </td>
+            </tr>
+            <tr>
 
-版本
-
-x-load-1.42，U-Boot 2009.06-svn14
-
-启动方式
-
-支持网络、SD卡或NAND Flash中启动引导Linux系统
-
-映像更新
-
-支持网络或SD卡更新映像
-
-内核与驱动
-
-版本
-
-Linux 2.6.29
-
-支持文件系统格式
-
-ROM/CRAM/EXT2/EXT3/FAT/NFS/JFFS2/UBIFS
-
-驱动支持
-
-Serial, RTC, NET, NAND, LCD, Touch Screen, MMD/SD,USB OTG, DVI, Keypad
-
-文件系统
-
-文件系统格式
-
-Ramdisk文件系统、UBI文件系统
-
-系统特性
-
-库支持（ALSA -lib, tslib, glibc）,udev设备管理支持
-
-Demo
-
-Angstrom
-
-音频（XMMS），网络（Firefox），图形编辑器（gimp）及文档处理软件(
-Abiword)
-
-Android
-
-Google开发的基于Linux平台的开源手机操作系统
-
-DVSDK软件
-
-支持MPEG4，MPEG2，H264，mp3，aac音\\视频格式解码
-
-WinCE
-
-启动代码
-
-版本
-
-x-load-1.42、Eboot
-
-启动方式
-
-支持网络、SD卡或NAND Flash中启动引导wince系统
-
-映像更新
-
-支持网络或SD卡更新映像
-
-系统特性
-
-内核特性
-
-KITL内核调试, Reboot, Watchdog, RTC
-
-驱动支持
-
-显示驱动（DVI, TFT LCD）
-
-SD卡, 键盘, McSPI, McBSP, 音频,网络, NLED, USB OTG
-
-系统功能
-
-电源管理（背光驱动、电池驱动、休眠\\唤醒功能）
-
-HIVE注册表支持
-
-ROM文件系统支持
-
-软件特性
-
-Media play 9.0, Word编辑工具及Internet Explorer 6.0
-
-.NET Compact Framework 3.5
-
+              <td valign="top"> HIVE注册表支持  </td>
+            </tr>
+            <tr>
+              <td valign="top"> ROM文件系统支持  </td>
+            </tr>
+            <tr>
+              <td rowspan="2"> 软件特性  </td>
+              <td valign="top"> Media play 9.0, Word编辑工具及Internet Explorer 6.0 </td>
+            </tr>
+            <tr>
+              <td height="20" valign="top"> .NET Compact Framework 3.5 </td>
+            </tr>
+</table>
 
 
 ## **评估板、接口图片**
@@ -489,88 +490,47 @@ DSP核，可满足工业控制的应用开发要求。
 **[EMA OMAP3530 EV
 A2](http://www.ema-tech.com/home/shownews.php?a_id=77)核心板硬件配置**
 
-OMAP 3530
+<table border="1" cellspacing="0" cellpadding="0">
+           <tr>
+              <td rowspan="3">OMAP 3530 </td>
+              <td> 600MHz ARM Cortex-A8 processor with NEON technology   </td>
+           </tr>
+           <tr>
+              <td> 430MHz TMS320C64x+ DSP协处理器  </td>
+           </tr>
+           <tr>
+              <td> POWERVR SG™ 2D/3D加速引擎  </td>
+           </tr>
+           <tr>
+              <td rowspan="1">RAM  </td>
+              <td> 1Gbit(128MByte)/ 2Gbit(256MByte) 低电压DDR @ 166MHz</td>
+           </tr>
+           <tr>
+              <td rowspan="1">Flash </td>
+              <td>1Gbit(128MByte)/ 2Gbit(256MByte) 高速低电压SLC NandFlash</td>
+           </tr>
+           <tr>
+              <td rowspan="1">指示灯  </td>
+              <td> 供电指示，电源管理模块指示</td>
+           </tr>
+           <tr>
+              <td rowspan="1">JTAG </td>
+              <td> 14Pin 1.8V JTAG</td>
+           </tr>
+           <tr>
+              <td rowspan="1">电源输入 </td>
+              <td>4.2V DC输入</td>
+           </tr>
+           <tr>
+              <td rowspan="1">电源输出  </td>
+              <td> 1.8V DC输出（配给其他接口器件用）</td>
+           </tr>
+           <tr>
+              <td rowspan="1">I/O电压  </td>
+              <td> 1.8V LVCMOS</td>
+           </tr>
 
-600MHz ARM Cortex-A8 processor with NEON technology
-
-430MHz TMS320C64x+ DSP协处理器
-
-POWERVR SG™ 2D/3D加速引擎
-
-RAM
-
-1Gbit(128MByte)/ 2Gbit(256MByte) 低电压DDR @ 166MHz
-
-Flash
-
-1Gbit(128MByte)/ 2Gbit(256MByte) 高速低电压SLC NandFlash
-
-指示灯
-
-供电指示，电源管理模块指示
-
-JTAG
-
-14Pin 1.8V JTAG
-
-电源输入
-
-4.2V DC输入
-
-电源输出
-
-1.8V DC输出（配给其他接口器件用）
-
-I/O电压
-
-1.8V LVCMOS
-
-**[EMA OMAP3530 EV
-A2](http://www.ema-tech.com/home/shownews.php?a_id=77)核心板接口资源**
-
-通用外设总线GPMC资源
-
-数据总线 16位
-
-地址总线 10位
-
-片选信号 5路
-
-MMC/SD/SDHC/SDIO
-
-2路（支持SDIO，其中1路支持双电压）
-
-UART
-
-2路（支持CTS与RTS）
-
-高速USB Host 2.0/OTG
-
-1路
-
-S-VIDEO/AV视频输出
-
-各1路（输出复用）
-
-CMOS并行显示总线
-
-1路（24位真彩色）
-
-摄像头总线
-
-2路
-
-ETK调试总线
-
-1路
-
-SPI总线
-
-2路（每路2个片选）
-
-MCBSP总线
-
-2路
+</table>
 
 # **以评估板为核心的计算机系统**
 

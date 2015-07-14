@@ -50,7 +50,7 @@ presentation)](http://tree.celinuxforum.org/CelfPubWiki/ELC2009Presentations?act
 
 -   [Holly Gates](http://eLinux.org/Holly_Gates "Holly Gates") wiggler - Parallel Port
 -   [Cheap Tag](http://eLinux.org/Cheap_Tag "Cheap Tag") 5v only parallel port
--   [Flyswatter](http://eLinux.org/Flyswatter "Flyswatter")- USB
+-   [Flyswatter](../../.././dev_portals/Hardware_Hacking/Flyswatter/Flyswatter.md "Flyswatter")- USB
 -   [ARM DS-5](http://www.arm.com/ds5) - DS-5 and DSTREAM provide
     embedded Linux developers with a full professional development suite
 -   [gnICE](http://docs.blackfin.uclinux.org/doku.php?id=hw:jtag:gnice)

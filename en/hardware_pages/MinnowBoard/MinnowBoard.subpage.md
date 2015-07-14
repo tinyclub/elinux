@@ -1,5 +1,1 @@
-# Minnowboard:MinnowBoard
-* Minnowboard:GSoC2015
-# Introduction
-# Boards
-# Community
+Minnowboard:GSoC2015

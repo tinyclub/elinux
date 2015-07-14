@@ -87,7 +87,7 @@ See [http://www.androphones.com/](http://www.androphones.com/)
 ### That have shipped
 
 -   [OpenSourceMID.org](http://www.opensourcemid.org) K7 OMAP3530 MID
-    tablet [Opensourcemid](http://eLinux.org/Opensourcemid "Opensourcemid")
+    tablet [Opensourcemid](../../.././dev_portals/Development_Platforms/Opensourcemid/Opensourcemid.md "Opensourcemid")
 -   Archos Internet tablets
     -   Archos 5 and Archos 7 Internet tablets - [Android tablet plays
         720p

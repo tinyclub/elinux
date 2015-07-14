@@ -5,8 +5,8 @@
 :/^## Content/,/^##* /s/.2f//g
 :/^## Content/,/^##* /s/.2c//g
 :/^## Content/,/^##* /s/.27//g
-:%s#(/#(http:\/\/elinux.org/#g
-:%s#href="/#href="http://elinux.org/#g
-:%s#src="/#src="http://elinux.org/#g
+:%s#(/#(http:\/\/eLinux.org/#g
+:%s#href="/#href="http://eLinux.org/#g
+:%s#src="/#src="http://eLinux.org/#g
 :/^Jump to:/d
 /Navigation menu/,/\%$/d

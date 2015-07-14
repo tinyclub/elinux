@@ -1,2 +1,1 @@
-# Sparkfun Camera
-* SparkfunCameraFPGA
+SparkfunCameraFPGA

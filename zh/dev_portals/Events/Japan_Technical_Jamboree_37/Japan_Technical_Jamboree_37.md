@@ -64,9 +64,9 @@
 
 -   Please look into the wiki page. / 下記のWikiページをご覧ください。
     -   [Japan Technical Jamboree
-        35](http://eLinux.org/Japan_Technical_Jamboree_35 "Japan Technical Jamboree 35")
+        35](../../.././dev_portals/Events/Japan_Technical_Jamboree_35/Japan_Technical_Jamboree_35.md "Japan Technical Jamboree 35")
     -   Note: [Japan Technical Jamboree
-        36](http://eLinux.org/Japan_Technical_Jamboree_36 "Japan Technical Jamboree 36")
+        36](../../.././dev_portals/Events/Japan_Technical_Jamboree_36/Japan_Technical_Jamboree_36.md "Japan Technical Jamboree 36")
         was canceled due to earthquake.
 
 # Date and venue... / 日付・場所...

@@ -1,2 +1,0 @@
-# LTTng
-## External Links

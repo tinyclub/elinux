@@ -93,7 +93,7 @@ GNU).
 <td>  is a second-stage bootloader, consisting of the Linux kernel and a small gui
 </td></tr>
 <tr>
-<th> <a href="http://elinux.org/U-Boot" title="U-Boot">U-Boot</a>
+<th> <a href="../../.././dev_portals/Development_Platforms/Tegra/Mainline_SW/U-Boot/Tegra/Mainline_SW/U-Boot.md" title="U-Boot">U-Boot</a>
 </th>
 <td>                 y  </td>
 <td>   y  </td>
@@ -217,7 +217,7 @@ Please don't pick any of these for new designs!
 
 ## See also
 
--   [Bootloader\_Security\_Resources](http://eLinux.org/Bootloader_Security_Resources "Bootloader Security Resources")
+-   [Bootloader\_Security\_Resources](../../.././dev_portals/Security/Bootloader_Security_Resources/Bootloader_Security_Resources.md "Bootloader Security Resources")
 
 
 [Category](http://eLinux.org/Special:Categories "Special:Categories"):

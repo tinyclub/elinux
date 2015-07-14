@@ -1,3 +1,2 @@
-# Flameman
-* Flameman/project
-* Flameman/article
+Flameman/article
+Flameman/project

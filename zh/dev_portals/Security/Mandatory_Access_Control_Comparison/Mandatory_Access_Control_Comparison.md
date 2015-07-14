@@ -121,423 +121,489 @@ Memory : --MB, OS : Openzaurus 3.5.4.1 + OPIE 1.2
 
 ### Sizing
 
-Kernel 2.6.16 (linux-openzaurus-2.6.16-r40, Static build)
+<p>Kernel 2.6.16 (linux-openzaurus-2.6.16-r40, Static build)
+</p>
+<table border="1" cellspacing="0" cellpadding="5">
 
-Normal
-
-LIDS
-
-TOMOYO
-
-RSBAC
-
-[SELinux](http://eLinux.org/SELinux "SELinux")
-
-Kernel size (Image)
-
-2487744
-
-2554880
-
-2541808
-
-2974224
-
- ?
-
-Kernel size (zImage)
-
-1181660
-
-1205324
-
-1207288
-
-1351432
-
- ?
-
-image size overhead
-
-0
-
-67136
-
-54064
-
-486480
-
- ?
-
-policy size
-
-0
-
-memory consumption
-
-0
+<tr bgcolor="#80c0d0">
+<td>
+</td>
+<td>  Normal
+</td>
+<td>  LIDS
+</td>
+<td>  TOMOYO
+</td>
+<td>  RSBAC
+</td>
+<td>  <a href="../../.././dev_portals/Security/SELinux/SELinux.md" title="SELinux">SELinux</a>
+</td></tr>
+<tr>
+<td>  Kernel size (Image)
+</td>
+<td>  2487744
+</td>
+<td>  2554880
+</td>
+<td>  2541808
+</td>
+<td>  2974224
+</td>
+<td> &#160;?
+</td></tr>
+<tr>
+<td>  Kernel size (zImage)
+</td>
+<td>  1181660
+</td>
+<td>  1205324
+</td>
+<td>  1207288
+</td>
+<td>  1351432
+</td>
+<td> &#160;?
+</td></tr>
+<tr>
+<td>  image size overhead
+</td>
+<td>  0
+</td>
+<td>  67136
+</td>
+<td>  54064
+</td>
+<td>  486480
+</td>
+<td> &#160;?
+</td></tr>
+<tr>
+<td>  policy size
+</td>
+<td>  0
+</td></tr>
+<tr>
+<td>  memory consumption
+</td>
+<td>  0
+</td></tr></table>
 
 ### Lmbench
 
-Processor, Process, Local communication latencies
-
-Normal
-
-LIDS
-
-TOMOYO
-
-RSBAC
-
-[SELinux](http://eLinux.org/SELinux "SELinux")
-
-null call
-
-0.46
-
-0.46
-
-0.46
-
-null I/O
-
-1.77
-
-1.97 (11%)
-
-1.77
-
-stat
-
-12.7
-
-15.7 (24%)
-
-12.8 (1%)
-
-open/close
-
-18.7
-
-22.5 (20%)
-
-59 (216%)
-
-select TCP
-
-91.3
-
-91.6
-
-91.3
-
-sig inst
-
-2.89
-
-2.83 (-2%)
-
-2.84 (-2%)
-
-sig hndl
-
-7.58
-
-7.66 (1%)
-
-9.25 (22%)
-
-fork
-
-3795
-
-3808
-
-3757 (-1%)
-
-execve
-
-13000
-
-13000
-
-15000 (15%)
-
-sh
-
-36000
-
-37000 (3%)
-
-41000 (14%)
-
-ctxsw
-
-175
-
-186.3 (7%)
-
-177.2
-
-pipe
-
-356.9
-
-375.6 (5%)
-
-358.1
-
-AF\_UNIX
-
-674
-
-718 (7%)
-
-723 (7%)
-
-UDP
-
-747.5
-
-776.3 (4%)
-
-765.1 (2%)
-
-RPC/UDP
-
-969.1
-
-1013 (5%)
-
-1193 (23%)
-
-TCP
-
-957.3
-
-1004 (5%)
-
-964.6 (1%)
-
-RPC/TCP
-
-1332
-
-1380 (4%)
-
-1353 (2%)
-
-TCP connect
-
-2302
-
-2379 (3%)
-
-2357 (2%)
-
-0KB create
-
-461
-
-605.7 (31%)
-
-669.8 (45%)
-
-0KB delete
-
-232.5
-
-267.1 (15%)
-
-329.5 (42%)
-
-10KB create
-
-5128.2
-
-5234.6 (2%)
-
-5235.6 (2%)
-
-10KB delete
-
-298.8
-
-349.8 (17%)
-
-415.1 (39%)
-
-Mmap latency
-
--
-
--
-
--
-
-Prot Fault
-
-1.72
-
-1.71
-
-0.61 (-64%)
-
-Page Fault
-
-92
-
-92
-
-86 (-7%)
+<p>Processor, Process, Local communication latencies
+</p>
+<table border="1" cellspacing="0" cellpadding="5">
+
+<tr bgcolor="#80c0d0">
+<td>
+</td>
+<td>  Normal
+</td>
+<td>  LIDS
+</td>
+<td>  TOMOYO
+</td>
+<td>  RSBAC
+</td>
+<td>  <a href="../../.././dev_portals/Security/SELinux/SELinux.md" title="SELinux">SELinux</a>
+</td></tr>
+<tr>
+<td>  null call
+</td>
+<td>  0.46
+</td>
+<td>  0.46
+</td>
+<td>  0.46
+</td></tr>
+<tr>
+<td>  null I/O
+</td>
+<td>  1.77
+</td>
+<td>  1.97 (11%)
+</td>
+<td>  1.77
+</td></tr>
+<tr>
+<td>  stat
+</td>
+<td>  12.7
+</td>
+<td>  15.7 (24%)
+</td>
+<td>  12.8 (1%)
+</td></tr>
+<tr>
+<td>  open/close
+</td>
+<td>  18.7
+</td>
+<td>  22.5 (20%)
+</td>
+<td>  59 (216%)
+</td></tr>
+<tr>
+<td>  select TCP
+</td>
+<td>  91.3
+</td>
+<td>  91.6
+</td>
+<td>  91.3
+</td></tr>
+<tr>
+<td>  sig inst
+</td>
+<td>  2.89
+</td>
+<td>  2.83 (-2%)
+</td>
+<td>  2.84 (-2%)
+</td></tr>
+<tr>
+<td>  sig hndl
+</td>
+<td>  7.58
+</td>
+<td>  7.66  (1%)
+</td>
+<td>  9.25 (22%)
+</td></tr>
+<tr>
+<td>  fork
+</td>
+<td>  3795
+</td>
+<td>  3808
+</td>
+<td>  3757 (-1%)
+</td></tr>
+<tr>
+<td>  execve
+</td>
+<td>  13000
+</td>
+<td>  13000
+</td>
+<td>  15000 (15%)
+</td></tr>
+<tr>
+<td>  sh
+</td>
+<td>  36000
+</td>
+<td>  37000  (3%)
+</td>
+<td>  41000 (14%)
+</td></tr>
+<tr>
+<td>  ctxsw
+</td>
+<td>  175
+</td>
+<td>  186.3  (7%)
+</td>
+<td>  177.2
+</td></tr>
+<tr>
+<td>  pipe
+</td>
+<td>  356.9
+</td>
+<td>  375.6  (5%)
+</td>
+<td>  358.1
+</td></tr>
+<tr>
+<td>  AF_UNIX
+</td>
+<td>  674
+</td>
+<td>  718  (7%)
+</td>
+<td>  723 (7%)
+</td></tr>
+<tr>
+<td>  UDP
+</td>
+<td>  747.5
+</td>
+<td>  776.3  (4%)
+</td>
+<td>  765.1 (2%)
+</td></tr>
+<tr>
+<td>  RPC/UDP
+</td>
+<td>  969.1
+</td>
+<td>  1013  (5%)
+</td>
+<td>  1193 (23%)
+</td></tr>
+<tr>
+<td>  TCP
+</td>
+<td>  957.3
+</td>
+<td>  1004  (5%)
+</td>
+<td>  964.6 (1%)
+</td></tr>
+<tr>
+<td>  RPC/TCP
+</td>
+<td>  1332
+</td>
+<td>  1380  (4%)
+</td>
+<td>  1353 (2%)
+</td></tr>
+<tr>
+<td>  TCP connect
+</td>
+<td>  2302
+</td>
+<td>  2379  (3%)
+</td>
+<td>  2357 (2%)
+</td></tr>
+<tr>
+<td>  0KB create
+</td>
+<td>  461
+</td>
+<td>  605.7 (31%)
+</td>
+<td>  669.8 (45%)
+</td></tr>
+<tr>
+<td>  0KB delete
+</td>
+<td>  232.5
+</td>
+<td>  267.1 (15%)
+</td>
+<td>  329.5 (42%)
+</td></tr>
+<tr>
+<td>  10KB create
+</td>
+<td>  5128.2
+</td>
+<td>  5234.6  (2%)
+</td>
+<td>  5235.6 (2%)
+</td></tr>
+<tr>
+<td>  10KB delete
+</td>
+<td>  298.8
+</td>
+<td>  349.8 (17%)
+</td>
+<td>  415.1 (39%)
+</td></tr>
+<tr>
+<td>  Mmap latency
+</td>
+<td>  -
+</td>
+<td>  -
+</td>
+<td>  -
+</td></tr>
+<tr>
+<td>  Prot Fault
+</td>
+<td>  1.72
+</td>
+<td>  1.71
+</td>
+<td>  0.61 (-64%)
+</td></tr>
+<tr>
+<td>  Page Fault
+</td>
+<td>  92
+</td>
+<td>  92
+</td>
+<td>  86 (-7%)
+</td></tr></table>
 
 ### Unixbench
 
-Normal
+<table border="1" cellspacing="0" cellpadding="5">
+
+<tr bgcolor="#80c0d0">
+<td>
+</td>
+<td>  Normal
+</td>
+<td>  LIDS
+</td>
+<td>  TOMOYO
+</td>
+<td>  RSBAC
+</td>
+<td>  <a href="../../.././dev_portals/Security/SELinux/SELinux.md" title="SELinux">SELinux</a>
+</td></tr>
+<tr>
+<td>  execl
+</td>
+<td>  89.3 lps
+</td>
+<td>  84.6
+</td>
+<td>  59.5
+</td></tr>
+<tr>
+<td>  file read 1KB
+</td>
+<td>  53974.0 KBps
+</td>
+<td>  52176
+</td>
+<td>  53505
+</td></tr>
+<tr>
+<td>  file write 1KB
+</td>
+<td>  328.0 KBps
+</td>
+<td>  321
+</td>
+<td>  376
+</td></tr>
+<tr>
+<td>  file copy 1KB
+</td>
+<td>  288.0 KBps
+</td>
+<td>  199
+</td>
+<td>  311
+</td></tr>
+<tr>
+<td>  file read 256B
+</td>
+<td>  34766.0 KBps
+</td>
+<td>  33831
+</td>
+<td>  34742
+</td></tr>
+<tr>
+<td>  file write 256B
+</td>
+<td>  133.0 KBps
+</td>
+<td>  121
+</td>
+<td>  138
+</td></tr>
+<tr>
+<td>  file copy 256B
+</td>
+<td>  126.0 KBps
+</td>
+<td>  121
+</td>
+<td>  121
+</td></tr>
+<tr>
+<td>  file read 4KB
+</td>
+<td>  69148.0 KBps
+</td>
+<td>  67961
+</td>
+<td>  68851
+</td></tr>
+<tr>
+<td>  file write 4KB
+</td>
+<td>  1417.0 KBps
+</td>
+<td>  1417
+</td>
+<td>  1333
+</td></tr>
+<tr>
+<td>  file copy 4KB
+</td>
+<td>  1268.0 KBps
+</td>
+<td>  1237
+</td>
+<td>  1249
+</td></tr>
+<tr>
+<td>  pipe
+</td>
+<td>  112917.5 lps
+</td>
+<td>  108924
+</td>
+<td>  112137
+</td></tr>
+<tr>
+<td>  pipe switching
+</td>
+<td>  2655.4 lps
+</td>
+<td>  2559.6
+</td>
+<td>  2700
+</td></tr>
+<tr>
+<td>  process creation
+</td>
+<td>  272.9 lps
+</td>
+<td>  367.8
+</td>
+<td>  276.4
+</td></tr>
+<tr>
+<td>  system call
+</td>
+<td>  269446.2 lps
+</td>
+<td>  267748
+</td>
+<td>  268823.9
+</td></tr>
+<tr>
+<td>  shell scripts (1)
+</td>
+<td>  82.2 lpm
+</td>
+<td>  77.6
+</td>
+<td>  58.6
+</td></tr>
+<tr>
+<td>  shell scripts (8)
+</td>
+<td>  5.3 lpm
+</td>
+<td>  5.6
+</td>
+<td>  5.4
+</td></tr>
+<tr>
+<td>  shell scripts (16)
+</td>
+<td>  2.0 lpm
+</td>
+<td>  0
+</td>
+<td>  2
+</td></tr></table>
 
-LIDS
-
-TOMOYO
-
-RSBAC
-
-[SELinux](http://eLinux.org/SELinux "SELinux")
-
-execl
-
-89.3 lps
-
-84.6
-
-59.5
-
-file read 1KB
-
-53974.0 KBps
-
-52176
-
-53505
-
-file write 1KB
-
-328.0 KBps
-
-321
-
-376
-
-file copy 1KB
-
-288.0 KBps
-
-199
-
-311
-
-file read 256B
-
-34766.0 KBps
-
-33831
-
-34742
-
-file write 256B
-
-133.0 KBps
-
-121
-
-138
-
-file copy 256B
-
-126.0 KBps
-
-121
-
-121
-
-file read 4KB
-
-69148.0 KBps
-
-67961
-
-68851
-
-file write 4KB
-
-1417.0 KBps
-
-1417
-
-1333
-
-file copy 4KB
-
-1268.0 KBps
-
-1237
-
-1249
-
-pipe
-
-112917.5 lps
-
-108924
-
-112137
-
-pipe switching
-
-2655.4 lps
-
-2559.6
-
-2700
-
-process creation
-
-272.9 lps
-
-367.8
-
-276.4
-
-system call
-
-269446.2 lps
-
-267748
-
-268823.9
-
-shell scripts (1)
-
-82.2 lpm
-
-77.6
-
-58.6
-
-shell scripts (8)
-
-5.3 lpm
-
-5.6
-
-5.4
-
-shell scripts (16)
-
-2.0 lpm
-
-0
-
-2
 
 ## Summary
 
@@ -548,7 +614,7 @@ shell scripts (16)
 <td align="left">LIDS</td>
 <td align="left">TOMOYO</td>
 <td align="left">RSBAC</td>
-<td align="left"><a href="http://elinux.org/SELinux" title="SELinux">SELinux</a></td>
+<td align="left"><a href="../../.././dev_portals/Security/SELinux/SELinux.md" title="SELinux">SELinux</a></td>
 <td align="left">App Armor</td>
 </tr>
 <tr class="even">

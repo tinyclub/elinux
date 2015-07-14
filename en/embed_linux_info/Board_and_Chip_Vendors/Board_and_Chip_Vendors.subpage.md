@@ -1,30 +1,11 @@
-# Board and Chip Vendors
-* Vendors
-* Companies
-## Contents
-## A
-* A1x
-* ARM_RealView
-* ARM_Integrator_Info
-* Atmel
-## B
-## C
-## D
-## E
-## F
-## G
-## H
-## I
-## K
-## M
-* Marvell_88W8618
-* Freecom_MusicPal
-## N
-* Tegra
-* Tegra/Boards/NVIDIA_Jetson_TK1
-## Q
-## R
-## S
-* Sunplus_SPMP3050A
-## T
-## V
+A1x
+ARM_Integrator_Info
+ARM_RealView
+Atmel
+Companies
+Freecom_MusicPal
+Marvell_88W8618
+Sunplus_SPMP3050A
+Tegra
+Tegra/Boards/NVIDIA_Jetson_TK1
+Vendors

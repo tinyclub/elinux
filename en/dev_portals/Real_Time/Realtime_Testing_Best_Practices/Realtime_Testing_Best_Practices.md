@@ -72,10 +72,10 @@ Here is a list of programs that have been used for realtime testing:
 
 -   lpptest - included in the RT-preempt patch
     -   It consists of a
-    -   1. driver in the linux kernel, to toggle a bit on the parallel
+        1. driver in the linux kernel, to toggle a bit on the parallel
         port, and watch for a response toggle back
-    -   2. a user program to cause the measurement to happen
-    -   3. a driver to respond to this toggling
+        2. a user program to cause the measurement to happen
+        3. a driver to respond to this toggling
 -   with the RT-preempt patch applied, see:
     -   drivers/char/lpptest.c
     -   scripts/testlpp.c
@@ -341,89 +341,67 @@ Another note from Ingo - see
 
 ### Test Table
 
-Person
+<table border="1" cellspacing="0" cellpadding="5">
 
-Company
-
-Hardware
-
-Kernel
-
-test method
-
-Measurement method
-
-Results
-
-Sangbae Lee
-
-Samsung
-
-OSK - OMAP (ARM) 192 MHZ)
-
-2.4.20 and 2.6.10
-
-using two machine test
-
-ZI instrumentation - measure interrupt reponse latency
-
-2.4.20 - 30\~35us, 2.6.10 - 30\~35us max
-
-Sangbae Lee
-
-Samsung
-
-MIPS 264 MHZ
-
-2.6.10 ??
-
-??
-
-??
-
-??
-
-Katsuya Matsubara
-
-IGEL
-
-SH4
-
-2.6.??
-
-??
-
-??
-
-??
-
-YungJoon Jung
-
-ETRI
-
-Via Nehemiah (i386)
-
-2.6.12
-
-periodic interrupt
-
-rf-etri - measure scheduling latency minus interrupt latency
-
-30 us max scheduling latency with RT-preempt
-
-Tsutomu Owa
-
-Toshiba
-
-Cell (ppc64)
-
-2.6.12
-
-??
-
-??
-
-??
+<tr bgcolor="#80d0d0">
+<th>Person           </th>
+<th>Company</th>
+<th>Hardware                 </th>
+<th>Kernel           </th>
+<th>test method   </th>
+<th>Measurement method</th>
+<th>Results
+</th></tr>
+<tr>
+<td>Sangbae Lee      </td>
+<td>Samsung</td>
+<td>OSK - OMAP (ARM) 192 MHZ)</td>
+<td>2.4.20 and 2.6.10</td>
+<td>using two machine test</td>
+<td>ZI instrumentation - measure interrupt reponse latency</td>
+<td>2.4.20 - 30~35us, 2.6.10 - 30~35us max </td>
+<td>
+</td></tr>
+<tr>
+<td>Sangbae Lee      </td>
+<td>Samsung</td>
+<td>MIPS 264 MHZ             </td>
+<td>2.6.10&#160;??        </td>
+<td>??            </td>
+<td>??                </td>
+<td>??</td>
+<td>
+</td></tr>
+<tr>
+<td>Katsuya Matsubara</td>
+<td>IGEL   </td>
+<td>SH4                      </td>
+<td>2.6.??           </td>
+<td>??            </td>
+<td>??                </td>
+<td>??</td>
+<td>
+</td></tr>
+<tr>
+<td>YungJoon Jung    </td>
+<td>ETRI   </td>
+<td>Via Nehemiah (i386)      </td>
+<td>2.6.12           </td>
+<td>periodic interrupt</td>
+<td>rf-etri - measure scheduling latency minus interrupt latency </td>
+<td>30 us max scheduling latency with RT-preempt</td>
+<td>
+</td></tr>
+<tr>
+<td>Tsutomu Owa      </td>
+<td>Toshiba</td>
+<td>Cell (ppc64)             </td>
+<td>2.6.12           </td>
+<td>??            </td>
+<td>?? </td>
+<td>??</td>
+<td>
+</td></tr></table>
 
 ## Test presentations and documents
 

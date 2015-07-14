@@ -195,7 +195,7 @@ eLinux.org feature:
 -   [CE Workgroup](http://eLinux.org/CE_Workgroup "CE Workgroup") of the Linux Foundation
     (formerly the [CE Linux Forum](http://eLinux.org/CE_Linux_Forum "CE Linux Forum"))
     -   [Embedded Linux Conference
-        Presentations](http://eLinux.org/ELC_Presentations "ELC Presentations")
+        Presentations](../.././dev_portals/Events/ELC_Presentations/ELC_Presentations.md "ELC Presentations")
     -   [CE Workgroup page on the Linux Foundation
         site](http://www.linuxfoundation.org/collaborate/workgroups/celf)
     -   (deprecated: [old CELF home page](http://www.celinuxforum.org/))
@@ -283,7 +283,7 @@ provide quality assurance.
 
 Developers who contribute code to the Linux kernel agree to the
 [Developer Certificate Of
-Origin](http://eLinux.org/Developer_Certificate_Of_Origin "Developer Certificate Of Origin")
+Origin](../.././dev_portals/Legal_Issues/Developer_Certificate_Of_Origin/Developer_Certificate_Of_Origin.md "Developer Certificate Of Origin")
 by signing their code, with a "Signed Off By" line.
 
 

@@ -17,7 +17,7 @@
 
 ## Introduction
 
-The Flyswatter [JTAG](http://eLinux.org/JTAG "JTAG") board is a low cost
+The Flyswatter [JTAG](../../../.././dev_portals/Glossary/JTAG/JTAG.md "JTAG") board is a low cost
 [USB](http://eLinux.org/index.php?title=USB&action=edit&redlink=1 "USB (page does not exist)")
 based JTAG programmer for the Hammer
 [CPU](http://eLinux.org/index.php?title=CPU&action=edit&redlink=1 "CPU (page does not exist)")
@@ -274,9 +274,9 @@ available from
 
 Devices that have been tested:
 
--   [Hammer](http://eLinux.org/Hammer_Board "Hammer Board"): Supported by the software
+-   [Hammer](../../../.././dev_portals/Development_Platforms/Hammer_Board/Hammer_Board.md "Hammer Board"): Supported by the software
     kit/tools that come with the Hammer
--   NSLU2: requires a [JTAG](http://eLinux.org/JTAG "JTAG") connection to be added to the
+-   NSLU2: requires a [JTAG](../../../.././dev_portals/Glossary/JTAG/JTAG.md "JTAG") connection to be added to the
     [NSLU2](http://www.nslu2-linux.org/wiki/Info/PinoutOfJTAGPort) and
     nslu2.cfg, nslu2.ocd and Debug\_handler.bin files. You can use these
     [samples](http://eLinux.org/images/f/fc/Nslu2.tar.gz "Nslu2.tar.gz"), but may need to
@@ -311,10 +311,10 @@ faster than the original Flyswatter.
 They also have a [ARM20TI14 JTAG
 Adapter](http://www.tincantools.com/product.php?productid=16154&cat=251&page=1).
 This JTAG adapter board works with the
-[BeagleBoard](http://eLinux.org/BeagleBoard "BeagleBoard") and BeagleBoard-xM.
+[BeagleBoard](../../../../hardware_pages/BeagleBoard/BeagleBoard.md "BeagleBoard") and BeagleBoard-xM.
 
 The Flyswatter2 can be used with
-[OpenOCD](http://eLinux.org/BeagleBoardJTAG#Open_source_JTAG_software "BeagleBoardJTAG")
+[OpenOCD](../../../../hardware_pages/BeagleBoard/BeagleBoard.mdJTAG#Open_source_JTAG_software "BeagleBoardJTAG")
 (Beagle (OMAP3xx) support is complete).
 
 To use the Flyswatter2 under Ubuntu (and derivatives) without superuser

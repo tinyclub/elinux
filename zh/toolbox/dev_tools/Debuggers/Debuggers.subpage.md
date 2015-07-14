@@ -1,6 +1,5 @@
-# Debuggers
-* OpenOCD
-* GDB
-* Kgdb
-* KDB
-* Valgrind
+GDB
+KDB
+Kgdb
+OpenOCD
+Valgrind

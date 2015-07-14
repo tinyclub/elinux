@@ -1,12 +1,4 @@
-# Parallella
-## About
-### Motivation
-### Principles
-## Hardware
-* Parallella_Hardware
-## Software
-* Parallella_Software
-* Parallella_Hardware
-* Parallella_VerifiedPeripherals
-* Parallella_Software
-* Parallella_Guides
+Parallella_Guides
+Parallella_Hardware
+Parallella_Software
+Parallella_VerifiedPeripherals

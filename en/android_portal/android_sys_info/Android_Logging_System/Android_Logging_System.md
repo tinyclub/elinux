@@ -193,7 +193,7 @@ is on?)
     Android](http://blog.kmckk.com/archives/2936958.html) Presentation
     by Tetsuyuki Kobayashi, September, 2010 at CELF's [Japan Technical
     Jamboree
-    34](http://eLinux.org/Japan_Technical_Jamboree_34 "Japan Technical Jamboree 34")
+    34](../../.././dev_portals/Events/Japan_Technical_Jamboree_34/Japan_Technical_Jamboree_34.md "Japan Technical Jamboree 34")
 
 
 [Category](http://eLinux.org/Special:Categories "Special:Categories"):

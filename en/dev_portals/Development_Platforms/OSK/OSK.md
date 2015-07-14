@@ -231,9 +231,9 @@ OMAP Linux and/or OSK.
     H3](http://marc.info/?l=linux-omap&m=119634448730363&w=2) (sorry,
     not OSK, but H3 related ;) )
 -   [Suspend To Disk For
-    ARM](http://eLinux.org/Suspend_To_Disk_For_ARM "Suspend To Disk For ARM")
+    ARM](../../.././dev_portals/Boot_Time/Suspend_To_Disk_For_ARM/Suspend_To_Disk_For_ARM.md "Suspend To Disk For ARM")
 -   Execute kernel in place (XIP) from flash [Kernel
-    XIP](http://eLinux.org/Kernel_XIP "Kernel XIP")
+    XIP](../../.././dev_portals/Boot_Time/Kernel_XIP/Kernel_XIP.md "Kernel XIP")
 
 ## TODO list
 

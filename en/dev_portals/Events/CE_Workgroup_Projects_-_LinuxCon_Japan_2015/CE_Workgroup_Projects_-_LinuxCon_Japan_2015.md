@@ -52,7 +52,7 @@ these projects. Our booth is located just outside the keynote hall.
         and Android has about 2 million lines of code out-of-mainline
     -   The main web page for this project is: [CE Workgroup Device
         Mainlining
-        Project](http://eLinux.org/CE_Workgroup_Device_Mainlining_Project "CE Workgroup Device Mainlining Project")
+        Project](../../.././dev_portals/Kernel_Mainlining/CE_Workgroup_Device_Mainlining_Project/CE_Workgroup_Device_Mainlining_Project.md "CE Workgroup Device Mainlining Project")
     -   Key activities include:
         -   Promotion of best practices for corporate guidance (e.g. the
             white paper)

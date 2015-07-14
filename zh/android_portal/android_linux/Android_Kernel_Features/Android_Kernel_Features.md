@@ -206,7 +206,7 @@ David Sparks wrote the following:
     -   See [Android logger](http://eLinux.org/Android_logger "Android logger") for more
         information about the kernel code
     -   See [Android Logging
-        System](http://eLinux.org/Android_Logging_System "Android Logging System") for an
+        System](../../../android_portal/android_sys_info/Android_Logging_System/Android_Logging_System.md "Android Logging System") for an
         overview of the system it supports
 
 ### wakelocks
@@ -215,7 +215,7 @@ David Sparks wrote the following:
     -   Holds machine awake on a per-event basis until wakelock is
         released
     -   See [Android Power
-        Management](http://eLinux.org/Android_Power_Management "Android Power Management")
+        Management](../../../android_portal/android_sys_info/Android_Power_Management/Android_Power_Management.md "Android Power Management")
         for detailed information
 
 ### oom handling

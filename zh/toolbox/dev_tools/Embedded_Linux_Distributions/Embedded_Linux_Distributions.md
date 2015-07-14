@@ -113,9 +113,9 @@ ease this process.
 
 ## Configuration and Build systems
 
-See [Build Systems](http://eLinux.org/Build_Systems "Build Systems")
+See [Build Systems](../../../toolbox/dev_tools/Build_Systems/Build_Systems.md "Build Systems")
 
-See also [Toolchains](http://eLinux.org/Toolchains "Toolchains")
+See also [Toolchains](../../../toolbox/dev_tools/Toolchains/Toolchains.md "Toolchains")
 
 ## Obsolete things
 

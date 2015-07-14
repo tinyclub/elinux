@@ -3,12 +3,6 @@
 
 # Realtime Preemption
 
-
-
-Table Of Contents:
-
-
-
 ## Contents
 
 -   [1 Description](#description)
@@ -61,27 +55,23 @@ kernel.
 
 An overview of the technologies is as follows:
 
--   -   voluntary preempt = a set of voluntary preemption points for the
-        kernel, to improve normal scheduling latency (These changes
-        basically
-    -   BKL change to semaphore
-    -   latency tracer
+-   voluntary preempt = a set of voluntary preemption points for the
+    kernel, to improve normal scheduling latency (These changes
+    basically
+-   BKL change to semaphore
+-   latency tracer
 
 <!-- -->
-
-    *
-
+    
 #### Voluntary Preempt
 
 Overview:
 
--   -   if it's on at compile time, it can be turned off at runtime with
-        the command line: "voluntary-preemption=0" or
-        "voluntary-preemption=off"
-    -   Creates a new function might\_resched(), which is used by
-        might\_sleep().
-        -   -   -   might\_resched calls cond\_resched() if voluntary
-                    preemption is on.
+-   if it's on at compile time, it can be turned off at runtime with
+    the command line: "voluntary-preemption=0" or
+    "voluntary-preemption=off"
+-   Creates a new function might\_resched(), which is used by might\_sleep().
+    -   might\_resched calls cond\_resched() if voluntary preemption is on.
 
     -   Adds might\_sleep in several places.
 
@@ -97,13 +87,13 @@ For a brief description of the overall technology, see:
 Briefly, the technology makes spinlocks and rwlocks preemptible by
 default.
 
--   -   the patch auto-detects at compile-time the type of lock to use
-        for a spinlock (mutex or original raw\_spinlock)
-    -   it uses a feature of gcc to manage this (reducing patch size)
-    -   it uses native Linux semaphores for preemption
-    -   it convert rwlocks to rw-semaphores
-    -   apparently, about 90 locks are targetted for NON-conversion to
-        preemptibility (that is, they are preserved as RAW\_SPINLOCKS)
+-   the patch auto-detects at compile-time the type of lock to use
+    for a spinlock (mutex or original raw\_spinlock)
+-   it uses a feature of gcc to manage this (reducing patch size)
+-   it uses native Linux semaphores for preemption
+-   it convert rwlocks to rw-semaphores
+-   apparently, about 90 locks are targetted for NON-conversion to
+    preemptibility (that is, they are preserved as RAW\_SPINLOCKS)
 
 Ingo mentioned at one time that this was about 20% of the locks in his
 kernel configuration, implying that there were about 450 spinlocks
@@ -126,21 +116,19 @@ non-preemptible regions. When RT-PREEMPT is used,
 
 ### people working on/interested in this stuff
 
--   -   Ingo Molnar, [Red Hat](http://eLinux.org/Red_Hat "Red Hat"), voluntary
-        preemption, Ingo real-time preemption
-    -   Sven Dietrich, [Monta Vista](http://eLinux.org/Monta_Vista "Monta Vista"), MV
-        real-time preemption
-    -   Daniel Walker, [Monta Vista](http://eLinux.org/Monta_Vista "Monta Vista"),
-        priority inheritance??
-    -   John Cooper, [Time Sys](http://eLinux.org/Time_Sys "Time Sys"), ???
-    -   Tim Bird, Sony, port to 2.6.10-native, port to PPC
-    -   Scott Woods, [Time Sys](http://eLinux.org/Time_Sys "Time Sys"), IRQ threading??
+-   Ingo Molnar, [Red Hat](http://eLinux.org/Red_Hat "Red Hat"), voluntary
+    preemption, Ingo real-time preemption
+-   Sven Dietrich, [Monta Vista](http://eLinux.org/Monta_Vista "Monta Vista"), MV
+    real-time preemption
+-   Daniel Walker, [Monta Vista](http://eLinux.org/Monta_Vista "Monta Vista"),
+    priority inheritance??
+-   John Cooper, [Time Sys](http://eLinux.org/Time_Sys "Time Sys"), ???
+-   Tim Bird, Sony, port to 2.6.10-native, port to PPC
+-   Scott Woods, [Time Sys](http://eLinux.org/Time_Sys "Time Sys"), IRQ threading??
 
 ### people working on related stuff
 
--   -   Bill Huey, [Lynux
-        Works](http://eLinux.org/index.php?title=Lynux_Works&action=edit&redlink=1 "Lynux Works (page does not exist)")??,
-        mmlinux
+-   Bill Huey, [Lynux     Works](http://eLinux.org/index.php?title=Lynux_Works&action=edit&redlink=1 "Lynux Works (page does not exist)")??, mmlinux
 
 ### miscellaneous comments
 
@@ -185,13 +173,13 @@ agreement.)
 Ingo says (at:
 [http://groups-beta.google.com/group/linux.kernel/msg/cf036477d30ab736](http://groups-beta.google.com/group/linux.kernel/msg/cf036477d30ab736))
 
-    some of the harder stuff:
+some of the harder stuff:
 
-    - the handling of per-CPU data structures (get_cpu_var())
+- the handling of per-CPU data structures (get_cpu_var())
 
-    - RCU and softirq data structures
+- RCU and softirq data structures
 
-    - the handling of the IRQ flag
+- the handling of the IRQ flag
 
 
 
@@ -202,23 +190,23 @@ Ingo says (at:
 
 
 
-    Sven Dietrich <sdietr...@mvista.com> wrote:
+Sven Dietrich <sdietr...@mvista.com> wrote:
 
-    > IMO the number of raw_spinlocks should be lower, I said teens before.
+> IMO the number of raw_spinlocks should be lower, I said teens before.
 
-    > Theoretically, it should only need to be around hardware registers and
-    > some memory maps and cache code, plus interrupt controller and other
-    > SMP-contended hardware.
+> Theoretically, it should only need to be around hardware registers and
+some memory maps and cache code, plus interrupt controller and other
+SMP-contended hardware.
 
-    yeah, fully agreed. Right now the 90 locks i have means roughly 20% of
-    all locking still happens as raw spinlocks.
+> yeah, fully agreed. Right now the 90 locks i have means roughly 20% of
+all locking still happens as raw spinlocks.
 
-    But, there is a 'correctness' _minimum_ set of spinlocks that _must_ be
-    raw spinlocks - this i tried to map in the -T4 patch. The patch does run
-    on SMP systems for example. (it was developed as an SMP kernel - in fact
-    i never compiled it as UP :-|.) If code has per-CPU or preemption
-    assumptions then there is no choice but to make it a raw spinlock, until
-    those assumptions are fixed.
+> But, there is a 'correctness' _minimum_ set of spinlocks that _must_ be
+raw spinlocks - this i tried to map in the -T4 patch. The patch does run
+on SMP systems for example. (it was developed as an SMP kernel - in fact
+i never compiled it as UP :-|.) If code has per-CPU or preemption
+assumptions then there is no choice but to make it a raw spinlock, until
+those assumptions are fixed.
 
 
 
@@ -243,22 +231,22 @@ None that I'm aware of.
 
 The original announcement for voluntary-preemption:
 
--   -   [http://people.redhat.com/mingo/realtime-preempt/older/ANNOUNCE-voluntary](http://people.redhat.com/mingo/realtime-preempt/older/ANNOUNCE-voluntary)
+-   [http://people.redhat.com/mingo/realtime-preempt/older/ANNOUNCE-voluntary](http://people.redhat.com/mingo/realtime-preempt/older/ANNOUNCE-voluntary)
 
 Here's some stuff by Jonathon Corbet:
 
--   -   [http://lwn.net/Articles/106010/](http://lwn.net/Articles/106010/)
-    -   [http://lwn.net/Articles/107269/](http://lwn.net/Articles/107269/)
-    -   [http://lwn.net/Articles/108216/](http://lwn.net/Articles/108216/)
-    -   [http://lwn.net/Articles/129511/](http://lwn.net/Articles/129511/)
+-   [http://lwn.net/Articles/106010/](http://lwn.net/Articles/106010/)
+-   [http://lwn.net/Articles/107269/](http://lwn.net/Articles/107269/)
+-   [http://lwn.net/Articles/108216/](http://lwn.net/Articles/108216/)
+-   [http://lwn.net/Articles/129511/](http://lwn.net/Articles/129511/)
 
 There's a page of links about RT for audio at:
 
--   -   [http://www.affenbande.org/\~tapas/wiki/index.php?Low%20latency%20for%20audio%20work%20on%20linux%202.6.x](http://www.affenbande.org/~tapas/wiki/index.php?Low%20latency%20for%20audio%20work%20on%20linux%202.6.x)
+-   [http://www.affenbande.org/\~tapas/wiki/index.php?Low%20latency%20for%20audio%20work%20on%20linux%202.6.x](http://www.affenbande.org/~tapas/wiki/index.php?Low%20latency%20for%20audio%20work%20on%20linux%202.6.x)
 
 A brief introduction of RT patch (Sorry, in Japanese only):
 
--   -   [http://www.atmarkit.co.jp/fembedded/rtos03/rtos03a.html](http://www.atmarkit.co.jp/fembedded/rtos03/rtos03a.html)
+-   [http://www.atmarkit.co.jp/fembedded/rtos03/rtos03a.html](http://www.atmarkit.co.jp/fembedded/rtos03/rtos03a.html)
 
 -   Paper: "[Embedded GNU/Linux and Real-Time an executive
     summary](http://www.reliableembeddedsystems.com/pdfs/2010_03_04_rt_linux.pdf)",
@@ -281,9 +269,9 @@ A brief introduction of RT patch (Sorry, in Japanese only):
 
 ## How To Use
 
--   -   apply patch
-    -   choose desired preemption level
-    -   compile kernel
+-   apply patch
+-   choose desired preemption level
+-   compile kernel
 
 ### Configuration variables
 
@@ -411,9 +399,9 @@ variables:
 
 [put references to test plans, scripts, methods, etc. here]
 
--   -   use included trace feature, or
-    -   use included latency overrun reporting mechanism
-    -   [Preemption\_Instrumentation](http://eLinux.org/Preemption_Instrumentation "Preemption Instrumentation")
+-   use included trace feature, or
+-   use included latency overrun reporting mechanism
+-   [Preemption\_Instrumentation](http://eLinux.org/Preemption_Instrumentation "Preemption Instrumentation")
 
 ## Related projects
 
@@ -423,14 +411,14 @@ which had the following features:
 See
 [http://groups-beta.google.com/group/linux.kernel/msg/7eeef031d9ec1446](http://groups-beta.google.com/group/linux.kernel/msg/7eeef031d9ec1446)
 
-    These RT enhancements are an integration of features developed by
-    others and some new MontaVista components:
+These RT enhancements are an integration of features developed by
+others and some new MontaVista components:
 
-            - Voluntary Preemption by Ingo Molnar
-            - IRQ thread patches by Scott Wood and Ingo Molnar
-            - BKL mutex patch by Ingo Molnar (with MV extensions)
-            - PMutex from Germany's Universitaet der Bundeswehr, Munich
-            - MontaVista mutex abstraction layer replacing spinlocks with mutexes
+- Voluntary Preemption by Ingo Molnar
+- IRQ thread patches by Scott Wood and Ingo Molnar
+- BKL mutex patch by Ingo Molnar (with MV extensions)
+- PMutex from Germany's Universitaet der Bundeswehr, Munich
+- MontaVista mutex abstraction layer replacing spinlocks with mutexes
 
 ## Sample Results
 
@@ -438,11 +426,11 @@ See
 
 ### Case Study 1
 
--   -   Linux RT Benchmarking Framework
-        -   [http://www.opersys.com/lrtbf/](http://www.opersys.com/lrtbf/)
-    -   Summary of dicussion in LKLM (sorry in Japanese)
-        -   [http://japan.linux.com/kernel/05/07/25/2334226.shtml?topic=1](http://japan.linux.com/kernel/05/07/25/2334226.shtml?topic=1)
-        -   [http://japan.linux.com/kernel/05/08/29/0817208.shtml?topic=1](http://japan.linux.com/kernel/05/08/29/0817208.shtml?topic=1)
+-   Linux RT Benchmarking Framework
+    -   [http://www.opersys.com/lrtbf/](http://www.opersys.com/lrtbf/)
+-   Summary of dicussion in LKLM (sorry in Japanese)
+    -   [http://japan.linux.com/kernel/05/07/25/2334226.shtml?topic=1](http://japan.linux.com/kernel/05/07/25/2334226.shtml?topic=1)
+    -   [http://japan.linux.com/kernel/05/08/29/0817208.shtml?topic=1](http://japan.linux.com/kernel/05/08/29/0817208.shtml?topic=1)
 
 ### Case Study 2
 
@@ -460,17 +448,13 @@ See
 -   [Rt\_Preempt\_Subpatch\_Table](http://eLinux.org/Rt_Preempt_Subpatch_Table "Rt Preempt Subpatch Table")
 -   Status: [not started??]
 
-<!-- -->
-
      (one of: not started, researched, implemented, measured, documented, accepted)
 
 -   Architecture Support:
 
-<!-- -->
-
       (for each arch, one of: unknown, patches apply, compiles, runs, works, accepted)
 
--   -   i386: unknown
+    -   i386: unknown
     -   ARM: unknown
     -   PPC: unknown
     -   MIPS: unknown
@@ -480,11 +464,11 @@ See
 
 Here is a list of things that could be worked on for this feature:
 
-    - help with mainlining???
-      - perform testing on multiple platforms
-      - provide use cases for justification
-      - what else?
-    - break patch into manageable pieces - doesn't Ingo use any kind of patch management system???
+- help with mainlining???
+- perform testing on multiple platforms
+- provide use cases for justification
+- what else?
+- break patch into manageable pieces - doesn't Ingo use any kind of patch management system???
 
 
 

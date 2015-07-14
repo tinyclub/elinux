@@ -21,7 +21,7 @@ Table Of Contents:
 
 The conference is over, but you can see most of the (excellent)
 presentations at: [Tech Conference
-2005Docs](http://eLinux.org/Tech_Conference_2005Docs "Tech Conference 2005Docs")
+2005Docs](../../.././dev_portals/Security/Tech_Conference_2005Docs/Tech_Conference_2005Docs.md "Tech Conference 2005Docs")
 
 ## Introduction
 
@@ -168,7 +168,7 @@ Technical sessions are as follows (in no particular order):
 </tr>
 <tr class="odd">
 <td align="left">Matsubara-san &amp; Hagiwara-san &amp; Hisao Munakata, Renesas</td>
-<td align="left">Graphics <a href="http://elinux.org/APIs" title="APIs">APIs</a> for Linux (including <a href="http://elinux.org/DirectFB" title="DirectFB">DirectFB</a> and 3D)</td>
+<td align="left">Graphics <a href="http://elinux.org/APIs" title="APIs">APIs</a> for Linux (including <a href="../../.././dev_portals/Multimedia/DirectFB/DirectFB.md" title="DirectFB">DirectFB</a> and 3D)</td>
 <td align="left">26-10:00-C</td>
 </tr>
 <tr class="even">
@@ -183,7 +183,7 @@ Technical sessions are as follows (in no particular order):
 </tr>
 <tr class="even">
 <td align="left">Dennis Oliver Kropp</td>
-<td align="left"><a href="http://elinux.org/DirectFB" title="DirectFB">DirectFB</a></td>
+<td align="left"><a href="../../.././dev_portals/Multimedia/DirectFB/DirectFB.md" title="DirectFB">DirectFB</a></td>
 <td align="left">25- 3:00-C</td>
 </tr>
 <tr class="odd">
@@ -248,7 +248,7 @@ Linux on Arm Cores - Philippe Robin, ARM
 
 Umbrella Security Framework - Emmanuel Fleury
 
-[DirectFB](http://eLinux.org/DirectFB "DirectFB") - Dennis Oliver Kropp
+[DirectFB](../../.././dev_portals/Multimedia/DirectFB/DirectFB.md "DirectFB") - Dennis Oliver Kropp
 
 4:00 - 4:50 pm
 

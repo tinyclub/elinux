@@ -19,6 +19,7 @@ diff_depth=$((cur_depth-root_depth))
 rel_path="$(eval printf '../%.0s' {1..$diff_depth})"
 
 site=http://eLinux.org
+lowcase_site=http://elinux.org
 
 page=$1
 [ -z "$page" ] && page=`basename $PWD`
@@ -85,11 +86,14 @@ sed -i -e "${line_num}r toc.md" ${BOOK_SUMMARY}
 for subpage in `cat ${subpage_list_md} | grep -v ^# | tr -d '*' | tr -d ' ' | sort -u | uniq`
 do
 	# Check if the subpage already exist
-	tmp="$(grep -m1 /${subpage}.md ${BOOK_SUMMARY})"
+	base=$(basename $subpage)
+	tmp="$(grep -m1 /${base}.md ${BOOK_SUMMARY})"
 	if [ $? -eq 0 ]; then
 		subpage_url=$(echo "$tmp" | sed -e "s/.*(\(.*\))/\1/g")
 		echo $subpage_url
 		sed -i -e "s=${site}/${subpage}=${rel_path}${subpage_url}=g" ${page}.md
+		sed -i -e "s=${lowcase_site}/${subpage}=${rel_path}${subpage_url}=g" ${page}.md
+
 	else
 		echo $subpage
 		# echo ${M2M} $subpage

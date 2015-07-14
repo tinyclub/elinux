@@ -1,12 +1,6 @@
-# JTAG
-* BSDL
-## Contents
-### Information
-### Tutorial
-### Hardware (emulators)
-* Holly_Gates
-* Cheap_Tag
-* Flyswatter
-### Tools
-* JTAG_Finder
-* UsingJtagTools
+BSDL
+Cheap_Tag
+Flyswatter
+Holly_Gates
+JTAG_Finder
+UsingJtagTools

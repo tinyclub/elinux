@@ -70,7 +70,7 @@ values to relative values (so you can see the interval between events).
 This tools is called show\_delta and is located in the kernel 'scripts'
 directory.
 
-See [Printk Times](http://eLinux.org/Printk_Times "Printk Times") for more information.
+See [Printk Times](../../.././dev_portals/Boot_Time/Printk_Times/Printk_Times.md "Printk Times") for more information.
 
 ### Viewing log messages
 
@@ -96,7 +96,7 @@ kernel log level at boot time via a kernel command line option. See the
 [`Documentation/kernel-parameters.txt`](https://www.kernel.org/doc/Documentation/kernel-parameters.txt).
 
 You can turn off all messages using the kernel command line option
-"quiet". See [Disable Console](http://eLinux.org/Disable_Console "Disable Console") for
+"quiet". See [Disable Console](../../.././dev_portals/Boot_Time/Disable_Console/Disable_Console.md "Disable Console") for
 information on how much time this can save at boot up.
 
 Note that even if the log level is changed, or "quiet" is used, although
@@ -120,9 +120,9 @@ debugging](http://eLinux.org/Addr2line_for_kernel_debugging "Addr2line for kerne
 
 ## Using a kernel debugger
 
-You can use the in-kernel debugger: [KDB](http://eLinux.org/KDB "KDB")
+You can use the in-kernel debugger: [KDB](../../../dbg_portal/kernel_dbg/KDB/KDB.md "KDB")
 
-You can use the in-kernel remote debugger: [Kgdb](http://eLinux.org/Kgdb "Kgdb")
+You can use the in-kernel remote debugger: [Kgdb](../../../dbg_portal/kernel_dbg/Kgdb/Kgdb.md "Kgdb")
 
 Also, you can use QEMU and gdb (and a high-level IDE like eclipse).
 

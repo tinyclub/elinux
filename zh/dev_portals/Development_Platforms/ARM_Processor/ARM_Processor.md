@@ -21,7 +21,7 @@ desktop routers). Important branches in this family include:
 
 -   [Marvell](http://eLinux.org/index.php?title=Marvell&action=edit&redlink=1 "Marvell (page does not exist)")'s
     [XScale](http://eLinux.org/XScale "XScale")
--   [Texas Instruments](http://eLinux.org/Texas_Instruments "Texas Instruments")
+-   [Texas Instruments](../../.././dev_portals/Power_Management/Texas_Instruments/Texas_Instruments.md "Texas Instruments")
     [OMAP](http://eLinux.org/OMAP "OMAP") series
 -   [Samsung](http://eLinux.org/index.php?title=Samsung&action=edit&redlink=1 "Samsung (page does not exist)")'s
     [S3C24xx](http://eLinux.org/S3C24xx "S3C24xx") series

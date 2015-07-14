@@ -171,7 +171,7 @@ to avoid running certain initcalls at bootup time. This can save time
 during the critical, early portion of bootup. Later, deferred initcalls
 can be run by triggering them from user space.
 
-See [Deferred Initcalls](http://eLinux.org/Deferred_Initcalls "Deferred Initcalls").
+See [Deferred Initcalls](../../.././dev_portals/Boot_Time/Deferred_Initcalls/Deferred_Initcalls.md "Deferred Initcalls").
 
 
 [Categories](http://eLinux.org/Special:Categories "Special:Categories"):

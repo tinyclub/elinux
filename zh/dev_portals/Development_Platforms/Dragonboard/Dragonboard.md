@@ -11,70 +11,57 @@ three different systems-on-chip. The boards come pre-loaded with
 Android, but thanks to recent upstreaming work, it is increasingly
 possible to run the upstream Linux kernel on them.
 
-Board
-
-SOC
-
-CPU
-
-Pre-Installed OS
-
-Upstream Device Tree
-
-[APQ8094](http://eLinux.org/index.php?title=Dragonboard/APQ8094&action=edit&redlink=1 "Dragonboard/APQ8094 (page does not exist)")
-
-[Snapdragon 810
-(Cortex-A53/A57)](http://eLinux.org/index.php?title=Snapdragon_810_(Cortex-A53/A57)&action=edit&redlink=1 "Snapdragon 810 (Cortex-A53/A57) (page does not exist)")
-
-Octo-Core Cortex-A53/A57 big.LITTLE
-
-Android 5.0
-
-[APQ8074](http://eLinux.org/Dragonboard/APQ8074 "Dragonboard/APQ8074")
-
-[Snapdragon 800
-(Krait)](http://eLinux.org/index.php?title=Snapdragon_800_(Krait)&action=edit&redlink=1 "Snapdragon 800 (Krait) (page does not exist)")
-
-Quad-core Krait, 2.3 GHz
-
-Android 4.2
-
-qcom-apq8074-dragonboard.dtb
-
-[IFC6410](http://eLinux.org/Dragonboard/IFC6410 "Dragonboard/IFC6410")
-
-[Snapdragon 600
-(Krait)](http://eLinux.org/Snapdragon_600_(Krait) "Snapdragon 600 (Krait)")
-
-Quad-core Krait, 1.7 GHz
-
-qcom-apq8064-ifc6410.dtb
-
-[SYS6440](http://eLinux.org/index.php?title=Dragonboard/SYS6440&action=edit&redlink=1 "Dragonboard/SYS6440 (page does not exist)")
-
-[Snapdragon 600
-(Krait)](http://eLinux.org/Snapdragon_600_(Krait) "Snapdragon 600 (Krait)")
-
-Quad-core Krait, 1.7 GHz
-
-[APQ8060A](http://eLinux.org/Dragonboard/APQ8060A "Dragonboard/APQ8060A")
-
-[Snapdragon S4 (Krait)](http://eLinux.org/Snapdragon_S4_(Krait) "Snapdragon S4 (Krait)")
-
-Dual-core Krait, 1.5 GHz
-
-qcom-msm8660-surf.dtb
-
-[APQ8060](http://eLinux.org/Dragonboard/APQ8060 "Dragonboard/APQ8060")
-
-[Snapdragon S3
-(Scorpion)](http://eLinux.org/Snapdragon_S3_(Scorpion) "Snapdragon S3 (Scorpion)")
-
-Scorpion
-
-Android 2.3
-
-qcom-msm8660-surf.dtb
+<table border="1">
+<tr>
+<th> Board </th>
+<th> SOC </th>
+<th> CPU </th>
+<th> Pre-Installed OS </th>
+<th> Upstream Device Tree
+</th></tr>
+<tr>
+<td> <a href="http://eLinux.org/index.php?title=Dragonboard/APQ8094&amp;action=edit&amp;redlink=1" class="new" title="Dragonboard/APQ8094 (page does not exist)">APQ8094</a> </td>
+<td> <a href="http://eLinux.org/index.php?title=Snapdragon_810_(Cortex-A53/A57)&amp;action=edit&amp;redlink=1" class="new" title="Snapdragon 810 (Cortex-A53/A57) (page does not exist)">Snapdragon 810 (Cortex-A53/A57) </a> </td>
+<td> Octo-Core Cortex-A53/A57 big.LITTLE </td>
+<td> Android 5.0 </td>
+<td> </td>
+<td>
+</td></tr>
+<tr>
+<td> <a href="http://eLinux.org/Dragonboard/APQ8074" title="Dragonboard/APQ8074">APQ8074</a> </td>
+<td> <a href="http://eLinux.org/index.php?title=Snapdragon_800_(Krait)&amp;action=edit&amp;redlink=1" class="new" title="Snapdragon 800 (Krait) (page does not exist)">Snapdragon 800 (Krait)</a> </td>
+<td> Quad-core Krait, 2.3 GHz </td>
+<td> Android 4.2 </td>
+<td> qcom-apq8074-dragonboard.dtb
+</td></tr>
+<tr>
+<td> <a href="http://eLinux.org/Dragonboard/IFC6410" title="Dragonboard/IFC6410">IFC6410</a> </td>
+<td> <a href="http://eLinux.org/Snapdragon_600_(Krait)" title="Snapdragon 600 (Krait)">Snapdragon 600 (Krait)</a> </td>
+<td> Quad-core Krait, 1.7 GHz </td>
+<td> </td>
+<td> qcom-apq8064-ifc6410.dtb
+</td></tr>
+<tr>
+<td> <a href="http://eLinux.org/index.php?title=Dragonboard/SYS6440&amp;action=edit&amp;redlink=1" class="new" title="Dragonboard/SYS6440 (page does not exist)">SYS6440</a> </td>
+<td> <a href="http://eLinux.org/Snapdragon_600_(Krait)" title="Snapdragon 600 (Krait)">Snapdragon 600 (Krait)</a> </td>
+<td> Quad-core Krait, 1.7 GHz </td>
+<td> </td>
+<td>
+</td></tr>
+<tr>
+<td> <a href="http://eLinux.org/Dragonboard/APQ8060A" title="Dragonboard/APQ8060A">APQ8060A</a> </td>
+<td> <a href="http://eLinux.org/Snapdragon_S4_(Krait)" title="Snapdragon S4 (Krait)">Snapdragon S4 (Krait)</a> </td>
+<td> Dual-core Krait, 1.5 GHz </td>
+<td>  </td>
+<td> qcom-msm8660-surf.dtb
+</td></tr>
+<tr>
+<td> <a href="http://eLinux.org/Dragonboard/APQ8060" title="Dragonboard/APQ8060">APQ8060</a> </td>
+<td> <a href="http://eLinux.org/Snapdragon_S3_(Scorpion)" title="Snapdragon S3 (Scorpion)">Snapdragon S3 (Scorpion)</a> </td>
+<td> Scorpion </td>
+<td> Android 2.3 </td>
+<td> qcom-msm8660-surf.dtb
+</td></tr></table>
 
 ## References
 

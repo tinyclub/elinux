@@ -7,7 +7,7 @@
 
 This is the specification of [bootup time](http://eLinux.org/Bootup_time "Bootup time")
 technologies and features, of the [Bootup Time Working
-Group](http://eLinux.org/Bootup_Time_Working_Group "Bootup Time Working Group") of the CE
+Group](../../.././dev_portals/Boot_Time/Bootup_Time_Working_Group/Bootup_Time_Working_Group.md "Bootup Time Working Group") of the CE
 Linux Forum.
 
 

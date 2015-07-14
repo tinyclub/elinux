@@ -343,62 +343,71 @@ information about how we want to populate this page.
 
 **Internet tablet using Embedded Linux**
 
-Product Name
-
-Company Name
-
-Year
-Introduced
-
-RAM
-MB
-
-Flash
-MB
-
-Processor
-
-Source or Notes
-
-Download Area
-
-Proprietary Drivers
-
-Proprietary Software
-
-[N800](http://eLinux.org/N800 "N800")
-
-Nokia
-
- ?
-
-128MB
-
-256MB
-
-OMAP2420@400 MHz
-
-yes(wifi(free wifi driver available but still need a calibration
-binary).dsp,sound )
-
-can be remplcad by [mamona](http://dev.openbossa.org/trac/mamona/wiki)
-but no wifi and sound
-
-[WeTab](http://tabletsetc.com/tablets/4tiitoo-wetab/specs/)
-
-Neofonie/Pegatron
-
-2010
-
-1 GB
-
-16 GB
-
-1.66GHz Intel Atom N450
-
-Running MeeGo
-
-[http://wetab.mobi/en/developers/downloads-and-howtos/](http://wetab.mobi/en/developers/downloads-and-howtos/)
+<table border="1" cellspacing="0" cellpadding="5">
+<caption><b>Internet tablet using Embedded Linux</b>
+</caption>
+<tr style="background:#CCCCCC">
+<th style="width:100px"> Product Name
+</th>
+<th> Company Name
+</th>
+<th> Year<br />Introduced
+</th>
+<th> RAM<br />MB
+</th>
+<th> Flash<br />MB
+</th>
+<th> Processor
+</th>
+<th style="width:150px"> Source or Notes
+</th>
+<th style="width:150px"> Download Area
+</th>
+<th> Proprietary Drivers
+</th>
+<th style="width:300px"> Proprietary Software
+</th></tr>
+<tr align="center">
+<td> <a href="/N800" title="N800">N800</a>
+</td>
+<td> Nokia
+</td>
+<td>&#160;?
+</td>
+<td> 128MB
+</td>
+<td> 256MB
+</td>
+<td> OMAP2420@400 MHz
+</td>
+<td>
+</td>
+<td> yes(wifi(free wifi driver available but still need a calibration binary).dsp,sound )
+</td>
+<td> can be remplcad by <a rel="nofollow" class="external text" href="http://dev.openbossa.org/trac/mamona/wiki">mamona</a> but no wifi and sound
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://tabletsetc.com/tablets/4tiitoo-wetab/specs/">WeTab</a>
+</td>
+<td> Neofonie/Pegatron
+</td>
+<td> 2010
+</td>
+<td> 1 GB
+</td>
+<td> 16 GB
+</td>
+<td> 1.66GHz Intel Atom N450
+</td>
+<td> Running MeeGo
+</td>
+<td> <a rel="nofollow" class="external free" href="http://wetab.mobi/en/developers/downloads-and-howtos/">http://wetab.mobi/en/developers/downloads-and-howtos/</a>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+</table>
 
 ## Settop Boxes
 
@@ -448,42 +457,43 @@ Running MeeGo
 
 **Digital Video Recorders using Embedded Linux**
 
-Product Name
 
-Company Name
-
-Year
-Introduced
-
-RAM
-MB
-
-Flash
-MB
-
-Processor
-
-Source or Notes
-
-Download Area
-
-X
-
-X
-
-X
-
-X
-
-X
-
-X
-
-X
-
-
-
-
+<table border="1" cellspacing="0" cellpadding="5">
+<caption><b>Digital Video Recorders using Embedded Linux</b>
+</caption>
+<tr style="background:#CCCCCC">
+<th style="width:100px"> Product Name
+</th>
+<th> Company Name
+</th>
+<th> Year<br />Introduced
+</th>
+<th> RAM<br />MB
+</th>
+<th> Flash<br />MB
+</th>
+<th> Processor
+</th>
+<th style="width:150px"> Source or Notes
+</th>
+<th style="width:250px"> Download Area
+</th></tr>
+<tr align="center">
+<td> X
+</td>
+<td> X
+</td>
+<td> X
+</td>
+<td> X
+</td>
+<td> X
+</td>
+<td> X
+</td>
+<td> X
+</td></tr>
+</table>
 
 ## Game Consoles
 
@@ -1059,612 +1069,711 @@ X
 
 **Development boards**
 
-Product Name
-
-Company Name
-
-Year
-Introduced
-
-RAM
-MB
-
-Flash
-MB
-
-Processor
-
-Connectivity
-
-Notes
-
-Proprietary Drivers
-
-Source
-
-Download Area
-
-[Beagle Board](http://beagleboard.org/)
-
-Texas Instruments
-
-2008
-
-256M
-
-256M
-
-OMAP3530
-
-lot of informations in the [BeagleBoard wiki
-page](http://eLinux.org/BeagleBoard "BeagleBoard"),
-
-[open hardware](http://en.wikipedia.org/wiki/Open_hardware)(schematics
-freely available)
-
-The powervr(3d chip) require a proprietary 3d driver for the 3d part
-
-[BeagleBone](http://beagleboard.org/bone)
-
-Texas Instruments
-
-2011
-
-256MB
-
-none (MicroSD)
-
-AM3358
-
-Ethernet 10/100
-
-[BeagleBone wiki page](http://eLinux.org/BeagleBone "BeagleBone"), [BeagleBoard wiki
-page](http://eLinux.org/BeagleBoard "BeagleBoard"),
-
-[open hardware](http://en.wikipedia.org/wiki/Open_hardware)(schematics
-freely available)
-
-The powervr(3d chip) require a proprietary 3d driver for the 3d part
-
-[Pandaboard](http://pandaboard.org/)
-
-Texas Instruments
-
-2010
-
-8Gb(x32) x 2ch
-
-(2G(x32) x4pcs) 2CS/ch
-
-OMAP4430
-
-WLAN, Bluetooth, 10/100 Ethernet
-
-[Pandaboard wiki page](http://eLinux.org/PandaBoard "PandaBoard"),
-
-[Snowball SDK &
-PDK](http://www.calao-systems.com/articles.php?lng=fr&pg=6186)
-
-[CALAO Systems](http://www.calao-systems.com/)
-
-2011
-
-1GB
-
-4GB / 8GB
-
-ST-Ericsson A9500 Dual Cortex A9 + Mali 400
-
-WiFi, BlueTooth, GPS, HDMI, CVBS, Ethernet 10/100, Audio In / Out,
-Micro-SD, Serial Port (Linux console), JTAG, MiPi34, 3D Accelerometer,
-Magnetometer & Gyrometer, Pressure sensor, 3x expansion connectors
-
-Expansion Board(s) : MOB-SKY-S9500-AVI-CXX (2x USB OTG HS, LVDS 24Bits,
-TSC, LED Driver, MiPi DSI, MiPi CSI...), DAB-SKY-S9500-GPI-CXX (CANBus,
-Modem 2G/3G, 4x Uart, 8x GPIO, 8x ADC)
-
-[Igloo Community](http://www.igloocommunity.org/)
-
-[Igloo Community](http://www.igloocommunity.org/)
-
-[CALAO Systems
-Repository](http://www.calao-systems.com/repository/EMBEDDED%20COMPUTERS/SKY-S9500-ULP-XXX/)
-
-[SKY-T3359-LPW-I01](http://www.calao-systems.com/articles.php?lng=en&pg=6264)
-
-[CALAO Systems](http://www.calao-systems.com/index.php?lng=en)
-
-2013
-
-512M
-
-512M
-
-AM3359(720Mhz)
-
-Micro-SD, USB Device HS, 2x USB Host HS, 2x Ethernet 10/100/1000, Mini
-PCI Express (USB only), ACC/MAG/GYR 3D, Humidity & Temperature sensor,
-Pressure Sensor, WiFi, BlueTooth, CANBus, Audio (Line In, Line Out,
-Headphones, Mic In), LCD / TS expansion port
-
-Motherboard(s) : N/A, No Expansion board(s)
-
-[repository](http://www.calao-systems.com/repository/)
-
-[repository](http://www.calao-systems.com/repository/)
-
-No
-
-[US\$ 25 Raspberry Pi Computer](http://www.raspberrypi.org/)
-
-Raspberry Pi Foundation
-
-2012
-
-256
-
-none (SD Card)
-
-Broadcom ARM11 (ARM v6) + Videocore GPU
-
-10/100 Ethernet, HDMI , Composite , Audio, USB Host, GPIO, JTAG , MIPI
-DSI + CSI
-
-[Phenomenal RPi Hub](http://eLinux.org/RPi_Hub "RPi Hub")
-
-[MPEG-2 and VC-1 Licences](http://www.raspberrypi.org/archives/1839)
-
-[OpenGL, OpenMax
-examples](https://github.com/raspberrypi/firmware/tree/master/opt/vc)
-
-[Schematics](http://www.raspberrypi.org/wp-content/uploads/2012/04/Raspberry-Pi-Schematics-R1.0.pdf)
-
-[CPU
-Datasheet](http://www.raspberrypi.org/wp-content/uploads/2012/02/BCM2835-ARM-Peripherals.pdf)
-
-[Card Images](http://www.raspberrypi.org/downloads)
-
-[Colibri Evaluation
-Board](http://developer.toradex.com/product-selector/colibri-evaluation-board)
-
-[Toradex](http://www.toradex.com/)
-
-2012
-
-up to 512MB
-
-up to 1GB
-
-Nvidia Tegra 2, Tegra 3, Marvell PXA270, 320, 310, 300
-
-10/100 Ethernet, HDMI , VGA, LCD, Audio, USB Host/ OTG, GPIO, JTAG ,
-Camera Interface, RS485, RS232, CAN, I2C, SPI, SDIO, Memory Bus, IrDA
-
-Compatible with all [Colibri
-Modules](http://www.toradex.com/products/colibri-arm-computer-modules)
-
-[Schematics](http://developer.toradex.com/hardware-resources/arm-family/carrier-board-design)
-
-[Datasheet](http://developer.toradex.com/product-selector/colibri-evaluation-board#Datasheets)
-
-[Linux
-Images](http://developer.toradex.com/software-resources/arm-family/linux/source-code/linux-(colibri-t20)-source-code)
-
-[Git](http://git.toradex.com/gitweb/)
-
-[NanosG20](http://www.ledato.de/)
-
-Ledato
-
-?
-
-64M/128M
-
-128M/512M
-
-[Carambola](http://www.8devices.com/product/3/carambola)
-
-[8devices](http://www.8devices.com)
-
-2013
-
-32 MB
-
-8 MB Flash
-
-MediaTek: Ralink RT3050 (320MHz MIPS24K)
-
-USB, WiFi, 2x Ethernet, SATA, RS232, SPI, I2C,
-
-Uses a chip with built-in 802.11 bgn and antenna. OpenWRT is recommended
-and used by default.
-
-[binary repository](http://pkg.8devices.com/)
-
-[source repository](https://github.com/8devices/)
-
-[wiki](http://www.8devices.com/wiki_carambola/doku.php/carambola)
-
-[Carambola 2](http://8devices.com/carambola-2)
-
-[8devices](http://www.8devices.com)
-
-2013
-
-64 MB DDR2
-
-16 MB Flash
-
-AR9331 400 MHz
-
-USB, WiFi, 2x Ethernet, SLIC, SPDIF, 23 x GPIO, I2C, U.FL antenna
-connector
-
-Uses a chip with built-in 802.11 bgn 2.4GHz, 21dB, 1x1 SISO. OpenWRT is
-recommended and used by default.
-
-[binary repository](http://pkg.8devices.com/)
-
-[source repository](https://github.com/8devices/),
-[schematics](http://8devices.com/media/files/8dev-0700_0002_sb_SCH.pdf)
-
-[wiki](http://www.8devices.com/wiki_carambola/doku.php/carambola)
-
-[Cubieboard](http://cubieboard.org/)
-
-[Cubietech](http://cubietech.com/)
-
-2012
-
-512MB/1024MB DDR3 @480Hz
-
-4Gb Nand Flash
-
-Cortex-A8 + Mali400
-
-2x USB, Ethernet, SATA, micro SD, HDMI, Audio line IN/OUT, IR, I2C, SPI,
-RGB/LVDS, CSI/TS, FM-IN, ADC, CVBS, VGA, SPDIF-OUT, R-TP, ...
-
-Info at [Linux-Sunxi wiki](http://linux-sunxi.org/Cubieboard)
-
-[source repository](https://github.com/linux-sunxi)
-
-[images, etc.](http://cubieboard.org/download/Schematics)
-
-[VAB-600
-Springboard](http://www.viaembedded.com/en/boards/pico-itx/vab-600/)
-
-VIA
-
-2013
-
-1Gb DDR3
-
-4Gb eMMC Flash
-
-800MHz Cortex-A9 + Mali-400
-
-10/100 Ethernet, HDMI, GPIO, I2C, SPI, LVDS/TTL, Optional: Audio, Wi-Fi
-
-Graphics
-
-[BSP images](http://www.viaembedded.com/en/boards/pico-itx/vab-600/)
-
-[VAB-800](http://www.viaembedded.com/en/boards/pico-itx/vab-800/)
-
-VIA
-
-1Gb DDR3
-
-4Gb eMMC Flash
-
-800MHz Freescale i.MX537 Cortex-A8 + AMD Z430
-
-10/100M, VGA, mini-HDMI, SATA, USB 2.0, USB device, CAN, I2C, GPIO,
-LVDS, JTAG, Audio
-
-[BSP images](http://www.viaembedded.com/en/boards/pico-itx/vab-800/)
-
-[VAB-820](http://www.viaembedded.com/en/boards/pico-itx/vab-820/)
-
-VIA
-
-1Gb DDR3
-
-4Gb eMMC Flash
-
-1GHz Freescale i.MX6Quad Cortex-A9 + Vivante GC2000
-
-USB 2.0 host, USB2.0 OTG, COM port (w/ 8-wire DTE mode), COM/CAN port,
-FlexCAN, LVDS, I2C, SPI, GPIO, Audio, miniPCIe
-
-Graphics
-
-[kernel](https://github.com/viaembedded/vab820-kernel-bsp),
-[u-boot](https://github.com/viaembedded/vab820-uboot-bsp)
-
-[BSP images](http://www.viaembedded.com/en/boards/pico-itx/vab-820/)
-
-[VAB-1000](http://www.viaembedded.com/en/boards/pico-itx/vab-1000/)
-
-VIA
-
-2Gb DDR3
-
-4Gb eMMC Flash
-
-1.0GHz VIA Elite E1000 Cortex-A9 dual-core + integrated graphics
-
-1000M, mini-HDMI, SATA, LVDS, USB 2.0, COM, I2C, SPI, GPIO, JTAG,
-miniPCIE, Optional: Wifi, Audio
-
-Graphics
-
-[kernel](https://github.com/viaembedded/vab1000-kernel-bsp),
-[u-boot](https://github.com/viaembedded/vab1000-uboot-bsp)
-
-[BSP images](http://www.viaembedded.com/en/boards/pico-itx/vab-1000/)
-
-[APC 8750](http://apc.io/products/8750a/)
-
-VIA
-
-2012
-
-512Mb DDR3
-
-2Gb NAND Flash
-
-800Mhz ARMv6 processor
-
-10/100 Ethernet, HDMI, VGA, USB 2.0 (x4), Audio out / Mic in, microSD
-
-[Software library](http://apc.io/library/)
-
-[APC Rock](http://apc.io/products/rock/)
-
-VIA
-
-2012
-
-512Mb DDR3
-
-4Gb NAND Flash
-
-800Mhz Cortex-A9 + Mali-400
-
-10/100 Ethernet, HDMI, VGA, USB 2.0 (x4), microUSB (OTG), GPIO, SPI,
-I2C, Audio out / Mic in, microSD
-
-[Software library](http://apc.io/library/)
-
-[Ethernut 5](http://www.ethernut.de/en/hardware/enut5/index.html)
-
-[egnite GmbH](http://www.egnite.de)
-
-2011
-
-128 MB
-
-1GB NAND Flash
-
-AT91SAM9XE
-
-USB 2.0, 10/100 Base-T Ethernet, 2xSPI, 2xI²C, 1xI²S, image Sensor
-interface, 15 GPIOs, 2xAD converter
-
-[open hardware](http://en.wikipedia.org/wiki/Open_hardware), Supply:
-PoE, Mini-USB or adapter, SD card socket, industrial temperature range
-(-25°C-85°C), expansion boards (open interface)
-
-[Schematics, Hardware
-manual](http://www.ethernut.de/en/hardware/enut5/enut50f.html), [Yocto
-project support](http://www.ethernut.de/en/hardware/enut5/yocto.html),
-[Nut/OS](http://www.ethernut.de/en/firmware/nutos.html)
-
-[US\$99 Z-turn Board](http://www.myirtech.com/list.asp?id=502)
-
-[MYIR](http://www.myirtech.com)
-
-2015
-
-1GB DDR3
-
-16M QSPI Flash
-
-Xilinx Zynq-7010/20
-
-USB\_UART, USB2.0 OTG, 1 x 10/100/1000Mbps Ethernet, CAN, HDMI, TF,
-G-sensor, Temperature Sensor
-
-[Z-turn Board](http://www.elinux.org/Z-turn_Board)
-
-[US\$99 Rico Board](http://www.myirtech.com/list.asp?id=510)
-
-[MYIR](http://www.myirtech.com)
-
-2015
-
-512MB DDR3
-
-4MB eMMC Flash, 16M QSPI Flash
-
-TI AM437x
-
-UARTs, USB Host/Device, Gigabit Ethernet, Dual-Camera, TF, HDMI, LCD
-
-
-
-
-
-**Development boards**
-
-Product Name
-
-Company Name
-
-Processor
-
-RAM
-MB
-
-Flash
-MB
-
-Video Display
-
-Interfaces
-
-OS support
-
-Notes
-
-[DevKit8000](http://www.armkits.com/Product/devkit8000.asp/)
-
-[Embest](http://www.armkits.com)
-
-TI OMAP3530
-
-256MB DDR
-
-512MB Nand Flash
-
-LCD, VGA, DVI-D and S-Video
-
-UART, USB Host, USB OTG, Ethernet, Audio, SD, Keyboard, JTAG
-
-Linux2.6.28, WinCE6.0
-
-[Devkit8000](http://eLinux.org/Devkit8000 "Devkit8000") wiki page
-
-[DevKit8500D/A](http://www.armkits.com/Product/devkit8500d.asp/)
-
-[Embest](http://www.armkits.com)
-
-TI DM3730/AM3715
-
-512MB DDR
-
-512MB Nand Flash
-
-LCD, VGA, DVI-D and S-Video
-
-UART, USB Host, USB OTG, Ethernet, Audio, SD, Keyboard, JTAG
-
-Linux2.6.28, WinCE6.0, Android2.2
-
-[DevKit8600](http://www.armkits.com/product/devkit8600.asp/)
-
-[Embest](http://www.armkits.com)
-
-TI AM3359
-
-512MB DDR3
-
-512MB Nand Flash
-
-LCD, VGA
-
-UART, USB Host, USB OTG, Ethernet, CAN, RS485, WiFi/BT, Audio, TF, JTAG
-
-Linux3.1.0, Android2.3, WinCE7
-
-[SABRE Lite](http://www.armkits.com/product/sabrelite.asp)
-
-[Embest](http://www.armkits.com)
-
-Freescale i.MX 6Quad
-
-1GB DDR3
-
-2MB SPI Flash
-
-RGB, LVDS and HDMI
-
-UART, USB, Ethernet, CAN, SATA, SD, JTAG, I2C, Audio
-
-Linux3.0.15, Android4.0.4
-
-[NGW100](http://www.atmel.com/dyn/products/tools_card.asp?tool_id=4102)
-
-[Atmel](http://www.atmel.com)
-
-Atmel AVR32: AT32AP7000
-
-32M
-
-8M serial + 8M parallel
-
-"LCD Controller"
-
-UARTs, USB slave, 2x 100MBit Ethernet, I2C, SPI, JTAG, AC97
-
-Linux 2.6 [http://www.avr32linux.org](http://www.avr32linux.org)
-
-[MYD-AM335X](http://www.myirtech.com/list.asp?id=466)
-
-[MYIR](http://www.myirtech.com)
-
-TI AM3359
-
-512MB DDR3
-
-512MB Nand Flash
-
-LCD, HDMI
-
-UART, 4 x USB Host, USB OTG, 2 x Ethernet, CAN, RS485, Audio, TF
-
-Linux3.2.0, Android4.2.2, WinCE7
-
-[MYD-SAMA5D3X](http://www.myirtech.com/list.asp?id=432)
-
-[MYIR](http://www.myirtech.com)
-
-Atmel SAMA5D3
-
-512MB DDR2
-
-256MB Nand Flash
-
-LCD, HDMI
-
-UART, USB Host, USB OTG, Ethernet, CAN, RS485, Audio, SD
-
-Linux3.6.9, Android4.0.4
-
-[MYD-IMX28X](http://www.myirtech.com/list.asp?id=472)
-
-[MYIR](http://www.myirtech.com)
-
-Freescale i.MX28
-
-128MB DDR2
-
-256MB Nand Flash, 128KB SPI Flash
-
-LCD
-
-UART, USB Host, USB OTG, 2 x Ethernet, 2 x CAN, RS485, Audio, SD
-
-Linux2.6.35
-
-[Virturilka](http://virt2real.com/content/kontroller-virt2real-virturilka)
-
-[Virt2Real](http://virt2real.com)
-
-TI DM365
-
-128MB DDR2
-
-256MB Nand Flash
-
-Parallel camera interface, Analog component video output
-
-GPIO, PWM, I2C, SPI, UART, DAC/ADC, USB, microSD, 10/100Mb RJ45 Ethernet
-
-Linux 3.9
-
+<table border="1" cellspacing="0" cellpadding="5">
+<caption><b>Development boards</b>
+</caption>
+<tr style="background:#CCCCCC">
+<th style="width:100px"> Product Name
+</th>
+<th> Company Name
+</th>
+<th> Year<br />Introduced
+</th>
+<th> RAM<br />MB
+</th>
+<th> Flash<br />MB
+</th>
+<th> Processor
+</th>
+<th> Connectivity
+</th>
+<th> Notes
+</th>
+<th> Proprietary Drivers
+</th>
+<th style="width:150px"> Source
+</th>
+<th style="width:250px"> Download Area
+</th></tr>
+<tr>
+<td><a rel="nofollow" class="external text" href="http://beagleboard.org/">Beagle Board</a>
+</td>
+<td>Texas Instruments
+</td>
+<td>2008
+</td>
+<td>256M
+</td>
+<td>256M
+</td>
+<td>OMAP3530
+</td>
+<td>
+</td>
+<td> lot of informations in the <a href="/BeagleBoard" title="BeagleBoard" class="mw-redirect">BeagleBoard wiki page</a>,<br />
+<p><a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Open_hardware">open hardware</a>(schematics freely available)
+</p>
+</td>
+<td> The powervr(3d chip) require a proprietary 3d driver for the 3d part
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a rel="nofollow" class="external text" href="http://beagleboard.org/bone">BeagleBone</a>
+</td>
+<td>Texas Instruments
+</td>
+<td>2011
+</td>
+<td>256MB
+</td>
+<td>none (MicroSD)
+</td>
+<td>AM3358
+</td>
+<td>Ethernet 10/100
+</td>
+<td><a href="/BeagleBone" title="BeagleBone">BeagleBone wiki page</a>, <a href="/BeagleBoard" title="BeagleBoard" class="mw-redirect">BeagleBoard wiki page</a>,<br />
+<p><a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Open_hardware">open hardware</a>(schematics freely available)
+</p>
+</td>
+<td>The powervr(3d chip) require a proprietary 3d driver for the 3d part
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a rel="nofollow" class="external text" href="http://pandaboard.org/">Pandaboard</a>
+</td>
+<td>Texas Instruments
+</td>
+<td>2010
+</td>
+<td>8Gb(x32) x 2ch
+</td>
+<td>(2G(x32) x4pcs) 2CS/ch
+</td>
+<td>OMAP4430
+</td>
+<td>WLAN, Bluetooth, 10/100 Ethernet
+</td>
+<td> <a href="/PandaBoard" title="PandaBoard">Pandaboard wiki page</a>,
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a rel="nofollow" class="external text" href="http://www.calao-systems.com/articles.php?lng=fr&amp;pg=6186">Snowball SDK &amp; PDK</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.calao-systems.com/">CALAO Systems</a>
+</td>
+<td>2011
+</td>
+<td>1GB
+</td>
+<td>4GB / 8GB
+</td>
+<td>ST-Ericsson A9500 Dual Cortex A9 + Mali 400
+</td>
+<td>WiFi, BlueTooth, GPS, HDMI, CVBS, Ethernet 10/100, Audio In / Out, Micro-SD, Serial Port (Linux console), JTAG, MiPi34, 3D Accelerometer, Magnetometer &amp; Gyrometer, Pressure sensor, 3x expansion connectors
+</td>
+<td>Expansion Board(s)&#160;: MOB-SKY-S9500-AVI-CXX (2x USB OTG HS, LVDS 24Bits, TSC, LED Driver, MiPi DSI, MiPi CSI...), DAB-SKY-S9500-GPI-CXX (CANBus, Modem 2G/3G, 4x Uart, 8x GPIO, 8x ADC)
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.igloocommunity.org/">Igloo Community</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.igloocommunity.org/">Igloo Community</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.calao-systems.com/repository/EMBEDDED%20COMPUTERS/SKY-S9500-ULP-XXX/">CALAO Systems Repository</a>
+</td></tr>
+
+
+<tr align="center">
+<td> <a rel="nofollow" class="external text" href="http://www.calao-systems.com/articles.php?lng=en&amp;pg=6264">SKY-T3359-LPW-I01</a>
+</td>
+<td> <a rel="nofollow" class="external text" href="http://www.calao-systems.com/index.php?lng=en">CALAO Systems</a>
+</td>
+<td> 2013
+</td>
+<td> 512M
+</td>
+<td> 512M
+</td>
+<td> AM3359(720Mhz)
+</td>
+<td> Micro-SD, USB Device HS, 2x USB Host HS, 2x Ethernet 10/100/1000, Mini PCI Express (USB only), ACC/MAG/GYR 3D, Humidity &amp; Temperature sensor, Pressure Sensor, WiFi, BlueTooth, CANBus, Audio (Line In, Line Out, Headphones, Mic In), LCD / TS expansion port
+</td>
+<td> Motherboard(s)&#160;: N/A, No Expansion board(s)
+</td>
+<td> <a rel="nofollow" class="external text" href="http://www.calao-systems.com/repository/">repository</a>
+</td>
+<td> <a rel="nofollow" class="external text" href="http://www.calao-systems.com/repository/">repository</a>
+</td>
+<td> No
+</td></tr>
+
+
+<tr>
+<td><a rel="nofollow" class="external text" href="http://www.raspberrypi.org/">US$ 25 Raspberry Pi Computer</a>
+</td>
+<td>Raspberry Pi Foundation
+</td>
+<td>2012
+</td>
+<td>256
+</td>
+<td>none (SD Card)
+</td>
+<td>Broadcom ARM11 (ARM v6) + Videocore GPU
+</td>
+<td>10/100 Ethernet, HDMI , Composite , Audio, USB Host, GPIO, JTAG , MIPI DSI + CSI
+</td>
+<td><a href="/RPi_Hub" title="RPi Hub">Phenomenal RPi Hub</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.raspberrypi.org/archives/1839">MPEG-2 and VC-1 Licences</a>
+<p><a rel="nofollow" class="external text" href="https://github.com/raspberrypi/firmware/tree/master/opt/vc">OpenGL, OpenMax examples</a>
+</p>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.raspberrypi.org/wp-content/uploads/2012/04/Raspberry-Pi-Schematics-R1.0.pdf">Schematics</a>
+<p><a rel="nofollow" class="external text" href="http://www.raspberrypi.org/wp-content/uploads/2012/02/BCM2835-ARM-Peripherals.pdf">CPU Datasheet</a>
+</p>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.raspberrypi.org/downloads">Card Images</a>
+</td></tr>
+<tr>
+<td><a rel="nofollow" class="external text" href="http://developer.toradex.com/product-selector/colibri-evaluation-board">Colibri Evaluation Board</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.toradex.com/">Toradex</a>
+</td>
+<td>2012
+</td>
+<td>up to 512MB
+</td>
+<td>up to 1GB
+</td>
+<td>Nvidia Tegra 2, Tegra 3, Marvell PXA270, 320, 310, 300
+</td>
+<td>10/100 Ethernet, HDMI , VGA, LCD, Audio, USB Host/ OTG, GPIO, JTAG , Camera Interface, RS485, RS232, CAN, I2C, SPI, SDIO, Memory Bus, IrDA
+</td>
+<td>Compatible with all <a rel="nofollow" class="external text" href="http://www.toradex.com/products/colibri-arm-computer-modules">Colibri Modules</a>
+</td>
+<td>
+</td>
+<td><a rel="nofollow" class="external text" href="http://developer.toradex.com/hardware-resources/arm-family/carrier-board-design">Schematics</a>
+<p><a rel="nofollow" class="external text" href="http://developer.toradex.com/product-selector/colibri-evaluation-board#Datasheets">Datasheet</a>
+</p><p><a rel="nofollow" class="external text" href="http://developer.toradex.com/software-resources/arm-family/linux/source-code/linux-(colibri-t20)-source-code">Linux Images</a>
+</p>
+</td>
+<td><a rel="nofollow" class="external text" href="http://git.toradex.com/gitweb/">Git</a>
+</td></tr>
+<tr>
+<td><a rel="nofollow" class="external text" href="http://www.ledato.de/">NanosG20</a>
+</td>
+<td>Ledato
+</td>
+<td>?
+</td>
+<td>64M/128M
+</td>
+<td>128M/512M
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a rel="nofollow" class="external text" href="http://www.8devices.com/product/3/carambola">Carambola</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.8devices.com">8devices</a>
+</td>
+<td>2013
+</td>
+<td>32 MB
+</td>
+<td>8 MB Flash
+</td>
+<td>MediaTek: Ralink RT3050 (320MHz MIPS24K)
+</td>
+<td>USB, WiFi, 2x Ethernet, SATA, RS232, SPI, I2C,
+</td>
+<td>Uses a chip with built-in 802.11 bgn and antenna. OpenWRT is recommended and used by default.
+</td>
+<td><a rel="nofollow" class="external text" href="http://pkg.8devices.com/">binary repository</a>
+</td>
+<td><a rel="nofollow" class="external text" href="https://github.com/8devices/">source repository</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.8devices.com/wiki_carambola/doku.php/carambola">wiki</a>
+</td></tr>
+<tr>
+<td><a rel="nofollow" class="external text" href="http://8devices.com/carambola-2">Carambola 2</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.8devices.com">8devices</a>
+</td>
+<td>2013
+</td>
+<td>64 MB DDR2
+</td>
+<td>16 MB Flash
+</td>
+<td>AR9331 400 MHz
+</td>
+<td>USB, WiFi, 2x Ethernet, SLIC, SPDIF, 23 x GPIO, I2C, U.FL antenna connector
+</td>
+<td>Uses a chip with built-in 802.11 bgn 2.4GHz, 21dB, 1x1 SISO. OpenWRT is recommended and used by default.
+</td>
+<td><a rel="nofollow" class="external text" href="http://pkg.8devices.com/">binary repository</a>
+</td>
+<td><a rel="nofollow" class="external text" href="https://github.com/8devices/">source repository</a>, <a rel="nofollow" class="external text" href="http://8devices.com/media/files/8dev-0700_0002_sb_SCH.pdf">schematics</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.8devices.com/wiki_carambola/doku.php/carambola">wiki</a>
+</td></tr>
+<tr>
+<td><a rel="nofollow" class="external text" href="http://cubieboard.org/">Cubieboard</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://cubietech.com/">Cubietech</a>
+</td>
+<td>2012
+</td>
+<td>512MB/1024MB DDR3 @480Hz
+</td>
+<td>4Gb Nand Flash
+</td>
+<td>Cortex-A8 + Mali400
+</td>
+<td>2x USB, Ethernet, SATA, micro SD, HDMI, Audio line IN/OUT, IR, I2C, SPI, RGB/LVDS, CSI/TS, FM-IN, ADC, CVBS, VGA, SPDIF-OUT, R-TP, ...
+</td>
+<td>Info at <a rel="nofollow" class="external text" href="http://linux-sunxi.org/Cubieboard">Linux-Sunxi wiki</a>
+</td>
+<td>
+</td>
+<td><a rel="nofollow" class="external text" href="https://github.com/linux-sunxi">source repository</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://cubieboard.org/download/Schematics">images, etc.</a>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a rel="nofollow" class="external text" href="http://www.viaembedded.com/en/boards/pico-itx/vab-600/">VAB-600 Springboard</a>
+</td>
+<td>VIA
+</td>
+<td>2013
+</td>
+<td>1Gb DDR3
+</td>
+<td>4Gb eMMC Flash
+</td>
+<td>800MHz Cortex-A9 + Mali-400
+</td>
+<td>10/100 Ethernet, HDMI, GPIO, I2C, SPI, LVDS/TTL, Optional: Audio, Wi-Fi
+</td>
+<td>
+</td>
+<td>Graphics
+</td>
+<td>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.viaembedded.com/en/boards/pico-itx/vab-600/">BSP images</a>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a rel="nofollow" class="external text" href="http://www.viaembedded.com/en/boards/pico-itx/vab-800/">VAB-800</a>
+</td>
+<td>VIA
+</td>
+<td>
+</td>
+<td>1Gb DDR3
+</td>
+<td>4Gb eMMC Flash
+</td>
+<td>800MHz Freescale i.MX537 Cortex-A8 + AMD Z430
+</td>
+<td>10/100M, VGA, mini-HDMI, SATA, USB 2.0, USB device, CAN, I2C, GPIO, LVDS, JTAG, Audio
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.viaembedded.com/en/boards/pico-itx/vab-800/">BSP images</a>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a rel="nofollow" class="external text" href="http://www.viaembedded.com/en/boards/pico-itx/vab-820/">VAB-820</a>
+</td>
+<td>VIA
+</td>
+<td>
+</td>
+<td>1Gb DDR3
+</td>
+<td>4Gb eMMC Flash
+</td>
+<td>1GHz Freescale i.MX6Quad Cortex-A9 + Vivante GC2000
+</td>
+<td>USB 2.0 host, USB2.0 OTG, COM port (w/ 8-wire DTE mode),  COM/CAN port, FlexCAN, LVDS, I2C, SPI, GPIO, Audio, miniPCIe
+</td>
+<td>
+</td>
+<td>Graphics
+</td>
+<td><a rel="nofollow" class="external text" href="https://github.com/viaembedded/vab820-kernel-bsp">kernel</a>, <a rel="nofollow" class="external text" href="https://github.com/viaembedded/vab820-uboot-bsp">u-boot</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.viaembedded.com/en/boards/pico-itx/vab-820/">BSP images</a>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a rel="nofollow" class="external text" href="http://www.viaembedded.com/en/boards/pico-itx/vab-1000/">VAB-1000</a>
+</td>
+<td>VIA
+</td>
+<td>
+</td>
+<td>2Gb DDR3
+</td>
+<td>4Gb eMMC Flash
+</td>
+<td>1.0GHz VIA Elite E1000 Cortex-A9 dual-core + integrated graphics
+</td>
+<td>1000M, mini-HDMI, SATA, LVDS, USB 2.0, COM, I2C, SPI, GPIO, JTAG, miniPCIE, Optional: Wifi, Audio
+</td>
+<td>
+</td>
+<td>Graphics
+</td>
+<td><a rel="nofollow" class="external text" href="https://github.com/viaembedded/vab1000-kernel-bsp">kernel</a>, <a rel="nofollow" class="external text" href="https://github.com/viaembedded/vab1000-uboot-bsp">u-boot</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.viaembedded.com/en/boards/pico-itx/vab-1000/">BSP images</a>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a rel="nofollow" class="external text" href="http://apc.io/products/8750a/">APC 8750</a>
+</td>
+<td>VIA
+</td>
+<td>2012
+</td>
+<td>512Mb DDR3
+</td>
+<td>2Gb NAND Flash
+</td>
+<td>800Mhz ARMv6 processor
+</td>
+<td>10/100 Ethernet, HDMI, VGA, USB 2.0 (x4), Audio out / Mic in, microSD
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td><a rel="nofollow" class="external text" href="http://apc.io/library/">Software library</a>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a rel="nofollow" class="external text" href="http://apc.io/products/rock/">APC Rock</a>
+</td>
+<td>VIA
+</td>
+<td>2012
+</td>
+<td>512Mb DDR3
+</td>
+<td>4Gb NAND Flash
+</td>
+<td>800Mhz Cortex-A9 + Mali-400
+</td>
+<td>10/100 Ethernet, HDMI, VGA, USB 2.0 (x4), microUSB (OTG), GPIO, SPI, I2C, Audio out / Mic in, microSD
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td><a rel="nofollow" class="external text" href="http://apc.io/library/">Software library</a>
+</td></tr>
+<tr>
+<td><a rel="nofollow" class="external text" href="http://www.ethernut.de/en/hardware/enut5/index.html">Ethernut 5</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.egnite.de">egnite GmbH</a>
+</td>
+<td>2011
+</td>
+<td>128 MB
+</td>
+<td>1GB NAND Flash
+</td>
+<td>AT91SAM9XE
+</td>
+<td>USB 2.0, 10/100 Base-T Ethernet, 2xSPI, 2xI²C, 1xI²S, image Sensor interface, 15 GPIOs, 2xAD converter
+</td>
+<td><a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Open_hardware">open hardware</a>, Supply: PoE, Mini-USB or adapter, SD card socket, industrial temperature range (-25°C-85°C), expansion boards (open interface)
+</td>
+<td>
+</td>
+<td>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.ethernut.de/en/hardware/enut5/enut50f.html">Schematics, Hardware manual</a>, <a rel="nofollow" class="external text" href="http://www.ethernut.de/en/hardware/enut5/yocto.html">Yocto project support</a>, <a rel="nofollow" class="external text" href="http://www.ethernut.de/en/firmware/nutos.html">Nut/OS</a>
+</td></tr>
+<tr>
+<td><a rel="nofollow" class="external text" href="http://www.myirtech.com/list.asp?id=502">US$99 Z-turn Board</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.myirtech.com">MYIR</a>
+</td>
+<td>2015
+</td>
+<td>1GB DDR3
+</td>
+<td>16M QSPI Flash
+</td>
+<td>Xilinx Zynq-7010/20
+</td>
+<td>USB_UART, USB2.0 OTG, 1 x 10/100/1000Mbps Ethernet, CAN, HDMI, TF, G-sensor, Temperature Sensor
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.elinux.org/Z-turn_Board">Z-turn Board</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a rel="nofollow" class="external text" href="http://www.myirtech.com/list.asp?id=510">US$99 Rico Board</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.myirtech.com">MYIR</a>
+</td>
+<td>2015
+</td>
+<td>512MB DDR3
+</td>
+<td>4MB eMMC Flash, 16M QSPI Flash
+</td>
+<td>TI AM437x
+</td>
+<td>UARTs, USB Host/Device, Gigabit Ethernet, Dual-Camera, TF, HDMI, LCD
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr></table>
+<p><br />
+</p><p><br />
+</p>
+<table border="1" cellspacing="0" cellpadding="5">
+<caption><b>Development boards</b>
+</caption>
+<tr style="background:#CCCCCC">
+<th style="width:100px"> Product Name
+</th>
+<th> Company Name
+</th>
+<th style="width:120px"> Processor
+</th>
+<th> RAM<br />MB
+</th>
+<th> Flash<br />MB
+</th>
+<th style="width:150px">Video Display
+</th>
+<th style="width:250px">Interfaces
+</th>
+<th> OS support
+</th>
+<th> Notes
+</th></tr>
+<tr>
+<td><a rel="nofollow" class="external text" href="http://www.armkits.com/Product/devkit8000.asp/">DevKit8000</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.armkits.com">Embest</a>
+</td>
+<td>TI OMAP3530
+</td>
+<td>256MB DDR
+</td>
+<td>512MB Nand Flash
+</td>
+<td>LCD, VGA, DVI-D and S-Video
+</td>
+<td>UART, USB Host, USB OTG, Ethernet, Audio, SD, Keyboard, JTAG
+</td>
+<td>Linux2.6.28, WinCE6.0
+</td>
+<td><a href="/Devkit8000" title="Devkit8000">Devkit8000</a> wiki page
+</td></tr>
+<tr>
+<td><a rel="nofollow" class="external text" href="http://www.armkits.com/Product/devkit8500d.asp/">DevKit8500D/A</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.armkits.com">Embest</a>
+</td>
+<td style="width:120px">TI DM3730/AM3715
+</td>
+<td>512MB DDR
+</td>
+<td>512MB Nand Flash
+</td>
+<td>LCD, VGA, DVI-D and S-Video
+</td>
+<td>UART, USB Host, USB OTG, Ethernet, Audio, SD, Keyboard, JTAG
+</td>
+<td>Linux2.6.28, WinCE6.0, Android2.2
+</td></tr>
+<tr>
+<td><a rel="nofollow" class="external text" href="http://www.armkits.com/product/devkit8600.asp/">DevKit8600</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.armkits.com">Embest</a>
+</td>
+<td style="width:120px">TI AM3359
+</td>
+<td>512MB DDR3
+</td>
+<td>512MB Nand Flash
+</td>
+<td>LCD, VGA
+</td>
+<td>UART, USB Host, USB OTG, Ethernet, CAN, RS485, WiFi/BT, Audio, TF, JTAG
+</td>
+<td>Linux3.1.0, Android2.3, WinCE7
+</td></tr>
+<tr>
+<td><a rel="nofollow" class="external text" href="http://www.armkits.com/product/sabrelite.asp">SABRE Lite</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.armkits.com">Embest</a>
+</td>
+<td>Freescale i.MX 6Quad
+</td>
+<td>1GB DDR3
+</td>
+<td>2MB SPI Flash
+</td>
+<td>RGB, LVDS and HDMI
+</td>
+<td>UART, USB, Ethernet, CAN, SATA, SD, JTAG, I2C, Audio
+</td>
+<td>Linux3.0.15, Android4.0.4
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a rel="nofollow" class="external text" href="http://www.atmel.com/dyn/products/tools_card.asp?tool_id=4102">NGW100</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.atmel.com">Atmel</a>
+</td>
+<td>Atmel AVR32: AT32AP7000
+</td>
+<td>32M
+</td>
+<td>8M serial + 8M parallel
+</td>
+<td>"LCD Controller"
+</td>
+<td>UARTs, USB slave, 2x 100MBit Ethernet, I2C, SPI, JTAG, AC97
+</td>
+<td>Linux 2.6 <a rel="nofollow" class="external free" href="http://www.avr32linux.org">http://www.avr32linux.org</a>
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a rel="nofollow" class="external text" href="http://www.myirtech.com/list.asp?id=466">MYD-AM335X</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.myirtech.com">MYIR</a>
+</td>
+<td style="width:120px">TI AM3359
+</td>
+<td>512MB DDR3
+</td>
+<td>512MB Nand Flash
+</td>
+<td>LCD, HDMI
+</td>
+<td>UART, 4 x USB Host, USB OTG, 2 x Ethernet, CAN, RS485, Audio, TF
+</td>
+<td>Linux3.2.0, Android4.2.2, WinCE7
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a rel="nofollow" class="external text" href="http://www.myirtech.com/list.asp?id=432">MYD-SAMA5D3X</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.myirtech.com">MYIR</a>
+</td>
+<td style="width:120px">Atmel SAMA5D3
+</td>
+<td>512MB DDR2
+</td>
+<td>256MB Nand Flash
+</td>
+<td>LCD, HDMI
+</td>
+<td>UART, USB Host, USB OTG, Ethernet, CAN, RS485, Audio, SD
+</td>
+<td>Linux3.6.9, Android4.0.4
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a rel="nofollow" class="external text" href="http://www.myirtech.com/list.asp?id=472">MYD-IMX28X</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.myirtech.com">MYIR</a>
+</td>
+<td style="width:120px">Freescale i.MX28
+</td>
+<td>128MB DDR2
+</td>
+<td>256MB Nand Flash, 128KB SPI Flash
+</td>
+<td>LCD
+</td>
+<td>UART, USB Host, USB OTG, 2 x Ethernet, 2 x CAN, RS485, Audio, SD
+</td>
+<td>Linux2.6.35
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a rel="nofollow" class="external text" href="http://virt2real.com/content/kontroller-virt2real-virturilka">Virturilka</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://virt2real.com">Virt2Real</a>
+</td>
+<td style="width:120px">TI DM365
+</td>
+<td>128MB DDR2
+</td>
+<td>256MB Nand Flash
+</td>
+<td>Parallel camera interface, Analog component video output
+</td>
+<td>GPIO, PWM, I2C, SPI, UART, DAC/ADC, USB, microSD, 10/100Mb RJ45 Ethernet
+</td>
+<td>Linux 3.9
+</td></tr></table>
 
 
 
@@ -1709,40 +1818,44 @@ Linux 3.9
 
 **Development Boards with MINI2440V2**
 
-Product Name
+<table border="1" cellspacing="0" cellpadding="5">
+<caption><b>Development Boards with MINI2440V2</b>
+</caption>
+<tr style="background:#CCCCCC">
+<th style="width:100px"> Product Name
+</th>
+<th> Company Name
+</th>
+<th> Year<br />Introduced
+</th>
+<th> RAM<br />MB
+</th>
+<th> Flash<br />MB
+</th>
+<th> Processor
+</th>
+<th style="width:150px"> Source
+</th>
+<th style="width:250px"> Download Area
+</th></tr>
+<a rel="nofollow" class="external autonumber" href="http://www.developmentboard.net/index.php/productdetail/Development+board/ARM9/SAMSUNG/S3C2440/MINI2440v2+with+MegaDisplay+3.5/info/1">[1]</a>
+<tr align="center">
+<td> <a rel="nofollow" class="external autonumber" href="http://www.developmentboard.net">[2]</a>
+</td>
+<td> 2009
+</td>
+<td> up to 256
+</td>
+<td> up to 512
+</td>
+<td> i.MX27 400MHz + Spartan3a
+</td>
+<td> <a rel="nofollow" class="external autonumber" href="http://www.developmentboard.net/index.php/productdetail/Development+board/ARM9/SAMSUNG/S3C2440/MINI2440v2+with+MegaDisplay+3.5/info/1">[3]</a>
+</td>
+<td> <a rel="nofollow" class="external text" href="http://www.developmentboard.net">Developer Site</a>
+</td></tr>
+</table>
 
-Company Name
-
-Year
-Introduced
-
-RAM
-MB
-
-Flash
-MB
-
-Processor
-
-Source
-
-Download Area
-
-[[1]](http://www.developmentboard.net/index.php/productdetail/Development+board/ARM9/SAMSUNG/S3C2440/MINI2440v2+with+MegaDisplay+3.5/info/1)
-
-[[2]](http://www.developmentboard.net)
-
-2009
-
-up to 256
-
-up to 512
-
-i.MX27 400MHz + Spartan3a
-
-[[3]](http://www.developmentboard.net/index.php/productdetail/Development+board/ARM9/SAMSUNG/S3C2440/MINI2440v2+with+MegaDisplay+3.5/info/1)
-
-[Developer Site](http://www.developmentboard.net)
 
 
 

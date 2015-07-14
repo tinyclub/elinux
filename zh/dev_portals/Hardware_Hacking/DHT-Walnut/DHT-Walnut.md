@@ -43,7 +43,7 @@ out** 2/6/2006
 -   512k of boot flash AMD 29LV040B
     [datasheet](http://eLinux.org/images/0/0e/Amd29lv040b.pdf "Amd29lv040b.pdf")
 -   12v dc powered
--   PPC40XX [JTAG](http://eLinux.org/JTAG "JTAG") on J10
+-   PPC40XX [JTAG](../../.././dev_portals/Glossary/JTAG/JTAG.md "JTAG") on J10
 -   6.00" x 7.5" board size
 
 The system's most common configuration seems to be:

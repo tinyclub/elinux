@@ -137,7 +137,7 @@ and a fan to allow continuous operation under heavy workloads:
 -   **SATA:** a full-size port that supports 2.5" and 3.5" disks, but is
     not hot-pluggable. (Turn off the power before plugging in SATA disk
     drives)
--   **[JTAG](http://eLinux.org/Jetson/JTAG "Jetson/JTAG"):** a 2x10-pin 0.1" port for
+-   **[JTAG](../.././dev_portals/Glossary/JTAG/JTAG.md "Jetson/JTAG"):** a 2x10-pin 0.1" port for
     professional debugging
 -   **[Power](http://eLinux.org/Jetson/Jetson_TK1_Power "Jetson/Jetson TK1 Power"):** a
     12V DC barrel power jack and a 4-pin PC IDE power connector, using
@@ -374,7 +374,7 @@ terminal, to ensure the filesystem will not be corrupt:
 
 ## Emulators for developing with Jetson TK1
 
--   [**Emulators:**](http://eLinux.org/Jetson/Emulators "Jetson/Emulators") which
+-   [**Emulators:**](../../toolbox/dev_tools/Emulators/Emulators.md "Jetson/Emulators") which
     Windows, OSX, Linux or SteamOS products with a powerful Nvidia GPU
     are economic and suitable for developing Jetson software?
 
@@ -550,7 +550,7 @@ Get a 2-legged robot to walk towards the nearest person
 -   [**Cloning & Backup**](http://eLinux.org/Jetson/Cloning "Jetson/Cloning") Save the
     Jetson's eMMC (system.img) via the flash port and restore it to
     other Jetson boards.
--   [**Trace32 / JTAG Debugging**](http://eLinux.org/Jetson/JTAG "Jetson/JTAG") Attaching
+-   [**Trace32 / JTAG Debugging**](../.././dev_portals/Glossary/JTAG/JTAG.md "Jetson/JTAG") Attaching
     a professional debugger module for very low-level access to the
     Tegra.
 
@@ -799,7 +799,7 @@ NVIDIA's Tegra SoCs are well supported by mainline OSS such as Linux and
 U-Boot. This section contains an index of topics related to running
 mainline software on Tegra.
 
--   [U-Boot](http://eLinux.org/Tegra/Mainline_SW/U-Boot "Tegra/Mainline SW/U-Boot").
+-   [U-Boot](../.././dev_portals/Development_Platforms/Tegra/Mainline_SW/U-Boot/Tegra/Mainline_SW/U-Boot.md "Tegra/Mainline SW/U-Boot").
 -   [Linux
     kernel](http://eLinux.org/Tegra/Mainline_SW/Linux_kernel "Tegra/Mainline SW/Linux kernel").
 -   [Nouveau

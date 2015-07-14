@@ -11,7 +11,7 @@
 processors for embedded application.** Most of DaVinci processors based
 of of ARM and DSP microprocessor cores.
 
-DaVinci SDK uses [U-Boot](http://eLinux.org/U-Boot "U-Boot"),
+DaVinci SDK uses [U-Boot](../../.././dev_portals/Development_Platforms/Tegra/Mainline_SW/U-Boot/Tegra/Mainline_SW/U-Boot.md "U-Boot"),
 [MontaVista](http://eLinux.org/MontaVista "MontaVista") Linux,
 [Open\_Embedded](http://eLinux.org/Open_Embedded "Open Embedded")
 

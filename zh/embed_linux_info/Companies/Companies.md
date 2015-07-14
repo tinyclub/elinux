@@ -37,7 +37,7 @@ This page provides information about companies that build and sell
 consumer electronics devices with Linux as their operating system. If
 you're looking for companies that build and sell Linux distributions for
 embedded devices or who provide services around embedded Linux, please
-see the [Vendors](http://eLinux.org/Vendors "Vendors") page.
+see the [Vendors](../../embed_linux_info/Vendors/Vendors.md "Vendors") page.
 
 You may also want to look at the [Source code download
 sites](http://eLinux.org/Source_code_download_sites "Source code download sites") page,
@@ -150,7 +150,7 @@ companies.
         series)](http://developer.garmin.com/linux/)
 -   [GlobalScale Technologies](http://www.globalscaletechnologies.com/)
     hardware and software design
-    -   [SheevaPlug](http://eLinux.org/SheevaPlug "SheevaPlug") and
+    -   [SheevaPlug](../.././dev_portals/Development_Platforms/SheevaPlug/SheevaPlug.md "SheevaPlug") and
         [GuruPlug](http://hackaday.com/2010/02/08/guruplug-the-next-generation-of-sheevaplug/)
 
 ## H
@@ -320,7 +320,7 @@ companies.
 
 -   [TimeSys](http://www.timesys.com)
     -   [LinuxLink](http://www.timesys.com/services)
--   [TechnologicSystems](http://eLinux.org/TechnologicSystems "TechnologicSystems") at
+-   [TechnologicSystems](../.././dev_portals/Development_Platforms/TechnologicSystems/TechnologicSystems.md "TechnologicSystems") at
     [http://embeddedarm.com](http://embeddedarm.com)
 -   [Tk Open Systems](http://tkos.co.il) BSP's-R-Us, also drivers, even
     some user-space stuff
