@@ -7,156 +7,110 @@
 
 ## Contents
 
--   [1 Description](#description)
--   [2 Rationale](#rationale)
--   [3 Resources](#resources)
-    -   [3.1 Projects](#projects)
-        -   [3.1.1 hrtimers - Thomas Gleixner's
-            patch](#hrtimers-thomas-gleixner-s-patch)
-        -   [3.1.2 HRT - Geoge Anzinger's
-            patch](#hrt-geoge-anzinger-s-patch)
--   [4 Downloads](#downloads)
-    -   [4.1 Patch](#patch)
--   [5 Utility programs](#utility-programs)
--   [6 How To Use](#how-to-use)
--   [7 How to detect if your timer system supports high
-    resolution](#how-to-detect-if-your-timer-system-supports-high-resolution)
--   [8 How to validate](#how-to-validate)
--   [9 Sample Results](#sample-results)
--   [10 Case Study 1](#case-study-1)
--   [11 Case Study 2](#case-study-2)
--   [12 Status](#status)
--   [13 Future Work/Action Items](#future-work-action-items)
--   [14 Old information (for 2-4
-    kernel)](#old-information-for-2-4-kernel)
+-   [1 描述](#描述)
+-   [2 基本原理](#基本原理)
+-   [3 资源](#资源)
+    -   [3.1 项目](#项目)
+        -   [3.1.1 hrtimers - Thomas Gleixner 的补丁](#hrtimers-thomas-gleixner的补丁)
+        -   [3.1.2 HRT - Geoge Anzinger 的补丁](#hrt-geoge-anzinger的补丁)
+-   [4 下载](#下载)
+    -   [4.1 补丁](#补丁)
+-   [5 实用程序](#实用程序)
+-   [6 如何使用](#如何使用)
+-   [7 如何检测你的时间系统是否支持高精度定时器](#如何检测你的时间系统是否支持高精度定时器)
+-   [8 如何验证](#如何验证)
+-   [9 示例结果](#示例结果)
+-   [10 案例学习 1](#案例学习1)
+-   [11 案例学习 2](#案例学习2)
+-   [12 状态](#状态)
+-   [13 未来工作/操作项目](#未来工作/操作项目)
+-   [14 陈旧的信息(2.4内核)](#陈旧的信息(2.4内核))
 
-## Description
+## 描述
 
-The objective of the high resolution timers project is to implement the
-POSIX 1003.1b Section 14 (Clocks and Timers) API in Linux. This includes
-support for high resolution timers - that is, timers with accuracy
-better than 1 jiffy.
+高精度定时器项目的目标是在Linux中实现POSIX 1003.1b Section 14(时钟，定时器)的API。 包括了对高精度定时器的支持 - 也就是说定时器的精度超过1个滴答。
 
-When the project started, the POSIX clocks and timers APIs were not
-supported by Linux. Over time, the clocks and timers APIs have been
-adopted, and core infrastructure support for high resolution timers has
-been accepted into the mainline kernel (in 2.6.21). However, as of this
-writing, not all embedded platforms has support for high resolution
-timers, and even when support is present in the kernel code, it can be
-tricky to configure it for the kernel.
+当该项目启动时，Linux不支持POSIX的时钟和定时器的API。一段时钟后，时钟和定时器的API被实现，对高精度定时器支持的核心架构被mainline kernel(2.6.21内核)所接受. 然而在写这篇文章时，并不是所有的嵌入式平台都支持高精度定时器, 并且尽管在内核代码出现了高精度定时器的支持，仍然可以在内核对其进行配置。
 
-## Rationale
+## 基本原理
 
-Currently, timers in Linux are only supported at a resolution of 1
-jiffy. The length of a jiffy is dependent on the value of HZ in the
-Linux kernel, and is 1 millisecond on i386 and some other platforms, and
-10 milliseconds on most embedded platforms.
+当时，Linux中的定时器仅仅支持1个滴答精度，滴答的时间长度依赖于内核中的HZ值,在i386和其他一些平台中是1ms，而在绝大多数的嵌入式平台是10ms。
 
-Higher resolution timers are needed to allow the system to wake up and
-process data at more accurate intervals.
+十分需要高精度定时器使系统能在更加精确的时间间隔中唤醒和处理数据。
 
-## Resources
+## 资源
 
-### Projects
+### 项目
 
-#### hrtimers - Thomas Gleixner's patch
+#### hrtimers - Thomas Gleixner的补丁
 
-One project to support high resolution timers is Thomas Gleixner's
-hrtimers.
+支持高精度定时器的一个项目是Thomas Gleixner的hrtimers
 
-Thomas gave a presentation at the Ottawa Linux Symposium, July 2006,
-presenting the current status of hrtimers. The presentation is here:
+Thomas 于2006年7月在渥太华的Linux研讨会上做了一个演讲展示了hrtimers的现状. 演讲稿见这里:
 [OLS
 hrtimers](https://docs.google.com/file/d/0BzuiPiVvL63cNTYwYWE1YTgtODFhMS00NzM1LTlkMTItYWVlNzU3MWQ1NzA5/edit?sort=name&layout=list&pli=1&pid=0BzuiPiVvL63cNzJlODhmYWEtYWY1MS00Yjc1LTg5YzUtODViMDUzOTZjNzUz&cindex=89#)
 
-As of July 2006, "generic clock sources" was accepted into Linus'
-mainline kernel tree (2.6.18-rc??). This means it should be appear in
-the mainline 2.6.18 kernel version, when that is available. hrtimers
-should soon follow, likely appearing in 2.6.19.
-
-In February of 2006, James Perkins of WindRiver wrote:
+在2006年7月, “通用时钟源”被mailine kernel(2.6.18-rc 版本)所接受. 这意味着在合适的时候该特性会在2.6.18版本中出现。 高精度定时器应该很快出现，很可能在2.6.19内核中出现.
+在2006年2月, 风河的James Perkins写到:
 
 * * * * *
 
-ktimers has been obsoleted by hrtimers, and the core of hrtimers was
-merged and is present in Linus' 2.6.16-rc2. hrtimers is used as the base
-for itimers, nanosleep, and posix-timers. hrtimers are well-described by
-Jonathan Corbet at
+ktimers被hrtimers所替代, hrtimers的主要部分被合并并且出现在Linux 2.6.16-rc2版本中。 hrtimers是itimers，nanosleep，posix-timer的基础. 高精度定时器在以下链接中被Jonathan Corbet很好的阐释了
 [http://lwn.net/Articles/167897/](http://lwn.net/Articles/167897/)
 
-Since only the core of hrtimers is in 2.6.16-rc2, the hrtimers generally
-use the system timer as their tick source and run at HZ. John Stultz'
-generalized time source code has not yet been merged. Thomas Gleixner is
-maintaining his git tree and has graciously published patches at
+由于在2.6.16-rc2中只有hrtimers的核心，hrtimers大体上使用系统的定时器作为他们的时钟源，以HZ运行. John Stultz
+的通用时钟源代码并没有被合并. Thomas Gleixner 维护他的git tree
 [http://www.tglx.de/projects/hrtimers/](http://www.tglx.de/projects/hrtimers/)
-that include generalized clocksource, new timeofday patches, and get you
-the real "high resolution" timers for a subset of architectures.
+包含有通用的定时器源, 新的timeofday 补丁, 对一些架构来说真正实现了高精度定时器。
 
-High-res timers work is experimental and shifting and has been focusing
-on getting x86 working first, if this is adequate for you and you can
-use 2.6.16 kernels it's recommended, and let us all know of any problems
-or improvements. In contrast, the previous implementation that George
-Anzinger lead provides a fairly comprehensive set of functionality, back
-in the 2.6.8-2.6.10 era, but it isn't an active project at this time.
+高精度定时器是实验的并发展的，首先关注于能让X86工作, 如果这些就充足了，推荐你使用2.6.16版本内核, 让我们知道有哪些问题或者做了哪些改进. 相反的是，在2.6.8-2.6.10时期，George Anzinger 领导的先前实现中提供了一套相当复杂的功能, , 但在那个时候这并不是一个活跃的项目。
 
 * * * * *
 
-*Note that the current HRT maintainers objected to this
-characterization.*
+*注意到现在HRT的维护者反对该特性。*
 
-#### HRT - Geoge Anzinger's patch
+#### HRT - Geoge Anzinger的补丁
 
-Prior to hrtimers, the main patch which provided high resolution timers
-was George Anzinger's patch.The official HRT site for this patch is at:
+早于hrtimers, 提供高精度定时器的主要是George Anzinger 的补丁.官方的HRT补丁的页面在:
 
 -   [high-res-timers](http://sourceforge.net/projects/high-res-timers/)
 
 
 
-## Downloads
+## 下载
 
-### Patch
+### 补丁
 
--   See [Patch Archive](http://eLinux.org/Patch_Archive "Patch Archive")
--   Tom Rini has posted some patches for earlier 2.6 kernels at:
+-   看 [补丁程序的存档](http://eLinux.org/Patch_Archive "Patch Archive")
+-   Tom Rini 对早期的2.6版本提交了一些补丁:
     -   [trini
         patches](http://source.mvista.com/~trini/hrt/hrt_07Dec2004_001_2.6.10-rc3.patch)
 
-## Utility programs
+## 实用程序
 
-## How To Use
+## 如何使用
 
-In order to use high resolution timers, you need to verify that the
-kernel has support for this feature for your target processor (and
-board). Also, you need to configure support for it in the Linux kernel.
+为使用高精度定时器需要确认内核在目标处理器（或板子）支持该特性。然而你仍需要在Linux内核中配置以支持它。
+在你的内核配置中设置CONFIG\_HIGH\_RES\_TIMERS=y
 
-Set CONFIG\_HIGH\_RES\_TIMERS=y in your kernel config.
+编译内核并且安装到你的目标板上。
 
-Compile your kernel and install it on your target board.
-
-To use the Posix Timers API, see this online resource
+为使用Posix的时钟API，请使用在线资源
 [[1]](http://www.opengroup.org/onlinepubs/009695399/basedefs/time.h.html)
 
-## How to detect if your timer system supports high resolution
+## 如何检测你的时间系统是否支持高精度定时器
 
-Here are several ways you can identify if your system supports high
-resolution timers.
+有许多种方式可以判定你的系统是否支持高精度定时器
 
--   Examine kernel startup messages
+-  检查内核的启动信息
 
-Watch the kernel boot messages, or use `dmesg`. If the kernel
-successfully turns on the high resolution timer feature, it will print
-the message "Switched to high resolution mode on CPU0" (or something
-similar) during startup.
+看内核的启动信息或者使用 `dmesg`. 如果内核成功打开了高精度定时器,在启动的时候会打印信息： "Switched to high resolution mode on CPU0" (或者相似的信息)。
 
--   Examine /proc/timer\_list
+-   查看 /proc/timer\_list
 
-    You can also examine the timer\_list, and see whether specific clocks
-are listed as supporting high resolution. Here is a dump of
-/proc/timer\_list on an [OSK](../../.././dev_portals/Development_Platforms/OSK/OSK.md "OSK") (ARM-based) development board,
-showing the clocks configured for high resolution.
+也可以查看timer\_list, 可以查看列出的时钟是否支持是否支持高精度 下面列出了一份在 [OSK](http://eLinux.org/OSK "OSK")(ARM系列开发板)的/proc/timer\_list，显示了高精度定时器的时钟配置。
 
-    -   cat /proc/timer\_list
+-   -   cat /proc/timer\_list
 
 <!-- -->
 
@@ -181,20 +135,20 @@ showing the clocks configured for high resolution.
      # expires at 294117187500 nsecs [in 1647950 nsecs]
      #1: <c1e39e38>, it_real_fn, S:01, do_setitimer, syslogd/796
      # expires at 1207087219238 nsecs [in 912971679688 nsecs]
-      .expires_next   : 294117187500 nsecs
-      .hres_active    : 1
-      .nr_events      : 1635
-      .nohz_mode      : 2
-      .idle_tick      : 294078125000 nsecs
-      .tick_stopped   : 0
-      .idle_jiffies   : 4294966537
-      .idle_calls     : 2798
-      .idle_sleeps    : 1031
-      .idle_entrytime : 294105407714 nsecs
-      .idle_sleeptime : 286135498094 nsecs
-      .last_jiffies   : 4294966541
-      .next_jiffies   : 4294966555
-      .idle_expires   : 294179687500 nsecs
+      .expires_next   : 294117187500 nsecs
+      .hres_active    : 1
+      .nr_events      : 1635
+      .nohz_mode      : 2
+      .idle_tick      : 294078125000 nsecs
+      .tick_stopped   : 0
+      .idle_jiffies   : 4294966537
+      .idle_calls     : 2798
+      .idle_sleeps    : 1031
+      .idle_entrytime : 294105407714 nsecs
+      .idle_sleeptime : 286135498094 nsecs
+      .last_jiffies   : 4294966541
+      .next_jiffies   : 4294966555
+      .idle_expires   : 294179687500 nsecs
     jiffies: 4294966542
 
 
@@ -210,69 +164,57 @@ showing the clocks configured for high resolution.
      set_mode:       omap_32k_timer_set_mode
      event_handler:  hrtimer_interrupt
 
-Here are some things to check:
+有一些东西需要注意:
 
-1. Check the resolution reported for your clocks. If your clock supports
-high resolution, it will have a .resolution value of 1 nsecs. If it does
-not, then it will have a .resolution value that equals the number of
-nanoseconds in a jiffy (usually 10000 nsecs, on embedded platforms).
+1. 检查你的时钟分辨率的报告。 如果你的时钟支持高精度，那么.resolution值将是1ns。如果不支持的话，.resolution值将等于1个tick对应的纳秒数（在嵌入式平台通常都是10000ns）。
 
-2. Check the event\_handler for the Tick Device. If the event handlers
-is 'hrtimer\_interrupt' then the clock is set up for high resolution
-handling. If the event handler is 'tick\_handle\_periodic', then the
-device is set up for regular tick-based handling.
+2. 对于tick device检查event\_handler. 如果事件处理是 'hrtimer\_interrupt' 时钟会以高精度启动。如果事件处理是'tick\_handle\_periodic', 那么时钟设备会以依赖于tick的启动.
 
-3. Check the list of timers, and see if the attribute .hres\_active has
-a value of 1. If so, then the high resolution timer feature is active.
+3. 检查timer的列表, 看属性 .hres\_active 的值是否为1. 如果是这样的话，高精度定时器的特性已经被激活了.
 
--   Run a test program
+-   运行测试程序
 
-    You can run a small test program, and actually measure that the timers
-are returning in less than the period of a jiffy. If they are, this is
-the most definitive proof that your kernel supports high resolution
-timers. One example program you can try is
-[cyclictest](http://rt.wiki.kernel.org/index.php/Cyclictest). Here is a
-sample command line which will test timers using nanosleep:
+可以运行简单的测试程序, 最后测量定时器返回少于一个滴答的周期. 如果是这样的话这是最有力的证据证明你的内核支持高精度定时器，一个你可以尝试的示例程序是
+[cyclictest](http://rt.wiki.kernel.org/index.php/Cyclictest). 这里提供了一个使用nanosleep来测试定时器的示例命令行
 
-    -   cyclictest -n -p 80 -i 500 -l 5000
+-   -   cyclictest -n -p 80 -i 500 -l 5000
 
-    This does a test of clock\_nanosleep, with priority 80, at 500
-microsecond intervals, running the 5000 iterations of the test.
+这是 clock\_nanosleep的一个测试, 优先级为80, 间隔500ms, 运行500次迭代测试.
 
-## How to validate
+## 如何验证
 
-See above with regard to cyclictest
+看上面关于cyclictest的描述
 
-## Sample Results
+## 示例结果
 
-[Examples of use with measurement of the effects.]
+[测量结果使用例子.]
 
-## Case Study 1
+## 案例学习 1
 
-## Case Study 2
+## 案例学习 2
 
-## Status
+## 状态
 
--   Status: implemented
--   Architecture Support:
+-   状态: 已经实现
+-   支持的体系结构:
 
-    (for each arch, one of: unknown, patches apply, compiles, runs, works,
+(对于每个架构, 其中一个结果: unknown, patches apply, compiles, runs, works,
 accepted)
 
-    -   i386: works
-    -   ARM: unknown
-    -   PPC: works
-    -   MIPS: unknown
-    -   SH: unknown
+-   -   i386: 工作
+    -   ARM: 不确定
+    -   PPC: 工作
+    -   MIPS: 不确定
+    -   SH: 不确定
 
-## Future Work/Action Items
+## 未来工作/操作项目
 
-Here is a list of things that could be worked on for this feature:
+列出了未来可以为该分支做的一些事情:
 
--   Documentation
--   Testing
+-   文档
+-   测试
 
-## Old information (for 2.4 kernel)
+## 陈旧的信息 (2.4版本内核)(译者注：这里不做翻译)
 
 The High Resolution Timers system allows a user space program to be wake
 up from a timer event with better accuracy, when using the POSIX timer
@@ -299,4 +241,3 @@ patches](http://lwn.net/Articles/14538/)
 [Category](http://eLinux.org/Special:Categories "Special:Categories"):
 
 -   [Kernel](http://eLinux.org/Category:Kernel "Category:Kernel")
-
