@@ -88,7 +88,7 @@
     * 不保留英文原文。
     * 请在文件头注明如下信息（校订请列出所有提供了反馈并被采纳的同学，翻译和校订以@lzufalcon为例）：
 
-	> 来源：[eLinux.org](http://elinux.org/Boot_Time.md)<br/>
+	> 原文：[eLinux.org](http://elinux.org/Boot_Time.md)<br/>
 	> 翻译：[@lzulfacon](https://github.com/lzufalcon)<br/>
 	> 校订：[@lzulfacon](https://github.com/lzufalcon)<br/>
 
