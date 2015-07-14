@@ -96,7 +96,7 @@ cabling](http://eLinux.org/images/thumb/d/d4/Bdia13jtag.jpg/600px-Bdia13jtag.jpg
 
 The [A13 OLinuXino OpenOCD config
 file](https://github.com/ohporter/openocd_configs/blob/master/a13-olinuxino.cfg)
-can be used with a [Flyswatter](http://eLinux.org/Flyswatter "Flyswatter"),
+can be used with a [Flyswatter](../../.././dev_portals/Hardware_Hacking/Flyswatter/Flyswatter.md "Flyswatter"),
 [OpenOCD](http://eLinux.org/OpenOCD "OpenOCD"), and the ARM 20-pin JTAG on the Flyswatter
 2.
 

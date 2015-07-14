@@ -85,8 +85,8 @@ For now, this document ignores Execute-In-Place (XIP) and
 Data-Read-In-Place (DRIP) techniques, the use of which have an impact on
 the amount of flash and RAM used by the kernel. See the following online
 resources for more information about these techniques: [Kernel
-XIP](http://eLinux.org/Kernel_XIP "Kernel XIP") and [Data Read In
-Place](http://eLinux.org/Data_Read_In_Place "Data Read In Place")
+XIP](../../.././dev_portals/Boot_Time/Kernel_XIP/Kernel_XIP.md "Kernel XIP") and [Data Read In
+Place](../../.././dev_portals/System_Size/Data_Read_In_Place/Data_Read_In_Place.md "Data Read In Place")
 
 #### Measuring the kernel image size
 
@@ -285,7 +285,7 @@ The Linux-tiny patch set is a set of patches maintained by Matt Mackall
 developed with the intent to help a developer reduce the size of the
 Linux kernel.
 
-These patches are described at: [Linux Tiny](http://eLinux.org/Linux_Tiny "Linux Tiny")
+These patches are described at: [Linux Tiny](../../.././dev_portals/System_Size/Linux_Tiny/Linux_Tiny.md "Linux Tiny")
 
 The Linux-tiny patch set includes a number of different patches to allow
 the kernel to be reduced in size. Sometimes, the size reductions are
@@ -296,7 +296,7 @@ features or functions from the kernel.
 
 Here is a list of the individual Linux-tiny patches that are available
 for the 2.6.22 kernel at [Linux Tiny Patch
-Details](http://eLinux.org/Linux_Tiny_Patch_Details "Linux Tiny Patch Details")
+Details](../../.././dev_portals/System_Size/Linux_Tiny/Linux_Tiny.md_Patch_Details "Linux Tiny Patch Details")
 
 
 
@@ -684,39 +684,32 @@ development or on a deployed product.
 In review, there are basically 3 different settings combinations for
 CONFIG\_PRINTK\_FUNC and CONFIG\_PRINTK that make sense:
 
-**Settings**
-
-**Explanation**
-
-**CONFIG\_PRINTK\_FUNC**
-
-**CONFIG\_PRINTK**
-
-Y
-
-Y
-
-This is the default setting for the kernel configuration. In this
-setting the `printk` code is compiled into the kernel, and all printk
-calls throughout the entire source code are also compiled as part of the
-kernel.
-
-Y
-
-N
-
-This leaves the actual printk() routine in the kernel, but disables all
-calls to printk throughout the entire source code. However, you can use
-DO\_PRINTK in individual modules to enable the printk calls from those
-modules.
-
-N
-
-N
-
-This removes the printk() routine from the kernel, and disables all
-kernel printk messages, and gives the smallest kernel code and data
-size. DO\_PRINTK will NOT enable any module-specific printk calls.
+<table border="1" cellpadding="5" cellspacing="0" align="center">
+<tr>
+<th style="background:#ffffcc;" colspan="2"><b>Settings</b>
+</th>
+<th style="background:#ffffcc;" rowspan="2"><b>Explanation</b>
+</th></tr>
+<tr>
+<th style="background:#ffffcc;"><b>CONFIG_PRINTK_FUNC</b>
+</th>
+<th style="background:#ffffcc;"><b>CONFIG_PRINTK</b>
+</th></tr>
+<tr>
+<td>Y</td>
+<td>Y</td>
+<td>This is the default setting for the kernel configuration.  In this setting the <code>printk</code> code is compiled into the kernel, and all printk calls throughout the entire source code are also compiled as part of the kernel.
+</td></tr>
+<tr>
+<td>Y</td>
+<td>N</td>
+<td>This leaves the actual printk() routine in the kernel, but disables all calls to printk throughout the entire source code.  However, you can use DO_PRINTK in individual modules to enable the printk calls from those modules.
+</td></tr>
+<tr>
+<td>N</td>
+<td>N</td>
+<td>This removes the printk() routine from the kernel, and disables all kernel printk messages, and gives the smallest kernel code and data size.  DO_PRINTK will NOT enable any module-specific printk calls.
+</td></tr></table>
 
 #### Booting without SysFS
 
@@ -828,14 +821,14 @@ to review outline and fill in missing material
 
 -   Linux-tiny project web site:
     [[linux-tiny](http://www.selenic.com/linux-tiny/)]
--   eLinux wiki Linux-tiny page: [Linux Tiny](http://eLinux.org/Linux_Tiny "Linux Tiny")
+-   eLinux wiki Linux-tiny page: [Linux Tiny](../../.././dev_portals/System_Size/Linux_Tiny/Linux_Tiny.md "Linux Tiny")
 -   Matt Mackall's
     [http://elinux.org/images//8/83/Pdf.gif](http://elinux.org/images//8/83/Pdf.gif)
     [Linux-tiny
     presentation](http://eLinux.org/images/7/72/Linux_tiny.pdf "Linux tiny.pdf")
     [http://elinux.org/images/d/da/Info\_circle.png](http://elinux.org/File:Linux_tiny.pdf)
 -   CE Linux Forum resources for reducing system size: [System
-    Size](http://eLinux.org/System_Size "System Size")
+    Size](../../../dev_portals/System_Size/System_Size.md "System Size")
 
 ## Appendices
 

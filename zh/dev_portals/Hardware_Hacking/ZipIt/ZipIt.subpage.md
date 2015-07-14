@@ -1,38 +1,24 @@
-# ZipIt
-## Contents
-## Introduction
-* ZipIt_Tech_Details
-* Zipit_Hardware_Mods
-* ZipIt_Software
-## How To...
-* ZipIt_FAQ
-* Zipit_Hardware_Mods
-* Zipit_Serial_Mod
-* ZipIt_Serial_Flash
-* WiFi
-* ZipIt_WiFi_Flash
-* ZipIt_Winxp_NFS
-* ZipIt_Adam_HOWTO
-* ZipIt_Compile
-* ZipIt_Developer_Tutorial
-* ZipIt_Framebuffer_Example
-* ZipIt_WiFi_Connect
-* ZipIt_Audio
-## Hardware Overview
-* WiFi
-## Zipit Comments Not On Yahoo
-* Zipit_Notes
-## External Articles & Reviews
-## Project Updates
-* OpenZipIt
-* ZipIt_Tech_Details
-* ZipIt_WiFi_Flash
-* ZipIt_Compile
-* BusyBox
-## Orphaned Zipit pages
-* ZipItV2_JTAG
-* ZipItV2_UART
-* ZipIt_NFS_WL-HDD25
-* ZipIt_To_Do_List
-* Zipit_Scan
-* Delta_F
+BusyBox
+Delta_F
+OpenZipIt
+WiFi
+ZipIt_Adam_HOWTO
+ZipIt_Audio
+ZipIt_Compile
+ZipIt_Developer_Tutorial
+ZipIt_FAQ
+ZipIt_Framebuffer_Example
+Zipit_Hardware_Mods
+ZipIt_NFS_WL-HDD25
+Zipit_Notes
+Zipit_Scan
+ZipIt_Serial_Flash
+Zipit_Serial_Mod
+ZipIt_Software
+ZipIt_Tech_Details
+ZipIt_To_Do_List
+ZipItV2_JTAG
+ZipItV2_UART
+ZipIt_WiFi_Connect
+ZipIt_WiFi_Flash
+ZipIt_Winxp_NFS

@@ -167,7 +167,7 @@
 -   [Micro to Mini USB
     Adapter](http://www.gsm-support.net/mini-usb----micro-usb-converter-p1298.en.html)
     (does not convert the UART to USB)
--   [Flyswatter USB JTAG Debugger](http://eLinux.org/Flyswatter "Flyswatter") for
+-   [Flyswatter USB JTAG Debugger](../../.././dev_portals/Hardware_Hacking/Flyswatter/Flyswatter.md "Flyswatter") for
     upgrade/hacking
 -   [OpenOCD JTAG Debugger Software](http://eLinux.org/Openocd-Redux "Openocd-Redux") --
     currently doenst know anything about the LoCosto chips.
@@ -298,7 +298,7 @@ wrong!).
 
 ### Bootloader
 
--   a bootloader, such as [U-Boot](http://eLinux.org/U-Boot "U-Boot") or
+-   a bootloader, such as [U-Boot](../../.././dev_portals/Development_Platforms/Tegra/Mainline_SW/U-Boot/Tegra/Mainline_SW/U-Boot.md "U-Boot") or
     [APEX](http://eLinux.org/APEX "APEX"), will be needed to facilitate booting uClinux
 -   low level access to Flash memory via JTAG is now doable. ( see above
     )
@@ -320,7 +320,7 @@ wrong!).
 
 -   use [Buildroot](http://buildroot.busybox.net/) for initial testing
 -   use [uClibc](http://www.uclibc.org/) as core C library
--   use [BusyBox](http://eLinux.org/BusyBox "BusyBox") as basic utilities for testing
+-   use [BusyBox](../../.././dev_portals/Boot_Time/BusyBox/BusyBox.md "BusyBox") as basic utilities for testing
 
 ### Tools
 

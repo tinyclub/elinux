@@ -630,7 +630,7 @@ Also, there are tools available to use the information to show relative
 times between printks (scripts/show\_delta) and create graphs of
 durations in the kernel (scripts/bootgraph.pl)
 
-See [Printk Times](http://eLinux.org/Printk_Times "Printk Times") for more details
+See [Printk Times](../../.././dev_portals/Boot_Time/Printk_Times/Printk_Times.md "Printk Times") for more details
 
 ### Printing buffers as hex
 
@@ -703,10 +703,10 @@ last thing you do when you are tuning your kernel for size.
 
  Some page related to printk:
 
--   [Printk Times](http://eLinux.org/Printk_Times "Printk Times") - has information about
+-   [Printk Times](../../.././dev_portals/Boot_Time/Printk_Times/Printk_Times.md "Printk Times") - has information about
     how to turn on timestamps for each printk message
     -   [printk time stamps
-        sample](http://eLinux.org/Printk_Times_Sample_4 "Printk Times Sample 4")
+        sample](../../.././dev_portals/Boot_Time/Printk_Times/Printk_Times.md_Sample_4 "Printk Times Sample 4")
 -   [printk size information](http://eLinux.org/Printk_Size_Info "Printk Size Info")
 -   [Do Printk](http://eLinux.org/Do_Printk "Do Printk") - has information about a method
     of disabling printk messages on a per-module basis

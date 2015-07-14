@@ -154,7 +154,7 @@ See also
 ## Tools for analyzing Android Bootup
 
 -   logcat - see [Android Logging
-    System](http://eLinux.org/Android_Logging_System "Android Logging System")
+    System](../../../android_portal/android_sys_info/Android_Logging_System/Android_Logging_System.md "Android Logging System")
     -   try this command: 'adb logcat -d -b events | grep "boot"
 
 <!-- -->

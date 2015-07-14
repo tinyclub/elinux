@@ -151,12 +151,12 @@ similar) during startup.
 
 -   Examine /proc/timer\_list
 
-You can also examine the timer\_list, and see whether specific clocks
+    You can also examine the timer\_list, and see whether specific clocks
 are listed as supporting high resolution. Here is a dump of
-/proc/timer\_list on an [OSK](http://eLinux.org/OSK "OSK") (ARM-based) development board,
+/proc/timer\_list on an [OSK](../../.././dev_portals/Development_Platforms/OSK/OSK.md "OSK") (ARM-based) development board,
 showing the clocks configured for high resolution.
 
--   -   cat /proc/timer\_list
+    -   cat /proc/timer\_list
 
 <!-- -->
 
@@ -227,16 +227,16 @@ a value of 1. If so, then the high resolution timer feature is active.
 
 -   Run a test program
 
-You can run a small test program, and actually measure that the timers
+    You can run a small test program, and actually measure that the timers
 are returning in less than the period of a jiffy. If they are, this is
 the most definitive proof that your kernel supports high resolution
 timers. One example program you can try is
 [cyclictest](http://rt.wiki.kernel.org/index.php/Cyclictest). Here is a
 sample command line which will test timers using nanosleep:
 
--   -   cyclictest -n -p 80 -i 500 -l 5000
+    -   cyclictest -n -p 80 -i 500 -l 5000
 
-This does a test of clock\_nanosleep, with priority 80, at 500
+    This does a test of clock\_nanosleep, with priority 80, at 500
 microsecond intervals, running the 5000 iterations of the test.
 
 ## How to validate
@@ -256,10 +256,10 @@ See above with regard to cyclictest
 -   Status: implemented
 -   Architecture Support:
 
-(for each arch, one of: unknown, patches apply, compiles, runs, works,
+    (for each arch, one of: unknown, patches apply, compiles, runs, works,
 accepted)
 
--   -   i386: works
+    -   i386: works
     -   ARM: unknown
     -   PPC: works
     -   MIPS: unknown

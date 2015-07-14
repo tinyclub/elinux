@@ -8,9 +8,9 @@
 This page has a list of the companies or organizations that make
 processors or boards for embedded products. If you are looking for
 companies who sell Linux software or Linux-related services, see the
-[Vendors](http://eLinux.org/Vendors "Vendors") page. If you are looking for companies who
+[Vendors](../../embed_linux_info/Vendors/Vendors.md "Vendors") page. If you are looking for companies who
 sell end-user products based on Linux, see
-[Companies](http://eLinux.org/Companies "Companies"). If you are looking for information
+[Companies](../../embed_linux_info/Companies/Companies.md "Companies"). If you are looking for information
 about specific development boards, see [Category:Development
 Boards](http://elinux.org/Category:Development_Boards)
 
@@ -66,7 +66,7 @@ Boards](http://elinux.org/Category:Development_Boards)
         RealView](http://eLinux.org/ARM_RealView "ARM RealView"), [ARM
         Versatile](http://www.arm.com/products/tools/development-boards/versatile/index.php)
         and [ARM Integrator
-        Info](http://eLinux.org/ARM_Integrator_Info "ARM Integrator Info")
+        Info](../.././dev_portals/Development_Platforms/ARM_Integrator_Info/ARM_Integrator_Info.md "ARM Integrator Info")
 -   [Armadeus](http://www.armadeus.com)
     -   affordable ARM boards (Freescale i.MX + Xilinx Spartan FPGA)
     -   Armadeus started as a community project
@@ -246,9 +246,9 @@ Boards](http://elinux.org/Category:Development_Boards)
 -   [NVIDIA](http://www.nvidia.com/) - [Wikipedia
     entry](http://en.wikipedia.org/wiki/Nvidia)
     -   NVIDIA designs and manufactures both GeForce GPUs and
-        [Tegra](http://eLinux.org/Tegra "Tegra") SoCs.
+        [Tegra](../../hardware_pages/Tegra/Tegra.md "Tegra") SoCs.
     -   The [Jetson
-        TK1](http://eLinux.org/Tegra/Boards/NVIDIA_Jetson_TK1 "Tegra/Boards/NVIDIA Jetson TK1")
+        TK1](../../hardware_pages/Tegra/Tegra.md/Boards/NVIDIA_Jetson_TK1 "Tegra/Boards/NVIDIA Jetson TK1")
         board contains a Tegra SoC.
 
 ## Q

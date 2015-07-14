@@ -31,7 +31,7 @@ Please put an expiration date for the information, so we can remove
 information when it gets stale. Or even better, when you have obtained
 work, please remove your entry from this table.
 
-See the [Jobs](http://eLinux.org/Jobs "Jobs") page for jobs already posted to this site.
+See the [Jobs](../../embed_linux_info/Jobs/Jobs.md "Jobs") page for jobs already posted to this site.
 
 ### Instructions for Employers
 
@@ -39,7 +39,7 @@ Please contact the person below, if you have a position or contract work
 you would like to hire someone to do. This list is not intended to be
 used to ask for free support.
 
-You can also list your job on the [Jobs](http://eLinux.org/Jobs "Jobs") page.
+You can also list your job on the [Jobs](../../embed_linux_info/Jobs/Jobs.md "Jobs") page.
 
 ## **The List**
 

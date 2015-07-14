@@ -1,5 +1,2 @@
-# Tegra2
-## Topics
-* Tegra_Linux
-* Tegra_2
-## Hardware
+Tegra_2
+Tegra_Linux

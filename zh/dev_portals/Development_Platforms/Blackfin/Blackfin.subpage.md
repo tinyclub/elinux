@@ -1,3 +1,1 @@
-# Blackfin
-* JTAG
-## Further reading
+JTAG

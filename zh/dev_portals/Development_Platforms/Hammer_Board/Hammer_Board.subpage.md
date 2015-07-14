@@ -1,24 +1,15 @@
-# Hammer Board
-## Contents
-## Hammer Board Specifications
-* S3C2410
-## Interface Options
-* Hammer_Ethernet
-* Hammer_Bluetooth
-* Hammer_WiFi
-* Hammer_Webcam
-## Resources
-* Hammer_Board_HOWTOS
-* Hammer_Board_Software
-* Hammer_Board_Hardware
-* Hammer_Board_Application_Notes
-## Hammer Details
-* Hammer_Kit
-## Hammer Board Pinouts
-## Related Products
-* Hammer_Board_Carrier
-* Nail_Board
-* Hammer_RDP
-## Hammer Project pages
-* Xmas_Video
-* Drink_Mixer
+Drink_Mixer
+Hammer_Bluetooth
+Hammer_Board_Application_Notes
+Hammer_Board_Carrier
+Hammer_Board_Hardware
+Hammer_Board_HOWTOS
+Hammer_Board_Software
+Hammer_Ethernet
+Hammer_Kit
+Hammer_RDP
+Hammer_Webcam
+Hammer_WiFi
+Nail_Board
+S3C2410
+Xmas_Video

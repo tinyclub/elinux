@@ -201,7 +201,7 @@ Here's a poor-man's version of powertop:
 
 ## time API
 
-    - do_gettimeofday
+- do_gettimeofday
 
 ## High Resolution Timers
 
@@ -236,15 +236,16 @@ Interrupt"
 
 Linus said jiffies is not going away
 
-    - still need 32-bit counter, shouldn't be real-time value (too much overhead to calculate)
-    - high-res timers shouldn't be sub-HZ, but instead, HZ should be high and timer tick should not be 1:1 with HZ
-      - in other words, have HZ be high (like 2K), have the timer interrupt fire off at some lower frequency,
+- still need 32-bit counter, shouldn't be real-time value (too much overhead to calculate)
+- high-res timers shouldn't be sub-HZ, but instead, HZ should be high and timer tick should not be 1:1 with HZ
+    - in other words, have HZ be high (like 2K), have the timer interrupt fire off at some lower frequency,
       and increment jiffies by more than one on each interrupt.
-      - rationale for this is to keep a single sub-system
+    - rationale for this is to keep a single sub-system
 
 Arjan had good points about coalescing low-res timers
 
-    - 3 use cases:
+- 3 use cases:
+
     - low res timeouts
     - high res timer for periodic absolute wakeup (wake up every 10 ms, whether last one was late or nt
     - high res timer for periodic relative wakeup (wake up 10 ms from now)

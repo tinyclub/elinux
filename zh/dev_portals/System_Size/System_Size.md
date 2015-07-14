@@ -166,51 +166,48 @@ approximate size for a 2.6 kernel. (Table taken from page 25 of
 [http://logfs.org/\~joern/data\_structures.pdf](http://logfs.org/~joern/data_structures.pdf)
 )
 
-Hash Table
+<table border="1" cellspacing="0" cellpadding="5" align="center">
+<tr>
+<th>Hash Table         </th>
+<th>memory &lt; 512MiB RAM </th>
+<th> memory &gt;=512MiB RAM
+</th></tr>
+<tr>
+<th>                   </th>
+<th>32b/64b       </th>
+<th>32b/64b
+</th></tr>
+<tr>
+<td>TCP established    </td>
+<td>96k/192k      </td>
+<td>384k/768k
+</td></tr>
+<tr>
+<td>TCP bind           </td>
+<td> 64k/128k     </td>
+<td> 256k/512k
+</td></tr>
+<tr>
+<td>IP route cache     </td>
+<td> 128k/256k    </td>
+<td>   512k/1M
+</td></tr>
+<tr>
+<td>Inode-cache        </td>
+<td>  64k/128k    </td>
+<td>   64k/128k
+</td></tr>
+<tr>
+<td>Dentry cache       </td>
+<td>   32k/64k    </td>
+<td>    32k/64k
+</td></tr>
+<tr>
+<td>Total             </td>
+<td>  384k/768k   </td>
+<td> 1248k/2496k
+</td></tr></table>
 
-memory \< 512MiB RAM
-
-memory \>=512MiB RAM
-
-32b/64b
-
-32b/64b
-
-TCP established
-
-96k/192k
-
-384k/768k
-
-TCP bind
-
-64k/128k
-
-256k/512k
-
-IP route cache
-
-128k/256k
-
-512k/1M
-
-Inode-cache
-
-64k/128k
-
-64k/128k
-
-Dentry cache
-
-32k/64k
-
-32k/64k
-
-Total
-
-384k/768k
-
-1248k/2496k
 
 ##### kernel stack size
 

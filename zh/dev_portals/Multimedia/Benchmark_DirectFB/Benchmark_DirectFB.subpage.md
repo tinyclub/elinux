@@ -1,2 +1,0 @@
-# Benchmark DirectFB
-## Benchmarks

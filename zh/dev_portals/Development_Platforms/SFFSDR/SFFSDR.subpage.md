@@ -1,2 +1,1 @@
-# SFFSDR
-* DaVinci
+DaVinci

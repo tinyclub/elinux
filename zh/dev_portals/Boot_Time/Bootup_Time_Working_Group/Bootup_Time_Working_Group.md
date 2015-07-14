@@ -62,32 +62,32 @@ this issue.
 ### Current Tasks
 
 See the [Bootup Time Howto Task
-List](http://eLinux.org/Bootup_Time_Howto_Task_List "Bootup Time Howto Task List")
+List](../../.././dev_portals/Boot_Time/Bootup_Time_Howto_Task_List/Bootup_Time_Howto_Task_List.md "Bootup Time Howto Task List")
 
 ## Documents and information
 
 -   [Boot-up Time Definition Of
-    Terms](http://eLinux.org/Boot-up_Time_Definition_Of_Terms "Boot-up Time Definition Of Terms")
+    Terms](../../.././dev_portals/Boot_Time/Boot-up_Time_Definition_Of_Terms/Boot-up_Time_Definition_Of_Terms.md "Boot-up Time Definition Of Terms")
     - defintions of terms used by the working group
 -   /\\ - *no content yet* - [Boot-up Time Delay
-    Taxonomy](http://eLinux.org/Boot-up_Time_Delay_Taxonomy "Boot-up Time Delay Taxonomy")
+    Taxonomy](../../.././dev_portals/Boot_Time/Boot-up_Time_Delay_Taxonomy/Boot-up_Time_Delay_Taxonomy.md "Boot-up Time Delay Taxonomy")
     - list of delays categorized by boot phase, type and magnitude
 -   Presentation: - [Reducing Startup Time in Embedded Linux
     Systems](http://eLinux.org/images/7/78/ReducingStartupTime_v0.8.pdf "ReducingStartupTime v0.8.pdf")
     This document is a presentation that was prepared based on existing
     bootup time reduction techniques.
 -   [Kernel
-    Instrumentation](http://eLinux.org/Kernel_Instrumentation "Kernel Instrumentation") -
+    Instrumentation](../../.././dev_portals/Boot_Time/Kernel_Instrumentation/Kernel_Instrumentation.md "Kernel Instrumentation") -
     lists some known kernel instrumentation tools. These are of interest
     for measuring kernel startup time.
 -   [Filesystem
-    Information](http://eLinux.org/Filesystem_Information "Filesystem Information") -
+    Information](../../.././dev_portals/Boot_Time/Filesystem_Information/Filesystem_Information.md "Filesystem Information") -
     information about bootup times with various file systems
 
 ## Current Projects
 
 [Boot-up Time Reduction
-Howto](http://eLinux.org/Boot-up_Time_Reduction_Howto "Boot-up Time Reduction Howto") -
+Howto](../../.././dev_portals/Boot_Time/Boot-up_Time_Reduction_Howto/Boot-up_Time_Reduction_Howto.md "Boot-up Time Reduction Howto") -
 this is a project to catalog existing bootup time reduction techniques.
 Work on this project is under way. The wiki will serve as the primary
 repository of information gathered for this project.
@@ -102,19 +102,19 @@ repository of information gathered for this project.
     for some background research on this API
 -   Calibrate Delay Avoidance Specification - avoiding the cost of
     calibrate\_delay()
-    -   Done - see [Preset LPJ](http://eLinux.org/Preset_LPJ "Preset LPJ")
--   [IDE\_No\_Probe\_Specification](http://eLinux.org/IDE_No_Probe_Specification "IDE No Probe Specification")
+    -   Done - see [Preset LPJ](../../.././dev_portals/Boot_Time/Preset_LPJ/Preset_LPJ.md "Preset LPJ")
+-   [IDE\_No\_Probe\_Specification](../../.././dev_portals/Boot_Time/IDE_No_Probe/IDE_No_Probe.md_Specification "IDE No Probe Specification")
     - force kernel to observe the IDE "noprobe" command line option
 -   [IDE\_Preempt\_Specification](http://eLinux.org/IDE_Preempt_Specification "IDE Preempt Specification")
     - change IDE busywaits into preemptible timeouts
--   [Kernel\_XIP](http://eLinux.org/Kernel_XIP "Kernel XIP") - support Execute-In-Place
+-   [Kernel\_XIP](../../.././dev_portals/Boot_Time/Kernel_XIP/Kernel_XIP.md "Kernel XIP") - support Execute-In-Place
     for the kernel.
 
 ## Implementations and/or patches
 
 ### Measurement Systems
 
--   [Printk Times](http://eLinux.org/Printk_Times "Printk Times") - simple system for
+-   [Printk Times](../../.././dev_portals/Boot_Time/Printk_Times/Printk_Times.md "Printk Times") - simple system for
     showing timing information for each printk
 -   [Kernel Function
     Instrumentation](http://eLinux.org/Kernel_Function_Instrumentation "Kernel Function Instrumentation")
@@ -124,13 +124,13 @@ repository of information gathered for this project.
 
 ### Patches for Reducing Bootup Time
 
--   [Preset LPJ](http://eLinux.org/Preset_LPJ "Preset LPJ") - Allow the use of a preset
+-   [Preset LPJ](../../.././dev_portals/Boot_Time/Preset_LPJ/Preset_LPJ.md "Preset LPJ") - Allow the use of a preset
     loops\_per\_jiffy value
--   [IDE No Probe](http://eLinux.org/IDE_No_Probe "IDE No Probe") - Force kernel to
+-   [IDE No Probe](../../.././dev_portals/Boot_Time/IDE_No_Probe/IDE_No_Probe.md "IDE No Probe") - Force kernel to
     observe the ide\<x\>=noprobe option
 -   [IDE Preempt](http://eLinux.org/IDE_Preempt "IDE Preempt") - Make IDE driver init
     busywaits preemptible
--   [Kernel XIP](http://eLinux.org/Kernel_XIP "Kernel XIP") - Allow kernel to be executed
+-   [Kernel XIP](../../.././dev_portals/Boot_Time/Kernel_XIP/Kernel_XIP.md "Kernel XIP") - Allow kernel to be executed
     in-place in ROM or FLASH (code is not isolated yet, but is in the
     CELF source tree)
 

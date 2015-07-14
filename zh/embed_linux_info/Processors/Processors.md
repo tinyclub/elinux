@@ -8,7 +8,7 @@
 Here is a list of different processor families, with miscellaneous notes
 for development information:
 
-See also [Hardware Hacking](http://eLinux.org/Hardware_Hacking "Hardware Hacking") for a
+See also [Hardware Hacking](../../dev_portals/Hardware_Hacking/Hardware_Hacking.md "Hardware Hacking") for a
 list of systems that include these processors.
 
 ## Contents
@@ -77,7 +77,7 @@ than processors with MMU.
 
 Some major ARM platforms/SOCs are:
 
--   [Sitara](http://eLinux.org/Sitara "Sitara"), [DaVinci](http://eLinux.org/DaVinci "DaVinci") and
+-   [Sitara](http://eLinux.org/Sitara "Sitara"), [DaVinci](../.././dev_portals/Development_Platforms/DaVinci/DaVinci.md "DaVinci") and
     [OMAP](http://eLinux.org/OMAP "OMAP") from [Texas
     Instruments](http://www.ti.com/corp/docs/landing/davinci/firstproducts.html)
     -   TI lists where to find the Linux kernel GIT repositories for the
@@ -109,7 +109,7 @@ Some major ARM platforms/SOCs are:
         List](http://marc.info/?l=linux-arm-kernel&m=117869744222933&w=2).
 -   Philips LPC21xx series of ARM processors are currently the
     lowest-cost ARM processors available. But they have no MMU.
--   [JuiceBox](http://eLinux.org/JuiceBox "JuiceBox") uses a ARM S3C44B0X. It runs
+-   [JuiceBox](../.././dev_portals/Hardware_Hacking/JuiceBox/JuiceBox.md "JuiceBox") uses a ARM S3C44B0X. It runs
     uClinux.
 -   AT91 - by Atmel
     -   [AT91RM9200](http://www.atmel.com/devices/RM9200.aspx) - ARM920T
@@ -132,7 +132,7 @@ Some major ARM platforms/SOCs are:
     -   EP93xx - ARM920T based
 -   Samsung Electronics (System LSI)
     -   [S3C24xx](http://eLinux.org/S3C24xx "S3C24xx") - ARM 9 Series
-        -   [S3C2410](http://eLinux.org/S3C2410 "S3C2410")
+        -   [S3C2410](../.././dev_portals/Development_Platforms/S3C2410/S3C2410.md "S3C2410")
             [[1]](http://www.samsung.com/global/business/semiconductor/productInfo.do?fmly_id=836&partnum=S3C2410&xFmly_id=229)
             - ARM920T
         -   [S3C2440](http://eLinux.org/S3C2440 "S3C2440")
@@ -343,12 +343,12 @@ powerful software development environment for embedded and real-time
 systems. It is available for ARM, PowerPC and MIPS processors and
 consists of:
 
-       * Cross Development Tools (Compiler, Assembler, Linker etc.) to develop software for the target system.
-       * Native Tools (Shell, commands and libraries) which provide a standard Linux development environment that runs on the target system.
-       * U-Boot - Firmware that can be easily ported to new boards and processors.
-       * Linux - Kernel including the complete source-code with all device drivers, board-support functions etc.
-       * Xenomai - Real-Time and RTOS Emulation Framework
-       * SELF (Simple Embedded Linux Framework) as fundament to build your embedded systems on.
+* Cross Development Tools (Compiler, Assembler, Linker etc.) to develop software for the target system.
+* Native Tools (Shell, commands and libraries) which provide a standard Linux development environment that runs on the target system.
+* U-Boot - Firmware that can be easily ported to new boards and processors.
+* Linux - Kernel including the complete source-code with all device drivers, board-support functions etc.
+* Xenomai - Real-Time and RTOS Emulation Framework
+* SELF (Simple Embedded Linux Framework) as fundament to build your embedded systems on.
 
 All components of the ELDK are available for free with complete source
 code under GPL and other Free Software Licenses. Also, detailed
@@ -420,7 +420,7 @@ In 2010 Atmel stopped the further development of the AP7000 processor.
 
 ## Blackfin
 
--   [Blackfin](http://eLinux.org/Blackfin "Blackfin")
+-   [Blackfin](../.././dev_portals/Development_Platforms/Blackfin/Blackfin.md "Blackfin")
 
 ## m68k
 

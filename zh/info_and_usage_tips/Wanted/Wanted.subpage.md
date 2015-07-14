@@ -1,3 +1,1 @@
-# Wanted
-* Special:WantedPages
-## User-requested pages
+Special:WantedPages

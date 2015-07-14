@@ -80,7 +80,7 @@ operating system. Android, Inc. was acquired by Google in 2005.
 
  ASE 
 Android Scripting Environment - the old name of Scripting Layer for
-Android. See [Android Scripting](http://eLinux.org/Android_Scripting "Android Scripting")
+Android. See [Android Scripting](../../../android_portal/software_dev/Android_Scripting/Android_Scripting.md "Android Scripting")
 
 ## B
 
@@ -129,7 +129,7 @@ footprint. The VM is register-based, and runs classes compiled by a Java
 language compiler that have been transformed into the .dex format by the
 included "dx" tool.
 
-See [Android Dalvik VM](http://eLinux.org/Android_Dalvik_VM "Android Dalvik VM") for more
+See [Android Dalvik VM](../../../android_portal/android_sys_info/Android_Dalvik_VM/Android_Dalvik_VM.md "Android Dalvik VM") for more
 information
 
  Donut 
@@ -304,7 +304,7 @@ Saphire
 Scripting Layer for Android - an execution environment that let's users
 use scripting languages (such as Python or Ruby), instead of Java, to
 write programs for Android. See [Android
-Scripting](http://eLinux.org/Android_Scripting "Android Scripting")
+Scripting](../../../android_portal/software_dev/Android_Scripting/Android_Scripting.md "Android Scripting")
 
  SGL 
 2D graphics layer for Android applications

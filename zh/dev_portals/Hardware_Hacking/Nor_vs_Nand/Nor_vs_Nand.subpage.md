@@ -1,1 +1,0 @@
-# Nor vs Nand

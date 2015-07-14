@@ -1,11 +1,9 @@
-# Pixter
-* Pixter_Expansion_Slot
-* LH75411
-* ARM7TDMI
-* Embedded_OS
-* Pixter_Chip_List
-* Pixter_Expansion_Slot
-* RMS100
-* Pixter_Dev_Board
-* Pixter_Camera
-* Pixter_Dev_Cart
+ARM7TDMI
+Embedded_OS
+LH75411
+Pixter_Camera
+Pixter_Chip_List
+Pixter_Dev_Board
+Pixter_Dev_Cart
+Pixter_Expansion_Slot
+RMS100

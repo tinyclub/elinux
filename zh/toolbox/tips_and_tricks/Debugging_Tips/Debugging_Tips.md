@@ -8,11 +8,11 @@
 -   See the [Debugging\_Portal](http://eLinux.org/Debugging_Portal "Debugging Portal")
     page
 -   See the [Kernel Debugging
-    Tips](http://eLinux.org/Kernel_Debugging_Tips "Kernel Debugging Tips") page
+    Tips](../../../dbg_portal/kernel_dbg/Kernel_Debugging_Tips/Kernel_Debugging_Tips.md "Kernel Debugging Tips") page
 -   See also [Debugging
     Makefiles](http://eLinux.org/Debugging_Makefiles "Debugging Makefiles")
 -   [Debugging by
-    printing](http://eLinux.org/Debugging_by_printing "Debugging by printing")
+    printing](../../../dbg_portal/kernel_dbg/Debugging_by_printing/Debugging_by_printing.md "Debugging by printing")
 -   Debug user-space initialization:
     -   If you get a panic - "not syncing: Attempted to kill init!" it
         can be for many different reasons. Try setting

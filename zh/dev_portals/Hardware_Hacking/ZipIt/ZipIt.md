@@ -130,7 +130,7 @@ Additional [Zipit Notes](http://eLinux.org/Zipit_Notes "Zipit Notes")
 
 -   Keep checking the Yahoo BBS for the latest current status
 -   The core Linux components are now replaceable (including newer
-    [BusyBox](http://eLinux.org/BusyBox "BusyBox"), telnetd etc). Also a way of
+    [BusyBox](../../.././dev_portals/Boot_Time/BusyBox/BusyBox.md "BusyBox"), telnetd etc). Also a way of
     reflashing a non-solder modified device has been found.
 -   Eventually a software-only SDK will be released (soldering not
     necessary if you are careful with subsequent reflashing steps)

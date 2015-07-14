@@ -63,17 +63,17 @@ Android itself (not on Android application development).
             2010
         -   See Matt Porter's talk and Nina Wilner's talk at [ELC Europe
             2009
-            Presentations](http://eLinux.org/ELC_Europe_2009_Presentations "ELC Europe 2009 Presentations")
+            Presentations](../../.././dev_portals/Events/ELC_Europe_2009_Presentations/ELC_Europe_2009_Presentations.md "ELC Europe 2009 Presentations")
         -   See Tim Bird's talk and the Android tutorial at [ELC Europe
             2010
-            Presentations](http://eLinux.org/ELC_Europe_2010_Presentations "ELC Europe 2010 Presentations")
+            Presentations](../../.././dev_portals/Events/ELC_Europe_2010_Presentations/ELC_Europe_2010_Presentations.md "ELC Europe 2010 Presentations")
 
 -   Some CELF Japan Jamborees have technical content related to Android
     -   The following had Android presentations: [Japan Technical
         Jamboree
-        31](http://eLinux.org/Japan_Technical_Jamboree_31 "Japan Technical Jamboree 31"),
+        31](../../.././dev_portals/Events/Japan_Technical_Jamboree_31/Japan_Technical_Jamboree_31.md "Japan Technical Jamboree 31"),
         [Japan Technical Jamboree
-        34](http://eLinux.org/Japan_Technical_Jamboree_34 "Japan Technical Jamboree 34")
+        34](../../.././dev_portals/Events/Japan_Technical_Jamboree_34/Japan_Technical_Jamboree_34.md "Japan Technical Jamboree 34")
 
 ## Regional events
 

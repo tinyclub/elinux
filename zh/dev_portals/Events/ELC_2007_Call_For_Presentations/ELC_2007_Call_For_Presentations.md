@@ -26,7 +26,7 @@ for general information* about the conference.*)*
 ## Presentations Page
 
 -   All presentations can now be found on
-    [ELC\_2007\_Presentations](http://eLinux.org/ELC_2007_Presentations "ELC 2007 Presentations").
+    [ELC\_2007\_Presentations](../../.././dev_portals/Events/ELC_2007_Presentations/ELC_2007_Presentations.md "ELC 2007 Presentations").
 
 ## Guidelines
 
@@ -77,8 +77,8 @@ an individual will be accepted.
 
 For examples of presentations from previous years' conferences, see:
 [Tech Conference
-2005Docs](http://eLinux.org/Tech_Conference_2005Docs "Tech Conference 2005Docs") and [ELC
-2006 Presentations](http://eLinux.org/ELC_2006_Presentations "ELC 2006 Presentations")
+2005Docs](../../.././dev_portals/Security/Tech_Conference_2005Docs/Tech_Conference_2005Docs.md "Tech Conference 2005Docs") and [ELC
+2006 Presentations](../../.././dev_portals/Events/ELC_2006_Presentations/ELC_2006_Presentations.md "ELC 2006 Presentations")
 
 ## Technical Facilities
 

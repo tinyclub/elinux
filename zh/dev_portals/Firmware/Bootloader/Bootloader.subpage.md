@@ -1,14 +1,10 @@
-# Bootloader
-## List of bootloaders
-* APEX
-* Barebox
-* Blob
-* Coreboot
-* Kexecboot
-* U-Boot
-* Grub
-* Lilo
-* Syslinux
-## List of legacy boot loaders
-## See also
-* Bootloader_Security_Resources
+APEX
+Barebox
+Blob
+Bootloader_Security_Resources
+Coreboot
+Grub
+Kexecboot
+Lilo
+Syslinux
+U-Boot

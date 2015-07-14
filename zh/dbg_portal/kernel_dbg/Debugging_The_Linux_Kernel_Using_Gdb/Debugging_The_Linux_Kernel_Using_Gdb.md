@@ -30,7 +30,7 @@
 The majority of day to day kernel debugging is done by adding print
 statements to code by using the famous printk function. This technique
 is well described in [Kernel Debugging
-Tips](http://eLinux.org/Kernel_Debugging_Tips "Kernel Debugging Tips"). Using printk is a
+Tips](../../../dbg_portal/kernel_dbg/Kernel_Debugging_Tips/Kernel_Debugging_Tips.md "Kernel Debugging Tips"). Using printk is a
 relatively simple, effective and cheap way to find problems. But there
 are also many other Linux-grown techniques that take debugging and
 profiling to a higher level. On this page, we will discuss using the GNU

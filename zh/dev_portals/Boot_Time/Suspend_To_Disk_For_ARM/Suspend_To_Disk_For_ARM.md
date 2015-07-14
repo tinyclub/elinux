@@ -47,7 +47,7 @@ architecture. Related pages are:
 
 ### Hardware Information
 
-[OSK](http://eLinux.org/OSK "OSK") reference board is used.
+[OSK](../../.././dev_portals/Development_Platforms/OSK/OSK.md "OSK") reference board is used.
 
 Since OSK5912 board does not have disk to save suspend image to, flash
 is used to store suspend image.
@@ -257,7 +257,7 @@ resumes from previously suspended state.
 
 /\\ \* \* \* WARNING \* \* \* /\\ This feature is very experimental,
 Your boot loader might get corrupted. /\\ To restore boot loader, refer
-[osk page](http://eLinux.org/OSK "OSK")], "Flash Recovery Utility" section.
+[osk page](../../.././dev_portals/Development_Platforms/OSK/OSK.md "OSK")], "Flash Recovery Utility" section.
 
 ### what is it
 
@@ -306,7 +306,7 @@ Below is example installation
     OMAP5912 OSK # reset
 
 
- Again, if you are messed up, take a look at [osk page](http://eLinux.org/OSK "OSK")],
+ Again, if you are messed up, take a look at [osk page](../../.././dev_portals/Development_Platforms/OSK/OSK.md "OSK")],
 "Flash Recovery Utility" section.
 
 

@@ -1,29 +1,4 @@
-# Companies
-## Contents
-## Overview
-* Vendors
-* Source_code_download_sites
-## A
-## B
-## C
-## D
-## E
-## G
-* SheevaPlug
-## H
-## I
-## K
-## L
-## M
-## N
-## O
-## P
-## R
-## S
-## T
-* TechnologicSystems
-## V
-## W
-## X
-## 0-9
-## Instructions for submitters
+SheevaPlug
+Source_code_download_sites
+TechnologicSystems
+Vendors
