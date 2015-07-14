@@ -12,7 +12,7 @@
 ## 内容
 
 -   [2 简介](#简介)
--   [3 实时领域 Wiki](#实时领域 Wiki)
+-   [3 实时领域 Wiki](#实时领域Wiki)
 -   [4 软件项目](#软件项目)
 -   [5 硬件实现](#硬件实现)
 -   [6 文档](#文档)
@@ -52,7 +52,7 @@ Tools for PRUSS
 
 ## 文档
 
--   [Building Embedded Linux Systems, 2nd edition]
+-   [构建嵌入式Linux系统，第二版]
     (http://www.amazon.com/Building-Embedded-Linux-Systems-Yaghmour/dp/0596529686)
     讨论了实时抢占的补丁.
 -   [CELF Realtime 规范](http://tree.celinuxforum.org/CelfPubWiki/RTSpecDraft_5fR2)
