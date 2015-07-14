@@ -7,27 +7,26 @@
 
 ## 目录
 
--   [2 简介](#简介)
--   [3 技术/项目主页](#技术/项目主页)
--   [4 Linux Kernel中的安全子系统](#Linux Kernel中的安全子系统)
+-   [2 简介](#Introduction)
+-   [3 技术/项目主页](#Technology/Project pages)
+-   [4 Linux Kernel中的安全子系统](#security-systems-in-linux-kernel)
     -   [4.1 SELinux](#selinux)
     -   [4.2 Tomoyo](#tomoyo)
     -   [4.3 SMACK](#smack)
--   [5 比较老的信息 (2005年前来自于 CELF 调查信息)](#2005年前来自于 CELF 调查信息)
-    -   [5.1 文档](#文档)
-    -   [5.2 关键需求与相关技术点](#关键需求与相关技术点)
-    -   [5.3 资源](#资源)
-        -   [5.3.1 安全框架](#安全框架)
-        -   [5.3.2 安全组件](#安全组件)
-        -   [5.3.3 安全特性](#安全特性)
-        -   [5.3.4 其他资源](#其他资源)
-            -   [5.3.4.1 安全活动](#安全活动)
-            -   [5.3.4.2 邮件列表](#邮件列表)
-            -   [5.3.4.3 会议](#会议)
-            -   [5.3.4.4 与安全相关的文章](#与安全相关的文章)
-            -   [5.3.4.5 论文](#论文)
-            -   [5.3.4.6 简单的开源代码](#简单的开源代码)
-
+-   [5 比较老的信息 (2005年前来自于 CELF 调查信息)](#older-information-from-celf-investigations-prior-to-2005)
+    -   [5.1 文档](#documents)
+    -   [5.2 关键需求与相关技术点](#key-requirements-and-the-related-technologies)
+    -   [5.3 资源](#resources)
+        -   [5.3.1 安全框架](#security-frameworks)
+        -   [5.3.2 安全组件](#security-components)
+        -   [5.3.3 安全特性](#security-features)
+        -   [5.3.4 其他资源](#other-resources)
+            -   [5.3.4.1 安全活动](#security-activities)
+            -   [5.3.4.2 邮件列表](#mailing-lists)
+            -   [5.3.4.3 会议](#conferences)
+            -   [5.3.4.4 与安全相关的文章](#security-articles)
+            -   [5.3.4.5 论文](#papers)
+            -   [5.3.4.6 简单的开源代码](#sample-and-opensource-code)
 
 ## 简介
 
@@ -338,8 +337,8 @@ LOMAC 的目标是创建权限访问控制用来保护特定的用户。LOMAC实
 ### 其他资源
 
 -   启动设备的安全性
-    -   安全硬件资源 -- [安全硬件资源](http://eLinux.org/Security_Hardware_Resources "Security Hardware Resources")
-    -   与Bootloader安全相关的资源 -- [与Bootloader安全相关的资源](http://eLinux.org/Bootloader_Security_Resources "Bootloader Security Resources")
+    -   安全硬件资源 -- [安全硬件资源](../.././dev_portals/Security/Security_Hardware_Resources/Security_Hardware_Resources.md "Security Hardware Resources")
+    -   与Bootloader安全相关的资源 -- [与Bootloader安全相关的资源](../.././dev_portals/Security/Bootloader_Security_Resources/Bootloader_Security_Resources.md "Bootloader Security Resources")
 
 #### 安全活动
 
