@@ -1,7 +1,9 @@
-> From: [eLinux.org](http://eLinux.org/Real_Time "http://eLinux.org/Real_Time")
+> 原文: [eLinux.org](http://eLinux.org/Real_Time "http://eLinux.org/Real_Time")
+> 翻译：[hduffddybz](https://github.com/hduffddybz)
+> 校订：[]()
 
 
-# Real Time
+# 实时
 
 
 
@@ -9,50 +11,38 @@
 
 
 
-## Contents
+## 内容
 
--   [2 Introduction](#introduction)
--   [3 Real Time Wiki](#real-time-wiki)
--   [4 Software Projects](#software-projects)
--   [5 Hardware Implementations](#hardware-implementations)
--   [6 Documents](#documents)
--   [7 Further Open Source Projects](#further-open-source-projects)
+-   [2 简介](#introduction)
+-   [3 实时领域 Wiki ](#real-time-wiki)
+-   [4 软件项目](#software-projects)
+-   [5 硬件实现](#hardware-implementations)
+-   [6 文档](#documents)
+-   [7 更多开源项目](#further-open-source-projects)
 
 
-## Introduction
+## 简介
 
-This page has information about Real-time usage of Linux. Also this page
-has information about timing systems for Linux. This is of interest to
-CE Linux Forum members, because many consumer electronics products have
-realtime requirements (e.g. in the areas of multi-media presentation, or
-communications)
+该页面有实时 Linux 的相关信息. 也有 Linux 时间系统的相关消息. CE Linux 社区对此感兴趣是因为许多消费电子产品有实时需求 (例如在多媒体展示领域，或者是通信领域)
 
-## Real Time Wiki
+## 实时领域 Wiki
 
--   Please note that the primary source of information for Real Time
-    Linux information is the new [RTWiki](http://rt.wiki.kernel.org/).
+-   需注意到实时 Linux 的信息主要来源于新的 [RTWiki](http://rt.wiki.kernel.org/).
 
-## Software Projects
+## 软件项目
 
--   [Realtime Preemption](../.././dev_portals/Real_Time/Realtime_Preemption/Realtime_Preemption.md "Realtime Preemption") -
-    Ingo Molnar's patchset to add realtime preemption to the 2.6 Linux
-    kernel
--   [Kernel Timer Systems](../.././dev_portals/Real_Time/Kernel_Timer_Systems/Kernel_Timer_Systems.md "Kernel Timer Systems")
-    - Various new proposals for changing the kernel timing system
--   [Soft IRQ Threads](../.././dev_portals/Real_Time/Soft_IRQ_Threads/Soft_IRQ_Threads.md "Soft IRQ Threads") -
-    Technology to put SoftIRQs in threads so they can be preempted.
-    -   ***NOTE:** Soft IRQ threads are now (Oct 2007) incorporated into
-        the [Realtime
-        Preemption](../.././dev_portals/Real_Time/Realtime_Preemption/Realtime_Preemption.md "Realtime Preemption") patch*
--   [High Resolution
-    Timers](../.././dev_portals/Real_Time/High_Resolution_Timers/High_Resolution_Timers.md "High Resolution Timers") - A system
-    to support timers with sub-jiffy resolution
--   [Variable Scheduling
-    Timeouts](../.././dev_portals/Real_Time/Variable_Scheduling_Timeouts/Variable_Scheduling_Timeouts.md "Variable Scheduling Timeouts")
-    - A system to support variable timeouts for periodic system
-    activities (also known as Tickless)
+-   [实时抢占](http://eLinux.org/Realtime_Preemption "Realtime Preemption") -
+    Ingo Molnar 给 Linux2.6 内核增添的一系列实时抢占的补丁
+-   [内核时钟系统](http://eLinux.org/Kernel_Timer_Systems "内核时钟系统")
+    - 改变内核时钟系统的不同提议
+-   [软中断](http://eLinux.org/Soft_IRQ_Threads "软中断") -
+    将软件中断线程化使得它能够被抢占
+    -   ***NOTE:** 软中断在 2007 10 月被并入 [Realtime Preemption](http://eLinux.org/Realtime_Preemption "Realtime Preemption") 补丁中
+-   [高精度定时器](http://eLinux.org/High_Resolution_Timers "高精度定时器") - 系统支持非常高的定时精度
+-   [VST](http://eLinux.org/Variable_Scheduling_Timeouts "Variable Scheduling Timeouts")
+    - 系统支持 tickless 模式
 
-## Hardware Implementations
+## 硬件实现
 
 Ti AM18XX PRUSSv1
 
@@ -62,83 +52,55 @@ Tools for PRUSS
 
 
 
-## Documents
+## 文档
 
--   [Building Embedded Linux Systems, 2nd
-    edition](http://www.amazon.com/Building-Embedded-Linux-Systems-Yaghmour/dp/0596529686)
-    discusses the realtime preemption patch.
--   [CELF Realtime
-    Specification](http://tree.celinuxforum.org/CelfPubWiki/RTSpecDraft_5fR2)
-    (from 2004, so it's pretty old)
--   Realtime Preemption presentation by Manas at the 2005 CELF Technical
-    Conference -
+-   [构建嵌入式 Linux 系统，第二版]
+    (http://www.amazon.com/Building-Embedded-Linux-Systems-Yaghmour/dp/0596529686)
+    讨论了实时抢占的补丁.
+-   [ CELF Realtime 规范](http://tree.celinuxforum.org/CelfPubWiki/RTSpecDraft_5fR2)
+    (来源于 2004 年，相当旧的资料了)
+-   Manas 于 2005 年在 CELF 技术会议上展示的实时抢占补丁
     [Media:Real-Time-Preemption-Patchset.pdf](http://eLinux.org/images/4/4e/Real-Time-Preemption-Patchset.pdf "Real-Time-Preemption-Patchset.pdf")
--   [Realtime Testing Best
-    Practices](../.././dev_portals/Real_Time/Realtime_Testing_Best_Practices/Realtime_Testing_Best_Practices.md "Realtime Testing Best Practices")
-    - a document to show recent testing results, and give hints for how
-    different tests are conducted and what pitfalls to avoid.
--   [Real time in embedded Linux
-    systems](http://free-electrons.com/articles/realtime/)
--   [Using Real-Time
-    Linux](http://www.celinux.org/elc08_presentations/Using_Real-Time_Linux.KlaasVanGend.ELC2008.pdf)
-    - Presentation by Klaas van Gends at the ELC 2008. The
-    [video](http://free-electrons.com/pub/video/2008/elc/elc2008-klaas-van-gend-using-real-time-linux.ogg)
-    is available
--   Frank Rowand's series of talks
-    -   *Adventures in real-time performance tuning*
-        -   Part 1,
-            [slides](http://tree.celinuxforum.org/CelfPubWiki/ELCEurope2008Presentations?action=AttachFile&do=get&target=adventures_in_real_time_performance_tuning_part_1-no_hidden.pdf)
-            and
-            [video](http://free-electrons.com/pub/video/2008/elce/elce2008-rowand-adventures-real-time-part1.ogv)
-            ELCE 2008 version
-        -   Part 2,
-            [slides](http://tree.celinuxforum.org/CelfPubWiki/ELCEurope2008Presentations?action=AttachFile&do=get&target=adventures_in_real_time_performance_tuning_part_2-no_hidden.pdf)
-            and
-            [video](http://free-electrons.com/pub/video/2008/elce/elce2008-rowand-adventures-real-time-part2.ogv)
-            ELCE 2008 version
-    -   Musings On Analysis of Measurements of a Real-Time Workload
-        [slides](http://tree.celinuxforum.org/CelfPubWiki/ELC2009Presentations?action=AttachFile&do=get&target=musings_on_analysis_of_measurements_of_a_real-time_workload.pdf)
-        ELC 2009 version and
-        [video](http://free-electrons.com/pub/video/2009/elce/elce2009-rowand-measurement-diagnostic-tools.ogv)
-    -   Real-Time Linux Failure
-        [slides](http://eLinux.org/images/b/be/Real_time_linux_failure.pdf "Real time linux failure.pdf")
-        ELC 2010 version and [full HD
-        video](http://free-electrons.com/pub/video/2011/elc/elc-2011-rowand-real-time-issues-i-cache-locks.webm)
-        and [450x800
-        video](http://free-electrons.com/pub/video/2011/elc/elc-2011-rowand-real-time-issues-i-cache-locks-x450p.webm)
-    -   How Linux PREEMPT\_RT Works
-        [slides](http://eLinux.org/images/5/51/Elce11_rowand.pdf "Elce11 rowand.pdf")
-        ELCE 2011 version
--   *Real-time vs real-fast, how to choose*, conference given by Paul E.
-    McKenney at the Ottawa Linux Symposium 2008.
-    [Paper](http://ols.fedoraproject.org/OLS/Reprints-2008/mckenney-reprint.pdf)
-    and
-    [video](http://free-electrons.com/pub/video/2008/ols/ols2008-paul-mckenney-real-time-vs-real-fast.ogg)
+-   [实时测试的最佳实践](http://eLinux.org/Realtime_Testing_Best_Practices "Realtime Testing Best Practices")
+    - 展示了最近测试结果的文档，给出了关于不同实验该如何测试的提示以及该如何避免错误。
+-   [实时嵌入式 Linux ](http://free-electrons.com/articles/realtime/)
+-   [使用实时 Linux ](http://www.celinux.org/elc08_presentations/Using_Real-Time_Linux.KlaasVanGend.ELC2008.pdf)
+    - Klaas van Gends 于 2008 年在 ELC 做的展示. [视频](http://free-electrons.com/pub/video/2008/elc/elc2008-klaas-van-gend-using-real-time-linux.ogg).
+-   Frank Rowand's 一系列演讲
+    -   *实时性能调整上的经验*
+        -   第一部分,
+            [演示文稿](http://tree.celinuxforum.org/CelfPubWiki/ELCEurope2008Presentations?action=AttachFile&do=get&target=adventures_in_real_time_performance_tuning_part_1-no_hidden.pdf)
+            [视频](http://free-electrons.com/pub/video/2008/elce/elce2008-rowand-adventures-real-time-part1.ogv)ELCE 2008 版本
+        -   第二部分,
+            [演示文稿](http://tree.celinuxforum.org/CelfPubWiki/ELCEurope2008Presentations?action=AttachFile&do=get&target=adventures_in_real_time_performance_tuning_part_2-no_hidden.pdf)
+            [视频](http://free-electrons.com/pub/video/2008/elce/elce2008-rowand-adventures-real-time-part2.ogv) ELCE 2008 版本
+    -   实时负载测量的一些分析
+        [演示文稿](http://tree.celinuxforum.org/CelfPubWiki/ELC2009Presentations?action=AttachFile&do=get&target=musings_on_analysis_of_measurements_of_a_real-time_workload.pdf)
+        [视频](http://free-electrons.com/pub/video/2009/elce/elce2009-rowand-measurement-diagnostic-tools.ogv) ELC 2009 版本
+    -   实时Linux的失败
+        [演示文稿](http://eLinux.org/images/b/be/Real_time_linux_failure.pdf "Real time linux failure.pdf")
+        [高清视频](http://free-electrons.com/pub/video/2011/elc/elc-2011-rowand-real-time-issues-i-cache-locks.webm)
+        [450x800视频](http://free-electrons.com/pub/video/2011/elc/elc-2011-rowand-real-time-issues-i-cache-locks-x450p.webm) ECL 2010 版本
+    -   Linux PREEMPT\_RT 是如何工作的
+        [演示文稿](http://eLinux.org/images/5/51/Elce11_rowand.pdf "Elce11 rowand.pdf") ELCE 2011 版本
+-   实时跟快速的比较, 该如何选择, Paul E.
+    McKenney 于 2008 年在 Ottawa Linux Symposium会议上所做演讲.
+    [文章](http://ols.fedoraproject.org/OLS/Reprints-2008/mckenney-reprint.pdf)
+    [视频](http://free-electrons.com/pub/video/2008/ols/ols2008-paul-mckenney-real-time-vs-real-fast.ogg)
 
--   Paper: "[Embedded GNU/Linux and Real-Time an executive
-    summary](http://www.reliableembeddedsystems.com/pdfs/2010_03_04_rt_linux.pdf)",
-    2010 by Robert Berger
-    -   This papers, prepared for the Embedded World Conference 2010,
-        compares different real-time approaches (including PREEMPT\_RT
-        and dual-kernel approaches).
-    -   The paper has an extensive list of references.
--   Tutorial [RT-Preempt
-    Tutorial](../.././dev_portals/Real_Time/RT-Preempt_Tutorial/RT-Preempt_Tutorial.md "RT-Preempt Tutorial")
--   [OSADL Realtime
-    Page](https://www.osadl.org/Realtime-Linux.projects-realtime-linux.0.html)
-    with realtime latency
-    [testing](https://www.osadl.org/Continuous-latency-monitoring.qa-farm-monitoring.0.html)
-    farm.
+-   文章: "[Embedded GNU/Linux and Real-Time an executive
+    summary](http://www.reliableembeddedsystems.com/pdfs/2010_03_04_rt_linux.pdf)",2010 by Robert Berger
+    -   该文章为 2010 年的 Embedded World Conference 所写，包含了不同实时方法的比较（包括了 PREEMPT_RT 和双内核）
+    -   该文章有许多参考文献列表.
+-   教程 [ RT-Preempt 教程](http://eLinux.org/RT-Preempt_Tutorial "RT-Preempt Tutorial")
+-   [ OSADL Realtime 页面](https://www.osadl.org/Realtime-Linux.projects-realtime-linux.0.html)
+    包含了实时延时的测试[testing](https://www.osadl.org/Continuous-latency-monitoring.qa-farm-monitoring.0.html).
 
-## Further Open Source Projects
+## 更多开源项目
 
--   [Xenomai](http://www.xenomai.org) - Real-time development framework,
-    closely cooperating with the Linux kernel. Among other features, it
-    provides a migration path from various RTOSes like VxWorks, PSOS+,
-    etc. to Linux based on so-called skins.
+-   [Xenomai](http://www.xenomai.org) - 实时开发框架,其跟 Linux 社区有着紧密的合作. 在其他功能方面，其提供了从 VxWorks,PSOS+ 等其他 RTOS 迁移到 Linux 的途径，其依赖于所谓的 skins 机制。
 
 
 [Category](http://eLinux.org/Special:Categories "Special:Categories"):
 
 -   [Real Time](http://eLinux.org/Category:Real_Time "Category:Real Time")
-
