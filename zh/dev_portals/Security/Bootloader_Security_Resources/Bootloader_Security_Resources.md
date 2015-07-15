@@ -1,97 +1,85 @@
-> From: [eLinux.org](http://eLinux.org/Bootloader_Security_Resources "http://eLinux.org/Bootloader_Security_Resources")
+> 摘自: [eLinux.org](http://eLinux.org/Bootloader_Security_Resources "http://eLinux.org/Bootloader_Security_Resources")
 
 
-# Bootloader Security Resources
+# 与Bootloader安全相关的资源
 
 
 
-## Contents
+## 目录
 
--   [1 Overview](#overview)
--   [2 Technology/Project pages](#technology-project-pages)
--   [3 Security Enhancements](#security-enhancements)
-    -   [3.1 Trusted Computing Group
-        (TCG)](#trusted-computing-group-tcg)
--   [4 Open Source Projects/Mailing
-    Lists](#open-source-projects-mailing-lists)
+-   [1 概述](#overview)
+-   [2 相关技术/项目主页](#technology-project-pages)
+-   [3 安全措施的提高](#security-enhancements)
+    -   [3.1 可信计算集群(TCG)](#trusted-computing-group-tcg)
+-   [4 开源项目/邮件列表](#open-source-projects-mailing-lists)
     -   [4.1 RedBoot/eCos](#redboot-ecos)
     -   [4.2 U-Boot](#u-boot)
     -   [4.3 GRUB](#grub)
     -   [4.4 EtherBoot](#etherboot)
--   [5 Other Resources](#other-resources)
+-   [5 其他资源](#other-resources)
 
-## Overview
+## 概述
 
-This page has security information about bootloaders.
+这个页面主要包括和bootloaders安全相关的信息。
 
-## Technology/Project pages
+## 相关技术/项目主页
 
--   [Security](http://eLinux.org/Security "Security")
--   [Security Hardware
-    Resources](http://eLinux.org/Security_Hardware_Resources "Security Hardware Resources")
+-   [安全](http://eLinux.org/Security "Security")
+-   [与硬件安全相关的资源](http://eLinux.org/Security_Hardware_Resources "Security Hardware Resources")
 
-## Security Enhancements
+## 安全措施的提高
 
-There are two methods of booting
+目前系统由两种方式启动：
 
--   Trusted/Authenticated Boot: just reporting
--   Secure Boot: boot can be halted
+-   可信/认证下的启动: 仅仅是报告
+-   安全启动: 系统启动期间可以被挂起
 
-### Trusted Computing Group (TCG)
+### 可信计算集群 (TCG)
 
-TCG is a hardware-based security solution not only for the PC platform,
-but also applicable for embedded devices. To understand the TCG, [TCG
-Specification Architecture
-Overview](https://www.trustedcomputinggroup.org/groups/TCG_1_0_Architecture_Overview.pdf)
-is a good document.
+TCG是一个基于硬件的PC平台安全解决方案，并且也适用于嵌入式设备。为了理解TCG，
+我们可以查看[TCG 架构规格概述](https://www.trustedcomputinggroup.org/groups/TCG_1_0_Architecture_Overview.pdf)
+这个文档非常不错。
 
-Using the Trusted Platform Module(TPM) security chip and write-protected
-boot-code, we will be able to implement the Trusted Boot efficiently.
-Unfortunately, Many existing TPMs are designed for PC Platform, it
-requires LPC bus. Thus you have to use glue logic to use such TPM with
-your system. But, Atmel(R) has been released TPM chip, AT97SC3201S which
-has I2C/SMBus interface.
+使用可信平台模块（TPM）安全芯片和写保护的启动代码，我们可以有效的实现可信启动。不幸的是，
+现有的TPM主要实现在PC平台上，而且TPM需要LPC 总线。因此我们必须将蓝色逻辑线运用在我们的
+系统上。目前 Atmel(R) 平台已经发布了 TPM 芯片, AT97SC3201S 提供了I2C/SMBus 接口。
 
-## Open Source Projects/Mailing Lists
+## 开源项目/邮件列表
 
 ### RedBoot/eCos
 
--   [RedBoot](http://sources.redhat.com/redboot/) is a complete
-    bootstrap environment for embedded systems. Based on the eCos.
-    Following security enhancement was based on the RedBoot.
--   [High Robustness Bootloader for x86
-    Platform](http://www.ece.uvic.ca/~ece499/2003a/group05/High%20Reliability%20Bootloader%20for%20x86%20-%20Final%20Report.htm)
-    provide the capability of having signed program binary images.
+-   [RedBoot](http://sources.redhat.com/redboot/) 是面向嵌入式系统提供
+    bootstrap环境的软件，在RedBoot基础上基于 eCos 设计。
+-   [x86平台下高健壮性的Bootloader](http://www.ece.uvic.ca/~ece499/2003a/group05/High%20Reliability%20Bootloader%20for%20x86%20-%20Final%20Report.htm)
+    提供具有二进制代码签名的功能。
 
 ### U-Boot
 
-Project site: [u-boot](http://sourceforge.net/projects/u-boot/)
+项目主页: [u-boot](http://sourceforge.net/projects/u-boot/)
 
 ### GRUB
 
-[GRUB](http://www.gnu.org/software/grub/) is a bootloader for PC
-Platform. There are two patches to enable the TCG's Trusted Boot.
+[GRUB](http://www.gnu.org/software/grub/) 是基于PC平台的bootloader
+。下面有两个补丁可以使得GRUB具有可信启动的功能。
 
-(In this case, the BIOS must support TCG Trusted Boot)
+(这种情形，BIOS必须支持TCG 可信启动)
 
 -   [University Bochum, Trusted
     Grub](http://www.prosec.rub.de/trusted_grub.html)
 -   [TrouSerS, GRUB TCG
     patch](http://trousers.sourceforge.net/grub.html)
 
-GRUB provides a password feature, only administrator can start the
-interactive operations.
+GRUB提供了密码特性，只有系统管理员可以启动交互操作。
 
 ### EtherBoot
 
-[EtherBoot](http://www.etherboot.org/) is a software package for
-creating ROM images that can download code over an Ethernet network to
-be executed on an x86 computer.
+[EtherBoot](http://www.etherboot.org/) 是一个软件包，可以通过以太网下载ROM镜像到本地，
+在x86架构的计算机执行引导。
 "[SafeBootMode](http://wiki.etherboot.org/pmwiki.php/Main/SafeBootMode)
-means any NBI image that's downloaded is checked whether it contains a
-valid digital signature and if not, the user is notified."
+意味着任何 下载的NBI镜像被检查是否包含安全的数字签名，如果没有的话，用户
+会收到通知。"
 
-# Other Resources
+# 其他资源
 
 -   W. A. Arbaugh , D. J. Farber , J. M. Smith, A secure and reliable
     bootstrap architecture, Proceedings of the 1997 IEEE Symposium on
@@ -102,8 +90,8 @@ valid digital signature and if not, the user is notified."
     Startup](http://www.microsoft.com/whdc/system/platform/pcdesign/secure-start_tech.mspx)
 
 
-[Categories](http://eLinux.org/Special:Categories "Special:Categories"):
+[目录](http://eLinux.org/Special:Categories "Special:Categories"):
 
--   [Security](http://eLinux.org/Category:Security "Category:Security")
+-   [安全](http://eLinux.org/Category:Security "Category:Security")
 -   [Bootloader](http://eLinux.org/Category:Bootloader "Category:Bootloader")
 
