@@ -80,14 +80,15 @@
     * 请尽量遵守英文原稿的格式
     * 不要翻译目录里头的：`(#xxxx)`，`build-toc.sh` 用它自动重构中文链接
     * 请规范使用 [Markdown 语法][markdown]
-    * 英文短语前后须加空格，以便获得更好的视觉感受
+    * 英文和数字短语前后须加空格，以便获得更好的视觉感受
     * 代码片段上下须加空行，代码片段可以用 \`\`\` 前后括起来，请参考[Markdown][markdown] `Code and Syntax Highlighting` 一节。
+    * --target 和 --host 之类的命令或者参数最好用标示符 \` 括起来。效果如：`--target` 和 `--host`
     * 全篇要统一用中文标点符号，全部用全角。
     * 碰到专业名词，特定缩写，不需要翻译。
     * 不保留英文原文。
     * 请在文件头注明如下信息（校订请列出所有提供了反馈并被采纳的同学，翻译和校订以@lzufalcon为例）：
 
-	> 来源：[eLinux.org](http://elinux.org/Boot_Time.md)<br/>
+	> 原文：[eLinux.org](http://elinux.org/Boot_Time.md)<br/>
 	> 翻译：[@lzulfacon](https://github.com/lzufalcon)<br/>
 	> 校订：[@lzulfacon](https://github.com/lzufalcon)<br/>
 
