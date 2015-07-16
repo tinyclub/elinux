@@ -1,11 +1,8 @@
-> From: [eLinux.org](http://eLinux.org/Rpi_HardwareHistory "http://eLinux.org/Rpi_HardwareHistory")
+> From: [eLinux.org](http://eLinux.org/RPi_HardwareHistory "http://eLinux.org/RPi_HardwareHistory")
 
 
 # RPi HardwareHistory
 
-
-(Redirected from [Rpi
-HardwareHistory](http://eLinux.org/index.php?title=Rpi_HardwareHistory&redirect=no "Rpi HardwareHistory"))
 
 
 

@@ -1,1 +1,0 @@
-High_Resolution_Timers

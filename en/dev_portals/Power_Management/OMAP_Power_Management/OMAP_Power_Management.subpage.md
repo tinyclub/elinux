@@ -1,2 +1,0 @@
-N900
-OMAP_UART_pm_debugging

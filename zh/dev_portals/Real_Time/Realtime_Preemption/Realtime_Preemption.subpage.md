@@ -1,5 +1,0 @@
-Monta_Vista
-Preemption_Instrumentation
-Red_Hat
-Rt_Preempt_Subpatch_Table
-Time_Sys

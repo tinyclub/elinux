@@ -1,3 +1,0 @@
-DirectFB
-EFL
-X11

@@ -1,6 +1,0 @@
-Device_Power_Management_Specification
-Dynamic_Power_Management_Specification
-OMAP_Power_Management
-Power_Management_Specification
-Static_Power_Management_Specification
-Texas_Instruments
