@@ -304,7 +304,7 @@
         - [Ottawa Linux Symposium 2007](./dev_portals/Events/Ottawa_Linux_Symposium_2007/Ottawa_Linux_Symposium_2007.md)
         - [Proposed OSCON 2012 Embedded Linux track](./dev_portals/Events/Proposed_OSCON_2012_Embedded_Linux_track/Proposed_OSCON_2012_Embedded_Linux_track.md)
         - [Technical Conference 2005](./dev_portals/Events/Technical_Conference_2005/Technical_Conference_2005.md)
-    * [Glossary](dev_portals/Glossary/Glossary.md)
+    * [词汇表](dev_portals/Glossary/Glossary.md)
         - [JTAG](./dev_portals/Glossary/JTAG/JTAG.md)
         - [Power Management Definition Of Terms](./dev_portals/Glossary/Power_Management_Definition_Of_Terms/Power_Management_Definition_Of_Terms.md)
         - [Real Time Terms](./dev_portals/Glossary/Real_Time_Terms/Real_Time_Terms.md)
