@@ -3,33 +3,39 @@
 > 报名/参与：*Star/fork* [eLinux github 仓库](https://github.com/tinyclub/elinux); *关注/私信* [@泰晓科技](http://weibo.com/tinylaborg); *详情请看* [翻译计划](http://www.tinylab.org/elinux) <br>
 > 开源-书籍：[更多开源书籍](#more)
 
-# Embedded Linux Wiki (elinux.org)
+# 嵌入式 Linux 知识库 (eLinux.org)
 
-This is the gitbook version of the [embedded Linux wiki](http://elinux.org).
+[Embedded Linux Wiki](http://elinux.org) 采用 MediaWiki 系统，由 [CE Linux Forum](http://www.celinuxforum.org/) 创建。
 
-The mediawiki version is created by [CE Linux Forum](http://www.celinuxforum.org/), this gitbook version is created by the [eLinux.org Chinese Translation Group](http://www.tinylab.org/elinux).
+基于上述 Mediawiki 版本，这里的 GitBook 版本由 [eLinux.org 中文翻译组](http://www.tinylab.org/elinux) 创建，目的是为了更好地通过网络协作把它翻译成其他语言，而副产品是该知识库可以作为可打印和可阅读的书籍获得而且用户能够下载它的 pdf，epub 或者 mobi 格式。
 
-## Introduction
+## 介绍
 
-Welcome to the eLinux wiki!
+欢迎访问 eLinux 知识库！
 
-The purpose of this wiki is to preserve and present information about the development and use of Linux in embedded systems as well as open source projects and tools for general embedded development. To use this wiki, click on one of the portal links left.
+本知识库的目标是保存和呈现各类信息，既涉及使用 Linux 进行嵌入式系统开发，也涵盖与通用嵌入式开发相关的开源项目和工具。
 
-The main portals of the site take you to lists of resources or collections of information, you can use to tackle problems in the particular area referred to. For example, if you have a problem with boot up time of your embedded Linux system, click on "Boot Time". You can also see a list of [all the pages on this site](http://elinux.org/Special:AllPages).
+点击左侧的导航菜单，即可开启本知识库之旅！
 
-## Policies & Guidelines
+该站主要带来各类资源列表和信息收集，可用于解决特定领域的问题。例如，如果碰到嵌入式 Linux 系统启动时间有关问题，则可以阅读[启动时间](dev_portals/Boot_Time/Boot_Time.md)。
 
-Please read [Policies & Guidelines](http://elinux.org/ELinuxWiki:Policies_%26_Guidelines) for a detail list of site policies.
+也可以从[这里](http://elinux.org/Special:AllPages)找到该站点的所有内容列表。
 
-### Errata
+### 策略与指南
 
-If you see something wrong, please change it. If you know something more about an issue, please add it. Please [help to extend](http://elinux.org/Volunteer_editor_tasks) this wiki. Thank you!
+如果想查看本站策略的详细清单，请访问[策略与指南](http://elinux.org/ELinuxWiki:Policies_%26_Guidelines)。
 
-### License
+### 勘误
 
-Content is available under a [Creative Commons Attribution-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-sa/3.0/) unless otherwise noted.
+如果发现任何错误，欢迎帮忙指正；如果知晓更多有关问题，也欢迎添加。参与办法请参考本页开头的**报名/参与**信息以及[译者须知](doc/README.md)。
 
-### More...
+如发现知识库的英文原版中也有错误或者问题，也请[帮助扩展](http://elinux.org/Volunteer_editor_tasks)它，非常感谢！
+
+### 版权
+
+除非另行声明，本站内容采用[Creative Commons Attribution-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-sa/3.0/)版权协议。
+
+### 更多开源书籍项目……
 
 * [C 语言编程透视](http://tinylab.gitbooks.io/cbook/)
 * [Shell 编程范例](http://tinylab.gitbooks.io/shellbook/)
