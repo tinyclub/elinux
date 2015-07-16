@@ -1,25 +1,25 @@
 
-# Build HowTo and Tips
+# 如何构建 GitBook
 
-## Install
+## 安装
 
     $ sudo aptitude install -y retext git nodejs npm
     $ sudo ln -fs /usr/bin/nodejs /usr/bin/node
     $ aptitude install -y calibre fonts-arphic-gbsn00lp
     $ npm install gitbook-cli -g
 
-## Download
+## 下载
 
     $ git clone https://github.com/tinyclub/elinux.git && cd elinux/
 
-## Build
+## 构建 GitBook
 
     $ gitbook build // make
     $ gitbook pdf   // make pdf
 
-## Tips
+## 小贴士
 
-### Error: getaddrinfo ENOTFOUND elinux.org
+### 错误: getaddrinfo ENOTFOUND elinux.org
 
     $ gitbook pdf
     info: loading book configuration....
@@ -41,10 +41,10 @@
         at errnoException (dns.js:44:10)
         at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:94:26)
 
-* Solution
+* 解决办法
 
-        $ ping elinux.org
-        PING elinux.org (140.211.15.183) 56(84) bytes of data.
+	$ ping elinux.org
+	PING elinux.org (140.211.15.183) 56(84) bytes of data.
 
-        $ sudo -s
-        $ echo "140.211.15.183 elinux.org" >> /etc/hosts
+	$ sudo -s
+	$ echo "140.211.15.183 elinux.org" >> /etc/hosts
