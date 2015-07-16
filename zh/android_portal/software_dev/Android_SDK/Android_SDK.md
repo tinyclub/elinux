@@ -32,8 +32,7 @@
 
 ## 原生SDK
 
-用于您的Java应用程序中创建一个可移植的共享对象库文件的C / c++或
-asm代码
+用于在你的 Java 应用程序中创建一个可移植的 C/C++ 或 asm 代码的共享对象文件
 
 1.  [安卓 NDK](http://developer.android.com/sdk/ndk/index.html)
 
