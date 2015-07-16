@@ -459,11 +459,11 @@
 
     * [Products](embed_linux_info/Products/Products.md)
     * [Companies](embed_linux_info/Companies/Companies.md)
-    * [Vendors](embed_linux_info/Vendors/Vendors.md)
     * [Processors](embed_linux_info/Processors/Processors.md)
     * [Community](embed_linux_info/Community/Community.md)
     * [Experts](embed_linux_info/Experts/Experts.md)
     * [Jobs](embed_linux_info/Jobs/Jobs.md)
+    * [System Services Vendors](embed_linux_info/Vendors/Vendors.md)
     * [Board and Chip Vendors](embed_linux_info/Board_and_Chip_Vendors/Board_and_Chip_Vendors.md)
 
 * [eLinux.org Information and Usage tips](info_and_usage_tips/README.md)
