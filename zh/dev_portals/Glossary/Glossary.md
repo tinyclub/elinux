@@ -1,32 +1,28 @@
-> From: [eLinux.org](http://eLinux.org/Glossary "http://eLinux.org/Glossary")
+> 来自: [eLinux.org](http://eLinux.org/Glossary "http://eLinux.org/Glossary")
 
 
-# Glossary
+# 术语表
 
 
 
-This is a glossary of terms used in embedded Linux, and links to
-existing glossary pages:
+本页介绍嵌入式Linux中使用的术语词汇表，以及本 Wiki 中现有的其它术语页的链接：
 
-## Topic-specific Glossaries
 
-Here are pages that have list of terms for specific technology areas:
+## 高频主题术语表
 
--   [Boot-up Time Definition Of
-    Terms](../.././dev_portals/Boot_Time/Boot-up_Time_Definition_Of_Terms/Boot-up_Time_Definition_Of_Terms.md "Boot-up Time Definition Of Terms")
-    - terms related to the Linux boot-up process
--   [Power Management Definition Of
-    Terms](../.././dev_portals/Glossary/Power_Management_Definition_Of_Terms/Power_Management_Definition_Of_Terms.md "Power Management Definition Of Terms")
-    - Definition of Terms for the CELF Power Management working group
--   [Real Time Terms](../.././dev_portals/Glossary/Real_Time_Terms/Real_Time_Terms.md "Real Time Terms") - terms
-    related to systems with real-time performance
--   [Security Terms](../.././dev_portals/Glossary/Security_Terms/Security_Terms.md "Security Terms") - terms related
-    to Linux security and security frameworks
+以下是特定技术领域的一些术语页面：
+
+-   [启动时间](../.././dev_portals/Boot_Time/Boot-up_Time_Definition_Of_Terms/Boot-up_Time_Definition_Of_Terms.md "Boot-up Time Definition Of Terms")
+    - Linux 启动过程涉及的相关术语
+-   [电源管理](../.././dev_portals/Glossary/Power_Management_Definition_Of_Terms/Power_Management_Definition_Of_Terms.md "Power Management Definition Of Terms")
+    - CELF 电源管理工作组术语定义
+-   [实时性](../.././dev_portals/Glossary/Real_Time_Terms/Real_Time_Terms.md "Real Time Terms") - 系统实时性能相关术语
+-   [安全](../.././dev_portals/Glossary/Security_Terms/Security_Terms.md "Security Terms") - Linux 安全及安全架构相关术语
 
 <table>
 <thead>
 <tr class="header">
-<th align="left">Contents</th>
+<th align="left">内容列表</th>
 </tr>
 </thead>
 <tbody>
@@ -39,118 +35,70 @@ Here are pages that have list of terms for specific technology areas:
 ## A
 
  Abatron 
-[Abatron](http://www.abatron.ch/) is a Swiss company that makes a
-popular Jtag debugger often used to debug embedded Linux. Their primary
-products are the 'BDIx000' line of Jtag debuggers.
+[Abatron](http://www.abatron.ch/) 是一家位于瑞士的公司。他们的主要产品是`BDIx000` JTAG 产品线，可用于嵌入式 Linux 系统的调试工具之一。
 
- Asynchronous I/O 
-I/O where control is returned to the calling program after the I/O
-process has started, but before the I/O is completed. The I/O transfer
-runs in parallel with respect to the processor work. The user program
-continues executing at the same time the I/O operation is executing.
+
+ 异步 I/O （Asynchronous I/O）
+在启动 I/O 之后即回到主程序中，而非等到功能 I/O 完成。此时，I/O 转换和处理器同时并行工作，在 I/O 操作的同时也在执行主程序流程，而非阻塞等待其完成。
 
 ## B
 
- Board 
-A board is used to refer to the hardware upon which one develops
-embedded Linux. Historically, it refers to the printed circuit board
-that actually holds the hardware for the device. Often, this is a
-development board, or evaluation board, as opposed to an actual product
-device in final shipping form.
+ 板子（Board）
+当我们在说开发板，一般是在说带有嵌入式 Linux 操作系统的硬件设备，它其实是一块电路印刷电路板。我们有时也叫它开发板或者评估板。
 
- Blocking I/O 
-I/O where control is not returned to the calling program until all
-requested data is transferred. The I/O transfer runs serially with
-respect to the processor work.
+ 阻塞 I/O（Blocked I/O）
+直到 I/O 所有的数据请求完成之后才返回程序控制权的方式。这种方式下，I/O 传输与处理器串行执行。
 
- BSP 
-Board Support Package. This is the code that is used to support a
-particular hardware board. The term is used generically to refer to
-code, and not a specific "package", as the name implies. It generally
-refers to all special-case software relevant to a particular board,
-whether it is kernel code, user code, etc.
+ 板级支持包（BSP） 
+其实就是支持特定硬件的源代码，而不是一组特定的打包文件。它通常指代适用于特定开发版的相关例程，如内核代码或者用户代码等等。
 
 ## C
 
- Cross-compiler
-A compiler that runs on one platform and has the ability (via
-configuration) to generate code for a different platform or platforms.
+ 交叉编译器（Cross-compiler）
+通过配置相关参数设置，可以在 A 平台上，编译出 B 平台或者其他平台上可以运行的代码，即跨平台编译。
 
- Cross-compilation
-Compiling code with a
-[cross-compiler](http://eLinux.org/index.php?title=Cross-compiler&action=edit&redlink=1 "Cross-compiler (page does not exist)")
-in order to target a different platform than the one it's compiled on.
+ 交叉编译过程（Cross-compilation）
+在 A 平台上通过
+[交叉编译器](http://eLinux.org/index.php?title=Cross-compiler&action=edit&redlink=1 "Cross-compiler (page does not exist)")
+编译 B 平台可运行程序的过程。
 
 ## D
 
 ## E
 
- ELC 
-Embedded Linux Conference. This is one of the major technical
-conferences each year for developers of embedded Linux. See the
-[Events](../../dev_portals/Events/Events.md "Events") page for references to past events.
+ 嵌入式 Linux 会议（ELC） 
+这是为嵌入式 Linux 开发者准备的年度会议。参考[事件](../../dev_portals/Events/Events.md "Events") 页面查看过去历年的会议内容。
 
- Embedded 
-An "embedded" device usually means one with fixed functionality,
-independent of other additional hardware or software attributes. The
-terms is somewhat vague. This is as opposed to general-purpose
-functionality. Note that mobile phones are considered embedded, although
-they now support general-purpose programs and functionality. Classic
-embedded Linux products include things like digital cameras, routers,
-television sets, and settop boxes, as well as non-consumer embedded
-devices like sensors, industrial control devices, and pretty much
-anything running Linux outside of the desktop and server markets. See
-the [wikipedia entry for embedded
-system](http://en.wikipedia.org/wiki/Embedded_system).
+ 嵌入式（Embedded） 
+我们称一个设备为“嵌入式”设备，这意味着此设备附带固定的功能，可独立于其他软硬件模块而运行。其实这个术语的边界有些模糊不清。因为“嵌入式”意味着专用而非通用。目前的移动手机早已开始支持通用软件和功能，但是我们认为它也属于嵌入式设备。传统的嵌入式 Linux 设备包括以下产品，如数码相机，路由器，电信设备和机顶盒之类的；也有像非消费级的嵌入式设别包括，如传感器，工控设备和其他除了在台式机和服务器领域使用的 Linux 的设备。其它详见
+ [维基百科嵌入式入门指南](http://en.wikipedia.org/wiki/Embedded_system).
 
 ## F
 
- File system 
-The methods and data structures that an operating system uses to keep
-track of files on a disk or partition; the way the files are organized
-on the disk. Also used about a partition or disk that is used to store
-the files or the type of the file system.
+ 文件系统（File system）
+操作系统用来管理磁盘分区的一套方法和数据结构，也就是磁盘组织文件的方式。一般也指代分区，磁盘，亦或事文件系统的类型。
 
 ## G
 
 ## H
 
- Host 
-The host, or 'host machine' is the place where the software developer
-actually writes and compiles the software for their product. In a
-host-target environment, the host is used to develop software, and the
-target is the device which will run the software.
+ 主机（Host） 
+软件开发者为产品编写程序的机器。在主机－目标系统中，主机用来开发软件，目标系统用来运行主机开发出来的软件。
 
 ## I
 
- IP block 
-An IP block is a section of an integrated circuit which performs a
-distinct function on the chip. The IP stands for "Intellectual
-Property". IP blocks are developed or licensed, and integrated onto an
-SOC or some other chip in the system. The block is licensed and
-manipulated as a unit, with the actual definition of the circuity
-expressed in some hardware description language like Verilog. Because
-the same IP block may be used in multiple chips (and often in chips even
-from different companies), a driver written for the IP block on one
-system may also work (with small modifications) on the same IP block on
-another system. Common IP blocks on current processors are video
-controllers, UARTs (serial ports), bus controllers, and network
-circuitry (both wired and wireless), to name just a few.
+ 知识产权模块（IP block）
+IP 模块是指集成电路中执行不同功能的电路部分。IP 代表“知识产权”。如需使用 IP 模块进行开发，并且需要将其集成到 SoC 系统中，需要得到产权方的许可。其模块的实现需要类似 Verilog 的序言来表述硬件。由于同一  IP 模块可能被使用到不同的芯片上，所以针对一个系统开发的驱动可能在其它拥有同一 IP 模块的系统上也可以使用。在现如今的处理器上必备的 IP 模块如下，视屏控制器，UARTs（串口），总线控制器，有线和无线网络接口。
 
 ## J
 
- [JTAG](../.././dev_portals/Glossary/JTAG/JTAG.md "JTAG") 
-Short for "Joint Test Action Group", JTAG refers to a debugging
-interface used to validate hardware and debug software on an embedded
-board. See [JTAG](../.././dev_portals/Glossary/JTAG/JTAG.md "JTAG")
+ [边界扫描测试接口（JTAG）](../.././dev_portals/Glossary/JTAG/JTAG.md "JTAG") 
+"Joint Test Action Group"的缩写, JTAG 是一种调试接口，用来验证嵌入式开发版上的软硬件模块。 详见 [JTAG](../.././dev_portals/Glossary/JTAG/JTAG.md "JTAG")
 
 ## K
 
- Kernel 
-The Linux kernel is the core software in a Linux system that interfaces
-with the hardware, manages resources on behalf of processes, and
-mediates interactions between processes and the hardware, and between
-processes themselves.
+ 内核（Kernel） 
+Linux 内核是 Linux 系统的核心组件，它负责与硬件打交道，管理处理器自己的计算资源，协调处理器与硬件的交互，还有多核系统中处理器间的通信和同步。
 
 ## L
 
@@ -158,71 +106,47 @@ processes themselves.
 
 ## N
 
- Non-blocking I/O 
-I/O where control is returned to the calling program after the I/O
-process has started, but before the I/O is completed. The I/O transfer
-runs in parallel with respect to the processor work. The user program
-continues executing at the same time the I/O operation is executing.
+ 非阻塞 I/O （Non-blocking I/O） 
+当 I/O 初始化完成之后，但无需等到其执行完成即可返回主程序中。I/O 数据传输与处理器并行执行，也就是说用户程序与 I/O 操作可以齐飞。即异步 I/O。
 
- Non-volatile storage 
-(NVS, persistent storage, memory) A term describing a storage device
-whose contents are preserved when its power is off. Storage using
-magnetic media (e.g. magnetic disks, magnetic tape or bubble memory) is
-normally non-volatile by nature whereas semiconductor memories (static
-RAM and especially dynamic RAM) are normally volatile but can be made
-into non-volatile storage by having a (rechargeable) battery permanently
-connected.
+ 非易失性存储（Non-volatile storage）
+(NVS, 非易失性存储，也称持久性储存) ，此术语描述的意思是：设备在掉电时，其内容不会丢失。使用磁介质（比如，磁盘，磁带或者磁泡存储器）通常情况下是非易失的。尽管半导体内存（静态 RAM，特别事动态 RAM）都是易失性的，但是可以通过附加可充电电池来保持其内容一段时间。
 
 ## O
 
 ## P
 
- PHY 
-Short for Physical Layer, PHY usually refers to the hardware circuitry
-which implements networking on a chip or board. Sometimes the PHY is a
-separate chip on the board. Often it refers to the circuitry on an SOC
-for a particular network device or interface. See
+ 物理层（PHY） 
+物理层（Physical Layer）的缩写。物理层通常指代实现网络通信的物理电路芯片或者开发板。有时候，物理层是单独的芯片实现的，但是更一般的是指 SoC 上的网络设备或者接口模块。详见
 [http://en.wikipedia.org/wiki/PHY\_(chip)](http://en.wikipedia.org/wiki/PHY_(chip))
 
 ## Q
 
 ## R
 
- RAM-based file system 
-A file system built on RAM as the storage medium.
+ 基于内存的文件系统（RAM-based file system） 
+在易失性 RAM 上建立的文件系统。
 
 ## S
 
- SOC 
-System On Chip. This is a chip which has a (more-or-less) complete
-system on a single integrated circuit. It will likely have lots of IP
-blocks, which implement different hardware functionalities, such as
-serial ports, network interfaces, buses, and video controllers, in
-addition to the main CPU for the system. It is pronounced as either
-"ess-oh-see" or like "sock". See
+ 片上系统（SOC） 
+在一块芯片上集成了完整的（或者说绝大部分）模块。一般的 SoC 上集成很多不同功能的 IP 核，如串口，网口，总线和视屏控制器。一般读作
+"ess-oh-see" 或者 "sock". 详见
 [http://en.wikipedia.org/wiki/System\_on\_a\_chip](http://en.wikipedia.org/wiki/System_on_a_chip)
 
 
 
- Synchronous I/O 
-I/O where control is not returned to the calling program until all
-requested data is transferred. The I/O transfer runs serially with
-respect to the processor work.
+ 同步 I/O （Synchronous I/O） 
+
+直到 I/O 所有的数据请求完成之后才返回程序控制权的方式。这种方式下，I/O 传输与处理器串行执行。即阻塞 I/O 。
 
 ## T
 
- Target 
-Target refers to the device or environment for which software is being
-developed. This can be a development board, an actual product, or an
-emulator. Often, software is developed on a 'host' and then transferred
-to a target device for testing, debugging and deployment.
+ 目标板（Target）
+目标板是执行所开发软件的设备或者环境。它可能是开发板，真实的产品或者仿真器。一般而言，开发者在主机上开发完软件之后需要到目标板上测试，调试和部署。
 
- Toolchain 
-A toolchain is the set of programs used to build the software for an
-embedded device. Specifically, it refers to the compiler and linker. But
-it may also refer to other programs (such as debuggers, profilers, and
-other tools for working with the target software) that are specific to a
-particular process architecture or CPU.
+ 工具链（Toolchain）
+工具链是一套为嵌入式设备构建可执行程序的工具集合。一般而言，它指代为编译器和连接器。但是，它也可能指代用于特定处理器架构或者 CPU 的其他程序，如调试器，分析器和其他与目标板软件配合使用的工具。
 
 ## U
 
@@ -237,7 +161,7 @@ particular process architecture or CPU.
 ## Z
 
 
-[Category](http://eLinux.org/Special:Categories "Special:Categories"):
+[分类](http://eLinux.org/Special:Categories "Special:Categories"):
 
--   [NeedsEditing](http://eLinux.org/Category:NeedsEditing "Category:NeedsEditing")
+-   [贡献你的力量](http://eLinux.org/Category:NeedsEditing "Category:NeedsEditing")
 
