@@ -1,1 +1,0 @@
-# Template talk:Raspberry Pi
