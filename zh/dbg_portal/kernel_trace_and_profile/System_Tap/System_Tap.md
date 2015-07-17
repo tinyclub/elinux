@@ -3,90 +3,68 @@
 
 # System Tap
 
+此页是关于**System Tap**的信息，嵌入式开发者一定会是很感兴趣的，因为追踪器在产品开发过程中对诊断问题是很有用的。
+## 内容
 
+-   [1 简介](#introduction)
+-   [2 开源项目/邮件列表](#open-source-projects-mailing-lists)
+-   [3 杂记](#miscellaneous-notes)
+    -   [3.1 探针类型](#probe-types)
+-   [4 参阅](#see-also)
+    -   [4.1 ARM 支持](#arm-support)
+-   [5 一些性能测量](#some-performance-measurements)
+-   [6 链接](#links)
 
-This page has information about **System Tap**, which is of interest to
-embedded developers, because tracers are a useful tool for diagnosing
-problems during product development.
+## 简介
 
-## Contents
+SystemTap 是一个灵活和可扩展的系统，它可以在一个运行中的Linux内核中添加跟踪收集和分析。
 
--   [1 Introduction](#introduction)
--   [2 Open Source Projects/Mailing
-    Lists](#open-source-projects-mailing-lists)
--   [3 Miscellaneous notes](#miscellaneous-notes)
-    -   [3.1 Probe types](#probe-types)
--   [4 See Also](#see-also)
-    -   [4.1 ARM Support](#arm-support)
--   [5 Some Performance measurements](#some-performance-measurements)
--   [6 Links](#links)
+SystemTap 设计非常灵活(允许插入任意C代码)，但同时易于使用(大多数跟踪语句是用一个简单的脚本语言编写的，在基本库中使用有用的数据收集和聚合的例程)。
 
-## Introduction
+SystemTap 的一个关键点是允许你创建一套的跟踪(“tapset”)，然后将它在运行的Linux系统上运行起来，而不需要修改或重新编译系统。要做到这一点，它使用了内核[KProbes](http://www-users.cs.umn.edu/~boutcher/kprobes/) 接口和装载内核模块来动态地添加探测点和新生成代码到运行的内核中。
 
-SystemTap is a flexible and extensible system for adding trace
-collection and analysis to a running Linux kernel.
+## 开源项目/邮件列表
 
-SystemTap is designed to be very flexible (allowing for the insertion of
-arbitrary C code), yet also easy-to-use (most trace statements are
-written in a simple scripting language, with useful data collection and
-aggregation routines available in (essentially) library form).
-
-A key aspect of SystemTap is that it is intended to allow you to create
-a trace set (a "tapset"), and run it on a running Linux system, with no
-modification or re-compilation of the system required. To do this, it
-uses the kernel
-[KProbes](http://www-users.cs.umn.edu/~boutcher/kprobes/) interface and
-loadable kernel modules to dynamically add probe points and newly
-generated code to the running kernel.
-
-## Open Source Projects/Mailing Lists
-
-The main SystemTap site is at:
+官方网站:
 [http://sourceware.org/systemtap/](http://sourceware.org/systemtap/)
 
-The SystemTap mail list archives are at:
+SystemTap的 邮件列表归档：
 [http://sourceware.org/ml/systemtap/](http://sourceware.org/ml/systemtap/)
 
-The tutorial, which gives a good overview of the system, is at:
+本系统一个很好的教程:
 [http://sourceware.org/systemtap/tutorial/](http://sourceware.org/systemtap/tutorial/)
 
-## Miscellaneous notes
+## 杂记
 
-### Probe types
+### 探针类型
 
-There are several types of probes:
+有几种类型的探针：
 
--   kprobe & kretprobe, for dynamically insterted probes
--   timers
--   static instrumentation markers
--   performance counter events
+-   kprobe & kretprobe, for dynamically insterted probes（动态插入探针）
+-   timers（时间）
+-   static instrumentation markers（静态检测标志）
+-   performance counter events（性能计数事件）
 
-In the future, there may be:
+在以后，可能是：
 
--   user-space probes,
--   user-space return probes, and
--   watchpoint probes (kernel & user)
--   and more
+-   user-space probes,（用户空间探针）
+-   user-space return probes, and（用户空间返回探针）
+-   watchpoint probes (kernel & user)（检测点探针）
+-   and more（更多）
 
-## See Also
+## 参阅
 
-Note that SystemTap is one of the major tracing systems for the Linux
-kernel.
+请注意SystemTap是Linux内核的最重要的追踪系统之一。
 
-There is work afoot (as of spring 2006) to try to collaborate on
-different parts of the tracing problem, between some of the major
-tracing projects. See the [Tracing Collaboration
-Project](http://eLinux.org/Tracing_Collaboration_Project "Tracing Collaboration Project")
-page for more information.
+（2006年春）在一些重要的追踪项中协调不同部分的追踪问题的工作正在进行中。参看 [跟踪协作项目](http://eLinux.org/Tracing_Collaboration_Project“跟踪合作项目”)页面获取更多信息。
 
-### ARM Support
+### ARM 支持
 
-System Tap works on ARM & OMAP platforms instructions are available
-[here](http://omappedia.org/wiki/Systemtap)
+System Tap 工作在ARM & OMAP 平台的指令是可用的 [here](http://omappedia.org/wiki/Systemtap)
 
-## Some Performance measurements
+## 一些性能测量
 
-Jian Gui writes (in July 2006 on the **System Tap** mailing list):
+Jian Gui 写道（2006年7月在**System Tap** 邮件列表）：
 
     Hi, we've tested the overhead of systemtap/LKET with some benchmarks
     on a ppc64 machine.
@@ -174,16 +152,15 @@ Jian Gui writes (in July 2006 on the **System Tap** mailing list):
     Machine:  Open Power 720/ 8 cpus/ 2 cores/ 6GB RAM (tiobench use 1G)
     Software: RHEL4-U3GA/ 2.6.17.2/ systemtap-20060718/ elfutils-0.122-0.4
 
-## Links
+## 链接
 
--   [SystemTap Sans Kernel: A Pure Userspace
-    Backend](https://events.linuxfoundation.org/events/collaboration-summit/stone)
+-   [SystemTap Sans Kernel: A Pure Userspace Backend](https://events.linuxfoundation.org/events/collaboration-summit/stone)
+
     [Slides](https://events.linuxfoundation.org/images/stories/pdf/lfcs2012_jstone.pdf)
+
     [Video](http://video.linux.com/videos/systemtap-sans-kernel-a-pure-userspace-backend)
 
 
 [Category](http://eLinux.org/Special:Categories "Special:Categories"):
 
--   [Development
-    Tools](http://eLinux.org/Category:Development_Tools "Category:Development Tools")
-
+-   [Development Tools](http://eLinux.org/Category:Development_Tools "Category:Development Tools")
