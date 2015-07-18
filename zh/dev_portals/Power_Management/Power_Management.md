@@ -1,127 +1,82 @@
-> From: [eLinux.org](http://eLinux.org/Power_Management "http://eLinux.org/Power_Management")
+> 摘自: [eLinux.org](http://eLinux.org/Power_Management "http://eLinux.org/Power_Management")
 
 
-# Power Management
+# 电源管理
 
+## 目录
+-   [2 简介](#introduction)
+-   [3 电源管理技术/项目相关的页面](#power-management-technology-project-pages)
+-   [4 linux 电源管理迷你峰会](#linux-power-management-mini-summit)
+    -   [4.1 迷你峰会记录](#mini-summit-notes)
+-   [5 CE linux 论坛的需求标准](#ce-linux-forum-standards)
+-   [6 资料文档](#documents)
+-   [7 开源项目/邮件列表](#open-source-projects-mailing-lists)
 
+## 简介
+   这里主要是介绍 linux 电源管理相关的信息。然而电源管理的存在是因为目前有很多手持和移动产品，而且消费者更加关心这些产品的电池续航时间。
 
-## Contents
+## 电源管理技术/项目相关的页面
 
--   [2 Introduction](#introduction)
--   [3 Power Management Technology/Project
-    pages](#power-management-technology-project-pages)
--   [4 Linux Power Management
-    Mini-Summit](#linux-power-management-mini-summit)
-    -   [4.1 Mini-Summit Notes](#mini-summit-notes)
--   [5 CE Linux Forum Standards](#ce-linux-forum-standards)
--   [6 Documents](#documents)
--   [7 Open Source Projects/Mailing
-    Lists](#open-source-projects-mailing-lists)
+-  [http://www.lesswatts.org/index.php](http://www.lesswatts.org/index.php) - LessWatts.org
 
+    -   LessWatts.org 是一个关于如何节省 linux 系统功耗的网站。
 
-## Introduction
+    -   LessWatts 正在创立一个以节省 linux 功耗为主题的社区，带领开发者、用户、还有系统管理员一起分享节能软件，节能优化以及一些节能的方法和策略。
 
-This page has information about Power Management for Linux. Power
-Management exists because many products are handheld or mobile, and
-consumers are interested in using their products for as long as possible
-on a single battery charge.
+    -   LessWatts 也提供了 [powertop](http://www.lesswatts.org/projects/powertop/) 工具，用于帮助指出一些系统中耗电的地方。
 
-## Power Management Technology/Project pages
+-  [OMAP 电源管理](http://eLinux.org/OMAP_Power_Management "OMAP Power Management")
 
--   [http://www.lesswatts.org/index.php](http://www.lesswatts.org/index.php)
-    - LessWatts.org
-    -   LessWatts.org is about how you can save real watts, however you
-        use Linux on your computer or computers.
-    -   LessWatts is about creating a community around saving power on
-        Linux, bringing developers, users, and sysadmins together to
-        share software, optimizations, and tips and tricks.
-    -   LessWatts also provides the
-        [powertop](http://www.lesswatts.org/projects/powertop/) tool,
-        which helps to identify some power hogs.
--   [OMAP Power
-    Management](../.././dev_portals/Power_Management/OMAP_Power_Management/OMAP_Power_Management.md "OMAP Power Management")
-    -   For Power Management on processors in the [Texas
-        Instruments](../.././dev_portals/Power_Management/Texas_Instruments/Texas_Instruments.md "Texas Instruments") OMAP
-        family.
+    -   [TI](http://eLinux.org/Texas_Instruments "Texas Instruments") OMAP 系列处理器上的电源管理。
 
-## Linux Power Management Mini-Summit
+## Linux 电源管理迷你峰会
 
-### Mini-Summit Notes
+### 峰会记录
 
--   [2010 Notes from the Boston Linux Power Management
-    Mini-Summit](http://lwn.net/Articles/400465/)
--   [2009 Notes from the Montreal Linux Power Management
-    Mini-Summit](http://lwn.net/Articles/345007/)
--   [2008 Notes from the Ottawa Linux Power Management
-    Summit](http://lwn.net/Articles/292447/)
+-   [2010 波士顿 Linux 电源管理迷你峰会记录](http://lwn.net/Articles/400465/)
 
-## CE Linux Forum Standards
+-   [2009 蒙特利尔 Linux 电源管理迷你峰会记录](http://lwn.net/Articles/345007/)
 
-See here [CELF PM Requirements
-2006](http://www.elinux.org/CELF_PM_Requirements_2006)
+-   [2008 渥太华 Linux 电源管理迷你峰会记录](http://lwn.net/Articles/292447/)
 
-## Documents
+## CE linux 论坛的需求标准
+   见链接: [2006年 CE linux 论坛的电源管理需求](http://www.elinux.org/CELF_PM_Requirements_2006)
 
--   [Device\_Power\_Management\_Specification](../.././dev_portals/Power_Management/Device_Power_Management_Specification/Device_Power_Management_Specification.md "Device Power Management Specification")
+## 资料文档
 
--   [Dynamic\_Power\_Management\_Specification](../.././dev_portals/Power_Management/Dynamic_Power_Management_Specification/Dynamic_Power_Management_Specification.md "Dynamic Power Management Specification")
+-  [设备电源管理规范](http://eLinux.org/Device_Power_Management_Specification "Device Power Management Specification")
 
--   Mapping of ACPI states to omap power states: [ACPI to OMAP2
-    Mapping](http://eLinux.org/images/0/02/Acpi-to-omap2-mapping.pdf "Acpi-to-omap2-mapping.pdf")
+-  [动态电源管理规范](http://eLinux.org/Dynamic_Power_Management_Specification "Dynamic Power Management Specification")
 
-For some good overviews of different PM features relevant to embedded,
-you may want to look at the following papers:
+-  ACPI 的电源状态和 OMAP 的电源状态之间的映射关系: [ACPI 和 OMAP2 的映射关系](http://eLinux.org/images/0/02/Acpi-to-omap2-mapping.pdf "Acpi-to-omap2-mapping.pdf")
 
--   Every Microamp is Sacred - A Dynamic Voltage and Current Control
-    Interface for the Linux Kernel - Liam Girdwood
-    [Slides](http://www.celinux.org/elc08_presentations/regulator-api-celf.pdf)
-    and
-    [video](http://free-electrons.com/pub/video/2008/elc/elc2008-liam-girdwood-every-microamp-is-sacred.ogg)
+   以下是与嵌入式相关的各种电源管理特色的概述：
 
--   Power Management Quality of Service and How You Could Use it in Your
-    Embedded Application - Mark Gross
-    [Slides](http://www.celinux.org/elc08_presentations/elc2008_pm_qos_slides.pdf)
-    and
-    [video](http://free-electrons.com/pub/video/2008/elc/elc2008-mark-gross-power-management.ogg)
+-  每一微安都是神圣的 - linux 内核中的动态电压和电流控制接口 - Liam Girdwood [幻灯片](http://www.celinux.org/elc08_presentations/regulator-api-celf.pdf)和[视频](http://free-electrons.com/pub/video/2008/elc/elc2008-liam-girdwood-every-microamp-is-sacred.ogg)
 
--   Building Blocks for Embedded Power Management - Kevin Hilman
-    [Slides](http://www.celinux.org/elc08_presentations/PM_Building_Blocks1.pdf)
-    and
-    [video](http://free-electrons.com/pub/video/2008/fosdem/fosdem2008-kevin-hilman-power-management.ogg)
+-  PM QoS 以及在嵌入式应用中如何使用 - Mark Gross [幻灯片](http://www.celinux.org/elc08_presentations/elc2008_pm_qos_slides.pdf)和[视频](http://free-electrons.com/pub/video/2008/elc/elc2008-mark-gross-power-management.ogg)
 
--   Linux Suspend-to-Disk Objectives for Consumer Electronic Devices -
-    Vitaly Wool
-    [Slides](http://tree.celinuxforum.org/CelfPubWiki/ELCEurope2007Presentations?action=AttachFile&do=view&target=std.pdf).
+-  嵌入式电源管理模块 - Kevin Hilman  [幻灯片](http://www.celinux.org/elc08_presentations/PM_Building_Blocks1.pdf)和[视频](http://free-electrons.com/pub/video/2008/fosdem/fosdem2008-kevin-hilman-power-management.ogg)
 
--   Linux Clock Management Framework - Siarhei Yermalayeu
-    [slides](http://tree.celinuxforum.org/CelfPubWiki/ELCEurope2007Presentations?action=AttachFile&do=view&target=ELC_2007_Linux_clock_fmw.pdf)
+-  在消费类电子设备上实现 Linux 系统挂起到磁盘的目标 - Vitaly Wool [幻灯片](http://tree.celinuxforum.org/CelfPubWiki/ELCEurope2007Presentations?action=AttachFile&do=view&target=std.pdf)
 
--   Advanced Power Management for OMAP3, Peter de Schrijver, FOSDEM 2009
-    [Video](http://free-electrons.com/pub/video/2009/fosdem/fosdem2009-schrijver-advanced-pm-omap3.ogv)
+-  Linux 时钟管理框架 - Siarhei Yermalayeu [幻灯片](http://tree.celinuxforum.org/CelfPubWiki/ELCEurope2007Presentations?action=AttachFile&do=view&target=ELC_2007_Linux_clock_fmw.pdf)
 
--   Taking Linux power management to production quality, Eugeny Mints,
-    ELCE 2008
-    [Video](http://free-electrons.com/pub/video/2008/elce/elce2008-mints-linux-pm-production-quality.ogv).
+-  OMAP3 先进的电源管理，Peter de Schrijver，FOSDEM 2009 [视频](http://free-electrons.com/pub/video/2009/fosdem/fosdem2009-schrijver-advanced-pm-omap3.ogv)
 
--   Power Management on ARM11, Mischa Jonker, ELCE 2008
-    [Slides](http://tree.celinuxforum.org/CelfPubWiki/ELCEurope2008Presentations?action=AttachFile&do=get&target=MischaJonker_ARM11_power_management_CELF_ELC_2008.pdf)
-    and
-    [video](http://free-electrons.com/pub/video/2008/elce/elce2008-jonker-power-management-arm11.ogv).
+-  把 linux 电源管理和产品质量联系起来，Eugeny Mints，ELCE 2008 [视频](http://free-electrons.com/pub/video/2008/elce/elce2008-mints-linux-pm-production-quality.ogv)
 
--   [Power\_Management\_Specification](../.././dev_portals/Power_Management/Power_Management_Specification/Power_Management_Specification.md "Power Management Specification")
+-  ARM11 的电源管理，Mischa Jonker，ELCE 2008 [幻灯片](http://tree.celinuxforum.org/CelfPubWiki/ELCEurope2008Presentations?action=AttachFile&do=get&target=MischaJonker_ARM11_power_management_CELF_ELC_2008.pdf)和[视频](http://free-electrons.com/pub/video/2008/elce/elce2008-jonker-power-management-arm11.ogv)
 
--   [Static\_Power\_Management\_Specification](../.././dev_portals/Power_Management/Static_Power_Management_Specification/Static_Power_Management_Specification.md "Static Power Management Specification")
+-  [电源管理规范](http://eLinux.org/Power_Management_Specification "Power Management Specification")
 
-## Open Source Projects/Mailing Lists
+-  [静态电源管理规范](http://eLinux.org/Static_Power_Management_Specification "Static Power Management Specification")
 
--   [linux-pm](https://lists.osdl.org/mailman/listinfo/linux-pm) mailing
-    list (and list
-    [archives](http://lists.osdl.org/pipermail/linux-pm/)).
--   [Dynamic Power](http://dynamicpower.sourceforge.net) at sourceforge.
+## 开源项目/邮件列表
 
+-  [linux-pm](https://lists.osdl.org/mailman/listinfo/linux-pm) 邮件列表 (和[存档](http://lists.osdl.org/pipermail/linux-pm/)列表 )。
 
-[Category](http://eLinux.org/Special:Categories "Special:Categories"):
+-  在 sourceforge 上的开源项目：[动态电源管理](http://dynamicpower.sourceforge.net)。
 
--   [Power
-    Management](http://eLinux.org/Category:Power_Management "Category:Power Management")
+>  [分类](http://eLinux.org/Special:Categories "Special:Categories"): [电源管理](http://eLinux.org/Category:Power_Management "Category:Power Management")
 
