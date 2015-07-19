@@ -220,7 +220,7 @@
         - [Session:kernel.org development and the embedded world](./dev_portals/Kernel_Mainlining/Session:kernel.org_development_and_the_embedded_world/Session:kernel.org_development_and_the_embedded_world.md)
     * [法律问题](dev_portals/Legal_Issues/Legal_Issues.md)
         - [Developer Certificate Of Origin](./dev_portals/Legal_Issues/Developer_Certificate_Of_Origin/Developer_Certificate_Of_Origin.md)
-    * [峰会/研讨会](dev_portals/Events/Events.md)
+    * [事件](dev_portals/Events/Events.md)
         - [CELF BOF and Plenary 2009](./dev_portals/Events/CELF_BOF_and_Plenary_2009/CELF_BOF_and_Plenary_2009.md)
         - [CELF Korea Tech Conference](./dev_portals/Events/CELF_Korea_Tech_Conference/CELF_Korea_Tech_Conference.md)
         - [CE Workgroup Projects - LinuxCon Japan 2015](./dev_portals/Events/CE_Workgroup_Projects_-_LinuxCon_Japan_2015/CE_Workgroup_Projects_-_LinuxCon_Japan_2015.md)
