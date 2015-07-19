@@ -1,4 +1,0 @@
-Accurate_Memory_Measurement
-Memory_Type_Based_Allocation
-Runtime_Memory_Measurement
-Tims_Notes_on_ARM_memory_allocation

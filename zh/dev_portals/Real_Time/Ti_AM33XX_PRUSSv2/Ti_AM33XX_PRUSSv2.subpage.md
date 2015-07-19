@@ -1,4 +1,0 @@
-BeagleBone_6502_RemoteProc_cape
-PRUSSv2_Interrupt_Controller
-PRUSSv2_Interrupts
-PRUSSv2_Memory_Map

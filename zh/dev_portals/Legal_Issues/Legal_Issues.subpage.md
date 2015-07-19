@@ -1,1 +1,0 @@
-Developer_Certificate_Of_Origin
