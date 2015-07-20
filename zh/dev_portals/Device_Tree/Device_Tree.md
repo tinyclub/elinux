@@ -1,464 +1,310 @@
-> From: [eLinux.org](http://eLinux.org/Device_Tree "http://eLinux.org/Device_Tree")
-
-
-# Device Tree
-
-
-
-
-
-## Contents
-
--   [1 Introduction](#introduction)
-    -   [1.1 The Flattened Device Tree
-        is...](#the-flattened-device-tree-is)
-    -   [1.2 The Flattened Device Tree is
-        not...](#the-flattened-device-tree-is-not)
-    -   [1.3 History](#history)
-    -   [1.4 Future](#future)
--   [2 Advantages](#advantages)
-    -   [2.1 for distributions](#for-distributions)
-    -   [2.2 for System on Chip (SoC)
-        vendors](#for-system-on-chip-soc-vendors)
-    -   [2.3 for board designers](#for-board-designers)
-    -   [2.4 for embedded Linux
-        ecosystem](#for-embedded-linux-ecosystem)
-    -   [2.5 for firmware/bootloader
-        developers](#for-firmware-bootloader-developers)
-    -   [2.6 Other advantages](#other-advantages)
--   [3 Competing Solutions](#competing-solutions)
-    -   [3.1 board specific data
-        structures](#board-specific-data-structures)
-    -   [3.2 ACPI](#acpi)
-    -   [3.3 UEFI](#uefi)
-    -   [3.4 Open Firmware](#open-firmware)
-    -   [3.5 Some Notes on the Competing
-        Solutions](#some-notes-on-the-competing-solutions)
--   [4 Resources](#resources)
-    -   [4.1 Wiki and in-kernel
-        documentation](#wiki-and-in-kernel-documentation)
-    -   [4.2 FAQ, tips and/or best
-        practices](#faq-tips-and-or-best-practices)
-    -   [4.3 Presentations, Papers and
-        Articles](#presentations-papers-and-articles)
-        -   [4.3.1 Notes on various sub-systems that device-tree
-            describes](#notes-on-various-sub-systems-that-device-tree-describes)
-        -   [4.3.2 older stuff](#older-stuff)
-    -   [4.4 Tools](#tools)
-    -   [4.5 Debugging](#debugging)
-    -   [4.6 Device-Tree irc](#device-tree-irc)
-    -   [4.7 Device-tree Mailing List](#device-tree-mailing-list)
-
-## Introduction
-
-Device Tree data can be represented in several different formats. It is
-derived from the device tree format used by Open Firmware to encapsulate
-platform information and convey it to the Linux operating system. The
-device tree data is typically created and maintained in a human readable
-format in .dts source files and .dtsi source include files. The Linux
-build system pre-processes the source with cpp.
-
-The device tree source is compiled into a binary format contained in a
-.dtb blob file. The format of the data in the .dtb blob file is commonly
-referred to as a Flattened Device Tree (FDT). The Linux operating system
-uses the device tree data to find and register the devices in the
-system. The FDT is accessed in the raw form during the very early phases
-of boot, but is expanded into a kernel internal data structure for more
-efficient access for later phases of the boot and after the system has
-completed booting.
-
-Currently the Linux kernel can read device tree information in the ARM,
-x86, Microblaze, PowerPC, and Sparc architectures. There is interest in
-extending support for device trees to other platforms, to unify the
-handling of platform description across kernel architectures.
-
-### The Flattened Device Tree is...
-
-The Flattened Device Tree (FDT) is a data structure. Nothing more.
-
-It describes a machine hardware configuration. It is derived from the
-device tree format used by Open Firmware. The format is expressive and
-able to describe most board design aspects including:
-
--   the number and type of CPUs,
--   base addresses and size of RAM,
--   busses and bridges,
--   peripheral device connections, and
--   interrupt controllers and IRQ line connections.
-
-Just like initrd images, an FDT image can either be statically linked
-into the kernel or passed to the kernel at boot time.
-
-### The Flattened Device Tree is not...
-
--   is not a solution to all board port problems
-    -   Nothing will eliminate all board specific drivers for custom and
-        complex boards.
--   is not a firmware interface
-    -   It might be part of a generic firmware interface, but on its own
-        the device tree is just a data structure.
-    -   does not replace ATAGS... but an FDT image can be passed via an
-        ATAG.
-    -   See "Competing Solutions" below
--   is not intended to be a universal interface.
-    -   It is a useful data structure which solves several problems, but
-        whether or not to use it is still up to the board port author.
--   is not an invasive change
-    -   <s>No requirement to use FDT approach in a board port</s>
-    -   Device Tree is required for new board support in the ARM
-        architecture.
-    -   No requirement to convert existing board ports
-    -   No requirement to modify existing firmware
-
-### History
-
--   [How device tree got into Linux and how it has
-    evolved](../.././dev_portals/Device_Tree/Device_tree_history/Device_tree_history.md "Device tree history")
-
-### Future
-
--   [How device tree is changing and where it is
-    headed](../.././dev_portals/Device_Tree/Device_tree_future/Device_tree_future.md "Device tree future")
-
-## Advantages
-
-### for distributions
-
--   potentially fewer kernel images needed on an installer image (ie.
-    for ARM netbooks)
-    -   Ship one FDT image per machine (\<4k/machine) instead of 1
-        kernel image per machine (\~1-2MB/machine) with a small number
-        of sub-arch kernel images (ie. ARM11, CortexA8, CortexA9, etc).
-    -   Becomes feasible for current installer image to boot on future
-        hardware platforms using same chipset.
-    -   Note: FDT is only part of the solution here. Some boot software
-        is still required to select and pass in the correct FDT image.
-
-### for System on Chip (SoC) vendors
-
--   Reduce or eliminate effort needed to write machine support code (ie
-    arch/arm/mach-\*). Focus on device driver development instead.
-
-### for board designers
-
--   Reduce effort required to port.
-    -   SoC vendor supplied reference design binaries may also be
-        bootable on custom machine.
--   No need to allocate a new global ARM machine id for each new board
-    variant.
-    -   Use the device tree \<vendor\>,\<boardname\> namespace instead
--   Most board specific code changes constrained to device tree file and
-    device drivers.
--   Example: Xilinx FPGA toolchain has a tool to generate a device tree
-    source file from the FPGA design files.
-    -   Since the hardware description is constrained to the device tree
-        source, FPGA engineers can test design changes without getting
-        involved with kernel code.
-    -   Alternately, kernel coders don't need to manually extract design
-        changes from the FPGA design files.
-
-### for embedded Linux ecosystem
-
--   smaller amount of board support code to merge
--   greater likelyhood of mainline support for boards from
-    "uninterested" vendors
--   greater ability to correct poor board support by fixing or replacing
-    broken FDT images.
-
-### for firmware/bootloader developers
-
--   reduce impact of getting board description wrong (FDT stored as a
-    separate image instead of statically linked into firmware). If
-    initial release gets the board description wrong, then it is easily
-    updated without a risky reflash of firmware.
--   expressive format to describe related board variants without
-    allocating new machine numbers or new ATAGs.
--   Note: The FDT isn't a replacement to ATAGS, but does supplement
-    them.
-
-### Other advantages
-
--   Device tree source and FDTs can easily be machine generated and/or
-    modified.
-    -   Xilinx FPGA tools do device tree source generation
-    -   U-Boot firmware can inspect and modify an FDT image before
-        booting
-
-## Competing Solutions
-
-### board specific data structures
-
-Some platforms use board-specific C data structures for passing data
-from the bootloader to the kernel. Notable here is embedded PowerPC
-support before standardizing on the FDT data format.
-
-Experience with PowerPC demonstrated that using a custom C data
-structure is certainly an expedient solution for small amounts of data,
-but it causes maintainability issues in the long term and it doesn't
-make any attempt to solve the problem of describing the board
-configuration as a whole. Special cases tend to grow and there is no way
-for the kernel to determine what specific version of the data structure
-is passed to it. PowerPCs board info structure ended up being a mess of
-\#ifdefs and ugly hacks, and it still only passed a handful of data like
-memory size and Ethernet MAC addresses.
-
-ATAGs have the elegance of providing an well defined namespace for
-passing individual data items (memory regions, initrd address, etc) and
-the operating system can reliably decode them. However, only a dozen or
-so ATAGs are defined and is not expressive enough to describe the board
-design. Using ATAGs essentially requires a separate machine number to be
-allocated for each board variant, even if they are based on the same
-design.
-
-That being said, an ATAG is an ideal method for passing an FDT image to
-the kernel in the same way an ATAG is used to pass the initrd address.
-
-### ACPI
-
-Firmware providing the [Advanced Configuration and Power
-Interface](http://en.wikipedia.org/wiki/Advanced_Configuration_and_Power_Interface)
-exports a hardware description in the form of the Differentiated System
-Description Table (DSDT). ACPI is found on x86 compatible systems and
-has its roots in the original IBM PC BIOS.
-
-### UEFI
-
-The [Extensible Firmware
-Interface](http://en.wikipedia.org/wiki/Extensible_Firmware_Interface)
-is an interface specification for passing control from a platforms
-firmware to the operating system. It was designed by Intel as a
-replacement for the PC BIOS interface.
-
-ARM holdings is a [member](http://www.uefi.org/join/list) of the [United
-EFI Forum](http://www.uefi.org/home). It is conceivable that there will
-be an ARM implementation of UEFI.
-
-### Open Firmware
-
-[Open Firmware](http://en.wikipedia.org/wiki/Open_Firmware) is a
-firmware interface specification designed by Sun in the late 1980's, and
-ported to many architectures. It specifies a runtime OS client
-interface, an cross platform device interface
-([FCode](http://www.openfirmware.info/Forth/FCode)), a user interface,
-and the Device Tree layout for describing the machine.
-
-FDT is to Open Firmware what DSDT is to ACPI. The FDT reuses Open
-Firmware's established device tree layout. In fact, Linux PowerPC
-support uses the same codebase to support both Open Firmware and FDT
-platforms.
-
-### Some Notes on the Competing Solutions
-
-Most of the competing solutions listed above provided feature rich
-firmware interfaces including both machine description and runtime
-services. Conversely, the FDT is only a data structure and doesn't
-specify any firmware interface details. Board ports using the FDT are
-typically booted from simple firmware implementations like U-Boot and
-don't provide any form of runtime services.
-
-A common design goal of the feature rich firmware interfaces is to
-provide an abstract boot interface that factors away the differences
-between different hardware platforms, at least enough for the OS to
-initialize its own native device drivers. The idea is to be able to boot
-'old' OS images on 'new' hardware, like how a Linux LiveCD image doesn't
-have explicit knowledge of the hardware configuration, but relies on the
-information provided to it by firmware.
-
-Typical design goals for embedded firmware is to a) boot the OS as
-quickly as possible, b) upgrade the OS image, and maybe c) provide some
-low level debug support during initial board bringup. Focus tends to
-shift away from firmware once the OS is bootable since the kernel
-drivers the hardware directly (doesn't depend on firmware runtime
-services). In fact, firmware updates are discouraged due to the risk of
-rendering a board unbootable. ACPI, UEFI and OpenFirmware solutions,
-while arguably 'better', often don't boot as fast, and are more complex
-than required by the embedded system. In this regard the FDT approach
-has the advantage due to its simplicity. ie. the FDT provides an
-equivalently expressive way to describe hardware, but it works with
-existing firmware and can be updated without reflashing firmware.
-
-## Resources
-
-### Wiki and in-kernel documentation
-
-The main device Tree wiki is at:
-[http://www.devicetree.org/Main\_Page](http://www.devicetree.org/Main_Page)
-
-    http://www.devicetree.org/Device_Tree_Usage is an excellent introduction to device tree
-    concepts and the representation of those concepts in device tree source.  (But check the
-    "last modified" date at the bottom of the page (currently 23 October 2010) when comparing
-    to other resources.)
-
-Documentation about device tree is available in the Linux kernel
-Documentation directory: Documentation/devicetree. See
-[https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/Documentation/devicetree](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/Documentation/devicetree)
-
-Some especially useful files are:
-
--   ABI.txt: comments on stable binding and general bindings rules
--   resource-names.txt: -name properties containing an ordered list of
-    names corresponding to another property
--   usage-model.txt: information about different elements of bindings
--   vendor-prefixes.txt: vendor prefix registry
--   the bindings directory has details about the syntax and expected
-    elements for each device type representable in the dts and used by
-    kernel frameworks and drivers
--   bindings/submitting-patches.txt: important details for
-    -   patch submitters
-    -   kernel maintainers
-
-### FAQ, tips and/or best practices
-
-See the [Linux Drivers Device Tree
-Guide](../.././dev_portals/Device_Tree/Linux_Drivers_Device_Tree_Guide/Linux_Drivers_Device_Tree_Guide.md "Linux Drivers Device Tree Guide").
-
-### Presentations, Papers and Articles
-
--   [Solving Device Tree
-    Issues](../.././dev_portals/Device_Tree/Device_Tree_frowand/Device_Tree_frowand.md "Device Tree frowand"), LinuxCon Japan
-    2015 by Frank Rowand
--   "The Device Tree as a Stable ABI: A Fairy Tale?", ELC 2015 by Thomas
-    Petazzoni
-    -   [http://elinux.org/images/0/0a/The\_Device\_Tree\_as\_a\_Stable\_ABI-\_A\_Fairy\_Tale%3F.pdf](http://elinux.org/images/0/0a/The_Device_Tree_as_a_Stable_ABI-_A_Fairy_Tale%3F.pdf)
--   "Transactional Device Tree & Overlays: Making Reconfigurable
-    Hardware Work", ELC 2015 by Pantelis Antoniou
-    -   [PDF](http://eLinux.org/images/1/19/Dynamic-dt-keynote-v3.pdf "Dynamic-dt-keynote-v3.pdf")
-    -   [YouTube video](http://www.youtube.com/watch?v=3Ag7ZBC_Nts)
--   "Device Tree for Dummies", ELC 2014 by Thomas Petazzoni
-    -   [PDF](http://eLinux.org/images/f/f9/Petazzoni-device-tree-dummies_0.pdf "Petazzoni-device-tree-dummies 0.pdf")
-    -   [YouTube video](https://www.youtube.com/watch?v=uzBwHFjJ0vU)
--   [Device trees I: Are we having fun
-    yet?](https://lwn.net/Articles/572692/) - Neil Brown, LWN.net
-    November 2013
--   [Device trees II: The harder
-    parts](https://lwn.net/Articles/573409/) - Neil Brown, LWN.net
-    November 2013
--   "Device Tree for Dummies", ELC Europe 2013 by Thomas Petazzoni
-    -   [PDF](http://eLinux.org/images/a/a3/Elce2013-petazzoni-devicetree-for-dummies.pdf "Elce2013-petazzoni-devicetree-for-dummies.pdf")
-    -   [YouTube video](https://www.youtube.com/watch?v=m_NyYEBxfn8)
--   "Transactional Device Tree & Overlays: Making Reconfigurable
-    Hardware Work", ELC Europe 2014 by Pantelis Antoniou
-    -   [Media:Antoniou--transactional\_device\_tree\_and\_overlays.pdf](http://eLinux.org/images/8/82/Antoniou--transactional_device_tree_and_overlays.pdf "Antoniou--transactional device tree and overlays.pdf")
--   "devicetree: Kernel Internals and Practical Troubleshooting", ELC
-    Europe 2014 by Frank Rowand
-    -   [Media:Rowand--devicetree\_kernel\_internals.pdf](http://eLinux.org/images/0/0c/Rowand--devicetree_kernel_internals.pdf "Rowand--devicetree kernel internals.pdf")
--   "Device Tree, the Disaster so Far", ELC Europe 2013 by Mark Rutland
-    -   [Media:Rutland-presentation\_3.pdf](http://eLinux.org/images/8/8e/Rutland-presentation_3.pdf "Rutland-presentation 3.pdf")
-    -   [YouTube video](https://www.youtube.com/watch?v=xamjHjjyeBI)
--   "Best Practices for Long Term Support and Security of the
-    Device-Tree (DT)" ELC Europe 2013 by Alison Chaiken
-    -   [Media:Chaiken-DT\_ELCE\_2013.pdf](http://eLinux.org/images/d/d1/Chaiken-DT_ELCE_2013.pdf "Chaiken-DT ELCE 2013.pdf")
--   "Board file to Device Tree Migration" ELC Europe 2013 by Pantelis
-    Antoniou
-    -   [Media:ELCE2013\_-\_DT\_War.pdf](http://eLinux.org/images/5/5c/ELCE2013_-_DT_War.pdf "ELCE2013 - DT War.pdf")
--   "ARM support in the Linux kernel", Presented at FOSDEM 2013 by
-    Thomas Petazzoni
-    -   [https://archive.fosdem.org/2013/schedule/event/arm\_in\_the\_linux\_kernel/attachments/slides/273/export/events/attachments/arm\_in\_the\_linux\_kernel/slides/273/arm\_support\_kernel.pdf](https://archive.fosdem.org/2013/schedule/event/arm_in_the_linux_kernel/attachments/slides/273/export/events/attachments/arm_in_the_linux_kernel/slides/273/arm_support_kernel.pdf)
-    -   Has good material on how device tree is part of the overall ARM
-        architecture refactoring, with some details on how it is used
--   "Linux kernel: consolidation in the ARM architecture support" -
-    Libre Software Meeting, 2013 by Thomas Petazzoni
-    -   [http://free-electrons.com/pub/conferences/2012/lsm/arm-kernel-consolidation/arm-kernel-consolidation.pdf](http://free-electrons.com/pub/conferences/2012/lsm/arm-kernel-consolidation/arm-kernel-consolidation.pdf)
--   "Experiences With Device Tree Support Development For ARM-Based
-    SOC's", Thomas P. Abraham, ELC 2012
-    -   [Media:Experiences\_With\_Device\_Tree\_Support\_Development\_For\_ARM-Based\_SOC's.pdf](http://eLinux.org/images/4/48/Experiences_With_Device_Tree_Support_Development_For_ARM-Based_SOC%27s.pdf "Experiences With Device Tree Support Development For ARM-Based SOC's.pdf")
-    -   slides and videos for ELC 2012:
-        [http://free-electrons.com/blog/elc-2012-videos/](http://free-electrons.com/blog/elc-2012-videos/)
--   "Device Tree Status Report", Grant Likely, ELC Europe 2011
-    -   Slides and videos for ELC Europe 2011:
-        [http://free-electrons.com/blog/elce-2011-videos/](http://free-electrons.com/blog/elce-2011-videos/)
-
-##### Notes on various sub-systems that device-tree describes
-
--   "Pin Control Subsystem – Building Pins and GPIO from the ground up"
-    - Presented at Linaro Connect, 2013 by Linus Walleij
-    -   [http://www.df.lth.se/\~triad/papers/pincontrol.pdf](http://www.df.lth.se/~triad/papers/pincontrol.pdf)
-
-#### older stuff
-
-There is documentation describing device tree support (with information
-current as of 2006) in the Linux kernel source tree at:
-[Documentation/powerpc/booting-without-of.txt](http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=blob_plain;f=Documentation/powerpc/booting-without-of.txt;hb=HEAD)
-
--   "Using the Device Tree to Describe Embedded Hardware" - Grant
-    Likely, Embedded Linux Conference, 2008
-    -   [http://www.celinux.org/elc08\_presentations/glikely--device-tree.pdf](http://www.celinux.org/elc08_presentations/glikely--device-tree.pdf)
--   "A Symphony of Flavours: Using the device tree to describe embedded
-    hardware" - Grant Likely and Josh Boyer - paper for OLS 2008
-    -   [http://ols.fedoraproject.org/OLS/Reprints-2008/likely2-reprint.pdf](http://ols.fedoraproject.org/OLS/Reprints-2008/likely2-reprint.pdf)
--   Note from Device Tree Birds of a Feature session at OLS 2008:
-    -   [http://lists.ozlabs.org/pipermail/devicetree-discuss/2008-July/000004.html](http://lists.ozlabs.org/pipermail/devicetree-discuss/2008-July/000004.html)
--   Links to the Open Firmware device tree bindings and recommended
-    practices which also apply to the FDT:
-    -   [http://www.openfirmware.info/Bindings](http://www.openfirmware.info/Bindings)
--   A view from outside from the FreeBSD ARM community:
-    -   [http://wiki.freebsd.org/FreeBSDArmBoards](http://wiki.freebsd.org/FreeBSDArmBoards)
-
-### Tools
-
--   Device Tree Compiler (dtc) - converts between the human editable
-    device tree source "dts" format and the compact device tree blob
-    "dtb" representation usable by the kernel or assembler source. dtc
-    is also a dtb decompiler.
-    -   The linux version of dtc is maintained in `scripts/dtc/` in the
-        kernel source directory.
-    -   The upstream project is maintained in
-        -   [https://git.kernel.org/cgit/utils/dtc/dtc.git](https://git.kernel.org/cgit/utils/dtc/dtc.git)
-        -   git clone
-            [git://git.kernel.org/pub/scm/utils/dtc/dtc.git](git://git.kernel.org/pub/scm/utils/dtc/dtc.git)
--   Xilinx EDK device-tree generator - Generates an FDT from Xilinx FPGA
-    design files.
-    -   [http://xilinx.wikidot.com/device-tree-generator](http://xilinx.wikidot.com/device-tree-generator)
-
-<!-- -->
-
-    "The device tree generator is a Xilinx EDK tool that plugs into the
-    Automatic BSP Generation features of the tool, XPS"
-
-### Debugging
-
-You can set CONFIG\_PROC\_DEVICETREE to be able to see the device tree
-information in /proc after booting. Build the kernel with this option
-set to 'Y', boot the kernel, then 'cd /proc/device-tree'
-
-For newer kernels where the CONFIG\_PROC\_DEVICETREE option does not
-exist, /proc/device-tree will be created if CONFIG\_PROC\_FS is set to
-'Y'.
-
-You might also try CONFIG\_DEBUG\_DRIVER=Y.
-
-Also, often, you can set the line: "\#define DEBUG 1" to an individual C
-file, to produce add debug statements to the routines in that file. This
-will activate any pr\_debug() lines in the source for that file.
-
-Alternatively, you can add the following to drivers/of/Makefile:
-
-    CFLAGS_base.o := -DDEBUG
-    CFLAGS_device.o := -DDEBUG
-    CFLAGS_platform.o := -DDEBUG
-    CFLAGS_fdt.o := -DDEBUG
-
-### Device-Tree irc
-
-The Device Tree irc channel is \#devicetree on freenode.net.
-
-### Device-tree Mailing List
-
-After July 2013:
-
-     http://vger.kernel.org/vger-lists.html#devicetree
-     archive: http://www.spinics.net/lists/devicetree/
-
-Up through July 2013:
-
-     https://lists.ozlabs.org/listinfo/devicetree-discuss
-     archive: http://news.gmane.org/gmane.linux.drivers.devicetree
-
-
-[Categories](http://eLinux.org/Special:Categories "Special:Categories"):
-
--   [Bootloader](http://eLinux.org/Category:Bootloader "Category:Bootloader")
--   [Device
-    tree](http://eLinux.org/index.php?title=Category:Device_tree&action=edit&redlink=1 "Category:Device tree (page does not exist)")
--   [Kernel](http://eLinux.org/Category:Kernel "Category:Kernel")
+> 原文：[eLinux.org](http://elinux.org/Boot_Time.md)<br/>
+> 翻译：[@sdfd](https://github.com/lzufalcon)<br/>
+
+# 设备树
+
+## 目录
+
+-   [1 前言](#__toc_introduction-11253-7726)
+    -   [1.1 扁平设备树是...](#__toc_the-flattened-device-tree-is-3503-31962)
+    -   [1.2 扁平设备树不是...](#__toc_the-flattened-device-tree-is-not-22241-28150)
+    -   [1.3 历史](#__toc_history-17485-15587)
+    -   [1.4 未来](#__toc_future-31620-16080)
+-   [2 优势](#__toc_advantages-19720-21359)
+    -   [2.1 对于内核发行](#__toc_for-distributions-18617-10143)
+    -   [2.2 对于片上系统（SoC）供应商](#__toc_for-system-on-chip-soc-vendors-26457-12705)
+    -   [2.3 对于主板设计者](#__toc_for-board-designers-26349-21368)
+    -   [2.4 对于嵌入式 Linux 生态系统](#__toc_for-embedded-linux-ecosystem-2561-24549)
+    -   [2.5 对于固件或 bootloader 开发者](#__toc_for-firmware-bootloader-developers-29752-9114)
+    -   [2.6 其他的优势](#__toc_other-advantages-3973-6455)
+-   [3 竞争的解决方案](#__toc_competing-solutions-10447-26598)
+    -   [3.1 板子相关特性的数据结构](#__toc_board-specific-data-structures-61-14693)
+    -   [3.2 ACPI（高级配置与电源接口）](#__toc_acpi-371-11524)
+    -   [3.3 UEFI（统一的可扩展固件接口）](#__toc_uefi-13261-4313)
+    -   [3.4 Open Firmware](#__toc_open-firmware-24006-10609)
+    -   [3.5 关于竞争的解决方案的一些注解](#__toc_some-notes-on-the-competing-solutions-28313-17022)
+-   [4 资源](#__toc_resources-4310-2905)
+    -   [4.1 Wiki 和内核中的参考资料](#__toc_wiki-and-in-kernel-documentation-13656-22915)
+    -   [4.2 FAQ,小贴士和最佳范例](#__toc_faq-tips-and-or-best-practices-22391-25395)
+    -   [4.3 演示文稿，论文和文章](#__toc_presentations-papers-and-articles-1792-18153)
+        -   [4.3.1 各种子系统的设备树描述的笔记](#__toc_notes-on-various-sub-systems-that-device-tree-describes-4225-14266)
+        -   [4.3.2 较老的材料](#__toc_older-stuff-23860-9594)
+    -   [4.4 工具](#__toc_tools-19227-11963)
+    -   [4.5 调试](#__toc_debugging-15068-31173)
+    -   [4.6 设备树 irc (互联网中继聊天)](#__toc_device-tree-irc-5836-21142)
+    -   [4.7 设备树邮件列表](#__toc_device-tree-mailing-list-11075-27923)
+<span id="__toc_introduction-11253-7726"></span>
+
+## 前言
+
+设备树数据可以表示成几种不同的格式。它是由 [Open Firmwar](http://www.firmworks.com/www/ofw.htm) (编者注：第一个无版权的boot固件，它可兼容不同的处理器和总线，是 Power pc 和 CHRP（共用硬件参考平台）所必需的，其由 IEEE 1275-1994 标准定义。)封装平台信息的设备树格式发展而来，被移植到 Linux 操作系统中。使用 .dts 源文件和 .dtsi 头文件创建和维护一个典型的设备树。Linux 编译器会对其进行预处理。
+
+设备树源码被编译成一个 .dtb 的二进制文件。.dtb 二进制文件的数据格式通常参考扁平设备树（FDT）。Linux 操作系统通过设备树数据去寻找并在系统中注册设备。FDT 在启动时的很早时刻存取，但是为了在启动后期和系统完全启动后更有效率的存取，它被扩展进内核内部的数据结构中。
+
+目前，Linux 内核可以支持 ARM,x86,Microblaze,PowerPC 和 Sparc 架构读取设备树信息。拓展设备树对其他平台的支持，通过内核架构统一处理平台描述是我们所关注的。
+<span id="__toc_the-flattened-device-tree-is-3503-31962"></span>
+
+### 扁平设备树是
+
+扁平设备树（FDT）仅仅是一个数据结构。
+
+它描述了一个机器设备的硬件配置。它是从 Open Firmware 设备树格式中发展而来。其格式可以体现和描述大多数板级硬件设计，包括：
+
+-	CPU 的数量和类型
+-	RAM 的基地址和大小
+-	总线和桥
+-	外设连接
+-	中断控制和 IRQ 线的连接
+
+像 init.rd 一样，FDT 也可以被静态的链接进内核或者在 boot 启动时传递给内核。
+<span id="__toc_the-flattened-device-tree-is-not-22241-28150"></span>
+
+### 扁平设备树不是
+
+-	不是解决所有板级接口问题
+	-	不可能包含所有板子定制的特殊驱动和复杂的板子。
+-	不是一个固件接口
+	-	它可能是通用固件接口的一部分，但就设备树而言它只是一个数据结构。
+	-	不能代替 ATAGS，但是 FDT 可以通过 ATAG 传递。
+	-	参考下面的”竞争的解决方案”一节。
+-	它不打算去做一个通用的接口。
+	-	它对解决一些问题来说是一个有用的数据结构，但是用不用它还是由开发者决定。
+-	不是一个侵略性的改变
+	-	使用 FDT 不是必需的
+	-	设备树被要求支持 ARM 架构的新板子
+	-	不要求去改变已有的板子端口
+	-	不要钱修改已有的固件
+<span id="__toc_history-17485-15587"></span>
+	
+### 历史
+
+-	[设备树如何进入Linux及其发展](http://elinux.org/Device_tree_history)
+<span id="__toc_future-31620-16080"></span>
+
+### 未来
+
+-	[设备树有什么变化及其前进方向](http://elinux.org/Device_tree_future)
+<span id="__toc_advantages-19720-21359"></span>
+
+## 优势
+<span id="__toc_for-distributions-18617-10143"></span>
+
+### 对于内核发行
+
+-	可能需要安装镜像的内核会更少（如： ARM 上网本）.
+	-	通过一个 FDT 镜像表示每台机器（小于 4K/每台）和一些附属的架构镜像代替一个内核镜像表示（约 1-2MB/每台）（如：ARM11，CortexA8，CortexA9 等）。
+	-	使当前的安装镜像去引导具有相同芯片集的未来的硬件平台成为可能。
+	-	备注：FDT 只是解决此问题的一部分。一些启动软件仍然需要正确选择和传递FDT镜像。
+<span id="__toc_for-system-on-chip-soc-vendors-26457-12705"></span>
+	
+### 对于片上系统（SoC）供应商
+
+-	减少或努力淘汰需要编写的机器支持代码（如 arch/arm/mach-*），而把精力放在设备驱动开发上。
+<span id="__toc_for-board-designers-26349-21368"></span>
+	
+### 对于主板设计者
+
+-	努力减少所需的端口
+	-	SoC 供应商提供参考设计的二进制代码也可能在自制的机器上启动。
+-	不需要对每个新的主板变体分配一个新的全球性 ARM 机器 ID。
+	-	使用设备树中的 <vendor>，<boardname> 命名空间代替。
+-	大多数主板特性相关的代码的改变被限制在设备树文件和设备驱动中。
+-	例如：Xilinx FPGA 工具链中有一个工具可以从 FPGA 的设计文件中生成设备树源文件。
+	-	既然硬件描述被限制在设备树源文件中，FPGA 工程师可以测试设计的改变而不需要将其添加到内核代码中。
+	-	内核代码不需要手动地从 FPGA 设计文件中提取设计改变。
+<span id="__toc_for-embedded-linux-ecosystem-2561-24549"></span>
+	
+### 对于嵌入式 Linux 生态系统
+
+-	需要合入的板级支持代码更少
+-	板子有更大的可能得到对此不感兴趣的供应商的主要支持
+-	通过修复或者替换损坏的 FDT 镜像可以有更大的能力去提供有问题的板子的支持
+<span id="__toc_for-firmware-bootloader-developers-29752-9114"></span>
+
+### 对于固件或 bootloader 开发者
+
+-	减少板子描述错误的影响（FDT 作为一个单独镜像存储而不是静态的链接进固件中）。如果初始的发布版的板子描述错误，它可以很容易的升级而不需要危险的重新刷固件
+-	对板子变体的表示方式不需要分配新的机器号或新的 ATAGs
+-	备注：FDT 不是要替代 ATAGs，而是对其补充
+<span id="__toc_other-advantages-3973-6455"></span>
+
+###	其他的优势
+
+-	设备树源代码和 FDTs 可以很容易的由机器生成和修改。
+	-	Xilinx FPGA 工具可以生成设备树源码
+	-	U-Boot 固件在启动前可以检查和修改 FDT 镜像
+<span id="__toc_competing-solutions-10447-26598"></span>
+	
+##	竞争的解决方案
+<span id="__toc_board-specific-data-structures-61-14693"></span>
+
+###	板子相关特性的数据结构
+
+一些平台板子相关的特性使用 C 数据结构从 bootloader 向内核传递数据。著名的有嵌入式 PowerPC 在 FDT 数据结构之前支持的标准。
+
+PowerPC 示范的经验提示我们使用自定义的 C 数据结构对于少量的数据确实是有利的解决方案。但是它引起了长期的可维护问题，而且总体上来说它没有尝试去解决描述板级配置的问题。随着这种特有情况的发展，没有办法决定什么版本的数据结构合金内核代码中。PowerPC 的板级信息结构用 #ifdef 搞得一团糟，修改的很丑陋，它还仅仅是传递一小点像内存大小和网卡 MAC 地址这样的数据。
+	
+ATAGs 以优雅的方式--通过定义友好的命名空间传递个体的数据项（内存区域，初始化地址等），操作系统能可靠的解析这些参数。然而，只有一打或者只有 ATAG 被定义是不能足够的表达对板子设计的描述。使用 ATAGs 本质上需要一个分离的机器号去配置每一个板子变体，即使他们给予相同的设计。
+	
+<span id="__toc_acpi-371-11524"></span>
+尽管如此，ATAG 仍是一个理想的向内核传递 FDT 镜像的方法，其同时被用来传递启动地址。
+###	ACPI（高级配置与电源接口）
+
+固件由差异化系统描述表（DSDT）提供高级配置与电源接口硬件描述的配置文件。ACPI 应用于 x86 兼容机系统，其由经典 IBM PC BIOS 发展而来。
+<span id="__toc_uefi-13261-4313"></span>
+
+###	UEFI（统一的可扩展固件接口）
+
+[可扩展固件接口](http://en.wikipedia.org/wiki/Extensible_Firmware_Interface) 是一个从平台固件到操作系统传递控制命令的规范接口。它由英特尔设计，被用来代替 PC 的 BIOS 接口。
+
+ARM 控制着 UEFI 社区的[成员](http://www.uefi.org/join/list)。这就不难想象 UEFI 由 ARM 实现。
+<span id="__toc_open-firmware-24006-10609"></span>
+
+###	Open Firmware
+
+[Open Firmware](http://en.wikipedia.org/wiki/Open_Firmware) 是 Sun 公司在 20 世纪 80 年代后期设计的一个固件接口规范，移植到了很多架构中。它指定一个运行时操作系统的客户端接口，交叉平台的设备接口，用户接口和描述机器布局的设备树。
+
+FDT 之于 Open Firmware 就像 DSDT 之于 ACPI。FDT 重用了 Open Firmware 已经确定了的设备树布局。事实上，Linux PowerPC 支持使用相同的代码库同时支持 Open Firmware 和 FDT 平台。
+<span id="__toc_some-notes-on-the-competing-solutions-28313-17022"></span>
+
+##	关于竞争的解决方案的一些注解
+
+大多数竞争的解决方案像上面列出的包括机器描述和运行时服务的功能丰富的固件接口。相反的，FDT 只是一个数据结构，并不指定任何固件接口细节。使用 FDT 端口的板子的典型地启动过程是由类似 U-Boot 这样的简单的固件实现的，其不提供任何形式的运行时服务。
+
+功能丰富的接口的共同的设计目标是提供一个抽象的启动接口，其只受不同硬件平台的差异的影响，其至少要能初始化操作系统自己本地的设备驱动。一个想法是在新的硬件上启动老的操作系统镜像，像 Linux 的 LiveCD 镜像不需要明确知道硬件配置那样，但是需要依赖固件给其提供信息。
+
+典型的嵌入式固件设计目标是：a）	尽可能快的启动系统 b）升级系统镜像 c）可能还需要在初始化板子时提供一些低等级的 debug 调试支持。关注点倾向于系统一旦从内核直接驱动硬件启动后就远离固件(不需要依赖固件运行时服务)。事实上，不建议进行固件升级，因为固件升级可能带来板子无法启动的风险。嵌入式系统中的 ACPI，UEFI 和 Open Firmware 解决方法通常启动的并不快，虽然可能更好一点，比需要的更复杂一点。就这一点而言，FDT 的方法因其简单而更有优势。如：FDT 提供类似的表示方法去描述硬件，但是它可以工作在现存的固件上，也可以升级而不需要刷新固件。
+<span id="__toc_resources-4310-2905"></span>
+
+## 资源
+<span id="__toc_wiki-and-in-kernel-documentation-13656-22915"></span>
+
+### Wiki 和内核中的参考资料
+[设备树主要的wiki在：](http://www.devicetree.org/Main_Page)
+http://www.devicetree.org/Main_Page 对设备树的概念进行了很好的介绍，并用源码来更形象的表述这些概念。（但是在于其他的资源比较的时候请检查页面底部最新的修改日期（当前是 2010.10.23））
+在 Linux 内核文档目录可以找到设备树的参考资料：Documentation/devicetree。请参考https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/Documentation/devicetree
+
+一些很有用的文件：
+-	ABI.txt:稳定和一般绑定规则的注释
+-	resource-names.txt: -name 属性 包含一个名字对应其他性质的一个命令列表
+-	usage-model.txt: 不同原理的绑定的信息
+-	vendor-prefixes.txt: 供应商前缀注册
+-	bindings 目录有在 dts 中每个设备类型描述原理和语法以及被用于内核框架和驱动的细节。
+-	bindings/submitting-patches.txt: 重要的说明：
+	-	patch 提交者
+	-	kernel 维护者
+<span id="__toc_faq-tips-and-or-best-practices-22391-25395"></span>
+	
+### FAQ,小贴士和最佳范例
+请看 [Linux 设备树指南](http://elinux.org/Linux_Drivers_Device_Tree_Guide)
+<span id="__toc_presentations-papers-and-articles-1792-18153"></span>
+
+### 演示文稿，论文和文章
+
+-	[解决设备树问题](http://elinux.org/Device_Tree_frowand) LinuxCon Japan 2015 by Frank Rowand
+-	设备树作为作为稳定的 ABI：是一个神话？，ELC 2015 by Thomas Petazzoni
+	-	http://elinux.org/images/0/0a/The_Device_Tree_as_a_Stable_ABI-_A_Fairy_Tale%3F.pdf
+-	设备树的作用和路线图 可重构硬件工作的发展
+	-	[PDF](http://elinux.org/images/1/19/Dynamic-dt-keynote-v3.pdf)
+	-	[YouTube video](http://www.youtube.com/watch?v=3Ag7ZBC_Nts)
+-	设备树入门 ELC 2014 by Thomas Petazzoni
+	-	[PDF](http://elinux.org/images/f/f9/Petazzoni-device-tree-dummies_0.pdf)
+	-	[YouTube video](https://www.youtube.com/watch?v=uzBwHFjJ0vU)
+-	[设备树I：现在我们快乐了吗？](https://lwn.net/Articles/572692/) Neil Brown, LWN.net November 2013
+-	[设备树II：更难的部分](https://lwn.net/Articles/573409/) Neil Brown, LWN.net November 2013
+-	设备树入门 ELC Europe 2013 by Thomas Petazzoni
+	-	[PDF](http://elinux.org/images/a/a3/Elce2013-petazzoni-devicetree-for-dummies.pdf)
+	-	[YouTube video](https://www.youtube.com/watch?v=m_NyYEBxfn8)
+-	设备树的作用和路线图可重构硬件工作的发展 ELC Europe 2014 by Pantelis Antoniou
+	-	[Media:Antoniou--transactional_device_tree_and_overlays.pdf](http://elinux.org/images/8/82/Antoniou--transactional_device_tree_and_overlays.pdf)
+-	设备树：内核组件和实际的排错 ELC Europe 2014 by Frank Rowand
+	-	[Media:Rowand--devicetree_kernel_internals.pdf](http://elinux.org/images/0/0c/Rowand--devicetree_kernel_internals.pdf)
+-	设备树，当前的灾难 ELC Europe 2013 by Mark Rutland
+	-	[Media:Rutland-presentation_3.pdf](http://elinux.org/images/8/8e/Rutland-presentation_3.pdf)
+	-	[YouTube video](https://www.youtube.com/watch?v=xamjHjjyeBI)
+-	对设备树的长期支持和安全性的最佳实践 ELC Europe 2013 by Alison Chaiken
+	-	[Media:Chaiken-DT_ELCE_2013.pdf](http://elinux.org/images/d/d1/Chaiken-DT_ELCE_2013.pdf)
+-	板子文件迁移到设备树 ELC Europe 2013 by Pantelis Antoniou
+	-	[Media:ELCE2013_-_DT_War.pdf](http://elinux.org/images/5/5c/ELCE2013_-_DT_War.pdf)
+-	Linux内核中对ARM的支持 Presented at FOSDEM 2013 by Thomas Petazzoni
+	-	https://archive.fosdem.org/2013/schedule/event/arm_in_the_linux_kernel/attachments/slides/273/export/events/attachments/arm_in_the_linux_kernel/slides/273/arm_support_kernel.pdf	
+	-	关于设备树如何成为整个 ARM 架构重构的一部分的一些好材料及如何使用它的一些细节。
+-	Linux 内核：合并 ARM 架构的支持 Libre Software Meeting, 2013 by Thomas Petazzoni
+	-	http://free-electrons.com/pub/conferences/2012/lsm/arm-kernel-consolidation/arm-kernel-consolidation.pdf
+-	使用设备树支持开发基于 ARM SOC 的经验 Thomas P. Abraham, ELC 2012
+	-	[Media:Experiences_With_Device_Tree_Support_Development_For_ARM-Based_SOC's.pdf](http://elinux.org/images/4/48/Experiences_With_Device_Tree_Support_Development_For_ARM-Based_SOC%27s.pdf)
+	-	ELC （Embedded Linux Conferences（嵌入式Linux会议））2012的幻灯片和视频：http://free-electrons.com/blog/elc-2012-videos/
+-	设备树地位的报告 Grant Likely, ELC Europe 2011
+	-	ELC Europe 2011的幻灯片和视频：http://free-electrons.com/blog/elce-2011-videos/
+<span id="__toc_notes-on-various-sub-systems-that-device-tree-describes-4225-14266"></span>
+
+#####	各种子系统的设备树描述的笔记
+
+-	引脚控制子系统-增加接地引脚和 GPIO Presented at Linaro Connect, 2013 by Linus Walleij
+<span id="__toc_older-stuff-23860-9594"></span>
+	-	http://www.df.lth.se/~triad/papers/pincontrol.pdf
+
+#### 较老的材料
+
+在 Linux 源码树种描述设备树支持的文档（2006年的信息）：[Documentation/powerpc/booting-without-of.txt](http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/plain/Documentation/powerpc/booting-without-of.txt?id=HEAD)
+
+-	使用设备树描述嵌入式硬件 Grant Likely, Embedded Linux Conference, 2008
+	-	http://www.celinux.org/elc08_presentations/glikely--device-tree.pdf
+-	交响乐的味道：使用设备树描述嵌入式硬件 Grant Likely and Josh Boyer - paper for OLS 2008
+	-	http://ols.fedoraproject.org/OLS/Reprints-2008/likely2-reprint.pdf
+-	2008 年在 OLS 的设备树特性会议笔记：
+	-	http://lists.ozlabs.org/pipermail/devicetree-discuss/2008-July/000004.html
+-	联系相关的 Open Firmware，设备树的绑定和推荐做法也可应用于 FDT:
+	-	http://www.openfirmware.info/Bindings
+-	来自外部的 FreeBSD ARM 通讯的观点
+	-	http://wiki.freebsd.org/FreeBSDArmBoards
+<span id="__toc_tools-19227-11963"></span>
+
+###	工具
+
+-	设备树编译器（dtc）-在人类可编辑的设备树源码“dts”格式和用于内核或者汇编源码的紧凑的设备树二进制“dtb”之间转换。Dtc 也是 dtb 的逆编译器。
+	-	dtc 在 Linux 版本下主要在内核源码目录的 scripts/dtc/ 中维护
+	-	上层工程主要维护在：
+		-	https://git.kernel.org/cgit/utils/dtc/dtc.git
+		-	git clone git://git.kernel.org/pub/scm/utils/dtc/dtc.git
+-	Xilinx EDK 设备树生成器-从 Xilinx FPGA 的设计文件中生成 FDT
+	-	http://xilinx.wikidot.com/device-tree-generator
+
+	设备树生成器是一个 Xilinx EDK 工具，拥有 BSP 自动生成的特性
+<span id="__toc_debugging-15068-31173"></span>
+	
+###	调试
+
+你可以设置 CONFIG_PROC_DEVICETREE 使你可以在系统启动后从 /proc 中看到设备树信息。当此项被设置成“Y”后重新编译内核，然后启动内核，输入命令”cd /proc/device-tree”
+
+对于新的不存在 CONFIG_PROC_DEVICETREE 选项的内核，当 CONFIG_PROC_FS 被设置成”Y”时会创建 /proc/device-tree。你也可以尝试 CONFIG_DEBUG_DRIVER=Y。
+
+另外，通常你可以在一个独立的c文件中设置"#define DEBUG 1"，在此文件中添加日常活动的调试语句。这将激活源码中任何 pr_debug()语句。
+
+或者，你可以增加以下语句到 drivers/of/Makefile 中：
+
+	CFLAGS_base.o := -DDEBUG
+	CFLAGS_device.o := -DDEBUG
+	CFLAGS_platform.o := -DDEBUG
+	CFLAGS_fdt.o := -DDEBUG
+<span id="__toc_device-tree-irc-5836-21142"></span>
+
+###	设备树 irc (互联网中继聊天)
+
+设备树 irc 通道是在 freenode.net 上的 #devicetree。
+<span id="__toc_device-tree-mailing-list-11075-27923"></span>
+
+###	设备树邮件列表
+
+2013年7月更新
+
+	http://vger.kernel.org/vger-lists.html#devicetree
+	存档：http://www.spinics.net/lists/devicetree/
+
+2013年7月之前
+
+	https://lists.ozlabs.org/listinfo/devicetree-discuss
+	存档： http://news.gmane.org/gmane.linux.drivers.devicetree
+	
+
 
