@@ -17,21 +17,21 @@
 
 ## 简介
 
-SystemTap 是一个灵活和可扩展的系统，它可以在一个运行中的Linux内核中添加跟踪收集和分析。
+SystemTap 是一个灵活而且可扩展的系统，允许为运行中的 Linux 内核添加跟踪信息的收集和分析。
 
-SystemTap 设计非常灵活(允许插入任意C代码)，但同时易于使用(大多数跟踪语句是用一个简单的脚本语言编写的，在基本库中使用有用的数据收集和聚合的例程)。
+SystemTap 设计得非常灵活（允许插入任意的 C 代码），而且易用（大多数跟踪语句用一种简单的脚本语言编写，并且附带有数据收集和聚合的例程，这些例程基本上以库的形式呈现）。
 
-SystemTap 的一个关键点是允许你创建一套的跟踪(“tapset”)，然后将它在运行的Linux系统上运行起来，而不需要修改或重新编译系统。要做到这一点，它使用了内核[KProbes](http://www-users.cs.umn.edu/~boutcher/kprobes/) 接口和装载内核模块来动态地添加探测点和新生成代码到运行的内核中。
+SystemTap 的一个关键点是它意图允许大家创建一个跟踪集（一个 tapset），无须修改或者重新编译系统所需，就可以执行于运行中的 Linux 系统。为了达到该目的，它使用内核 [Kprobes](http://www-users.cs.umn.edu/~boutcher/kprobes/) 接口和可加载的内核模块来动态地添加探针和新生成的代码到运行中的内核中。
 
 ## 开源项目/邮件列表
 
 官方网站:
 [http://sourceware.org/systemtap/](http://sourceware.org/systemtap/)
 
-SystemTap的 邮件列表归档：
+SystemTap 的邮件列表归档：
 [http://sourceware.org/ml/systemtap/](http://sourceware.org/ml/systemtap/)
 
-本系统一个很好的教程:
+一本教程，很好地概述了本系统：
 [http://sourceware.org/systemtap/tutorial/](http://sourceware.org/systemtap/tutorial/)
 
 ## 杂记
@@ -41,7 +41,7 @@ SystemTap的 邮件列表归档：
 有几种类型的探针：
 
 -   kprobe & kretprobe, for dynamically insterted probes（动态插入探针）
--   timers（时间）
+-   timers（定时器）
 -   static instrumentation markers（静态检测标志）
 -   performance counter events（性能计数事件）
 
@@ -49,43 +49,37 @@ SystemTap的 邮件列表归档：
 
 -   user-space probes,（用户空间探针）
 -   user-space return probes, and（用户空间返回探针）
--   watchpoint probes (kernel & user)（检测点探针）
+-   watchpoint probes (kernel & user) （监视点探针（内核空间 & 用户空间））
 -   and more（更多）
 
 ## 参阅
 
-请注意SystemTap是Linux内核的最重要的追踪系统之一。
+请注意 Systemap 是 Linux 内核最主要的跟踪系统之一。
 
-（2006年春）在一些重要的追踪项中协调不同部分的追踪问题的工作正在进行中。参看 [跟踪协作项目](http://eLinux.org/Tracing_Collaboration_Project“跟踪合作项目”)页面获取更多信息。
+截至 2006 年春，有一项进行中的工作是尝试合作解决一些主要的跟踪项目之间存在的各类问题。参看 [跟踪协作项目](http://eLinux.org/Tracing_Collaboration_Project“跟踪合作项目”)页面获取更多信息。
 
 ### ARM 支持
 
-System Tap 工作在ARM & OMAP 平台的指令是可用的 [here](http://omappedia.org/wiki/Systemtap)
+可以从 [这里](http://omappedia.org/wiki/Systemtap) 找到 ARM & OMAP 平台上使能 System Tap 的详细用法。
 
 ## 一些性能测量
 
 Jian Gui 写道（2006年7月在**System Tap** 邮件列表）：
 
-    Hi, we've tested the overhead of systemtap/LKET with some benchmarks
-    on a ppc64 machine.
+    嗨，我们在ppc64平台上使用一些测试基准来测试过 systemtap/LKET 的开销。
 
-    It shows the overhead of systemtap/LKET is acceptable generally.
-    But it will also cause significant overhead for some benchmark of
-    special behavior, e.g. dbench. Dbench calls kill() in a very high
-    frequency to check whether a task is complete, thus leads to a high
-    overhead.
+    测试表明 systemtap/LKET 的开销一般情况下是可以接受的。但它在一些特殊行为的测试基准中也会导致很大的开销。例如 dbench. Dbench 在非常频繁地调用 kill() 来检测一个任务是否完成时，这样就会导致很大的开销。
 
-    We categorized the event hooks into five groups in the testing:
+    在测试中，我们把事件钩子归类为五组:
     grp1 - syscall.entry, process
     grp2 - syscall.return, process
     grp3 - iosyscall, ioscheduler, scsi, aio, process
     grp4 - tskdispatch, pagefault, netdev, process
     grp5 - syscall.entry, syscall.return, process
 
-    All the results are
-       (score1 - score2)/score2 * 100%,  where:
-    score1: the benchmark score when probed by systemtap
-    score2: the benchmark score without probing
+    所有的结果都是：(score1 - score2)/score2 * 100%，其中：
+    score1：使用 systemtap 探测时的测试基准分数
+    score2：未使用探测时的测试基准分数
 
     dbench (<3% is noise)
     --------------------
@@ -148,9 +142,9 @@ Jian Gui 写道（2006年7月在**System Tap** 邮件列表）：
                random aioread()         +0.79%
                random aiowrite()        0%
 
-    Test environment:
-    Machine:  Open Power 720/ 8 cpus/ 2 cores/ 6GB RAM (tiobench use 1G)
-    Software: RHEL4-U3GA/ 2.6.17.2/ systemtap-20060718/ elfutils-0.122-0.4
+    测试环境：
+    硬件:  Open Power 720/ 8 cpus/ 2 cores/ 6GB RAM (tiobench use 1G)
+    软件: RHEL4-U3GA/ 2.6.17.2/ systemtap-20060718/ elfutils-0.122-0.4
 
 ## 链接
 
