@@ -1,6 +1,6 @@
 > 原文：[eLinux.org](http://elinux.org/Power_Management)<br/>
 > 翻译：[@zhongbin](https://github.com/qkhhyga)<br/>
-> 校订：[@lzulfacon](https://github.com/lzufalcon)<br/>
+> 校订：[@lzufalcon](https://github.com/lzufalcon)<br/>
 
 
 # 电源管理
