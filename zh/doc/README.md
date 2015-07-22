@@ -87,12 +87,16 @@
     * 碰到专业名词，特定缩写，不需要翻译。
     * 考虑到 Wiki 已经转为 GitBook，`This page` 统一翻译为`本文`。
     * 所有目录的标题中的 `Contents` 翻译为 `目录`。
-    * 不保留英文原文。
+    * 不保留英文原文，只保留中文译文。
+    * 每翻译完一个段落请务必通读
+        * 确保用词没有歧义，整段衔接流畅，如有必要请调整/添加必要的衔接词汇
+        * 并对照英文原文确保没有漏掉原文任何需要表达的含义，不要刻意漏掉部分自己感觉模糊的词汇
+    * 如果有部分段落或者词汇理解模糊，请优先在协作群讨论或者借助第三方翻译工具协助，推荐 bing.com, iciba.com
     * 请在文件头注明如下信息（校订请列出所有提供了反馈并被采纳的同学，翻译和校订以@lzufalcon为例）：
 
 	> 原文：[eLinux.org](http://elinux.org/Boot_Time.md)<br/>
-	> 翻译：[@lzulfacon](https://github.com/lzufalcon)<br/>
-	> 校订：[@lzulfacon](https://github.com/lzufalcon)<br/>
+	> 翻译：[@lzufalcon](https://github.com/lzufalcon)<br/>
+	> 校订：[@lzufalcon](https://github.com/lzufalcon)<br/>
 
     * 重构文章内目录
 
