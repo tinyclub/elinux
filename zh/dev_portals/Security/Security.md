@@ -1,6 +1,6 @@
 > 原文：[eLinux.org](http://eLinux.org/Security.md)<br/>
 > 翻译：[@lzz5235](https://github.com/lzz5235)<br/>
-> 校订：[@lzulfacon](https://github.com/lzufalcon)<br/>
+> 校订：[@lzufalcon](https://github.com/lzufalcon)<br/>
 
 
 # 安全

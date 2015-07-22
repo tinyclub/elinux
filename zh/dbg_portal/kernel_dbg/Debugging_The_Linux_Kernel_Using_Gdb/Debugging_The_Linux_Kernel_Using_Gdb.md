@@ -1,6 +1,6 @@
 > 原文：[eLinux.org](http://eLinux.org/Debugging_The_Linux_Kernel_Using_Gdb "http://eLinux.org/Debugging_The_Linux_Kernel_Using_Gdb") <br />
 > 翻译：[@codingbelief](https://github.com/codingbelief) <br />
-> 校订：[@lzulfacon](https://github.com/lzufalcon) <br />
+> 校订：[@lzufalcon](https://github.com/lzufalcon) <br />
 
 # 使用 Gdb 调试Linux Kernel
 

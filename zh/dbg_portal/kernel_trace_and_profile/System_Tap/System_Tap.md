@@ -1,6 +1,6 @@
 > 原文：[eLinux.org](http://elinux.org/System_Tap "http://eLinux.org/Debugging_The_Linux_Kernel_Using_Gdb") <br />
 > 翻译：[@Lotte-Bai](https://github.com/Lotte-Bai) <br />
-> 校订：[@lzulfalcon](https://github.com/lzufalcon) <br />
+> 校订：[@lzufalcon](https://github.com/lzufalcon) <br />
 
 # System Tap
 
