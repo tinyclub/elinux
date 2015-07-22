@@ -469,7 +469,7 @@
     * [系统服务供应商](embed_linux_info/Vendors/Vendors.md)
     * [主板和芯片供应商](embed_linux_info/Board_and_Chip_Vendors/Board_and_Chip_Vendors.md)
 
-* [eLinux.org 信息和使用技巧Information and Usage tips](info_and_usage_tips/README.md)
+* [eLinux.org 信息和使用技巧](info_and_usage_tips/README.md)
 
     * [关于](info_and_usage_tips/About/About.md)
     * [帮助](info_and_usage_tips/Help/Help.md)
