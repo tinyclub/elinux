@@ -98,10 +98,20 @@
 	> 翻译：[@lzufalcon](https://github.com/lzufalcon)<br/>
 	> 校订：[@lzufalcon](https://github.com/lzufalcon)<br/>
 
+    * 新同学参与 Review 而且其 Feedbacks 被采纳后请把其 Github ID 以及链接追加到校订者名单，多人请用逗号分开。
     * 重构文章内目录
 
                 export PATH=$PATH:/path/to/elinux/tools
                 build-toc.sh xxx.md
+
+    * 提交到 Git 仓库
+        * 请统一使用如下 Subject 和 Message，全部使用英文，其中 n = 1,2,3,4...，根据 Review 次数追加
+
+                    zh: Translate xxx.md (Vn)
+                    
+                    V1: Fix up ...
+                    V2: ...
+                    V3: ...
 
 * 翻译后预览和编译
 
