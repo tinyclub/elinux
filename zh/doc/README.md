@@ -85,17 +85,33 @@
     * --target 和 --host 之类的命令或者参数最好用标示符 \` 括起来。效果如：`--target` 和 `--host`
     * 全篇要统一用中文标点符号，全部用全角。
     * 碰到专业名词，特定缩写，不需要翻译。
-    * 不保留英文原文。
+    * 考虑到 Wiki 已经转为 GitBook，`This page` 统一翻译为`本文`。
+    * 所有目录的标题中的 `Contents` 翻译为 `目录`。
+    * 不保留英文原文，只保留中文译文。
+    * 每翻译完一个段落请务必通读
+        * 确保用词没有歧义，整段衔接流畅，如有必要请调整/添加必要的衔接词汇
+        * 并对照英文原文确保没有漏掉原文任何需要表达的含义，不要刻意漏掉部分自己感觉模糊的词汇
+    * 如果有部分段落或者词汇理解模糊，请优先在协作群讨论或者借助第三方翻译工具协助，推荐 bing.com, iciba.com
     * 请在文件头注明如下信息（校订请列出所有提供了反馈并被采纳的同学，翻译和校订以@lzufalcon为例）：
 
 	> 原文：[eLinux.org](http://elinux.org/Boot_Time.md)<br/>
-	> 翻译：[@lzulfacon](https://github.com/lzufalcon)<br/>
-	> 校订：[@lzulfacon](https://github.com/lzufalcon)<br/>
+	> 翻译：[@lzufalcon](https://github.com/lzufalcon)<br/>
+	> 校订：[@lzufalcon](https://github.com/lzufalcon)<br/>
 
+    * 新同学参与 Review 而且其 Feedbacks 被采纳后请把其 Github ID 以及链接追加到校订者名单，多人请用逗号分开。
     * 重构文章内目录
 
                 export PATH=$PATH:/path/to/elinux/tools
                 build-toc.sh xxx.md
+
+    * 提交到 Git 仓库
+        * 请统一使用如下 Subject 和 Message，全部使用英文，其中 n = 1,2,3,4...，根据 Review 次数追加
+
+                    zh: Translate xxx.md (Vn)
+                    
+                    V1: Fix up ...
+                    V2: ...
+                    V3: ...
 
 * 翻译后预览和编译
 
@@ -117,6 +133,8 @@
             * 进入 Settings，打开所有选项（本书已添加 [.travis.yml](../.travis.yml)）
 
 * 编译通过后可通过 Github 发送 Pull Request
+
+    * 为了更细粒度地 Review，建议每个文件创建一个独立分支，独立发送 Pull Request
 
 * 评审人员收到后会分配人员评审
 
