@@ -38,31 +38,28 @@
 
 ### 可信计算集群 (TCG)
 
-TCG 是一个基于硬件的 PC 平台安全解决方案，并且也适用于嵌入式设备。为了理解 TCG，
-我们可以查看[ TCG 架构规格概述](https://www.trustedcomputinggroup.org/groups/TCG_1_0_Architecture_Overview.pdf)
-这个文档非常不错。
+TCG 是一套基于硬件的安全解决方案，不仅为 PC 平台打造，而且适用于嵌入式设备。为了理解 TCG，
+[ TCG 架构规格概述](https://www.trustedcomputinggroup.org/groups/TCG_1_0_Architecture_Overview.pdf) 
+这份文档不错，推荐看下。
 
-使用可信平台模块（TPM ）安全芯片和写保护的启动代码，我们可以有效的实现可信启动。不幸的是，
-现有的 TPM 主要实现在 PC 平台上，而且 TPM 需要 LPC 总线。因此我们必须将蓝色逻辑线运用在我们的
-系统上。目前 Atmel(R) 平台已经发布了 TPM 芯片, AT97SC3201S 提供了 I2C/SMBus 接口。
+使用可信平台模块（TPM ）安全芯片和写保护的启动代码，我们可以有效的实现可信启动。不幸的是，现有的 TPM 主要为 PC 平台设计，而且 TPM 需要 LPC 总线。 因此我们必须通过胶合逻辑（glue logic，连接复杂逻辑电路的简单逻辑电路的统称）来部署 TPM 到我们的系统中。
+目前 Atmel(R) 平台已经发布了 TPM 芯片, AT97SC3201S 提供了 I2C/SMBus 接口。
 
 ## 开源项目/邮件列表
 
 ### RedBoot/eCos
 
--   [RedBoot](http://sources.redhat.com/redboot/) 是面向嵌入式系统提供
-    bootstrap 环境的软件，在 RedBoot 基础上基于 eCos 设计。
+-   [RedBoot](http://sources.redhat.com/redboot/) 是为嵌入式系统打造的一个完整引导程序环境，它基于 eCos 设计。在 RedBoot 之上做了很多安全增强。
 -   [ x86 平台下高健壮性的 Bootloader ](http://www.ece.uvic.ca/~ece499/2003a/group05/High%20Reliability%20Bootloader%20for%20x86%20-%20Final%20Report.htm)
     提供具有二进制代码签名的功能。
 
 ### U-Boot
 
-项目主页: [u-boot](http://sourceforge.net/projects/u-boot/)
+项目站点：[u-boot](http://sourceforge.net/projects/u-boot/)
 
 ### GRUB
 
-[GRUB](http://www.gnu.org/software/grub/) 是基于 PC 平台的 bootloader
-。下面有两个补丁可以使得 GRUB 具有可信启动的功能。
+[GRUB](http://www.gnu.org/software/grub/) 是基于 PC 平台的 bootloader。下面有两个补丁可以使得 GRUB 具有可信启动的功能。
 
 (这种情形，BIOS 必须支持 TCG 可信启动)
 
@@ -75,8 +72,7 @@ GRUB 提供了密码特性，只有系统管理员才可以启动与系统的交
 
 ### EtherBoot
 
-[EtherBoot](http://www.etherboot.org/) 是一个软件包，可以通过以太网下载 ROM 镜像到本地，
-在 x86 架构的计算机执行引导。
+[EtherBoot](http://www.etherboot.org/) 是一个软件包，用于创建 ROM 镜像，这些镜像能够通过以太网下载代码到 X86 机器上执行。
 [SafeBootMode](http://wiki.etherboot.org/pmwiki.php/Main/SafeBootMode)
 意味着任何 下载的 NBI 镜像都会被检查是否包含安全的数字签名，如果没有的话，用户
 会收到警告。
