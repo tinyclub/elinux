@@ -1,158 +1,141 @@
-> From: [eLinux.org](http://eLinux.org/Security "http://eLinux.org/Security")
+> 原文：[eLinux.org](http://eLinux.org/Security.md)<br/>
+> 翻译：[@lzz5235](https://github.com/lzz5235)<br/>
+> 校订：[@lzufalcon](https://github.com/lzufalcon)<br/>
 
 
-# Security
+# 安全
 
 
 
-## Contents
+## 目录
 
--   [2 Introduction](#introduction)
--   [3 Technology/Project pages](#technology-project-pages)
--   [4 Security Systems in Linux
-    Kernel](#security-systems-in-linux-kernel)
+-   [2 简介](#introduction)
+-   [3 技术/项目主页](#technology-project-pages)
+-   [4 Linux Kernel 中的安全子系统](#security-systems-in-linux-kernel)
     -   [4.1 SELinux](#selinux)
     -   [4.2 Tomoyo](#tomoyo)
     -   [4.3 SMACK](#smack)
--   [5 Older Information (From CELF investigations prior to
-    2005)](#older-information-from-celf-investigations-prior-to-2005)
-    -   [5.1 Documents](#documents)
-    -   [5.2 Key Requirements and the Related
-        Technologies](#key-requirements-and-the-related-technologies)
-    -   [5.3 Resources](#resources)
-        -   [5.3.1 Security Frameworks](#security-frameworks)
-        -   [5.3.2 Security Components](#security-components)
-        -   [5.3.3 Security features](#security-features)
-        -   [5.3.4 Other Resources](#other-resources)
-            -   [5.3.4.1 Security Activities](#security-activities)
-            -   [5.3.4.2 Mailing lists](#mailing-lists)
-            -   [5.3.4.3 Conferences](#conferences)
-            -   [5.3.4.4 Security Articles](#security-articles)
-            -   [5.3.4.5 Papers](#papers)
-            -   [5.3.4.6 Sample and Opensource
-                code](#sample-and-opensource-code)
+-   [5 陈旧的信息 ( 2005 年，CELF 调查的相关信息)](#older-information-from-celf-investigations-prior-to-2005)
+    -   [5.1 文档](#documents)
+    -   [5.2 关键需求与相关技术点](#key-requirements-and-the-related-technologies)
+    -   [5.3 资源](#resources)
+        -   [5.3.1 安全框架](#security-frameworks)
+        -   [5.3.2 安全组件](#security-components)
+        -   [5.3.3 安全特性](#security-features)
+        -   [5.3.4 其他资源](#other-resources)
+            -   [5.3.4.1 安全活动](#security-activities)
+            -   [5.3.4.2 邮件列表](#mailing-lists)
+            -   [5.3.4.3 会议](#conferences)
+            -   [5.3.4.4 安全相关的文章](#security-articles)
+            -   [5.3.4.5 论文](#papers)
+            -   [5.3.4.6 实例和开源代码 ](#sample-and-opensource-code)
 
+## 简介
 
-## Introduction
+本文主要包含与嵌入式 Linux 有关的安全方面的技术。
 
-This page has information about Security technologies for Embedded
-Linux.
+## 技术/项目主页
 
-## Technology/Project pages
+-   [硬件安全相关的资源](../.././dev_portals/Security/Security_Hardware_Resources/Security_Hardware_Resources.md "Security Hardware Resources")
+-   [Bootloader 安全相关的资源](../.././dev_portals/Security/Bootloader_Security_Resources/Bootloader_Security_Resources.md "Bootloader Security Resources"))
+-   [强制访问控制技术的比较](../.././dev_portals/Security/Mandatory_Access_Control_Comparison/Mandatory_Access_Control_Comparison.md "Mandatory Access Control Comparison")
 
--   [Security Hardware
-    Resources](../.././dev_portals/Security/Security_Hardware_Resources/Security_Hardware_Resources.md "Security Hardware Resources")
--   [Bootloader Security
-    Resources](../.././dev_portals/Security/Bootloader_Security_Resources/Bootloader_Security_Resources.md "Bootloader Security Resources")
--   [Mandatory Access Control
-    Comparison](../.././dev_portals/Security/Mandatory_Access_Control_Comparison/Mandatory_Access_Control_Comparison.md "Mandatory Access Control Comparison")
-
-## Security Systems in Linux Kernel
+## Linux Kernel 中的安全子系统
 
 ### SELinux
 
--   [SELinux](../.././dev_portals/Security/SELinux/SELinux.md "SELinux") - This provides an implementation of
-    the Flask Flux Advanced Security Kernel for Linux. SELinux started
-    as a kernel patch which was presented by the NSA to kernel
-    developers during the 2001 kernel summit. Feeback from this
-    presentation started the LSM project, and the SELinux project helped
-    define large parts of the LSM interface.
-    -   OLS 2008 paper: [SELinux for Consumer Electronics
-        Devices](http://eLinux.org/images/8/88/Nakamura-reprint.pdf "Nakamura-reprint.pdf")
-        Nakamura & Sameshima, Hitachi Software Engineering.
-    -   ELC 2008 presentation: [Embedded
-        SELinux](http://eLinux.org/images/a/a3/ELC2008_nakamura.pdf "ELC2008 nakamura.pdf")
+-   [SELinux](../.././dev_portals/Security/SELinux/SELinux.md "SELinux") - 这个组件主要用来实现对 Linux Kernel 的高级安全瓶通量功能。
+    SELinux 主要起始于 NSA 在 2001 年给 kernel 提交的补丁，在 LSM 项目中对这个补丁进行了讨论，目前 SELinux 已经帮助 Kernel
+	定义了大部分的 LSM 接口。
+    -   OLS 2008 paper: [消费者电子设备下的 SELinux](http://eLinux.org/images/8/88/Nakamura-reprint.pdf "Nakamura-reprint.pdf")
+        Nakamura & Sameshima, 日立软件工程师.
+    -   ELC 2008 presentation: [嵌入式 SELinux](http://eLinux.org/images/a/a3/ELC2008_nakamura.pdf "ELC2008 nakamura.pdf")
 
 ### Tomoyo
 
--   [TOMOYO Linux](../.././dev_portals/Security/TomoyoLinux/TomoyoLinux.md "TomoyoLinux") is a technology to
-    improve Linux's security originally developed by [NTT DATA
-    CORPORATION, Japan](http://www.nttdata.co.jp/en/index.html). [TOMOYO
-    Linux](../.././dev_portals/Security/TomoyoLinux/TomoyoLinux.md "TomoyoLinux") was released on November, 11,
-    2005 as an open source software under the GPL. [TOMOYO
-    Linux](../.././dev_portals/Security/TomoyoLinux/TomoyoLinux.md "TomoyoLinux") is a mechanism called Secure OS,
-    which can perform fine grained access control by breaking access
-    permissions into parts like SELinux.
-    -   [ELC2007
+-   [TOMOYO Linux](../.././dev_portals/Security/TomoyoLinux/TomoyoLinux.md "TomoyoLinux") 
+	主要用来提升 Linux 自身的安全性，这个特性是由[ NTT DATA
+    CORPORATION, Japan](http://www.nttdata.co.jp/en/index.html)开发。 [ TOMOYO
+    Linux ](../.././dev_portals/Security/TomoyoLinux/TomoyoLinux.md "TomoyoLinux") 是在 2005 年 11 月 11 日，以 GPL 许可证的形式开源的。 [TOMOYO
+    Linux](../.././dev_portals/Security/TomoyoLinux/TomoyoLinux.md "TomoyoLinux") 是一个机制，可以被称为安全操作系统，
+	与 SELinux 非常类似，这个机制可以通过提升现有的访问控制机制，从而做到更加细粒度的访问控制。
+    -   [ELC 2007
         presentation](http://eLinux.org/images/b/b5/Elc2007-presentation-20070418-for_linux.pdf "Elc2007-presentation-20070418-for linux.pdf")
-    -   [OLS2007 BoF
+    -   [OLS 2007 BoF
         slides](http://eLinux.org/images/e/eb/Ols2007-tomoyo-20070629.pdf "Ols2007-tomoyo-20070629.pdf")
 
-Tomoyo was incorporated into mainline Linux kernel as of version 2.6.28.
+Tomoyo 在 kernel 2.6.28 时被合并到 kernel 主线中。
 
 ### SMACK
 
--   SMACK - Simple Mandatory Access Control Kernel. This is a
-    lightweight implementation of MAC in the Linux kernel.
-    -   Home Page (very simple):
+-   SMACK - 一个简单的强制访问控制的 Kernel ，这个的实现非常轻量级。
+    -   官方主页 (非常简单):
         [http://schaufler-ca.com/](http://schaufler-ca.com/)
-    -   LWN.net article:
+    -   LWN.net 文章:
         [http://lwn.net/Articles/244531/](http://lwn.net/Articles/244531/)
-    -   CELF-commissioned white paper: [SMACK for Digital
+    -   CELF-commissioned 白皮书: [SMACK for Digital
         TV](http://www.embeddedalley.com/pdfs/Smack_for_DigitalTV.pdf)
         by Embedded Alley (now Mentor Graphics)
 
-SMACK was incorporated into the mainline Linux kernel as of version
-2.6.25
+SMACK 在 kernel 2.6.25 时被合并到 Kernel 主线中。
 
-# Older Information (From CELF investigations prior to 2005)
+# 陈旧的信息 ( 2005 年，CELF 调查的相关信息)
 
-## Documents
+## 文档
 
--   CELF 1.0 Security Specification: [Security
-    Spec\_R2](http://www.celinuxforum.org/CelfPubWiki/SecuritySpec_R2)
+-   CELF 1.0 安全规范: [ 安全规范\_R2 ](http://www.celinuxforum.org/CelfPubWiki/SecuritySpec_R2)
 
-## Key Requirements and the Related Technologies
+## 关键需求与相关技术点
 
-Where the technologies are defined as follows:
+与安全相关的技术点，这个会在表格中被引用。
 
 1.  Umbrella
 2.  Linux Security Module (LSM) framework
-3.  PAX patch – (currently x86 only)
+3.  PAX patch – ( x86 架构独有)
 4.  LOMAC
 5.  LIDS
 6.  Netfilter
 7.  digsig/bsign/elfsig
-8.  Trusted Computing Group (TCG)
-9.  TPE (included with LIDS)
+8.  可信计算机集群 (TCG)
+9.  TPE (包括 LIDS )
 10. PRAMFS
-11. ACL file system extensions
-12. Posix capabilities associated with files
+11. ACL 文件系统拓展
+12. Posix 中与文件相关的功能
 
 <table>
 <thead>
 <tr class="header">
-<th align="left">Requirements</th>
-<th align="left">Technologies</th>
+<th align="left">需求</th>
+<th align="left">相关技术</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Reliability</td>
+<td align="left">可靠性</td>
 <td align="left">10</td>
 </tr>
 <tr class="even">
-<td align="left">Secure/trusted boot</td>
+<td align="left">安全/信任的引导</td>
 <td align="left">8</td>
 </tr>
 <tr class="odd">
-<td align="left">Access control</td>
+<td align="left">访问控制</td>
 <td align="left">1, 4, 5, 11, 12</td>
 </tr>
 <tr class="even">
-<td align="left">Buffer/stack protection</td>
+<td align="left">缓冲区/栈的保护</td>
 <td align="left">3</td>
 </tr>
 <tr class="odd">
-<td align="left">Intrusion detection</td>
+<td align="left">入侵检测</td>
 <td align="left">5, 8</td>
 </tr>
 <tr class="even">
-<td align="left">Configurable security</td>
+<td align="left">是否可以配置安全选项</td>
 <td align="left">1, 2, 4, 5, 7, 9(?), 11, 12</td>
 </tr>
 <tr class="odd">
-<td align="left">Authentication</td>
+<td align="left">用户认证</td>
 <td align="left">1, 7</td>
 </tr>
 <tr class="even">
@@ -160,304 +143,216 @@ Where the technologies are defined as follows:
 <td align="left">1, 7</td>
 </tr>
 <tr class="odd">
-<td align="left">Trusted connection</td>
+<td align="left">可靠的连接</td>
 <td align="left">IPSec, SSL already supported</td>
 </tr>
 <tr class="even">
-<td align="left">Secure services</td>
+<td align="left">安全服务</td>
 <td align="left">1, 4, 5, 7, 8</td>
 </tr>
 <tr class="odd">
-<td align="left">Firewall</td>
+<td align="left">防火墙</td>
 <td align="left">6</td>
 </tr>
 <tr class="even">
-<td align="left">API support for security hardware</td>
+<td align="left">安全硬件提供的 API 支持</td>
 <td align="left">8</td>
 </tr>
 <tr class="odd">
-<td align="left">Secure field upgradeability</td>
+<td align="left">安全固件的可升级性</td>
 <td align="left">9</td>
 </tr>
 <tr class="even">
-<td align="left">Authentication</td>
+<td align="left">认证</td>
 <td align="left">8</td>
 </tr>
 </tbody>
 </table>
 
-Of the listed technologies the CELF Security Working Group is studying
-or supporting the following:
+对于清单中的相关技术，CELF 安全组织正在研究或者已经支持以下的技术：
 
 -   Umbrella
--   PAX - only monitor for now
+-   PAX - 目前仅仅是监控
 -   LIDS
 -   Signed Binaries
-    -   Dig Sig (part of DSI project at
+    -   Dig Sig ( DSI 项目一部分
         [http://disec.sourceforge.net/](http://disec.sourceforge.net/))
-    -   Bsign (a Debian project at
+    -   Bsign (Debian 项目
         [http://packages.debian.org/squeeze/bsign](http://packages.debian.org/squeeze/bsign))
     -   [ELFSign](http://www.hick.org/code/skape/papers/elfsign.txt)
--   Linux API for TCG - pending CELF NPO status and liaison discussions
--   TPE - as a part of LIDS
--   ACL file system extensions - for those that CELF needs (PRAMFS,
-    JFFS2). Also follow LKLM discussions and maybe do implementations
--   POSIX capabilities associated with files
+-   Linux API for TCG - 仍然处在 NPO 状态，并进行讨论
+-   TPE - LIDS 一部分
+-   ACL 文件拓展 - CELF 需要 ( PRAMFS,JFFS2 ). 也需要关注 LKLM 讨论，然后进行实现
+-   POSIX 中与文件相关的功能
 
-## Resources
+## 资源
 
-### Security Frameworks
+### 安全框架
 
--   [The Linux Security Modules (LSM)](http://lsm.immunix.org) project
-    provides a lightweight, general-purpose framework for access
-    control. Contemporary computing environments are increasingly
-    hostile. Adding enhanced access control models to the kernel
-    improves host security and can help a server survive malicious
-    attacks. Security research has provided many types of enhanced
-    access controls effective for different environments. The LSM
-    framework allows access control models to be implemented as loadable
-    kernel modules.
+-   [The Linux Security Modules (LSM)](http://lsm.immunix.org) 项目提供
+	一个轻量级，多种用途的访问权限控制框架。如今计算机的恶意软件增长迅速，通过增加权限访问控制模块
+	可以提高内核的安全性，使得服务器在大量的攻击中幸存。安全研究已经为多种操作系统环境提供许不同类型的权限访问控制
+	而 LSM 框架允许权限访问控制被实现为可加载的内核模块。
 
--   [Medusa DS9 Security Project](http://medusa.terminus.sk/) is a
-    project to enhance the security of Linux kernel, which implements
-    the ZP Security Framework. The main goal of a project is to
-    implement a framework for implementation of any security model
-    (unlike other secure Linux kernel projects).
+-   [ Medusa DS9 Security Project ](http://medusa.terminus.sk/) 是另外一个提高 Linux kernel 安全性的项目，它实现了ZP 安全框架
+	。这个项目的目标就是实现一个安全框架从而实现任何的安全框架模型（不同于其他的 Linux kernel 项目）。
 
-Medusa DS9 is used to increase Linux's security. It consists of two
-major parts, Linux kernel changes and the user-space daemon. Kernel
-changes do the monitoring of syscalls, filesystem actions, and
-processes, and they implement the communication protocol. The security
-daemon communicates with the kernel using the character device to send
-and receive packets. It contains the whole logic and implements the
-concrete security policy. That means that Medusa can implement any model
-of data protection; it depends only on configuration file, which is in
-fact a program in the internal programming language, somewhat similar to
-C.
+Medusa DS9 主要用来提高 Linux 的安全性，它由两部分组成：Linux kernel 的改变和用户空间守护进程的改变。
+Kernel 的改变主要来监视系统调用，文件系统动作和进程，他们被实现为通信协议。安全守护进程使用字符设备收发
+数据包来与 kernel 进行通讯。守护进程包含了整个业务逻辑与加固的安全策略，这就意味着 Medusa 可以实现任何类型的
+数据保护；而它仅仅取决于配置文件；实际上他是一个存在于程序内部的编程语言，非常类似与 C 。
 
--   [Rule Set Based Access Control (RSBAC)](http://www.rsbac.org) is a
-    flexible, powerful and fast open source access control framework for
-    current Linux kernels, which has been in stable production use since
-    January 2000 (version 1.0.9a). All development is independent of
-    governments and big companies, and no existing access control code
-    has been reused.
+-   [ Rule Set Based Access Control (RSBAC) ](http://www.rsbac.org) 是一个灵活
+	，强大与快速的开源权限控制访问框架，目前被运用到 Linux kernel 中，在 2000 年 1 月后，该项目已经可以稳定
+	的使用。所有政府与公司的开发是相互独立的，不存在访问控制代码被重用的现象。
 
-The standard package includes a range of access control models like MAC,
-RC, ACL (see below). Furthermore, the runtime registration facility
-(REG) makes it easy to implement your own access control model as a
-kernel module and get it registered at runtime.
+标准的安装包包括一系列的访问控制模块，比如 MAC ，RC ，ACL 等，而且运行注册的方式使得我们更加容易
+的实现自己的访问控制内核模块，并且将他在运行时注册就可以了。
 
-The RSBAC framework is based on the Generalized Framework for Access
-Control (GFAC) by Abrams and La Padula. All security relevant system
-calls are extended by security enforcement code. This code calls the
-central decision component, which in turn calls all active decision
-modules and generates a combined decision. This decision is then
-enforced by the system call extensions.
+RSBAC 框架是建立在通用的权限访问控制框架 (GFAC) 之上的，该框架是由 Abrams 与 La Padula 设计。
+所有与系统相关的安全代码都可以被成为系统安全的拓展代码。这种代码被认为是一种中央决策组件，可以
+称这些中央决策组件为决策模块或者产生组合决策，这些决策可以用来加固系统调用拓展。
+	
+决策建立在多种访问类型之上，例如访问目标，对目标的属性类型访问。另外独立属性被运用
+在独立的模块中，比如：the privacy module (PM) 所有的属性被存储在受保护的文件夹内，一个文件夹
+对应一个挂载设备，因此改变这些属性需要提供特殊的系统调用。
 
-Decisions are based on the type of access (request type), the access
-target and on the values of attributes attached to the subject calling
-and to the target to be accessed. Additional independent attributes can
-be used by individual modules, e.g. the privacy module (PM). All
-attributes are stored in fully protected directories, one on each
-mounted device. Thus changes to attributes require special system calls
-provided.
+-   [ TrustedBSD MAC 框架 ](http://www.trustedbsd.org/mac.html) -
+	该项目拓展了系统原有的权限访问控制框架，允许系统管理员对系统中不同类型文件 (e.g. processes or sockets)
+	和对象(e.g. sockets, filesystem objects, sysctl nodes)进行额外的安全加固。开发这个新的访问控制模型
+	主要是用来促进内核开发更加灵活的权限访问框架，而 TrustedBSD MAC 框架允许模型使用内核模块的形式实现。
 
--   [TrustedBSD MAC Framework](http://www.trustedbsd.org/mac.html) -
-    Mandatory access controls extend discretionary access controls by
-    allowing administrators to enforce additional security for all
-    subjects (e.g. processes or sockets) and objects (e.g. sockets, file
-    system objects, sysctl nodes) in the system. Development of those
-    new access control models is facilitated by the development of a
-    flexible kernel access control extension framework, the TrustedBSD
-    MAC Framework. This permits new access control models to be
-    introduced as kernel modules.
-
--   [Trusted Computing Group
-    (TCG)](https://www.trustedcomputinggroup.org/) - TCG defines a
-    security architecture based on the hardware-based root of trust.
-    This is a cost effective solution to establish Trusted Computing on
-    various platforms. For some introductory information see Seiji
-    Munetoh and Nicholas Szeto's presentation, TCGOverviewPDF, on the
-    [Tech Conference
-    2005Docs](../.././dev_portals/Security/Tech_Conference_2005Docs/Tech_Conference_2005Docs.md "Tech Conference 2005Docs")
-    page. The Trusted Platform Module ([TPM](../.././dev_portals/Security/TPM/TPM.md "TPM")) is a security
-    chip bound to the platform and a key component of this architecture.
-    TCG has a Mobile Phone WG which has released a use cases document
-    that is applicable to many generic CE devices in addition to the
-    mobile phone -- [MPWG User
+-   [ 可信计算集群 (TCG) ](https://www.trustedcomputinggroup.org/) - TCG 定义了一种基于硬件的安全架构
+	，这是一种非常有效的方式建立在多种平台上的可信计算。更多的介绍请查看 Seiji
+    Munetoh 与 Nicholas Szeto 的演示, TCGOverviewPDF, 这个演示是在
+    [ Tech Conference
+    2005 Docs ](../.././dev_portals/Security/Tech_Conference_2005Docs/Tech_Conference_2005Docs.md "Tech Conference 2005Docs")
+    页面上. 可信平台模块([TPM](../.././dev_portals/Security/TPM/TPM.md "TPM")) 是一个安全的芯片绑定平台级别的关键架构组件。
+	TCG 拥有移动电话 WG ，通过 WG 发布了用户用例文档，这个文档可以满足大量通用的 CE 设备（包括移动电话）-- [MPWG User
     Cases](https://www.trustedcomputinggroup.org/groups/mobile/MPWG_Use_Cases.pdf)
 
-### Security Components
+### 安全组件
 
--   [SELinux](../.././dev_portals/Security/SELinux/SELinux.md "SELinux") - This provides an implementation of
-    the Flask Flux Advanced Security Kernel for Linux. SELinux started
-    as a kernel patch which was presented by the NSA to kernel
-    developers during the 2001 kernel summit. Feeback from this
-    presentation started the LSM project, and the SELinux project helped
-    define large parts of the LSM interface
+-   [ SELinux ](../.././dev_portals/Security/SELinux/SELinux.md "SELinux") - 这个功能主要用来实现对 Linux Kernel 的高级安全瓶通量。
+    SELinux 主要起始于 NSA 在 2001 给 kernel 提交的补丁，在 LSM 项目中这个补丁进行了讨论，目前 SELinux 已经
+    定义了大量的 LSM 接口。
 
--   [Apparmor](http://en.opensuse.org/Apparmor) - Apparmor is an
-    application security tool designed to provide an easy-to-use
-    security framework for your applications.
+-   [ Apparmor ](http://en.opensuse.org/Apparmor) - Apparmor 是一个安全工具，设计的目标就是针对应用程序提供简单易用的安全框架。
 
--   [The Linux Intrusion Defence System (LIDS)](http://www.lids.org/) is
-    a kernel patch and admin tools which enhances the kernel's security
-    by implementing Mandatory Access Control (MAC). When it is in
-    effect, chosen file access, all system network administration
-    operations, any capability use, raw device, memory, and I/O access
-    can be made impossible even for root. You can define which programs
-    can access specific files. It uses and extends the system
-    capabilities bounding set to control the whole system and adds some
-    network and filesystem security features to the kernel to enhance
-    the security. You can finely tune the security protections online,
-    hide sensitive processes, receive security alerts through the
-    network, and more. LIDS has two version trees, 1.2 and 2.2. LIDS 2.2
-    supports kernel 2.6. LIDS 1.2 supports kernel 2.4 and it provides
-    new functions, Trusted Path Execution(TPE) and Trusted Domain
-    Enforcement(TDE). These are useful to create a sandbox. LIDS is
-    released under GPL.
+-   [ Linux 入侵防护系统 (LIDS) ](http://www.lids.org/) 是由一个 kernel 补丁和一套管理工具组成，用来实现 Linux 的
+	权限访问控制，当该系统生效时，被选中的文件访问，所有类型的文件访问，所有系统网络的管理员操作，系统功能
+	的使用，原始设备，内存，I/O 访问可以被配置成无法访问，即使是 root 用户。我们可以配置特定的应用程序可以
+	访问某些特定文件。从而拓展整个系统的能力，并将网络与文件系统的安全性加入到 kernel 中。我们可以调整线上系统安全防护措施
+	，隐藏敏感进程，获取最近通过网络或者其他发送的安全警报。LIDS 有两个版本树，1.2 与 2.2 。LIDS 2.2 支持 kernel 2.6 。
+	LIDS 1.2 支持 kernel 2.4 与新的功能，Trusted Path Execution (TPE) 与 Trusted Domain Enforcement (TDE) 。这些可以有效的
+	创建沙盒环境，目前 LIDS 以 GPL 许可证开源。
 
--   [TOMOYO Linux](../.././dev_portals/Security/TomoyoLinux/TomoyoLinux.md "TomoyoLinux") is a technology to
-    improve Linux's security originally developed by [NTT DATA
-    CORPORATION, Japan](http://www.nttdata.co.jp/en/index.html). [TOMOYO
-    Linux](../.././dev_portals/Security/TomoyoLinux/TomoyoLinux.md "TomoyoLinux") was released on November, 11,
-    2005 as an open source software under the GPL. [TOMOYO
-    Linux](../.././dev_portals/Security/TomoyoLinux/TomoyoLinux.md "TomoyoLinux") is a mechanism called Secure OS,
-    which can perform fine grained access control by breaking access
-    permissions into parts like SELinux.
-    -   [ELC2007
-        presentation](http://sourceforge.jp/projects/tomoyo/document/elc2007-presentation-20070418-for_linux.pdf/en/4/elc2007-presentation-20070418-for_linux.pdf)
-    -   [OLS2007 BoF
-        slides](http://sourceforge.jp/projects/tomoyo/document/ols2007-tomoyo-20070629.pdf/en/4/ols2007-tomoyo-20070629.pdf)
-    -   [CELF
-        Wiki](http://tree.celinuxforum.org/CelfPubWiki/TomoyoLinux)
+-   [ TOMOYO Linux ](../.././dev_portals/Security/TomoyoLinux/TomoyoLinux.md "TomoyoLinux") 主要用来提高 Linux 自身的安全性，这个特性是由[NTT DATA
+    CORPORATION, Japan](http://www.nttdata.co.jp/en/index.html)开发。 [ TOMOYO
+    Linux ](../.././dev_portals/Security/TomoyoLinux/TomoyoLinux.md "TomoyoLinux") 是在 2005 年 11 月 11 日，以 GPL 许可证的形式开源的。 [ TOMOYO
+    Linux ](../.././dev_portals/Security/TomoyoLinux/TomoyoLinux.md "TomoyoLinux") 是一个机制，可以被称为安全操作系统，
+    这个机制可以通过打破现有的访问控制，从而做到更细粒度的访问控制，与 SELinux 非常类似。
+    -   [ ELC2007
+        presentation ](http://sourceforge.jp/projects/tomoyo/document/elc2007-presentation-20070418-for_linux.pdf/en/4/elc2007-presentation-20070418-for_linux.pdf)
+    -   [ OLS2007 BoF
+        slides ](http://sourceforge.jp/projects/tomoyo/document/ols2007-tomoyo-20070629.pdf/en/4/ols2007-tomoyo-20070629.pdf)
+    -   [ CELF
+        Wiki ](http://tree.celinuxforum.org/CelfPubWiki/TomoyoLinux)
 
-Tomoyo was incorporated into mainline Linux kernel as of version 2.6.28.
+Tomoyo 在 kernel 2.6.28 时被合并到 Kernel 主线中。
 
--   SMACK - Simple Mandatory Access Control Kernel. This is a
-    lightweight implementation of MAC in the Linux kernel.
-    -   Home Page (very simple):
+-   SMACK - 一个简单的强制访问控制的 Kernel 子系统，这个的实现非常轻量级。
+    -   官方主页 (非常简单):
         [http://schaufler-ca.com/](http://schaufler-ca.com/)
-    -   LWN.net article:
+    -   LWN.net 文章:
         [http://lwn.net/Articles/244531/](http://lwn.net/Articles/244531/)
-    -   CELF-commissioned white paper: [SMACK for Digital
+    -   CELF-commissioned 白皮书: [SMACK for Digital
         TV](http://www.embeddedalley.com/pdfs/Smack_for_DigitalTV.pdf)
         by Embedded Alley (now Mentor Graphics)
 
-SMACK was incorporated into the mainline Linux kernel as of version
-2.6.25
+SMACK 在kernel 2.6.25 时被合并到 Kernel 主线中。
 
--   [Umbrella](http://sourceforge.net/projects/umbrella) for handhelds
-    implements a combination of process based mandatory access control
-    (MAC) and authentication of files for Linux on top of the Linux
-    Security Modules framework. The MAC scheme is enforced by a set of
-    restrictions for each process.
-    -   Restrictions of resources
-    -   Restrictions of access to network interfaces
-    -   Restrictions on process creation and signaling
-    -   Signed files
+-   [ Umbrella ](http://sourceforge.net/projects/umbrella) 
+	基于 Linux 安全模块框架，实现了权限访问控制与文件认证的功能。权限访问控制
+	方案增强了每个进程的访问控制。
+    -   限制资源
+    -   限制访问网络接口
+    -   限制进程的创建与信号处理
+    -   标示文件
 
--   [LOMAC](http://opensource.nailabs.com/lomac/) is a
-    dynamically-loadable security module for Free UNIX kernels that uses
-    Low Water-Mark Mandatory Access Control (MAC) to protect the
-    integrity of processes and data from viruses, Trojan horses,
-    malicious remote users, and compromised network server daemons.
-    LOMAC is designed for compatibility and ease of use - to be a form
-    of MAC typical users can live with.
+-   [ LOMAC ](http://opensource.nailabs.com/lomac/) 
+	是面向 UNIX kernel 的动态加载安全模块，其中它使用了低水印的权限访问控制，用来
+	保护进程的二进制文件与数据不受恶意程序的影响。这里恶意程序包括病毒，特洛伊木马
+	，远程恶意用户，破解的网络服务器。LOMAC 设计的目标就是兼容性与易用。
 
-LOMAC is an attempt to produce a form of MAC integrity protection that
-typical users can live with. LOMAC implements a simple form of MAC
-integrity protection based on Biba's Low Water-Mark model in a Loadable
-Kernel Module (LKM). LOMAC provides useful integrity protection against
-viruses, Trojan horses, malicious remote users, and compromised network
-servers without any modifications to the kernel, applications, or their
-existing configurations. LOMAC is designed to be easy to use. Its
-default configuration is intended to provide useful protection without
-being adjusted for the specific users, servers, or other software
-present on the system. LOMAC may be used to harden currently-deployed
-systems simply by loading the LKM into the kernel shortly after boot
-time.
 
--   [The Enforcer](http://sourceforge.net/projects/enforcer/) is a Linux
-    Security Module designed to improve integrity of a computer running
-    Linux by ensuring no tampering of the filesystem. It can interact
-    with TCPA hardware to provide higher levels of assurance for
-    software and sensitive data.
+LOMAC 的目标是创建权限访问控制用来保护特定的用户。LOMAC 实现了一种简单的 MAC 集成保护形式，
+这个技术基于可加载内核模块（ LKM ）中的低水印的权限访问控制技术，从而有效的保护系统不受
+病毒，特洛伊木马，远程恶意用户，被入侵的网络服务器的损害，这个技术不会修改 kernel 源码，源程序
+或则其他的存在的配置。LOMAC 设计的目标就是兼容性，它默认的配置文件主要用来提供有效的保护，
+而不用配置特定的用户，服务器，其他系统中的软件。LOMAC 可以通过加载内核模块来加固当前部署的系统。
 
--   [Janus](http://www.cs.berkeley.edu/~daw/janus) is a security tool
-    for sandboxing untrusted applications within a restricted execution
-    environment. This can be used to limit the harm that can be caused
-    by any successful compromise of the application. We have
-    successfully used Janus to jail Apache, bind, and other programs
-    within a limited sandbox without disturbing application behavior,
-    and we continue to seek experience with using this approach in
-    production environments.
+-   [ The Enforcer ](http://sourceforge.net/projects/enforcer/) 是一个 Linux 安全模块
+	，通过保证文件系统不被恶意篡改，提高运行中计算机的 Linux 完整性。它与 TCPA 硬件进行交互
+	来提供更高层级的软件与敏感数据的防护。
 
--   [Domain and Type Enforcement
-    (DTE)](http://www.cs.wm.edu/~hallyn/dte/) is a mandatory access
-    control system which assigns types to files and domains to
-    processes. Access from domains to other domains and from domains to
-    types is enforced according to the DTE policy. The first
-    implementation of this project closely followed the description by
-    TIS in the papers titled A Domain and Type Enforcement Prototype and
-    Confining Root Programs with Domain and Type Enforcement.
+-   [ Janus ](http://www.cs.berkeley.edu/~daw/janus) 是一个安全工具，用来给不信任的进程提供一个
+	沙盒环境，用来限制不信任程序的执行环境。这个工具可以限制破解软件对软件造成的损害。
+	我们成功的使用 Janus 破解了 Apache ，bind ，和其他程序。并将其限制在沙盒中，没有打断进程运行。
+	我们还将此方法应用在生产环境中。
 
--   [The Realtime Linux Security Module
-    (LSM)](http://sourceforge.net/projects/realtime-lsm/) is a loadable
-    extension for Linux 2.6 kernels. It selectively grants realtime
-    permissions to specific user groups or applications.
+-   [ Domain and Type Enforcement
+    ( DTE ) ](http://www.cs.wm.edu/~hallyn/dte/) 是一个权限访问控制系统，可以赋予不同文件的类型与域给特定进程。
+	如果从其他域访问该进程，那么必须通过 DTE 策略来访问。这个项目首次实现在一篇论文中，这篇论文的名字叫《
+    A Domain and Type Enforcement Prototype and
+    Confining Root Programs with Domain and Type Enforcement》。
 
--   [ACL support for Linux
-    kernel](http://sourceforge.net/projects/linux-acl/) - This linux
-    kernel patch / user code combination allows supporting full access
-    control lists (ACLs) for the Linux kernel.
+-   [ The Realtime Linux Security Module
+    (LSM) ](http://sourceforge.net/projects/realtime-lsm/) 是 Linux 2.6 内核中可加载模块的拓展
+    它可以赋予实时的权限给特殊的用户组和进程。
+
+-   [ ACL support for Linux
+    kernel ](http://sourceforge.net/projects/linux-acl/) - 这个代码包括两部分：Kernel 补丁与用户代码。
+	支持了 Linux kernel 中全部的访问控制列表 ( ACLs )。
 
 -   [http://www.hu.grsecurity.net/
-    grsecurity](http://grsecurity.urc.bl.ac.yu/) (mirrors, original site
-    was [here](http://www.grsecurity.net/)) - is an innovative approach
-    to security utilizing a multi-layered detection, prevention, and
-    containment model. It is licensed under the GPL.
+    grsecurity](http://grsecurity.urc.bl.ac.yu/) (镜像原始站点
+    [here](http://www.grsecurity.net/)) - 通过使用创新的方式来实现进行多层安全检测，防护，容错模型。
+    该项目以 GPL 许可证开源。
 
-It offers among many other features:
+此外提供了大量其他的特性：
 
--   -   An intelligent and robust Role-Based Access Control (RBAC)
-        system that can generate least privilege policies for your
-        entire system with no configuration
-    -   Change root (chroot) hardening
-    -   /tmp race prevention
-    -   Extensive auditing
-    -   Prevention of entire classes of exploits related to address
-        space bugs (from the PaX project)
-    -   Additional randomness in the TCP/IP stack
-    -   A restriction that allows a user to only view his/her processes
-    -   Every security alert or audit contains the IP address of the
-        person that caused the event
+-   -   一种智能的，健壮的角色权限控制系统（ RBAC ），它可以根据你整个系统产生一系列的权限策略
+		无需进行配置。
+	-   加固 chroot 机制
+	-   避免 /tmp 竞争条件
+	-   广泛审视
+	-   阻止对于整个地址空间的漏洞利用（来自于 Pax 项目）
+	-   针对 TCP/IP 栈位置额外的随机性
+	-   限制当前用户只能查看自身的进程
+	-   每个安全警报或者是安全审计包含每个引起该错误事件用户的 IP 地址
 
-### Security features
+### 安全特性
 
--   NX patch - recent patch for kernel to prohibit execution of code on
-    stack segment [LKML discussion about NX
-    patch](http://groups.google.com/groups?hl=en&lr=&ie=UTF-8&threadm=232Xj-3bC-13%40gated-at.bofh.it&rnum=1&prev=/groups%3Fq%3DNX%2Bsecurity%2Blkml%26hl%3Den%26lr%3D%26ie%3DUTF-8%26selm%3D232Xj-3bC-13%2540gated-at.bofh.it%26rnum%3D1)
+-   NX 补丁 - 最近提交到主线的补丁，用来阻止执行栈段的恶意代码 [ LKML 上关于 NX 补丁的讨论](http://groups.google.com/groups?hl=en&lr=&ie=UTF-8&threadm=232Xj-3bC-13%40gated-at.bofh.it&rnum=1&prev=/groups%3Fq%3DNX%2Bsecurity%2Blkml%26hl%3Den%26lr%3D%26ie%3DUTF-8%26selm%3D232Xj-3bC-13%2540gated-at.bofh.it%26rnum%3D1)
 
-### Other Resources
+### 其他资源
 
--   Trusted Boot
-    -   Security Hardware Resources -- [Security Hardware
-        Resources](../.././dev_portals/Security/Security_Hardware_Resources/Security_Hardware_Resources.md "Security Hardware Resources")
-    -   Bootloader Security Resources -- [Bootloader Security
-        Resources](../.././dev_portals/Security/Bootloader_Security_Resources/Bootloader_Security_Resources.md "Bootloader Security Resources")
+-   启动设备的安全性
+    -   安全硬件资源 -- [安全硬件资源](../.././dev_portals/Security/Security_Hardware_Resources/Security_Hardware_Resources.md "Security Hardware Resources")
+    -   Bootloader 安全相关的资源 -- [Bootloader 安全相关的资源](../.././dev_portals/Security/Bootloader_Security_Resources/Bootloader_Security_Resources.md "Bootloader Security Resources")
 
-#### Security Activities
+#### 安全活动
 
--   [Trusted Computing Group](https://www.trustedcomputinggroup.org/)
+-   [可信计算小组](https://www.trustedcomputinggroup.org/)
 -   [Linux Security Modules](http://lsm.immunix.org)
 
-#### Mailing lists
+#### 邮件列表
 
 -   [Linux Security Modules mailing
     list](http://vger.kernel.org/vger-lists.html#linux-security-module)
 
-#### Conferences
+#### 会议
 
 -   Linux Conf Au [Linux Security 2009
     (miniconf)](http://linux.conf.au/schedule/32/view_miniconf?day=tuesday)
@@ -469,7 +364,7 @@ It offers among many other features:
     -   [OLS
         Proceedings](http://www.linuxsymposium.org/2006/proceedings.php)
 
-#### Security Articles
+#### 安全相关的文章
 
 -   [TOMOYO Linux and pathname-based
     security](http://lwn.net/Articles/277833/) [LWN.net] Apr 2008
@@ -480,34 +375,30 @@ It offers among many other features:
 -   [TPM-based Linux Run-time
     Attestation](http://www.research.ibm.com/secure_systems_department/projects/tcglinux/)
 
-Moved to:
+移动到:
 
 -   [TPM-based Linux Run-time Attestation
     correct](http://domino.research.ibm.com/comm/research_projects.nsf/pages/ssd_ima.index.html)
 
-#### Papers
+#### 论文
 
--   [Experimenting with TCPA/TCG
-    Hardware](http://www.cs.dartmouth.edu/~sws/pubs/TR2003-476.pdf)
--   [A Comparison of Publicly Available Tools for Dynamic Buffer
-    Overflow
-    Prevention](http://www.ida.liu.se/~johwi/research_publications/paper_ndss2003_john_wilander.pdf)
+-   [对 TCPA/TCG 硬件的测试](http://www.cs.dartmouth.edu/~sws/pubs/TR2003-476.pdf)
+-   [用来阻止动态缓冲区溢出工具对比](http://www.ida.liu.se/~johwi/research_publications/paper_ndss2003_john_wilander.pdf)
 -   [SMACK for Digital
     TV](http://www.embeddedalley.com/pdfs/Smack_for_DigitalTV.pdf)
 
-#### Sample and Opensource code
+#### 实例和开源代码
 
 -   [A sample GPL TCPA Linux
     driver](http://www.research.ibm.com/gsal/tcpa/) for Red Hat 8
 -   [Linux TPM Device Driver](http://sourceforge.net/projects/tpmdd)
 -   [TCG Software Stack (TSS) for
     Linux](http://sourceforge.net/projects/trousers)
--   A NetBSD driver and some useful links can be found at Rick Wash's
-    [Trusted
-    Computing](http://www.citi.umich.edu/u/rwash/projects/trusted)page.
+-	一些有用的连接和NetBSD驱动可以在 Rick Wash 的
+    [可信计算](http://www.citi.umich.edu/u/rwash/projects/trusted) 主页中看到。
 
 
-[Category](http://eLinux.org/Special:Categories "Special:Categories"):
+[目录](http://eLinux.org/Special:Categories "Special:Categories"):
 
--   [Security](http://eLinux.org/Category:Security "Category:Security")
+-   [安全](http://eLinux.org/Category:Security "Category:Security")
 
