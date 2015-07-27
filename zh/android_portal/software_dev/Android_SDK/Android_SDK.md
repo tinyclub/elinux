@@ -1,5 +1,5 @@
 > 摘自: [eLinux.org](http://eLinux.org/Android_SDK "http://eLinux.org/Android_SDK")
-> 翻译：[@liuzhy520](https://github.com/liuzhy520/"https://github.com/liuzhy520/")
+> 翻译：[@liuzhy520](https://github.com/liuzhy520/ "https://github.com/liuzhy520/")
 
 #安卓SDK
 
