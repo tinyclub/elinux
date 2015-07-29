@@ -1,6 +1,6 @@
 > 原文：[eLinux.org](http://eLinux.org/System_Size "http://eLinux.org/System_Size")
 > 翻译：[@wengpingbo](https://github.com/wengpingbo)
-> 校正：[@NULL](NULL)
+> 校正：[@lzufalcon](https://github.com/lzufalcon)
 
 
 # 系统大小优化
@@ -15,33 +15,33 @@
         -   [2.1.4 减少内核尺寸相关的编译选项](#compiler-options-for-reducing-kernel-size)
         -   [2.1.5 垃圾回收补丁集](#section-garbage-collection-patchset)
         -   [2.1.6 运行时内核大小](#runtime-size-of-kernel)
-            -   [2.1.6.1 内核堆栈大小](#kernel-stack-size)
+            -   [2.1.6.1 内核栈大小](#kernel-stack-size)
         -   [2.1.7 自动裁剪](#auto-reduction)
         -   [2.1.8 PRINTK 消息压缩](#compressed-printk-messages)
-        -   [2.1.9 裁剪的一些想法和工作](#reduction-ideas-and-recent-work)
+        -   [2.1.9 裁剪的一些想法和近期的工作](#reduction-ideas-and-recent-work)
     -   [2.2 文件系统压缩](#file-system-compression)
     -   [2.3 应用裁剪](#shrinking-your-application)
         -   [2.3.1 程序大小相关编译选项](#compiler-options-for-program-size)
         -   [2.3.2 缩减你的程序](#stripping-your-program)
         -   [2.3.3 手动优化程序大小](#hand-optimizing-programs-for-size)
-    -   [2.4 库节约](#library-savings)
+    -   [2.4 库尺寸裁剪技术](#library-savings)
         -   [2.4.1 使用更小的 libc](#use-of-a-smaller-libc)
         -   [2.4.2 静态链接](#static-linking)
         -   [2.4.3 库裁剪](#library-reduction)
         -   [2.4.4 延时加载库](#deferred-library-loading)
-    -   [2.5 就地执行](#execute-in-place)
+    -   [2.5 就地执行（XIP）](#execute-in-place)
         -   [2.5.1 内核 XIP](#kernel-xip)
         -   [2.5.2 应用 XIP](#application-xip)
         -   [2.5.3 原地数据读取 (DRIP)](#data-read-in-place-drip)
--   [3 尺寸优化的技术和相关工具](#size-measurement-tools-and-techniques)
+-   [3 尺寸测量的技术和相关工具](#size-measurement-tools-and-techniques)
     -   [3.1 内核尺寸测量数据](#kernel-size-measurement-data)
     -   [3.2 怎样计算内核镜像的大小](#how-to-measure-the-kernel-image-size)
     -   [3.3 怎样动态计算内存使用情况](#how-to-measure-the-memory-usage-at-runtime)
     -   [3.4 Linux 内核 从 2.4 到 2.6 的尺寸增加](#linux-size-increase-from-2-4-to-2-6)
-    -   [3.5 GCC 代码大小基准](#gcc-code-size-benchmarking)
+    -   [3.5 GCC 代码大小基准测试](#gcc-code-size-benchmarking)
 -   [4 案例研究](#case-studies)
     -   [4.1 uClinux](#uclinux)
-    -   [4.2 微型处理器上得 Linux (这里是在 M3 上)](#linux-on-microcontrollers-m3-in-this-case)
+    -   [4.2 微型处理器上的 Linux (这里是在 M3 上)](#linux-on-microcontrollers-m3-in-this-case)
 -   [5 发行版本的尺寸缩减相关尝试](#reduced-size-distribution-efforts)
 -   [6 杂项](#other-tidbits-on-system-size)
     -   [6.1 内核内存溢出检测](#memory-leak-detection-for-the-kernel)
@@ -51,7 +51,7 @@
 
 ## 介绍
 
-该页面是一些与 Linux 系统尺寸优化相关的信息和项目。
+本文介绍一些与 Linux 系统尺寸优化相关的信息和项目。
 
 ## 减少系统尺寸的技术
 
@@ -66,7 +66,7 @@
 
 #### Linux-tiny 补丁集
 
--   [Linux Tiny](../.././dev_portals/System_Size/Linux_Tiny/Linux_Tiny.md "Linux Tiny") 是能够使 Linux 内核占用更小空间的补丁集。Linux-tiny 的长期目标是把这些补丁合入上流内核中。在过去的几年里，有几个补丁已经合入到上游内核，并且在这个领域中一直保持有效。
+-   [Linux Tiny](../.././dev_portals/System_Size/Linux_Tiny/Linux_Tiny.md "Linux Tiny") 是能够使 Linux 内核占用更小空间的补丁集。Linux-tiny 的长期目标是把这些补丁合入主线内核中。在过去的几年里，有几个补丁已经合入到主线内核，而且相关工作还在持续。
 
 #### "dietnet"
 
@@ -83,23 +83,23 @@ Andi 指出这些补丁支持 3 个使用场景：
 
 #### 减少内核尺寸相关的编译选项
 
-一篇 LWN 文章讨论了 3 个 GCC 选项来缩减内核。
+这里有一篇 LWN 文章讨论了用于裁剪内核的 3 个 GCC 选项。
 
 [使用 GCC 缩减内核](http://lwn.net/Articles/67175/)
 
-第一个选项是 -Os，这早就在 tiny kernel 补丁里。
+第一个选项是 `-Os`，这早就在 tiny kernel 补丁里。
 
-在 3.4 版本之后，GCC 提供一个 -funit-at-a-time 选项。这让 GCC 能够更好的移除内联和无用的代码，减少 text 和 data 段的大小。这个选项依赖另一个补丁。根据 GCC 手册，这个选项不再起作用。
+在 3.4 版本之后，GCC 提供一个 `-funit-at-a-time` 选项。这让 GCC 能够更好的移除内联和无用的代码，减少 text 和 data 段的大小。这个选项依赖另一个补丁。根据 GCC 手册，这个选项不再起作用。
 
--fwhole-program 和 --combine 选项的组合，其效果上等于把所有的源文件分组，且把所有的变量静态化。GCC 依旧支持这些选项，但在 BusyBox 的配置选项里已经不提供了。这发生了什么？
+`-fwhole-program` 和 `--combine` 选项的组合，其效果上等于把所有的源文件分组，且把所有的变量静态化。GCC 依旧支持这些选项，但在 BusyBox 的配置选项里已经不提供了。这发生了什么？
 
-另外一个选项，-mregparm=3，看上去是 X86 特有的，它告诉编译器对于函数的前 3 个参数，用寄存器存储。（by John Rigby）
+另外一个选项，`-mregparm=3`，看上去是 X86 特有的，它告诉编译器对于函数的前 3 个参数，用寄存器存储。（by John Rigby）
 
 访问 [[1]](http://gcc.gnu.org/onlinedocs/gcc/Optimize-Options.html) 查阅所有可用的优化选项，访问 [编译器优化](../.././dev_portals/System_Size/Compiler_Optimization/Compiler_Optimization.md "Compiler Optimization") 查阅更多关于优化选项效果的细节。
 
 #### 垃圾回收补丁集
 
-这些 [补丁](http://busybox.net/~vda/k-sections/) ，通过在链接阶段提高无用代码 / 数据的剔除效果，可以缩减大约 10% 的内核大小。它们已经被提交给上游内核。由于一个链接器的 [BUG](https://bugzilla.redhat.com/show_bug.cgi?id=621742)，这些补丁的接受依赖于一个新版本链接器（在 binutils-2.21 将会提供）。好消息是这个 BUG 只是影响一些特定的架构（parisc），所以这些补丁在旧的链接器上还是可以使用的。
+这些 [补丁](http://busybox.net/~vda/k-sections/) ，通过在链接阶段提高无用代码 / 数据的剔除效果，可以缩减大约 10% 的内核大小。它们正在往内核主线提交。由于一个链接器的 [BUG](https://bugzilla.redhat.com/show_bug.cgi?id=621742)，这些补丁的接受依赖于一个新版本链接器（在 binutils-2.21 将会提供）。好消息是这个 BUG 只是影响一些特定的架构（parisc），所以这些补丁在旧的链接器上还是可以使用的。
 
 #### 运行时内核大小
 
@@ -150,22 +150,22 @@ Andi 指出这些补丁支持 3 个使用场景：
 </td></tr></table>
 
 
-##### 内核堆栈大小
+##### 内核栈大小
 
-内核有一个配置选项，用来减少每一个进程的内核堆栈大小到 4K。内核堆栈大小默认是 8K（截止到 2011）。如果你有很多进程，使用 4K 的堆栈能够减少内核堆栈的使用。
+内核有一个配置选项，用来减少每一个进程的内核栈大小到 4K。内核栈大小默认是 8K（截止到 2011）。如果你有很多进程，使用 4K 的栈能够减少内核栈的使用。
 
-更多关于内核堆栈大小的信息： [小型内核堆栈](../.././dev_portals/System_Size/Kernel_Small_Stacks/Kernel_Small_Stacks.md "Kernel Small Stacks")
+更多关于内核栈大小的信息： [小型内核栈](../.././dev_portals/System_Size/Kernel_Small_Stacks/Kernel_Small_Stacks.md "Kernel Small Stacks")
 
 #### 自动裁剪
 
 在 2012 年，Tim Bird 研究了几种关于自动尺寸缩减和整体系统优化的技术。特别是他研究的如下几项：
 
 -	内核链接时优化
--	系统调用裁剪
+-	系统调用消除
 -	全局限制
--	内核堆栈大小缩减
+-	内核栈大小缩减
 
-Tim 同时也在链接时重写和静态代码压缩技术方面发现了一些非常有趣的学术研究。Tim 在 2013 年 5 月在日本举行的 LinuxCon 会议上展示了他的工作。
+Tim 同时也在链接时重写和静态代码压缩技术方面发现了一些非常有趣的学术研究。（**注**：部分研究见 [Tiny Linux Kernel](http://elinux.org/Work_on_Tiny_Linux_Kernel)）Tim 在 2013 年 5 月在日本举行的 LinuxCon 会议上展示了他的工作。
 
 这次展示的一些提纲和完整的幻灯片可以这里找到 [系统尺寸自动缩减](../.././dev_portals/System_Size/System_Size_Auto-Reduction/System_Size_Auto-Reduction.md "System Size Auto-Reduction")
 
@@ -173,18 +173,18 @@ Tim 同时也在链接时重写和静态代码压缩技术方面发现了一些�
 
 在 2014 年，一个开放项目提议，[压缩的 printk 消息](../.././dev_portals/System_Size/Compressed_printk_messages/Compressed_printk_messages.md "Compressed printk messages")，评估过这个技术。这个项目的结果可以在 [压缩的 printk 消息 - 结果](../.././dev_portals/System_Size/Compressed_printk_messages/Compressed_printk_messages.md_-_Results "Compressed printk messages - Results") 找到。
 
-#### 裁剪的一些想法和工作
+#### 裁剪的一些想法和近期的工作
 
-一群开发者正在持续工作在 Linux 内核大小裁剪上（截止到 2014）。已经建立了一个页面来分类最近的工作和分类，方便以后的工作。该页面在：[内核大小裁剪工作](../.././dev_portals/System_Size/Kernel_Size_Reduction_Work/Kernel_Size_Reduction_Work.md "Kernel Size Reduction Work")。
+一群开发者正持续致力于 Linux 内核大小裁剪的工作上（截止到 2014）。为方便后续内核裁剪工作，已经建立了一篇文章来分类近期工作和想法。该文章在：[内核大小裁剪工作](../.././dev_portals/System_Size/Kernel_Size_Reduction_Work/Kernel_Size_Reduction_Work.md "Kernel Size Reduction Work")。
 
 ### 文件系统压缩
 
-对于只读数据来说，一个压缩的文件系统是很有的。以下文件系统在嵌入式系统里用的非常多：
+对于只读数据来说，一个压缩的文件系统是很有的。以下文件系统在嵌入式系统里用得非常多：
 
 -	Cramfs，SquashFS，用于块存储
 -	JFFS2 和 它的姊妹 UBIFS，用于 Flash（MTD）存储
 
-要注意的是由于 Cramfs 和 Squashfs 只写一次的天然特性，也能够用于 MTD 存储。
+要注意的是由于 Cramfs 和 Squashfs 只写一次（write-only-once）的天然特性，也能够用于 MTD 存储。
 
 访问 [文件系统](../../dev_portals/File_Systems/File_Systems.md "File Systems") 获取更多信息。
 
@@ -192,15 +192,15 @@ Tim 同时也在链接时重写和静态代码压缩技术方面发现了一些�
 
 #### 程序大小相关编译选项
 
-你可以使用 "gcc -Os" 来优化大小。
+你可以使用 `gcc -Os` 来优化大小。
 
 #### 缩减你的程序
 
-你可以在使用 'strip' 命令来剔除你应用中无用的符号。'strip' 命令包含在你的工具链里，且和当前的架构有关。（例如，你需要加上一个工具链前缀，像 "arm-linux-strip"）。
+你可以使用 'strip' 命令来剔除你应用中无用的符号。`strip` 命令包含在你的工具链里，且和当前的架构有关。（例如，你需要加上一个工具链前缀，像 `arm-linux-strip`）。
 
 要注意的是这会让你的应用更加难调试，因为调试符号不再存在。
 
-默认，strip 只移除调试符号。你可以在动态链接时，移除除了基本的符号之外的所有符号。获取最高程度的移除效果，使用 "strip --strip-unneeded \<app\>"。
+默认情况下，`strip` 只移除调试符号。但是在动态链接时，我们可以移除除了基本符号之外的所有其他符号。若想获取最高程度的移除效果，可以使用 `strip --strip-unneeded <app>`。
 
 这可以节省很多空间，特别是在调试符号被包含在构建里时。
 
@@ -223,11 +223,11 @@ Tim 同时也在链接时重写和静态代码压缩技术方面发现了一些�
     $ ls -l hello
     -rwxrwxr-x 1 tbird tbird 3228 2009-02-10 09:45 hello
 
-你可以 strip 可执行文件和共享库。
+我们可以 strip 可执行文件和共享库。
 
 有一个 "super-strip" 工具，会移除 ELF 可执行程序里额外信息（通常 'strip' 忽略的）。可以在这里找到：[http://muppetlabs.com/\~breadbox/software/elfkickers.html](http://muppetlabs.com/~breadbox/software/elfkickers.html)。*这个程序现在好像被废弃了，我不能在 Fedora 8 上编译它。*
 
-有一些关于手动剔除一些独立的段的信息，使用 -R 命令：[http://reverse.lostrealm.com/protect/strip.html](http://reverse.lostrealm.com/protect/strip.html)
+[这里](http://reverse.lostrealm.com/protect/strip.html) 有一些关于如何手动剔除单独节区（Sections）的信息，它介绍了如何使用 `-R` 命令。
 
 #### 手动优化程序大小
 
@@ -235,7 +235,7 @@ Tim 同时也在链接时重写和静态代码压缩技术方面发现了一些�
 
 看 [一个快速创建紧凑的 Linux ELF 可执行文件的教程](http://muppetlabs.com/~breadbox/software/tiny/teensy.html)
 
-### 库节约
+### 库尺寸裁剪技术
 
 #### 使用更小的 libc
 
@@ -269,9 +269,9 @@ MontaVista 释放过一个工具，用来优化库。这个工具扫描整个文
 
 看 [动态延时加载（pdf）](http://eLinux.org/images/1/19/DeferredDynamicLoading_20070417.pdf "DeferredDynamicLoading 20070417.pdf") 演示。
 
-### 就地执行
+### 就地执行（XIP）
 
-你可以通过直接使用一些 text 或者 data 数据来节省内存。
+我们可以通过直接使用来自 Flash 的一些 `text` 和 `data` 来节省内存开销。
 
 #### 内核 XIP
 
@@ -291,7 +291,7 @@ MontaVista 释放过一个工具，用来优化库。这个工具扫描整个文
 
 -   看 [Data Read In Place](../.././dev_portals/System_Size/Data_Read_In_Place/Data_Read_In_Place.md "Data Read In Place")
 
-## 尺寸优化的技术和相关工具
+## 尺寸测量的技术和相关工具
 
 ### 内核尺寸测量数据
 
@@ -339,7 +339,7 @@ MontaVista 释放过一个工具，用来优化库。这个工具扫描整个文
 
 测量 Linux 下运行时内存使用情况，访问 [动态内存测量](../.././dev_portals/Memory_Management/Runtime_Memory_Measurement/Runtime_Memory_Measurement.md "Runtime Memory Measurement")
 
-同时，要得到更精准的内存使用情况和相关补丁，访问 [精准内存测量](../.././dev_portals/Memory_Management/Accurate_Memory_Measurement/Accurate_Memory_Measurement.md "Accurate Memory Measurement")
+同时，要得到更精准的内存使用情况和相关补丁，请访问 [精准内存测量](../.././dev_portals/Memory_Management/Accurate_Memory_Measurement/Accurate_Memory_Measurement.md "Accurate Memory Measurement")
 
 ### Linux 内核 从 2.4 到 2.6 的尺寸增加
 
@@ -350,9 +350,9 @@ Linux 内核从 2.4 到 2.6 版本之间，大小增加了 10% ~ 30%。论坛成
 
 -   [尺寸调整](../.././dev_portals/System_Size/Size_Tunables/Size_Tunables.md "Size Tunables")
 
-### GCC 代码大小基准
+### GCC 代码大小基准测试
 
-CSiBE 是 GCC 编译器的代码大小基准。CSiBE 的主要目标是监控 GCC 生成的代码大小。另外，编译时间和代码优化测量也包括在内。
+CSiBE 是 GCC 编译器的代码大小基准测试工具。CSiBE 的主要目标是监控 GCC 生成的代码大小。另外，编译时间和代码优化测量也包括在内。
 
 [CSiBE](http://www.inf.u-szeged.hu/csibe/)
 
@@ -367,7 +367,7 @@ CSiBE 是 GCC 编译器的代码大小基准。CSiBE 的主要目标是监控 GC
 -	一篇在 cortex-m3s 上跑 uClinux 库的文章。里面使用的内核有很多好资料。
     -   [http://electronicdesign.com/embedded/practical-advice-running-uclinux-cortex-m3m4](http://electronicdesign.com/embedded/practical-advice-running-uclinux-cortex-m3m4)
 
-### 微型处理器上得 Linux (这里是在 M3 上)
+### 微型处理器上的 Linux (这里是在 M3 上)
 
 -	在 2014 年的 ELC 上，Vitaly Wool 展示了在 STM32F4XX 上运行 2.6.33 的 Linux 内核
     -   Vitaly 的幻灯片： [Spreading the disease: Linux on
@@ -386,7 +386,7 @@ CSiBE 是 GCC 编译器的代码大小基准。CSiBE 的主要目标是监控 GC
     -	Tom 在 ELC 2014 展示的幻灯片：[microYocto and the Internet of Tiny](http://elinux.org/images/5/54/Tom.zanussi-elc2014.pdf)
     -   获取更多相关信息，查看 [https://github.com/tzanussi/meta-galileo/raw/daisy/meta-galileo/README](https://github.com/tzanussi/meta-galileo/raw/daisy/meta-galileo/README)
 -   [http://cgit.openembedded.org/meta-micro/](http://cgit.openembedded.org/meta-micro/)
-    -   由 Phil Blundell 维护。这个项目在保持系统功能全面的前提下减少大小方面，做得很成功。它是使用 uClibc 库
+    -   由 Phil Blundell 维护。这个项目在保持系统功能全面的前提下减少大小方面，做得很成功。它使用了 uClibc 库
     -   [Meta-tiny git
         repository](http://git.infradead.org/users/dvhart/meta-tiny.git)
 -   这有一个叫 Poky-tiny 的项目，基于 Yocto 做一个极度缩减的嵌入式发型版本。
@@ -406,7 +406,7 @@ CSiBE 是 GCC 编译器的代码大小基准。CSiBE 的主要目标是监控 GC
 
 ### 内核内存溢出检测
 
-ARM 公司的 Catalin Marinas 最近贡献了一个内存溢出检测工具给 Linux 内核（在 2.6.17 版本？）。将来可能会合入上游仓库。相关 LKML 讨论记录：[http://lkml.org/lkml/2006/6/11/39](http://lkml.org/lkml/2006/6/11/39)
+ARM 公司的 Catalin Marinas 最近贡献了一个内存溢出检测工具给 Linux 内核（在 2.6.17 版本？）。将来可能会合入主线仓库。相关 LKML 讨论记录：[http://lkml.org/lkml/2006/6/11/39](http://lkml.org/lkml/2006/6/11/39)
 
 ### 系统的大小是怎样影响性能的
 
@@ -423,7 +423,7 @@ Torvalds](http://groups.google.com/group/linux.kernel/msg/e1f9f579a946333e?hl=en
 
 ### 极小系统
 
-该章节罗列了各种各样的，关于生成绝对小型系统的尝试。
+该节罗列了各种各样的，关于生成绝对小型系统的尝试。
 
 -	Vitaly Wool 描述了在一个 2MB 存储和 256K 内存的 ST MCU 上，运行 2.6.33 内核 
     -   [Linux for Microcontrollers: Spreading the Disease
@@ -434,5 +434,5 @@ Torvalds](http://groups.google.com/group/linux.kernel/msg/e1f9f579a946333e?hl=en
 
 [分类](http://eLinux.org/Special:Categories "Special:Categories"):
 
--   [System Size](http://eLinux.org/Category:System_Size "Category:System Size")
+-   [系统裁剪](http://eLinux.org/Category:System_Size "Category:System Size")
 
