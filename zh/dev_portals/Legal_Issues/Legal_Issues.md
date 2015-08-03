@@ -107,24 +107,14 @@ http://lkml.indiana.edu/hypermail/linux/kernel/0301.1/0362.html
 
 ## 其它链接
 
- * http://gpl-violations.org/  —这个 gpl-violations.org 项目试图解决 GPL  违规和增强 
- 
- GPL 合规性的公共意识
+ * http://gpl-violations.org/  —这个 gpl-violations.org 项目试图解决 GPL  违规和增强 GPL 合规性的公共意识
 
-* http://www.softwarefreedom.org/ —自由软件法律中心为开源项目提供法律代表和围
+* http://www.softwarefreedom.org/ —自由软件法律中心为开源项目提供法律代表和围绕开源的法律问题出版信息
 
- 绕开源的法律问题出版信息
-
-* http://www.linuxfoundation.org/programs/legal/compliance —Linux   基金会的开放
-
-  式合规计划
+* http://www.linuxfoundation.org/programs/legal/compliance —Linux   基金会的开放式合规计划
   
 * http://www.binaryanalysis.org/ —一个针对 GPL 合规调查的二元分析工具
 
-* http://lwn.net/Articles/386280/ —关于二元分析工具的 lwn.net 的文章 (2010/05/06 
-
- 出版)
+* http://lwn.net/Articles/386280/ —关于二元分析工具的 lwn.net 的文章 (2010/05/06 出版)
 * 
-http://fossology.org/ —fossology  是一个框架用来扫描开源代码：它目前扫描版权和许
-
- 可证信息，并能够很容易的进行扩展
+http://fossology.org/—fossology是一个框架用来扫描开源代码：它目前扫描版权和许可证信息，并能够很容易的进行扩展
