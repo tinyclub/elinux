@@ -72,9 +72,7 @@ V3 版本
 
 ###针对内核 USB API 的 EXPORT_SYMBOL_GPL
 
-在 2008 年的 1 月，Greg Kroah Hartman 提交了一个补丁将核心 USB API 改变为
-
-EXPORT_SYMBOL_GPL。这里是一些关于这个补丁的信息：
+在 2008 年的 1 月，Greg Kroah Hartman 提交了一个补丁将核心 USB API 改变为EXPORT_SYMBOL_GPL。这里是一些关于这个补丁的信息：
 
 * [USB：将 USB 驱动标记为只被 GPL 许可 (LWN.net)][1]
  [1]: "http://lwn.net/Articles/266724/" "USB"
