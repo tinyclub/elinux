@@ -1,7 +1,7 @@
 
-# eLinux.org Information and Usage tips
+# eLinux.org 基本信息和使用技巧
 
-General information about this site, and related resources.
+关于 eLinux.org 的基本信息和相关资源：
 
-* [Homepage](http://elinux.org/)
-* [Twitter Follow](http://twitter.com/elinux)
+* [首页](http://elinux.org/)
+* [Twitter 帐号](http://twitter.com/elinux)
