@@ -1,9 +1,8 @@
-> 来自: [eLinux.org](http://eLinux.org/Glossary "http://eLinux.org/Glossary")
-
+> 原文: [eLinux.org](http://eLinux.org/Glossary "http://eLinux.org/Glossary")
+> 翻译：[@mintisan](https://github.com/mintisan)
+> 校订：[@lzufalcon](https://github.com/lzufalcon)
 
 # 术语表
-a
-
 
 本文介绍嵌入式Linux中使用的术语词汇表，以及本 Wiki 中现有的其它术语页的链接：
 
