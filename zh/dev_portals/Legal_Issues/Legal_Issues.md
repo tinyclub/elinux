@@ -117,4 +117,4 @@ http://lkml.indiana.edu/hypermail/linux/kernel/0301.1/0362.html
 
 * http://lwn.net/Articles/386280/ —关于二元分析工具的 lwn.net 的文章 (2010/05/06 出版)
 * 
-http://fossology.org/ —fossology是一个框架用来扫描开源代码：它目前扫描版权和许可证信息，并能够很容易的进行扩展
+http://fossology.org/ —fossology 是一个框架用来扫描开源代码：它目前扫描版权和许可证信息，并能够很容易的进行扩展
