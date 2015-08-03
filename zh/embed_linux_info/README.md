@@ -1,4 +1,4 @@
 
-# Embedded Linux Information
+# 嵌入式 Linux 信息
 
-Resources or information about the embedded Linux ecosystem, from vendors, products, communities to jobs.
+介绍嵌入式 Linux 生态，内容涵盖供应商、产品、社区和求职招聘。

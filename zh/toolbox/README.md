@@ -1,4 +1,4 @@
 
-# Toolbox
+# 工具箱
 
-This chapter has information about developing Embedded Linux, including links to toolchains, debuggers and other development tools. Also, it has links to pages with debugging tips.
+演示嵌入式 Linux 开发相关的各类工具，包括工具链、调试器和其他开发工具等信息，也有介绍到一些调试心得和技巧。

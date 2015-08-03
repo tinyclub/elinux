@@ -1,4 +1,4 @@
 
-# Development Portals
+# 开发入口
 
-Resources or information about embedded Linux development, from device drivers development to system optimization.
+收集嵌入式 Linux 开发相关的各类资源和信息，内容涵盖从设备驱动开发到系统优化的方方面面。
