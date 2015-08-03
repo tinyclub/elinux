@@ -4,6 +4,7 @@
 
     * [如何编译](doc/BUILD.md)
     * [译者手册](doc/README.md)
+    * [任务分工](doc/PLAN.md)
 
 * [开发入口](dev_portals/README.md)
 
