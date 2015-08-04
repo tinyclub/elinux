@@ -2,7 +2,7 @@
 
 * Development Portals
 
-    * Firmware
+    * [Firmware](http://eLinux.org/Firmware) (@[lzufalcon])
     * [Security](http://elinux.org/Security) (@[lzz5235])
     * [Boot Time](http://elinux.org/Boot_Time)
     * [System Size](http://elinux.org/System_Size) (@[wengpingbo])
