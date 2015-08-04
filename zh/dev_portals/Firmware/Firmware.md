@@ -1,26 +1,18 @@
-> From: [eLinux.org](http://eLinux.org/Firmware "http://eLinux.org/Firmware")
+> 原文：[eLinux.org](http://eLinux.org/Firmware "http://eLinux.org/Firmware")
+> 翻译：[@lzufalcon](https://github.com/lzufalcon)
 
+# 固件
 
-# Firmware
+固件是一类存放在非易失性存储器中的软件。
 
+也可查看 [维基百科上的 Firmware 入口](http://en.wikipedia.org/wiki/Firmware) 获取更多 Firmware 相关的信息。
 
+固件的一种形式是[引导程序](../.././dev_portals/Firmware/Bootloader/Bootloader.md "Bootloader")，这类程序用于初始化设备并装载另外的软件，比如 Linux 内核。
 
-Firmware is software that resides in non-volatile memory.
+提示一下，[引导程序](../.././dev_portals/Firmware/Bootloader/Bootloader.md "Bootloader") 一节有一份常用 Linux 引导程序的清单。
 
-See the [Wikipedia entry for
-firmware](http://en.wikipedia.org/wiki/Firmware)
+[分类](http://eLinux.org/Special:Categories "Special:Categories"):
 
-One form of firmware is the [Bootloader](../.././dev_portals/Firmware/Bootloader/Bootloader.md "Bootloader") used
-to initialize the machine and load additional software, such as the
-Linux kernel.
-
-Note that the [Bootloader](../.././dev_portals/Firmware/Bootloader/Bootloader.md "Bootloader") page has a list of
-oft-used Linux bootloaders.
-
-
-[Categories](http://eLinux.org/Special:Categories "Special:Categories"):
-
--   [Embedded
-    Dictionary](http://eLinux.org/Category:Embedded_Dictionary "Category:Embedded Dictionary")
--   [Firmware](http://eLinux.org/index.php?title=Category:Firmware&action=edit&redlink=1 "Category:Firmware (page does not exist)")
+-   [嵌入式字典](http://eLinux.org/Category:Embedded_Dictionary "Category:Embedded Dictionary")
+-   [固件](http://elinux.org/Category:Firmware)
 
