@@ -4,7 +4,7 @@
 
     * Firmware
     * [Security](http://elinux.org/Security) (@[lzz5235])
-    * [Boot Time](http://elinux.org/Boot_Time)
+    * [Boot Time](http://elinux.org/Boot_Time) (@[lzufalcon])
     * [System Size](http://elinux.org/System_Size) (@[wengpingbo])
     * [Networking](http://elinux.org/Networking)
     * Resource Management
