@@ -1,120 +1,116 @@
-> From: [eLinux.org](http://eLinux.org/Tech_Conference_2005Docs "http://eLinux.org/Tech_Conference_2005Docs")
+> 原文：[eLinux.org](http://eLinux.org/Tech_Conference_2005Docs.md)<br/>
+> 翻译：[@lzz5235](https://github.com/lzz5235)<br/>
+> 校订：[@lzufalcon](https://github.com/lzufalcon)<br/>
+
+# 2005 年技术会议文档
 
 
-# Tech Conference 2005Docs
+主持人，演示人，演讲嘉宾和参会人员：非常感谢您参加 2005 年 CELF 技术大会。我真的很喜欢这次会议，并希望你也是如此。
+
+`主持人`： 请将您的技术会议演讲文档发布在这个页面上。（请参阅下表说明）
 
 
-
-Presenters, Demo-ers, Panelists and Participants: Thanks very much for
-your participation in CELF's 2005 Technical Conference. I really enjoyed
-the conference, and hope you did as well.
-
-/\\ **Presenters:** Please post your technical conference presentations
-on this page. (See Instructions below the table)
-
-
-
-Here is an article on LinuxDevices with images of the demo posters:
+这里有一篇文章是关于 LinuxDevices 演示海报的图片：
 [http://www.linuxdevices.com/articles/AT9266731500.html](http://www.linuxdevices.com/articles/AT9266731500.html)
 
-## Presentations
+## 演示文档
 
 <table>
 <tbody>
 <tr class="odd">
-<td align="left"><strong>Person</strong></td>
-<td align="left"><strong>Session Description</strong></td>
-<td align="left"><strong>Presentation</strong></td>
+<td align="left"><strong>主讲人</strong></td>
+<td align="left"><strong>主题介绍</strong></td>
+<td align="left"><strong>演示文档</strong></td>
 </tr>
 <tr class="even">
 <td align="left">Greg Ungerer, SnapGear</td>
 <td align="left">uCLinux</td>
-<td align="left"><a href="http://elinux.org/images/b/bb/Uclinux.pdf" title="Uclinux.pdf">presentation (pdf)</a></td>
+<td align="left"><a href="http://elinux.org/images/b/bb/Uclinux.pdf" title="Uclinux.pdf">演示文档 (pdf)</a></td>
 </tr>
 <tr class="odd">
 <td align="left">Tohru Nojiri, Hitachi / Hirohisa Iijima, Lineo Solutions</td>
-<td align="left">Linux Kernel State Tracer (LKST) technology</td>
-<td align="left"><a href="http://elinux.org/images/8/85/CELF_LKST_SH_Presen.pdf" title="CELF LKST SH Presen.pdf">presentation part1(pdf)</a>, <a href="http://elinux.org/images/6/6d/CELF_LKST_SH_Lineo.pdf" title="CELF LKST SH Lineo.pdf">presentation part2(pdf)</a></td>
+<td align="left">Linux Kernel State Tracer (LKST) 技术</td>
+<td align="left"><a href="http://elinux.org/images/8/85/CELF_LKST_SH_Presen.pdf" title="CELF LKST SH Presen.pdf">演示文档 第一部分(pdf)</a>, <a href="http://elinux.org/images/6/6d/CELF_LKST_SH_Lineo.pdf" title="CELF LKST SH Lineo.pdf">演示文档 第二部分(pdf)</a></td>
 </tr>
 <tr class="even">
 <td align="left">Todd Poynor, <a href="http://elinux.org/Monta_Vista" title="Monta Vista">Monta Vista</a></td>
-<td align="left">Dynamic Power Management</td>
-<td align="left"><a href="http://elinux.org/images/4/40/DPM-CELF-Plenary2005.pdf" title="DPM-CELF-Plenary2005.pdf">presentation (pdf)</a>, <a href="http://elinux.org/images/2/2f/DPM-CELF-Plenary2005-Notes.txt" title="DPM-CELF-Plenary2005-Notes.txt">notes</a></td>
+<td align="left">动态电源管理</td>
+<td align="left"><a href="http://elinux.org/images/4/40/DPM-CELF-Plenary2005.pdf" title="DPM-CELF-Plenary2005.pdf">演示文档 (pdf)</a>, <a href="http://elinux.org/images/2/2f/DPM-CELF-Plenary2005-Notes.txt" title="DPM-CELF-Plenary2005-Notes.txt">笔记</a></td>
 </tr>
 <tr class="odd">
 <td align="left">Philippe Robin, ARM</td>
-<td align="left">Developing and Optimizing Linux on ARM Cores</td>
-<td align="left"><a href="http://elinux.org/images/1/1e/Optimizing_Linux_ARM.pdf" title="Optimizing Linux ARM.pdf">presentation (PDF)</a></td>
+<td align="left">ARM 核心上的开发与优化</td>
+<td align="left"><a href="http://elinux.org/images/1/1e/Optimizing_Linux_ARM.pdf" title="Optimizing Linux ARM.pdf">演示文档 (PDF)</a></td>
 </tr>
 <tr class="even">
 <td align="left">Ed Plowman</td>
 <td align="left">OpenGL ES, Open VG and Open MAX</td>
-<td align="left"><a href="http://elinux.org/images/1/1d/Khronos-CELF.pdf" title="Khronos-CELF.pdf">presentation (PDF)</a></td>
+<td align="left"><a href="http://elinux.org/images/1/1d/Khronos-CELF.pdf" title="Khronos-CELF.pdf">演示文档 (PDF)</a></td>
 </tr>
 <tr class="odd">
 <td align="left">Matt Mackall</td>
 <td align="left">Linux-tiny and Directions for Small Systems</td>
-<td align="left"><a href="http://elinux.org/images/1/16/Linux-tiny.sxi" title="Linux-tiny.sxi">presentation (Open Office)</a> <a href="http://elinux.org/images/9/9b/Linux-tiny.pdf" title="Linux-tiny.pdf">(pdf)</a></td>
+<td align="left"><a href="http://elinux.org/images/1/16/Linux-tiny.sxi" title="Linux-tiny.sxi">演示文档 (Open Office)</a> <a href="http://elinux.org/images/9/9b/Linux-tiny.pdf" title="Linux-tiny.pdf">(pdf)</a></td>
 </tr>
 <tr class="even">
 <td align="left">Erik Andersen</td>
 <td align="left">uClibc</td>
-<td align="left"><a href="http://elinux.org/images/2/2b/UClibc_CELF.pdf" title="UClibc CELF.pdf">presentation (pdf)</a></td>
+<td align="left"><a href="http://elinux.org/images/2/2b/UClibc_CELF.pdf" title="UClibc CELF.pdf">演示文档 (pdf)</a></td>
 </tr>
 <tr class="odd">
 <td align="left">John Vugts &amp; Jeroen Brouwer, Philips</td>
-<td align="left"><a href="http://www.uhapi.org/">UHAPI</a> tutorial</td>
-<td align="left"><a href="http://elinux.org/images/9/9b/UHAPI-Forum-Introduction-CELF-20050126.pdf" title="UHAPI-Forum-Introduction-CELF-20050126.pdf">Introduction (pdf)</a>, <a href="http://elinux.org/images/3/38/UHAPI-Forum-Technical-CELF-20050126.pdf" title="UHAPI-Forum-Technical-CELF-20050126.pdf">Tutorial (pdf)</a></td>
+<td align="left"><a href="http://www.uhapi.org/">UHAPI</a> 指导</td>
+<td align="left"><a href="http://elinux.org/images/9/9b/UHAPI-Forum-Introduction-CELF-20050126.pdf" title="UHAPI-Forum-Introduction-CELF-20050126.pdf">介绍 (pdf)</a>, <a href="http://elinux.org/images/3/38/UHAPI-Forum-Technical-CELF-20050126.pdf" title="UHAPI-Forum-Technical-CELF-20050126.pdf">指导 (pdf)</a></td>
 </tr>
 <tr class="even">
 <td align="left">Pieter van der Meulen, Philips</td>
-<td align="left">Audio, Video, Graphics WG discussion</td>
+<td align="left">音频，视频，图形 WG 的讨论</td>
 <td align="left"><a href="http://elinux.org/images/e/ed/AVGWG-20050126.pdf" title="AVGWG-20050126.pdf">(Acrobat: pdf)</a>, <a href="http://elinux.org/images/2/28/AVGWG-20050126.ppt" title="AVGWG-20050126.ppt">(Power Point: ppt)</a>, <a href="http://elinux.org/images/1/16/AVGWG-20050126.sxi" title="AVGWG-20050126.sxi">(Open Office: sxi)</a></td>
 </tr>
 <tr class="odd">
 <td align="left">Dongjun Shin, Samsung</td>
-<td align="left">Flash Memory WG discussion</td>
+<td align="left">闪存 WG 的讨论</td>
 <td align="left"><a href="http://elinux.org/images/d/df/FM-SIG-discussion.pdf" title="FM-SIG-discussion.pdf">(PDF)</a></td>
 </tr>
 <tr class="even">
 <td align="left">Scott Preece, Motorola</td>
 <td align="left">Mobile Phone Profile WG - intro and working session</td>
-<td align="left"><a href="http://elinux.org/images/2/29/Plenary-Meeting-2005-MPPWG-report.pdf" title="Plenary-Meeting-2005-MPPWG-report.pdf">Plenary presentation</a>,<a href="http://elinux.org/images/7/76/CELF-Technical-Meeting-2005-MPPWG-session.pdf" title="CELF-Technical-Meeting-2005-MPPWG-session.pdf">Technical Session Presentation</a>,<a href="http://elinux.org/images/7/7a/APIstatus_report.pdf" title="APIstatus report.pdf">API Status presentation</a></td>
+<td align="left"><a href="http://elinux.org/images/2/29/Plenary-Meeting-2005-MPPWG-report.pdf" title="Plenary-Meeting-2005-MPPWG-report.pdf">Plenary 演示文档</a>,<a href="http://elinux.org/images/7/76/CELF-Technical-Meeting-2005-MPPWG-session.pdf" title="CELF-Technical-Meeting-2005-MPPWG-session.pdf">技术主题演示</a>,<a href="http://elinux.org/images/7/7a/APIstatus_report.pdf" title="APIstatus report.pdf">API状态的演示</a></td>
 </tr>
 <tr class="odd">
 <td align="left">Mark Orvek, <a href="http://elinux.org/Monta_Vista" title="Monta Vista">Monta Vista</a></td>
-<td align="left">Power Management WG discussion - suspend to flash technology, etc.</td>
-<td align="left">not available</td>
+<td align="left">电源管理 WG 讨论 - 挂起到闪存中的技术，等。</td>
+<td align="left">无</td>
 </tr>
 <tr class="even">
 <td align="left">Manas Saksena, <a href="http://elinux.org/Time_Sys" title="Time Sys">Time Sys</a></td>
-<td align="left">Real Time WG discussion</td>
-<td align="left">not available</td>
+<td align="left">实时 WG 讨论</td>
+<td align="left">无</td>
 </tr>
 <tr class="odd">
 <td align="left">Hiroo Suyama, NEC</td>
-<td align="left">System Size WG discussion</td>
-<td align="left"><a href="http://elinux.org/images/8/84/SZWG_2005_Plenary.pdf" title="SZWG 2005 Plenary.pdf">presentation (pdf)</a></td>
+<td align="left">系统大小 WG 讨论</td>
+<td align="left"><a href="http://elinux.org/images/8/84/SZWG_2005_Plenary.pdf" title="SZWG 2005 Plenary.pdf">演示文档 (pdf)</a></td>
 </tr>
 <tr class="even">
 <td align="left">Matsubara &amp; Hagiwara &amp; Hisao Munakata, Renesas</td>
 <td align="left">Graphics APIs for Linux (including <a href="http://elinux.org/DirectFB" title="DirectFB">DirectFB</a> and 3D)</td>
-<td align="left"><a href="http://elinux.org/images/9/96/3DG050126rev12.ppt" title="3DG050126rev12.ppt">presentation_3D(ppt)</a>, <a href="http://elinux.org/images/7/76/Celf0501dfbexp_final.ppt" title="Celf0501dfbexp final.ppt">presentation_DirectFB(ppt)</a></td>
+<td align="left"><a href="http://elinux.org/images/9/96/3DG050126rev12.ppt" title="3DG050126rev12.ppt">演示文档_3D(ppt)</a>, <a href="http://elinux.org/images/7/76/Celf0501dfbexp_final.ppt" title="Celf0501dfbexp final.ppt">presentation_DirectFB(ppt)</a></td>
 </tr>
 <tr class="odd">
 <td align="left">Nigel Cunningham, Cyclades</td>
-<td align="left">Linux 2.6 Power Management</td>
-<td align="left"><a href="http://elinux.org/images/5/54/Linux_2.6_Power_Management.sxi" title="Linux 2.6 Power Management.sxi">presentation (Open Office)</a>, <a href="http://elinux.org/images/e/ef/Linux_2.6_Power_Management.pdf" title="Linux 2.6 Power Management.pdf">(pdf)</a></td>
+<td align="left">Linux 2.6 电源管理</td>
+<td align="left"><a href="http://elinux.org/images/5/54/Linux_2.6_Power_Management.sxi" title="Linux 2.6 Power Management.sxi">演示文档 (Open Office)</a>, <a href="http://elinux.org/images/e/ef/Linux_2.6_Power_Management.pdf" title="Linux 2.6 Power Management.pdf">(pdf)</a></td>
 </tr>
 <tr class="even">
 <td align="left"><a href="http://www.cs.aau.dk/~fleury">Emmanuel Fleury</a> &amp; <a href="http://www.cs.aau.dk/~ks">Kristian S�rensen</a>, <a href="http://www.aau.dk">Aalborg University</a></td>
-<td align="left"><a href="http://umbrella.sf.net">Umbrella Security Framework</a></td>
-<td align="left">not available</td>
+<td align="left"><a href="http://umbrella.sf.net">Umbrella 安全框架</a></td>
+<td align="left">无</td>
 </tr>
 <tr class="odd">
 <td align="left">Stephen Johnson, Panasonic</td>
-<td align="left">Security WG discussion</td>
-<td align="left"><a href="http://elinux.org/images/b/b1/SECWG-Discussion-Plenary2005.pdf" title="SECWG-Discussion-Plenary2005.pdf">presentation (pdf)</a></td>
+<td align="left">安全 WG 讨论</td>
+<td align="left"><a href="http://elinux.org/images/b/b1/SECWG-Discussion-Plenary2005.pdf" title="SECWG-Discussion-Plenary2005.pdf">演示文档 (pdf)</a></td>
 </tr>
 <tr class="even">
 <td align="left">Dennis Oliver Kropp</td>
@@ -128,68 +124,55 @@ Here is an article on LinuxDevices with images of the demo posters:
 </tr>
 <tr class="even">
 <td align="left">Markku Ursin, Movial</td>
-<td align="left">Creating GTK+ based UI's for embedded devices</td>
+<td align="left">创建嵌入式设备上的GTK+ 的界面</td>
 <td align="left"><a href="http://elinux.org/images/0/03/20050126-gtk.pdf" title="20050126-gtk.pdf">pdf</a></td>
 </tr>
 <tr class="odd">
 <td align="left">Manas Saksena, <a href="http://elinux.org/Time_Sys" title="Time Sys">Time Sys</a></td>
-<td align="left">2.6 Realtime preemption patch</td>
-<td align="left"><a href="http://elinux.org/images/4/4e/Real-Time-Preemption-Patchset.pdf" title="Real-Time-Preemption-Patchset.pdf">presentation (pdf)</a></td>
+<td align="left">2.6 实时抢占补丁</td>
+<td align="left"><a href="http://elinux.org/images/4/4e/Real-Time-Preemption-Patchset.pdf" title="Real-Time-Preemption-Patchset.pdf">演示文档 (pdf)</a></td>
 </tr>
 <tr class="even">
 <td align="left">Seiji Munetoh, IBM &amp; Nicholas Szeto, Sony</td>
-<td align="left">Integrating TCG (Trusted Computing Group) technology in Linux</td>
+<td align="left">Linux 集成 TCG (可信计算集群) 技术</td>
 <td align="left"><a href="http://elinux.org/images/4/4d/TCG_CELF_050125.pdf" title="TCG CELF 050125.pdf">TCGOverview PDF</a></td>
 </tr>
 <tr class="odd">
 <td align="left">Tim Bird, Sony</td>
-<td align="left">Bootup Time WG discussion - current bootup time projects</td>
-<td align="left"><a href="http://elinux.org/images/7/74/BTWG-Discussion-Plenary2005.pdf" title="BTWG-Discussion-Plenary2005.pdf">presentation (pdf)</a>, <a href="http://elinux.org/images/3/38/BTWG-Discussion-Plenary2005.ppt" title="BTWG-Discussion-Plenary2005.ppt">(ppt)</a></td>
+<td align="left">启动时 WG 讨论 - 目前启动时间的项目</td>
+<td align="left"><a href="http://elinux.org/images/7/74/BTWG-Discussion-Plenary2005.pdf" title="BTWG-Discussion-Plenary2005.pdf">演示文档 (pdf)</a>, <a href="http://elinux.org/images/3/38/BTWG-Discussion-Plenary2005.ppt" title="BTWG-Discussion-Plenary2005.ppt">(ppt)</a></td>
 </tr>
 <tr class="even">
 <td align="left">Andrew Morton, Lead kernel developerHisao Munakata, RenesasMark Orvek, <a href="http://elinux.org/Monta_Vista" title="Monta Vista">Monta Vista</a>Ruud Derwig, PhilipsModerated by Tim Bird, Sony</td>
-<td align="left">Panel - Improving Commercial CE Involvement in Linux</td>
-<td align="left">not available</td>
+<td align="left">面板- 完善 Linux 下的商业 CE </td>
+<td align="left">无</td>
 </tr>
 </tbody>
 </table>
 
-## Instructions
+## 介绍
 
-Here are the steps to follow (read them BEFORE clicking):
+下面是要遵循的步骤（请在读它们之前点击）：
 
--   PDF format is preferred. If you can convert your presentation to
-    PDF, please do so.
--   Please remove any messages in your presentation which say it is
-    confidential
-    -   If you used a CELF template that has "CELF confidential" in the
-        footer, please upload the presentation so we can remove the
-        footer. Or you can remove it yourself by editing the footer on
-        the slide "master" page.
--   Please make sure your filename does not have any spaces in it
--   Click on the AttachFile link at the bottom of the page
-    -   on the form, enter your presentation file name (or browse to it)
-    -   click on "Add link to page".
-    -   click on "Upload" (your file will be added as an attachment to
-        the page)
-    -   click on "ShowText" to see the page again.
+-   推荐 PDF 格式。如果你可以将您的演示文档转化为 PDF 格式，请您转换。
+-   请删除所有在您演示文档中的保密信息。
+    -   如果您使用了含有 "CELF" 保密的页脚，那么请您上传演示文档，以让我们删除这些页脚，或者您可以通过编辑主页面页脚信息自己删除这些页脚。
+-   请检查您上传文件名中是否包含空格
+-   检查本文中的附件链接
+    -   在表格中，输入您演示文档文件名 (或者通过浏览查找)
+    -   点击"添加链接到本文中".
+    -   点击"上传" (您的文件被添加上传到本文中)
+    -   点击"显示文本" 再次查看本文。
 
-If you want to be extra nice, you can add the appropriate "Media:" line
-to your entry in the table. Do this by clicking on EditText at the
-bottom of the page and copying the text from the bottom of the page to
-your line (where it currently says "not available").
+如果你想让演示变得更好，你可以在你的表格中添加适当的 "媒体：" 通过点击在页面底部的 EditText，并从页面底部复制文本到你的媒体行中（目前它说： "不可用")。
 
-See the entry for Tim Bird (second to last in the table) for an example
-of the syntax required. Each table line is one long line, even though it
-may wrap in your browser (so remove all line feeds from your line before
-saving this page.) Don't worry - if you don't do this or mess something
-up I will come along later and fix up the table for you.
+参见的例子 Tim Bird（倒数第二的表），举一个语法要求的例子。每个表行是一个长行，尽管它在您的浏览器可能会换行（在保存此页面之前，删除行中的所有换行符。 ）不要担心 - 如果你不这样做，或造成了内容的混乱，我将稍后到来，并为您修复该表。
 
-Thanks
+谢谢
 
-## Attachments
+## 附件
 
-Below this line is a list of attachments:
+参见下面这行附件列表：
 
 * * * * *
 
@@ -251,8 +234,7 @@ Below this line is a list of attachments:
 
 [Media:FM-SIG-discussion.pdf](http://eLinux.org/images/d/df/FM-SIG-discussion.pdf "FM-SIG-discussion.pdf")
 
+[目录](http://eLinux.org/Special:Categories "Special:Categories"):
 
-[Category](http://eLinux.org/Special:Categories "Special:Categories"):
-
--   [Events](http://eLinux.org/Category:Events "Category:Events")
+-   [事件](http://eLinux.org/Category:Events "Category:Events")
 
