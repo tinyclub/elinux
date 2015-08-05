@@ -1,177 +1,120 @@
 > From: [eLinux.org](http://eLinux.org/Legal_Issues "http://eLinux.org/Legal_Issues")
 
+原文：eLinux.org
 
-# Legal Issues
+翻译：@zxqhbd
+
+校订：@lzulfacon
+
+#法律问题
 
 
 
-## Contents
 
--   [1 Legal Issues using Linux in embedded
-    projects](#legal-issues-using-linux-in-embedded-projects)
-    -   [1.1 Kernel is licensed GPL v2
-        only](#kernel-is-licensed-gpl-v2-only)
-    -   [1.2 Signed-off-by lines and the
-        DCO](#signed-off-by-lines-and-the-dco)
-    -   [1.3 Resources for legal analysis and
-        compliance](#resources-for-legal-analysis-and-compliance)
+#目录
+
+
+-   [1 嵌入式中使用 linux 的法律问题](#legal-issues-using-linux-in-embedded-projects)
+    -   [1.1 内核只被 GPL V2 许可](#kernel-is-licensed-gpl-v2-only)
+    -   [1.2 署名行和原始开发者证书](#signed-off-by-lines-and-the-dco)
+    -   [1.3 有关法律分析和合规的资源](#resources-for-legal-analysis-and-compliance)
 -   [2 EXPORT\-SYMBOL\-GPL](#export-symbol-gpl)
-    -   [2.1 EXPORT\-SYMBOL\-GPL for kernel USB
-        API](#export-symbol-gpl-for-kernel-usb-api)
--   [3 Binary proprietary kernel
-    modules](#binary-proprietary-kernel-modules)
--   [4 Use of kernel header files in
-    user-space](#use-of-kernel-header-files-in-user-space)
--   [5 Other Links](#other-links)
+    -   [2.1 针对内核 USB API 的 EXPORT\-SYMBOL\-GPL ](#export-symbol-gpl-for-kernel-usb-api)
+-   [3 二进制专有的内核模块](#binary-proprietary-kernel-modules)
+-   [4 用户空间中内核头文件的使用](#use-of-kernel-header-files-in-user-space)
+-   [5 其它链接](#other-links)
 
-## Legal Issues using Linux in embedded projects
 
-The intricacies of using the GPL license have been hashed out repeatedly
-in many other forums.
+##嵌入式中使用 linux 的法律问题
 
-Here are some highlights of a few specific issues that come up
-occasionaly:
 
-### Kernel is licensed GPL v2 only
+使用 GPL 许可证的复杂性已经在很多其他论坛中被多次的讨论过了。
+以下是几个突出问题：
 
-The Linux kernel is licensed under the GNU General Public License,
-version 2.0 **ONLY!**
+###内核只被 GPL V2 许可
 
-This is different from many other projects, which use the default
-wording in the license to allow GPL v2 or any later version.
+Linux 内核只在 GNU 通用公共许可协议 2.0 版本下被许可！
 
-This means it is unlikely that the kernel will switch to GPL version
-3.0.
+这是不同于其它一些项目，在协议中使用默认用词允许 GPL V2  或者后期版本。这意味着linux 内核不会切换到 GPL V3 版本。
 
-In September of 2006, a group of Linux kernel developers signed a
-[position statement](http://lwn.net/Articles/200422/) indicating that
-they objected to GPL version 3.0 (as then drafted). This further
-indicates the unlikelyhood of any change of the kernel to the GPL v3
-license.
+2006 年 9 月，一个 linux  内核开发者组织签署了一个立场声明，表明他们反对 GPL V3 版本（接着起草了声明）。这更加表明了内核不可能采用 GPL V3 协议了。
 
-### Signed-off-by lines and the DCO
+###署名行和原始开发者证书
 
-When developers contribute to the kernel, they must provide a
-"Signed-off-by" line, indicating that they acknowledge the licensing and
-declare the work (to the best of their knowledge) to be either original,
-or derivative of something compatible with GPL v2.
+当开发者为内核贡献代码的时候，他们必须提供一个署名行，表明他们承认那份开源协议和声明他们所做的工作（他们所掌握知识的最好部分）为原始版或者受 GPL V2 许可下的一定程度上兼容的衍生品。
 
-See the [Developer Certificate Of
-Origin](../.././dev_portals/Legal_Issues/Developer_Certificate_Of_Origin/Developer_Certificate_Of_Origin.md "Developer Certificate Of Origin")
-which is contained in the kernel's
-[Documentation/SubmittingPatches](http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=blob;f=Documentation/SubmittingPatches)
-file.
+查看[原始开发者证书][1]，包含在内核的 [Documentation/SubmittingPatches][2] 文件中。
 
-### Resources for legal analysis and compliance
+[1]: "http://elinux.org/Developer_Certificate_Of_Origin" "原始开发者证书"
 
--   The Software Freedom Law Center has a compliance guide for GPL that
-    is useful:
-    -   [http://www.softwarefreedom.org/resources/2014/SFLC-Guide\_to\_GPL\_Compliance\_2d\_ed.pdf](http://www.softwarefreedom.org/resources/2014/SFLC-Guide_to_GPL_Compliance_2d_ed.pdf)
-        - October 2014
-    -   Note that not everyone agrees with all legal interpretations
-        included in this document, but overall it's a good resource.
--   Copyleft and the GNU General Public License: A Comprehensive
-    Tutorial and Guide
-    -   [http://www.copyleft.org/guide/comprehensive-gpl-guide.html\#comprehensive-gpl-guidepa1.html](http://www.copyleft.org/guide/comprehensive-gpl-guide.html#comprehensive-gpl-guidepa1.html)
+[2]: "http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/Documentation/SubmittingPatches" "SubmittingPatches"
+
+### 有关法律分析和合规的资源
+
+* 自由软件法律中心针对 GPL 有一份有用合规指南：
+  + http://www.softwarefreedom.org/resources/2014/SFLC-Guide_to_GPL_Compliance_2d_ed.pdf -2014 年 10 月
+  
+  + 注意不是所有人都同意这份文件中的所有法律解释，但总体而言，这是一份很好的资源
+  
+* 有关 copyleft 和 GNU 的通用公共许可协议的一份全面教程和指南：
+   * http://www.copyleft.org/guide/comprehensive-gpl-guide.html#comprehensive-gpl-guidepa1.html
 
 ## EXPORT\_SYMBOL\_GPL
 
-### EXPORT\_SYMBOL\_GPL for kernel USB API
+###针对内核 USB API 的 EXPORT_SYMBOL_GPL
 
-In January of 2008, Greg Kroah Hartman submitted a patch to change the
-core USB API to EXPORT\_SYMBOL\_GPL. Here is some information about that
-change:
+在 2008 年的 1 月，Greg Kroah Hartman 提交了一个补丁将核心 USB API 改变为EXPORT_SYMBOL_GPL。这里是一些关于这个补丁的信息：
 
--   [USB: mark USB drivers as being GPL only
-    (LWN.net)](http://lwn.net/Articles/266724/)
--   [Linux 2.6.25 without Closed Source USB Drivers (Linux
-    Magazine)](http://www.linux-magazine.com/online/news/linux_2_6_25_without_closed_source_usb_drivers)
--   [USB drivers going GPL-only in 2.6.25
-    (LinuxWorld)](http://www.linuxworld.com/community/?q=taxonomy/term/24)
--   [the actual git
-    commit](http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=782e70c6fc2290a0395850e8e02583b8b62264d8)
+* [USB：将 USB 驱动标记为只被 GPL 许可 (LWN.net)][1]
+ [1]: "http://lwn.net/Articles/266724/" "USB"
+* [Linux 2.6.25 版本没有 USB 闭源驱动 (Linux 杂志)][2]
+ [2]:http://www.linux-magazine.com/Online/News/Linux-2.6.25-without-Closed-Source-USB-Drivers "Linux magazine"
+* [在内核版本 2.6.25 中的 USB 驱动只受 GPL 许可 (Linux 世界)][3]
+ [3]:http://www.networkworld.com/category/opensource-subnet/?q=taxonomy/term/24 "Linux world"
+* [实际的 git commit][4]
+[4]:http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/commit/?id=782e70c6fc2290a0395850e8e02583b8b62264d8 "actual commit"
 
-## Binary proprietary kernel modules
+## 二进制专有的内核模块
 
-One outstanding legal question with Linux, that is of particular
-importance in embedded, is whether or not binary (non-GPL) kernel
-modules violate the GPL license of the Linux kernel.
+在嵌入式 Linux 领域中一个很重要的，也是比较显著的一个法律问题就是二进制（非 GPL）内核模块是否违反 Linux 内核 GPL 协议。关于这个话题有不同的观点。
+下面是一篇有一些有趣信息的文章：
 
-Opinions on this topic differ.
-
-Here is an article with some interesting information:
-
--   [Encouraging closed source modules part 1: copyright and
-    software](http://www.networkworld.com/news/2006/120606-closed-modules1.html)
--   [Encouraging closed source modules part 2: law and the module
-    interface](http://www.networkworld.com/news/2006/120806-closed-modules2.html)
--   [Encouraging closed source modules part 3: elimating the "API update
-    tax"](http://www.networkworld.com/news/2006/121106-closed-modules3.html)
-
-## Use of kernel header files in user-space
-
-It is allowed to use kernel header files in user space, in order for
-user-space programs to interact with the kernel via ordinary system
-calls. This is allowed without the result that the user-space program
-becomes a derivative work of the kernel and therefore subject to GPL.
-
-In general, use of header files do not create derivative works, although
-there can be exceptions. There used to be a lot of attention paid to the
-amount of code (e.g. number of lines) included from a header file, but
-no one seems to care about that these days, and this is almost never a
-problem. Richard Stallman has stated that use of header files for data
-structures, constant definitions, and enumerations (and even small
-inlines) does not create a derivative work. See:
-[http://lkml.indiana.edu/hypermail/linux/kernel/0301.1/0362.html](http://lkml.indiana.edu/hypermail/linux/kernel/0301.1/0362.html)
-
-The user-space use of the kernel header files is expected and ordinary.
-This explicitly encompasses non-GPL software using these files, and not
-being affected by the GPL. In order to calm fears about using the header
-files directly, and to prevent leakage of kernel internal information to
-user-space (where it might be abused), the mainline kernel developers
-added an option to the kernel build system to specifically create
-"sanitized" headers that are deemed safe for use by user-space programs,
-without incurring licensing issues.
-
-These are the "make headers\_check" and "make headers\_install" targets
-in the kernel build system.
-
-In general, it is legally safest to use such sanitized headers (that is,
-headers that have specifically been stripped of large inline macros or
-anything not required for user space.)
-
-This article explains how to create sanitized kernel headers using the
-kernel build system.
-[http://darmawan-salihun.blogspot.jp/2008/03/sanitizing-linux-kernel-headers-strange.html](http://darmawan-salihun.blogspot.jp/2008/03/sanitizing-linux-kernel-headers-strange.html)
-
-Note that a different process was used by the developers of the Android
-operating system, to sanitize headers for bionic for their system. Their
-process was developed around the same time as the mainline header
-sanitization feature.
-
-## Other Links
-
--   [http://gpl-violations.org/](http://gpl-violations.org/) - The
-    gpl-violations.org project tries to resolve GPL violations and
-    raises public awareness about GPL compliance.
--   [http://www.softwarefreedom.org/](http://www.softwarefreedom.org/) -
-    The Software Freedom Law Center provides legal representation for
-    open source projects and publishes information on legal issues
-    around open source.
--   [http://www.linuxfoundation.org/programs/legal/compliance](http://www.linuxfoundation.org/programs/legal/compliance)
-    - Linux Foundation's Open Compliance Program
--   [http://www.binaryanalysis.org/](http://www.binaryanalysis.org/) - A
-    binary analysis tool for GPL compliance investigations
--   [http://lwn.net/Articles/386280/](http://lwn.net/Articles/386280/) -
-    LWN.net article about the binary analysis tool (published on
-    2010/05/06)
--   [http://fossology.org/](http://fossology.org/) - FOSSology is a
-    framework to scan open source code: it currently scans for copyright
-    and license information and can easily be extended.
+* [支持闭源模块之第一部分：版权软件][1]
+  [1]:http://www.networkworld.com/article/2301697/smb/encouraging-closed-source-modules-part-1--copyright-and-software.html "part 1"
+* [支持闭源模块之第二部分：法律和模块接口][2]
+   [2]:http://www.networkworld.com/article/2301698/smb/encouraging-closed-source-modules-part-2--law-and-the-module-interface.html "part 2"
+* [支持闭源模块之第三部分：消除 API 更新税][3]
+  [3]:http://www.networkworld.com/article/2301701/smb/encouraging-closed-source-modules-part-3--elimating-the--api-update-tax-.html "part 3"
 
 
-[Category](http://eLinux.org/Special:Categories "Special:Categories"):
+##用户空间中内核头文件的使用
 
--   [OpenSource
-    Licensing](http://eLinux.org/Category:OpenSource_Licensing "Category:OpenSource Licensing")
+在用户空间是允许使用内核头文件的，它是为了方便用户空间程序通过普通的系统调用与内核进行交互的。用户空间程序不可能会成为内核的衍生品并受限于 GPL 协议。
 
+一般情况下，头文件的使用不会产生衍生品，尽管也会有例外。过去很多都是支付包含头文件在内的代码的数量（例如行数），但是近段时间似乎没有人关注这个问题，这也好像不再是一个问题了。理查德．斯托曼曾表示，针对数据结构，常量还有枚举类型(甚至小内联)的头文件的使用都不会产生衍生品。请看：
+http://lkml.indiana.edu/hypermail/linux/kernel/0301.1/0362.html
+
+用户空间中内核头文件的使用是预料中的也是常见的。它明确的说明了非 GPL 软件使用这些文件，不会受       GPL 协议的影响。为了安抚直接使用头文件的担心，还有防止内核内部信息泄露给用户空间(可能会被滥用)，主线内核开发者给内核构建系统增加了一个选项，专门提供了一个“审查”标题，这被用户空间使用是安全的，也不会产生许可问题。
+
+这些是在内核构建系统中 “make headers_check” 和 “make headers_install”   的目标。
+
+总的来说，使用这样的审查标题(也即那些被专门去除了大内联宏或用户空间不再需要的头文件)是合法安全的。
+
+这篇文章解释了怎样使用内核构建系统创建审查标题：
+ http://darmawan-salihun.blogspot.jp/2008/03/sanitizing-linux-kernel-headers-strange.html
+ 
+需要注意的是安卓系统开发者是使用不同的过程来为他们的系统的仿生来审查标题的。他们的过程跟主线标题审查同时开发。
+
+## 其它链接
+
+ * http://gpl-violations.org/  —这个 gpl-violations.org 项目试图解决 GPL  违规和增强 GPL 合规性的公共意识
+
+* http://www.softwarefreedom.org/ —自由软件法律中心为开源项目提供法律代表和围绕开源的法律问题出版信息
+
+* http://www.linuxfoundation.org/programs/legal/compliance —Linux   基金会的开放式合规计划
+  
+* http://www.binaryanalysis.org/ —一个针对 GPL 合规调查的二元分析工具
+
+* http://lwn.net/Articles/386280/ —关于二元分析工具的 lwn.net 的文章 (2010/05/06 出版)
+* 
+http://fossology.org/ —fossology 是一个框架用来扫描开源代码：它目前扫描版权和许可证信息，并能够很容易的进行扩展
