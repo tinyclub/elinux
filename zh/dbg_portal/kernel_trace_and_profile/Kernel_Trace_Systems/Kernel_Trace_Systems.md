@@ -25,10 +25,10 @@
 -   [Ftrace](../../../dbg_portal/kernel_trace_and_profile/Ftrace/Ftrace.md "Ftrace")
     -   [Ftrace Function Graph ARM](../../../dbg_portal/kernel_trace_and_profile/Ftrace/Ftrace.md_Function_Graph_ARM "Ftrace Function Graph ARM") - Ftrace 功能图 ARM - 由 Tim Bird 实现和向 ARM 系统提交补丁增加了功能图和持续跟踪的功能
         -   这个实现在 ftrace 上有好的入门资料，以及其他资源的链接
-　　-   kernel 函数跟踪器
-　　-   也可以用于调试或分析延迟和性能问题
-　　-   在主分支版本 2.6.27 后支持
-　　-   见 [用FTrace测量函数持续时间](http://eLinux.org/Measuring_Function_Duration_with_FTrace "用FTrace测量函数持续时间") - 2009 年 Linux 研讨会 Tim Bird 演示文稿的大纲
+    -   kernel 函数跟踪器
+    -   也可以用于调试或分析延迟和性能问题
+    -   在主分支版本 2.6.27 后支持
+    -   见 [用FTrace测量函数持续时间](http://eLinux.org/Measuring_Function_Duration_with_FTrace "用FTrace测量函数持续时间") - 2009 年 Linux 研讨会 Tim Bird 演示文稿的大纲
 -   [System Tap](../../../dbg_portal/kernel_trace_and_profile/System_Tap/System_Tap.md "System Tap") - System Tap 是一个用于构建和执行跟踪和取样的系统，并可以应用于一个正在运行的 Linux 系统
 -   LTTng - [Linux Trace Toolkit](../../../dbg_portal/kernel_trace_and_profile/Linux_Trace_Toolkit/Linux_Trace_Toolkit.md "Linux Trace Toolkit"), next generation （Linux 跟踪套件，下一代）
 -   LKST - [Linux Kernel State Tracer](../../../dbg_portal/kernel_trace_and_profile/Linux_Kernel_State_Tracer/Linux_Kernel_State_Tracer.md "Linux Kernel State Tracer")（Linux 内核态跟踪器）
@@ -84,7 +84,6 @@
 ## 合作成果
 
 一些跟踪系统项目的领导人正在尝试合作: 见 [Tracing Collaboration Project](http://eLinux.org/Tracing_Collaboration_Project "Tracing Collaboration Project")
-
 
 [Category](http://eLinux.org/Special:Categories "Special:Categories"):
 
