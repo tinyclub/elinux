@@ -21,10 +21,10 @@
 
 一些主要的 Linux 通用跟踪系统是：
 -   ptrace - 具有跟踪系统调用的进入和退出，和信号在进程间传递的能力 (也用于调试进程)
-　　-   见 "man ptrace" 和 "man strace"
+    -   见 "man ptrace" 和 "man strace"
 -   [Ftrace](../../../dbg_portal/kernel_trace_and_profile/Ftrace/Ftrace.md "Ftrace")
-　　-   [Ftrace Function Graph ARM](../../../dbg_portal/kernel_trace_and_profile/Ftrace/Ftrace.md_Function_Graph_ARM "Ftrace Function Graph ARM") - Ftrace 功能图 ARM - 由 Tim Bird 实现和向 ARM 系统提交补丁增加了功能图和持续跟踪的功能
-　　　　-   这个实现在 ftrace 上有好的入门资料，以及其他资源的链接
+    -   [Ftrace Function Graph ARM](../../../dbg_portal/kernel_trace_and_profile/Ftrace/Ftrace.md_Function_Graph_ARM "Ftrace Function Graph ARM") - Ftrace 功能图 ARM - 由 Tim Bird 实现和向 ARM 系统提交补丁增加了功能图和持续跟踪的功能
+        -   这个实现在 ftrace 上有好的入门资料，以及其他资源的链接
 　　-   kernel 函数跟踪器
 　　-   也可以用于调试或分析延迟和性能问题
 　　-   在主分支版本 2.6.27 后支持
@@ -38,15 +38,15 @@
 有一些其他重要的专用内核跟踪系统:
 -   KFT - [Kernel Function Trace](../../.././dev_portals/Boot_Time/Kernel_Function_Trace/Kernel_Function_Trace.md "Kernel Function Trace") - 跟踪功能可以显示函数持续时间和调用关系图
 -   latency trace - RT-preempt 工具可以测量中断和互斥锁的延迟时间
-　　-   此延迟跟踪器被封装在 RT-preempt 补丁里 - 见 [Realtime Preemption](../../.././dev_portals/Real_Time/Realtime_Preemption/Realtime_Preemption.md "Realtime Preemption") and [RT-preempt Article](http://lwn.net/Articles/97811/)
+    -   此延迟跟踪器被封装在 RT-preempt 补丁里 - 见 [Realtime Preemption](../../.././dev_portals/Real_Time/Realtime_Preemption/Realtime_Preemption.md "Realtime Preemption") and [RT-preempt Article](http://lwn.net/Articles/97811/)
 -   block tracer (blktrace) - 允许精确地察看在给定的队列中的块层正在做什么操作
-　　-   来自 Jens Axboe 的介绍文档: [介绍](http://lwn.net/Articles/148761/)
-　　-   优秀的演示文档: [blktrace.pdf](http://www.gelato.org/pdf/apr2006/gelato_ICE06apr_blktrace_brunelle_hp.pdf)
-　　-   使用指南在这: [blktrace guide](https://secure.engr.oregonstate.edu/wiki/CS411/index.php/Blktrace_Guide)
-　　-   这项特性已经合入主分支的 2.6.17 版本
-　　-   时间轴功能 (blktrace post-processing tool): [blktrace timeline utility](http://www.nabble.com/NEW%3A-btt---blktrace-timeline-utility%3A-analyze-I-Os-collected-with-blktrace.-tf1644874.html)
+    -   来自 Jens Axboe 的介绍文档: [介绍](http://lwn.net/Articles/148761/)
+    -   优秀的演示文档: [blktrace.pdf](http://www.gelato.org/pdf/apr2006/gelato_ICE06apr_blktrace_brunelle_hp.pdf)
+    -   使用指南在这: [blktrace guide](https://secure.engr.oregonstate.edu/wiki/CS411/index.php/Blktrace_Guide)
+    -   这项特性已经合入主分支的 2.6.17 版本
+    -   时间轴功能 (blktrace post-processing tool): [blktrace timeline utility](http://www.nabble.com/NEW%3A-btt---blktrace-timeline-utility%3A-analyze-I-Os-collected-with-blktrace.-tf1644874.html)
 -   delay accounting patches（延时统计补丁） - 收集关于花费在每一个在系统中任务的延时的统计信息
-　　-   见 [delay accounting patches](http://lkml.org/lkml/2006/5/2/30)
+    -   见 [delay accounting patches](http://lkml.org/lkml/2006/5/2/30)
 
 ## 跟踪基本架构
 
@@ -60,13 +60,13 @@
 
 请注意，分析系统（或者“取样系统）略有不同，在这他们涉及采样而不是事件跟踪。Linux 一些重要的工具是：
 -   top - 为一个正在运行的系统提供了动态实时的视图，包括进程。
-　　-   见 "man top"
-　　-   也可参见 ksysguard, [Gnome system Monitor](http://freshmeat.net/projects/gnome-system-monitor/)
+    -   见 "man top"
+    -   也可参见 ksysguard, [Gnome system Monitor](http://freshmeat.net/projects/gnome-system-monitor/)
 -   OProfile - Linux 系统级的分析工具
-　　-   见 [oprofile](http://oprofile.sourceforge.net/about/)
-　　-   也可参考: [oprofile at IBM](http://www-128.ibm.com/developerworks/linux/library/l-oprof.html)
+    -   见 [oprofile](http://oprofile.sourceforge.net/about/)
+    -   也可参考: [oprofile at IBM](http://www-128.ibm.com/developerworks/linux/library/l-oprof.html)
 -   BootChart - 对启动过程分析和提供进程启动的可视化数据和系统利用率
-　　-   见 [Bootchart](../../.././dev_portals/Boot_Time/Bootchart/Bootchart.md "Bootchart")
+    -   见 [Bootchart](../../.././dev_portals/Boot_Time/Bootchart/Bootchart.md "Bootchart")
 
 ## 相关工具
 
