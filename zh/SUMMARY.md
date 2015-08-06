@@ -416,10 +416,10 @@
 
         * [软件开发工具(SDK)](android_portal/software_dev/Android_SDK/Android_SDK.md)
         * [源代码编译系统](android_portal/software_dev/Android_Build_System/Android_Build_System.md)
-        * [Application Development Resources](android_portal/software_dev/Android_Application_Development/Android_Application_Development.md)
-        * [Scripting](android_portal/software_dev/Android_Scripting/Android_Scripting.md)
-        * [Debugging](android_portal/software_dev/Android_Debugging/Android_Debugging.md)
-        * [Testing](android_portal/software_dev/Android_Testing/Android_Testing.md)
+        * [应用开发参考资源](android_portal/software_dev/Android_Application_Development/Android_Application_Development.md)
+        * [脚本](android_portal/software_dev/Android_Scripting/Android_Scripting.md)
+        * [调试](android_portal/software_dev/Android_Debugging/Android_Debugging.md)
+        * [测试](android_portal/software_dev/Android_Testing/Android_Testing.md)
 
     * [基于 Android 的系统](android_portal/android_based_systems/README.md)
 
