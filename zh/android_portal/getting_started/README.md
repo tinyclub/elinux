@@ -1,4 +1,4 @@
 
-# Getting Started
+# 新手入门
 
-Overview of Android system, from versions, history, design and architecture to the tools and tutorials.
+Android 系统概览，从系统版本、历史、设计、架构到工具和各类教程。

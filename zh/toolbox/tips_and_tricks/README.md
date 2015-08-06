@@ -1,4 +1,4 @@
 
-# Tips and Tricks
+# 要诀和技巧
 
-Tips and Tricks about chip identification, coding styling, debugging and GDB/GCC.
+介绍各类要诀和技巧，内容涵盖芯片鉴别、编码风格、编译和调试技巧，以及 GDB/GCC 的使用等。

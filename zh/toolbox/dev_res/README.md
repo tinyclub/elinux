@@ -1,4 +1,4 @@
 
-# Developer Resources
+# 开发者资源
 
-Resources about linux kernel and its subsystems, including online documentation, books, podcasts and blabla.
+Linux 内核相关的各类资源，包括线上文档、书籍、影音等等。

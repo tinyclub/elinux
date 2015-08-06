@@ -1,4 +1,4 @@
 
-# Debugging Portal
+# 调试入口
 
-This chapter is the new portal for all debugging related stuff. It currently deals with Kernel topics, but feel free to add user space debugging too.
+主讲调试相关内容，目前主要关注内核部分的调试，后续会补充用户空间的调试内容。

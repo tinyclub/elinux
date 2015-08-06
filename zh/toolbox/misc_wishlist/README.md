@@ -1,4 +1,4 @@
 
-# Misc & Wishlist
+# 杂项与收藏
 
-About bluetooth network, continuous logging and crash diagnostics...
+介绍到蓝牙网络、不间断的日志记录系统和系统崩溃诊断等。
