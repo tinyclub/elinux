@@ -17,12 +17,14 @@ go through:
 This includes java doc to all classes, packages, and other variables and
 is the most updated site.
 
-这个是最新的网页，它包含了JAVA 文档包含了所有的类、包以及其他变量
+它的JAVA 文档包含了所有的类、包以及其他变量而且是最新的。
 
 Though it is most customary to get started in Eclipse, which is the most
 standard, you are also free to use Netbeans, but the Netbeans updates
 for the Android SDK plugin is not very dynamic and to my knowledge was
 developed and supported by a single project called Kenai.
+
+
 
 You should also know that you can not step into Android Application
 Development with out having base on Core Java programming, yes, that is
@@ -34,5 +36,8 @@ going.
 
 [Category](http://eLinux.org/Special:Categories "Special:Categories"):
 
+[分类](http://eLinux.org/Special:Categories "Special:Categories"):
+
 -   [Android](http://eLinux.org/Category:Android "Category:Android")
 
+-   [Android](http://eLinux.org/Category:Android "Category:Android")
