@@ -1,5 +1,3 @@
-> From: [eLinux.org](http://eLinux.org/Android_Application_Development "http://eLinux.org/Android_Application_Development")
-
 > 原文: [eLinux.org](http://eLinux.org/Android_Application_Development "http://eLinux.org/Android_Application_Development")
 
 > 翻译: [@liuzhy520](https://github.com/liuzhy520/ "https://github.com/liuzhy520/")
