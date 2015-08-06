@@ -10,7 +10,7 @@
 For the most reliable reference to the Android Application Development
 go through:
 
-安卓应用开发资源最可靠的参考，请访问：
+安卓应用最可靠的开发资源，请参考：
 
 ## [http://developer.android.com/guide/index.html](http://developer.android.com/guide/index.html)
 
