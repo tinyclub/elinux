@@ -40,4 +40,4 @@ going.
 
 -   [Android](http://eLinux.org/Category:Android "Category:Android")
 
--   [Android](http://eLinux.org/Category:Android "Category:Android")
+-   [安卓](http://eLinux.org/Category:Android "Category:Android")
