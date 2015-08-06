@@ -10,7 +10,7 @@
     * [Resource Management](http://elinux.org/Resource_Management) (@[lzufalcon])
     * [Multimedia](http://www.elinux.org/Multimedia)
     * [Memory Management](http://elinux.org/Memory_Management) (@[zipper1956])
-    * [Power Management](http://www.elinux.org/Power_Management) (@[zhongbin])
+    * [Power Management](http://www.elinux.org/Power_Management) (@[qkhhyga])
     * [File Systems](http://www.elinux.org/File_Systems) (@[lzufalcon])
     * [Real Time](http://www.elinux.org/Real_Time) (@[hduffddybz])
     * [Device drivers](http://www.elinux.org/Device_drivers) (@[lzufalcon])
