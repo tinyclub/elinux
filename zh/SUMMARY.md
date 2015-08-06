@@ -414,8 +414,8 @@
 
     * [软件开发](android_portal/software_dev/README.md)
 
-        * [Software Development Kit](android_portal/software_dev/Android_SDK/Android_SDK.md)
-        * [Source Build System](android_portal/software_dev/Android_Build_System/Android_Build_System.md)
+        * [软件开发工具(SDK)](android_portal/software_dev/Android_SDK/Android_SDK.md)
+        * [源代码编译系统](android_portal/software_dev/Android_Build_System/Android_Build_System.md)
         * [Application Development Resources](android_portal/software_dev/Android_Application_Development/Android_Application_Development.md)
         * [Scripting](android_portal/software_dev/Android_Scripting/Android_Scripting.md)
         * [Debugging](android_portal/software_dev/Android_Debugging/Android_Debugging.md)
