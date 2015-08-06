@@ -4,11 +4,12 @@
 
     * [如何编译](doc/BUILD.md)
     * [译者手册](doc/README.md)
+    * [任务分工](doc/PLAN.md)
 
 * [开发入口](dev_portals/README.md)
 
     * [固件](dev_portals/Firmware/Firmware.md)
-        - [Bootloader](./dev_portals/Firmware/Bootloader/Bootloader.md)
+        - [引导程序](./dev_portals/Firmware/Bootloader/Bootloader.md)
     * [安全](dev_portals/Security/Security.md)
         - [Bootloader Security Resources](./dev_portals/Security/Bootloader_Security_Resources/Bootloader_Security_Resources.md)
         - [Mandatory Access Control Comparison](./dev_portals/Security/Mandatory_Access_Control_Comparison/Mandatory_Access_Control_Comparison.md)

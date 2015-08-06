@@ -33,9 +33,20 @@
 
 ### 版权
 
-除非另行声明，本站内容采用[Creative Commons Attribution-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-sa/3.0/)版权协议。
+除非另行声明，本书采用 [Creative Commons Attribution-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-sa/3.0/) 版权协议。
 
 ### 更多开源书籍项目……
 
 * [C 语言编程透视](http://tinylab.gitbooks.io/cbook/)
 * [Shell 编程范例](http://tinylab.gitbooks.io/shellbook/)
+
+### 贡献者
+<hr>
+-    [@lzz5235](https://github.com/lzz5235) (6) <br/>
+-    [@hduffddybz](https://github.com/hduffddybz) (3) <br/>
+-    [@zhongbin](https://github.com/qkhhyga) (1) <br/>
+-    [@wengpingbo](https://github.com/wengpingbo) (1) <br/>
+-    [@sdfd](https://github.com/lzufalcon) (1) <br/>
+-    [@lzufalcon](https://github.com/lzufalcon) (1) <br/>
+-    [@Lotte-Bai](https://github.com/Lotte-Bai) (1) <br/>
+-    [@codingbelief](https://github.com/codingbelief) (1) <br/>

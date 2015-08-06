@@ -1,4 +1,4 @@
 
-# Hardware Pages
+# 玩转硬件
 
-Resources or information about the popular embedded boards.
+展示所有主流嵌入式开发板的各类资源和信息。

@@ -1,4 +1,4 @@
 
-# Development Tools
+# 开发工具
 
-Tools from hardware logic analyzers, build system, emulators, benchmarks, test systems to software debuggers.
+介绍开发需要的各类工具，包括硬件逻辑分析仪、构建工具、集成开发环境、模拟器、基准测试程序、测试系统、源码管理、软件调试器、跟踪器和分析器等。
