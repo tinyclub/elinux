@@ -4,20 +4,20 @@
 
     * [Firmware](http://eLinux.org/Firmware) (@[lzufalcon])
     * [Security](http://elinux.org/Security) (@[lzz5235])
-    * [Boot Time](http://elinux.org/Boot_Time)
+    * [Boot Time](http://elinux.org/Boot_Time) (@[lzufalcon])
     * [System Size](http://elinux.org/System_Size) (@[wengpingbo])
-    * [Networking](http://elinux.org/Networking)
-    * Resource Management
+    * [Networking](http://elinux.org/Networking) (@[lzufalcon])
+    * [Resource Management](http://elinux.org/Resource_Management) (@[lzufalcon])
     * [Multimedia](http://www.elinux.org/Multimedia)
     * [Memory Management](http://elinux.org/Memory_Management) (@[zipper1956])
     * [Power Management](http://www.elinux.org/Power_Management) (@[zhongbin])
-    * [File Systems](http://www.elinux.org/File_Systems)
+    * [File Systems](http://www.elinux.org/File_Systems) (@[lzufalcon])
     * [Real Time](http://www.elinux.org/Real_Time) (@[hduffddybz])
-    * [Device drivers](http://www.elinux.org/Device_drivers)
+    * [Device drivers](http://www.elinux.org/Device_drivers) (@[lzufalcon])
     * [Device Tree](http://www.elinux.org/Device_Tree) (@[sdfd])
-    * Hardware Hacking
-    * Development Platforms
-    * Kernel Mainlining
+    * [Hardware Hacking](http://elinux.org/Hardware_Hacking) (@[lzufalcon])
+    * [Development Platforms](http://elinux.org/Development_Platforms) (@[lzufalcon])
+    * [Kernel Mainlining](http://elinux.org/Kernel_Mainlining) (@[DecJude])
     * [Legal Issues](http://www.elinux.org/Legal_Issues) (@[zxqhbd])
     * [Events](http://elinux.org/Events)
     * [Glossary](http://elinux.org/Glossary) (@[mintisan])
@@ -203,3 +203,4 @@
 [Gracker]:https://github.com/Gracker
 [lovelers]:https://github.com/lovelers
 [llz383455526]:https://github.com/llz383455526
+[DecJude]:https://github.com/DecJude
