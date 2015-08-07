@@ -8,7 +8,7 @@
     * [System Size](http://elinux.org/System_Size) (@[wengpingbo])
     * [Networking](http://elinux.org/Networking) (@[lzufalcon])
     * [Resource Management](http://elinux.org/Resource_Management) (@[lzufalcon])
-    * [Multimedia](http://www.elinux.org/Multimedia)
+    * [Multimedia](http://www.elinux.org/Multimedia) (@[lzufalcon]) 
     * [Memory Management](http://elinux.org/Memory_Management) (@[zipper1956])
     * [Power Management](http://www.elinux.org/Power_Management) (@[qkhhyga])
     * [File Systems](http://www.elinux.org/File_Systems) (@[lzufalcon])
@@ -19,7 +19,7 @@
     * [Development Platforms](http://elinux.org/Development_Platforms) (@[lzufalcon])
     * [Kernel Mainlining](http://elinux.org/Kernel_Mainlining) (@[DecJude])
     * [Legal Issues](http://www.elinux.org/Legal_Issues) (@[zxqhbd])
-    * [Events](http://elinux.org/Events)
+    * [Events](http://elinux.org/Events) (@[lzufalcon])
     * [Glossary](http://elinux.org/Glossary) (@[mintisan])
 
 * [Toolbox](http://elinux.org/Toolbox) (@[bigzz])
