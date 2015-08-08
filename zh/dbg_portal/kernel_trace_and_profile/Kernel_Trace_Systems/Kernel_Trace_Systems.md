@@ -30,7 +30,7 @@
     -   在主分支版本 2.6.27 后支持
     -   见 [用 FTrace 测量函数持续时间](http://eLinux.org/Measuring_Function_Duration_with_FTrace "用FTrace测量函数持续时间") - 2009 年 Linux 研讨会 Tim Bird 演示文稿的大纲
 -   [System Tap](../../../dbg_portal/kernel_trace_and_profile/System_Tap/System_Tap.md "System Tap") - System Tap 是一个用于构建和执行跟踪和采样的系统，并可以应用于一个正在运行的 Linux 系统
--   LTTng - [Linux Trace Toolkit](../../../dbg_portal/kernel_trace_and_profile/Linux_Trace_Toolkit/Linux_Trace_Toolkit.md "Linux Trace Toolkit"), next generation （Linux 跟踪工具箱，下一代）
+-   LTTng - [Linux Trace Toolkit](../../../dbg_portal/kernel_trace_and_profile/Linux_Trace_Toolkit/Linux_Trace_Toolkit.md "Linux Trace Toolkit"), next generation （Linux 跟踪工具套件，下一代）
 -   LKST - [Linux Kernel State Tracer](../../../dbg_portal/kernel_trace_and_profile/Linux_Kernel_State_Tracer/Linux_Kernel_State_Tracer.md "Linux Kernel State Tracer")（Linux 内核状态跟踪器）
 
 ## 专用跟踪系统
