@@ -9,6 +9,10 @@
 
 基于上述 Mediawiki 版本，这里的 GitBook 版本由 [eLinux.org 中文翻译组](http://www.tinylab.org/elinux) 创建，目的是为了更好地通过网络协作把它翻译成其他语言，而副产品是该知识库可以作为可打印和可阅读的书籍获得而且用户能够下载它的 pdf，epub 或者 mobi 格式。
 
+- 项目首页: <http://www.tinylab.org/elinux>
+- Git 仓库: <https://github.com/tinyclub/elinux>
+- 在线阅读: <http://tinylab.gitbooks.io/elinux>
+
 ## 介绍
 
 欢迎访问 eLinux 知识库！

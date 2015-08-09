@@ -9,6 +9,10 @@ The original [Embedded Linux wiki](http://elinux.org) is built with MediaWiki an
 
 Based on the Mediawki version, this gitbook version is created by the [eLinux.org Chinese Translation Group](http://www.tinylab.org/elinux), the primary aim is to easier its translation to the other languages via internet cooperation and the byproduct is that this wiki is available as a printable and readable book now, people can download its pdf, epub and mobi formats.
 
+- Project Homepage: <http://www.tinylab.org/elinux>
+- Git Repository: <https://github.com/tinyclub/elinux>
+- Online Gitbook: <http://tinylab.gitbooks.io/elinux>
+
 ## Introduction
 
 Welcome to the eLinux wiki!
