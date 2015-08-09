@@ -1,608 +1,293 @@
-> From: [eLinux.org](http://eLinux.org/Boot_Time "http://eLinux.org/Boot_Time")
+> 原文：[eLinux.org](http://eLinux.org/Boot_Time "http://eLinux.org/Boot_Time")<br/>
+> 翻译：[@lzufalcon](https://github.com/lzufalcon)
 
+# 启动时间
 
-# Boot Time
+## 目录
 
-
-
-## Contents
-
--   [1 Introduction](#introduction)
--   [2 Technology/Project Pages](#technology-project-pages)
-    -   [2.1 Measuring Boot-up Time](#measuring-boot-up-time)
-    -   [2.2 Technologies and Techniques for Reducing Boot
-        Time](#technologies-and-techniques-for-reducing-boot-time)
-        -   [2.2.1 Bootloader speedups](#bootloader-speedups)
-        -   [2.2.2 Kernel speedups](#kernel-speedups)
-            -   [2.2.2.1 File System issues](#file-system-issues)
-        -   [2.2.3 User-space and application
-            speedups](#user-space-and-application-speedups)
-        -   [2.2.4 Suspend related
-            improvements](#suspend-related-improvements)
-        -   [2.2.5 Miscellaneous topics](#miscellaneous-topics)
-        -   [2.2.6 Uninvestigated speedups](#uninvestigated-speedups)
--   [3 Articles and Presentations](#articles-and-presentations)
-    -   [3.1 Case Studies](#case-studies)
--   [4 Additional Projects/Mailing
-    Lists/Resources](#additional-projects-mailing-lists-resources)
-    -   [4.1 Replacements for SysV
-        'init'](#replacements-for-sysv-init)
+-   [1 简介](#introduction)
+-   [2 技术/项目主页](#technology-project-pages)
+    -   [2.1 测量启动时间](#measuring-boot-up-time)
+    -   [2.2 用于减少启动时间的技术和技巧](#technologies-and-techniques-for-reducing-boot-time)
+        -   [2.2.1 引导程序（Bootloader）加速](#bootloader-speedups)
+        -   [2.2.2 内核加速](#kernel-speedups)
+            -   [2.2.2.1 文件系统方面的问题](#file-system-issues)
+        -   [2.2.3 用户空间和应用程序加速](#user-space-and-application-speedups)
+        -   [2.2.4 系统休眠相关的改进](#suspend-related-improvements)
+        -   [2.2.5 杂项](#miscellaneous-topics)
+        -   [2.2.6 一些未经验证的想法](#uninvestigated-speedups)
+-   [3 文章和演讲稿](#articles-and-presentations)
+    -   [3.1 案例研究](#case-studies)
+-   [4 其他的项目/邮件列表/资源](#additional-projects-mailing-lists-resources)
+    -   [4.1 SysV 'init' 的替代品](#replacements-for-sysv-init)
         -   [4.1.1 busybox init](#busybox-init)
         -   [4.1.2 upstart](#upstart)
         -   [4.1.3 Android init](#android-init)
         -   [4.1.4 systemd](#systemd)
     -   [4.2 Kexec](#kexec)
-    -   [4.3 Splash Screen projects](#splash-screen-projects)
-    -   [4.4 Others](#others)
-        -   [4.4.1 Apparently obsolete or abandoned
-            material](#apparently-obsolete-or-abandoned-material)
--   [5 Companies, individuals or projects working on fast
-    booting](#companies-individuals-or-projects-working-on-fast-booting)
--   [6 Boot time check list](#boot-time-check-list)
+    -   [4.3 启动画面（Splash Screen）项目](#splash-screen-projects)
+    -   [4.4 其他](#others)
+-   [5 正在从事快速启动工作的公司、个人或者项目](#companies-individuals-or-projects-working-on-fast-booting)
+-   [6 启动时间检查清单](#boot-time-check-list)
 
-## Introduction
+## 简介
 
-Boot Time includes topics such as measurement, analysis, human factors,
-initialization techniques, and reduction techniques. The time that a
-product takes to boot directly impacts the first perception an end user
-has of the product. Regardless of how attractive or well designed a
-consumer electronic device is, the time required to move the device from
-off to an interactive, usable state is critical to obtaining a positive
-end user experience. Turning on a device is Use Case \#1.
+本章包含的话题有启动时间的测量、分析、人因工程（human factors）、初始化技术和优化技巧等。
 
-Booting up a device involves numerous steps and sequences of events. In
-order to use consistent terminology, the [Bootup Time Working
-Group](../.././dev_portals/Boot_Time/Bootup_Time_Working_Group/Bootup_Time_Working_Group.md "Bootup Time Working Group") of the CE
-Linux Forum came up with a list of terms and their widely accepted
-definitions for this functionality area. See the following page for
-these terms:
+产品花在启动方面的时间直接影响终端用户对该产品的第一印象。
 
--   [Boot-up Time Definition Of
-    Terms](../.././dev_portals/Boot_Time/Boot-up_Time_Definition_Of_Terms/Boot-up_Time_Definition_Of_Terms.md "Boot-up Time Definition Of Terms")
+不管一个消费电子设备如何引人注目或者设计得怎么好，设备从关机状态到可交互的使用状态所需的时间对于获得正面的用户体验尤为关键。案例 \#1 就是从关机状态从头启动一个设备的例子。
 
-## Technology/Project Pages
+启动一个设备涉及到许多步骤和一系列的事件。为了使用前后一致的术语，消费电子 Linux 论坛（CE Linux Forum）的[启动时间优化工作组](../.././dev_portals/Boot_Time/Bootup_Time_Working_Group/Bootup_Time_Working_Group.md "Bootup Time Working Group") 起草了一个术语表，该表包括了相关术语在该领域内通用的定义。该术语表如下：
 
-The following are individual pages with information about various
-technologies relevant to improving Boot Time for Linux. Some of these
-describe local patches available on this site. Others point to projects
-or patches maintained elsewhere.
+-   [启动时间相关的术语表](../.././dev_portals/Boot_Time/Boot-up_Time_Definition_Of_Terms/Boot-up_Time_Definition_Of_Terms.md "Boot-up Time Definition Of Terms")
 
-### Measuring Boot-up Time
+## 技术/项目主页
 
--   [Printk Times](../.././dev_portals/Boot_Time/Printk_Times/Printk_Times.md "Printk Times") - simple system for
-    showing timing information for each printk.
--   [Kernel Function
-    Trace](../.././dev_portals/Boot_Time/Kernel_Function_Trace/Kernel_Function_Trace.md "Kernel Function Trace") - system for
-    reporting function timings in the kernel.
--   [Linux Trace Toolkit](../../dbg_portal/kernel_trace_and_profile/Linux_Trace_Toolkit/Linux_Trace_Toolkit.md "Linux Trace Toolkit") -
-    system for reporting timing data for certain kernel and process
-    events.
--   [Oprofile](http://oprofile.sourceforge.net/news/) - system-wide
-    profiler for Linux.
--   [Bootchart](../.././dev_portals/Boot_Time/Bootchart/Bootchart.md "Bootchart") - a tool for performance
-    analysis and visualization of the Linux boot process. Resource
-    utilization and process information are collected during the
-    user-space portion of the boot process and are later rendered in a
-    PNG, SVG or EPS encoded chart.
--   [Bootprobe](http://people.redhat.com/berrange/systemtap/bootprobe/)
-    - a set of [System Tap](../../dbg_portal/kernel_trace_and_profile/System_Tap/System_Tap.md "System Tap") scripts for
-    analyzing system bootup.
--   and, let us not forget: "cat /proc/uptime"
--   [grabserial](../.././dev_portals/Boot_Time/Tims_Fastboot_Tools/Tims_Fastboot_Tools.md#grabserial "Tims Fastboot Tools")
-    - a nice utility from Tim Bird to log and timestamp console output
--   [process
-    trace](../.././dev_portals/Boot_Time/Tims_Fastboot_Tools/Tims_Fastboot_Tools.md#Tim.27s_quick_and_dirty_process_trace "Tims Fastboot Tools")
-    - a simple patch from Tim Bird to log exec, fork and exit system
-    calls.
--   [ptx\_ts](http://pengutronix.de/software/ptx_ts/index_en.html) -
-    Pengutronix' TimeStamper: A small filter prepending timestamps to
-    STDOUT; a bit similar to grabserial but not limited to serial ports
--   [Initcall Debug](../.././dev_portals/Boot_Time/Initcall_Debug/Initcall_Debug.md "Initcall Debug") - a kernel
-    command line option to show time taken for initcalls.
--   See also: [Kernel
-    Instrumentation](../.././dev_portals/Boot_Time/Kernel_Instrumentation/Kernel_Instrumentation.md "Kernel Instrumentation")
-    which lists some known kernel instrumentation tools. These are of
-    interest for measuring kernel startup time.
+下面主要介绍与改进 Linux 启动时间有关的各种技术。
 
-### Technologies and Techniques for Reducing Boot Time
+有一部分描述了 eLinux.org 上可以下载的本地补丁，而其余部分则介绍了在其他地方维护的项目或者补丁。
 
-#### Bootloader speedups
+### 测量启动时间
 
--   [Kernel XIP](../.././dev_portals/Boot_Time/Kernel_XIP/Kernel_XIP.md "Kernel XIP") - Allow kernel to be executed
-    in-place in ROM or FLASH.
--   [DMA Copy Of Kernel On
-    Startup](../.././dev_portals/Boot_Time/DMA_Copy_Of_Kernel_On_Startup/DMA_Copy_Of_Kernel_On_Startup.md "DMA Copy Of Kernel On Startup")
-    - Copy kernel from Flash to RAM using DMA
--   [Uncompressed kernel](../.././dev_portals/Boot_Time/Uncompressed_kernel/Uncompressed_kernel.md "Uncompressed kernel") -
-    An uncompressed kernel might boot faster
--   [Fast Kernel
-    Decompression](../.././dev_portals/Boot_Time/Fast_Kernel_Decompression/Fast_Kernel_Decompression.md "Fast Kernel Decompression")
+-   [Printk Times](../.././dev_portals/Boot_Time/Printk_Times/Printk_Times.md "Printk Times") - 用于显示每个 printk 的执行时间
+-   [内核函数跟踪（Ftrace）](../.././dev_portals/Boot_Time/Kernel_Function_Trace/Kernel_Function_Trace.md "Kernel Function Trace") - 用于报告内核中每个函数的调用时间
+-   [Linux 跟踪工具箱（LTT）](../../dbg_portal/kernel_trace_and_profile/Linux_Trace_Toolkit/Linux_Trace_Toolkit.md "Linux Trace Toolkit") - 用于报告确切的内核和进程事件的时间数据
+-   [Oprofile（译者注：最新替代品是 perf）](http://oprofile.sourceforge.net/news/) - 通用的 Linux 分析器（Profile）
+-   [Bootchart](../.././dev_portals/Boot_Time/Bootchart/Bootchart.md "Bootchart") - 用于 Linux 启动过程的性能分析和数据展示。收集启动过程中的用户空间部分的资源使用情况和进程信息，然后渲染成 PNG、SVG 或者 EPS 格式的图表。
+-   [Bootprobe](http://people.redhat.com/berrange/systemtap/bootprobe/) - 一组用于分析系统启动过程的 [System Tap](../../dbg_portal/kernel_trace_and_profile/System_Tap/System_Tap.md "System Tap") 脚本
+-   当然，别忘了 `cat /proc/uptime`
+-   [grabserial](../.././dev_portals/Boot_Time/Tims_Fastboot_Tools/Tims_Fastboot_Tools.md#grabserial "Tims Fastboot Tools") - Tim Bird （译者注：CE Linux Forum 主席）写的一个非常赞的工具用于记录控制台输出并打上时间戳
+-   [进程跟踪](../.././dev_portals/Boot_Time/Tims_Fastboot_Tools/Tims_Fastboot_Tools.md#Tim.27s_quick_and_dirty_process_trace "Tims Fastboot Tools") - 同样是 Tim Bird 写的一个简单补丁，用于记录 exec、fork 和 exit 系统调用。
+-   [ptx\_ts](http://pengutronix.de/software/ptx_ts/index_en.html) - Pengutronix 的时间戳记录器（TimeStamper）：一个简单的过滤器，可前置时间戳到标准输出（STDOUT）上，有点像 grabserial 但是不限于串口。
+-   [Initcall（内核初始化函数）调试](../.././dev_portals/Boot_Time/Initcall_Debug/Initcall_Debug.md "Initcall Debug") - 一个用于显示 initcalls 所花时间的内核命令行选项
+-   也可以看下: [Kernel 检测工具](../.././dev_portals/Boot_Time/Kernel_Instrumentation/Kernel_Instrumentation.md "Kernel Instrumentation")，里头列举了一些已知的内核检测工具，这些对于测量内核启动时间来说可能会有帮助。
 
-#### Kernel speedups
+### 减少启动时间的技术和技巧
 
--   [Disable Console](../.././dev_portals/Boot_Time/Disable_Console/Disable_Console.md "Disable Console") - Avoid
-    overhead of console output during system startup.
--   Disable bug and printk - Avoid the overhead of bug and printk.
-    Disadvantage is that you lose a lot of info.
--   [RTC No Sync](../.././dev_portals/Boot_Time/RTC_No_Sync/RTC_No_Sync.md "RTC No Sync") - Avoid delay to
-    synchronize system time with RTC clock edge on startup.
--   [Short IDE Delays](../.././dev_portals/Boot_Time/Short_IDE_Delays/Short_IDE_Delays.md "Short IDE Delays") - Reduce
-    duration of IDE startup delays (this is effective but possibly
-    dangerous).
--   [Hardcode kernel module
-    info](../.././dev_portals/Boot_Time/Hardcode_kernel_module_info/Hardcode_kernel_module_info.md "Hardcode kernel module info") -
-    Reduce the overhead of loading a module, by hardcoding some
-    information used for loading the relocation information
--   [IDE No Probe](../.././dev_portals/Boot_Time/IDE_No_Probe/IDE_No_Probe.md "IDE No Probe") - Force kernel to
-    observe the ide\<x\>=noprobe option.
--   [Preset LPJ](../.././dev_portals/Boot_Time/Preset_LPJ/Preset_LPJ.md "Preset LPJ") - Allow the use of a preset
-    loops\_per\_jiffy value.
--   [Asynchronous function
-    calls](../.././dev_portals/Boot_Time/Asynchronous_function_calls/Asynchronous_function_calls.md "Asynchronous function calls") -
-    Allow probing or other functions to proceed in parallel, to overlap
-    time-consuming boot-up activities.
-    -   [Threaded Device
-        Probing](../.././dev_portals/Boot_Time/Threaded_Device_Probing/Threaded_Device_Probing.md "Threaded Device Probing") -
-        Allow drivers to probe devices in parallel. (not mainlined, now
-        deprecated?)
--   [Reordering of driver
-    initialization](../.././dev_portals/Boot_Time/Reordering_of_driver_initialization/Reordering_of_driver_initialization.md "Reordering of driver initialization")
-    - Allow driver bus probing to start as soon as possible.
--   [Deferred Initcalls](../.././dev_portals/Boot_Time/Deferred_Initcalls/Deferred_Initcalls.md "Deferred Initcalls") -
-    defer non-essential module initialization routines to after primary
-    boot
--   NAND ECC improvement - The pre 2.6.28 nand\_ecc.c has room for
-    improvement. You can find an improved version in the mtd git at
-    [http://git.infradead.org/mtd-2.6.git?a=blob\_plain;f=drivers/mtd/nand/nand\_ecc.c;hb=HEAD](http://git.infradead.org/mtd-2.6.git?a=blob_plain;f=drivers/mtd/nand/nand_ecc.c;hb=HEAD).
-    Documentation for this is in
-    [http://git.infradead.org/mtd-2.6.git?a=blob\_plain;f=Documentation/mtd/nand\_ecc.txt;hb=HEAD](http://git.infradead.org/mtd-2.6.git?a=blob_plain;f=Documentation/mtd/nand_ecc.txt;hb=HEAD).
-    This is only interesting if your system uses software ECC
-    correction.
--   Check what kernel memory allocator you use. Slob or slub might be
-    better than slab (which is the default in older kernels)
--   If your system does not need it, you can remove SYSFS and even
-    PROCFS from the kernel. In one test removing sysfs saved 20 ms.
--   Carefully investigate all kernel configuration options on whether
-    they are applicable or not. Even if you select an option that is not
-    used in the end, it contributes to the kernel size and therefore to
-    the kernel load time (assuming you are not doing kernel XIP). Often
-    this will require some trial and measure! E.g. selecting
-    CONFIG\_CC\_OPTIMIZE\_FOR\_SIZE (found under general setup) gave in
-    one case a boot improvement of 20 ms. Not dramatic, but when
-    reducing boot time every penny counts!
--   Moving to a different compiler version might lead to shorter and/or
-    faster code. Most often newer compilers produce better code. You
-    might also want to play with compiler options to see what works
-    best.
--   If you use initramfs in your kernel and a compressed kernel it is
-    better to have an uncompressed initramfs image. This is to avoid
-    having to uncompress data twice. A patch for this has been submitted
-    to LKML. See
-    [http://lkml.org/lkml/2008/11/22/112](http://lkml.org/lkml/2008/11/22/112)
+#### 引导程序（Bootloader）加速
 
-##### File System issues
+-   [就地执行（XIP）内核](../.././dev_portals/Boot_Time/Kernel_XIP/Kernel_XIP.md "Kernel XIP") - 允许内核在 ROM 或者 FLASH 上就地执行（XIP）
+-   [在启动时通过 DMA 拷贝内核镜像](../.././dev_portals/Boot_Time/DMA_Copy_Of_Kernel_On_Startup/DMA_Copy_Of_Kernel_On_Startup.md "DMA Copy Of Kernel On Startup")
+    - 使用 DMA 从闪存（Flash）拷贝内核镜像文件到内存中
+-   [采用未压缩的内核](../.././dev_portals/Boot_Time/Uncompressed_kernel/Uncompressed_kernel.md "Uncompressed kernel") - 一个未压缩的内核或许可以更快启动
+-   [快速内核解压](../.././dev_portals/Boot_Time/Fast_Kernel_Decompression/Fast_Kernel_Decompression.md "Fast Kernel Decompression")
 
-Different file systems have different initialization (mounting) times,
-for the same data sets. This is a function of whether meta-data must be
-read from storage into RAM or not, and what algorithms are used during
-the mount procedure.
+#### 内核加速
 
--   [Filesystem
-    Information](../.././dev_portals/Boot_Time/Filesystem_Information/Filesystem_Information.md "Filesystem Information") - has
-    information about boot-up times of various file systems
--   [File Systems](../../dev_portals/File_Systems/File_Systems.md "File Systems") - has information on
-    various file systems that are interesting for embedded systems. Also
-    includes some improvement suggestions.
--   [Avoid Initramfs](../.././dev_portals/Boot_Time/Avoid_Initramfs/Avoid_Initramfs.md "Avoid Initramfs") - explains on
-    why initramfs should be avoided if you want to minimize boot time
--   Split partitions. If mounting a file system takes long, you can
-    consider splitting that filesystem in two parts, one with the info
-    that is needed during or immediately after boot, and one which can
-    be mounted later on.
--   [Ramdisks demasked](../.././dev_portals/Boot_Time/Ramdisks_demasked/Ramdisks_demasked.md "Ramdisks demasked") -
-    explains why using a ram disk generally results in a longer boot
-    time, not a shorter one.
+-   [关闭控制台](../.././dev_portals/Boot_Time/Disable_Console/Disable_Console.md "Disable Console") - 避免启动过程中的控制台输出开销（译者注：尤其是串口控制台，会严重拖慢系统启动，甚至带来各种实时问题）
+-   关闭调试接口 和 `printk` - 避免调试接口和`printk`带来的开销，缺点是将丢失大量（对于调试可能有用）的信息
+-   [不同步 RTC](../.././dev_portals/Boot_Time/RTC_No_Sync/RTC_No_Sync.md "RTC No Sync") - 避免在启动时延迟用 RTC 时钟边沿同步系统时间（可能带来时钟漂移）
+-   [更短的 IDE 延迟时间](../.././dev_portals/Boot_Time/Short_IDE_Delays/Short_IDE_Delays.md "Short IDE Delays") - 减少 IDE 启动延迟的持续时间（有效但是可能危险）
+-   [硬编码内核模块信息](../.././dev_portals/Boot_Time/Hardcode_kernel_module_info/Hardcode_kernel_module_info.md "Hardcode kernel module info") - 通过硬编码用于加载重定位信息的内容来减少加载模块的开销
+-   [不侦测 IDE](../.././dev_portals/Boot_Time/IDE_No_Probe/IDE_No_Probe.md "IDE No Probe") - 强制内核使用 `ide<x>=noprobe` 命令行选项，从而绕过 IDE 侦测
+-   [预设 LPJ](../.././dev_portals/Boot_Time/Preset_LPJ/Preset_LPJ.md "Preset LPJ") - 允许使用一个预设的 `loops_per_jiffy`（同样可以通过内核命令行选项设置）
+-   [异步函数调用](../.././dev_portals/Boot_Time/Asynchronous_function_calls/Asynchronous_function_calls.md "Asynchronous function calls") - 允许侦测函数或者其他函数并行处理，从而让耗时的启动活动并行起来
+    -   [设备侦测函数线程化](../.././dev_portals/Boot_Time/Threaded_Device_Probing/Threaded_Device_Probing.md "Threaded Device Probing") - 允许驱动并行侦测设备（没有提交到主线，不过内核有其他类似优化，比如异步函数调用，见 `kernel/async.c`）
+-   [重排驱动初始化过程](../.././dev_portals/Boot_Time/Reordering_of_driver_initialization/Reordering_of_driver_initialization.md "Reordering of driver initialization")
+    - 允许驱动总线侦测尽可能快地启动
+-   [延迟 Initcalls](../.././dev_portals/Boot_Time/Deferred_Initcalls/Deferred_Initcalls.md "Deferred Initcalls") - 延迟不重要的模块初始化函数到主要启动过程之后
+-   NAND ECC（Error Correcting Code）技术改进 - 2.6.28 之前的`nand_ecc.c` 有改进的空间，可以从 [mtd git 仓库](http://git.infradead.org/mtd-2.6.git?a=blob_plain;f=drivers/mtd/nand/nand_ecc.c;hb=HEAD) 找到这样一个改善的版本，相应文档在[这里](http://git.infradead.org/mtd-2.6.git?a=blob_plain;f=Documentation/mtd/nand_ecc.txt;hb=HEAD)。这个当且仅当系统使用软 ECC 校验时才有效
+-   检查内核正在使用哪个内存分配器，Slob 或者 Slub 可能比 Slab 更好，早期内核默认使用 Slab，可根据需要切换为 Slob 或者 Slub
+-   如果系统不需要，可以从内核中去掉 SYSFS 甚至 PROCFS 支持。一项测试表明删掉 SYSFS 可以节省 20 ms
+-   仔细调研所有的内核配置选项，看看它们是否有用。即使选上的选项最终没有用到，它也可能增加内核尺寸因而会增加内核加载时间（假设没有使用就地执行 XIP 功能）。通常，这个需要一些试验和测试！例如，选上 `CONFIG_CC_OPTIMIZE_FOR_SIZE`（在内核的 `General Setup` 配置菜单下面）在一个案例中能够产生 20ms 的启动优化。虽然不是很显著，但是对于启动时间优化来说，积少成多就能看到效果（Not dramatic, but when reducing boot time every penny counts!）。
 
-#### User-space and application speedups
+-   迁移到一个不同的编译器版本可能会产生更短和更快的代码。通常，新的编译器能够产生更优的代码。你也可以玩转一下各种编译器选项看看哪些表现最好。
+-   如果在内核中用上 initramfs 和压缩了的内核，那么最好是不要再压缩 initramfs。这个主要是为了避免重复两次解压数据。一个针对该问题的补丁被提交到了 LKML（译者注：Linux 内核邮件列表）：[http://lkml.org/lkml/2008/11/22/112](http://lkml.org/lkml/2008/11/22/112)
 
--   [Optimize RC Scripts](../.././dev_portals/Boot_Time/Optimize_RC_Scripts/Optimize_RC_Scripts.md "Optimize RC Scripts") -
-    Reduce overhead of running RC scripts
--   [Parallel RC Scripts](../.././dev_portals/Boot_Time/Parallel_RC_Scripts/Parallel_RC_Scripts.md "Parallel RC Scripts") -
-    Run RC scripts in parallel instead of sequentially
--   [Application XIP](../.././dev_portals/Boot_Time/Application_XIP/Application_XIP.md "Application XIP") - Allow
-    programs and libraries to be executed in-place in ROM or FLASH
--   [Pre Linking](../.././dev_portals/Boot_Time/Pre_Linking/Pre_Linking.md "Pre Linking") - Avoid cost of runtime
-    linking on first program load
--   Statically link applications. This avoids the costs of runtime
-    linking. Useful if you have only a few applications. In that case it
-    could also reduce the size of your image as no dynamic libraries are
-    needed
--   GNU\_HASH: \~ 50% speed improvement in dynamic linking
-    -   See
-        [http://sourceware.org/ml/binutils/2006-06/msg00418.html](http://sourceware.org/ml/binutils/2006-06/msg00418.html)
--   [Application Init
-    Optimizations](../.././dev_portals/Boot_Time/Application_Init_Optimizations/Application_Init_Optimizations.md "Application Init Optimizations")
-    - Improvements in program load and init time via:
-    -   use of mmap vs. read
-    -   control over page mapping characteristics.
--   [Include modules in kernel
-    image](../.././dev_portals/Boot_Time/Include_modules_in_kernel_image/Include_modules_in_kernel_image.md "Include modules in kernel image")
-    - Avoid extra overhead of module loading by adding the modules to
-    the kernel image
--   Speed up module loading - Use Alessio Igor Bogani's kernel patches
-    to improve module loading time by "[Speed up the symbols' resolution
-    process](http://marc.info/?l=linux-embedded&m=130296040620175&w=2%7C)"
-    ([Patch
-    1](http://marc.info/?l=linux-kernel&m=130296044420203&w=2%7C),
-    [Patch
-    2](http://marc.info/?l=linux-embedded&m=130296044420197&w=2%7C),
-    [Patch
-    3](http://marc.info/?l=linux-embedded&m=130296044420200&w=2%7C),
-    [Patch
-    4](http://marc.info/?l=linux-kernel&m=130296062420328&w=2%7C),
-    [Patch
-    5](http://marc.info/?l=linux-embedded&m=130445535913197&w=2%7C)).
--   Avoid udev, it takes quite some time to populate the /dev directory.
-    In an embedded system it is often known what devices are present and
-    in any case you know what drivers are available, so you know what
-    device entries might be needed in /dev. These should be created
-    statically, not dynamically. mknod is your friend, udev is your
-    enemy.
--   If you still like udev and also like fast boot-up's, you might go
-    this way: start your system with udev enabled and make kind of a
-    backup of the created device nodes. Now, modify your init script
-    like this: instead running udev, copy the device nodes that you just
-    made a backup of into the device tree. Now, install the
-    hotplug-daemon like you always do. That trick avoids the device node
-    creation at startup but stills lets your system create device nodes
-    later on.
--   If your device has a network connection, preferably use static IP
-    addresses. Getting an address from a DHCP server takes additional
-    time and has extra overhead associated with it.
--   Moving to a different compiler version might lead to shorter and/or
-    faster code. Most often newer compilers produce better code. You
-    might also want to play with compiler options to see what works
-    best.
--   If possible move from glibc to uClibc. This leads to smaller
-    executables and hence to faster load times.
--   library optimiser tool:
-    [http://libraryopt.sourceforge.net/](http://libraryopt.sourceforge.net/)
+##### 文件系统方面的问题
 
-     This will allow you to create an optimised library. As unneeded
-    functions are removed this should lead to a performance gain.
-    Normally there will be library pages which contain unused code
-    (adjacent to code that is used). After optimizing the library this
-    does not occur any more, so less pages are needed and hence less
-    page loads, so some time can be saved.
--   Function reordering:
-    [http://www.celinux.org/elc08\_presentations/DDLink%20FunctionReorder%2008%2004.pdf](http://www.celinux.org/elc08_presentations/DDLink%20FunctionReorder%2008%2004.pdf)
+对于同样的数据集，不同的文件系统拥有不同的初始化（即挂载，mounting）时间，这取决于元数据（meta-data）是否必须从存储器读到内存并且在挂载过程中使用哪种算法。
 
-     This is a technique to rearrange the functions within an executable
-    so they appear in the order they are needed. This improves the load
-    time of the application as all initialization code is grouped into a
-    set of pages, instead of being scattered over a number of pages.
+-   [文件系统信息](../.././dev_portals/Boot_Time/Filesystem_Information/Filesystem_Information.md "Filesystem Information") - 介绍了各种文件系统启动时间相关的信息
+-   [文件系统](../../dev_portals/File_Systems/File_Systems.md "File Systems") - 嵌入式系统关注的各类文件系统，也包括一些优化建议
+-   [避免使用 Initramfs](../.././dev_portals/Boot_Time/Avoid_Initramfs/Avoid_Initramfs.md "Avoid Initramfs") - 解释了如果想极小化启动时间的话为什么不能使用 initramfs
+-   拆分分区。如果挂载一个文件系统耗费太久，那么可以考虑把一个文件系统拆分成两部分，一部分带有在启动时或者启动后立即需要的信息，而另外一部分可以（延迟到）后面挂载
+-   [Ramdisks 用法澄清](../.././dev_portals/Boot_Time/Ramdisks_demasked/Ramdisks_demasked.md "Ramdisks demasked") - 解释为什么使用 Ramdisk 通常会引起更长的启动时间而不是更短
 
-#### Suspend related improvements
+#### 用户空间和应用程序加速
 
-Another approach to improve boot time is to use a suspend related
-mechanism. Two approaches are known.
+-   [优化 RC 脚本](../.././dev_portals/Boot_Time/Optimize_RC_Scripts/Optimize_RC_Scripts.md "Optimize RC Scripts") - 减少执行 RC 脚本的开销
+-   [并行执行 RC 脚本](../.././dev_portals/Boot_Time/Parallel_RC_Scripts/Parallel_RC_Scripts.md "Parallel RC Scripts") - 以并行而不是串行方式执行 RC 脚本
+-   [就地执行应用程序](../.././dev_portals/Boot_Time/Application_XIP/Application_XIP.md "Application XIP") - 允许程序和库能够在 ROM 和 FLASH 中就地执行
+-   [预链接](../.././dev_portals/Boot_Time/Pre_Linking/Pre_Linking.md "Pre Linking") - 避免在首次加载程序时进行运行时链接
+-   静态链接应用程序。这样可以避免运行时链接。如果应用程序少的话会有用，这样也可以减少镜像文件的大小，因为不需要动态库。
+-   `GNU_HASH`: 在动态链接时有大约 50% 左右的速度改善
+    -  可以看[这里](http://sourceware.org/ml/binutils/2006-06/msg00418.html)
+-   [应用程序初始化优化](../.././dev_portals/Boot_Time/Application_Init_Optimizations/Application_Init_Optimizations.md "Application Init Optimizations") - 通过如下方法优化程序加载和初始化时间：
+    -   使用 mmap vs. read
+    -   采用页映射的特性
+-   [把模块编译到内核镜像中](../.././dev_portals/Boot_Time/Include_modules_in_kernel_image/Include_modules_in_kernel_image.md "Include modules in kernel image")
+    - 通过把模块加到内核镜像中可以避免模块加载的额外开销
+-   加速模块加载 - 使用 Alessio Igor Bogani 的内核补丁来改善模块加载时间："[加速符号定位进程](http://marc.info/?l=linux-embedded&m=130296040620175&w=2%7C)"
+    （[Patch 1](http://marc.info/?l=linux-kernel&m=130296044420203&w=2%7C), [Patch 2](http://marc.info/?l=linux-embedded&m=130296044420197&w=2%7C), [Patch 3](http://marc.info/?l=linux-embedded&m=130296044420200&w=2%7C), [Patch 4](http://marc.info/?l=linux-kernel&m=130296062420328&w=2%7C), [Patch 5](http://marc.info/?l=linux-embedded&m=130445535913197&w=2%7C)）。
+-   避免使用 `udev`，因为它花费相当一部分时间来构建 `/dev` 目录。在嵌入式系统中，通常会事先知道需要哪些设备，在哪些情况下用哪些驱动，所以我们知道在 `/dev` 下，哪些设备入口需要创建，这些应该静态而不是动态创建。所以，`mknod` 是友，`udev` 是敌。
+-   如果你还是喜欢 `udev` 而且也喜欢快速启动，也可以尝试这种方法：在系统启动时开启 `udev` 并备份刚创建的设备节点。接着，修改系统的初始化脚本成这样：不再运行 `udev`，而是把刚备份的设备节点拷贝到 `/dev` 目录中，之后再像往常一样安装热插拔守护进程（即 `udev`）。这个戏法避免了启动时的设备节点创建但是还是可以让系统在之后（按需动态）创建设备节点。
+-   如果设备有连接网络，最好使用静态 IP 地址。通过 DHCP 获取地址会增加时间并产生相应的额外开销。
+-   迁移到不同的编译器版本可以产生更短和更快的代码。通常新编译器产生更优的代码。你也可以玩转各个选项看看哪个最佳。
+-   如果可能，从 glibc 转到 uClibc。这个会产生更小的可执行文件因此会有更快的加载时间。
+-   库优化工具：[http://libraryopt.sourceforge.net/](http://libraryopt.sourceforge.net/)
 
--   Using the standard hibernate/resume approach. This is what has been
-    demonstrated by Chan Ju, Park, from Samsung. See sheet 23 and
-    onwards from this
-    [PPT](http://eLinux.org/images/9/98/LinuxBootupTimeReduction4DSC.ppt "LinuxBootupTimeReduction4DSC.ppt")
-    and section 2.7 of this
-    [paper](http://www.kernel.org/doc/ols/2006/ols2006v2-pages-239-248.pdf).
+    该工具允许创建优化的库。不需要的函数会被移除因此而获得更好性能。正常情况下，有些库所占用的内存页面包含不会用到的代码（临近用到的代码），经过优化后，这种情况不会再发生，所以可以花更少的内存页面因此会有更少的内存加载，结果一些时间就会省掉。
 
-     Issue with this approach is that flash write is much slower than
-    flash read, so the actual creation of the hibernate image might take
-    quite a while.
--   Implementing snapshot boot. This is done by Hiroki Kaminaga from
-    Sony and is described at [snapshot boot for
-    ARM](../.././dev_portals/Boot_Time/Suspend_To_Disk_For_ARM/Suspend_To_Disk_For_ARM.md "Suspend To Disk For ARM") and
-    [http://elinux.org/upload/3/37/Snapshot-boot-final.pdf](http://elinux.org/upload/3/37/Snapshot-boot-final.pdf)
-    This is similar to hibernate and resume, but the hibernate file is
-    retained and used upon every boot. Disadvantage is that no writable
-    partitions should be mounted at the time of making the snapshot.
-    Otherwise inconsistencies will occur if a partition is modified,
-    while applications in the hibernate file might have information in
-    the snapshot related to the unmodified partition.
+-   [函数重排](http://www.celinux.org/elc08_presentations/DDLink%20FunctionReorder%2008%2004.pdf)
 
-#### Miscellaneous topics
+    这是一种技术，用于重排可执行文件中的函数，确保它们根据需要依次出现。它可以改善应用程序加载的时间，因为所有的初始化代码被打包成一组页面，而不是离散成多个不同的页面。
 
-[About Compression](../.././dev_portals/Boot_Time/About_Compression/About_Compression.md "About Compression") discusses
-the effects of compression on boot time. This can affect both the kernel
-boot time as well as user-space startup.
+#### 系统休眠相关的改进
 
-#### Uninvestigated speedups
+另外一个改善启动时间的途径是利用休眠相关的机制。已知的两种方案是：
 
-This section is a holding pen for ideas for improvement that are not
-implemented yet but that could result in a boot time gain. Please leave
-a note here if you are working on one of these items to avoid duplicate
-work.
+-   使用标准的休眠/唤醒方案。这个已经由来自三星的 Chan Ju, Park 演示过。看以下表格 23 以及之后的内容：[PPT](http://eLinux.org/images/9/98/LinuxBootupTimeReduction4DSC.ppt "LinuxBootupTimeReduction4DSC.ppt")
+    以及这篇[论文](http://www.kernel.org/doc/ols/2006/ols2006v2-pages-239-248.pdf) 的第 2.7 节。
 
--   **Prepopulated buffer cache** - As initramfs performs an additional
-    copy of the data the idea is to have a prepopulated buffer cache. A
-    simplistic scenario would allow dumping the buffer cache when the
-    booting is completed and the user applications have initialised.
-    This data then could be used in a subsequent boot to initialize the
-    buffer cache (of course without copying). A possible approach would
-    be to have those data to reside into the kernel image and use them
-    directly. Alternately they could be loaded separately.
-     Unfortunately my knowledge of the internals in this section is not
-    yet good enough to do a trial implementation.
-     Caveats:
-    -   is it possible to have the buffer cache split into two different
-        parts, one which is statically allocated, one which is
-        dynamically allocated?
-    -   the pages in the prepopulated buffer cache probably cannot be
-        discarded, so they should be pinned
-    -   apart from the buffer cache data itself also some other
-        variables might need restoring
-    -   a similar approach could also be used for the cached file data.
--   **Dedicated fs** - currently a lot of abstraction is done in fs to
-    make a nice abstraction allowing easy addition of new filesystems
-    and creating a unified view of those filesystem. While this is
-    pretty neat, the abstraction layers also introduce some overhead. A
-    solution could be to create a dedicated fs system, which supports
-    only one (or maybe 2) filesystems, and eliminates the abstraction
-    overhead. This will give some benefit, but the chance of getting
-    this into the mainline is zero.
+    该方法的一个问题是闪存写比闪存读慢很多，所以实际上创建一个休眠镜像可能消耗相当长的一段时间。
 
-## Articles and Presentations
+-   实现快照启动。这个由 Sony 的 Hiroki Kaminaga 完成并且描述在 [ARM 快照启动](../.././dev_portals/Boot_Time/Suspend_To_Disk_For_ARM/Suspend_To_Disk_For_ARM.md "Suspend To Disk For ARM") 和 [Snapshot-boot-final.pdf](http://elinux.org/upload/3/37/Snapshot-boot-final.pdf)
 
--   [Embedded Linux boot time reduction workshop
-    materials](http://free-electrons.com/doc/training/boot-time/)
-    -   By Free Electrons
-    -   Presentation on boot time reduction techniques - Practical labs
-        on Atmel SAMA5 hardware.
--   "Boot Time Optimizations" -
-    ([Slides](http://elinux.org/images/d/d1/Alexandre_Belloni_boottime_optimizations.pdf)
-    |
-    [Video](http://free-electrons.com/pub/video/2012/elce/elce-2012-belloni-boot-time-optimizations.webm))
-    -   Alexandre Belloni has presented at ELC Europe on Nov 6, 2012
-    -   [Main link at
-        Free-Electrons](http://free-electrons.com/blog/elce-2012-videos/)
--   "The Right Approach to Boot Time Reduction" -
-    ([Slides](http://elinux.org/images/f/f7/RightApproachMinimalBootTimes.pdf)
-    | [YouTube Video](http://www.youtube.com/watch?v=ULa4TPy7z0c))
-    -   Andrew Murray has presented at ELC Europe on October 28, 2010
-        (Free Electrons video
-        [here](http://free-electrons.com/pub/video/2010/elce/elce2010-murray-boot-time.webm))
-    -   This included a \< 1 second QT cold Linux boot case study for an
-        SH7724 with some additional information about 'function
-        re-ordering' in user-space
-    -   Similar slides with \< 1 second case study for OMAP3530EVM can
-        be found
-        [here](http://www.slideshare.net/andrewmurraympc/t-iswift-boot)
--   "One Second Linux Boot Demonstration (new version)" ([Youtube video
-    by MontaVista](http://www.youtube.com/watch?v=-l_DSZe8_F8))
--   "Tools and Techniques for Reducing Bootup Time"
-    ([PPT](http://eLinux.org/images/9/98/Tools-and-technique-for-reducing-bootup-time.ppt "Tools-and-technique-for-reducing-bootup-time.ppt")
-    |
-    [ODP](http://eLinux.org/images/4/40/Tools-and-technique-for-reducing-bootup-time.odp "Tools-and-technique-for-reducing-bootup-time.odp")
-    |
-    [PDF](http://eLinux.org/images/d/d2/Tools-and-technique-for-reducing-bootup-time.pdf "Tools-and-technique-for-reducing-bootup-time.pdf")
-    |
-    [video](http://free-electrons.com/pub/video/2008/elce/elce2008-bird-reducing-bootup-time.ogv))
-    -   Tim Bird has presented at ELC Europe, on November 7, 2008, his
-        latest collection of tips and tricks for reducing bootup time
-    -   [Tims Fastboot
-        Tools](../.././dev_portals/Boot_Time/Tims_Fastboot_Tools/Tims_Fastboot_Tools.md "Tims Fastboot Tools") has online
-        materials in support of this presentation
--   [Christopher
-    Hallinan](http://www.mvista.com/download/author.php?a=37) has done a
-    presentation at the MontaVista Vision conference 2008 on the topic
-    of reducing boot time. Slides available
-    [here](http://www.mvista.com/download/power/Reducing-boot-time-techniques-for-fast-booting.pdf)
--   [Optimizing Linker Load Times](http://lwn.net/Articles/192082/)
-    -   (introducing various kinds of bootuptime reduction, prelinking,
-        etc.)
--   [Benchmarking boot latency on
-    x86](http://www.linuxfordevices.com/c/a/Linux-For-Devices-Articles/Benchmarking-boot-latency-on-x86/)
-    -   By Gilad Ben-Yossef, July 2008
-    -   A tutorial on using TSC register and the kernel PRINTK\_TIMES
-        feature to measure x86 system boot time, including BIOS,
-        bootloader, kernel and time to first user program.
--   [Fast Booting of Embedded
-    Linux](http://tree.celinuxforum.org/CelfPubWiki/KoreaTechJamboree3?action=AttachFile&do=get&target=The_Fast_Booting_of_Embedded_Linux.pdf)
-    -   By HoJoon Park, Electrons and Telecommunications Research
-        Institute (ETRI), Korea, Presented at the CELF [3rd Korean
-        Technical
-        Jamboree](http://tree.celinuxforum.org/CelfPubWiki/KoreaTechJamboree3),
-        July 2008
-    -   Explains several different reduction techniques used for
-        different phases of bootup time
--   Tim Bird's (Sony) survey of boot-up time reduction techniques:
-    -   [Methods to Improve Boot-up Time in
-        Linux](http://kernel.org/doc/ols/2004/ols2004v1-pages-79-88.pdf)
-        - Paper prepared for 2004 Ottawa Linux Symposium
-    -   [http://elinux.org/images//8/83/Pdf.gif](http://elinux.org/images//8/83/Pdf.gif)
-        [Reducing Startup Time in Embedded Linux
-        Systems](http://eLinux.org/images/7/78/ReducingStartupTime_v0.8.pdf "ReducingStartupTime v0.8.pdf")
-        [http://elinux.org/images/d/da/Info\_circle.png](http://elinux.org/File:ReducingStartupTime_v0.8.pdf)
-        - December 2003 Presentation describing some existing boot-up
-        time reduction techniques and strategies.
--   Parallelizing Linux Boot on CE Devices
-    -   [PDF of
-        Presentation](http://tree.celinuxforum.org/CelfPubWiki/ELCEurope2007Presentations?action=AttachFile&do=view&target=par.pdf)
-    -   [Video of
-        Presentation](http://free-electrons.com/pub/video/2007/elce/elce-2007-vitaly-wool-parallel-boot.ogg)
--   [Parallelize Applications for Faster Linux
-    Boot](http://www.ibm.com/developerworks/linux/library/l-boot-faster/)
-    -   Authored by M. Tim Jones for IBM Developer Works
-    -   This article shows you options to increase the speed with which
-        Linux boots, including two options for parallelizing the
-        initialization process. It also shows you how to visualize
-        graphically the performance of the boot process.
--   [Android Boot Time
-    Optimization](http://www.slideshare.net/kanru/android-boot-time-optimization)
-    -   Authored by Kan-Ru Chen, [0xlab](http://0xlab.org/)
-    -   This presentation covers Android boot time measurement and
-        analysis, the proposed reduction approaches, hibernation-based
-        technologies, and potential Android user-space optimizations.
--   Texas Instruments Embedded Processors Wiki provides the procedure to
-    optimize Linux/Android boot time:
-    -   [Optimize Linux Boot
-        Time](http://processors.wiki.ti.com/index.php/Optimize_Linux_Boot_Time)
-    -   [Android Boot Time
-        Optimization](http://processors.wiki.ti.com/index.php/Android_Boot_Time_Optimization)
--   [Implement Checkpointing for
-    Android](http://www.slideshare.net/jserv/implement-checkpointing-for-android-elce2012)
-    -   Authored by Kito Cheng and Jim Huang, [0xlab](http://0xlab.org/)
-    -   Reasons to Implement Checkpointing for Android
-        -   Resume to stored state for faster Android boot time
-        -   Better product field trial experience due to regular
-            checkpointing
+    这个类似上述休眠/唤醒方案。但是休眠文件被保留并且在每次启动时使用。缺点是在制作快照时不可以挂载可写分区，否则当分区被修改，而休眠文件中的应用在映像中有未修改分区有关的信息时，就会产生不一致性。
 
-### Case Studies
+#### 杂项
 
--   [300 milliseconds from boot loader to shell on ARM with
-    NAND](http://www.makelinux.com/emb/fastboot/omap)
--   Samsung proof-of-acceptability study for digital still camera: see
-    [Boot Up Time Reduction
-    PPT](http://eLinux.org/images/9/98/LinuxBootupTimeReduction4DSC.ppt "LinuxBootupTimeReduction4DSC.ppt")
-    and the
-    [paper](http://www.kernel.org/doc/ols/2006/ols2006v2-pages-239-248.pdf)
-    describing this.
--   [Boot Linux from Processor Reset into user space in less than 1
-    Second](https://docs.blackfin.uclinux.org/doku.php?id=fast_boot_example)
-    -   In this white paper, Robin Getz describes the techniques used to
-        fast-boot a blackfin development board.
--   [Booting Linux dm365 Network Camera in 3.2
-    seconds](http://e2e.ti.com/support/embedded/f/354/t/51158.aspx)
--   [Boot of kernel and shell in 0.5 sec (not including u-boot and
-    decompression)](http://e2e.ti.com/support/dsp/davinci_digital_media_processors/f/100/p/7616/30088.aspx)
+[关于压缩](../.././dev_portals/Boot_Time/About_Compression/About_Compression.md "About Compression") 一文讨论了压缩技术在启动时间优化方面的效果。这个能够影响内核与用户空间两者的启动时间。
 
--   [Warp2, Lineo Solutions, 2008. 2.97 sec boot, ARM11,
-    400MHz](http://www.linuxfordevices.com/c/a/News/Linux-boots-in-297-seconds/)
+#### 一些未经验证的想法
 
-## Additional Projects/Mailing Lists/Resources
+该节只是对没来得及实现但可能利于启动优化的一些想法做一个记录。
 
-### Replacements for SysV 'init'
+-   **预填充的缓冲区高速缓存** - 因为 initramfs 执行了额外的数据拷贝，所以想法是可以有一个预填充的缓冲区高速缓存。一种简单的场景是当启动完成并且应用初始化完了以后，就允许把缓冲区高速缓存转存出来。然后这个数据可以在后续的启动中用于初始化缓冲区高速缓存（当然不需要拷贝了）。一种可能的方法是把这些数据直接打包到内核镜像中并直接使用，当然也可以选择分开加载。不幸地是，我现在具有的这块知识不足以做一个简单的实现。注意事项：
+    -   是否可能把缓冲区高速缓存拆分成两个不同的部分，一个静态分配，另外一个动态分配？
+    -   预填充的缓冲区高速缓存的内存页可能不能丢弃，所以他们需要被固定保护起来。
+    -   除了缓冲区高速缓存数据外，一些其他的变量也可能需要保存
+    -   类似的方法对于文件数据缓存也可能有效
 
-The traditional method of starting a Linux system is to use /sbin/init,
-which processes the file /etc/inittab. This is an init program which
-processes a series of actions for different run-levels and system events
-(key-combinations and power events).
 
-See [the init(8) man page](http://linux.die.net/man/8/init) and the [the
-inittab(5) man page](http://linux.die.net/man/5/inittab).
+-   **专用文件系统** - 当前的文件系统中有大量的抽象，这些抽象方便了新文件系统的添加并且为所有文件系统创建了统一视图。无疑这个很漂亮整洁，但是这些抽象层也引入了一些开销。一种解决方案或许是创建一个专有的文件系统，只支持 1 (或者 2）种文件系统，从而可以消除抽象带来的开销。这或许会有用，不过合并到主线的几率为 0 。
+
+## 文章和演讲稿
+
+-   [嵌入式 Linux 启动时间优化研讨会材料](http://free-electrons.com/doc/training/boot-time/)
+    -   由 Free Electrons 提供
+    -   一则关于启动时间优化技术的演讲稿 - Atmel SAMA5 硬件上的实际实验情况
+
+-   "启动时间优化" - （[幻灯](http://elinux.org/images/d/d1/Alexandre_Belloni_boottime_optimizations.pdf) | [视频](http://free-electrons.com/pub/video/2012/elce/elce-2012-belloni-boot-time-optimizations.webm)）
+    -   Alexandre Belloni 于 2012 年 11 月 6 日 在 ELC Europe 上做的报告
+    -   [Free-Electrons 上的入口](http://free-electrons.com/blog/elce-2012-videos/)
+
+
+-   "减少启动时间的正确途径" - （[幻灯](http://elinux.org/images/f/f7/RightApproachMinimalBootTimes.pdf)  | [YouTube 视频](http://www.youtube.com/watch?v=ULa4TPy7z0c)）
+    -   Andrew Murray 于 2010 年 10 月 28 日 在 ELC Europe 上做的报告 (Free-Electrons 提供的视频在[这里](http://free-electrons.com/pub/video/2010/elce/elce2010-murray-boot-time.webm)）
+    -   这个包含一个 1 秒钟的针对 SH7724 的 QT Linux 冷启案例研究，也有用户空间 `函数重排` 的信息
+    -   类似的幻灯片，关于 1 秒钟针对 OMAP3530EVM 的案例研究，可以从[这里](http://www.slideshare.net/andrewmurraympc/t-iswift-boot) 找到。
+-   "1 秒钟的 Linux 启动演示（新版）" ([Youtube 视频（来自MontaVista）](http://www.youtube.com/watch?v=-l_DSZe8_F8))
+-   "用于减少启动时间的工具和技巧" - （[幻灯](http://eLinux.org/images/9/98/Tools-and-technique-for-reducing-bootup-time.ppt "Tools-and-technique-for-reducing-bootup-time.ppt") | [ODP](http://eLinux.org/images/4/40/Tools-and-technique-for-reducing-bootup-time.odp "Tools-and-technique-for-reducing-bootup-time.odp") | [PDF](http://eLinux.org/images/d/d2/Tools-and-technique-for-reducing-bootup-time.pdf "Tools-and-technique-for-reducing-bootup-time.pdf") | [视频](http://free-electrons.com/pub/video/2008/elce/elce2008-bird-reducing-bootup-time.ogv)）
+    -   Tim Bird 于 2008 年 11 月 7 日 在 ELC Europe 报告，展示了他当时收集的一些减少启动时间的技巧
+    -   [Tims 开发的快速启动工具](../.././dev_portals/Boot_Time/Tims_Fastboot_Tools/Tims_Fastboot_Tools.md "Tims Fastboot Tools") 提供了一些关于该报告的在线材料
+
+
+-   [Christopher Hallinan](http://www.mvista.com/download/author.php?a=37) 于 2008 年在 MontaVista 视讯会议上做了一个关于如何减少启动时间的报告，幻灯在[这里](http://www.mvista.com/download/power/Reducing-boot-time-techniques-for-fast-booting.pdf)
+-   [优化链接器加载时间](http://lwn.net/Articles/192082/)
+    -   (介绍各类启动时间优化、预链接等)
+
+-   [X86 上的启动延迟基准测试](http://www.linuxfordevices.com/c/a/Linux-For-Devices-Articles/Benchmarking-boot-latency-on-x86/)
+    -   由 Gilad Ben-Yossef 于 2008 年 7 月完成
+    -   一份教程，关于如何使用 TSC 寄存器和内核的 `PRINTK_TIMES` 特性来测量 x86 系统启动时间，包括 BIOS、引导程序、内核以及第一个用户程序。
+
+-   [嵌入式 Linux 的快速启动](http://tree.celinuxforum.org/CelfPubWiki/KoreaTechJamboree3?action=AttachFile&do=get&target=The_Fast_Booting_of_Embedded_Linux.pdf)
+    -   来自韩国 ETRI 的 HoJoon Park 于 2008 年 7 月 在 CELF [3rd Korean Technical Jamboree](http://tree.celinuxforum.org/CelfPubWiki/KoreaTechJamboree3) 做的报告。
+    -   解释了用于减少不同阶段启动时间的不同技术
+
+-   Tim Bird 做的关于启动时间优化技术的调查：
+    -   [用于优化 Linux 启动时间的方法](http://kernel.org/doc/ols/2004/ols2004v1-pages-79-88.pdf)
+        - 为 2004 年 Ottawa Linux 专题研讨会准备的论文
+    -  [减少嵌入式 Linux 系统的启动时间](http://eLinux.org/images/7/78/ReducingStartupTime_v0.8.pdf "ReducingStartupTime v0.8.pdf")
+        - 2003 年 11 月的报告，描述了一些存在的启动时间优化技术和策略
+
+-   在消费电子设备上并行化 Linux 启动 - （[PDF](http://tree.celinuxforum.org/CelfPubWiki/ELCEurope2007Presentations?action=AttachFile&do=view&target=par.pdf) | [视频](http://free-electrons.com/pub/video/2007/elce/elce-2007-vitaly-wool-parallel-boot.ogg)）
+
+-   [通过应用并行来获得更快的 Linux 启动速度](http://www.ibm.com/developerworks/linux/library/l-boot-faster/)
+    -   由来自 IBM Developer Works 的 M. Tim Jones 撰写
+    -   该文展示了一些用于提高 Linux 启动速度的选项，包括两个用于并行初始化过程的方法，也展示了如何用图形可视化启动过程的性能数据。
+
+-   [Android 启动时间优化](http://www.slideshare.net/kanru/android-boot-time-optimization)
+    -   由来自 [0xlab](http://0xlab.org/) 的 Kan-Ru Chen 撰写
+    -   该报告涵盖了 Android 启动时间测量、分析、以及提出的一些优化方法、基于休眠的优化技术以及一些潜在的 Andriod 用户空间优化技术。
+
+-   TI 嵌入式处理器的维基也提供了信息，描述了 Linux/Android 启动时间的优化过程
+    -   [Linux 启动时间优化](http://processors.wiki.ti.com/index.php/Optimize_Linux_Boot_Time)
+    -   [Android 启动时间优化](http://processors.wiki.ti.com/index.php/Android_Boot_Time_Optimization)
+
+-   [实现 Android 的检查点技术（Checkpointing）](http://www.slideshare.net/jserv/implement-checkpointing-for-android-elce2012)
+    -   由 [0xlab](http://0xlab.org/) 的 Kito Cheng 和 Jim Huang 撰写
+    -   实现 Android 检查点技术（Checkpointing）的原因
+        -   恢复到事先存储的状态可以获得更快的 Android 启动时间
+        -   基于定期检查点技术可以获得更好的产品试用体验
+
+### 案例研究
+
+-   [在用 NAND 的 ARM 机器上做到从引导程序启动到 Shell 只花 300 ms](http://www.makelinux.com/emb/fastboot/omap)
+-   三星的关于数码照相机的可接受度证明（Proof-Of-Acceptability）研究，看这里：[启动时间优化 PPT](http://eLinux.org/images/9/98/LinuxBootupTimeReduction4DSC.ppt "LinuxBootupTimeReduction4DSC.ppt") 和 [论文](http://www.kernel.org/doc/ols/2006/ols2006v2-pages-239-248.pdf)
+-   [1 秒内把 Linux 从关机状态启动到用户空间](https://docs.blackfin.uclinux.org/doku.php?id=fast_boot_example)
+    -   在该文中，Robin Getz 描述了用于加速 blackfin 开发板的技术
+-   [在 3.2 秒内启动 Linux dm365 网络照相机](http://e2e.ti.com/support/embedded/f/354/t/51158.aspx)
+-   [在 0.5 秒内启动内核和 Shell (不包括 U-boot 和解压)](http://e2e.ti.com/support/dsp/davinci_digital_media_processors/f/100/p/7616/30088.aspx)
+-   [Warp2, Lineo Solutions, 2008年，2.97 秒启动, ARM11, 400MHz](http://www.linuxfordevices.com/c/a/News/Linux-boots-in-297-seconds/)
+
+## 其他的项目/邮件列表/资源
+
+### SysV 'init' 的替代品
+
+启动 Linux 系统的传统方法是用 `/sbin/init`，它是一个初始化程序，负责解析 `/etc/inittab`，并能够针对不同的运行级别和系统事件（各类按键组合和电源事件）产生一系列动作。
+
+可查看 [init(8) 手册页](http://linux.die.net/man/8/init) 和 [inittab(5) 首页页](http://linux.die.net/man/5/inittab) 获取更多信息。
 
 #### busybox init
 
-An 'init' applet is often included in [BusyBox](../.././dev_portals/Boot_Time/BusyBox/BusyBox.md "BusyBox")
 
-There used to be (as of 2000) some slight differences in the supported
-features of the 'inittab' file between busybox init and full-blown init.
-However, I don't know (as of 2010) if that's still the case. (See
-[http://spblinux.de/2.0/doc/init.html](http://spblinux.de/2.0/doc/init.html)
-for some details)
+[BusyBox](../.././dev_portals/Boot_Time/BusyBox/BusyBox.md "BusyBox") 通常包含一个 `init` 小程序。
 
-Denys Vlasenko, one of the maintainers of busybox has suggested a
-replacement for traditional init for that tool called runsv. See
-[http://busybox.net/\~vda/init\_vs\_runsv.html](http://busybox.net/~vda/init_vs_runsv.html)
+截止 2000 年，Busybox init 和全功能的 init 之间，`inittab` 支持的特性稍微有些差异。但是不知道到 2010 以后（译者注：现在都 2015 年了，看来这个文章真地有点老了，后面有时间很多材料得好好整理下），情况是否依旧。可以从[这里](http://spblinux.de/2.0/doc/init.html)看到一些细节。
+
+Denys Vlasenko, Busybox 的维护人员之一，曾经建议用名叫 `runsv` 的工具替换掉传统的 `init`，可以看下[这里](http://busybox.net/~vda/init_vs_runsv.html)。
 
 #### upstart
 
-upstart is the name of a newer Linux desktop systems that provides the
-program /sbin/init, but with different operational semantics.
+`upstart` 是一个新的 Linux 桌面工具，它提供了 `/sbin/init`，但是实现了不同的操作语义：
 
--   Home page: [http://upstart.ubuntu.com/](http://upstart.ubuntu.com/)
--   Wikipedia page:
-    [http://en.wikipedia.org/wiki/Upstart](http://en.wikipedia.org/wiki/Upstart)
+-   首页：[http://upstart.ubuntu.com/](http://upstart.ubuntu.com/)
+-   维基百科地址：[http://en.wikipedia.org/wiki/Upstart](http://en.wikipedia.org/wiki/Upstart)
 
 #### Android init
 
-Android 'init' is a custom program for booting the Android system.
-
-See [Android 'init'](http://eLinux.org/Android_Booting#.27init.27 "Android Booting")
+Android `init` 是专门为启动 Andriod 系统而定制的程序，看[这里](http://eLinux.org/Android_Booting#.27init.27 "Android Booting")。
 
 #### systemd
 
-systemd is a new project (as of May 2010) for starting daemons and
-services on a Linux desktop system
-
-See
-[http://0pointer.de/blog/projects/systemd.html](http://0pointer.de/blog/projects/systemd.html)
+systemd 是一个新的项目 (就当时 2010 年 5 月而言)，用于在 Linux 桌面系统中启动守护进程和服务，可以看看[这里](http://0pointer.de/blog/projects/systemd.html)。
 
 ### Kexec
 
--   Kexec is a system which allows a system to be **rebooted** without
-    going through BIOS. That is, a Linux kernel can directly boot into
-    another Linux kernel, without going through firmware. See the white
-    paper at:
-    [kexec.pdf](http://developer.osdl.org/andyp/kexec/whitepaper/kexec.pdf)
-    -   2004 Kernel Summit presentation:
-        [fastboot.pdf](http://www.xenotime.net/linux/fastboot/fastboot-ks-2004.pdf)
-    -   here's another Kexec white paper:[Reboot
-        Fast](http://www-106.ibm.com/developerworks/linux/library/l-kexec.html?ca=dgr-lnxw04)
+-   Kexec 允许系统不经 BIOS 重启（注：与通常的重启不同）。也就是说，一个 Linux 内核可以无需进入引导固件就能直接启动另外一个 Linux 内核，白皮书在[kexec.pdf](http://developer.osdl.org/andyp/kexec/whitepaper/kexec.pdf)。
+    -   2004 年内核峰会上的报告：[fastboot.pdf](http://www.xenotime.net/linux/fastboot/fastboot-ks-2004.pdf)
+    -   这里是另外一篇文章：[使用 kexec 快速重启 Linux](http://www.ibm.com/developerworks/cn/linux/l-kexec/index.html)
 
-### Splash Screen projects
+### 启动画面（Splash Screen）项目
 
--   [Splashy](http://splashy.alioth.debian.org/wiki/) - Technology to
-    put up a splash screen early in the boot sequence. This is
-    user-space code.
-    -   This seems to be the most current splash screen technology, for
-        major distributions. A framebuffer driver for the kernel is
-        required.
--   [Gentoo
-    Splashscreen](http://dev.gentoo.org/~spock/projects/gensplash/) -
-    newer technology to put a splash screen early in the boot sequence
-    -   See the HOWTO at: [HOWTO
-        FBSplash](http://gentoo-wiki.com/HOWTO_fbsplash)
--   [PSplash](http://butterfeet.org/?p=8) - PSplash is a userspace
-    graphical boot splash screen for mainly embedded Linux devices
-    supporting a 16bpp or 32bpp framebuffer.
--   [bootsplash.org](http://www.bootsplash.org/) - put up a splash
-    screen early in boot sequence
-    -   This project requires kernel patches
-    -   This project is now abandoned, and work is being done on
-        Splashy.
+-   [Splashy](http://splashy.alioth.debian.org/wiki/) - 一种在启动过程的早期阶段放置启动画面的技术，这个是用户空间代码。
+    -   这个貌似是最新的启动画面技术，为主流发行版所用。为了支持该技术，需要在内核中添加一个 Framebuffer 驱动。
+-   [Gentoo Splashscreen](http://dev.gentoo.org/~spock/projects/gensplash/) - 一种在启动过程早期放置启动画面的新技术
+    -   可以查看 HOWTO 文档：[HOWTO FBSplash](http://gentoo-wiki.com/HOWTO_fbsplash)
+-   [PSplash](http://butterfeet.org/?p=8) - PSplash 是一种用户空间的图形化引导启动画面，主要针对嵌入式 Linux 设备，支持 16bpp 或者 32bpp 的帧缓冲。
+-   [bootsplash.org](http://www.bootsplash.org/) - 也可以在在启动过程早期放置一个启动动画
+    -   该项目需要相应的内核补丁
+    -   该项目目前已经被遗弃了，相关工作被移到了 Splashy 上
 
-### Others
+### 其他
 
--   [FSMLabs
-    Fastboot](http://www.linuxdevices.com/news/NS5907201615.html) -
-    press release by FSMLabs about fast booting of their product. Is any
-    of this published?
+-   [FSMLabs 快速启动](http://www.linuxdevices.com/news/NS5907201615.html) - FSMLabs 提供的新闻稿，介绍了它们产品的快速启动，不确定相关代码是否开放？
+-   [基于快照启动](http://tree.celinuxforum.org/CelfPubWiki/) - 一种用软件唤醒来快速启动系统的技术
 
--   [snapshot boot](http://tree.celinuxforum.org/CelfPubWiki/) - a
-    technology uses software resume to boot up the system quickly.
-
-#### Apparently obsolete or abandoned material
-
--   [![Alert.gif](http://eLinux.org/images/e/e7/Alert.gif)](http://eLinux.org/File:Alert.gif) *in
-    progress* - [Boot-up Time Reduction
-    Howto](../.././dev_portals/Boot_Time/Boot-up_Time_Reduction_Howto/Boot-up_Time_Reduction_Howto.md "Boot-up Time Reduction Howto")
-    - this is a project to catalog existing boot-up time reduction
-    techniques.
-    -   Was originally intended to be the authoritative source for
-        bootup time reduction information.
-    -   No one maintains it any more (as of Aug, 2008)
--   [![Alert.gif](http://eLinux.org/images/e/e7/Alert.gif)](http://eLinux.org/File:Alert.gif)*no content
-    yet* - [Boot-up Time Delay
-    Taxonomy](../.././dev_portals/Boot_Time/Boot-up_Time_Delay_Taxonomy/Boot-up_Time_Delay_Taxonomy.md "Boot-up Time Delay Taxonomy")
-    - list of delays categorized by boot phase, type and magnitude
-    -   Was to be a survey of common bootup delays found in embedded
-        devices.
-    -   Was never really written.
-
-???
-
--   [Bootup Time Spec](../.././dev_portals/Boot_Time/Bootup_Time_Spec/Bootup_Time_Spec.md "Bootup Time Spec")
--   [Bootup Time Things To
-    Investigate](../.././dev_portals/Boot_Time/Bootup_Time_Things_To_Investigate/Bootup_Time_Things_To_Investigate.md "Bootup Time Things To Investigate")
--   [Bootup Time Working
-    Group](../.././dev_portals/Boot_Time/Bootup_Time_Working_Group/Bootup_Time_Working_Group.md "Bootup Time Working Group")
--   [Bootup Time Task
-    List](../.././dev_portals/Boot_Time/Bootup_Time_Task_List/Bootup_Time_Task_List.md "Bootup Time Task List")
--   [Bootup Time Howto Task
-    List](../.././dev_portals/Boot_Time/Bootup_Time_Howto_Task_List/Bootup_Time_Howto_Task_List.md "Bootup Time Howto Task List")
--   [Fast Booting
-    Translation](../.././dev_portals/Boot_Time/Fast_Booting_Translation/Fast_Booting_Translation.md "Fast Booting Translation")
-
-## Companies, individuals or projects working on fast booting
+## 正在从事快速启动的公司、个人或者项目
 
 -   Intel - Arjan van de Ven - see
     [http://lwn.net/Articles/299483/](http://lwn.net/Articles/299483/)
@@ -612,119 +297,59 @@ See
     [http://www.linuxdevices.com/news/NS5185504436.html](http://www.linuxdevices.com/news/NS5185504436.html)
 -   Monta Vista - see
     [http://www.linuxdevices.com/news/NS2560585344.html](http://www.linuxdevices.com/news/NS2560585344.html)
--   fastboot git tree - see
+-   fastboot Git 仓库 - see
     [http://lwn.net/Articles/299591/](http://lwn.net/Articles/299591/)
 -   MPC Data SwiftBoot services -
     [http://www.swiftboot.com/](http://www.swiftboot.com/)
 -   Free Electrons -
     [http://free-electrons.com/services/boot-time/](http://free-electrons.com/services/boot-time/)
 
-## Boot time check list
+## 启动时间检查清单
 
-From an [August 2009 discussion about boot time on ARM
-devices](http://www.mail-archive.com/linux-embedded@vger.kernel.org/msg02139.html),
-several hints and advice regarding boot time optimization are available.
-While it may repeat a lot of above, below is a check list extracted from
-this discussion:
+可以从[2009 年 8 月的一个关于 ARM 设备上启动时间的讨论](http://www.mail-archive.com/linux-embedded@vger.kernel.org/msg02139.html) 一文中找到一些事关启动时间优化的提示和建议。
 
--   Is CPU's clock switched to maximum? If the kernel, bootloader or
-    hardware is in charge of setting CPU power and speed scaling, then
-    you should check that it boots with the CPU set at maximum speed
-    instead of slowest.
+虽然可能会重复本文中已经介绍的内容，但是咱们还是从上述讨论中提取了一个检查清单（注：可以方便启动优化时做检查）：
 
--   Is your hardware (register) timing configuration of your SoC's
-    memory interfaces (e.g. RAM and NOR/NAND timing) optimized? A lot of
-    vendors ship their hardware with "well, it works, optimize later"
-    settings. What you want is "as fast as possible, but sill stable and
-    reliable" configuration. This might need some hardware knowledge and
-    has to be customized to the individual memory devices used.
+-   CPU 时钟频率切到最大了吗？如果内核、引导程序或者硬件负责设置 CPU 功率和速度，那么我们得确保各 CPU 用最大速度而不是最低速度启动。
 
--   Does your boot loader uses I- and D-Cache? E.g. U-Boot doesn't
-    enable D-Cache by default on ARM devices, as it needs customized MMU
-    tables to do so.
+-   SOC 上的内存接口硬件（寄存器）的定时配置（例如 RAM 和 NOR/NAND 定时）优化过吗？许多供应商卖硬件时采用保守的设置：“好吧，工作了，以后再优化”。我们想要的配置是：“尽可能地快，但是还得稳定且可靠”。这部分可能需要一些硬件知识并且必须为不同内存设备做不同配置（注：不同内存设备特性不一样，比如说工作频率会有差异）。
 
--   Does kernel copy from permanent storage (e.g. NOR or NAND) to RAM
-    use optimized functions? E.g. DMA, or on ARM at least load/store
-    multiple commands (ldm/stm)?
+-   我们的引导程序用了指令和数据缓存吗？例如 U-Boot 在 ARM 设备上默认没有使能数据缓存，因为要使能数据缓存，需要额外定制 MMU 表。
 
--   If you use U-Boot's uImage, set "verify=no" in U-Boot to avoid
-    checksum verification.
+-   内核从存储设备（例如 NOR 或者 NAND）拷贝到内存中使用了优化过的方法吗？比如 DMA 或者是 ARM 上至少得用上 `load/store multiple` 命令（ldm/stm）？
 
--   Optimize size of your kernel.
-    -   You might even try some of the embedded system kernel config
-        options that, for example, eliminate all the printk strings,
-        reduce data structures, or eliminate unneeded functionality.
+-   如果用 U-boot 的 uImage，在启动参数中设置 `verify=no` 可以避免校验码验证。
 
--   How often is kernel (image) data copied? First by boot loader from
-    storage to RAM, then by kernel's uncompressor to it's final
-    destination? Once more? If you use compressed kernel and NOR flash,
-    consider running the uncompressor XIP in NOR flash.
+-   优化内核的尺寸
+    -   可以尝试一些针对嵌入式系统的内核配置选项，例如，消除所有的 printk 字符串，减少数据结构或者消除不需要的功能。
 
--   If you use compressed kernel, check compression algorithm. zlib is
-    slow on decompression, and lzo is much faster. So if you implement
-    lzo compression, you'll probably speed things up a little as well
-    (check LKML for this). Having no compression at all may also be a
-    good thing to try (see next topic).
+-   拷贝了几次内核镜像数据？第一次由引导程序从存储设备拷到内存，然后内核的解压程序负责解压到最终的位置？如果使用压缩了的内核和 NOR 闪存，可以考虑在 NOR 闪存中就地执行解压器。
 
--   Check to use uncompressed kernel (depends on your system
-    configuration). Using an uncompressed kernel on a flash-based system
-    may improve boot time. The reason is that compressed kernels are
-    faster only when the throughput to the persistent storage is lower
-    than the decompression throughput, and on typical embedded systems
-    with DMA the throughput to memory outperforms the CPU-based
-    decompression. Of course it depends on a lot of stuff like
-    performance of flash controller, kernel storage filesystem
-    performance, DMA controller performance, cache architecture etc. So
-    it's individual per-system. Example: With using an uncompressed
-    kernel (\~2.8MB) uncompressing (running the uncompressor XIP in NOR
-    flash) took \~0.5s longer than copying 2.8MB from flash to RAM.
+-   如果使用了压缩内核，检查下压缩算法。zlib 在解压方面较慢，而 lzo 则更快。所以如果采用 lzo 压缩，我们也可以加速一些东西（可以从 LKML 查看这些）。如果没有任何压缩也可能是一件好事（看下一个话题）。
 
--   Enable precalculated loops-per-jiffy
+-   检查是否使用了未压缩的内核（根据系统配置）。在闪存系统上使用未压缩的内核可以优化启动时间。原因是当存储设备的速率低于解压速率时，压缩过的内核才有优势（译者注：拷贝时间 v.s. 解压时间）。在支持 DMA 的典型嵌入式系统上，其读取到内存的速率胜过基于 CPU 的解压速率。当然，这取决于很多方面，比如闪存控制器的性能、内核存储文件系统性能、DMA 控制器性能、缓存架构等。所以，每个系统各异。举例来说：使用未解压的内核（约 2.8MB）解压（在 NOR 闪存中就地执行解压程序）比从闪存拷贝 2.8MB 内核到内存中多花费了约 0.5 秒。
 
--   Enable kernel quiet option
+-   使用提前计算好的 `loops-per-jiffy`，（译者注：然后通过内核命令行参数传给内核，可避免执行重新计算的代码）
 
--   If you use UBI: UBI is rather slow in attaching MTD devices.
-    Everything is explained at MTD's [UBI
-    scalability](http://www.linux-mtd.infradead.org/doc/ubi.html#L_scalability)
-    and [UBI fs
-    scalability](http://www.linux-mtd.infradead.org/doc/ubifs.html#L_scalability)
-    sections. There is not very much you can do to speed it up but
-    implement UBI2. UBIFS would stay intact. There were discussions
-    about this and it does not seem to be impossibly difficult to do
-    UBI2 ([few
-    ideas](http://www.linux-mtd.infradead.org/faq/ubi.html#L_attach_faster)).
-    -   In a follow-up e-mail, Sascha Hauer wrote:
+-   使能内核 `quiet` 选项（译者注：可关闭控制台输出）
 
-> "What's interesting about this is that the kernel NAND driver is much
-> slower
->
-> than the one in U-Boot. Looking at it it turned out that the kernel
-> driver uses interrupts to wait for the controller to get ready.
-> Switching this to polling nearly doubles the NAND performance. UBI
-> mounts much faster now and this cuts off another few seconds from the
-> boot process  :) "
+-   如果使用 UBI 文件系统：UBI 用到 MTD 设备上相当缓慢。细节在 MTD 的 [UBI 伸缩性](http://www.linux-mtd.infradead.org/doc/ubi.html#L_scalability) 一文中有解释。如果不用 UBI2，我们基本啥也优化不了，UBIFS 将没啥用（UBIFS would stay intact），有一些关于这个的讨论，并且貌似要做 UBI2 相当困难：（[一些想法](http://www.linux-mtd.infradead.org/faq/ubi.html#L_attach_faster)）。
+    -  紧跟着的邮件里头，Sascha Hauer 写到：
 
--   Use static device nodes during boot, and later setup busybox mdev
-    for hotplug.
+    > "非常有趣的是，内核 NAND 驱动比 U-boot 中的慢很多，看完发现结果是内核驱动用了中断来判断控制器是否准备好，换成轮询以后 NAND 的性能提升了一倍。UBI 挂载更快并且这个为启动过程又省掉了几秒钟 :-) “
 
--   If you have network enabled, there might be some very long timeouts
-    in the network code paths, which appear to be used whether you
-    specify a static address or not. See the definitions of
-    CONF\_PRE\_OPEN and CON\_POST\_OPEN in *net/ipv4/ipconfig.c*. Check
-    [ipdelay configuration
-    patch](http://patchwork.kernel.org/patch/31678/).
+-   启动时使用静态设备节点，之后再设置 Busybox mdev 来做动态热插拔
 
--   Parallelize boot process.
+-   如果使能了网络，那么在网络代码路径中可能会有很长的超时设定，具体取决于是否指定了静态地址。可以看下 `net/ipv4/ipconfig.c` 文件中的定义：`CONF_PRE_OPEN` 和 `CON_POST_OPEN` 以及[IP 延迟配置补丁](http://patchwork.kernel.org/patch/31678/).
 
--   Disable the option "Set system time from RTC on startup and resume",
-    you can use the command hwclock -s at the of the init instead of
-    slowing down the kernel.
+-   并行化启动过程
+
+-   关闭该选项："Set system time from RTC on startup and resume"，可避免减慢内核启动。（要实现 RTC 同步），我们可以在 init 末尾使用 `hwclock -s` 命令。
 
 
-[Categories](http://eLinux.org/Special:Categories "Special:Categories"):
+[分类](http://eLinux.org/Special:Categories "Special:Categories"):
 
--   [Boot Time](http://eLinux.org/Category:Boot_Time "Category:Boot Time")
--   [Bootloader](http://eLinux.org/Category:Bootloader "Category:Bootloader")
--   [CE Linux Working
-    Groups](http://eLinux.org/Category:CE_Linux_Working_Groups "Category:CE Linux Working Groups")
+-   [启动时间](http://eLinux.org/Category:Boot_Time "Category:Boot Time")
+-   [引导程序](http://eLinux.org/Category:Bootloader "Category:Bootloader")
+-   [消费电子 Linux 工作组](http://eLinux.org/Category:CE_Linux_Working_Groups "Category:CE Linux Working Groups")
 
