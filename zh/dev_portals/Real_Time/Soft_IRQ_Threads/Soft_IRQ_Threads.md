@@ -1,82 +1,83 @@
-> From: [eLinux.org](http://eLinux.org/Soft_IRQ_Threads "http://eLinux.org/Soft_IRQ_Threads")
+> 原文: [eLinux.org](http://eLinux.org/Soft_IRQ_Threads "http://eLinux.org/Soft_IRQ_Threads")
+> 翻译：[@hduffddybz](https://github.com/hduffddybz) 
+> 校订：[]()
+
+# 软中断线程
 
 
-# Soft IRQ Threads
 
+## 目录
 
-
-## Contents
-
--   [1 Introduction](#introduction)
-    -   [1.1 LKML discussions](#lkml-discussions)
-        -   [1.1.1 Time Sys patch](#time-sys-patch)
-        -   [1.1.2 Korty patch](#korty-patch)
-    -   [1.2 Rationale](#rationale)
--   [2 Downloads](#downloads)
-    -   [2.1 Patch](#patch)
-    -   [2.2 Utility programs](#utility-programs)
--   [3 How To Use](#how-to-use)
+-   [1 简介](#introduction)
+    -   [1.1 LKML 讨论](#lkml-discussions)
+        -   [1.1.1 Time Sys 的补丁](#time-sys-patch)
+        -   [1.1.2 Korty 的补丁](#korty-patch)
+    -   [1.2 基本原理](#rationale)
+-   [2 下载](#downloads)
+    -   [2.1 补丁](#patch)
+    -   [2.2 实用程序](#utility-programs)
+-   [3 如何使用](#how-to-use)
 -   [4 Sample Results](#sample-results)
 -   [5 Future Work](#future-work)
 
 ## Introduction
 
-This page describes [Soft
-IRQ](http://eLinux.org/index.php?title=Soft_IRQ&action=edit&redlink=1 "Soft IRQ (page does not exist)")
-threads, which is a mechanism to run certain interrupt bottom halves
-using a kernel thread with scheduling that can be prioritized in the
-same scheduling class as other threads and processes.
+这个页面描述了 [软件
+中断线程](http://eLinux.org/index.php?title=Soft_IRQ&action=edit&redlink=1 "Soft IRQ (page does not exist)")
+，这是一种将一些中断的底半部分来用内核线程来执行的机制，这样就能跟其他线程或进程一样
+划分到相同的调度类。
+
 
 ### LKML discussions
 
-Recently (July 2004), two patches have been submitted to provide Soft
-IRQ threads for the Linux kernel.
+最近(2004 年 7 月)，两个关于软中断线程补丁被提交到 Linux 内核。
 
-#### [Time Sys](http://eLinux.org/Time_Sys "Time Sys") patch
+#### [Time Sys](http
+://eLinux.org/Time_Sys "Time Sys") 的补丁
 
-See
+阅读
 [http://lkml.org/lkml/2004/7/13/125](http://lkml.org/lkml/2004/7/13/125)
 
-It applies against 2.6.8-mm1, with one PPC-specific reject
+该补丁适用于 2.6.8-mm1 内核，一个 PPC 特性被拒绝。
 
-#### Korty patch
+#### Korty 的补丁
 
-See
+阅读
 [http://lkml.org/lkml/2004/7/13/152](http://lkml.org/lkml/2004/7/13/152)
 
-### Rationale
+### 基本原理
 
-This feature is important because it allows [Soft
-IRQ](http://eLinux.org/index.php?title=Soft_IRQ&action=edit&redlink=1 "Soft IRQ (page does not exist)")
-processing to be scheduled at a lower priority than realtime threads.
-This allows for better realtime handling by the Linux kernel.
+该特性十分重要因为它允许 [软
+中断](http://eLinux.org/index.php?title=Soft_IRQ&action=edit&redlink=1 "Soft IRQ (page does not exist)")
+以比实时线程更低的优先级来调度。
+这会使 Linux 有更好的实时处理能力。
 
-## Downloads
+## 下载
 
-### Patch
+### 补丁
 
     - [Patch for CELF version XXXXXX is *here*]
     - [Patch for 2.4.xx is *here*]
     - [Patch for 2.6.xx is *here*]
 
-### Utility programs
+### 实用程序
 
-None
+无
 
-## How To Use
+## 如何使用
 
-[Should fill this in]
+[这部分要填补]
 
-## Sample Results
+## 样本结果
 
-## Future Work
+## 未来工作
 
-Here is a list of things that could be worked on for this feature:
+这里有一系列未来可以为该分支所做的事情
 
-    (None so far)
+    （现在暂无）
 
 
-[Category](http://eLinux.org/Special:Categories "Special:Categories"):
+[分类](http://eLinux.org/Special:Categories "Special:Categories"):
 
--   [Kernel](http://eLinux.org/Category:Kernel "Category:Kernel")
+-   [内核](http://eLinux.org/Category:Kernel "Category:Kernel")
 
