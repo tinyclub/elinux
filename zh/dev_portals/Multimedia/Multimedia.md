@@ -1,125 +1,106 @@
-> From: [eLinux.org](http://eLinux.org/Multimedia "http://eLinux.org/Multimedia")
+> 原文：[eLinux.org](http://eLinux.org/Multimedia "http://eLinux.org/Multimedia")<br/>
+> 翻译：[@lzufalcon](https://github.com/lzufalcon)
+
+# 多媒体
+
+## 目录
+
+-   [1 简介](#introduction)
+-   [2 CELF 2.0 AVG（Audio, Video, Graphic） 规范](#celf-2-0-specification-for-avg)
+-   [3 音、视频工作组](#audio-video-working-group)
+-   [4 DirectFB 研究](#directfb-study)
+    -   [4.1 什么是 DirectFB，DirectFB 如何工作](#what-is-directfb-how-does-directfb-work)
+    -   [4.2 嵌入式 Linux 平台上的 DirectFB 示例实现](#sample-implementation-of-directfb-on-an-embedded-linux-platform)
+    -   [4.3 嵌入式 Linux 平台上的一些 DirectFB 基准测试结果](#some-directfb-benchmark-on-embedded-linux-platform)
+-   [5 相关项目](#related-projects)
+    -   [5.1 图形/视频输出](#graphics-video-out)
+        -   [5.1.1 Framebuffer](#framebuffer)
+        -   [5.1.2 DirectFB](#directfb)
+        -   [5.1.3 V4L2](#v4l2)
+        -   [5.1.4 X11](#x11)
+        -   [5.1.5 NanoX](#nanox)
+        -   [5.1.6 OpenGL (OpenML)](#opengl-openml)
+        -   [5.1.7 SDL](#sdl)
+        -   [5.1.8 Cairo](#cairo)
+        -   [5.1.9 Clutter](#clutter)
+        -   [5.1.10 Enlightenment Foundation Libraries (EFL)](#enlightenment-foundation-libraries-efl-http-elinux-org-efl-efl)
+        -   [5.1.11 Qt](#qt)
+        -   [5.1.12 演示图板套件(演示图板设计师/引擎，来自 Crank Software)](#storyboard-suite-storyboard-designer-engine-from-crank-software)
+        -   [5.1.13 GStreamer](#gstreamer)
+        -   [5.1.14 Xine](#xine)
+        -   [5.1.15 MPlayer](#mplayer)
+        -   [5.1.16 文档](#documentation)
+    -   [5.2 视频输入](#video-in)
+        -   [5.2.1 V4L[2]](#v4l-2)
+        -   [5.2.2 OpenML](#openml)
+        -   [5.2.3 LinuxTV (DVB API)](#linuxtv-dvb-api)
+    -   [5.3 音频输入/输出](#audio-in-out)
+        -   [5.3.1 OSS](#oss)
+        -   [5.3.2 ALSA](#alsa)
+        -   [5.3.3 OpenAL](#openal)
+        -   [5.3.4 PulseAudio](#pulseaudio)
+    -   [5.4 AVG 标准的使用者](#users-of-avg)
+        -   [5.4.1 Video Lan](#video-lan)
+        -   [5.4.2 Freevo](#freevo)
+        -   [5.4.3 LinuxTV](#linuxtv)
+        -   [5.4.4 MythTV](#mythtv)
+        -   [5.4.5 DVR](#dvr)
+        -   [5.4.6 OpenPVR](#openpvr)
+        -   [5.4.7 Morphine.TV](#morphine-tv)
+    -   [5.5 其他](#other)
+        -   [5.5.1 ARIB 架构](#arib-architecture)
+        -   [5.5.2 启动动画](#boot-splash)
+        -   [5.5.3 数字家庭工作组](#digital-home-working-group)
+        -   [5.5.4 Disko 框架](#disko-framework)
+        -   [5.5.5 Free Type](#free-type)
+        -   [5.5.6 UPnP](#upnp)
+        -   [5.5.7 TV Anytime](#tv-anytime)
+        -   [5.5.8 TV Linux 联盟](#tv-linux-alliance)
 
 
-# Multimedia
+## 简介
 
+本文有 Linux 下的音频、视频、图形系统相关的各类资源。
 
+关于图形系统部分，也可以通过阅读[用户接口](../.././dev_portals/Multimedia/User_Interfaces/User_Interfaces.md "User Interfaces")一节了解更多信息。
 
-## Contents
+## CELF 2.0 AVG 规范
 
--   [2 Introduction](#introduction)
--   [3 CELF 2.0 Specification for AVG](#celf-2-0-specification-for-avg)
--   [4 Audio Video Working Group](#audio-video-working-group)
--   [5 DirectFB study](#directfb-study)
-    -   [5.1 What is DirectFB, How Does DirectFB
-        Work](#what-is-directfb-how-does-directfb-work)
-    -   [5.2 Sample Implementation of DirectFB on an embedded Linux
-        platform](#sample-implementation-of-directfb-on-an-embedded-linux-platform)
-    -   [5.3 Some DirectFB benchmark on embedded Linux
-        platform](#some-directfb-benchmark-on-embedded-linux-platform)
--   [6 Related Projects](#related-projects)
-    -   [6.1 Graphics/Video out](#graphics-video-out)
-        -   [6.1.1 Framebuffer](#framebuffer)
-        -   [6.1.2 DirectFB](#directfb)
-        -   [6.1.3 V4L2](#v4l2)
-        -   [6.1.4 X11](#x11)
-        -   [6.1.5 NanoX](#nanox)
-        -   [6.1.6 OpenGL (OpenML)](#opengl-openml)
-        -   [6.1.7 SDL](#sdl)
-        -   [6.1.8 Cairo](#cairo)
-        -   [6.1.9 Clutter](#clutter)
-        -   [6.1.10 Enlightenment Foundation Libraries
-            (EFL)](#enlightenment-foundation-libraries-efl-http-elinux-org-efl-efl)
-        -   [6.1.11 Qt](#qt)
-        -   [6.1.12 Storyboard Suite (Storyboard Designer/Engine from
-            Crank
-            Software)](#storyboard-suite-storyboard-designer-engine-from-crank-software)
-        -   [6.1.13 GStreamer](#gstreamer)
-        -   [6.1.14 Xine](#xine)
-        -   [6.1.15 MPlayer](#mplayer)
-        -   [6.1.16 Documentation](#documentation)
-    -   [6.2 Video in](#video-in)
-        -   [6.2.1 V4L[2]](#v4l-2)
-        -   [6.2.2 OpenML](#openml)
-        -   [6.2.3 LinuxTV (DVB API)](#linuxtv-dvb-api)
-    -   [6.3 Audio in/out](#audio-in-out)
-        -   [6.3.1 OSS](#oss)
-        -   [6.3.2 ALSA](#alsa)
-        -   [6.3.3 OpenAL](#openal)
-        -   [6.3.4 PulseAudio](#pulseaudio)
-    -   [6.4 Users of AVG](#users-of-avg)
-        -   [6.4.1 Video Lan](#video-lan)
-        -   [6.4.2 Freevo](#freevo)
-        -   [6.4.3 LinuxTV](#linuxtv)
-        -   [6.4.4 MythTV](#mythtv)
-        -   [6.4.5 DVR](#dvr)
-        -   [6.4.6 OpenPVR](#openpvr)
-        -   [6.4.7 Morphine.TV](#morphine-tv)
-    -   [6.5 Other](#other)
-        -   [6.5.1 ARIB architecture](#arib-architecture)
-        -   [6.5.2 Boot Splash](#boot-splash)
-        -   [6.5.3 Digital Home Working
-            Group](#digital-home-working-group)
-        -   [6.5.4 Disko Framework](#disko-framework)
-        -   [6.5.5 Free Type](#free-type)
-        -   [6.5.6 UPnP](#upnp)
-        -   [6.5.7 TV Anytime](#tv-anytime)
-        -   [6.5.8 TV Linux Alliance](#tv-linux-alliance)
+（更像是一套建议，而不是一个规范）
 
+-   [AVG 规范 V2](http://eLinux.org/images/4/43/CelfAudioVideoGraphicsSpec2_accepted_20060606.pdf "CelfAudioVideoGraphicsSpec2 accepted 20060606.pdf")
 
-## Introduction
+## 音、视频工作组
 
-Here are some miscellaneous resources related to audio, video and
-graphics systems under Linux:
+请从 CELF 维基：[AVG 工作组](http://www.celinuxforum.org/CelfPubWiki/AudioVideoGraphicsWorkingGroup) 获取更多信息。
 
-Also see the section on [User
-Interfaces](../.././dev_portals/Multimedia/User_Interfaces/User_Interfaces.md "User Interfaces").
+也有一些 AVWG 相关的[但是过期了的文章](../.././dev_portals/Multimedia/Outdated_pages/Outdated_pages.md "Outdated pages")。
 
-## CELF 2.0 Specification for AVG
+## DirectFB 研究
 
-(more like a set of recommendations rather than a specification)
+### 什么是 DirectFB，DirectFB 如何工作
 
--   [http://elinux.org/images//8/83/Pdf.gif](http://elinux.org/images//8/83/Pdf.gif)
-    [AVG Spec
-    V2](http://eLinux.org/images/4/43/CelfAudioVideoGraphicsSpec2_accepted_20060606.pdf "CelfAudioVideoGraphicsSpec2 accepted 20060606.pdf")
-    [http://elinux.org/images/d/da/Info\_circle.png](http://elinux.org/File:CelfAudioVideoGraphicsSpec2_accepted_20060606.pdf)
+- [DirectFB](../.././dev_portals/Multimedia/DirectFB/DirectFB.md "DirectFB")
 
+### 嵌入式 Linux 平台上 DirectFB 示例实现
 
+- [移植 DirectFB](../.././dev_portals/Multimedia/Porting_DirectFB/Porting_DirectFB.md "Porting DirectFB")
 
-## Audio Video Working Group
+### 嵌入式 Linux 平台上一些 DirectFB 基准测试结果
 
-Please see the CELF wiki for more information: [Audio Video Graphics
-Working
-Group](http://www.celinuxforum.org/CelfPubWiki/AudioVideoGraphicsWorkingGroup)
+- [DirectFB 基准测试](../.././dev_portals/Multimedia/Benchmark_DirectFB/Benchmark_DirectFB.md "Benchmark DirectFB")
 
-Some AVWG related [Outdated pages](../.././dev_portals/Multimedia/Outdated_pages/Outdated_pages.md "Outdated pages")
+## 相关项目
 
-## DirectFB study
+### 图形/视频输出
 
-### What is DirectFB, How Does DirectFB Work
+#### Framebuffer/帧缓冲
 
-[DirectFB](../.././dev_portals/Multimedia/DirectFB/DirectFB.md "DirectFB")
-
-### Sample Implementation of DirectFB on an embedded Linux platform
-
-[Porting DirectFB](../.././dev_portals/Multimedia/Porting_DirectFB/Porting_DirectFB.md "Porting DirectFB")
-
-### Some DirectFB benchmark on embedded Linux platform
-
-[Benchmark DirectFB](../.././dev_portals/Multimedia/Benchmark_DirectFB/Benchmark_DirectFB.md "Benchmark DirectFB")
-
-## Related Projects
-
-### Graphics/Video out
-
-#### Framebuffer
-
--   [http://www.kernel.org/](http://www.kernel.org/) (1) KD26/fb
+-   [Documentation/fb](http://www.kernel.org/doc/Documentation/fb)
 -   [http://linuxconsole.sourceforge.net/fbdev/HOWTO/](http://linuxconsole.sourceforge.net/fbdev/HOWTO/)
 -   [http://www.tldp.org/HOWTO/Framebuffer-HOWTO.html](http://www.tldp.org/HOWTO/Framebuffer-HOWTO.html)
 
-
- Stores the frame information in the videos ....
+    帧缓冲用于把帧信息存到视频中……
 
 #### DirectFB
 
@@ -148,111 +129,58 @@ Some AVWG related [Outdated pages](../.././dev_portals/Multimedia/Outdated_pages
 
 #### SDL
 
--   [http://www.libsdl.org/](http://www.libsdl.org/) immediate renderer
-    library with very bare bones primitives like rectangle fill and
-    blit. Since it exposes just framebuffer and few primitives, it's
-    easy to port to different platforms, actually it was born as a way
-    to port Windows games to Linux.
+-   [http://www.libsdl.org/](http://www.libsdl.org/) - 是一个即时图形渲染库，采用了诸如矩形填充和转换这样的非常精简的原语。因为它只暴露了帧缓冲区和少量原语，所以非常容易移植到其他平台，实际上，它产生之初，即是作为一种方式，用于移植 Windows 游戏到 Linux 平台。
 
 #### Cairo
 
--   [http://www.cairographics.org/](http://www.cairographics.org/) is an
-    immediate renderer library that can do complex vector graphics,
-    including matrix transforms. It runs on top of DirectFB, X11, memory
-    buffers and more. It is the base of some toolkits like GTK and
-    applications like Firefox.
+-   [http://www.cairographics.org/](http://www.cairographics.org/) 是另外一个即时图形渲染库，可用于处理复杂的向量图形，包括矩形转换。它运行于 DirectFB、X11、内存缓冲区以及其他设施之上。它是诸多 GTK 工具套件和 Firefox 这样的应用程序的基础。
 
 #### Clutter
 
--   [http://clutter-project.org/](http://clutter-project.org/) is an
-    object-oriented 3d canvas on top of OpenGL (or OpenGL-ES) with scene
-    management. It is based on GLib/GObject and matches nicely GNOME
-    platform. Many powerful Linux mobile devices will ship with
-    Clutter-based intefaces in near future, like Intel's Moblin, Ubuntu
-    Mobile and Maemo.
+-   [http://clutter-project.org/](http://clutter-project.org/) 是构建在 OpenGL（或者 OpenGL-ES）与场景管理之上的一个面向对象的 3D 画板，它基于 GLib/GObject 并很好地匹配 GNOME 平台。很多强大的 Linux 手机在不久的将来，将转向采用基于 Clutter 的接口，像英特尔的 Moblin 平台，Ubuntu Touch 移动平台和 Maemo（译着注：实际上这三个平台两个已经死了，只有 Touch 半死不活，一个系统要真能在实际产品中占有一席之地，还真得是综合实力的考量！）。
 
 #### Enlightenment Foundation Libraries ([EFL](../.././dev_portals/Multimedia/EFL/EFL.md "EFL"))
 
-[The Enlightenment Foundation Libraries](http://www.enlightenment.org/)
-contains Evas, an object-oriented 2d canvs on top of OpenGL/X11,
-XRender/X11, X11, FB, DirectFB, DirectDraw and more. It includes scene
-management and integrates with Ecore, matches nicely other EFL
-components like Edje. It's used by some media centers and the OpenMoko
-phone. See Gustavo Barbieri conference at Embedded Linux Conference
-Europe 2008,
-[slides](http://tree.celinuxforum.org/CelfPubWiki/ELCEurope2008Presentations?action=AttachFile&do=get&target=Rich_GUI_without_pain.pdf)
-and
-[video](http://free-electrons.com/pub/video/2008/elce/elce2008-barbieri-rich-gui-without-pain.ogv).
-Gustavo's company, [ProFUSION](http://profusion.mobi/), offers services
-around EFL.
+[The Enlightenment Foundation Libraries](http://www.enlightenment.org/) 包含 Evas，一个构建在 OpenGL/X11, XRender/X11, X11, FB, DirectFB, DirectDraw 等之上的面向对象的 2D 画板。它包括场景管理并且集成了 Ecore，能很好地与 EFL 组件，比如 Edje 匹配。它已经被用于一些媒体中心和 OpenMoko 手机上。
+
+可查看在 2008 年欧洲嵌入式 Linux 会议上的 Gustavo Barbieri 会议：
+
+- [演讲稿](http://tree.celinuxforum.org/CelfPubWiki/ELCEurope2008Presentations?action=AttachFile&do=get&target=Rich_GUI_without_pain.pdf)
+- [演讲视频](http://free-electrons.com/pub/video/2008/elce/elce2008-barbieri-rich-gui-without-pain.ogv)，Gustavo 的公司：[ProFUSION](http://profusion.mobi/)，提供围绕 EFL 的服务。
 
 #### Qt
 
--   Qt is a crossplatform graphics toolkit with support for framebuffer
-    and X. Has advanced animation capabilities using [Graphics
-    View](http://doc.trolltech.com/4.5/graphicsview.html) framework.
+-   Qt 是一个跨平台的图形工具套件，支持帧缓冲和 X，拥有先进的动画功能，采用[图形视图](http://doc.trolltech.com/4.5/graphicsview.html)框架。
 
-#### Storyboard Suite (Storyboard Designer/Engine from Crank Software)
+#### 演示图板套件 (演示图板设计师/引擎，来自 Crank Software)
 
 -   [http://www.cranksoftware.com/storyboard](http://www.cranksoftware.com/storyboard)
-    The Storyboard Suite from Crank Software provides a complete
-    environment to design, develop and deploy embedded user interfaces
-    across multiple rendering technologies (DirectFB, FBDev, SDL,
-    OpenGL, OpenVG, ...), multiple operating systems (Linux, QNX,
-    VxWorks, WinCE/Win32, ...) and multiple architectures (x86, ARM,
-    PPC, SH, ...). The Storyboard approach is unique in that it has been
-    developed to incorporate content directly from graphic designers and
-    deploy data bundles that are specifically optimized for each
-    OS/CPU/Rendering technology set.
+
+    来自 Crank Software 的演示图板（Storyboard）套件，提供一套完整的环境，可用于设计、开发和部署嵌入式用户接口，支持多种渲染技术（DirectFB，FBDev，SDL，OpenGL，OpenVG，……），支持多种操作系统（Linux，QNX，VxWorks，WinCE/Win32……），跨越多种处理器架构（x86，ARM，PPC，SH……）。该演示图板方法非常独特，它开发时就考虑到如何从图形设计师那里直接加入内容并部署数据集，它也为各类 OS/CPU/渲染技术进行了专门的优化。
 
 #### GStreamer
 
--   [http://www.gstreamer.net/](http://www.gstreamer.net/) is a
-    open-source multimedia framework allowing the creation of multimedia
-    applications by assembling processing nodes (called elements) in a
-    graph (called pipeline). The range of plugins available allow easy
-    creation of playback applications, recorders, audio/video editors,
-    streaming servers, visioconference system. The variety of plugins
-    range from decoders, encoders, muxer, demuxers, network sources for
-    a variety of protocols, hardware accelerated features (decoding,
-    display, capture,..), video filters. Its low-level flexibility also
-    makes it sometimes complex to use, but is assisted by several
-    convenience plugins linke playbin, decodebin, camerabin making
-    simple use-cases easy to use. It is built on top of GLib/GObject,
-    making it easily portable to any new platform. It is being used in
-    more and more in embedded devices due to the availability of quality
-    LGPL plugins for various format support, support for lip-sync,
-    support for network streaming, standard linux API, and easy
-    wrapability of hardware devices like DSP-accelerated codecs.
+-   [http://www.gstreamer.net/](http://www.gstreamer.net/)
+
+    是一个多媒体框架，允许通过在一个图形（管道）上汇编处理节点（元素）来创建多媒体应用，大量插件可用于轻松地创建播放应用、 录音机、 音频/视频编辑、 流媒体服务器、视讯会议系统。插件类型包括解码器、编码器、混音器、多路分配器、各种协议的网络资源、硬件加速功能 (解码、 显示、 捕获，...)、视频筛选器。底层的灵活性也带来了使用上的麻烦，但是在多种便利的插件（playbin, decodebin, camerabin）的帮助下，使得使用简单的使用案例很易用。它构建在 Glib/GObject 之上，因此很容易被移植到任意新平台上，得益于有很多可用的高质量并且支持多种格式的插件，不仅支持 lip-sync，支持网络流媒体，支持标准 Linux API 并且容易封装诸如 DSP 加速的编码器这样的硬件设备，所以，在嵌入式中，它可能会被广泛使用。
 
 #### Xine
 
--   [http://xinehq.de/](http://xinehq.de/) is a playback media engine
-    that handles most of the complexity for you. It's based on threads,
-    so clock and synchronization are handled automatically. Note that
-    this library is GPL licensed so your application must be GPL
-    compatible to use it.
+-   [http://xinehq.de/](http://xinehq.de/) 是一个媒体播放引擎，能够为我们处理大部分的复杂问题。它基于多线程，所以时钟和同步被自动处理，需要注意的是，该库采用 GPL 许可，所以你的应用程序必须兼容 GPL 才能使用它。
 
 #### MPlayer
 
--   [http://mplayerhq.hu/](http://mplayerhq.hu/) it's not a library but
-    an application, however it's controllable from other applications
-    and it's used as media framework for some systems. It's GPL as well
-    as xine, but since it's externally controlled you don't need to make
-    your application GPL to use it.
+-   [http://mplayerhq.hu/](http://mplayerhq.hu/) - 它不是一个库而是一个应用程序，但是可以被其他应用程序控制并且在一些系统上当作媒体框架使用。同 Xine 一样，它采用 GPL 许可，但是因为可以从外部控制，所以我们的应用程序不采用 GPL 许可也可使用它。
 
-#### Documentation
+#### 文档
 
--   Presentation [Choosing embedded graphical
-    libraries](http://tree.celinuxforum.org/CelfPubWiki/ELCEurope2008Presentations?action=AttachFile&do=get&target=choosing-embedded-graphical-libraries.pdf)
-    held by Thomas Petazzoni at the ELCE 2008
+-   [如何选择嵌入式图形库](http://tree.celinuxforum.org/CelfPubWiki/ELCEurope2008Presentations?action=AttachFile&do=get&target=choosing-embedded-graphical-libraries.pdf) - 由 Thomas Petazzoni 在 ELCE 2008 做的报告
 
 ### Video in
 
 #### V4L[2]
 
--   [http://www.kernel.org/](http://www.kernel.org/) (1)
-    KD26/video4linux
+-   [Documentation/video4linux](http://www.kernel.org/doc/Documentation/video4linux)
 -   [http://www.linuxtv.org](http://www.linuxtv.org)
 -   [http://www.linuxtv.org/downloads/video4linux/API/V4L2\_API/spec-single/v4l2.html](http://www.linuxtv.org/downloads/video4linux/API/V4L2_API/spec-single/v4l2.html)
 
@@ -264,16 +192,16 @@ around EFL.
 
 -   [http://www.linuxtv.org](http://www.linuxtv.org)
 
-### Audio in/out
+### 音频输入/输出
 
 #### OSS
 
--   [http://www.kernel.org/](http://www.kernel.org/) (1) KD26/sound/oss
+-   [Documentation/sound/oss](http://www.kernel.org/doc/Documentation/sound/oss)
 -   [http://www.4front-tech.com/oss.html](http://www.4front-tech.com/oss.html)
 
 #### ALSA
 
--   [http://www.kernel.org/](http://www.kernel.org/) (1) KD26/sound/alsa
+-   [Documentation/sound/alsa](http://www.kernel.org/doc/Documentation/sound/alsa)
 -   [http://www.alsa-project.org](http://www.alsa-project.org)
 
 #### OpenAL
@@ -282,14 +210,9 @@ around EFL.
 
 #### PulseAudio
 
--   [http://pulseaudio.org](http://pulseaudio.org) PulseAudio is a
-    multi-platform sound server which brings a lot of cool features to
-    Linux sound. Why you want to use it for for embedded systems
-    (besides having support for cool stuff like bluetooth audio, apple
-    airport etc) is described here:
-    [http://0pointer.de/blog/projects/pulse-glitch-free.html](http://0pointer.de/blog/projects/pulse-glitch-free.html)
+-   [http://pulseaudio.org](http://pulseaudio.org) PulseAudio 是一个跨平台的声音服务，为 Linux 声音子系统带来了很多很酷的特性。在嵌入式系统中使用它的理由描述在[这里](http://0pointer.de/blog/projects/pulse-glitch-free.html)。
 
-### Users of AVG
+### AVG 标准的使用者
 
 #### Video Lan
 
@@ -321,49 +244,42 @@ around EFL.
 -   [http://wiki.morphine.tv](http://wiki.morphine.tv)
 -   [http://sourceforge.net/projects/mms4l/](http://sourceforge.net/projects/mms4l/)
 
-### Other
+### 其他
 
-#### ARIB architecture
+#### ARIB 架构（一个数字广播系统标准）
 
 -   [http://www.arib.or.jp/english/html/overview/ov/std\_b24.html](http://www.arib.or.jp/english/html/overview/ov/std_b24.html)
 
-#### Boot Splash
+#### 启动画面
 
 -   [www.bootsplash.org](http://www.BootSplash.org/)
 
-#### Digital Home Working Group
+#### 数字家庭工作组
 
 -   [http://www.dhwg.org/](http://www.dhwg.org/)
 
-#### Disko Framework
+#### Disko 框架
 
 -   [http://www.diskohq.org](http://www.diskohq.org)
 -   [http://www.directfb.org](http://www.directfb.org)
 
-#### Free Type
+#### Free Type（软件字体引擎）
 
 -   [http://freetype.sourceforge.net/freetype2/](http://freetype.sourceforge.net/freetype2/)
 
 #### UPnP
 
--   see [UPnP](../.././dev_portals/Multimedia/UPnP/UPnP.md "UPnP")
+-   [UPnP](../.././dev_portals/Multimedia/UPnP/UPnP.md "UPnP")
 
-#### TV Anytime
+#### TV Anytime 论坛
 
 -   [http://www.tv-anytime.org/](http://www.tv-anytime.org/)
 
-#### TV Linux Alliance
+#### TV Linux 联盟
 
 -   [http://www.tvlinuxalliance.com/](http://www.tvlinuxalliance.com/)
 
-**Note (1)** - KD26 refers to the [Linux 2.6.X
-kernel](http://www.kernel.org/pub/linux/kernel/v2.6/) tree, which has a
-"Documentation" sub-directory.
+[分类](http://eLinux.org/Special:Categories "Special:Categories"):
 
-
-[Categories](http://eLinux.org/Special:Categories "Special:Categories"):
-
--   [Multimedia](http://eLinux.org/Category:Multimedia "Category:Multimedia")
--   [CE Linux Working
-    Groups](http://eLinux.org/Category:CE_Linux_Working_Groups "Category:CE Linux Working Groups")
-
+-   [多媒体](http://eLinux.org/Category:Multimedia "Category:Multimedia")
+-   [CE Linux 工作组](http://eLinux.org/Category:CE_Linux_Working_Groups "Category:CE Linux Working Groups")
