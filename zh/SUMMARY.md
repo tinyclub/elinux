@@ -87,7 +87,6 @@
         - [AXFS](./dev_portals/File_Systems/AXFS/AXFS.md)
         - [F2FS](./dev_portals/File_Systems/F2FS/F2FS.md)
         - [Flash Filesystem Benchmarks](./dev_portals/File_Systems/Flash_Filesystem_Benchmarks/Flash_Filesystem_Benchmarks.md)
-        - [Linux Devices](./dev_portals/File_Systems/Linux_Devices/Linux_Devices.md)
         - [LogFS](./dev_portals/File_Systems/LogFS/LogFS.md)
         - [Pram Fs](./dev_portals/File_Systems/Pram_Fs/Pram_Fs.md)
         - [Pram Fs Specification](./dev_portals/File_Systems/Pram_Fs_Specification/Pram_Fs_Specification.md)
