@@ -15,7 +15,7 @@
 
 * 注册 github.com 帐号并建立 [项目 github 仓库](https://github.com/tinyclub/elinux)
 * 注册 gitbook.com 帐号并建立[项目 gitbook 首页](http://tinylab.gitbooks.io/elinux)
-* 建立 [eLinux.org 中文版项目](http://www.tinylab.org/project/elinux/)
+* 建立 [eLinux.org 中文版项目](http://www.tinylab.org/elinux/)
 * 召集了 26 个同学，全体注册 github 帐号并邀请加入协作团队 elinux
 * 建立微信协作群，及时沟通与交流翻译过程中遇到的各类问题
 * 建立 elinux.org 的 gitbook 目录架构，并让各位同学认领某个模块
