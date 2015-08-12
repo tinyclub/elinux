@@ -4,7 +4,7 @@
 * [翻译计划](#plan)
 * [翻译过程](#procedure)
 
-<span id="pan"></span>
+<span id="plan"></span>
 ## 翻译计划
 
 该翻译计划由 [@泰晓科技](http://tinylab.org) 于 2015年7月3日 发起：
