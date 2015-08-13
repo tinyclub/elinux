@@ -30,6 +30,7 @@
     -   [4.4 其他](#others)
 -   [5 正在从事快速启动工作的公司、个人或者项目](#companies-individuals-or-projects-working-on-fast-booting)
 -   [6 启动时间检查清单](#boot-time-check-list)
+<span id="introduction"></span>
 
 ## 简介
 
@@ -42,12 +43,14 @@
 启动一个设备涉及到许多步骤和一系列的事件。为了使用前后一致的术语，消费电子 Linux 论坛（CE Linux Forum）的[启动时间优化工作组](../../dev_portals/Boot_Time/Bootup_Time_Working_Group/Bootup_Time_Working_Group.md "Bootup Time Working Group")起草了一个术语词汇表，该表包括了相关术语在该领域内通用的定义。该词汇表如下：
 
 -   [启动时间相关的词汇表](../../dev_portals/Boot_Time/Boot-up_Time_Definition_Of_Terms/Boot-up_Time_Definition_Of_Terms.md "Boot-up Time Definition Of Terms")
+<span id="technology-project-pages"></span>
 
 ## 技术/项目主页
 
 下面主要介绍与减少 Linux 启动时间有关的各种技术。
 
 有一部分描述了 eLinux.org 上可以下载的本地补丁，而其余部分则介绍了在其他地方维护的项目或者补丁。
+<span id="measuring-boot-up-time"></span>
 
 ### 测量启动时间
 
@@ -63,8 +66,10 @@
 -   [ptx\_ts](http://pengutronix.de/software/ptx_ts/index_en.html) - Pengutronix 的时间戳记录器（TimeStamper）：一个简单的过滤器，可前置时间戳到标准输出（STDOUT）上，有点像 grabserial 但是不限于串口。
 -   [Initcall（内核初始化函数）调试](../../dev_portals/Boot_Time/Initcall_Debug/Initcall_Debug.md "Initcall Debug") - 一个用于显示 initcalls 所花时间的内核命令行选项
 -   也可以看下: [Kernel 检测工具](../../dev_portals/Boot_Time/Kernel_Instrumentation/Kernel_Instrumentation.md "Kernel Instrumentation")，里头列举了一些已知的内核检测工具，这些对于测量内核启动时间来说可能会有帮助。
+<span id="technologies-and-techniques-for-reducing-boot-time"></span>
 
 ### 减少启动时间的技术和技巧
+<span id="bootloader-speedups"></span>
 
 #### 引导程序（Bootloader）加速
 
@@ -73,6 +78,7 @@
     - 使用 DMA 从闪存（Flash）拷贝内核镜像文件到内存中
 -   [采用未压缩的内核](../../dev_portals/Boot_Time/Uncompressed_kernel/Uncompressed_kernel.md "Uncompressed kernel") - 一个未压缩的内核或许可以更快启动
 -   [快速内核解压](../../dev_portals/Boot_Time/Fast_Kernel_Decompression/Fast_Kernel_Decompression.md "Fast Kernel Decompression")
+<span id="kernel-speedups"></span>
 
 #### 内核加速
 
@@ -95,6 +101,7 @@
 
 -   迁移到一个不同的编译器版本可能会产生更短和更快的代码。通常，新的编译器能够产生更优的代码。你也可以玩转一下各种编译器选项看看哪些表现最好。
 -   如果在内核中用上 initramfs 和压缩了的内核，那么最好是不要再压缩 initramfs。这个主要是为了避免重复两次解压数据。一个针对该问题的补丁被提交到了 LKML（译注：Linux 内核邮件列表）：[http://lkml.org/lkml/2008/11/22/112](http://lkml.org/lkml/2008/11/22/112)
+<span id="file-system-issues"></span>
 
 ##### 文件系统方面的问题
 
@@ -105,6 +112,7 @@
 -   [避免使用 Initramfs](../../dev_portals/Boot_Time/Avoid_Initramfs/Avoid_Initramfs.md "Avoid Initramfs") - 解释了如果想极小化启动时间的话为什么不能使用 initramfs
 -   拆分分区。如果挂载一个文件系统耗费太久，那么可以考虑把一个文件系统拆分成两部分，一部分带有在启动时或者启动后立即需要的信息，而另外一部分可以（延迟到）后面挂载
 -   [Ramdisks 用法澄清](../../dev_portals/Boot_Time/Ramdisks_demasked/Ramdisks_demasked.md "Ramdisks demasked") - 解释为什么使用 Ramdisk 通常会引起更长的启动时间而不是更短
+<span id="user-space-and-application-speedups"></span>
 
 #### 用户空间和应用程序加速
 
@@ -133,6 +141,7 @@
 -   [函数重排](http://www.celinux.org/elc08_presentations/DDLink%20FunctionReorder%2008%2004.pdf)
 
     这是一种技术，用于重排可执行文件中的函数，确保它们根据需要依次出现。它可以改善应用程序加载的时间，因为所有的初始化代码被打包成一组页面，而不是离散成多个不同的页面。
+<span id="suspend-related-improvements"></span>
 
 #### 系统休眠相关的改进
 
@@ -146,10 +155,12 @@
 -   实现快照启动。这个由 Sony 的 Hiroki Kaminaga 完成并且描述在 [ARM 快照启动](../../dev_portals/Boot_Time/Suspend_To_Disk_For_ARM/Suspend_To_Disk_For_ARM.md "Suspend To Disk For ARM") 和 [Snapshot-boot-final.pdf](http://elinux.org/images/3/37/Snapshot-boot-final.pdf)
 
     这个类似上述休眠/唤醒方案。但是休眠文件被保留并且在每次启动时使用。缺点是在制作快照时不可以挂载可写分区，否则当分区被修改，而休眠文件中的应用在映像中有未修改分区有关的信息时，就会产生不一致性。
+<span id="miscellaneous-topics"></span>
 
 #### 杂项
 
 [关于压缩](../../dev_portals/Boot_Time/About_Compression/About_Compression.md "About Compression") 一文讨论了压缩技术在启动时间优化方面的效果。这个能够影响内核与用户空间两者的启动时间。
+<span id="uninvestigated-speedups"></span>
 
 #### 一些未经验证的想法
 
@@ -163,6 +174,7 @@
 
 
 -   **专用文件系统** - 当前的文件系统中有大量的抽象，这些抽象方便了新文件系统的添加并且为所有文件系统创建了统一视图。无疑这个设计很漂亮整洁，但是这些抽象层也引入了一些开销。一种解决方案或许是创建一个专有的文件系统，只支持 1 到 2 种文件系统，从而可以消除抽象层带来的开销。这或许会有用，不过合并到主线的几率为 0 。
+<span id="articles-and-presentations"></span>
 
 ## 文章和演讲稿
 
@@ -221,6 +233,7 @@
     -   实现 Android 检查点技术（Checkpointing）的原因
         -   恢复到事先存储的状态可以获得更快的 Android 启动时间
         -   基于定期检查点技术可以获得更好的产品试用体验
+<span id="case-studies"></span>
 
 ### 案例研究
 
@@ -231,14 +244,17 @@
 -   [在 3.2 秒内启动 Linux dm365 网络照相机](http://e2e.ti.com/support/embedded/f/354/t/51158.aspx)
 -   [在 0.5 秒内启动内核和 Shell (不包括 U-boot 和解压)](http://e2e.ti.com/support/dsp/davinci_digital_media_processors/f/100/p/7616/30088.aspx)
 -   [Warp2, Lineo Solutions, 2008年，2.97 秒启动, ARM11, 400MHz](http://www.theinquirer.net/inquirer/news/1049451/linux-boots)
+<span id="additional-projects-mailing-lists-resources"></span>
 
 ## 其他的项目/邮件列表/资源
+<span id="replacements-for-sysv-init"></span>
 
 ### SysV 'init' 的替代品
 
 启动 Linux 系统的传统方法是用 `/sbin/init`，它是一个初始化程序，负责解析 `/etc/inittab`，并能够针对不同的运行级别和系统事件（各类按键组合和电源事件）产生一系列动作。
 
 可查看 [init(8) 手册页](http://linux.die.net/man/8/init) 和 [inittab(5) 首页页](http://linux.die.net/man/5/inittab) 获取更多信息。
+<span id="busybox-init"></span>
 
 #### busybox init
 
@@ -247,6 +263,7 @@
 截止 2000 年，Busybox init 和全功能的 init 之间，`inittab` 支持的特性稍微有些差异。但是不知道到 2010 以后（译注：现在都 2015 年了，看来这个文章真地有点老了，后面有时间很多材料得好好整理下），情况是否依旧。可以从[这里](http://spblinux.de/2.0/doc/init.html)看到一些细节。
 
 Denys Vlasenko, Busybox 的维护人员之一，曾经建议用名叫 `runsv` 的工具替换掉传统的 `init`，可以看下[这里](http://busybox.net/~vda/init_vs_runsv.html)。
+<span id="upstart"></span>
 
 #### upstart
 
@@ -254,19 +271,23 @@ Denys Vlasenko, Busybox 的维护人员之一，曾经建议用名叫 `runsv` �
 
 -   首页：[http://upstart.ubuntu.com/](http://upstart.ubuntu.com/)
 -   维基百科地址：[http://en.wikipedia.org/wiki/Upstart](http://en.wikipedia.org/wiki/Upstart)
+<span id="android-init"></span>
 
 #### Android init
 
 Android `init` 是专门为启动 Andriod 系统而定制的程序，看[这里](http://eLinux.org/Android_Booting#.27init.27 "Android Booting")。
+<span id="systemd"></span>
 
 #### systemd
 
 systemd 是一个新的项目 (就当时 2010 年 5 月而言)，用于在 Linux 桌面系统中启动守护进程和服务，可以看看[这里](http://0pointer.de/blog/projects/systemd.html)。
+<span id="kexec"></span>
 
 ### Kexec
 
 -   Kexec 允许系统不经 BIOS 重启（注：与通常的重启不同）。也就是说，一个 Linux 内核可以无需进入引导程序就能直接启动另外一个 Linux 内核，白皮书在[kexec.pdf](http://elinux.org/images/2/2f/ELC-2010-Damm-Kexec.pdf)。
     -   这里是另外一篇文章：[使用 kexec 快速重启 Linux](http://www.ibm.com/developerworks/cn/linux/l-kexec/index.html)
+<span id="splash-screen-projects"></span>
 
 ### 启动画面（Splash Screen）项目
 
@@ -274,10 +295,12 @@ systemd 是一个新的项目 (就当时 2010 年 5 月而言)，用于在 Linux
     -   这个貌似是最新的启动画面技术，为主流发行版所用。为了支持该技术，需要在内核中添加一个 Framebuffer 驱动。
 -   [Gentoo Splashscreen](https://wiki.gentoo.org/wiki/Fbsplash) - 一种在启动过程早期放置启动画面的新技术
 -   [PSplash](http://git.yoctoproject.org/cgit/cgit.cgi/psplash) - PSplash 是一种用户空间的图形化引导启动画面，主要针对嵌入式 Linux 设备，支持 16bpp 或者 32bpp 的帧缓冲。
+<span id="others"></span>
 
 ### 其他
 
 -   [基于休眠快照启动](http://tree.celinuxforum.org/CelfPubWiki/) - 一种用软件唤醒来快速启动系统的技术
+<span id="companies-individuals-or-projects-working-on-fast-booting"></span>
 
 ## 正在从事快速启动的公司、个人或者项目
 
@@ -287,6 +310,7 @@ systemd 是一个新的项目 (就当时 2010 年 5 月而言)，用于在 Linux
     [http://lwn.net/Articles/299591/](http://lwn.net/Articles/299591/)
 -   Free Electrons -
     [http://free-electrons.com/services/boot-time/](http://free-electrons.com/services/boot-time/)
+<span id="boot-time-check-list"></span>
 
 ## 启动时间检查清单
 
