@@ -4,7 +4,9 @@
 #
 
 md=$1
-site=http://tinylab.gitbooks.io/elinux/content/zh
+title="嵌入式 Linux 知识库（eLinux.org 中文版）"
+book=http://tinylab.gitbooks.io/elinux
+site=${book}/content/zh
 
 sed -i -e "/<span/d" $md
 
@@ -28,3 +30,6 @@ sed -i -e "${start_line},${end_line}d" ${md}
 
 # Use absolute address
 sed -i -e "s#(\.\./\.\./\(.*\).md#(${site}/\1.html#g" ${md}
+
+# Insert the book header
+sed -i -e "1i> 书籍：[$title]($book)<br/>" ${md}
