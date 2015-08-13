@@ -1,4 +1,5 @@
-> From: [eLinux.org](http://eLinux.org/Kernel_Timer_Systems "http://eLinux.org/Kernel_Timer_Systems")
+> From: [eLinux.org](http://eLinux.org/Kernel_Timer_Systems
+> "http://eLinux.org/Kernel_Timer_Systems")
 
 
 # Kernel Timer Systems
@@ -34,13 +35,15 @@
 
 ## Timer Wheel, Jiffies and HZ (or, the way it was)
 
-The original kernel timer system (called the "timer wheel) was based on
+The original kernel timer system (called the "timer wheel) was based
+on
 incrementing a kernel-internal value (jiffies) every timer interrupt.
 The timer interrupt becomes the default scheduling quamtum, and all
 other timers are based on jiffies. The timer interrupt rate (and jiffy
 increment rate) is defined by a compile-time constant called HZ.
 Different platforms use different values for HZ. Historically, the
-kernel used 100 as the value for HZ, yielding a jiffy interval of 10 ms.
+kernel used 100 as the value for HZ, yielding a jiffy interval of 10
+ms.
 With 2.4, the HZ value for i386 was changed to 1000, yeilding a jiffy
 interval of 1 ms. Recently (2.6.13) the kernel changed HZ for i386 to
 250. (1000 was deemed too high).
@@ -49,7 +52,8 @@ interval of 1 ms. Recently (2.6.13) the kernel changed HZ for i386 to
 
 Ingo Molnar did an in-depth explanation about the performance of the
 current "timer wheel" implementation of timers. This was part of a
-series of messages trying to justify the addition of ktimers (which have
+series of messages trying to justify the addition of ktimers (which
+have
 different characteristics).
 
 It is possibly the best explanation of the timer wheel avaiable: See
@@ -75,50 +79,60 @@ concepts](http://lwn.net/Articles/223185/)
 ### clocksource
 
 [Clocksource Documentation patch that didn't get
-accepted](http://article.gmane.org/gmane.linux.kernel/1062438). Has some
+accepted](http://article.gmane.org/gmane.linux.kernel/1062438). Has
+some
 coverage of clock sources although care to be taken by going through
 patch responses.
 
 Clocksource is also related or the same as the GTOD (Generic time of
-Day) work by John Stultz that hrtimer framework depends on (as mentioned
+Day) work by John Stultz that hrtimer framework depends on (as
+mentioned
 on p.18 in the OLS 2006 slides).
 
 Also refer to the kernel documentation on [High resolution timers and
 dynamic ticks design
-notes](https://www.kernel.org/doc/Documentation/timers/highres.txt) for
+notes](https://www.kernel.org/doc/Documentation/timers/highres.txt)
+for
 some notes on clock source.
 
 ## Timer information
 
-There are two /proc files that are very useful for gathering information
+There are two /proc files that are very useful for gathering
+information
 about timers on your system.
 
 ### /proc/timer\_list
 
-/proc/timer\_list has information about the currently configured clocks
+/proc/timer\_list has information about the currently configured
+clocks
 and timers on the system. This is useful for debugging the current
 status of the timer system (especially while you are developing
 clockevent and clocksource support for your platform.)
 
-You can tell if high resolution is configured for you machine by looking
+You can tell if high resolution is configured for you machine by
+looking
 at a few different things:
 
-For standard resolution (at jiffy resolution), a clock will have a value
+For standard resolution (at jiffy resolution), a clock will have a
+value
 for it's '.resolution' field equal to the period of a jiffy. For
 embedded machines, where HZ is typically 100, this will be 10
 milliseconds, or 10000000 (ten million) nanoseconds.
 
-Also for standard resolution, the Clock Event Device will have an event
+Also for standard resolution, the Clock Event Device will have an
+event
 handler of "tick\_handle\_periodic".
 
 For high resolution, the resolution of the clock will be listed as 1
 nanosecond (which is ridiculous, but serves as an indicator of
-essentially arbitrary precision.) Also, the Clock Event Device will have
+essentially arbitrary precision.) Also, the Clock Event Device will
+have
 an event handler of "hrtimer\_interrupt".
 
 * * * * *
 
-[need more info here - and this should probably be written up and put in
+[need more info here - and this should probably be written up and put
+in
 Documentation/filesystems/proc.txt]
 
 ### /proc/timer\_stats
@@ -130,20 +144,23 @@ routines are using lots of timers, and how frequently they are
 requesting them. This can be of interest to see
 
 To use /proc/timer\_stats, configure the kernel with support for the
-feature. That is, set CONFIG\_TIMER\_STATS=y in your .config. This is on
+feature. That is, set CONFIG\_TIMER\_STATS=y in your .config. This is
+on
 the Kernel Hacking menu, with the prompt: "Collect kernel timers
 statistics"
 
 Compile and install your kernel, and reboot your machine.
 
-To activate the collection of stats (and reset the counters), do "echo 1
+To activate the collection of stats (and reset the counters), do "echo
+1
 \>/proc/timer\_stats"
 
 To stop collecting stats, do "echo 0 \>/proc/timer\_stats"
 
 You can dump the statistics either while the collection system is
 running or stopped. To dump the stats, use 'cat /proc/timer\_stats'.
-This shows the average events/sec at the end as well so you get a rough
+This shows the average events/sec at the end as well so you get a
+rough
 idea of system activity.
 
 /proc/timer\_stats fields (for version 0.1 of the format) are:
@@ -152,10 +169,14 @@ idea of system activity.
 
 ## Dynamic ticks
 
-Tickless kernel, dynamic ticks or NO\_HZ is a config option that enables
-a kernel to run without a regular timer tick. The timer tick is a timer
-interrupt that is usually generated HZ times per second, with the value
-of HZ being set at compile time and varying between around 100 to 1500.
+Tickless kernel, dynamic ticks or NO\_HZ is a config option that
+enables
+a kernel to run without a regular timer tick. The timer tick is a
+timer
+interrupt that is usually generated HZ times per second, with the
+value
+of HZ being set at compile time and varying between around 100 to
+1500.
 Running without a timer tick means the kernel does less work when idle
 and can potentially save power because it does not have to wake up
 regularly just to service the timer. The configuration option is
@@ -182,10 +203,12 @@ Or look at the timer interrupts and compare to jiffies:
 
 ### Powertop
 
-Powertop is a tool that parses the /proc/timer\_stats output and gives a
+Powertop is a tool that parses the /proc/timer\_stats output and gives
+a
 picture of what is causing wakeups on your system. Minimizing these
 wakeups should allow you to decrease power consumption in your device.
-Powertop was originally written for the x86 architecture but also works
+Powertop was originally written for the x86 architecture but also
+works
 for embedded processors. However, in order to get a clean display from
 it, you will need an ncurses lib with wide character support.
 
@@ -206,7 +229,8 @@ Here's a poor-man's version of powertop:
 ## High Resolution Timers
 
 See [High Resolution
-Timers](http://eLinux.org/High_Resolution_Timers "High Resolution Timers"), which
+Timers](http://eLinux.org/High_Resolution_Timers "High Resolution
+Timers"), which
 describe sub-jiffy timers.
 
 ## Old timer wheel/jiffy replacement proposals
@@ -223,12 +247,14 @@ for migrating to that.
 ### John Stultz
 
 In 2005, John Stultz proposed changes to the timers to use a 64-bit
-nanosecond value as the base. He did a presentation and BOF at OLS 2005.
+nanosecond value as the base. He did a presentation and BOF at OLS
+2005.
 (It should be available online)
 
 ## Timer Tick Thread - LKML July 2005
 
-There was a very long thread about timers, jiffies, and related subjects
+There was a very long thread about timers, jiffies, and related
+subjects
 in July of 2005 on the kernel mailing list.
 
 The title was: "Re: [PATCH] i386: Selectable Frequency of the Timer
@@ -236,9 +262,12 @@ Interrupt"
 
 Linus said jiffies is not going away
 
-- still need 32-bit counter, shouldn't be real-time value (too much overhead to calculate)
-- high-res timers shouldn't be sub-HZ, but instead, HZ should be high and timer tick should not be 1:1 with HZ
-    - in other words, have HZ be high (like 2K), have the timer interrupt fire off at some lower frequency,
+- still need 32-bit counter, shouldn't be real-time value (too much
+  overhead to calculate)
+- high-res timers shouldn't be sub-HZ, but instead, HZ should be high
+  and timer tick should not be 1:1 with HZ
+    - in other words, have HZ be high (like 2K), have the timer
+      interrupt fire off at some lower frequency,
       and increment jiffies by more than one on each interrupt.
     - rationale for this is to keep a single sub-system
 
@@ -247,8 +276,10 @@ Arjan had good points about coalescing low-res timers
 - 3 use cases:
 
     - low res timeouts
-    - high res timer for periodic absolute wakeup (wake up every 10 ms, whether last one was late or nt
-    - high res timer for periodic relative wakeup (wake up 10 ms from now)
+    - high res timer for periodic absolute wakeup (wake up every 10
+      ms, whether last one was late or nt
+    - high res timer for periodic relative wakeup (wake up 10 ms from
+      now)
 
 
 [Category](http://eLinux.org/Special:Categories "Special:Categories"):
