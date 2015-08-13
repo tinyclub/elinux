@@ -24,7 +24,8 @@ do
 	orig_toc=$i
 	echo "::: $orig_toc"
 
-	random_toc=__toc_${orig_toc}-${RANDOM}-${RANDOM}
+	# random_toc=__toc_${orig_toc}-${RANDOM}-${RANDOM}
+	random_toc=${orig_toc}
 	((line=${title_lines[$j]}+j-1))
 
 	# Update toc
