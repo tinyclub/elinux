@@ -1,9 +1,8 @@
 # Summary
 
-* 译者须知
+* [译者须知](doc/README.md)
 
     * [如何编译](doc/BUILD.md)
-    * [译者手册](doc/README.md)
     * [任务分工](doc/PLAN.md)
 
 * [开发入口](dev_portals/README.md)
