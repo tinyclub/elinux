@@ -1,4 +1,6 @@
-> From: [eLinux.org](http://eLinux.org/TomoyoLinux "http://eLinux.org/TomoyoLinux")
+> 原文：[eLinux.org](http://eLinux.org/TomoyoLinux.md)<br/>                                                                 
+> 翻译：[@lzz5235](https://github.com/lzz5235)<br/>
+> 校订：[@lzufalcon](https://github.com/lzufalcon)
 
 
 # TomoyoLinux
@@ -7,21 +9,20 @@
 
 [![Tomoyo-color.png](http://eLinux.org/images/e/ed/Tomoyo-color.png)](http://eLinux.org/File:Tomoyo-color.png)
 
-## Contents
+## 目录
 
--   [1 Overview](#overview)
--   [2 Start, today!](#start-today-21)
--   [3 Install](#install)
-    -   [3.1 Mainline version (2-3)](#mainline-version-2-3)
-    -   [3.2 Original hook version (version
-        1.8)](#original-hook-version-version-1-8)
+-   [1 概述](#overview)
+-   [2 从今天开始！](#start-today-21)
+-   [3 安装](#install)
+    -   [3.1 主线版本 (2-3)](#mainline-version-2-3)
+    -   [3.2 原始 hook 版本 (版本 1.8)](#original-hook-version-version-1-8)
     -   [3.3 Arch Linux](#arch-linux)
     -   [3.4 MeeGo 1.1](#meego-1-1)
     -   [3.5 Android](#android)
     -   [3.6 TOMOYO Linux on LFS](#tomoyo-linux-on-lfs)
     -   [3.7 TOMOYO Linux on CAT760](#tomoyo-linux-on-cat760)
--   [4 Browse the code](#browse-the-code)
--   [5 Presentations](#presentations)
+-   [4 浏览代码](#browse-the-code)
+-   [5 演示文档](#presentations)
     -   [5.1 Highlights](#highlights)
     -   [5.2 2010-08-12 LinuxCon 2010](#2010-08-12-linuxcon-2010)
     -   [5.3 2009-10-27 Smartbook/Netbook/Mobile Application Conference
@@ -53,41 +54,39 @@
     -   [5.17 2007-04-18 CELF Worldwide Embedded Linux Conference
         2007](#2007-04-18-celf-worldwide-embedded-linux-conference-2007)
 -   [6 For the memory of OLS2007](#for-the-memory-of-ols2007)
--   [7 Articles](#articles)
--   [8 Readings](#readings)
--   [9 Mainline](#mainline)
-    -   [9.1 Activities](#activities)
-    -   [9.2 Forecast](#forecast)
--   [10 Mailing List](#mailing-list)
--   [11 Check for updates?](#check-for-updates-3f)
--   [12 Talk Annonymously?](#talk-annonymously-3f)
--   [13 Contact](#contact)
+-   [7 文章](#articles)
+-   [8 阅读](#readings)
+-   [9 主线](#mainline)
+    -   [9.1 活动](#activities)
+    -   [9.2 预测](#forecast)
+-   [10 邮件列表](#mailing-list)
+-   [11 检查升级？](#check-for-updates-3f)
+-   [12 匿名交流](#talk-annonymously-3f)
+-   [13 联系我们](#contact)
 
-## Overview
+## 概述
 
-TOMOYO Linux is a Mandatory Access Control (MAC) implementation for
-Linux that can be used to increase the security of a system, while also
-being useful purely as a system analysis tool. It was launched in March
-2003 and is sponsored by NTT DATA Corporation, Japan.
+TOMOYO Linux 是 Linux 上的一个强制访问控制(MAC)实现，可以用来增加系统的安全性，同时也可以纯粹的作为
+系统分析工具使用。这个项目在 2003 年 3 月启动，由日本NTT DATA 公司资助。
 
-For more information, please visit our project page.
+想查看更多的信息，请查看我们的项目主页。
 
 [http://tomoyo.sourceforge.jp/](http://tomoyo.sourceforge.jp/)
 
-## Start, today!
+## 从今天开始！
 
 -   [TOMOYO Linux LiveCD Tutorial for Ubuntu 10.04 (version
     1.8)](http://tomoyo.sourceforge.jp/1.8/ubuntu10.04-live.html.en)
 -   [TOMOYO Linux LiveCD Tutorial for CentOS 5.5 (version
     1.8)](http://tomoyo.sourceforge.jp/1.8/centos5-live.html.en)
 
-## Install
+## 安装
 
-### Mainline version (2.3)
+### 主线版本 (2.3)
 
--   [How to use TOMOYO Linux](http://tomoyo.sourceforge.jp/2.3/)
+-   [如何使用 TOMOYO Linux](http://tomoyo.sourceforge.jp/2.3/)
 
-### Original hook version (version 1.8)
+### 原始 hook 版本 (版本 1.8)
 
 -   [http://tomoyo.sourceforge.jp/1.8/](http://tomoyo.sourceforge.jp/1.8/)
 
@@ -95,32 +94,27 @@ For more information, please visit our project page.
 
 -   [TOMOYO Linux -
     ArchWiki](https://wiki.archlinux.org/index.php/TOMOYO_Linux)
--   [Perfect Hideout: TOMOYO Linux - 5 tips to streamline your
+-   [Perfect Hideout: TOMOYO Linux - 5 个技巧来优化您的体验
     experience](http://stolowski.blogspot.com/2010/12/tomoyo-linux-5-tips-to-streamline-your.html)
--   [Perfect Hideout: Arch Linux with TOMOYO Linux
-    MAC](http://stolowski.blogspot.com/2009/10/arch-linux-with-tomoyo-linux-mac.html)
+-   [Perfect Hideout: Arch Linux 上的 TOMOYO Linux 强制访问控制（MAC）
+    ](http://stolowski.blogspot.com/2009/10/arch-linux-with-tomoyo-linux-mac.html)
 
 ### MeeGo 1.1
 
--   [TOMOYO Linux on
-    MeeGo](http://tomoyo.sourceforge.jp/1.8/meego-x86.html.en)
--   [TOMOYO Linux on MeeGo 1.1
-    handset](http://www.youtube.com/watch?v=H9aZv49d2iw)
+-   [MeeGo 上的 TOMOYO Linux](http://tomoyo.sourceforge.jp/1.8/meego-x86.html.en)
+-   [基于 MeeGo 1.1 的TOMOYO Linux 移动电话](http://www.youtube.com/watch?v=H9aZv49d2iw)
 
 ### [Android](http://elinux.org/Android_Security#TOMOYO_Linux_investigation)
 
--   [TOMOYO Linux on
-    Android](http://tomoyo.sourceforge.jp/1.8/android-arm.html)
--   [Celf
-    Presentation](http://www.slideshare.net/haradats/tomoyo-linux-on-android)
--   [Learning, Analyzing and Protecting Android with TOMOYO Linux
+-   [Android 上的 TOMOYO Linux ](http://tomoyo.sourceforge.jp/1.8/android-arm.html)
+-   [Celf 演示文档](http://www.slideshare.net/haradats/tomoyo-linux-on-android)
+-   [使用 TOMOYO Linux 学习，分析与保护 Android 
     (JLS2009)](http://www.slideshare.net/haradats/learning-analyzing-and-protecting-android-with-tomoyo-linux-jls2009)
 
 ### TOMOYO Linux on [LFS](http://www.linuxfromscratch.org/lfs/)
 
-For those "tough guys", TOMOYO Linux just runs fine on
-[LFS](http://www.linuxfromscratch.org/lfs/). Find yourself and make your
-own version.
+对于这些“顽固的家伙”，TOMOYO Linux 也可以顺利的运行在
+[LFS](http://www.linuxfromscratch.org/lfs/) 上。查找您所使用的版本。
 
 -   [TOMOYO CBLFS](http://cblfs.cross-lfs.org/index.php/TOMOYO)
 
@@ -129,79 +123,66 @@ own version.
 -   [TOMOYO Linux on
     CAT760](http://tomoyo.sourceforge.jp/1.8/cat760-sh.html.en)
 
-## Browse the code
+## 浏览代码
 
 -   [kernel/security/tomoyo](http://tomoyo.sourceforge.jp/cgi-bin/lxr/source/security/tomoyo/)
 
-## Presentations
+## 演示文档
 
 ### Highlights
 
--   [TOMOYO at
-    Slideshare](http://www.slideshare.net/haradats/presentations?order=popular)
+-   [Slideshare 上的 TOMOYO ](http://www.slideshare.net/haradats/presentations?order=popular)
 
 ### 2010-08-12 LinuxCon 2010
 
--   [Your First Guide to "secure
+-   [您的第一个向导去设置 "安全的
     Linux"](http://www.slideshare.net/haradats/your-first-guide-to-secure-linux-4906031)
 
 ### 2009-10-27 [Smartbook/Netbook/Mobile Application Conference Taipei 2009](http://www.oss.org.tw/seminar/smartbook2009/index_en.php)
 
--   [TOMOYO Linux on
-    Android](http://www.slideshare.net/haradats/taipei2009)
+-   [Android 上面的 TOMOYO Linux](http://www.slideshare.net/haradats/taipei2009)
 
 ### 2009-10-23 Japan Linux Symposium 2009
 
--   [Kernel Development: Drawing Lessons from
-    "Mistakes"](http://sourceforge.jp/projects/tomoyo/docs/20091023-drawing-lessons.pdf)
--   ["Learning, Analyzing and Protecting Android with TOMOYO
-    Linux"](http://sourceforge.jp/projects/tomoyo/docs/JLS_tomoyo_tutorial.pdf)
+-   [内核开发：来自于“错误”的借鉴](http://sourceforge.jp/projects/tomoyo/docs/20091023-drawing-lessons.pdf)
+-   ["使用 TOMOYO Linux 学习，分析和保护 Android 系统"](http://sourceforge.jp/projects/tomoyo/docs/JLS_tomoyo_tutorial.pdf)
 
 ### 2009-9-23 LinuxCon2009
 
--   [What Does It Mean Being a Project Manager in Enterprise (Enterprise
-    Edition)](http://sourceforge.jp/projects/tomoyo/docs/20090923linuxcon2009.pdf)
--   [What Does It Mean Being a Project Manager in Enterprise (Open
-    Source Spirit
-    Edition)](http://www.slideshare.net/haradats/what-does-it-mean-being-an-open-source-project-manager-in-enterprise-open-source-spirit-edition)
+-   [作为一个企业项目经理的意义 (企业版本)](http://sourceforge.jp/projects/tomoyo/docs/20090923linuxcon2009.pdf)
+-   [作为一个企业项目经理的意义 （开源精神版本）](http://www.slideshare.net/haradats/what-does-it-mean-being-an-open-source-project-manager-in-enterprise-open-source-spirit-edition)
 
 ### 2009-6-12 [CE Linux Forum Japan Technical Jamboree 28](http://elinux.org/Japan_Technical_Jamboree_28)
 
--   [Part 1: TOMOYO Linux Introduction and Q&A
-    (Japanese)](http://sourceforge.jp/projects/tomoyo/docs/Part1_CELF_Jamboree_28_TOMOYOLinuxOutline.pdf)
-    - [Video](http://www.celinuxforum.org/VideoArchive/JJAM28_1b.html)
+-   [第一部分: TOMOYO Linux 的介绍 与 Q&A
+    (日语)](http://sourceforge.jp/projects/tomoyo/docs/Part1_CELF_Jamboree_28_TOMOYOLinuxOutline.pdf)
+    - [视频](http://www.celinuxforum.org/VideoArchive/JJAM28_1b.html)
 
--   [Part 2: TOMOYO Linux on Android
-    (English)](http://sourceforge.jp/projects/tomoyo/docs/Part2_CELF_Jamboree_28_TOMOYO_on_Android.pdf)
-    - [Video](http://www.celinuxforum.org/VideoArchive/JJAM28_1c.html)
+-   [第二部分: Android 上面的 TOMOYO Linux (英语)](http://sourceforge.jp/projects/tomoyo/docs/Part2_CELF_Jamboree_28_TOMOYO_on_Android.pdf)
+    - [视频](http://www.celinuxforum.org/VideoArchive/JJAM28_1c.html)
 
 ### 2009-5-22 [CE Linux Forum Japan Technical Jamboree 27](http://elinux.org/Japan_Technical_Jamboree_27)
 
--   [TOMOYO Linux on
-    Android](http://sourceforge.jp/projects/tomoyo/docs/Part2_CELF_Android.pdf)
--   [Video](http://www.celinuxforum.org/VideoArchive/JJAM27_1b.html)
+-   [Android 上面的 TOMOYO Linux](http://sourceforge.jp/projects/tomoyo/docs/Part2_CELF_Android.pdf)
+-   [视频](http://www.celinuxforum.org/VideoArchive/JJAM27_1b.html)
 
 ### 2009-1-21 [Linux Conf Au](http://linux.conf.au/) ["Linux Security 2009 (miniconf)"](http://linux.conf.au/schedule/32/view_miniconf?day=tuesday)
 
--   [TOMOYO Linux
-    Overview](http://sourceforge.jp/projects/tomoyo/docs/lca2009-takeda.pdf)
--   [Deep Inside TOMOYO
+-   [TOMOYO Linux 概述](http://sourceforge.jp/projects/tomoyo/docs/lca2009-takeda.pdf)
+-   [深度剖析 TOMOYO
     Linux](http://sourceforge.jp/projects/tomoyo/docs/lca2009-kumaneko.pdf)
--   LWN.net article, ["LCA: The security
-    panel"](http://lwn.net/Articles/315974/)
+-   LWN.net 文章, ["LCA: 安全的面板"](http://lwn.net/Articles/315974/)
 
 ### 2008-11-21 [FreedomHEC Taipei](http://freedomhectaipei.pbwiki.com/) ([Chinese](http://seminar.oss.org.tw/fhec/index.html))
 
 -   ["Secure Linux" Primer](http://tomoyo.sourceforge.jp/taipei2008/)
--   [TOMOYO Linux: pragmatic and manageable security for
-    Linux](http://sourceforge.jp/projects/tomoyo/docs/freedomhectaipei-tomoyo.pdf)
+-   [TOMOYO Linux: Linux 上务实可控的安全](http://sourceforge.jp/projects/tomoyo/docs/freedomhectaipei-tomoyo.pdf)
 
--   [photo](http://picasaweb.google.com/haradats/FreedomHECTaipei2008#)
+-   [照片](http://picasaweb.google.com/haradats/FreedomHECTaipei2008#)
 
 ### 2008-11-13 PacSec 2008
 
--   [Behavior-based countermeasure against SSH Brute Force
-    Attack](http://sourceforge.jp/projects/tomoyo/docs/PacSec2008-en.pdf)
+-   [基于行为的应对 SSH 暴力攻击的对策](http://sourceforge.jp/projects/tomoyo/docs/PacSec2008-en.pdf)
 
 ### 2008-7-25 Ottawa Linux Symposium 2008 BoF
 
@@ -213,81 +194,70 @@ own version.
 ### 2008-7-9 [Linux Foundation Japan](http://www.linux-foundation.jp/) \#8 Symposium
 
 -   [Agenda](http://www.linux-foundation.jp/uploads/seminar20080709/sympo0807.pdf)
--   ["Realities of Mainlining - case of the TOMOYO Linux
-    project"](http://sourceforge.jp/projects/tomoyo/document/lfj2008.pdf)
+-   ["真实的主线 -  TOMOYO Linux 项目案例"](http://sourceforge.jp/projects/tomoyo/document/lfj2008.pdf)
     (pdf)
--   [movie](https://www.linuxfoundation.org/events/node/101/)
+-   [视频](https://www.linuxfoundation.org/events/node/101/)
 
 ### 2008-4-15 [Embedded Linux Conference 2008](http://www.embeddedlinuxconference.com/elc2008/)
 
--   ["How to analyze your Linux's behavior with TOMOYO
-    Linux"](http://sourceforge.jp/projects/tomoyo/document/elc2008.pdf)
-    ([program](http://www.embeddedlinuxconference.com/elc2008/elc2008_003.htm))
+-   ["如何使用TOMOYO Linux 分析您的 Linux 行为"](http://sourceforge.jp/projects/tomoyo/document/elc2008.pdf)
+    ([程序](http://www.embeddedlinuxconference.com/elc2008/elc2008_003.htm))
 
 ### 2008-2-24 [FOSDEM2008](http://www.fosdem.org/2008/) ([Embedded Developer Room](http://www.fosdem.org/2008/schedule/devrooms/embedded))
 
--   [Program](http://www.fosdem.org/2008/schedule/events/embedded_tomoyo_secure)
--   ["TOMOYO Linux for Secure
-    Embedded"](http://sourceforge.jp/projects/tomoyo/document/fosdem2008.pdf)
--   [photo](http://picasaweb.google.com/haradats/FOSDEM08)
+-   [程序](http://www.fosdem.org/2008/schedule/events/embedded_tomoyo_secure)
+-   ["面向安全嵌入式设备的 TOMOYO Linux"](http://sourceforge.jp/projects/tomoyo/document/fosdem2008.pdf)
+-   [照片](http://picasaweb.google.com/haradats/FOSDEM08)
 
 -   [http://www.thinkit.co.jp/article/87/3/](http://www.thinkit.co.jp/article/87/3/)
-    (Japanese)
+    (日语)
 
 ### 2007-11-29 [PacSec 2007](http://www.pacsec.jp/speakers.html)
 
--   [PacSec2007 Report](http://www.thinkit.co.jp/free/article/0712/9/1/)
--   [TOMOYO Linux: A Practical Method to Understand and Protect Your Own
-    Linux
-    Box](http://sourceforge.jp/projects/tomoyo/document/PacSec2007-en-no-demo.pdf)
--   [TOMOYO Linux: A Practical Method to Understand and Protect Your Own
-    Linux Box (with
-    demo)](http://sourceforge.jp/projects/tomoyo/document/PacSec2007-en-demo.pdf)
+-   [PacSec2007 报道](http://www.thinkit.co.jp/free/article/0712/9/1/)
+-   [TOMOYO Linux: 一种实用的方法来了解和保护你自己的 Linux 主机](http://sourceforge.jp/projects/tomoyo/document/PacSec2007-en-no-demo.pdf)
+-   [TOMOYO Linux: 一种实用的方法来了解和保护你自己的 Linux 主机 (包含demo)](http://sourceforge.jp/projects/tomoyo/document/PacSec2007-en-demo.pdf)
 -   [Handouts
-    (bilingual)](http://sourceforge.jp/projects/tomoyo/document/PacSec2007-handout.pdf)
--   [photo](http://picasaweb.google.com/haradats/PacSec2007)
+    (双语)](http://sourceforge.jp/projects/tomoyo/document/PacSec2007-handout.pdf)
+-   [照片](http://picasaweb.google.com/haradats/PacSec2007)
 
 ### 2007-06-29 [Ottawa Linux Symposium 2007](http://www.linuxsymposium.org/2007/index_2007.php)
 
 -   [TOMOYO Linux
     BoF](http://sourceforge.jp/projects/tomoyo/document/ols2007-tomoyo-20070629.pdf)
--   [photo](http://picasaweb.google.com/haradats/OLS2007)
+-   [照片](http://picasaweb.google.com/haradats/OLS2007)
 
 ### 2007-04-18 CELF Worldwide [Embedded Linux Conference 2007](http://www.celinux.org/elc2007/index.html)
 
--   ["TOMOYO Linux - A Lightweight and Manageable Security System for PC
-    and Embedded
-    Linux"](http://sourceforge.jp/projects/tomoyo/document/elc2007-presentation-20070418.pdf)
--   [TOMOYO Linux
-    Tutorial](http://sourceforge.jp/projects/tomoyo/document/elc2007-tutorial-20070418.pdf)
+-   ["TOMOYO Linux - 面向 PC 和 嵌入式 Linux 的轻量级与可管理的安全系统"](http://sourceforge.jp/projects/tomoyo/document/elc2007-presentation-20070418.pdf)
+-   [TOMOYO Linux 使用向导](http://sourceforge.jp/projects/tomoyo/document/elc2007-tutorial-20070418.pdf)
 
 ## For the memory of OLS2007
 
 -   [Memorial of OLS2007
     BOF](http://tomoyo.sourceforge.jp/wiki-e/?OLS2007-BOF)
--   [OLS2007 Photos](http://picasaweb.google.co.jp/haradats/OLS2007)
+-   [OLS2007 照片](http://picasaweb.google.co.jp/haradats/OLS2007)
 -   [「熱い言葉に背中を押されて」](http://www.thinkit.co.jp/free/article/0709/8/1/)
     (in Japanese)
 -   [「海外での講演、そして新たなチャレンジへ」](http://www.thinkit.co.jp/free/article/0709/8/1/)
     (in Japanese)
 
-## Articles
+## 文章
 
--   [A report from JLS [LWN.net](http://lwn.net/Articles/358701/)]
--   [Perfect Hideout: Arch Linux with TOMOYO Linux
-    MAC](http://stolowski.blogspot.com/2009/10/arch-linux-with-tomoyo-linux-mac.html)
--   [Mandriva Linux 2010 released \>\> IT - Chuiko | Information
+-   [来自 JLS [LWN.net](http://lwn.net/Articles/358701/) 的报道]
+-   [Perfect Hideout: Arch Linux 上的 TOMOYO Linux 强制访问控制（MAC）](http://stolowski.blogspot.com/2009/10/arch-linux-with-tomoyo-linux-mac.html)
+-   [Mandriva Linux 2010 发布 \>\> IT - Chuiko | Information
     Technology
     News](http://it-chuiko.com/computers/1177-mandriva-linux-2010-released.html)
 -   [Tomoyo GUI | Eugeni's
     blog](http://dodonov.net/blog/2009/07/06/tomoyo-gui/)
--   [Linux 2.6.30 Gets Faster Boot «
+-   [Linux 2.6.30 下更快的启动 «
     PixelEstudios.com](http://english.pixelestudios.com/blog/?p=6)
--   [Why Linux security has failed (for the past 10 years) - Subreption
+-   [为什么说Linux 安全已经失败 (过去十年) - Subreption
     Blog](http://www.subreption.com/blog/2009/10/why-linux-security-has-failed-for-the-past-10-years.html)
 -   [Kernel prepatch 2.6.30-rc1 |
     LWN.net](http://lwn.net/Articles/327610/)
--   [TOMOYO Linux and pathname-based security |
+-   [TOMOYO Linux 与基于路径名的安全 |
     LWN.net](http://lwn.net/Articles/277833/)
 -   [TOMOYO Linux |
     KernelTrap](http://kerneltrap.org/Linux/TOMOYO_Linux)
@@ -295,17 +265,14 @@ own version.
 ## Readings
 
 -   [「初体験 TOMOYO
-    Linux」](http://www.thinkit.co.jp/free/article/0706/21/1/) (in
-    Japanese)
--   [The World of TOMOYO
-    Linux](http://tomoyo.sourceforge.jp/wiki/?WorldOfTomoyoLinux) (in
-    Japanese)
+    Linux」](http://www.thinkit.co.jp/free/article/0706/21/1/) (日语)
+-   [世界的TOMOYO Linux](http://tomoyo.sourceforge.jp/wiki/?WorldOfTomoyoLinux) (日语)
 
-## Mainline
+## 主线
 
-### Activities
+### 活动
 
--   [At a glance](http://tomoyo.sourceforge.jp/wiki-e/?JLS2009)
+-   [简略查看](http://tomoyo.sourceforge.jp/wiki-e/?JLS2009)
 
 -   [1st posting (13 Jun, 2007)](http://lwn.net/Articles/238049/)
 -   [2nd posting (24 Aug, 2007)](http://lwn.net/Articles/246930/)
@@ -328,44 +295,40 @@ own version.
 -   [14th posting (1 Jan, 2009)](http://lkml.org/lkml/2009/1/1/27)
 -   [15th posting (5 Feb, 2009)](http://lwn.net/Articles/318153/)
 
-### Forecast
+### 预测
 
--   [Linux Weather Forecast/security - The Linux
-    Foundation](http://www.linux-foundation.org/en/Linux_Weather_Forecast/security)
+-   [Linux 天气预报/安全 - Linux 基金会](http://www.linux-foundation.org/en/Linux_Weather_Forecast/security)
 
-## Mailing List
+## 邮件列表
 
--   English
+-   英语
     [tomoyo-users-en@lists.sourceforge.jp](http://lists.sourceforge.jp/mailman/listinfo/tomoyo-users-en)
     ([via GMANE](http://dir.gmane.org/gmane.linux.tomoyo.user.english))
--   English
+-   英语
     [tomoyo-dev-en@lists.sourceforge.jp](http://lists.sourceforge.jp/mailman/listinfo/tomoyo-dev-en)
     ([via GMANE](http://dir.gmane.org/gmane.linux.tomoyo.dev.english))
--   Japanese
+-   日语
     [tomoyo-users@lists.sourceforge.jp](http://lists.sourceforge.jp/mailman/listinfo/tomoyo-users)
     ([via GMANE](http://dir.gmane.org/gmane.linux.tomoyo.user.japanese))
 
-## Check for updates?
+## 检查升级？
 
--   [freshmeat.net: Project details for TOMOYO
-    Linux](http://freshmeat.net/projects/tomoyo)
--   [tomoyo-announce@lists.sourceforge.net (read
-    only)](http://lists.sourceforge.net/lists/listinfo/tomoyo-announce)
-    (Created Aug 15, 2008)
+-   [freshmeat.net: TOMOYO Linux 项目详情](http://freshmeat.net/projects/tomoyo)
+-   [tomoyo-announce@lists.sourceforge.net (只读)](http://lists.sourceforge.net/lists/listinfo/tomoyo-announce)
+    (创建于 8 月 15 日 2008 年)
 
-## Talk Annonymously?
+## 匿名交流？
 
-[TOMOYO: Forum: TOMOYO :: Open Discussion -
+[TOMOYO: 论坛: TOMOYO :: 开放讨论 -
 SourceForge.JP](http://sourceforge.jp/forum/forum.php?forum_id=11352&language_id=1)
 
-## Contact
+## 联系我们
 
-Project Manager: [Toshiharu
-Harada](http://www.linkedin.com/in/toshiharuharada) ([NTT DATA
+项目经理: [Toshiharu Harada](http://www.linkedin.com/in/toshiharuharada) ([NTT DATA
 CORPORATION](http://www.nttdata.co.jp/en/index.html))
 
 
-[Category](http://eLinux.org/Special:Categories "Special:Categories"):
+[分类](http://eLinux.org/Special:Categories "Special:Categories"):
 
 -   [Linux](http://eLinux.org/Category:Linux "Category:Linux")
 
