@@ -182,7 +182,7 @@ ktimers 被 hrtimers 所替代，hrtimers 的主要部分被合并并且出现�
 
   ` cyclictest -n -p 80 -i 500 -l 5000`
 
-这个命令行使用 `clock_nanosleep` 做测试， 优先级为 80，间隔 500us， 运行 500 次迭代测试。
+这个命令行使用 `clock_nanosleep` 做测试， 优先级为 80，间隔 500us， 运行 5000 次迭代测试。
 
 ## 如何验证
 
