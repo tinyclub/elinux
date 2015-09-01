@@ -36,7 +36,7 @@
 -   [内核时钟系统](http://eLinux.org/Kernel_Timer_Systems "内核时钟系统")
     - 改变内核时钟系统的不同提案
 -   [软中断](http://eLinux.org/Soft_IRQ_Threads "软中断") -
-    将软件中断线程化使得它能够被抢占
+    将软中断线程化的技术使得它能够被抢占
     -   ***NOTE:** 软中断在 2007 10 月被并入 [Realtime Preemption](http://eLinux.org/Realtime_Preemption "Realtime Preemption") 补丁中
 -   [高精度定时器](http://eLinux.org/High_Resolution_Timers "高精度定时器") - 系统支持非常高的定时精度
 -   [VST](http://eLinux.org/Variable_Scheduling_Timeouts "Variable Scheduling Timeouts")
