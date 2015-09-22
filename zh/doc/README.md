@@ -53,7 +53,7 @@
 * 基于自己计划翻译的内容创建分支， 以 `zh/dev_portals/Boot_Time/Boot_Time.md` 为例，可以基于远程 `develop` 分支创建 `boot_time` 分支：
 
         git fetch --all
-        git checkout boot_time tinyclub/develop
+        git checkout -b boot_time tinyclub/develop
 
 * 先检测英文原文是否和“From”（即 eLinux.org）原稿一致，不一致就修复并提交。
     * 因为是脚本自动导入，所以难免会存在一定的出错几率。
