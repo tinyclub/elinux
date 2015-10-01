@@ -98,7 +98,7 @@
         * Linux Kernel State Tracer
 
 * [Android Portal](http://elinux.org/Android_Portal)
-    * Getting Started (@[Gracker])
+    * Getting Started (@[lovelers])
         * Introduction to Android
         * Design and Architecture
         * Necessary tools
