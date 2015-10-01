@@ -4,7 +4,7 @@
 #
 
 md=$1
-title="嵌入式 Linux 知识库（eLinux.org 中文版）"
+title="嵌入式 Linux 知识库"
 book=http://tinylab.gitbooks.io/elinux
 site=${book}/content/zh
 
