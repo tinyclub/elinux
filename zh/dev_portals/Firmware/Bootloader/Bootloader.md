@@ -1,34 +1,29 @@
-> From: [eLinux.org](http://eLinux.org/Bootloader "http://eLinux.org/Bootloader")
+> 原文：[eLinux.org](http://eLinux.org/Bootloader "http://eLinux.org/Bootloader")<br/>
+> 翻译：[@lzufalcon](https://github.com/lzufalcon)
 
 
-# Bootloader
+# 引导程序
 
+简单讲，引导程序是计算机开机后运行的第一个软件程序。它负责装载并移交控制权给操作系统内核（例如 Hurd 或者 Linux）。而内核转而初始化接下来的操作系统部分（例如 GNU）。
 
+## 引导程序清单
 
-Briefly, a bootloader is the first software program that runs when a
-computer starts. It is responsible for loading and transferring control
-to the operating system kernel software (such as the Hurd or the Linux).
-The kernel, in turn, initializes the rest of the operating system (e.g.
-GNU).
-
-## List of bootloaders
-
-<table class="wikitable" border="1" cellspacing="0" cellpadding="4">
-<caption align="bottom"> Legend: <b>?</b>:Unknown <b>-</b>:Not supported
+<table class="wikitable" border="0" cellspacing="0" cellpadding="4">
+<caption align="bottom"> 图例: <b>?</b>: 未知 <b>-</b>: 不支持
 </caption>
 <tr>
-<th> Bootloader  </th>
+<th> 引导程序  </th>
 <th> ARM </th>
 <th> BFIN </th>
 <th> MIPS </th>
 <th> PPC </th>
 <th> SH </th>
 <th> x86 </th>
-<th> remarks
+<th> 备注
 </th></tr>
 <tr>
-<th> <a href="http://elinux.org/APEX" title="APEX" class="mw-redirect">APEX</a>
-</th>
+<td> <a href="http://elinux.org/APEX" title="APEX" class="mw-redirect">APEX</a>
+</td>
 <td>                 y  </td>
 <td>   -  </td>
 <td> &#160;?   </td>
@@ -38,21 +33,21 @@ GNU).
 <td>
 </td></tr>
 <tr>
-<th> <a href="http://elinux.org/Barebox" title="Barebox">Barebox (U-Boot-v2)</a>
-</th>
+<td> <a href="http://elinux.org/Barebox" title="Barebox">Barebox (U-Boot-v2)</a>
+</td>
 <td>                 y  </td>
 <td>   y  </td>
 <td>   y  </td>
 <td>  y  </td>
-<td>  (in progress) </td>
+<td>  (进行中) </td>
 <td>  y  </td>
-<td> allows networked setup, integrated editor and scripting
+<td> 支持网络安装（系统），集成编辑器和脚本环境
 </td></tr>
 <tr>
-<th> <a href="http://elinux.org/Blob" title="Blob">Blob</a>
-</th>
+<td> <a href="http://elinux.org/Blob" title="Blob">Blob</a>
+</td>
 <td>                 y  </td>
-<td>   -  </td>
+<td>  -  </td>
 <td>  -   </td>
 <td>  -  </td>
 <td>  -  </td>
@@ -60,52 +55,52 @@ GNU).
 <td>
 </td></tr>
 <tr>
-<th> <a rel="nofollow" class="external text" href="http://www.linux-mips.org/wiki/Common_Firmware_Environment">CFE</a>
-</th>
+<td> <a rel="nofollow" class="external text" href="http://www.linux-mips.org/wiki/Common_Firmware_Environment">CFE</a>
+</td>
 <td>                 -  </td>
-<td>   -  </td>
+<td>  -  </td>
 <td>  y   </td>
 <td>  -  </td>
 <td>  -  </td>
 <td>  -  </td>
-<td> for specific BroadCom chipsets
+<td> 只支持特定的博通芯片
 </td></tr>
 <tr>
-<th> <a href="http://elinux.org/Coreboot" title="Coreboot"> coreboot (<i>LinuxBIOS</i>)</a> <a rel="nofollow" class="external autonumber" href="http://www.coreboot.org/Welcome_to_coreboot">[1]</a>
-</th>
+<td> <a href="http://elinux.org/Coreboot" title="Coreboot"> coreboot (<i>LinuxBIOS</i>)</a> <a rel="nofollow" class="external autonumber" href="http://www.coreboot.org/Welcome_to_coreboot">[1]</a>
+</td>
 <td>                 y  </td>
 <td>   -  </td>
 <td>  -   </td>
 <td>  -  </td>
 <td>  -  </td>
 <td>  y  </td>
-<td> Conference talk by Peter Stuge at Embedded Linux Conference Europe 2008, <a rel="nofollow" class="external text" href="http://free-electrons.com/pub/video/2008/elce/nluug-fall2008-stuge-coreboot.ogv">video</a>
+<td> Peter Stuge 在 2008 年度 嵌入式 Linux 欧洲研讨会上的谈话，<a rel="nofollow" class="external text" href="http://free-electrons.com/pub/video/2008/elce/nluug-fall2008-stuge-coreboot.ogv">视频</a>
 </td></tr>
 <tr>
-<th> <a href="http://elinux.org/Kexecboot" title="Kexecboot">Kexecboot</a>
-</th>
+<td> <a href="http://elinux.org/Kexecboot" title="Kexecboot">Kexecboot</a>
+</td>
 <td>                 y  </td>
 <td>   -  </td>
 <td>  -   </td>
 <td>  -  </td>
 <td>  -  </td>
 <td> &#160;?  </td>
-<td>  is a second-stage bootloader, consisting of the Linux kernel and a small gui
+<td> 是一个二阶段引导程序，包含 Linux 内核和一个小型 GUI
 </td></tr>
 <tr>
-<th> <a href="../../.././dev_portals/Development_Platforms/Tegra/Mainline_SW/U-Boot/Tegra/Mainline_SW/U-Boot.md" title="U-Boot">U-Boot</a>
-</th>
+<td> <a href="../../.././dev_portals/Development_Platforms/Tegra/Mainline_SW/U-Boot/Tegra/Mainline_SW/U-Boot.md" title="U-Boot">U-Boot</a>
+</td>
 <td>                 y  </td>
 <td>   y  </td>
 <td>   y  </td>
 <td>  y  </td>
 <td>  y </td>
 <td>  y  </td>
-<td> allows networked setup
+<td> 支持网络安装
 </td></tr>
 <tr>
-<th> <a href="http://elinux.org/Grub" title="Grub">Grub</a>
-</th>
+<td> <a href="http://elinux.org/Grub" title="Grub">Grub</a>
+</td>
 <td>                &#160;?  </td>
 <td>   -  </td>
 <td>  &#160;?  </td>
@@ -115,19 +110,19 @@ GNU).
 <td>
 </td></tr>
 <tr>
-<th> <a href="http://elinux.org/Lilo" title="Lilo">Lilo</a>
-</th>
+<td> <a href="http://elinux.org/Lilo" title="Lilo">Lilo</a>
+</td>
 <td>                 -  </td>
 <td>   -  </td>
 <td>   -  </td>
 <td>  -  </td>
 <td>  - </td>
 <td>  y  </td>
-<td> x86 only, requires nasm to build
+<td> 仅支持 x86，需要用 nasm 编译
 </td></tr>
 <tr>
-<th> <a rel="nofollow" class="external text" href="http://www.microcross.com/html/micromonitor.html">MicroMonitor</a>
-</th>
+<td> <a rel="nofollow" class="external text" href="http://www.microcross.com/html/micromonitor.html">MicroMonitor</a>
+</td>
 <td>                 y  </td>
 <td>   y  </td>
 <td>  &#160;?  </td>
@@ -137,8 +132,8 @@ GNU).
 <td>
 </td></tr>
 <tr>
-<th> <a rel="nofollow" class="external text" href="http://www.linux-mips.org/wiki/PMON_2000">PMON 2000</a>
-</th>
+<td> <a rel="nofollow" class="external text" href="http://www.linux-mips.org/wiki/PMON_2000">PMON 2000</a>
+</td>
 <td>                 -  </td>
 <td>   -  </td>
 <td>  y   </td>
@@ -148,42 +143,42 @@ GNU).
 <td>
 </td></tr>
 <tr>
-<th> <a href="http://elinux.org/index.php?title=Qi&amp;action=edit&amp;redlink=1" class="new" title="Qi (page does not exist)">Qi</a>
-</th>
+<td> <a href="http://elinux.org/index.php?title=Qi&amp;action=edit&amp;redlink=1" class="new" title="Qi (page does not exist)">Qi</a>
+</td>
 <td>                 y  </td>
 <td>   -  </td>
 <td>  -   </td>
 <td>  -  </td>
 <td>  - </td>
 <td>  -  </td>
-<td> Very fast, simple boot direct to Linux
+<td> 非常快，可简单直接地引导进 Linux
 </td></tr>
 
 <tr>
-<th> <a href="http://elinux.org/index.php?title=RedBoot&amp;action=edit&amp;redlink=1" class="new" title="RedBoot (page does not exist)">RedBoot</a>
-</th>
+<td> <a href="http://elinux.org/index.php?title=RedBoot&amp;action=edit&amp;redlink=1" class="new" title="RedBoot (page does not exist)">RedBoot</a>
+</td>
 <td>                 y  </td>
 <td>  &#160;?  </td>
 <td>   y  </td>
 <td>  y  </td>
 <td>  y </td>
 <td>  y  </td>
-<td> allows networked setup
+<td> 支持网络安装
 </td></tr>
 <tr>
-<th> <a href="http://elinux.org/Syslinux" title="Syslinux">Syslinux</a>
-</th>
+<td> <a href="http://elinux.org/Syslinux" title="Syslinux">Syslinux</a>
+</td>
 <td>                 -  </td>
 <td>   -  </td>
 <td>  -   </td>
 <td>  -  </td>
 <td>  -  </td>
 <td>  y  </td>
-<td> variants (including) isolinux are very flexible for booting x86
+<td> 变体有 isolinux，可非常灵活地引导启动 x86 机器
 </td></tr>
 <tr>
-<th> <a rel="nofollow" class="external text" href="http://yaboot.ozlabs.org/">Yaboot</a>
-</th>
+<td> <a rel="nofollow" class="external text" href="http://yaboot.ozlabs.org/">Yaboot</a>
+</td>
 <td>                 -  </td>
 <td>   -  </td>
 <td>  -   </td>
@@ -193,8 +188,8 @@ GNU).
 <td>
 </td></tr>
 <tr>
-<th> <a rel="nofollow" class="external text" href="http://www.linux-mips.org/wiki/YAMON">YAMON</a>
-</th>
+<td> <a rel="nofollow" class="external text" href="http://www.linux-mips.org/wiki/YAMON">YAMON</a>
+</td>
 <td>                 -  </td>
 <td>   -  </td>
 <td>  y   </td>
@@ -204,23 +199,21 @@ GNU).
 <td>
 </td></tr></table>
 
-A lot more exhaustive list is available at
-[Wikipedia](http://en.wikipedia.org/wiki/Comparison_of_boot_loaders)
+更多详尽的列表可以从[维基百科](http://en.wikipedia.org/wiki/Comparison_of_boot_loaders)上找到。
 
-## List of legacy boot loaders
+## 一些传统的引导程序
 
-Please don't pick any of these for new designs!
+下述内容较旧，请不要用于新设计中！
 
--   rrload (RidgeRun, used for older TI OMAP boards)
--   [pmon](http://www.linux-mips.org/wiki/PMON) (used for Linux MIPS,
-    including BroadCom wifi router boards like Linksys)
+-   rrload（RidgeRun, 曾用于以前的 TI OMAP 开发板）
+-   [pmon](http://www.linux-mips.org/wiki/PMON)（曾用 MIPS Linux，包括博通 Wifi 路由器，譬如 Linksys
 
-## See also
+## 看过来
 
--   [Bootloader\_Security\_Resources](../../.././dev_portals/Security/Bootloader_Security_Resources/Bootloader_Security_Resources.md "Bootloader Security Resources")
+-   [引导程序安全相关资源](../../.././dev_portals/Security/Bootloader_Security_Resources/Bootloader_Security_Resources.md "引导程序安全相关资源")
 
 
-[Category](http://eLinux.org/Special:Categories "Special:Categories"):
+[分类](http://eLinux.org/Special:Categories "Special:Categories"):
 
--   [Bootloaders](http://eLinux.org/Category:Bootloaders "Category:Bootloaders")
+-   [引导程序](http://eLinux.org/Category:Bootloaders "Category:Bootloaders")
 
