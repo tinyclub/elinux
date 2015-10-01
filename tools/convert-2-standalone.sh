@@ -32,4 +32,5 @@ sed -i -e "${start_line},${end_line}d" ${md}
 sed -i -e "s#(\(\.\.\/\)\1*\(\.\/\)*\(.*\).md#(${site}/\3.html#g" ${md}
 
 # Insert the book header
-sed -i -e "1i> 书籍：[$title]($book)<br/>" ${md}
+sed -i -e "1i> 书籍：[$title]($book)" ${md}
+sed -i -e "s/\(>.*\)<br\/>$/\1/g" ${md}
