@@ -4,6 +4,12 @@ all:
 pdf:
 	gitbook pdf
 
+test:
+	sed -i -e "/English/d" LANGS.md
+	gitbook build
+	git checkout -- LANGS.md
+	chromium-browser _book/index.html
+
 read-pdf:
 	evince book.pdf
 
