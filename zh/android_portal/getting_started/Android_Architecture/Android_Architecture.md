@@ -1,114 +1,86 @@
-> From: [eLinux.org](http://eLinux.org/Android_Architecture "http://eLinux.org/Android_Architecture")
+> 原文：[eLinux.org](http://eLinux.org/Android_Architecture "http://eLinux.org/Android_Architecture")
+> 翻译：[@willis](https://github.com/lovelers)
+> 校订：[@lzufalcon](https://github.com/lzufalcon)
 
 
-# Android Architecture
+# Android 架构
 
 
 
-See Google's [What is Android?
-page](http://developer.android.com/guide/basics/what-is-android.html)
-for an overview of Android components, and a diagram of the
-architecture.
+通过查阅 [Google Android 网址](http://developer.android.com/guide/basics/what-is-android.html) 了解Android 的各个部分，以及架构图。
 
-The diagram on that page appears in every presentation I have ever seen
-about Android technical topics (with the exception of my own).
+上文这幅架构图出现在我看过的所有关于 Android 技术主题的演示文稿中（我自己的除外）。
 
-## Contents
+## 目录
 
--   [1 Architecture Diagram](#architecture-diagram)
--   [2 Overview presentations](#overview-presentations)
--   [3 Breakdown of running Android
-    system](#breakdown-of-running-android-system)
--   [4 Relation to the Linux kernel](#relation-to-the-linux-kernel)
+-   [1 框架图](#architecture-diagram)
+-   [2 概要介绍](#overview-presentations)
+-   [3 Android 系统运行明细](#breakdown-of-running-android-system)
+-   [4 与 Linux 内核的关系](#relation-to-the-linux-kernel)
 -   [5 Java](#java)
-    -   [5.1 Java/Object Oriented
-        Philosophy](#java-object-oriented-philosophy)
+        -   [5.1 Java/面向对象思想](#java-object-oriented-phoilosophy)
 
-## Architecture Diagram
+## 架构图
 
-Here is the Android Architecture Diagram, obtained from
-[here](http://developer.android.com/images/system-architecture.jpg).
+Android 框架图出自于：
+[这里](http://developer.android.com/images/system-architecture.jpg)。
 
 [![Android-system-architecture.jpg](http://eLinux.org/images/c/c2/Android-system-architecture.jpg)](http://eLinux.org/File:Android-system-architecture.jpg)
 
-See also [Android internals
-diagram](http://www.makelinux.net/android/internals/)
+请也参考 [Android 内部图](http://www.makelinux.net/android/internals/)
 
-Basically Android has the following layers:
+基本上，Android　存在如下几层结构：
 
--   applications (written in java, executing in Dalvik)
--   framework services and libraries (written mostly in java)
-    -   applications and most framework code executes in a virtual
-        machine
--   native libraries, daemons and services (written in C or C++)
--   the Linux kernel, which includes
-    -   drivers for hardware, networking, file system access and
-        inter-process-communication
+-   应用(Java 程序语言编写，运行在 Dalvik 虚拟机上)
+-   框架服务和函数库(大多数用 Java 程序语言编写)
+    -   应用层以及大多数的 Java 代码运行在虚拟机上)
+-   本地库，守护进程和服务(C/C++ 程序语言编写)
+-   Linux 内核。包括
+    -   硬件驱动，网络，文件系统以及进程间通信
 
-## Overview presentations
+## 概要介绍
 
--   [Android is not just Java on
-    Linux](http://kobablog.wordpress.com/2011/05/22/android-is-not-just-java-on-linux/)
-    -   Great presentation by Tetsuyuki Kobayashi overview of Android
--   See this Android Internals presentation by Karim Yaghmour
+-   [Android 不仅仅是基于 Linux 的 Java](http://kobablog.wordpress.com/2011/05/22/android-is-not-just-java-on-linux/)
+    -   这是作者 Tetsuyuki Kobayashi 对 Android 的精辟讲解
+
+-   查阅 Karim Yaghmour 对 Android 深度剖析
     -   [http://www.opersys.com/blog/android-internals-101103](http://www.opersys.com/blog/android-internals-101103)
-    -   You'll find both the video and the slides there
+    -   您可以在这里找到视频以及幻灯片资料
+
 -   [Mythbusters\_Android.pdf](http://eLinux.org/images/2/2d/Mythbusters_Android.pdf "Mythbusters Android.pdf")
-    Presentation by Matt Porter at ELC Europe
-    -   Has bits and pieces showing problematic Android code and
-        policies
+    Matt Porter 在欧洲 Linux 嵌入式峰会上的报告
+    -   关于有疑问的 Android 代码以及策略的林林总总
 
-## Breakdown of running Android system
+## Android 系统运行明细
 
-A quick look at Android contents and programs running when Android
-starts is at:
+快速查阅 Android 启动时的服务和程序：
 
 -   [http://benno.id.au/blog/2007/11/13/android-under-the-hood](http://benno.id.au/blog/2007/11/13/android-under-the-hood)
 
-## Relation to the Linux kernel
+## 与 Linux 内核的关系
 
-Here is [Greg Kroah-Hartmans presentation on
-Android](http://github.com/gregkh/android-presentation/downloads) from
-the CELF conference 2010, discussing how Google/Android work (or don't
-work) with the Linux community.
+来自于2010年 CELF 峰会的[Greg Kroah-Hartmans presentation on Android](http://github.com/gregkh/android-presentation/downloads)就 Google/Android 与 Linux 社区如何协作（或者不配合）进行了讨论。
 
 ## Java
 
-Java is used as a language for application programming, but it is
-converted into a non-java byte code for runtime interpretation by a
-custom interpreter (Dalvik).
+Java 是应用程序编程语言，但是它会通过定制的解释器（Dalvik）解析为运行时的非 Java 字节码。
 
-### Java/Object Oriented Philosophy
+### Java/面向对象思想
 
-Practicality is more important than purity in implementing the Android
-system.
+Android 系统，实践出真知。
 
-Dianne Hackborn, one of the principal engineers working on Android,
-wrote:
+Dianne Hackborn，一位资深的 Android 工程师，他这样写道：
 
-It's not like I am a C programmer who doesn't like object oriented
-design. In fact prior to Android my primary language was C++... and
-honestly, Java really annoys me in the way it introduces so much more
-overhead to do things that I could express in very nice OO concepts in
-C++ with a much lighter-weight result.
+并不是说我是一个不喜欢面向对象设计的 C 程序员。实际上，在从事 Android 之前，我主要的编程语言是 C++。诚实的说，Java 真正困扰我的地方在于，对于同一件事情，它需要太多的重写方法来完成，然而，我能通过 C++ 非常棒的面向对象的理念来得到更轻量级的结果。
 
-Though Java has a lot of other nice attributes that make it good for
-Android, it also has its share of design flaws and misfeatures that mean
-we can't be totally beautifully OO as you would like.
+尽管在 Android 上，Java 有许多其他很好的属性，　但是它也有自身设计上的缺陷和不足，以至于我们不能认同它就是我们心中的完美的面向对象。
 
-Finally, going forward, our API conventions were defined in a way that
-allowed us to ship a well performing system on the hardware we had the
-time. As the situation changes (and it slowly is, but not enough yet)
-that could change... however, I will probably lean towards keeping those
-API conventions in place just for the sake of consistency with
-everything that currently exists. Of course if Android is successful and
-in 10 years from now we are designing a whole new next generation
-Android framework... well, then the world is a different place.
+最终，再往前看，API 规范的定义允许我们在现有的硬件上安置一个运行良好的操作系统。但是 API 的规范也会随着某些情况的发生而发生改变（比如变得慢，却不是足够慢）。然而，我将尽可能的继续保持这些 API 的规范以便于保证现有的所有工作的一致性。当然了，如果 Android 是成功的，那么在从现在起的10年内，我们将设计全新的下一代 Android 架构。那么，情况就不一样了。
 
 
 
 
-[Category](http://eLinux.org/Special:Categories "Special:Categories"):
+[分类](http://eLinux.org/Special:Categories "Special:Categories"):
 
 -   [Android](http://eLinux.org/Category:Android "Category:Android")
 
