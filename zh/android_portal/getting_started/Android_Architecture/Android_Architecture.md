@@ -13,7 +13,7 @@
 
 ## 目录
 
--   [1 框架图](#architecture-diagram)
+-   [1 架构图](#architecture-diagram)
 -   [2 概要介绍](#overview-presentations)
 -   [3 Android 系统运行明细](#breakdown-of-running-android-system)
 -   [4 与 Linux 内核的关系](#relation-to-the-linux-kernel)
@@ -22,7 +22,7 @@
 
 ## 架构图
 
-Android 框架图出自于：
+Android 架构图出自于：
 [这里](http://developer.android.com/images/system-architecture.jpg)。
 
 [![Android-system-architecture.jpg](http://eLinux.org/images/c/c2/Android-system-architecture.jpg)](http://eLinux.org/File:Android-system-architecture.jpg)
@@ -73,7 +73,7 @@ Dianne Hackborn，一位资深的 Android 工程师，他这样写道：
 
 并不是说我是一个不喜欢面向对象设计的 C 程序员。实际上，在从事 Android 之前，我主要的编程语言是 C++。诚实的说，Java 真正困扰我的地方在于，对于同一件事情，它需要太多的重写方法来完成，然而，我能通过 C++ 非常棒的面向对象的理念来得到更轻量级的结果。
 
-尽管在 Android 上，Java 有许多其他很好的属性，　但是它也有自身设计上的缺陷和不足，以至于我们不能认同它就是我们心中的完美的面向对象。
+尽管在 Android 上，Java 有许多其他很好的属性，但是它也有自身设计上的缺陷和不足，以至于我们不能认为它就是我们心中完美的面向对象。
 
 最终，再往前看，API 规范的定义允许我们在现有的硬件上安置一个运行良好的操作系统。但是 API 的规范也会随着某些情况的发生而发生改变（比如变得慢，却不是足够慢）。然而，我将尽可能的继续保持这些 API 的规范以便于保证现有的所有工作的一致性。当然了，如果 Android 是成功的，那么在从现在起的10年内，我们将设计全新的下一代 Android 架构。那么，情况就不一样了。
 
