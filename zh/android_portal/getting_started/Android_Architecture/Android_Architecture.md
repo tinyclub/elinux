@@ -7,7 +7,7 @@
 
 
 
-通过查阅 [Google Android 网址](http://developer.android.com/guide/basics/what-is-android.html) 了解Android 的各个部分，以及架构图。
+通过查阅 [Google Android 网址](http://developer.android.com/guide/basics/what-is-android.html) 了解 Android 的各个部分，以及架构图。
 
 上文这幅架构图出现在我看过的所有关于 Android 技术主题的演示文稿中（我自己的除外）。
 
@@ -59,7 +59,7 @@ Android 架构图出自于：
 
 ## 与 Linux 内核的关系
 
-来自于2010年 CELF 峰会的[Greg Kroah-Hartmans presentation on Android](http://github.com/gregkh/android-presentation/downloads)就 Google/Android 与 Linux 社区如何协作（或者不配合）进行了讨论。
+来自于 2010 年 CELF 峰会的[Greg Kroah-Hartmans presentation on Android](http://github.com/gregkh/android-presentation/downloads)就 Google/Android 与 Linux 社区如何协作（或者不配合）进行了讨论。
 
 ## Java
 
@@ -75,7 +75,7 @@ Dianne Hackborn，一位资深的 Android 工程师，他这样写道：
 
 尽管在 Android 上，Java 有许多其他很好的属性，但是它也有自身设计上的缺陷和不足，以至于我们不能认为它就是我们心中完美的面向对象。
 
-最终，再往前看，API 规范的定义允许我们在现有的硬件上安置一个运行良好的操作系统。但是 API 的规范也会随着某些情况的发生而发生改变（比如变得慢，却不是足够慢）。然而，我将尽可能的继续保持这些 API 的规范以便于保证现有的所有工作的一致性。当然了，如果 Android 是成功的，那么在从现在起的10年内，我们将设计全新的下一代 Android 架构。那么，情况就不一样了。
+最终，再往前看，API 规范的定义允许我们在现有的硬件上安置一个运行良好的操作系统。但是 API 的规范也会随着某些情况的发生而发生改变（比如变得慢，却不是足够慢）。然而，我将尽可能的继续保持这些 API 的规范以便于保证现有的所有工作的一致性。当然了，如果 Android 是成功的，那么在从现在起的 10 年内，我们将设计全新的下一代 Android 架构。那么，情况就不一样了。
 
 
 
