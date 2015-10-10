@@ -1,2 +1,0 @@
-Bootloader_Security_Resources
-Security

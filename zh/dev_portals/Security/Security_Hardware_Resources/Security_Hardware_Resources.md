@@ -1,105 +1,99 @@
-> From: [eLinux.org](http://eLinux.org/Security_Hardware_Resources "http://eLinux.org/Security_Hardware_Resources")
+> 原文：[eLinux.org](http://eLinux.org/Security_Hardware_Resources.md)<br/> 
+> 翻译：[@lzz5235](https://github.com/lzz5235)<br/>
+> 校订：[@lzufalcon](https://github.com/lzufalcon)
 
 
-# Security Hardware Resources
+# 硬件安全相关的资源
 
 
+本文主要包含基于硬件的安全增强信息，这些信息是 CE Linux 论坛成员所感兴趣的。
 
-This page has information about hardware based security enhancement,
-which is of interest to CE Linux Forum members
 
-## Contents
+## 目录
 
--   [1 Technology/Project pages](#technology-project-pages)
--   [2 Solutions](#solutions)
--   [3 Products](#products)
-    -   [3.1 Security chips](#security-chips)
-        -   [3.1.1 TPM (Trusted Platform
-            Module)](#tpm-trusted-platform-module)
-    -   [3.2 Security enhanced
-        processors](#security-enhanced-processors)
+-   [1 技术/项目主页](#technology-project-pages)
+-   [2 解决方案](#solutions)
+-   [3 产品](#products)
+    -   [3.1 安全芯片](#security-chips)
+        -   [3.1.1 TPM (可信平台模块)](#tpm-trusted-platform-module)
+    -   [3.2 安全增强的处理器](#security-enhanced-processors)
         -   [3.2.1 ARM(R) TrustZone(R)](#arm-r-trustzone-r)
         -   [3.2.2 OMAP M-Shied](#omap-m-shied)
-        -   [3.2.3 Intel(R) Wireless Trusted
-            Platform](#intel-r-wireless-trusted-platform)
+        -   [3.2.3 Intel(R) 无线可信平台](#intel-r-wireless-trusted-platform)
         -   [3.2.4 CELL](#cell)
--   [4 Open Source Projects/Mailing
-    Lists](#open-source-projects-mailing-lists)
-    -   [4.1 TCG/TPM](#tcg-tpm)
+-   [ 4 开源项目与邮件列表 ](#open-source-projects-mailing-lists)
+    -   [ 4.1 TCG/TPM ](#tcg-tpm)
+<span id="technology-project-pages"></span>
 
-## Technology/Project pages
+## 技术/项目主页
 
--   [Security](http://eLinux.org/Security "Security")
--   [Bootloader Security
-    Resources](http://eLinux.org/Bootloader_Security_Resources "Bootloader Security Resources")
+-   [安全](http://eLinux.org/Security "Security")
+-   [Bootloader 安全资源](http://eLinux.org/Bootloader_Security_Resources "Bootloader Security Resources")
+<span id="solutions"></span>
 
-## Solutions
+## 解决方案
 
--   Secure Flashing/Booting Support
--   Secure Storage
--   Cryptographic Accelerators
--   FIPS Compliant True Hardware RNG
--   Secure DMA Channels
+-   对于固件安全/启动的支持
+-   存储安全
+-   密码加速器
+-   符合 FIPS 标准的硬件 RNG
+-   安全 DMA 通道
+<span id="products"></span>
 
-## Products
+## 产品
+<span id="security-chips"></span>
 
-### Security chips
+### 安全芯片
+<span id="tpm-trusted-platform-module"></span>
 
-#### TPM (Trusted Platform Module)
+#### TPM (可信平台模块)
 
-[TPM Specifications](https://www.trustedcomputinggroup.org/groups/tpm/)
+[TPM 技术指标](https://www.trustedcomputinggroup.org/groups/tpm/)
+<span id="security-enhanced-processors"></span>
 
-### Security enhanced processors
+### 安全增强的处理器
+<span id="arm-r-trustzone-r"></span>
 
 #### ARM(R) TrustZone(R)
 
-[ARM Trustzone](http://www.arm.com/products/esd/trustzone_home.html)
+[ARM 可信域](http://www.arm.com/products/esd/trustzone_home.html)
+<span id="omap-m-shied"></span>
 
 #### OMAP M-Shied
 
-[TI White
-Paper](http://focus.ti.com/pdfs/wtbu/ti_mshield_whitepaper.pdf)
+[TI 白皮书](http://focus.ti.com/pdfs/wtbu/ti_mshield_whitepaper.pdf)
+<span id="intel-r-wireless-trusted-platform"></span>
 
-#### Intel(R) Wireless Trusted Platform
+#### Intel(R) 无线可信平台
 
-[IBM White
-Paper](http://www.intel.com/design/pca/applicationsprocessors/whitepapers/300868.htm)
+[IBM 白皮书](http://www.intel.com/design/pca/applicationsprocessors/whitepapers/300868.htm)
+<span id="cell"></span>
 
 #### CELL
 
-The Cell processor has an 'isolated' SPU runtime environment. [CBE
-Architecture
-document](http://cell.scei.co.jp/pdf/CBE_Architecture_v10.pdf)
+Cell 处理器拥有隔离的 SPU 运行时环境。[CBE 架构文档](http://cell.scei.co.jp/pdf/CBE_Architecture_v10.pdf)
+<span id="open-source-projects-mailing-lists"></span>
 
-## Open Source Projects/Mailing Lists
+## 开源项目与邮件列表
+<span id="tcg-tpm"></span>
 
 ### TCG/TPM
 
--   [Linux TPM Device Driver](http://sourceforge.net/projects/tpmdd):
-    Device driver to enable the TPM chip as described by specifications
-    at
-    [http://www.trustedcomputinggroup.org](http://www.trustedcomputinggroup.org).
-    The TPM chip will enable you to use hardware to securely store and
-    protect your keys and personal data. See also the TrouSerS project.
+-   [Linux TPM Device Driver](http://sourceforge.net/projects/tpmdd)：
+    通过设备驱动使能 TPM 芯片，设备驱动的技术指标描述在[http://www.trustedcomputinggroup.org](http://www.trustedcomputinggroup.org)。TPM 芯片将使您能够使用硬件来安全地存储和保护您的密钥和个人数据。您也可以查看 TrouSerS 项目。
 
-The TPM device drivers are already included in the mainline kernel and
-is split up into two parts:
+目前 TPM 驱动已经被包含进 kernel 主线，并且被分为两个部分：
 
--   -   the generic tpm driver module tpm.ko which handles all the
-        common stuff
-    -   a vendor specific part tpm\_\<vendor\>.ko
+-   -	通用的 tpm 驱动模块 tpm.ko，用于处理所有公共部分
+    -   供应商特定部分的 `tmp_<vendor>.ko`
 
-If you have a recent tpm module, it is quite likely that it follows the
-vendor independent TIS Protocol specified by the TCG, which should be
-preferred over the vendor modules. This module is called tpm\_tis.ko
+如果你有一个最近的 tpm 模块，那么它很有可能遵循供应商独立的 TIS 协议，而这个TIS 协议又是由TCG 制定，那么我们应该首选该供应商模块，这个模块被称为 `tpm_tis.ko` 。
 
--   [TrouSers](http://sourceforge.net/projects/trousers): An open-source
-    TCG Software Stack implementation, created and released by IBM.
+-   [TrouSers](http://sourceforge.net/projects/trousers): 一个开源 TCG 软件栈的实现，它由 IBM 创建和发布。
 
 
-[Categories](http://eLinux.org/Special:Categories "Special:Categories"):
+[目录](http://eLinux.org/Special:Categories "Special:Categories"):
 
--   [Security Hardware
-    Resources](http://eLinux.org/Category:Security_Hardware_Resources "Category:Security Hardware Resources")
--   [Security](http://eLinux.org/Category:Security "Category:Security")
+-   [硬件安全相关的资源](http://eLinux.org/Category:Security_Hardware_Resources "Category:Security Hardware Resources")
+-   [安全](http://eLinux.org/Category:Security "Category:Security")
 
