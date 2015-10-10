@@ -39,7 +39,7 @@
 ## 技术/项目主页
 
 -   [硬件安全](../.././dev_portals/Security/Security_Hardware_Resources/Security_Hardware_Resources.md "Security Hardware Resources")
--   [引导程序安全](../.././dev_portals/Security/Bootloader_Security_Resources/Bootloader_Security_Resources.md "Bootloader Security Resources"))
+-   [引导程序安全](../.././dev_portals/Security/Bootloader_Security_Resources/Bootloader_Security_Resources.md "Bootloader Security Resources")
 -   [强制访问控制方案比较](../.././dev_portals/Security/Mandatory_Access_Control_Comparison/Mandatory_Access_Control_Comparison.md "Mandatory Access Control Comparison")
 <span id="security-systems-in-linux-kernel"></span>
 
