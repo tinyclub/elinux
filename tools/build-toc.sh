@@ -19,6 +19,7 @@ egrep -m1 "^## Content|^## 目录" ${page}.md
 [ $? -eq 1 ] && echo "No original table required" && exit
 
 j=0
+k=0
 for i in `sed -n -e "/^## Content/,/^##* /{h;/(.*)/p}" -e "/^## 目录/,/^##* /{h;/(.*)/p}"  ${page}.md | sed -e "s=.*](#\([^ ]*\))$=\1=g" | grep -v "\- "`
 do
 	orig_toc=$i
@@ -26,7 +27,7 @@ do
 
 	# random_toc=__toc_${orig_toc}-${RANDOM}-${RANDOM}
 	random_toc=${orig_toc}
-	((line=${title_lines[$j]}+j-1))
+	((line=${title_lines[$j]}+k-1))
 
 	# Update toc
 	echo sed -i -e "s/](#$orig_toc)$/](#$random_toc)/g" ${page}.md
@@ -34,7 +35,9 @@ do
 
 	# Insert a empty tab <span> with the id in toc for cross reference
         echo sed -i -e "${line}i\\<span id=\"$random_toc\"></span>" ${page}.md
-        sed -i -e "${line}i\\<span id=\"$random_toc\"></span>" ${page}.md
+        sed -i "${line}G" ${page}.md
+        sed -i -e "${line}a\\<span id=\"$random_toc\"></span>" ${page}.md
 
 	((j++))
+        ((k+=2))
 done
