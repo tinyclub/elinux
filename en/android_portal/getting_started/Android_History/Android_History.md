@@ -29,7 +29,7 @@ This page has a few tidbits regarding the history of Android
 
 ## 2005
 
-August, 2007 - Google acquires Android Inc.
+August, 2005 - Google acquires Android Inc.
 
 -   See [Google Buys Android for Its Mobile
     Arsenal](http://www.businessweek.com/technology/content/aug2005/tc20050817_0949_tc024.htm)
@@ -66,7 +66,7 @@ released](http://www.androidcentral.com/android-donut-16-sdk-released-possibly-c
 September-November, 2009 - Motorola, Samsung, HTC, Sony/Ericsson
 announce new Android phones
 
-October, 2001 - 2.0 SDK released (codenamed "Eclair")
+October, 2009 - 2.0 SDK released (codenamed "Eclair")
 
 November, 2009 - Google
 [announces](http://googleblog.blogspot.com/2009/10/announcing-google-maps-navigation-for.html)
