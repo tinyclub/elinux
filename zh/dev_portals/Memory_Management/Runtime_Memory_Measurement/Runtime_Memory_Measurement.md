@@ -1,57 +1,47 @@
-> From: [eLinux.org](http://eLinux.org/Runtime_Memory_Measurement "http://eLinux.org/Runtime_Memory_Measurement")
+> 原文: [eLinux.org](http://eLinux.org/Runtime_Memory_Measurement "http://eLinux.org/Runtime_Memory_Measurement")
+<br/>
+> 翻译：[@zipper1956](https://github.com/zipper)
+> <br/>
+  
+
+# 运行时内存检测
+ 
 
 
-# Runtime Memory Measurement
+本文包括许多关于 Linux 系统下运行时内存检测的方法和资料。
 
+不幸的是目前的内存检测技术不能百分之百准确地检测出内存页面的数量（因为一些内存页面会被一些检测方法重复计算）。见链接：[精确内存检测](../../.././dev_portals/Memory_Management/Accurate_Memory_Measurement/Accurate_Memory_Measurement.md "Accurate Memory Measurement")，此文介绍了一些可以更准确地检测运行时内存的技术和补丁。
 
+## 目录
 
-This page has a collection of ideas and resources having to do with
-measuring runtime memory of a Linux system.
-
-Unfortunately, the existing memory measurement techniques do not give a
-100% accurate accounting of memory pages (since some pages are counted
-more than once by some measures). See [Accurate Memory
-Measurement](../../.././dev_portals/Memory_Management/Accurate_Memory_Measurement/Accurate_Memory_Measurement.md "Accurate Memory Measurement")
-- that page describes techniques (and patches) which can be used to
-measure the runtime memory more accurately.
-
-## Contents
-
--   [1 Measuring memory in Linux (the
-    basics)](#measuring-memory-in-linux-the-basics)
-    -   [1.1 'free' and /proc](#-free-and-proc)
--   [2 Measuring user process memory
-    use](#measuring-user-process-memory-use)
-    -   [2.1 'ps' fields for memory
-        information](#-ps-fields-for-memory-information)
-    -   [2.2 'top' fields for memory
-        information](#-top-fields-for-memory-information)
-    -   [2.3 /proc info](#-proc-info)
+-   [1 Linux 中的内存检测（基础知识）](#measuring-memory-in-linux-the-basics)
+    -   [1.1 'free' 和 /proc](#-free-and-proc)
+-   [2 检测用户进程内存使用](#measuring-user-process-memory-use)
+    -   [2.1 'ps' 命令输出的内存信息](#-ps-fields-for-memory-information)
+    -   [2.2 'top' 命令输出的内存信息](#-top-fields-for-memory-information)
+    -   [2.3 /proc 信息](#-proc-info)
         -   [2.3.1 /proc/\<pid\>/statm](#-proc-3cpid-3e-statm)
         -   [2.3.2 /proc/\<pid\>/status](#-proc-3cpid-3e-status)
         -   [2.3.3 /proc/\<pid\>/maps](#-proc-3cpid-3e-maps)
-            -   [2.3.3.1 mem\-usage command to consolidate
-                data](#mem-usage-command-to-consolidate-data)
-    -   [2.4 Inaccuracies of kernel reporting
-        mechanisms](#inaccuracies-of-kernel-reporting-mechanisms)
-    -   [2.5 Heap memory usage](#heap-memory-usage)
--   [3 Memory Debuggers](#memory-debuggers)
--   [4 Measuring kernel memory use](#measuring-kernel-memory-use)
-    -   [4.1 Kernel Stack Usage](#kernel-stack-usage)
-    -   [4.2 General kernel memory use](#general-kernel-memory-use)
-    -   [4.3 Kernel memory analysis tools and
-        project](#kernel-memory-analysis-tools-and-project)
+            -   [2.3.3.1 使用 mem\-usage 命令合并数据
+                ](#mem-usage-command-to-consolidate-data)
+    -   [2.4 内存报告机制的不准确性](#inaccuracies-of-kernel-reporting-mechanisms)
+    -   [2.5 堆内存使用](#heap-memory-usage)
+-   [3 内存调试工具](#memory-debuggers)
+-   [4 检测内核内存使用](#measuring-kernel-memory-use)
+    -   [4.1 内核栈使用](#kernel-stack-usage)
+    -   [4.2 通用内核内存使用](#general-kernel-memory-use)
+    -   [4.3 内核内存分析工具和项目](#kernel-memory-analysis-tools-and-project)
 
-## Measuring memory in Linux (the basics)
+## Linux 中的内存检测（基础知识）
 
-Here are some basic techniques for measuring memory usage in Linux.
+下面是一些在 Linux 系统中检测内存的一些基础技术。
 
-### 'free' and /proc
+### 'free' 和 /proc
 
-The 'free' command shows the memory on a machine, in certain categories.
+'free' 命令以特定的分类方式显示机器的内存信息。
 
-[need explanation of categories here...'man free' doesn't explain the
-numbers]
+[这里需要对分类方式进行解释...'man free' 命令不会解释这些数字的含义]
 
 
 
@@ -62,10 +52,9 @@ numbers]
     Swap:      2136604     105168    2031436
 
 
- This information is obtained from /proc/meminfo, which has additional
-details not shown by the 'free' command.
+ 下面的这些信息是从 /proc/meminfo 获得的，其中包括了更多 'free' 命令所没有的细节信息。
 
-The following is on my machine with 512 Mb RAM, running Linux 2.6.3:
+下面是从我运行着 Linux 2.6.3 并拥有 512 Mb 内存的机器上获得的内存信息。
 
     $ cat /proc/meminfo
     MemTotal:       507564 kB
@@ -91,114 +80,96 @@ The following is on my machine with 512 Mb RAM, running Linux 2.6.3:
     VmallocUsed:      7692 kB
     VmallocChunk:   516328 kB
 
-See [http://lwn.net/Articles/28345/](http://lwn.net/Articles/28345/) for
-a description of these fields
+见链接 [http://lwn.net/Articles/28345/](http://lwn.net/Articles/28345/) 了解关于这方面的详细描述。
+##########################check here
+## 检测用户进程内存使用
 
-## Measuring user process memory use
+### 'ps' 命令输出的内存信息
 
-### 'ps' fields for memory information
+在 Linux 系统中“ps” 命令可以提供处理器的内存使用信息。然而这些信息没有详细的文档话说明。下面是一些在运行着的Linux 系统中使用 “ps” 和 “/proc” 命令查看内存使用信息的建议：
 
-The 'ps' command provides information about the memory usage of
-processes on a Linux system. However, it is not well documented. Here
-are some notes on using 'ps' and /proc to view memory usage information
-on a running Linux system:
+“ps” 命令输出的各参数的含义：
 
-meaning of ps fields:
+-    %Mem - 内存百分比
+-   VSZ - 虚拟内存大小
+-   RSS - 驻留空间大小
+-   SIZE - 与 VSZ 含义相同
+-   其他？
 
--    %Mem - percent of memory
--   VSZ - Virtual Size
--   RSS - Resident Set Size
--   SIZE - Equivalent to VSZ
--   others??
+### 'top' 命令输出的内存信息
 
-### 'top' fields for memory information
+见 'man top' 输出的帮助信息:
 
-See 'man top':
+-    %MEM -- 内存使用 (RES)
+    -   -   进程当前使用的可用物理内存百分比。
 
--    %MEM -- Memory usage (RES)
-    -   -   A task's currently used share of available physical memory.
-
--   VIRT -- Virtual Image (kb)
-    -   -   The total amount of virtual memory used by the task. It
-            includes all code, data and shared libraries plus pages that
-            have been swapped out.
+-   VIRT -- 虚拟镜像 (kb)
+    -   -   进程使用的所有虚拟内存的总数量，包括所有代码，数据，共享库和交换出去的内存页。
         -   VIRT = SWAP + RES
 
--   SWAP -- Swapped size (kb)
-    -   -   The swapped out portion of a task's total virtual memory
-            image.
+-   SWAP -- 交换出去的内存大小 (kb)
+    -   -   进程所有虚拟内存中被交换出去的部分。
 
--   RES -- Resident size (kb)
-    -   -   -   The non-swapped physical memory a task has used.
+-   RES -- 驻留空间大小 (kb)
+    -   -   -   进程使用的非交换物理内存大小。
             -   RES = CODE + DATA.
 
--   CODE -- Code size (kb)
-    -   -   -   The amount of physical memory devoted to executable
-                code, also known as the 'text resident set' size or TRS
+-   CODE -- 代码大小 (kb)
+    -   -   -   可执行代码占用的物理内存大小，也被称为TRS (text resident set)。
 
--   DATA -- Data+Stack size (kb)
-    -   -   -   The amount of physical memory devoted to other than
-                executable code, also known as the 'data resident set'
-                size or DRS.
+-   DATA -- 数据和堆栈总大小 (kb)
+    -   -   -   除了可执行代码之外占用的物理内存大小，也被称为 DRS (数据驻留集)。
 
--   SHR -- Shared Mem size (kb)
-    -   -   -   The amount of shared memory used by a task. It simply
-                reflects memory that could be potentially shared with
-                other processes.
+-   SHR -- 共享内存大小 (kb)
+    -   -   -   进程使用的共享内存大小。该参数知识简单地反映了可能与其它进程共享的内存大小。
 
--   nDRT -- Dirty Pages count
-    -   -   -   The number of pages that have been modified since they
-                were last written to disk. Dirty pages must be written
-                to disk before the corresponding physical memory
-                location can be used for some other virtual page.
+-   nDRT -- 脏页数量
+    -   -   -   被写到磁盘之后又被修改过的内存页数量。在脏页对应的物理内存可以被用于其他虚拟页面之前，脏页必须被写到磁盘。
 
-Are the following assertions true:??
+下面这些结论是否正确：？？
 
--   virtual memory usage of a process, excluding shared libs = VIRT -
-    SHR
--   physical memory usage of a process excluding shared libraries = RES
-    - SHR
+-   包括共享库在内，进程虚拟内存使用量 = VIRT - SHR
+-   除了共享库之外，进程物理内存使用量 = RES - SHR
 
-### /proc info
+### /proc 信息
 
-see 'man proc' for detailed information about the files and fields in
-the /proc filesystem.
+使用 'man proc' 查看 /proc 文件系统中文件和字段的详细信息。
 
 #### /proc/\<pid\>/statm
 
-/proc/\<pid\>/statm fields: columns are (in pages):
+命令 /proc/\<pid\>/statm 输出: 列含义如下 （以页面为单位）:
 
 <table>
 <tbody>
 <tr class="odd">
-<td align="left">total program size|</td>
+<td align="left">程序总大小|</td>
 </tr>
 <tr class="even">
-<td align="left">resident set size|</td>
+<td align="left">驻留集大小|</td>
 </tr>
 <tr class="odd">
-<td align="left">shared pages|</td>
+<td align="left">共享页面|</td>
 </tr>
 <tr class="even">
-<td align="left">text (code) |</td>
+<td align="left">text (代码) |</td>
 </tr>
 <tr class="odd">
-<td align="left">data/stack |</td>
+<td align="left">数据/堆栈 |</td>
 </tr>
 <tr class="even">
-<td align="left">library |</td>
+<td align="left">库 |</td>
 </tr>
 <tr class="odd">
-<td align="left">dirty pages |</td>
+<td align="left">脏页面 |</td>
 </tr>
 </tbody>
 </table>
 
-Here an example: 693 406 586 158 0 535 0
+例如: 693 406 586 158 0 535 0
 
 #### /proc/\<pid\>/status
 
-/proc/\<pid\>/status fields:
+命令 /proc/\<pid\>/status 输出:
 
 -   Vm Size: 2772 kB
 -   Vm Lck: 0 kB - ???
@@ -210,10 +181,9 @@ Here an example: 693 406 586 158 0 535 0
 
 #### /proc/\<pid\>/maps
 
-The process maps shows the actual memory areas that have been mapped
-into a process' address space, and their permissions.
+处理器映射显示出映射到处理器地址空间的实际内存区域和内存的访问权限。
 
-Example:
+例如:
 
     $ cat /proc/25042/maps
     08048000-080e0000 r-xp 00000000 03:05 196610     /bin/bash
@@ -251,17 +221,14 @@ Example:
 
 
 
-##### mem\_usage command to consolidate data
+##### 使用 mem\_usage 命令合并数据
 
-David Schleef wrote a program to consolidate the information from
-/proc/\<pid\>/maps, and total up each kind of memory for a process.
+David Schleef 编写了一个可以合并 /proc/\<pid\>/maps 输出信息的程序，并且可以统计处理器的各种内存。
 
-Here it is: [Media:mem\_usage](http://eLinux.org/images/d/d3/Mem_usage "Mem usage") (It
-was obtained from
+程序见链接: [Media:mem\_usage](http://eLinux.org/images/d/d3/Mem_usage "Mem usage") (该程序从此处获得
 [http://www.schleef.org/\~ds/mem\_usage](http://www.schleef.org/~ds/mem_usage))
 
-Here is the result of running mem\_usage on the process used in the
-previous example:
+下面是在前一个例子上使用的处理器上运行 mem\_usage 命令输出的结果：
 
     $ ./mem_usage 25042
     Backed by file:
@@ -280,128 +247,75 @@ previous example:
 
 
 
-### Inaccuracies of kernel reporting mechanisms
+### 内存报告机制的不准确性
 
-Many of the memory reporting mechanisms for the kernel are inaccurate,
-due to not recording sufficient information about the true state of the
-system. Here are some random notes on these inaccuracies. To see
-information on different methods of getting more accurate memory
-information, see [Accurate Memory
-Measurement](../../.././dev_portals/Memory_Management/Accurate_Memory_Measurement/Accurate_Memory_Measurement.md "Accurate Memory Measurement")
+由于记录系统真正状态的信息不够充分，内核的许多内存报告机制是不准确的。 这里有一些关于这些不准确性的随笔。 查看关于获得更准确内存信息的不同方法的信息见链接： [精确内存检测](../../.././dev_portals/Memory_Management/Accurate_Memory_Measurement/Accurate_Memory_Measurement.md "Accurate Memory Measurement")
 
--   "copy-on-write" pages - an mmap'ed file may be very large in the
-    process address space, but empty until written to.
+-   "copy-on-write" 页面 - 在处理器地址空间中一个 mmap 文件可能会非常大，但是直到被进行写操作之前一直是空白的。
 
-From Ratboy on Slashdot:
+Ratboy 在科技网站 Slashdot 上写到：
 
-    The mmap() call can map a file (backing store) and allow data to be shared. Memory does
-    not need to be used until the data is read (or written). And this time, the backing
-    store doesn't even need swap (because the file is the backing store).
+    mmap() 可以映射一个文件（备份存储），并且允许数据共享。直到数据被读或者写都不需要使用内存。此时，备份存储甚至不需要交换页面（因为文件就是备份存储）。
 
     ...
 
-    A page of code that is shared - may become a page of code that is private. A page of
-    data that is unwritten doesn't have to exist. Even if it is read! A page of data that
-    is written may STILL be shared.
+    被共享的一个页面的代码可能变成私有的。没有进行写操作的一页数据没有必要存在，即使这个页面是被读过的。进行写操作的的一页数据仍然可以被共享。
 
 
- From others on Slashdot:
+ 其他人在 Slashdot 写到：
 
-Top will show you the same as ps does, ps reads /proc/\<pid\>/statm and
-asks what's going on. The problem on linux is the copy on write
-principle which saves heaps of memory, but makes it virtually impossible
-to figure out what belongs to what. The thing is, when you fork it maps
-the memory and marks everything as copy on write, when something needs
-to write to part of the memory, then it will make the copy for each
-process.
 
-However asking the process how much memory it has allocated will show
-all memory including stuff that is marked copy on write - that is, I
-could have 100 processes showing they each use 1.4MB of memory, because
-they all share the same library, but in fact, its the same copy they are
-all using so I'm only using 1.4 MB instead of 140MB (+PCB et. al)
+    mmap() 可以映射一个文件（备份存储），并且允许数据共享。直到数据被读或者写都不需要使用内存。此时，备份存储甚至不需要交换页面（因为文件就是备份存储）。Top 命令会输出和 ps 命令同样的结果，ps 命令读取 /proc/\<pid\>/statm 当前信息之后就会结束等待输入下一条命令。但是在 Linxu 系统上用来节省堆内存的写时复制策略使得 ps 命令基本不可能分辨出哪些内存属于哪个进程。也就是说，当你调用 fork 时，系统会映射内存并按照写时复制策略标记所有内存，当一些数据需要写入到部分内存时，系统才会给每个进程分配对应的内存拷贝。
+
+然而询问进程已经分配多少内存得到包括标记为写时复制内存在内的所有内存－就是说，我有 100 个进程，每个进程都拥有 1.4MB 内存，因为这些进程都共享同一个库，但是实际上进程使用的内存是同一份，所以我只用了 1.4MB 的内存而不是 140MB。
 
 * * * * *
 
-Each thread in a process shows up as consuming the same amount of memory
-(either this only happens under Linuxthreads or I don't have any
-threaded applications running on my system).
+进程的每个线程看起来消耗的内存一样多（要么是这种情况只在发生在 Linux 系统上，要么是我的系统上没有多线程的应用程序）。
 
-Device mappings show up as consumed memory (which generates plenty of
-complaints about the X server). If you want to find out how much memory
-X is actually using (bytes in cached pixmaps on behalf of each process
-and sans device mappings), try the program here:
-[http://69.142.116.122/dist/pixmap\_mem-1.0.tgz](http://69.142.116.122/dist/pixmap_mem-1.0.tgz)
+设备映射会消耗内存（这导致了很多对 X server 的抱怨）。如果你想要知道 X 实际上使用的内存数量（代表每个进程的缓存像素映射字节数和扫描设备映射），那么尝试使用以下程序：[http://69.142.116.122/dist/pixmap\_mem-1.0.tgz](http://69.142.116.122/dist/pixmap_mem-1.0.tgz)
 
-This contains a tiny program that lists how much memory X is using for
-other programs by caching pixmaps and a perl script that lists how much
-memory X is using sans device mappings. }}}
+这个链接包含一个很小的程序和一个脚本，程序能通过缓存像素映射列出 X 为其他程序使用的内存，脚本能够通过扫描设备映射得出 X 使用的内存大小。
 
--   pmap is a utility which shows the memory usage of a process (it
-    looks like it just reads and interprets /proc/\<pid\>/maps).
+-   pmap 是一个能够输出一个进程内存使用量的工具（看起来像知识读取和解释了 /proc/\<pid\>/mapsd 的数据）。
 
-Someone on Slashdot said:
+一些人在 Slashdot 上这样说到：
 
-    pmap *also* overestimates memory usage, because some portion of the mapped address
-    space isn't actually in use. RSS, on the other hand, only measures memory that is
-    actually in use, but doesn't distinguish between memory that is shared and memory
-    that is not. VSZ is the most pessimistic measure, since it includes all mapped
-    memory, shared and unshared.
+    pmap “同样”会高估内存使用，因为部分映射的地址空间并没有使用。另一方面，RSS 值检测在使用的内存，但是并不区分共享内存和非共享内存。VSZ 是最不精确的检测方法，因为它包含了所有的映射内存，共享内存和非共享内存。
 
-### [Heap memory](http://eLinux.org/Heap_memory "Heap memory") usage
+### [堆内存](http://eLinux.org/Heap_memory "Heap memory") 使用
 
-Heap is the dynamically allocated memory inside each process' address
-space that is managed by the application itself. The structure of this
-memory is actually managed by the C library, with the application
-calling malloc() and free().
+堆是在每个进程地址空间中动态分配的，进程地址空间由应用自身管理。这种内存的结构实际由 C 库管理，而应用程序调用 malloc() 和 free() 函数。   
 
-glibc has the capability to collect statistics information of heap
-functions like malloc() and other functions like memory leak checking or
-double free.
+glibc 能够收集像 malloc() 这样堆操作函数和其他内存泄漏或者双重释放函数的统计信息。  
 
-## Memory Debuggers
+## 内存调试工具
 
-Several tools are available to analyze memory allocations, watch for
-reading and writing beyond the end of allocated memory, and do other
-tasks which help with debugging and tuning memory operations of a
-program. See [Memory Debuggers](../../../toolbox/dev_tools/Memory_Debuggers/Memory_Debuggers.md "Memory Debuggers")
-for a list of different tools and their features.
+有多种工具可以用来分析内存分配，监视已分配内存之外的读写操作和完成其他帮助调试和协调程序内存操作的任务。见链接：[内存调试工具](../../../toolbox/dev_tools/Memory_Debuggers/Memory_Debuggers.md "Memory Debuggers") 了解一系列不同的工具和它们的特性。
 
-## Measuring kernel memory use
+## 检测内核内存使用
 
-### Kernel Stack Usage
+### 内核栈使用
 
--   Tim is adding a stack checking function to KFT (See [Kernel Function
-    Trace](../../.././dev_portals/Boot_Time/Kernel_Function_Trace/Kernel_Function_Trace.md "Kernel Function Trace"))
-    -   -   This new feature has not yet been published
+-   Tim 正在向 KFT 添加一个栈检查函数(见链接 [内核函数跟踪](../../.././dev_portals/Boot_Time/Kernel_Function_Trace/Kernel_Function_Trace.md "Kernel Function Trace"))。
+    -   -   这个新特性没有被发布。
+-   最近 -mm 树添加了 stack-corruption-detector.patch 补丁(2006.3.8)
+-   内核代码树中的 scripts/checkstack.pl 脚本能够给出占用最大静态栈空间的函数。
+-   使能内核中的 CONFIG\_DEBUG\_STACKOVERFLOW 能够使能 irp 处理中的栈空间不足检查。 
+-   使能 CONFIG\_4KSTACKS 会导致栈溢出更频繁发生，特别是某系特定内核代码比如开启了 XFS 的。
 
--   Recent -mm tree added stack-corruption-detector.patch (8th March,
-    2006)
--   The scripts/checkstack.pl script in the kernel tree will show the
-    functions with the largest static stack footprint.
--   Enabling CONFIG\_DEBUG\_STACKOVERFLOW in the kernel will enable
-    checking for low-stack situations in the irq handler.
--   Enabling CONFIG\_4KSTACKS will cause stack overflows to occur more
-    frequently, particularly with certain kernel code such as XFS
-    enabled.
-
-### General kernel memory use
+### 通用内核内存使用
 
 -   [http://www.halobates.de/memorywaste.pdf](http://www.halobates.de/memorywaste.pdf)
-    - Great paper by Andi Kleen, of SUSE Labs, about dynamic memory
-    usage of Linux systems
--   Check /proc/slabinfo to find how much memory is being used by the
-    kernel SLAB allocator (or SLUB or SLOB, depending on what is
-    enabled).
+    - SUSE Labs 实验室的 Andi Kleen 写的关于 Linux 系统动态内存使用的优秀文章
+-   查看 /proc/slabinfo 可以知道内核 SLAB (或者是SLUB及SLOB，取决于哪个被使能) 分配器正在使用的内存量。
 
-### Kernel memory analysis tools and project
+### 内核内存分析工具和项目
 
-The Linux Foundation CE Workgroup has a project to analyze the kernel's
-dynamic memory utilization. See: [Kernel dynamic memory
-analysis](http://eLinux.org/Kernel_dynamic_memory_analysis "Kernel dynamic memory analysis")
+Linux 基金会 CE 工作小组有一个分析内核动态内存使用的项目，见链接： [Kernel dynamic memory analysis](http://eLinux.org/Kernel_dynamic_memory_analysis "Kernel dynamic memory analysis")
 
 
-[Category](http://eLinux.org/Special:Categories "Special:Categories"):
+[分类](http://eLinux.org/Special:Categories "Special:Categories"):
 
 -   [System Size](http://eLinux.org/Category:System_Size "Category:System Size")
 
