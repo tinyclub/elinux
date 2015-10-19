@@ -140,7 +140,7 @@
         * People
         * Organizations
 
-* Hardware Pages
+* Hardware Pages (@[kevinzhang1986])
 
     * BeagleBoard
     * BeagleBone
@@ -205,3 +205,4 @@
 [llz383455526]:https://github.com/llz383455526
 [DecJude]:https://github.com/DecJude
 [ibrother]:https://github.com/ibrother
+[kevinzhang1986]:https://github.com/kevinzhang1986
