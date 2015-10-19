@@ -74,7 +74,7 @@
 </tr>
 <tr class="odd">
 <td align="left">音频输出</td>
-<td align="left">3.5 mm音频接口 和 HDMI</td>
+<td align="left">3.5 mm音频接口 和 HDMI接口</td>
 </tr>
 <tr class="even">
 <td align="left">电源</td>
