@@ -140,7 +140,7 @@
         * People
         * Organizations
 
-* Hardware Pages
+* Hardware Pages(@[chenyuwen])
 
     * BeagleBoard
     * BeagleBone
@@ -205,3 +205,4 @@
 [llz383455526]:https://github.com/llz383455526
 [DecJude]:https://github.com/DecJude
 [ibrother]:https://github.com/ibrother
+[chenyuwen]:htttps//github.com/chenyuwen
