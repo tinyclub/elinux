@@ -12,7 +12,7 @@
 ## 内容
 
 -   [1 有关全志芯片与linux的资源](#linux-on-allwinner-soc-resources)
--   [2 Banana Pi Resources](#banana-pi-resources)
+-   [2 Banana Pi的网上资源](#banana-pi-resources)
 -   [3 Banana Pi交流社区](#banana-pi-community)
 -    [4 板上资源情况](#specifications)
 -    [5 支持的操作系统](#os-support)
@@ -23,7 +23,7 @@
 
 ## Banana Pi的网上资源
 
--   [下载](http://www.lemaker.org/resources/9-38/image_files.html)
+-   [该平台的系统镜像](http://www.lemaker.org/resources/9-38/image_files.html)
 -   [快速开机](http://www.lemaker.org/resources/9-39/banana_pi_quick_start_guide.html)
 -   [Banana Pi 教程和一些使用帮助](http://banoffeepiserver.com/)
 
