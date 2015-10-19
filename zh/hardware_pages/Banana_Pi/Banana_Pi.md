@@ -54,7 +54,7 @@
 </tr>
 <tr class="even">
 <td align="left">存储</td>
-<td align="left">SD (最大支持容量：64GB) / MMC card slot UP to 2T on SATA disk</td>
+<td align="left">SD (最大支持容量：64GB) / MMC / 最大支持2T的SATA接口硬盘</td>
 </tr>
 <tr class="odd">
 <td align="left">网络</td>
@@ -92,7 +92,7 @@
 </tr>
 <tr class="odd">
 <td align="left">GPIO(2X13)端口</td>
-<td align="left">GPIO,UART,I2C 总线,SPI总线（支持两路片选）,CAN总线,ADC,PWM,+3.3v,+5v,ground.</td>
+<td align="left">GPIO,UART,I2C 总线,SPI总线（支持两路片选）,CAN总线,ADC,PWM,+3.3v,+5v, GND.</td>
 </tr>
 <tr class="even">
 <td align="left">LED</td>
