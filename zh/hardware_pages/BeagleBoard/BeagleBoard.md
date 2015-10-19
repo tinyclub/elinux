@@ -1,32 +1,26 @@
-> From: [eLinux.org](http://eLinux.org/BeagleBoard "http://eLinux.org/BeagleBoard")
+> 原文: [eLinux.org](http://eLinux.org/BeagleBoard "http://eLinux.org/BeagleBoard")<br/>
+> 翻译: [@kevinzhang1986](https://github.com/kevinzhang1986)
 
 
-# Beagleboard:Main Page
+# Beagleboard:主页
 
 
-(Redirected from
+(来自于
 [BeagleBoard](http://eLinux.org/index.php?title=BeagleBoard&redirect=no "BeagleBoard"))
 
 
-## Contents
+## 目录
 
--   [1 Welcome to the BeagleBoard.org Support
-    Page](#welcome-to-the-beagleboard-org-support-page)
+-   [1 欢迎来到  BeagleBoard.org 支持
+    页面](#welcome-to-the-beagleboard-org-support-page)
     -   [1.1 BeagleBone Black](#beaglebone-black)
     -   [1.2 BeagleBone](#beaglebone)
     -   [1.3 BeagleBoard-xM](#beagleboard-xm)
     -   [1.4 BeagleBoard](#beagleboard)
 
-## Welcome to the BeagleBoard.org Support Page
+## 欢迎来到 BeagleBoard.org 支持页面
 
-This is the place where BeagleBoard fans can come to find information on
-the BeagleBoard,BeagleBoard-xM, BeagleBone and BeagleBoneBlack projects
-that are manufactured by CircuitCo. Most of this information can also be
-found on the beagleboard.org site and is provided here as a convenience.
-When new revisions of hardware or software is released, you may be able
-to find information here sooner than it appears on the beagleboard.org
-site. You may find information here not found on the beagleboard.org
-site as well.
+这是一个Beagleboard粉丝可以找到BeagleBoard，BeagleBoard-xM， BeagleBone 和 BeagleBoneBlack项目(由CircuitCo制造)相关信息的地方。大多数信息可以在beagleboard.org网站上找到，放在这里是为了方便起见。当硬件或者软件的新版本发布时，你可以发现在这里信息比beagleboard.org网站更早出现。你也可以在这里发现beagleboard.org网站上没有的信息。
 
 
 
@@ -34,7 +28,7 @@ site as well.
 <col width="100%" />
 <thead>
 <tr class="header">
-<th align="left"><p>Click on any of the following boards to go to its official wiki page</p></th>
+<th align="left"><p>点击下面任何单板将会进入它的官方wiki页面</p></th>
 </tr>
 </thead>
 <tbody>
@@ -42,25 +36,25 @@ site as well.
 <td align="left"><a href="http://elinux.org/Beagleboard:BeagleBoneBlack" title="Beagleboard:BeagleBoneBlack"><img src="http://elinux.org/images/1/18/BBB-400.png" alt="BBB-400.png" /></a>
 <p><br /> <br /></p>
 <h3>BeagleBone Black<a href="http://elinux.org/Beagleboard:BeagleBoneBlack" title="Beagleboard:BeagleBoneBlack"><img src="http://elinux.org/images/0/03/NEW.png" alt="NEW.png" /></a></h3>
-<p><br /> <br />The latest addition to the BeagleBoard line. Similar to the BeagleBone but with 1GHZ AM335X processor, 512MB of DDR3, 2GB eMMC, and HDMI. <br /> <br /> <a href="http://elinux.org/Beagleboard:BeagleBoneBlack" title="Beagleboard:BeagleBoneBlack"><img src="http://elinux.org/images/a/a9/GotoWiki-official.png" alt="GotoWiki-official.png" /></a> - Go here to find official specifications and resources <br /> <a href="http://elinux.org/BeagleBone_Community" title="BeagleBone Community"><img src="http://elinux.org/images/3/38/GotoWiki-community.png" alt="GotoWiki-community.png" /></a> - Go here to find community created &quot;howto&quot; pages and resources <br /> <a href="http://elinux.org/Beagleboard:BeagleBone_Capes" title="Beagleboard:BeagleBone Capes"><img src="http://elinux.org/images/4/4c/GotoWiki-capes.png" alt="GotoWiki-capes.png" /></a> - Go here to find a registry of compatible acessory board Capes <br /></p></td>
+<p><br /> <br />最近添加到BeagleBoard系列。和BeagleBone类似，1GHz AM335X处理器，512MB的DDR3，2GB eMMC和HDMI。 <br /> <br /> <a href="http://elinux.org/Beagleboard:BeagleBoneBlack" title="Beagleboard:BeagleBoneBlack"><img src="http://elinux.org/images/a/a9/GotoWiki-official.png" alt="GotoWiki-official.png" /></a> - 去这里可以找到官方标准和资源 <br /> <a href="http://elinux.org/BeagleBone_Community" title="BeagleBone Community"><img src="http://elinux.org/images/3/38/GotoWiki-community.png" alt="GotoWiki-community.png" /></a> - 去这里可以找到创建 &quot;howto&quot; 页面的社区和资源 <br /> <a href="http://elinux.org/Beagleboard:BeagleBone_Capes" title="Beagleboard:BeagleBone Capes"><img src="http://elinux.org/images/4/4c/GotoWiki-capes.png" alt="GotoWiki-capes.png" /></a> - 去这里可以找到兼容附属板的注册信息 <br /></p></td>
 </tr>
 <tr class="even">
 <td align="left"><a href="http://elinux.org/Beagleboard:BeagleBone" title="Beagleboard:BeagleBone"><img src="http://elinux.org/images/c/c2/Bone-400.jpg" alt="Bone-400.jpg" /></a>
 <p><br /> <br /></p>
 <h3>BeagleBone</h3>
-<p><br /> <br />A bare-bones BeagleBoard that acts as a USB or Ethernet connected expansion companion for your current BeagleBoard and BeagleBoard-xM or works stand-alone. <br /> <br /> <a href="http://elinux.org/Beagleboard:BeagleBone" title="Beagleboard:BeagleBone"><img src="http://elinux.org/images/a/a9/GotoWiki-official.png" alt="GotoWiki-official.png" /></a> - Go here to find official specifications and resources <br /> <a href="http://elinux.org/BeagleBone_Community" title="BeagleBone Community"><img src="http://elinux.org/images/3/38/GotoWiki-community.png" alt="GotoWiki-community.png" /></a> - Go here to find community created &quot;howto&quot; pages and resources <br /> <a href="http://elinux.org/Beagleboard:BeagleBone_Capes" title="Beagleboard:BeagleBone Capes"><img src="http://elinux.org/images/4/4c/GotoWiki-capes.png" alt="GotoWiki-capes.png" /></a> - Go here to find a registry of compatible acessory board Capes <br /></p></td>
+<p><br /> <br />一个裸骨（bare-bones）的BeagleBoard单板，作为一个USB或者以太网卡连接到你当前BeagleBoard和BeagleBoard-xM，或者可以单独工作。 <br /> <br /> <a href="http://elinux.org/Beagleboard:BeagleBone" title="Beagleboard:BeagleBone"><img src="http://elinux.org/images/a/a9/GotoWiki-official.png" alt="GotoWiki-official.png" /></a> - 去这里可以找到官方标准和资源 <br /> <a href="http://elinux.org/BeagleBone_Community" title="BeagleBone Community"><img src="http://elinux.org/images/3/38/GotoWiki-community.png" alt="GotoWiki-community.png" /></a> - 去这里可以找到创建&quot;howto&quot; 页面的社区和资源 <br /> <a href="http://elinux.org/Beagleboard:BeagleBone_Capes" title="Beagleboard:BeagleBone Capes"><img src="http://elinux.org/images/4/4c/GotoWiki-capes.png" alt="GotoWiki-capes.png" /></a> - 去这里可以找到兼容附属板的注册信息 <br /></p></td>
 </tr>
 <tr class="odd">
 <td align="left"><a href="http://elinux.org/Beagleboard:BeagleBoard-xM" title="Beagleboard:BeagleBoard-xM"><img src="http://elinux.org/images/d/d8/BBxM-400.jpg" alt="BBxM-400.jpg" /></a>
 <p><br /> <br /></p>
 <h3>BeagleBoard-xM</h3>
-<p><br /> <br />Delivers extra ARM ® Cortex TM -A8 MHz now at 1 GHz and extra memory with 512MB of low-power DDR RAM, enabling hobbyists, innovators and engineers to go beyond their current imagination. <br /> <br /> <a href="http://elinux.org/Beagleboard:BeagleBoard-xM" title="Beagleboard:BeagleBoard-xM"><img src="http://elinux.org/images/a/a9/GotoWiki-official.png" alt="GotoWiki-official.png" /></a> - Go here to find official specifications and resources <br /> <a href="http://elinux.org/BeagleBoard_Community" title="BeagleBoard Community"><img src="http://elinux.org/images/3/38/GotoWiki-community.png" alt="GotoWiki-community.png" /></a> - Go here to find community created &quot;howto&quot; pages and resources <br /></p></td>
+<p><br /> <br />提供ARM ® Cortex TM -A8 额外的1GHz频率和512MB低功耗DDR RAM，使得业余爱好者，创新者和工程师超乎他们目前的想象。 <br /> <br /> <a href="http://elinux.org/Beagleboard:BeagleBoard-xM" title="Beagleboard:BeagleBoard-xM"><img src="http://elinux.org/images/a/a9/GotoWiki-official.png" alt="GotoWiki-official.png" /></a> - 去这里可以找到官方标准和资源 <br /> <a href="http://elinux.org/BeagleBoard_Community" title="BeagleBoard Community"><img src="http://elinux.org/images/3/38/GotoWiki-community.png" alt="GotoWiki-community.png" /></a> - 去这里可以找到创建&quot;howto&quot; 页面的社区和资源 <br /></p></td>
 </tr>
 <tr class="even">
 <td align="left"><a href="http://elinux.org/Beagleboard:BeagleBoard" title="Beagleboard:BeagleBoard"><img src="http://elinux.org/images/0/0e/BB-400.jpg" alt="BB-400.jpg" /></a>
 <p><br /> <br /></p>
 <h3>BeagleBoard</h3>
-<p><br /> <br />A low-cost, fan-less single board computer that unleashes laptop-like performance and expandability without the bulk, expense, or noise of typical desktop machines. <br /> <br /> <a href="http://elinux.org/Beagleboard:BeagleBoard" title="Beagleboard:BeagleBoard"><img src="http://elinux.org/images/a/a9/GotoWiki-official.png" alt="GotoWiki-official.png" /></a> - Go here to find official specifications and resources <br /> <a href="http://elinux.org/BeagleBoard_Community" title="BeagleBoard Community"><img src="http://elinux.org/images/3/38/GotoWiki-community.png" alt="GotoWiki-community.png" /></a> - Go here to find community created &quot;howto&quot; pages and resources <br /></p></td>
+<p><br /> <br />一款低成本，无风扇的单板，拥有笔记本般的性能，没有典型台式机的噪音，花费和体积。 <br /> <br /> <a href="http://elinux.org/Beagleboard:BeagleBoard" title="Beagleboard:BeagleBoard"><img src="http://elinux.org/images/a/a9/GotoWiki-official.png" alt="GotoWiki-official.png" /></a> - 去这里可以找到官方标准和资源 <br /> <a href="http://elinux.org/BeagleBoard_Community" title="BeagleBoard Community"><img src="http://elinux.org/images/3/38/GotoWiki-community.png" alt="GotoWiki-community.png" /></a> - 去这里可以找到创建&quot;howto&quot; 页面的社区和资源 <br /></p></td>
 </tr>
 </tbody>
 </table>
