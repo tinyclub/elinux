@@ -1,13 +1,10 @@
-> 原文： [eLinux.org](http://eLinux.org/Runtime_Memory_Measurement "http://eLinux.org/Runtime_Memory_Measurement")
+> 原文： [eLinux.org](http://eLinux.org/Runtime_Memory_Measurement "http://eLinux.org/Runtime_Memory_Measurement")<br/>
+> 翻译：[@zipper1956](https://github.com/zipper)<br/>
+> 校订：[@lzufalcon](https://github.com/lzufalcon)<br/>
 
-> 翻译：[@zipper1956](https://github.com/zipper)
-
-> 校订：[@lzufalcon](https://github.com/lzufalcon)
-
-  
 
 # 运行时内存检测
- 
+
 
 
 本文包括许多关于 Linux 系统下运行时内存检测的方法和资料。
@@ -22,9 +19,9 @@
     -   [2.1 'ps' 命令输出的内存信息](#-ps-fields-for-memory-information)
     -   [2.2 'top' 命令输出的内存信息](#-top-fields-for-memory-information)
     -   [2.3 /proc 信息](#-proc-info)
-        -   [2.3.1 /proc/\/statm](#-proc-3cpid-3e-statm)
-        -   [2.3.2 /proc/\/status](#-proc-3cpid-3e-status)
-        -   [2.3.3 /proc/\/maps](#-proc-3cpid-3e-maps)
+        -   [2.3.1 /proc/\<pid\>/statm](#-proc-3cpid-3e-statm)
+        -   [2.3.2 /proc/\<pid\>/status](#-proc-3cpid-3e-status)
+        -   [2.3.3 /proc/\<pid\>/maps](#-proc-3cpid-3e-maps)
             -   [2.3.3.1 使用 mem\-usage 命令合并数据
                 ](#mem-usage-command-to-consolidate-data)
     -   [2.4 内存报告机制的不准确性](#inaccuracies-of-kernel-reporting-mechanisms)
@@ -137,41 +134,41 @@
 
 使用 'man proc' 查看 /proc 文件系统中文件和字段的详细信息。
 
-#### /proc/\/statm
+#### /proc/\<pid\>/statm
 
-命令 /proc/\/statm 输出: 列含义如下 （以页面为单位）:
+命令 /proc/\<pid\>/statm 输出: 列含义如下 （以页面为单位）:  
 
-
-
-
-程序总大小|
-
-
-驻留集大小|
-
-
-共享页面|
-
-
-text (代码) |
-
-
-数据/堆栈 |
-
-
-库 |
-
-
-脏页面 |
-
-
-
+<table>
+<tbody>
+<tr class="odd">
+<td align="left">程序总大小|</td>
+</tr>
+<tr class="even">
+<td align="left">驻留集大小|</td>
+</tr>
+<tr class="odd">
+<td align="left">共享页面|</td>
+</tr>
+<tr class="even">
+<td align="left">text (代码)|</td>
+</tr>
+<tr class="odd">
+<td align="left">数据/堆栈 |</td>
+</tr>
+<tr class="even">
+<td align="left">库 |</td>
+</tr>
+<tr class="odd">
+<td align="left">脏页面 |</td>
+</tr>
+</tbody>
+</table>
 
 例如: 693 406 586 158 0 535 0
 
-#### /proc/\/status
+#### /proc/\<pid\>/status
 
-命令 /proc/\/status 输出:
+命令 /proc/\<pid\>/status 输出:
 
 -   Vm Size: 2772 kB
 -   Vm Lck: 0 kB - ???
@@ -181,7 +178,7 @@ text (代码) |
 -   Vm Exe: 608 kB
 -   Vm Lib: 1440 kB
 
-#### /proc/\/maps
+#### /proc/\<pid\>/maps
 
 进程映射显示出映射到进程地址空间的实际内存区域和内存的访问权限。
 
@@ -225,7 +222,7 @@ text (代码) |
 
 ##### 使用 mem\_usage 命令合并数据
 
-David Schleef 编写了一个可以合并 /proc/\/maps 输出信息的程序，并且可以统计进程的各种内存。
+David Schleef 编写了一个可以合并 /proc/\<pid\>/maps 输出信息的程序，并且可以统计进程的各种内存。
 
 程序见链接: [Media:mem\_usage](http://eLinux.org/images/d/d3/Mem_usage "Mem usage") (该程序从此处获得
 [http://www.schleef.org/\~ds/mem\_usage](http://www.schleef.org/~ds/mem_usage))
@@ -266,7 +263,7 @@ Ratboy 在科技网站 Slashdot 上写到：
 
  其他人在 Slashdot 写到：
 
-mmap() 可以映射一个文件（备份存储），并且允许数据共享。直到数据被读或者写都不需要使用内存。此时，备份存储甚至不需要交换页面（因为文件就是备份存储）。Top 命令会输出和 ps 命令同样的结果，ps 命令读取 /proc/\/statm 当前信息之后就会结束等待输入下一条命令。但是在 Linux 系统上用来节省堆内存的写时复制策略使得 ps 命令基本不可能分辨出哪些内存属于哪个进程。也就是说，当你调用 fork 时，系统会映射内存并按照写时复制策略标记所有内存，当一些数据需要写入到部分内存时，系统才会给每个进程分配对应的内存拷贝。
+mmap() 可以映射一个文件（备份存储），并且允许数据共享。直到数据被读或者写都不需要使用内存。此时，备份存储甚至不需要交换页面（因为文件就是备份存储）。Top 命令会输出和 ps 命令同样的结果，ps 命令读取 /proc/\<pid\>/statm 当前信息之后就会结束等待输入下一条命令。但是在 Linux 系统上用来节省堆内存的写时复制策略使得 ps 命令基本不可能分辨出哪些内存属于哪个进程。也就是说，当你调用 fork 时，系统会映射内存并按照写时复制策略标记所有内存，当一些数据需要写入到部分内存时，系统才会给每个进程分配对应的内存拷贝。
 
 然而询问进程已经分配多少内存会得到包括标记为写时复制内存在内的所有内存－就是说，我有 100 个进程，每个进程都拥有 1.4MB 内存，因为这些进程都共享同一个库，但是实际上进程使用的内存是同一份，所以我只用了 1.4MB 的内存而不是 140MB。
 
@@ -278,7 +275,7 @@ mmap() 可以映射一个文件（备份存储），并且允许数据共享。�
 
 这个链接包含一个很小的程序和一个脚本，程序能通过缓存像素映射列出 X 为其他程序使用的内存，脚本能够通过扫描设备映射得出 X 使用的内存大小。
 
--   pmap 是一个能够输出一个进程内存使用量的工具（看起来像只是读取和解释了 /proc/\/mapsd 的数据）。
+-   pmap 是一个能够输出一个进程内存使用量的工具（看起来像只是读取和解释了 /proc/\<pid\>/mapsd 的数据）。
 
 一些人在 Slashdot 上这样说到：
 
@@ -319,3 +316,4 @@ Linux 基金会 CE 工作小组有一个分析内核动态内存使用的项目�
 [分类](http://eLinux.org/Special:Categories "Special:Categories"):
 
 -   [System Size](http://eLinux.org/Category:System_Size "Category:System Size")
+
