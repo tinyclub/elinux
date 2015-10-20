@@ -1,13 +1,13 @@
 > 原文：[eLinux.org](http://eLinux.org/Android_History "http://eLinux.org/Android_History")
 > 翻译：[@willis](https://github.com/lovelers)
-> 校订：[@lzufalcon](https://github.com/lzufalcon)
+> 校订：[@lzufalcon](https://github.com/lzufalcon, @zipper1956(https://github.com/zipper1956)
 
 
 # Android 历史
 
 
 
-此页讲述了关于 Android 历史方面的一些趣闻
+本文讲述了关于 Android 历史方面的一些趣闻
 
 
 ## 目录
@@ -21,8 +21,7 @@
 
 ## 概述
 
--   [Google's Open Source Android OS Will Free the Wireless
-    Web](http://www.wired.com/techbiz/media/magazine/16-07/ff_android?currentPage=all)
+-   [Google 的 Android 操作系统开源代码将要免费公布于网络](http://www.wired.com/techbiz/media/magazine/16-07/ff_android?currentPage=all)
     2008 年 7 月，Wired 上的文章
     -   介绍了安迪·鲁宾和拉里·佩奇的第一次会议，以及 Google 收购 Android 的所有策略
     一些评论这样写到（参考最后 4 自然段）：
@@ -33,14 +32,12 @@
 
 2005 年 8 月 - Google 收购 Android
 
--   查看 [Google Buys Android for Its Mobile
-    Arsenal](http://www.businessweek.com/technology/content/aug2005/tc20050817_0949_tc024.htm)
+-   见链接 [Google 购买 Android 作为其移动领域的宝藏](http://www.businessweek.com/technology/content/aug2005/tc20050817_0949_tc024.htm)
     - 2005 年 8 月，美国商业周刊
 
 ## 2007
 
--   查看 [I, Robot: The Man Behind the Google
-    Phone](http://www.nytimes.com/2007/11/04/technology/04google.html?_r=1)
+-   见链接 [我是机器人: Google 手机背后的男人](http://www.nytimes.com/2007/11/04/technology/04google.html?_r=1)
     - 2007 年 11 月，纽约时报报道了一篇关于安迪·鲁宾的文章
 
 2007 年 11 月 - 开放手机联盟成立
@@ -51,30 +48,22 @@
 
 ## 2009
 
-2009 年 2 月 - 在日本成立了开放嵌入式软件基金会
-[formed](http://techon.nikkeibp.co.jp/english/NEWS_EN/20090325/167661/)
-[Open Embedded Software Foundation](http://www.oesf.org/) (OESF)
+2009 年 2 月 - [开放嵌入式软件基金会](http://www.oesf.org/) (OESF) 在日本[成立] (http://techon.nikkeibp.co.jp/english/NEWS_EN/20090325/167661/)
 
-2009 年 4 月 - 1.5 SDK 更新 （代号 "CupCake")
+2009 年 4 月 - 1.5 SDK 发布 （代号 "CupCake")
 
-2009 年 7 月 - [Mentor Graphics acquires Embedded
-Alley](http://www.linuxfordevices.com/c/a/News/Mentor-Graphics-acquires-Embedded-Alley/)
+2009 年 7 月 - [Mentor Graphics 公司收购了 Embedded Alley 公司](http://www.linuxfordevices.com/c/a/News/Mentor-Graphics-acquires-Embedded-Alley/)
 
-2009 年 9 月 - 1.6 SDK 更新 [1.6 SDK
-released](http://www.androidcentral.com/android-donut-16-sdk-released-possibly-coming-users-next-month)
+2009 年 9 月 - [1.6 SDK 发布](http://www.androidcentral.com/android-donut-16-sdk-released-possibly-coming-users-next-month)
 (代号 "Donut")
 
 2009 年 9-11 月 - 摩托罗拉，三星，宏达电子，索尼/爱立信发布了新的 Android 手机
 
 2009 年 10 月 - 2.0 SDK 发布 （代号 "Eclair")
 
-2009 年 11 月 - Google 发布了地图应用
-[announces](http://googleblog.blogspot.com/2009/10/announcing-google-maps-navigation-for.html)
-[Maps Navigation](http://www.google.com/mobile/navigation/index.html#p=default)
+2009 年 11 月 - Google [发布](http://googleblog.blogspot.com/2009/10/announcing-google-maps-navigation-for.html) 了[地图导航](http://www.google.com/mobile/navigation/index.html#p=default) 应用
 
-- 商业分析：[Google Redefines Disruption: the "Less than
-    Free" Business
-    Model](http://abovethecrowd.com/2009/10/29/google-redefines-disruption-the-%E2%80%9Cless-than-free%E2%80%9D-business-model/)
+- 商业分析：[Google 重新定义打破常规: "比免费更便宜" 的商业模式](http://abovethecrowd.com/2009/10/29/google-redefines-disruption-the-%E2%80%9Cless-than-free%E2%80%9D-business-model/)
 
 ## 2010
 

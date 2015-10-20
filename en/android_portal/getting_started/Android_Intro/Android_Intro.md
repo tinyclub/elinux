@@ -41,7 +41,7 @@ find links to:
     Android system.)
 -   [The Growth of Android in Embedded
     Systems](https://training.linuxfoundation.org/free-linux-training/download-training-materials/growth-of-android-in-embedded-systems)
-    - This Linux Training publication has some excellent material on the
+    - This Linux Training publication has some excellent materials on the
     current (as of early 2013) status of Android as it relates to
     traditional embedded linux.
 
