@@ -24,7 +24,7 @@
     - 改变内核定时器系统的不同提案
 -   [软中断线程](http://eLinux.org/Soft_IRQ_Threads "软中断线程") -
     将软中断线程化的技术使得它能够被抢占
-    -   **NOTE:** 软中断在 2007 年 10 月被并入 [Realtime Preemption](http://eLinux.org/Realtime_Preemption "Realtime Preemption") 补丁中
+    -   **NOTE:** 于 2007 年 10 月被并入 [Realtime Preemption](http://eLinux.org/Realtime_Preemption "Realtime Preemption") 补丁中
 -   [高精度定时器](http://eLinux.org/High_Resolution_Timers "高精度定时器") - 支持非常高的定时精度
 -   [VST](http://eLinux.org/Variable_Scheduling_Timeouts "Variable Scheduling Timeouts")
     - 系统支持 tickless 模式
@@ -43,8 +43,7 @@ Tools for PRUSS
 
 ## 文档
 
--   [构建嵌入式 Linux 系统，第二版]
-    (http://www.amazon.com/Building-Embedded-Linux-Systems-Yaghmour/dp/0596529686)
+-   [构建嵌入式 Linux 系统，第二版](http://www.amazon.com/Building-Embedded-Linux-Systems-Yaghmour/dp/0596529686)
     讨论了实时抢占的补丁
 -   [ CELF Realtime 规范](http://tree.celinuxforum.org/CelfPubWiki/RTSpecDraft_5fR2)
     (来源于 2004 年，相当旧的资料了)
@@ -76,7 +75,7 @@ Tools for PRUSS
     [文章](http://ols.fedoraproject.org/OLS/Reprints-2008/mckenney-reprint.pdf)
     [视频](http://free-electrons.com/pub/video/2008/ols/ols2008-paul-mckenney-real-time-vs-real-fast.ogg)
 
--   文章: "[Embedded GNU/Linux and Real-Time an executive summary](http://www.reliableembeddedsystems.com/pdfs/2010_03_04_rt_linux.pdf)",2010 by Robert Berger
+-   文章: "[Embedded GNU/Linux and Real-Time an executive summary](http://www.reliableembeddedsystems.com/pdfs/2010_03_04_rt_linux.pdf)"，2010 by Robert Berger
     -   该文章为 2010 年的 Embedded World Conference 所写，包含了不同实时方法的比较（包括了 PREEMPT_RT 和双内核）
     -   该文章有许多参考文献列表
 -   教程 [ RT-Preempt 教程](http://eLinux.org/RT-Preempt_Tutorial "RT-Preempt Tutorial")
