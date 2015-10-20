@@ -1,60 +1,45 @@
-> 原文：[eLinux.org](http://eLinux.org/Real_Time "http://eLinux.org/Real_Time")<br/>
-> 翻译：[@hduffddybz](https://github.com/hduffddybz)<br/>
+> 书籍：[嵌入式 Linux 知识库](http://tinylab.gitbooks.io/elinux)
+> 原文：[eLinux.org](http://eLinux.org/Real_Time "http://eLinux.org/Real_Time")
+> 翻译：[@hduffddybz](https://github.com/hduffddybz)
 > 校订：[@lzufalcon](https://github.com/lzufalcon)
 
 
 # 实时
 
-## 目录
-
--   [2 简介](#introduction)
--   [3 实时领域 Wiki](#real-time-wiki)
--   [4 软件项目](#software-projects)
--   [5 硬件实现](#hardware-implementations)
--   [6 文档](#documents)
--   [7 更多开源项目](#further-open-source-projects)
-
-
-<span id="introduction"></span>
-
 ## 简介
 
 本文有实时 Linux 相关的信息，也有 Linux 时间系统相关的消息。 CE Linux 社区对此感兴趣是因为许多消费电子产品有实时需求 (例如在多媒体展示领域，或者是通信领域)。
 
-<span id="real-time-wiki"></span>
 
 ## 实时领域 Wiki
 
 -   需注意到实时 Linux 的信息主要来源于新的 [RTWiki](http://rt.wiki.kernel.org/)。
 
-<span id="software-projects"></span>
 
 ## 软件项目
 
 -   [实时抢占](http://eLinux.org/Realtime_Preemption "Realtime Preemption") -
     Ingo Molnar 给 Linux2.6 内核增添的一系列实时抢占的补丁
--   [内核时钟系统](http://eLinux.org/Kernel_Timer_Systems "内核时钟系统")
-    - 改变内核时钟系统的不同提案
--   [软中断](http://eLinux.org/Soft_IRQ_Threads "软中断") -
+-   [内核定时器系统](http://eLinux.org/Kernel_Timer_Systems "内核定时器系统")
+    - 改变内核定时器系统的不同提案
+-   [软中断线程](http://eLinux.org/Soft_IRQ_Threads "软中断线程") -
     将软中断线程化的技术使得它能够被抢占
     -   **NOTE:** 软中断在 2007 年 10 月被并入 [Realtime Preemption](http://eLinux.org/Realtime_Preemption "Realtime Preemption") 补丁中
 -   [高精度定时器](http://eLinux.org/High_Resolution_Timers "高精度定时器") - 支持非常高的定时精度
 -   [VST](http://eLinux.org/Variable_Scheduling_Timeouts "Variable Scheduling Timeouts")
     - 系统支持 tickless 模式
 
-<span id="hardware-implementations"></span>
 
 ## 硬件实现
 
 Ti AM18XX PRUSSv1
 
-[Ti\_AM33XX\_PRUSSv2](../.././dev_portals/Real_Time/Ti_AM33XX_PRUSSv2/Ti_AM33XX_PRUSSv2.md "Ti AM33XX PRUSSv2")
+[Ti\_AM33XX\_PRUSSv2](http://tinylab.gitbooks.io/elinux/content/zh/dev_portals/Real_Time/Ti_AM33XX_PRUSSv2/Ti_AM33XX_PRUSSv2.html "Ti AM33XX PRUSSv2")
 
 Tools for PRUSS
 
 
 
-<span id="documents"></span>
 
 ## 文档
 
@@ -98,7 +83,6 @@ Tools for PRUSS
 -   [ OSADL Realtime 页面](https://www.osadl.org/Realtime-Linux.projects-realtime-linux.0.html)
     包含了实时延时的测试[testing](https://www.osadl.org/Continuous-latency-monitoring.qa-farm-monitoring.0.html)
 
-<span id="further-open-source-projects"></span>
 
 ## 更多开源项目
 
