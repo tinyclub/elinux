@@ -1,14 +1,15 @@
-> From: [eLinux.org](http://eLinux.org/BeagleBoard "http://eLinux.org/BeagleBoard")
+> 原文: [eLinux.org](http://eLinux.org/BeagleBoard "http://eLinux.org/BeagleBoard")<br />
+> 翻译：[@chenyuwen](https://github.com/chenyuwen)
 
 
-# Beagleboard:Main Page
+# Beagleboard:主页
 
 
-(Redirected from
+(重定向到
 [BeagleBoard](http://eLinux.org/index.php?title=BeagleBoard&redirect=no "BeagleBoard"))
 
 
-## Contents
+## 目录
 
 -   [1 Welcome to the BeagleBoard.org Support
     Page](#welcome-to-the-beagleboard-org-support-page)
@@ -19,10 +20,15 @@
 
 ## Welcome to the BeagleBoard.org Support Page
 
+这是一个可供BeagleBoard爱好者查找关于BeagleBoard，BeagleBoard-xM， BeagleBone和由CircuitCo负责生产的BeagleBoneBlack项目的地方。虽然大量的有关这方面的信息可在beagleboard.org网站中找到，但是在当前网站中找到也非常方便。
+
 This is the place where BeagleBoard fans can come to find information on
 the BeagleBoard,BeagleBoard-xM, BeagleBone and BeagleBoneBlack projects
 that are manufactured by CircuitCo. Most of this information can also be
 found on the beagleboard.org site and is provided here as a convenience.
+
+当硬件进行修订或发布了新版本的软件之后，你会发现：这些信息出现在这里比出现在beagleboard.org更早。
+你会发现在这个网站中有的信息，在beagleboard.org并不存在。
 When new revisions of hardware or software is released, you may be able
 to find information here sooner than it appears on the beagleboard.org
 site. You may find information here not found on the beagleboard.org
