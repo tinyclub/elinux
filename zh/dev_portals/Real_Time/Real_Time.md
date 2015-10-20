@@ -15,13 +15,19 @@
 -   [7 更多开源项目](#further-open-source-projects)
 
 
+<span id="introduction"></span>
+
 ## 简介
 
 本文有实时 Linux 相关的信息，也有 Linux 时间系统相关的消息。 CE Linux 社区对此感兴趣是因为许多消费电子产品有实时需求 (例如在多媒体展示领域，或者是通信领域)。
 
+<span id="real-time-wiki"></span>
+
 ## 实时领域 Wiki
 
 -   需注意到实时 Linux 的信息主要来源于新的 [RTWiki](http://rt.wiki.kernel.org/)。
+
+<span id="software-projects"></span>
 
 ## 软件项目
 
@@ -36,6 +42,8 @@
 -   [VST](http://eLinux.org/Variable_Scheduling_Timeouts "Variable Scheduling Timeouts")
     - 系统支持 tickless 模式
 
+<span id="hardware-implementations"></span>
+
 ## 硬件实现
 
 Ti AM18XX PRUSSv1
@@ -45,6 +53,8 @@ Ti AM18XX PRUSSv1
 Tools for PRUSS
 
 
+
+<span id="documents"></span>
 
 ## 文档
 
@@ -87,6 +97,8 @@ Tools for PRUSS
 -   教程 [ RT-Preempt 教程](http://eLinux.org/RT-Preempt_Tutorial "RT-Preempt Tutorial")
 -   [ OSADL Realtime 页面](https://www.osadl.org/Realtime-Linux.projects-realtime-linux.0.html)
     包含了实时延时的测试[testing](https://www.osadl.org/Continuous-latency-monitoring.qa-farm-monitoring.0.html)
+
+<span id="further-open-source-projects"></span>
 
 ## 更多开源项目
 

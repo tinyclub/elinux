@@ -20,14 +20,20 @@
 -   [4 样例结果](#sample-results)
 -   [5 未来工作](#future-work)
 
+<span id="introduction"></span>
+
 ## 简介
 
 本文描述了软中断线程，这是一种机制，它通过可调度的内核线程来执行某些中断的底半部分，这样就可以和其他线程或进程一样在一个调度类里面做优先级调度。
 
 
+<span id="lkml-discussions"></span>
+
 ### LKML 讨论
 
 最近（2004 年 7 月），两个补丁被提交到 Linux 内核，用于支持软中断线程。
+
+<span id="time-sys-patch"></span>
 
 #### [Time Sys](http://eLinux.org/Time_Sys "Time Sys") 的补丁
 
@@ -36,16 +42,24 @@
 
 该补丁适用于 2.6.8-mm1 内核，但是其中 PPC 特定部分无法打上。
 
+<span id="korty-patch"></span>
+
 #### Korty 的补丁
 
 阅读
 [http://lkml.org/lkml/2004/7/13/152](http://lkml.org/lkml/2004/7/13/152)
 
+<span id="rationale"></span>
+
 ### 基本原理
 
 该特性十分重要因为它允许软中断以比实时线程更低的优先级来调度。这会使 Linux 有更好的实时处理能力。
 
+<span id="downloads"></span>
+
 ## 下载
+
+<span id="patch"></span>
 
 ### 补丁
 
@@ -53,15 +67,23 @@
     - [Patch for 2.4.xx is *here*]
     - [Patch for 2.6.xx is *here*]
 
+<span id="utility-programs"></span>
+
 ### 实用程序
 
 无
+
+<span id="how-to-use"></span>
 
 ## 如何使用
 
 [这部分要补充]
 
+<span id="sample-results"></span>
+
 ## 样例结果
+
+<span id="future-work"></span>
 
 ## 未来工作
 

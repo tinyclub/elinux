@@ -27,11 +27,15 @@
 -   [13 未来工作/行动清单](#future-work-action-items)
 -   [14 陈旧的信息(2.4内核)](#old-information-for-2-4-kernel)
 
+<span id="description"></span>
+
 ## 描述
 
 高精度定时器项目的目标是在 Linux 中实现 POSIX 1003.1b Section 14 （时钟，定时器）的 API 。 包括了对高精度定时器的支持 - 也就是说定时器的精度好于 1 个滴答。
 
 当该项目启动时，Linux 还不支持 POSIX 的时钟和定时器的 API 。随着时间推移，时钟和定时器的 API 被采纳，并且支持高精度时钟的核心基础设施被主线（ 2.6.21 内核）接受。在编写本文时，并不是所有的嵌入式平台都支持高精度定时器， 甚至即使内核中有支持的代码，配置起来也比较复杂。
+
+<span id="rationale"></span>
 
 ## 基本原理
 
@@ -39,9 +43,15 @@
 
 因此十分需要高精度定时器使系统能在更加精确的时间间隔中唤醒和处理数据。
 
+<span id="resources"></span>
+
 ## 资源
 
+<span id="projects"></span>
+
 ### 项目
+
+<span id="hrtimers-thomas-gleixner-s-patch"></span>
 
 #### hrtimers - Thomas Gleixner 的补丁
 
@@ -66,6 +76,8 @@ ktimers 被 hrtimers 所替代，hrtimers 的主要部分被合并并且出现�
 
 *注意到现在 HRT 的维护者反对该特性。*
 
+<span id="hrt-geoge-anzinger-s-patch"></span>
+
 #### HRT - Geoge Anzinger 的补丁
 
 早于 hrtimers，提供高精度定时器的主要是 George Anzinger 的补丁。官方的 HRT 补丁的页面在:
@@ -74,7 +86,11 @@ ktimers 被 hrtimers 所替代，hrtimers 的主要部分被合并并且出现�
 
 
 
+<span id="downloads"></span>
+
 ## 下载
+
+<span id="patch"></span>
 
 ### 补丁
 
@@ -82,7 +98,11 @@ ktimers 被 hrtimers 所替代，hrtimers 的主要部分被合并并且出现�
 -   Tom Rini 对早期的2.6版本提交了一些补丁:
     -   [trini patches](http://source.mvista.com/~trini/hrt/hrt_07Dec2004_001_2.6.10-rc3.patch)
 
+<span id="utility-programs"></span>
+
 ## 实用程序
+
+<span id="how-to-use"></span>
 
 ## 如何使用
 
@@ -93,6 +113,8 @@ ktimers 被 hrtimers 所替代，hrtimers 的主要部分被合并并且出现�
 编译内核并且安装到你的目标板上。
 
 为使用 Posix 的定时器 API，请使用在线资源 [[1]](http://www.opengroup.org/onlinepubs/009695399/basedefs/time.h.html)
+
+<span id="how-to-detect-if-your-timer-system-supports-high-resolution"></span>
 
 ## 如何检测你的定时器系统是否支持高精度定时器
 
@@ -176,17 +198,27 @@ ktimers 被 hrtimers 所替代，hrtimers 的主要部分被合并并且出现�
 
   这个命令行使用 `clock_nanosleep` 做测试， 优先级为 80，间隔 500us， 运行 5000 次迭代测试。
 
+<span id="how-to-validate"></span>
+
 ## 如何验证
 
 看上面关于 cyclictest 的描述
+
+<span id="sample-results"></span>
 
 ## 示例结果
 
 [使用样例外加测量结果。]
 
+<span id="case-study-1"></span>
+
 ## 案例学习 1
 
+<span id="case-study-2"></span>
+
 ## 案例学习 2
+
+<span id="status"></span>
 
 ## 状态
 
@@ -201,12 +233,16 @@ ktimers 被 hrtimers 所替代，hrtimers 的主要部分被合并并且出现�
     -   MIPS: 不确定
     -   SH: 不确定
 
+<span id="future-work-action-items"></span>
+
 ## 未来工作/行动清单
 
 列出了未来可以为该分支做的一些事情:
 
 -   文档
 -   测试
+
+<span id="old-information-for-2-4-kernel"></span>
 
 ## 陈旧的信息 (2.4版本内核)(译者注：这里不做翻译)
 
