@@ -63,7 +63,7 @@
         * 部分代码显示混乱，请缩进或者用两个 \`\`\` 括起来。
         * 部分内部目录链接无法跳转到文章中或者外链失效，请检查修复。
 
-* 把 `en/` 下的英文原稿同步到 `zh/` 下。
+* 把 `en/` 下的英文原稿同步到 `zh/` 下，原文提交为一笔 Git 修改记录。
 
     * *注*：请不要直接翻译 `en/` 下的内容，只翻译 `zh/` 下的即可。
 
@@ -73,6 +73,7 @@
         $ sudo aptitude install -y retext git nodejs npm
         $ sudo ln -fs /usr/bin/nodejs /usr/bin/node
         $ sudo aptitude install -y calibre fonts-arphic-gbsn00lp
+        $ npm config set registry https://registry.npm.taobao.org
         $ sudo npm install gitbook-cli -g
 
     *注*：`calibre` 提供 `ebook-converter`，用于生成 pdf 等格式。
@@ -96,7 +97,7 @@
     * 碰到专业名词，特定缩写，不需要翻译。
     * 考虑到 Wiki 已经转为 GitBook，`This page` 统一翻译为`本文`。
     * 所有目录的标题中的 `Contents` 翻译为 `目录`。
-    * 不保留英文原文，只保留中文译文。
+    * 翻译后，只保留中文译文，英文内容可移除，也就是说不要一行英文原文，一行中文译文，只保留译文即可。
     * 每翻译完一个段落请务必通读
         * 确保用词没有歧义，整段衔接流畅，如有必要请调整/添加必要的衔接词汇
         * 并对照英文原文确保没有漏掉原文任何需要表达的含义，不要刻意漏掉部分自己感觉模糊的词汇
