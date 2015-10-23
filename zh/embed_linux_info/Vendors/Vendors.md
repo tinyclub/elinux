@@ -1,83 +1,72 @@
-> From: [eLinux.org](http://eLinux.org/Vendors "http://eLinux.org/Vendors")
+> 原文: [eLinux.org](http://eLinux.org/Vendors "http://eLinux.org/Vendors")<br/>
+> 翻译：[@chenyuwen](https://github.com/chenyuwen)
 
 
-# Vendors
+# 供应商
 
 
 
-## Overview
+## 概述
 
-This page lists companies who offer services around embedded Linux, such
-as training, support, etc. We also list companies who provide Linux
-distributions specifically targeting embedded uses. If you are looking
-for companies who build and sell devices with Linux as their operating
-system, please see the [Companies](http://eLinux.org/Companies "Companies") page.
+该页面主要列出了一些提供嵌入式linux培训和支持等服务的公司。同时，也列出
+了一些业界闻名的嵌入式设备公司。如果您需要寻找一些构建和销售使用linux操
+作系统的设备的公司，请查看[公司](http://eLinux.org/Companies "Companies")页面。
 
--   [A2e Technologies](http://www.A2eTechnologies.com/), USA (San Diego
-    & Boston)
--   [Adeneo Embedded](http://www.adeneo-embedded.com/), France
--   [Armadeus Systems](http://www.armadeus.com), France
--   [Bluewater Systems](http://bluewatersys.com), New Zealand
--   [BEC Systems](http://bec-systems.com/), USA
--   [CALAO Systems](http://www.calao-systems.com), France
--   [Codefidence Ltd.](http://www.codefidence.com/), world wide
--   [Codethink Ltd.](http://www.codethink.co.uk/), world wide
--   [Cogent Embedded](http://www.cogentembedded.com/), USA, Europe
--   [CWLinux](http://www.cwlinux.com/), Hong Kong
+-   [A2e Technologies](http://www.A2eTechnologies.com/), 美国 (圣迭戈和波士顿)
+-   [Adeneo Embedded](http://www.adeneo-embedded.com/), 法国
+-   [Armadeus Systems](http://www.armadeus.com), 法国
+-   [Bluewater Systems](http://bluewatersys.com), 全球
+-   [BEC Systems](http://bec-systems.com/), 美国
+-   [CALAO Systems](http://www.calao-systems.com), 法国
+-   [Codefidence Ltd.](http://www.codefidence.com/), 全球
+-   [Codethink Ltd.](http://www.codethink.co.uk/), 全球
+-   [Cogent Embedded](http://www.cogentembedded.com/), 美国, 欧洲
+-   [CWLinux](http://www.cwlinux.com/), 香港
 -   [DENX Software Engineering](http://www.denx.de/)
--   [Driving Devices Limited](http://www.drivingdevices.com/), United
-    Kingdom
--   [e-con Systems Inc.](http://www.e-consystems.com/embeddedlinux.asp),
-    world wide
--   [Embedded Alley](http://www.embeddedalley.com/), world wide (gone -
-    was acquired by Mentor Graphics)
--   [Embedded Bits](http://www.embedded-bits.co.uk), United Kingdom,
-    worldwide
--   [Embest](http://www.armkits.com/), China (acquired by Premier
-    Farnell/element14)
--   [Embedded Software Foundry Limited](http://www.esfnet.co.uk/),
-    Sheffield, UK (gone - acquired by William Matthew Limited)
--   [Essensium/Mind](http://www.mind.be/), Belgium
--   [FemtoLinux](http://www.femtolinux.com), Israel
--   [Free-Electrons](http://www.free-electrons.com), France
--   [Forlinx Embedded](http://www.forlinx.net), China
--   [Holoscópio Tecnologia Ltda.](http://holoscopio.com/), Brazil
+-   [Driving Devices Limited](http://www.drivingdevices.com/), 英国
+-   [e-con Systems Inc.](http://www.e-consystems.com/embeddedlinux.asp), 全球
+-   [Embedded Alley](http://www.embeddedalley.com/), 全球 (被Mentor Graphics收购)
+-   [Embedded Bits](http://www.embedded-bits.co.uk), 英国, 全球
+-   [Embest](http://www.armkits.com/), 中国 (被Premier Farnell/element14集团收购)
+-   [Embedded Software Foundry Limited](http://www.esfnet.co.uk/), 设菲尔德, 英国 (被William Matthew有限公司收购)
+-   [Essensium/Mind](http://www.mind.be/), 比利时
+-   [FemtoLinux](http://www.femtolinux.com), 以色列
+-   [Free-Electrons](http://www.free-electrons.com), 法国
+-   [Forlinx Embedded](http://www.forlinx.net), 中国
+-   [Holoscópio Tecnologia Ltda.](http://holoscopio.com/), 巴西
 -   [Intellimetrix](http://www.intellimetrix.us/)
 -   [KAT Digital Corp.](http://www.katdc.com)
--   [KOAN sas](http://www.koansoftware.com/), Bergamo, Italy
--   [Lineo Solutions](http://www.lineo.co.jp/eng/index.html), Japan
--   [Linkodas](http://www.linkodas.com/), Lithuania
--   [Linutronix](http://www.linutronix.de/), Germany
--   [Mentor Graphics (embedded software
-    group)](http://www.mentor.com/products/embedded_software/),
-    worldwide
--   [MontaVista](http://www.mvista.com/), world wide
--   [MPC Data](http://www.mpc-data.co.uk/embedded-linux/), UK
--   [MYIR](http://www.myirtech.com), China
--   [Openedev](http://www.openedev.com/), India, Worldwide
--   [Opersys](http://www.opersys.com/), North America
--   [Pengutronix](http://www.pengutronix.de/), Germany
--   [Practical Control](http://www.practicalcontrol.co.uk/), UK
+-   [KOAN sas](http://www.koansoftware.com/), 韩国, 意大利
+-   [Lineo Solutions](http://www.lineo.co.jp/eng/index.html), 日本
+-   [Linkodas](http://www.linkodas.com/), 立陶宛
+-   [Linutronix](http://www.linutronix.de/), 德国
+-   [Mentor Graphics (embedded software group)](http://www.mentor.com/products/embedded_software/), 全球
+-   [MontaVista](http://www.mvista.com/), 全球
+-   [MPC Data](http://www.mpc-data.co.uk/embedded-linux/), 英国
+-   [MYIR](http://www.myirtech.com), 中国
+-   [Openedev](http://www.openedev.com/), 印度, 全球
+-   [Opersys](http://www.opersys.com/), 北美洲
+-   [Pengutronix](http://www.pengutronix.de/), 德国
+-   [Practical Control](http://www.practicalcontrol.co.uk/), 英国
 -   [RidgeRun](http://www.ridgerun.com)
--   [Secret Lab](http://www.secretlab.ca/), North America
--   [Sidebranch](http://www.sidebranch.com), The Netherlands.
--   [Signetik](http://www.signetik.com), North America
--   [Simantinee Embedded System](http://www.simantinee.com/), India
--   [Spore Tools](http://www.sporetools.com/), New Zealand
--   [SYSGO](http://www.sysgo.com/), Germany
--   [Team Embedded](http://www.team-embedded.com/), Netherlands
--   [Technosolve Systems](http://www.technosolve.in/), India
--   [TimeSys](http://www.timesys.com/), USA
--   [Tianyeit](http://www.tianyeit.com/), China
--   [Timll](http://www.timll.com), China
--   [WhiteQueue Consulting](http://whitequeue.com), New Zealand
--   [William Matthew Limited](http://www.wmltd.co.uk/), United Kingdom
--   [Wind River](http://www.windriver.com/), world wide
--   [Zeta2 GmbH](http://www.zeta2.ch/), Switzerland
--   [ZhiYuan](http://www.zlg.cn/), Guangzhou, China
+-   [Secret Lab](http://www.secretlab.ca/), 北美洲
+-   [Sidebranch](http://www.sidebranch.com), 荷兰
+-   [Signetik](http://www.signetik.com), 北美洲
+-   [Simantinee Embedded System](http://www.simantinee.com/), 印度
+-   [Spore Tools](http://www.sporetools.com/), 新西兰
+-   [SYSGO](http://www.sysgo.com/), 德国
+-   [Team Embedded](http://www.team-embedded.com/), 荷兰
+-   [Technosolve Systems](http://www.technosolve.in/), 印度
+-   [TimeSys](http://www.timesys.com/), 美国
+-   [Tianyeit](http://www.tianyeit.com/), 中国
+-   [Timll](http://www.timll.com), 中国
+-   [WhiteQueue Consulting](http://whitequeue.com), 新西兰
+-   [William Matthew Limited](http://www.wmltd.co.uk/), 英国
+-   [Wind River](http://www.windriver.com/), 全球
+-   [Zeta2 GmbH](http://www.zeta2.ch/), 瑞士
+-   [ZhiYuan](http://www.zlg.cn/), 中国广州
 
 
-[Category](http://eLinux.org/Special:Categories "Special:Categories"):
+[目录](http://eLinux.org/Special:Categories "Special:Categories"):
 
--   [Companies](http://eLinux.org/Category:Companies "Category:Companies")
-
+-   [公司](http://eLinux.org/Category:Companies "Category:Companies")
