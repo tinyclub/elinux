@@ -8,9 +8,8 @@
 
 ## 概述
 
-该页面主要列出了一些提供嵌入式linux培训和支持等服务的公司。同时，也列出
-了一些业界闻名的嵌入式设备公司。如果您需要寻找一些构建和销售使用linux操
-作系统的设备的公司，请查看[公司](http://eLinux.org/Companies "Companies")页面。
+
+在这个页面中，主要列出了一些提供嵌入式linux培训、支持等服务的公司供大家参考。当然，我们也列出了一些提供linux发行版的嵌入式公司。如果你需要寻找一些构建或者销售Linux产品的公司，本文并不适合您，请转到[公司](http://eLinux.org/Companies "Companies")页面。
 
 -   [A2e Technologies](http://www.A2eTechnologies.com/), 美国 (圣迭戈和波士顿)
 -   [Adeneo Embedded](http://www.adeneo-embedded.com/), 法国
@@ -70,3 +69,4 @@
 [目录](http://eLinux.org/Special:Categories "Special:Categories"):
 
 -   [公司](http://eLinux.org/Category:Companies "Category:Companies")
+
