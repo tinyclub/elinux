@@ -1,6 +1,6 @@
-> 原文：[eLinux.org](http://eLinux.org/Android_History "http://eLinux.org/Android_History")
-> 翻译：[@willis](https://github.com/lovelers)
-> 校订：[@lzufalcon](https://github.com/lzufalcon, @zipper1956(https://github.com/zipper1956)
+> 原文：[eLinux.org](http://eLinux.org/Android_History "http://eLinux.org/Android_History") </br>
+> 翻译：[@willis](https://github.com/lovelers) </br>
+> 校订：[@lzufalcon](https://github.com/lzufalcon, @zipper1956(https://github.com/zipper1956) </br>
 
 
 # Android 历史
@@ -32,12 +32,12 @@
 
 2005 年 8 月 - Google 收购 Android
 
--   见链接 [Google 购买 Android 作为其移动领域的宝藏](http://www.businessweek.com/technology/content/aug2005/tc20050817_0949_tc024.htm)
+-   见 [Google 购买 Android 作为其移动领域的宝藏](http://www.businessweek.com/technology/content/aug2005/tc20050817_0949_tc024.htm)
     - 2005 年 8 月，美国商业周刊
 
 ## 2007
 
--   见链接 [我是机器人: Google 手机背后的男人](http://www.nytimes.com/2007/11/04/technology/04google.html?_r=1)
+-   见 [我是机器人: Google 手机背后的男人](http://www.nytimes.com/2007/11/04/technology/04google.html?_r=1)
     - 2007 年 11 月，纽约时报报道了一篇关于安迪·鲁宾的文章
 
 2007 年 11 月 - 开放手机联盟成立
