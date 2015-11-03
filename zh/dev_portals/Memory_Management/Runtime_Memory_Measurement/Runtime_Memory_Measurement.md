@@ -315,5 +315,5 @@ Linux 基金会 CE 工作小组有一个分析内核动态内存使用的项目�
 
 [分类](http://eLinux.org/Special:Categories "Special:Categories"):
 
--   [System Size](http://eLinux.org/Category:System_Size "Category:System Size")
+-   [系统剪裁](http://eLinux.org/Category:System_Size "Category:System Size")
 
