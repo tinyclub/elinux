@@ -1,52 +1,42 @@
-> From: [eLinux.org](http://eLinux.org/Beagleboard:BeagleBone_Capes "http://eLinux.org/Beagleboard:BeagleBone_Capes")
+> 原文: [eLinux.org](http://eLinux.org/Beagleboard:BeagleBone_Capes "http://eLinux.org/Beagleboard:BeagleBone_Capes")<br/>
+> 翻译: [@kevinzhang1986](https://github.com/kevinzhang1986)
 
 
-# Beagleboard:BeagleBone Capes
+# Beagleboard:BeagleBone 附属板
 
 
 
-BeagleBone is a credit-card sized expandable Linux computer that
-connects with the Internet and runs software such as Android 4.0 and
-Ubuntu. It allows developers to evaluate the Sitara™ AM335x ARM®
-Cortex™-A8 processors with a single cable and 10-second Linux
-boot-enabling development in less than five minutes. Adding cape plug-in
-boards to the popular BeagleBone computer allows hobbyists, makers and
-developers to quickly and easily augment BeagleBone’s capabilities with
-LCD screens, motor control and battery power as well as the ability to
-create their own circuits.
+BeagleBone 是一个信用卡大小的连接以太网的可扩展 Linux 计算机，运行例如安卓4.0和 Ubuntu 这样的软件。 允许开发者用单个电缆对 Sitara™ AM335x ARM®
+Cortex™-A8  处理器进行评估，10秒Linux启动。增加附属插件板到流行的 BeagleBone 计算机，允许业余爱好者，制作者和开发者能够通过 LCD 屏幕，电机控制和电池，快速和容易地增加 BeagleBone 的能力，创建他们自己的电路板。
 
 
 
 
 
-## Contents
+## 目录
 
--   [1 Click here to view the Production video for BeagleBone
-    Black](#click-here-to-view-the-production-video-for-beaglebone-black)
--   [2 Compatibility Between Different Capes
-    Matrix](#compatibility-between-different-capes-matrix)
--   [3 BeagleBone Black Compatibilty
-    Matrix](#beaglebone-black-compatibilty-matrix)
--   [4 BeagleBone Capes Catalog](#beaglebone-capes-catalog)
--   [5 Capes Listing](#capes-listing)
+-   [1 点击这里去观看 BeagleBone Black的产品视频](#click-here-to-view-the-production-video-for-beaglebone-black)
+-   [2 不同附属板矩阵的兼容性](#compatibility-between-different-capes-matrix)
+-   [3 BeagleBone Black 兼容矩阵](#beaglebone-black-compatibilty-matrix)
+-   [4 BeagleBone Capes 目录](#beaglebone-capes-catalog)
+-   [5 Capes 列表](#capes-listing)
 
-#### Click [here](http://www.youtube.com/watch?v=FcqQvH41OR4) to view the Production video for BeagleBone Black
+#### 点击 [这里](http://www.youtube.com/watch?v=FcqQvH41OR4) 去观看 BeagleBone Black 的产品视频
 
-## Compatibility Between Different Capes Matrix
+## 不同附属板矩阵的兼容性
 
-To view the compatibility between capes that are listed in this catalog,
-please download the compatibility matrix below.
+为了浏览列在目录下的附属板的兼容性，请下载下面的兼容性矩阵。
 
 -   [File:BeagleBone-Cape-Compatibility-Matrix-12-09-11.xls](http://eLinux.org/File:BeagleBone-Cape-Compatibility-Matrix-12-09-11.xls "File:BeagleBone-Cape-Compatibility-Matrix-12-09-11.xls")
 
-## BeagleBone Black Compatibilty Matrix
+## BeagleBone Black 兼容性矩阵
 
-for information on BeagleBone Black Compatibility visit the
+BeagleBone Black 兼容性的信息请看
 [Beagleboard:BeagleBone Black
 Capes](http://eLinux.org/Beagleboard:BeagleBone_Black_Capes "Beagleboard:BeagleBone Black Capes")
-wiki page
+维基页面
 
-## BeagleBone Capes Catalog
+## BeagleBone Capes 目录
 
 [![BB-Proto.jpg](http://eLinux.org/images/d/dd/BB-Proto.jpg)](http://eLinux.org/BeagleBone_Proto_Cape "BeagleBone Proto Cape")
 
@@ -676,33 +666,26 @@ Cape](http://eLinux.org/CircuitCo:BeagleBone_ProfiBus "CircuitCo:BeagleBone Prof
 
 BeagleBoardToys
 
-## Capes Listing
+## 附属板列表
 
-If you have a cape that will be in production or able to be purchased
-and you would like it listed here, please create a wiki page for your
-cape on eLinux.org and contact
-[support@circuitco.com](mailto:support@circuitco.com) with the link. We
-will add your cape to this registry page. You can use
+如果你有一个附属板将要生产和售卖，想要在列在这里。 请在 eLinux.org 上创建一个附属板的维基页面和用这个链接联系
+[support@circuitco.com](mailto:support@circuitco.com)。我们将增加你的附属板到注册页中。 你可以使用
 [http://elinux.org/CircuitCo:BeagleBone\_LCD3](http://elinux.org/CircuitCo:BeagleBone_LCD3)
-as a template (to view the wikitext go to the link and click on the
-"View Source" or "Edit" tab on the top right corner). Also, submit any
-patches to the kernel, including .dts files for your cape, to the
+作为模板 (在右上角点击
+"View Source" 或者 "Edit" 到维基文本)。 也可以提交任何补丁到内核，包括附属板的 .dts files到
 [BeagleBoard
 group](https://groups.google.com/forum/#!forum/beagleboard)/[mailing
 list](mailto:beagleboard@googlegroups.com).
 
 
- Note: if you don't have a eLinux.org account, you will need to create
-one in order to create or edit a wiki page. Note: if you have any
-question related to a particular cape, please contact the designer of
-that cape. For other questions regarding this page, please contact us at
+ 注意： 如果你没有 eLinux.org 账户， 需要创建一个来编辑维基页面。 注意： 如果对于特定的附属板有疑问，请联系附属板的设计者。 如果有其他问题，请联系我们
 [support@circuitco.com](mailto:support@circuitco.com)
 
 
- To go back to BeagleBone wiki, please click
-[here](http://eLinux.org/Beagleboard:BeagleBone "Beagleboard:BeagleBone").
+ 回到 BeagleBone wiki， 请点击
+[这里](http://eLinux.org/Beagleboard:BeagleBone "Beagleboard:BeagleBone").
 
-To go back to BeagleBone Black wiki, please click
-[here](http://eLinux.org/Beagleboard:BeagleBoneBlack "Beagleboard:BeagleBoneBlack").
+回到 BeagleBone Black wiki，请点击
+[这里](http://eLinux.org/Beagleboard:BeagleBoneBlack "Beagleboard:BeagleBoneBlack").
 
 
