@@ -16,11 +16,11 @@ Page!](http://eLinux.org/Minnowboard:GSoC2015 "Minnowboard:GSoC2015")**
 
 # 引言
 
-[http://www.minnowboard.org](http://www.minnowboard.org) 是致力于对使用Intel处理器的开源硬件提供支持的一个社区。该网站将作为 MinnowBoard 社区的起点。
+[http://www.minnowboard.org](http://www.minnowboard.org) 是致力于对使用 Intel 处理器的开源硬件提供支持的一个社区。该网站将作为 MinnowBoard 社区的起点。
 
-MinnowBoard 是基于 Intel® Atom™ 处理器的单板，把 Intel® 架构引入到小型和低成本嵌入式市场，适用于开发者和制作者社区。它具有卓越的性能，灵活性、开放性和标准性。
+MinnowBoard 是基于 Intel® Atom™ 处理器的单板，把 Intel® 架构引入到小型和低成本嵌入式市场，适用于开发者和创客社区。它具有卓越的性能，灵活性、开放性和标准性。
 
-# 单板
+# 开发板
 
 <table>
 <col width="50%" />
