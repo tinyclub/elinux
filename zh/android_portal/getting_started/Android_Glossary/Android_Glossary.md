@@ -1,18 +1,20 @@
-> From: [eLinux.org](http://eLinux.org/Android_Glossary "http://eLinux.org/Android_Glossary")
+> 原文：[eLinux.org](http://eLinux.org/Android_Glossary "http://eLinux.org/Android_Glossary") </br>
+> 翻译：[@willis](htpps:/github.com/lovelers) </br>
+> 校订：[@lzufalcon](https://github.com/lzufalcon) </br>
 
 
-# Android Glossary
+# Android 词汇表
 
 
 
-Here are some Android terms (some even with definitions!!)
+本文讲述了一些 Android 的术语（还包括一些定义！！）
 
-See also the developer glossary at:
+开发者相关的术语，见：
 [http://developer.android.com/guide/appendix/glossary.html](http://developer.android.com/guide/appendix/glossary.html)
 
-Back to [Android Portal](http://eLinux.org/Android_Portal "Android Portal")
+回到本书的 [Android Portal](http://eLinux.org/Android_Portal "Android Portal")
 
-## Contents
+## 目录
 
 -   [1 A](#a)
 -   [2 B](#b)
@@ -38,335 +40,246 @@ Back to [Android Portal](http://eLinux.org/Android_Portal "Android Portal")
 
 ## A
 
- [aapt](http://eLinux.org/Android_aapt "Android aapt") 
-Android Asset Packaging Tool - a tool for creating, inspecting and
-modifying Android application packages.
+*[aapt](http://eLinux.org/Android_aapt "Android aapt") 
+Android 资源打包工具 - 用于 Android 应用程序包的创建，查看和修改的工具。
 
- Activity 
-A single focused thing the user can do on an Android device. Also, a
-java class in the Android framework, which is used as the superclass for
-an Activity implementation. See
+*Activity 
+是指运行的 Android 设备上的任务，用户可以进行特定的事件操作。同时也是 Android 代码框架中的一个 java 类，是 Activity 实现的父类。见：
 [http://developer.android.com/reference/android/app/Activity.html](http://developer.android.com/reference/android/app/Activity.html).
-"An Activity presents a visual user interface for one focused endeavor
-the user can undertake." See Activity on the page:
+"一个 Activity 呈现给用户的是一个可视化用户窗口，用户可以在这个窗口上处理特定的事件。见：
 [http://developer.android.com/guide/topics/fundamentals.html](http://developer.android.com/guide/topics/fundamentals.html)
 
- adb 
-Android Debug Bridge - a tool for communicating between the host and a
-target Android system (including an emulator running on the host). See
+*adb 
+Android 调试器 - 用于主机和目标 Android 系统进行通信的工具（包括在主机上运行的模拟器）。见：
 [http://developer.android.com/guide/developing/tools/adb.html](http://developer.android.com/guide/developing/tools/adb.html)
 
- ADP1 
-Android Developer Phone 1
+*ADP1 
+Android 第一款开发机器
 
- ANR 
-Application Not Responding - this is a type of bug where Android
-believes a process has hung. The system may kill the process, and leave
-information about it in /data/anr for post-mortem analysis.
+*ANR 
+应用程序无响应 - 这是一种 Android Bug, 系统会认为某一个进程挂掉。系统可能会杀死该进程，同时在 /data/anr 下面记录用于事后分析的信息。
 
- Android 
-A robot resembling a human being - the name of the operating system
-produced by Google for mobile phones. Apparently, Andy Rubin, one of the
-original founders of Android, Inc. loves robots.
+*Android 
+一个类似人类的机器人 - 它是 Google 开发的手机操作系统的命名。很显然，安迪·鲁宾，是一个热爱机器人的 Android 最初创始人。
 
- AndroidManifest.xml 
-A file describing the contents, permissions and other attributes of an
-Android application package. See
+*AndroidManifest.xml 
+一个描述上下文，权限和其他属性的 Android 应用程序包的文件。见：
 [http://developer.android.com/guide/topics/manifest/manifest-intro.html](http://developer.android.com/guide/topics/manifest/manifest-intro.html)
 
- Android, Inc. 
-A company founded by Andy Rubin and others to create a mobile phone
-operating system. Android, Inc. was acquired by Google in 2005.
+*Android, Inc. 
+安迪·鲁宾和其他人一起创建的一个手机操作系统公司。Android 公司在 2005 年被 Google 收购。
 
- ASE 
-Android Scripting Environment - the old name of Scripting Layer for
-Android. See [Android Scripting](../../../android_portal/software_dev/Android_Scripting/Android_Scripting.md "Android Scripting")
+*ASE
+Android 脚本环境 - Android 脚本语言层的曾用名。见：
+[Android 脚本](../../../android_portal/software_dev/Android_Scripting/Android_Scripting.md "Android Scripting")
 
 ## B
 
- Binder 
-An Interprocess Communication (IPC) mechanism. See
+*Binder 
+一种进程间通讯（IPC）机制。见：
 [http://cs736-android.pbworks.com/IPC-Binder](http://cs736-android.pbworks.com/IPC-Binder)
-and
+和
 [http://groups.google.com/group/android-developers/msg/dc0e0e872de9b0d2](http://groups.google.com/group/android-developers/msg/dc0e0e872de9b0d2)
 
- Bionic 
-small C library used in Android devices
+*Bionic 
+在 Android 设备上使用的微型 C 库
 
- Bootchart 
-A mechanism to create visual charts of a Linux boot sequence, including
-the timing of process start and execution. See [Using Bootchart on
-Android](http://eLinux.org/Using_Bootchart_on_Android "Using Bootchart on Android")
+*Bootchart 
+ 一种创建 Linux 引导程序的可视化图表的机制，包括进程启动和执行的时序。见 [在 Android 上使用 Bootchart](http://eLinux.org/Using_Bootchart_on_Android "Using Bootchart on Android")
 
 ## C
 
- Cliq 
-The US name for the Motorola Android phone.
+*Cliq 
+摩托罗拉 Android 手机的美国名称
 
- Content Provider 
-An piece of software on an Android system that provides information
-(content) to other software elements. See
+*Content Provider 
+存在于 Android 系统中一个软件功能模块，用于向其他应用软件提供（上下文）信息。见：
 [http://developer.android.com/guide/topics/providers/content-providers.html](http://developer.android.com/guide/topics/providers/content-providers.html).
-Also, a class which is the superclass for code which acts as a content
-provider. See the [ContentProvider class
-documentation](http://developer.android.com/reference/android/content/ContentProvider.html)
+同时，它是一段充当内容提供者的父类的代码。见 [ContentProvider 类文档](http://developer.android.com/reference/android/content/ContentProvider.html)
 
- Cupcake 
-The code name for Android version 1.5.
+*Cupcake 
+Android 1.5 版本的代号
 
 ## D
 
- Dalvik 
-Virtual Machine in which Android applications are run. This VM executes
-Dalvik bytecode, which is compiled from programs written in the Java
-language. Note that the Dalvik VM is not a Java VM (JVM).
+*Dalvik 
+用于 Android 应用程序运行的虚拟机。虚拟机执行 Dalvik 字节码，该字节码由 Java 编码并编译而来。值得注意的是，Dalvik 虚拟机不是 Java 虚拟机(JVM)。
 
-Every Android application runs in its own process, with its own instance
-of the Dalvik virtual machine. Dalvik has been written so that a device
-can run multiple VMs efficiently. The Dalvik VM executes files in the
-Dalvik Executable (.dex) format which is optimized for minimal memory
-footprint. The VM is register-based, and runs classes compiled by a Java
-language compiler that have been transformed into the .dex format by the
-included "dx" tool.
+每一个 Android 应用程序都运行在它自己的进程空间，并有独立的 Dalvik 虚拟机。Dalvik 被设计成一个设备可以有效的运行多个 Dalvik 虚拟机。Dalvik 虚拟机执行 Dalvik 可执行(.dex)格式的文件，经过优化，它只占用非常低的内存空间。Dalvik 是基于寄存器的虚拟机，运行的类由 Java 编译器编译，并被内置的 "dx" 工具转换为 .dex 格式。
 
-See [Android Dalvik VM](../../../android_portal/android_sys_info/Android_Dalvik_VM/Android_Dalvik_VM.md "Android Dalvik VM") for more
-information
+见 [Android Dalvik 虚拟机](../../../android_portal/android_sys_info/Android_Dalvik_VM/Android_Dalvik_VM.md "Android Dalvik VM") 获取更多的信息。
 
- Donut 
-The code name for Android version 1.6
+*Donut 
+Android 1.6 版本的代号
 
- Dream 
-Code name for the mobile phone hardware publicly called the t-Mobile G1,
-in the United States.
+*Dream 
+由 t-Mobile 在美国发布的硬件公开的手机代号。
 
- Droid 
-The name for an upcoming Android phone by Motorola (I believe this is
-the high-end phone, and Cliq is the low-end phone?)
+*Droid 
+摩托罗拉生产的，即将上市的 Android 手机的代号（我相信这是一款高端手机，所以， Cliq 应该是一款低端手机？）
 
 ## E
 
- Eclair 
-The code name for Android version 2.1
+*Eclair 
+Android 2.1 版本的代号
 
 ## F
 
- fastboot 
-a program which communicates with the developer firmware, and which is
-capable of loading new software on the ADP1 phone (including re-writing
-the flash partitions on the device). See [Android
-Fastboot](http://eLinux.org/Android_Fastboot "Android Fastboot")
+*fastboot 
+一个和开发固件通讯的程序，它能用于在调试机器上加载新软件（包括对设备进行重新分区）。见 [[Android Fastboot](http://eLinux.org/Android_Fastboot "Android Fastboot")
 
- FreeType 
-An open-source set of fonts and font system
+*FreeType 
+一个开源的字体集和字体系统
 
  Froyo 
-*Frozen Yogurt* - The code name for Android version 2.2
+*冻酸奶* - Android 2.2 版本的代号
 
 ## G
 
- G1 
-The name of the first Android-based mobile phone, from t-Mobile.
+*G1 
+第一款基于 Android 的手机名称，出自于 t-Mobile。
 
- Galaxy 
-The name of the first Samsung Android phone
+*Galaxy 
+第一款三星 Android 手机的名称
 
- Gingerbread 
-The code name for Android version 2.3
+*Gingerbread 
+Android 2.3 版本的代号
 
- Goldfish 
-The name of a virtual ARM platform provided by the emulator.
+*Goldfish
+一个由仿真器提供的虚拟 ARM 平台的名称。
 
-Goldfish executes ARM926T instructions and has hooks for input and
-output -- such as reading key presses from or displaying video output in
-the emulator. There is a "goldfish" configuration file for compiling the
-Linux kernel to run with this emulated platform.
+Goldfish 执行 ARM926T 指令，并带有输入和输出 -- 比如通过在仿真器中的视频输出读取按键。"goldfish" 配置文件是由 Linux 内核编译，运行于该仿真器平台。
 
- Google 
-A large web search company, and primary developer of Android
+*Google 
+一个大型网页搜索公司，并是 Android 的主要开发者
 
 ## H
 
- Honeycomb 
-The code name for Android version 3.0 - especially targeted at table
-computers
+*Honeycomb 
+Android 3.0 版本的代号 - 主要针对平板电脑
 
 ## I
 
- Ice Cream Sandwhich 
-Android version 2.4 or 3.1 - the successor to Gingerbread and/or
-Honeycomb (possibly indicating a development fork) See
-[http://techcrunch.com/2011/01/11/android-ice-cream-sandwich/](http://techcrunch.com/2011/01/11/android-ice-cream-sandwich/)
+*Ice Cream Sandwhich 
+Android 版本 2.4 或 3.1 - Gingerbread 和／或 Honecomb 的下一代（可能表示了一个发展分叉口）见 [http://techcrunch.com/2011/01/11/android-ice-cream-sandwich/](http://techcrunch.com/2011/01/11/android-ice-cream-sandwich/)
 
- init 
-the first user-space program run in the Android system. It is not a
-standard Linux-style 'init' program (which processes an /etc/inittab
-file). Rather, it processes a script called init.rc in the root
-directory of the file system. See [Android
+*init 
+第一个运行于 Android 系统用户空间的程序。它不是标准 Linux 风格的 '初始化' 程序（其调度在 /etc/inittab 文件中）。并且，它处理的是一个位于文件系统的 root 目录下的脚本文件 init.rc。见 [Android
 Booting\#'init'](http://eLinux.org/Android_Booting#.27init.27 "Android Booting")
 
- Intent 
-A facility to send messages between different Android components. A
-message is conveyed using an Intent object, which is a data structure
-holding a description of an operation to be performed, or of something
-that has happened and is being announced.
+*Intent 
+能在不同的 Android 组件中传递消息的一个方法。通过一个 Intent 结构体表达的消息，它是一个包含了能被执行的操作描述，或者已经发生，或着正进行的事件的数据结构体。
 
 ## J
 
- Java 
-Java is a programming language originally developed by Sun, and used to
-develop Android applications.
+*Java 
+Jave 是最初由 Sun 公司开发的一套编程语言，用于 Android 应用程序的开发。
 
-It is important to note that while the Java language is used for Android
-applications, the Java bytecode and Java virtual machine are not. for
-more information, see the entry for Dalvik.
+着重说明的是，当 Java 语言用于 Android 应用程序的开发的时候，Java 字节码和 Java 虚拟机却并未被使用。想要获取更多资讯，见 Dalvik 章节。
 
- JDK 
-Java Development Kit
+*JDK 
+Java 开发工具包
 
- Jellybean 
-The code name for Android versions 4.1, 4.2 and 4.3
+*Jellybean 
+Android 版本 4.1, 4.2 和 4.3 代号
 
- JNI 
-Java Native Interface ([wikipedia
-entry](http://wikipedia.org/wiki/Java_Native_Interface)) is a
-programming framework that allows Java code to call or be called by
-"native" code (that is, code compiled in another language such as C, C++
-or assembly).
+*JNI 
+Java 本地接口 ([wikipedia entry](http://wikipedia.org/wiki/Java_Native_Interface)) 是允许 Java 代码调用或者被 "本地"（是指，其他的语言所编译的，例如C, C++ 或者 汇编) 代码调用的程序框架。
 
 ## K
 
- KitKat
-The release name for Android version 4.4
+*KitKat
+Android 版本 4.4 的发布名称
 
 ## L
 
- Linux 
-An open source operating system kernel, developed originally by Linus
-Torvalds, but over time by many thousands of developers worldwide.
+*Linux 
+一个开源的操作系统内核，最初被 Linus Torvalds 开发，但是随着时间的推移，来自世界各地的上千开发者加入了该行列。
 
- Live-android 
-A project to create an [Android
-live-CD](http://code.google.com/p/live-android/), for running Android on
-generic x86 platforms.
+*Live-android 
+一个创建 [Android live-CD](http://code.google.com/p/live-android/)的项目，为的是能在通用 x86 平台上运行 Android。
 
- logcat
-A command to view messages in one of the system logs. See [Android
-logger](http://eLinux.org/Android_logger "Android logger")
+*logcat
+查看系统 log 的命令之一。见 [Android 记录](http://eLinux.org/Android_logger "Android logger")
 
 ## M
 
- manifest file
-See AndroidManifest.xml
+*manifest file
+见 AndroidManifest.xml
 
- mahimahi
-The machine name used in the kernel for the development board used for
-the Nexus One product.
+*mahimahi
+用于 Nexus One 手机的开发板内核的机器名称
 
- MSM 
-Mobile Station Modem. Chipset manufactured by Qualcomm. Can for instance
-be found in cell phones containing the Snapdragon chipsets (HTC
-Desire/Nexus One).
+*MSM 
+移动站调制解调器。该芯片组由高通生产。在包含骁龙芯片组的手机内可以发现（HTC Desire 手机／Nexus One 手机）。
 
 ## N
 
- NDK 
-[Native Development
-Kit](http://developer.android.com/sdk/ndk/index.html). A set of tools,
-build files and instructions to generate native code (usually libraries)
-to be used with Android systems. Native libraries are most often used as
-part of JNI (to allow Java code to call C code, or vice versa).
+*NDK 
+[原生开发套件](http://developer.android.com/sdk/ndk/index.html)。一个用于 Android 系统上编译打包文件和“说明”生成‘本地’代码（通常是库的形式）的工具集。原生库绝大多数使用在 JNI 部分（用来允许 Java 代码调用 C 代码，或者 C 代码调用 Java 代码）。
 
 ## O
 
- OpenGL ES 
-3D graphics system and API for Android applications
+*OpenGL ES 
+Android 应用的 3 维图像系统和 API 接口。
 
 ## R
 
- repo 
-Android repository manager. This is a wrapper program (written in
-Python) over the git tool, for managing the multiple git repositories
-that make up the entire Android code base. See
-[http://source.android.com/download/using-repo](http://source.android.com/download/using-repo)
+*repo 
+Andorid 代码仓库管理器。这个是一个基于 git 工具之上的一个包装程序（Python 编写），用于管理多个 git 仓库，构成了对整个 Android 代码库的管理。见 [http://source.android.com/download/using-repo](http://source.android.com/download/using-repo)
 
- rild 
-Radio-Interface-Link daemon. This is the daemon which handles
-communication between the rest of the Android system and the "radio
-interface" (otherwise known as the phone portion of an Android-based
-mobile phone system). In the simulator, since the phone hardware is not
-present, there is a program which runs to simulate the radio interface.
+*rild 
+无线电接口守护进程。它是一个处理 Android 系统其他部分与“无线接口”（除此之外，也称为基于 Android 移动电话系统的的电话部分）通讯的一个守护进程。在仿真器中，由于手机硬件是不存在的，所以有一个运行模拟无线接口的程序。
 
 ## S
 
-Saphire
+*Saphire
 
- SL4A 
-Scripting Layer for Android - an execution environment that let's users
-use scripting languages (such as Python or Ruby), instead of Java, to
-write programs for Android. See [Android
-Scripting](../../../android_portal/software_dev/Android_Scripting/Android_Scripting.md "Android Scripting")
+*SL4A 
+Android 脚本层 - 一个让用户使用脚本语言的运行环境（比如 Python 或者 Ruby），而不是用 Java 来写 Android 程序。见 [Android 脚本](../../../android_portal/software_dev/Android_Scripting/Android_Scripting.md "Android Scripting")
 
- SGL 
-2D graphics layer for Android applications
+*SGL 
+Android 应用的 2 维图层
 
- SQLite 
-A powerful and lightweight relational database engine used by the
-Android system components, and available to all Android applications.
+*SQLite 
+一个功能强大，轻量级的关系型数据库引擎，用于 Android 系统的各个组件中，并且能被所有的 Android 应用程序使用。
 
 ## T
 
- TARGET\_PRODUCT 
-An environment variable used by the build system to indicate the product
-that the software should be built for. This and other TARGET\_\*
-variables are set using the choosecombo() function in build/envsetup.sh.
-If not set, the TARGET\_\* variables will use defaults when you run the
-'m' alias, after source-ing build/envsetup.sh into your shell
-environment. Otherwise, use the choosecombo() function to set them.
+*TARGET\_PRODUCT 
+一个用于编译系统的环境变量，用来表示应该编译什么样的软件版本。这个变量以及其他的 TARGET\_\*　变量是在 build/envsetup.sh 文件中用 choosecombo() 函数来设置。如果没设置，当你在 shell 环境进行下 source-ing build/envsetup.sh　文件后，执行 'm' 的别名，TARGET\_\* 变量会使用默认值。反之，用 choosecombo() 函数设置它们。
 
-ex: \$ cd mydroid ; source build/envsetup.sh ; choosecombo
+例如: \$ cd mydroid ; source build/envsetup.sh ; choosecombo
 
-The options for TARGET\_PRODUCT depend on entries in the
-AndroidProducts.mk files under build/target/products and
-vendor/\*/\*/AndroidProducts.mk in your repository.
+TARGET\_PRODUCT 的选项取决于 AndroidProducts.mk 的项。AndroidProducts.mk 位于你的代码仓库的 build/target/products 和 vendor/\*/\*/AndroidProducts.mk 里面。
 
- toolbox 
-The name of a multi-function program in the Android system. This program
-contains code for the single program toolbox to act like several
-different programs and utilities. Normally 'toolbox' is stored in
-/system/bin, and is symlinked to other names. It uses argv[0] to
-determine which program to behave like, when run. It is very similar in
-this regard to 'busybox', which another multi-function program used in
-many other embedded Linux systems.
+*toolbox 
+一个 Android 系统中的多功能程序的名称。这个程序包含的单一程序代码表现的像多个不同的程序和工具。'toolbox' 通常存储在 /system/bin 下面，同时被链接到其他的名字。它利用 argv[0] 参数决定了运行的时候像哪个程序工作。它非常像 'busybox' 工具，'busybox'　是另一个在许多其他嵌入式 Linux 系统中使用的多功能程序。
 
- Trout 
-ARM linux kernel machine ID for the HTC Dream hardware (used in the
-t-Mobile G1 and the ADP1)
+*Trout 
+是宏达 Dream 硬件的 ARM linux 内核的机器 ID (用于 t-Mobile G1 和 APD1 手机）
 
-See
-[http://www.arm.linux.org.uk/developer/machines/list.php?id=1440](http://www.arm.linux.org.uk/developer/machines/list.php?id=1440)
+见 [http://www.arm.linux.org.uk/developer/machines/list.php?id=1440](http://www.arm.linux.org.uk/developer/machines/list.php?id=1440)
 
 ## V
 
- vold 
-volume daemon - a process on an android system responsible for managing
-mounting and unmounting file system (volumes)
+*vold 
+存储守护进程 - 一个在 Android 系统上负责管理加载或卸载文件系统的进程（volumes)
 
 ## W
 
- wakelocks 
-A kernel mechanism for Android power management. When a thread holds a
-wakelock, the kernel will refrain from entering a low-power state.
+*wakelocks 
+一个 Android 电源管理的内核机制。当一个线程获取了一个 wakelock, 内核将会避免进入低功耗状态。
 
-Back to [Android Portal](http://eLinux.org/Android_Portal "Android Portal")
+回到 [Android Portal](http://eLinux.org/Android_Portal "Android Portal")
 
 ## Z
 
- zygote 
-The first Dalvik virtual machine instance. All other java applications
-that are started in the system are spawned from zygote.
+*zygote 
+第一个 Dalvik 虚拟机的实例。所有系统中启动的其他 Java 应用程序都是被 zygote 孵化。
 
 
-[Category](http://eLinux.org/Special:Categories "Special:Categories"):
+[分类](http://eLinux.org/Special:Categories "Special:Categories"):
 
 -   [Android](http://eLinux.org/Category:Android "Category:Android")
 
