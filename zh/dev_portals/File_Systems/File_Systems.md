@@ -47,21 +47,29 @@
     -   [7.2 维基百科文件系统](#wikipediafs)
     -   [7.3 维基文件系统](#wikifs)
 
+<span id="introduction"></span>
+
 # 简介
 
 大多数嵌入式设备使用 [闪存](http://en.wikipedia.org/wiki/Flash_memory) 作为存储介质。
 
 同时，系统尺寸和启动时间在许多消费电子产品中也非常重要，因此，专用文件系统经常具有不同的功能，例如，更高压缩比或者直接从闪存执行文件的能力。
 
+<span id="mtd"></span>
+
 ## MTD
 
 需要注意的是，闪存可能用 Linux 的 MTD 系统管理。从 [MTD/Flash FAQ](http://www.linux-mtd.infradead.org/faq/general.html) 可以查看相关信息。这里提到的大多数文件系统都构建在 MTD 系统之上。
+
+<span id="ubi"></span>
 
 ## UBI
 
 Linux 内核的 [Unsorted Block Images（未排序的块映像）](http://www.linux-mtd.infradead.org/doc/ubi.html) (UBI) 系统管理单个闪存上的多个逻辑卷。它通过 MTD 层提供了从逻辑块到物理可擦除块的映射。UBI 也提供了灵活的分区概念，允许跨越整个闪存设备均衡损耗。
 
 可通过 [UBI](http://www.linux-mtd.infradead.org/doc/ubi.html) 或者 [UBI FAX and Howto](http://www.linux-mtd.infradead.org/faq/ubi.html) 查看更多信息。
+
+<span id="partitioning"></span>
 
 ## 分区
 
@@ -75,21 +83,29 @@ Linux 内核的 [Unsorted Block Images（未排序的块映像）](http://www.li
 
 并没有单一的标准来确定文件系统的只读和读/写部分，这在很大程度上取决于项目中所有用到的嵌入式应用情况。
 
+<span id="emmc-and-ufs"></span>
+
 ## eMMC and UFS
 
 随着闪存越来越大，各种因素造成嵌入式设备从使用裸 NAND 转移到封装过的、可基于块寻址的 NAND 闪存。这些是包含固件的芯片，这些固件接收块 I/O 请求，类似于老的硬盘那样旋转存储介质并填充他们。这涉及到映射读写请求到芯片上的 NAND 闪存相应的区域，并管理 NAND 闪存并且尝试优化 Flash 闪存的可靠性和使用寿命。NAND 闪存必须以大块（可擦除的块）来重写，这种块是单个文件系统块的很多倍。因此，系统中的映射、重排和块分配后的垃圾回收机制相当重要。
 
 这些芯片采用基于块的而不是基于闪存的文件系统（例如：Ext4）。截止 2012 年，针对这些芯片去优化 Ext4 文件系统是文件系统研究的一个热点领域，见：<http://lwn.net/Articles/502472>
 
+<span id="embedded-filesystems"></span>
+
 # 嵌入式文件系统
 
 这里有一些为嵌入式设备设计或者常用在嵌入式设备中的文件系统，以字母顺序排列：
+
+<span id="axfs"></span>
 
 ## AXFS
 
 -   [AXFS](../.././dev_portals/File_Systems/AXFS/AXFS.md "AXFS") - 高级就地执行（XIP）文件系统
     -   网站：[http://axfs.sourceforge.net/](http://axfs.sourceforge.net/)
     -   此文件系统是为 XIP 操作特别设计的，它使用双阶段的办法。第一阶段是把文件系统放在闪存上并运行它获取分析数据，并注明哪些页面有被用到。二阶段使用这些分析数据来构建一个文件系统。该文件系统把所有分析文件中记录的页面作为 XIP 数据，这些数据之后被加载到内存并被挂载（然后作为 XIP 执行）。也可能把 XIP 页面放到 NOR 闪存中并直接在上面执行。
+
+<span id="btrfs"></span>
 
 ## Btrfs
 
@@ -98,14 +114,20 @@ Linux 内核的 [Unsorted Block Images（未排序的块映像）](http://www.li
 -   Btrfs 已经被用作 [MeeGo 平台的文件系统](http://lwn.net/Articles/387196/)。
 -   [一个很赞的 btrfs 视频，来自 Chris Mason](http://training.linuxfoundation.org/linux-tutorials/introduction-to-btrfs)
 
+<span id="cramfs"></span>
+
 ## CramFS
 
 -   [CRAMFS](http://en.wikipedia.org/wiki/Cramfs) - Linux 的一个压缩的只读文件系统，CRAMFS 的最大尺寸是 256M。
     -   "线性 Cramfs" 是指这样一种功能，即采用 Cramfs 文件系统，但是在线性块布局中使用非压缩文件。这个对于存储用于可就地执行的文件很有用。如果想了解更多线性 Cramfs 的信息，可以查看[应用程序就地执行（XIP）](../.././dev_portals/Boot_Time/Application_XIP/Application_XIP.md "Application XIP")一文。
 
+<span id="f2fs"></span>
+
 ## F2FS
 
 -   [F2FS](../.././dev_portals/File_Systems/F2FS/F2FS.md "F2FS")[（维基百科入口）](http://en.wikipedia.org/wiki/F2FS) 是 Linux 的一款闪存友好的文件系统，由三星开发。
+
+<span id="initramfs"></span>
 
 ## InitRAMFS
 
@@ -119,11 +141,15 @@ Linux 内核的 [Unsorted Block Images（未排序的块映像）](http://www.li
 
 更多信息可以查看这里：[Documentation/early-userspace/README](https://www.kernel.org/doc/Documentation/early-userspace/README)
 
+<span id="jffs2"></span>
+
 ## JFFS2
 
 -   [JFFS2](http://sourceware.org/jffs2/) - v2.0 的日志闪存文件系统。这个是最常用的闪存文件系统。
     -   JFFS2 的最大尺寸是 128MB。
     -   [http://sourceforge.net/projects/mtd-mods](http://sourceforge.net/projects/mtd-mods) 有一些来自 Alexey Korolev 的补丁，用于改善 JFFS2。
+
+<span id="logfs"></span>
 
 ## LogFS
 
@@ -134,6 +160,8 @@ LogFS 是一个可伸缩性的闪存文件系统，致力于在大多数使用�
 可通过 [LogFS](../.././dev_portals/File_Systems/LogFS/LogFS.md "LogFS") 查看更多细节。
 
 
+<span id="nfs"></span>
+
 ## NFS
 
 鉴于嵌入式设备的空间有限，通常在开发过程中会用一个网络文件系统来作为目标开发板的根文件系统。这样就允许目标开发板在开发时能够有一个非常大的空间来存放全尺寸（译者注：例如，包括各种调试符号）的二进制文件和各种开发工具。不过有一个缺点是在产品最终发布时（或者开发周期中的某些时候），系统还需要被重新配置以便支持本地文件系统（通常还需要被重新测试）。
@@ -141,6 +169,8 @@ LogFS 是一个可伸缩性的闪存文件系统，致力于在大多数使用�
 NFS 客户端可以被编译到内核中，然后内核就可以通过配置来用 NFS 作为根文件系统。这个需要支持网络以及为目标开发板设置 IP 地址的机制，还需要指定 NFS 主机上的文件系统路径。通常，主机还需要通过运行 DHCP 服务器为目标板提供需要的 IP 地址和路径信息。
 
 可以通过内核源码下的 [Documentation/filesystems/nfs/nfsroot.txt](https://www.kernel.org/doc/Documentation/filesystems/nfs/nfsroot.txt) 查看更多关于如何通过内核挂载 NFS 根文件系统的信息。
+
+<span id="pramfs"></span>
 
 ## PRAMFS
 
@@ -151,9 +181,13 @@ NFS 客户端可以被编译到内核中，然后内核就可以通过配置来�
 
     关于 PRAMFS 规范相关的信息，可以查看：[PRAMFS 规范](../.././dev_portals/File_Systems/Pram_Fs/Pram_Fs.md_Specification "Pram Fs Specification")。
 
+<span id="romfs"></span>
+
 ## Romfs
 
 -   [RomFs](http://romfs.sourceforge.net) - 一个小型的空间有效的只读文件系统。相关描述可以查看：[Documentation/filesystems/romfs.txt](https://www.kernel.org/doc/Documentation/filesystems/romfs.txt)。
+
+<span id="squashfs"></span>
 
 ## SquashFS
 
@@ -182,6 +216,8 @@ NFS 客户端可以被编译到内核中，然后内核就可以通过配置来�
 
 - [演讲视频](http://free-electrons.com/pub/video/2008/elce/elce2008-lougher-squashfs.ogv).
 
+<span id="ubifs"></span>
+
 ## UBIFS
 
 [UBIFS](../.././dev_portals/File_Systems/UBIFS/UBIFS.md "UBIFS") 是构建在 [UBI](http://eLinux.org/File_Systems#UBI "File Systems") 之上的一个闪存文件系统。
@@ -189,6 +225,8 @@ NFS 客户端可以被编译到内核中，然后内核就可以通过配置来�
 UBIFS 相比于 JFFS2 和 YAFFS，拥有更好的性能。
 
 可以通过 [UBIFS](../.././dev_portals/File_Systems/UBIFS/UBIFS.md "UBIFS") 获取更多详细信息。
+
+<span id="yaffs2"></span>
 
 ## YAFFS2
 
@@ -204,6 +242,8 @@ UBIFS 相比于 JFFS2 和 YAFFS，拥有更好的性能。
     -  在第 17 届 CELF 盛会上做的关于 2.6.10 内核上的 YAFFS 和 JFFS2 比较的报告：[celf\_flash.pdf](http://tree.celinuxforum.org/CelfPubWiki/JapanTechnicalJamboree17?action=AttachFile&do=view&target=celf_flashfs.pdf)
 
     YAFFS2 遵守 GPL 许可，但是也可以在双重授权条款（来自Aleph One Ltd）下，用于商业领域。
+
+<span id="mounting-the-root-filesystem"></span>
 
 # 挂载文件系统
 
@@ -228,6 +268,8 @@ UBIFS 相比于 JFFS2 和 YAFFS，拥有更好的性能。
     -   `root=/dev/ram0`
 
     通常，还需要指定 ramdisk_size 之类并且要使能相应的内核配置选项。
+
+<span id="mounting-jffs2-image-on-pc-using-mtdram"></span>
 
 ## 在 PC 上用 mtdram 挂载 JFFS2 镜像
 
@@ -258,6 +300,8 @@ UBIFS 相比于 JFFS2 和 YAFFS，拥有更好的性能。
 
     mount /dev/mtdblock0 /tmp/jffs2 -t jffs2
 
+
+<span id="mounting-ubi-image-on-pc-using-nandsim"></span>
 
 ## 在 PC 上用 nandsim 挂载 UBI 镜像
 
@@ -298,7 +342,11 @@ UBIFS 相比于 JFFS2 和 YAFFS，拥有更好的性能。
     $ mkdir temp
     $ sudo mount -t ubifs ubi0 temp
 
+<span id="issues-with-general-purpose-filesystems-used-in-embedded"></span>
+
 # 在嵌入式中使用通用文件系统的问题
+
+<span id="mmc-sdcard-card-characteristics"></span>
 
 ## MMC/sdcard 卡特性
 
@@ -311,7 +359,11 @@ MMCs 和 SDcards 都是闪存设备，对于它们的主机而言，都呈现为
 - [https://wiki.linaro.org/WorkingGroups/KernelConsolidation/Projects/FlashCardSurvey](https://wiki.linaro.org/WorkingGroups/KernelConsolidation/Projects/FlashCardSurvey)
 - [https://wiki.linaro.org/WorkingGroups/KernelConsolidation/Projects/FlashDeviceMapper](https://wiki.linaro.org/WorkingGroups/KernelConsolidation/Projects/FlashDeviceMapper) 
 
+<span id="special-purpose-filesystems"></span>
+
 # 专用文件系统
+
+<span id="abiss"></span>
 
 ## ABISS
 
@@ -319,9 +371,13 @@ MMCs 和 SDcards 都是闪存设备，对于它们的主机而言，都呈现为
 
 - [ABISS](http://abiss.sourceforge.net/)
 
+<span id="layered-filesystems"></span>
+
 ## 分层的文件系统
 
 分层的文件系统允许我们挂载只读介质，但是也提供写入的能力。当然，写操作会在某些地方终止，这部分由分层文件系统透明地处理。这类文件系统存在了有相当一段时间，下面是已经在嵌入式 Linux 系统中使用的一些例子。
+
+<span id="unionfs"></span>
 
 ### UnionFS
 
@@ -331,9 +387,13 @@ UnionFS 是提供这样一个文件系统（提供了多种文件系统的“联
 
 也可以看下联合挂载，描述在[这里](http://lkml.org/lkml/2007/6/20/18)（如果该功能合并后，也可以看下内核源码下的 Documentation/union-mounts.txt）。
 
+<span id="aufs"></span>
+
 ### aufs
 
 另外一个 UnionFS，可从 [http://aufs.sourceforge.net](http://aufs.sourceforge.net) 获取更多信息。
+
+<span id="mini-fo"></span>
 
 ### mini\_fo
 
@@ -343,7 +403,11 @@ minifo = 迷你展开覆盖文件系统（fanout overlay file system）.
 
 显然该项目已经没人维护了，最后的信息还是 2005 年的。
 
+<span id="performance-and-benchmarks"></span>
+
 # 性能和基准测试
+
+<span id="tools-to-measure-performance"></span>
 
 ## 性能评测工具
 
@@ -363,7 +427,11 @@ Linux 桌面上常用的一些基准测试工具有：
 -   [tiobench：可移植的，完全线程化的 I/O 基准测试程序](http://sourceforge.net/projects/tiobench/)
 -   [ffsb：灵活的文件系统基准测试程序](http://sourceforge.net/projects/ffsb/)
 
+<span id="comparison-of-flash-filesystems"></span>
+
 ## 闪存文件系统比较
+
+<span id="cogent-embedded-tests-2013"></span>
 
 ### Cogent Embedded 公司的测试 (2013)
 
@@ -372,22 +440,32 @@ Linux 桌面上常用的一些基准测试工具有：
 -   [eMMC/SSD 文件系统调优方法 v1.0](http://eLinux.org/images/b/b6/EMMC-SSD_File_System_Tuning_Methodology_v1.0.pdf "EMMC-SSD File System Tuning Methodology v1.0.pdf")
     -   包含测试方法和结果（性能和鲁棒性），在不同的闪存设备上调优不同的文件系统（包括 btrfs, ext3 和 f2fs）
 
+<span id="free-electrons-tests-2011"></span>
+
 ### Free Electrons 公司的测试 (2011)
 
 2011 年时, CE Linux 论坛联合 Free Electrons，针对多个内核版本上的多种闪存文件系统做了系统性的测试。
 
 测试结果在 [Flash\_Filesystem\_Benchmarks](../.././dev_portals/File_Systems/Flash_Filesystem_Benchmarks/Flash_Filesystem_Benchmarks.md "Flash Filesystem Benchmarks")。
 
+<span id="other-projects"></span>
+
 # 其他项目
+
+<span id="multi-media-file-systems"></span>
 
 ## 多媒体文件系统
 
 -   XPRESS 文件系统
     -   从 ELC 2007 上发现该文件系统项目最近在三星内部已经暂停
 
+<span id="wikipediafs"></span>
+
 ## 维基百科文件系统
 
 一个可以挂载的虚拟文件系统，允许把基于 mediawiki 搭建的网站用普通编辑器当作普通文件访问。目前该文件系统没人维护了，通过[这里](http://wikipediafs.sourceforge.net/)查看更多信息。
+
+<span id="wikifs"></span>
 
 ## 维基文件系统
 
