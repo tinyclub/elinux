@@ -7,7 +7,14 @@
     $ sudo ln -fs /usr/bin/nodejs /usr/bin/node
     $ sudo aptitude install -y calibre fonts-arphic-gbsn00lp
     $ npm config set registry https://registry.npm.taobao.org
+    $ npm config set ca ""
     $ sudo npm install gitbook-cli -g
+
+    $ sudo npm install gitbook-plugin-disqus \
+                       gitbook-plugin-google_code_prettify \
+                       gitbook-plugin-collapsible-menu \
+                       gitbook-plugin-maxiang \
+                       gitbook-plugin-livereload
 
 ## 下载
 
