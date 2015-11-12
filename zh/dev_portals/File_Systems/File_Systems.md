@@ -1,18 +1,18 @@
-> From: [eLinux.org](http://eLinux.org/File_Systems "http://eLinux.org/File_Systems")
+> 原文：[eLinux.org](http://eLinux.org/File_Systems "http://eLinux.org/File_Systems")<br/>
+> 翻译：[@lzufalcon](https://github.com/lzufalcon)
+
+# 文件系统
 
 
-# File Systems
 
+## 目录
 
-
-## Contents
-
--   [1 Introduction](#introduction)
+-   [1 简介](#introduction)
     -   [1.1 MTD](#mtd)
     -   [1.2 UBI](#ubi)
-    -   [1.3 Partitioning](#partitioning)
+    -   [1.3 分区](#partitioning)
     -   [1.4 eMMC and UFS](#emmc-and-ufs)
--   [2 Embedded Filesystems](#embedded-filesystems)
+-   [2 嵌入式文件系统](#embedded-filesystems)
     -   [2.1 AXFS](#axfs)
     -   [2.2 Btrfs](#btrfs)
     -   [2.3 CramFS](#cramfs)
@@ -26,425 +26,218 @@
     -   [2.11 SquashFS](#squashfs)
     -   [2.12 UBIFS](#ubifs)
     -   [2.13 YAFFS2](#yaffs2)
--   [3 Mounting the root filesystem](#mounting-the-root-filesystem)
-    -   [3.1 Mounting JFFS2 image on PC using
-        mtdram](#mounting-jffs2-image-on-pc-using-mtdram)
-    -   [3.2 Mounting UBI Image on PC using
-        nandsim](#mounting-ubi-image-on-pc-using-nandsim)
--   [4 Issues with General Purpose filesystems used in
-    embedded](#issues-with-general-purpose-filesystems-used-in-embedded)
-    -   [4.1 MMC/sdcard card
-        characteristics](#mmc-sdcard-card-characteristics)
--   [5 Special-purpose Filesystems](#special-purpose-filesystems)
+-   [3 挂载根文件系统](#mounting-the-root-filesystem)
+    -   [3.1 在 PC 上用 mtdram 挂载 JFFS2 镜像](#mounting-jffs2-image-on-pc-using-mtdram)
+    -   [3.2 在 PC 上用 nandsim 挂载 UBI 镜像](#mounting-ubi-image-on-pc-using-nandsim)
+-   [4 在嵌入式中使用通用文件系统的问题](#issues-with-general-purpose-filesystems-used-in-embedded)
+    -   [4.1 MMC/sdcard 卡特性](#mmc-sdcard-card-characteristics)
+-   [5 专用文件系统](#special-purpose-filesystems)
     -   [5.1 ABISS](#abiss)
-    -   [5.2 Layered Filesystems](#layered-filesystems)
+    -   [5.2 分层的文件系统](#layered-filesystems)
         -   [5.2.1 UnionFS](#unionfs)
         -   [5.2.2 aufs](#aufs)
         -   [5.2.3 mini\-fo](#mini-fo)
--   [6 Performance and benchmarks](#performance-and-benchmarks)
-    -   [6.1 Tools to measure
-        performance](#tools-to-measure-performance)
-    -   [6.2 Comparison of flash
-        filesystems](#comparison-of-flash-filesystems)
-        -   [6.2.1 Cogent Embedded tests
-            (2013)](#cogent-embedded-tests-2013)
-        -   [6.2.2 Free Electrons tests
-            (2011)](#free-electrons-tests-2011)
--   [7 Other projects](#other-projects)
-    -   [7.1 Multi-media file systems](#multi-media-file-systems)
-    -   [7.2 WikipediaFS](#wikipediafs)
-    -   [7.3 wikifs](#wikifs)
+-   [6 性能和基准测试](#performance-and-benchmarks)
+    -   [6.1 用于评测性能的工具](#tools-to-measure-performance)
+    -   [6.2 闪存文件系统比较](#comparison-of-flash-filesystems)
+        -   [6.2.1 Cogent Embedded 公司的测试 (2013)](#cogent-embedded-tests-2013)
+        -   [6.2.2 Free Electrons 公司的测试 (2011)](#free-electrons-tests-2011)
+-   [7 其他项目](#other-projects)
+    -   [7.1 多媒体文件系统](#multi-media-file-systems)
+    -   [7.2 维基百科文件系统](#wikipediafs)
+    -   [7.3 维基文件系统](#wikifs)
 
-# Introduction
+# 简介
 
-Most embedded devices use [flash
-memory](http://en.wikipedia.org/wiki/Flash_memory) as storage media.
-Also, size and bootup time are very important in many consumer
-electronics products. Therefore, special file systems are often used
-with differrent features, such as enhanced compression, or the ability
-to execute files directly from flash.
+大多数嵌入式设备使用 [闪存](http://en.wikipedia.org/wiki/Flash_memory) 作为存储介质。
+
+同时，系统尺寸和启动时间在许多消费电子产品中也非常重要，因此，专用文件系统经常具有不同的功能，例如，更高压缩比或者直接从闪存执行文件的能力。
 
 ## MTD
 
-Note that flash memory may be managed by the Memory Technology Devices
-(MTD) system of Linux. See the [MTD/Flash
-FAQ](http://www.linux-mtd.infradead.org/faq/general.html) for more
-information. Most of the filesystems mentioned here are built on top of
-the MTD system.
+需要注意的是，闪存可能用 Linux 的 MTD 系统管理。从 [MTD/Flash FAQ](http://www.linux-mtd.infradead.org/faq/general.html) 可以查看相关信息。这里提到的大多数文件系统都构建在 MTD 系统之上。
 
 ## UBI
 
-The [Unsorted Block
-Images](http://www.linux-mtd.infradead.org/doc/ubi.html) (UBI) system in
-the Linux kernel manages multiple logical volumes on a single flash
-device. It provides a mapping from logical blocks to physical erase
-blocks, via the MTD layer. UBI provides a flexible partitioning concept
-which allows for wear-leveling across the whole flash device.
+Linux 内核的 [Unsorted Block Images（未排序的块映像）](http://www.linux-mtd.infradead.org/doc/ubi.html) (UBI) 系统管理单个闪存上的多个逻辑卷。它通过 MTD 层提供了从逻辑块到物理可擦除块的映射。UBI 也提供了灵活的分区概念，允许跨越整个闪存设备均衡损耗。
 
-See the [UBI](http://www.linux-mtd.infradead.org/doc/ubi.html) page or
-[UBI FAX and Howto](http://www.linux-mtd.infradead.org/faq/ubi.html) for
-more information.
+可通过 [UBI](http://www.linux-mtd.infradead.org/doc/ubi.html) 或者 [UBI FAX and Howto](http://www.linux-mtd.infradead.org/faq/ubi.html) 查看更多信息。
 
-## Partitioning
+## 分区
 
-The kernel requires at least one "root" file system, onto which other
-file systems can be mounted. In non-embedded systems, often only a
-single file system is used. However, in order to optimize limited
-resources (flash, RAM, processor speed, boot up time), many embedded
-systems break the file system into separate parts, and put each part on
-its own partition (often in different kinds of storage.
+内核至少要有一个根（root）文件系统，确保其他系统有地方可以挂载。在非嵌入式系统中，经常只会用到一个文件系统。但是，为了优化有限的资源（闪存、RAM、处理器速度、启动时间），许多嵌入式系统把文件系统拆分成几个独立的部分，然后把每部分放在各自的分区（通常在不同类型的存储设备中）。
 
-For example, a developer may wish to take all the read-only files of the
-system, and put them into a compressed, read-only file system in flash.
-This will consume the least amount of space on flash, at the cost of
-some read-time performance (for decompression).
+举例来说，开发人员可能希望拿到系统中所有只读文件，并放到闪存中一个压缩过的只读文件系统中。这样或许会牺牲掉一些读取时间的性能（解压所需），但是可以减少闪存空间的消耗。
 
-Another configuration might have executable files stored uncompressed on
-flash, so that they can be executed-in-place, which saves RAM and
-boot-up time (with a potential small loss of performance).
+其他的配置可能会把可执行文件放到未压缩的闪存上，这样它们就可以就地执行，从而节省 RAM 和 启动时间（会潜在有少许性能损失）。
 
-For writable data, if the data does not need to be persistent, sometimes
-a ramdisk is used. Depending on the performance needs and the RAM
-limits, the file data may be compressed or not.
+对于可写数据，如果数据不需要永久存在，有时就可以用 Ramdisk。而文件数据是否压缩，则取决于性能需要和内存限制。
 
-There is no single standard for interleaving the read-only and
-read-write portions of the file system. This depends heavily on the set
-of embedded applications used for the project.
+并没有单一的标准来确定文件系统的只读和读/写部分，这在很大程度上取决于项目中所有用到的嵌入式应用情况。
 
 ## eMMC and UFS
 
-As flash memories have gotten larger, a variety of factors has caused a
-shift from use of raw NAND to packaged, block-addressable NAND flash
-memory for embedded devices. These are chips which contain firmware on
-board to accept block I/O requests, similar to rotating storage media
-(old hard disk drives), and fullfill them. This involves mapping the
-read and write requests to areas of the NAND flash in the chip, and
-managing the NAND flash to try to optimize for correctness and longevity
-of the flash memory. NAND flash must be re-written in large blocks
-(erase blocks) that are many times the size of individual file system
-blocks. Therefore, the method of mapping, re-arranging and garbage
-collecting the allocation of blocks in the system is quite important.
+随着闪存越来越大，各种因素造成嵌入式设备从使用裸 NAND 转移到封装过的、可基于块寻址的 NAND 闪存。这些是包含固件的芯片，这些固件接收块 I/O 请求，类似于老的硬盘那样旋转存储介质并填充他们。这涉及到映射读写请求到芯片上的 NAND 闪存相应的区域，并管理 NAND 闪存并且尝试优化 Flash 闪存的可靠性和使用寿命。NAND 闪存必须以大块（可擦除的块）来重写，这种块是单个文件系统块的很多倍。因此，系统中的映射、重排和块分配后的垃圾回收机制相当重要。
 
-These chips are run with a block-based, rather than flash-based
-filesystem (e.g. ext4). As of 2012, optimizing the ext4 file system for
-use with these systems is a hot topic area of file system research. See
-[http://lwn.net/Articles/502472](http://lwn.net/Articles/502472)
+这些芯片采用基于块的而不是基于闪存的文件系统（例如：Ext4）。截止 2012 年，针对这些芯片去优化 Ext4 文件系统是文件系统研究的一个热点领域，见：<http://lwn.net/Articles/502472>
 
-# Embedded Filesystems
+# 嵌入式文件系统
 
-Here are some filesystems designed for and/or commonly used in embedded
-devices, sorted in alphabetical order:
+这里有一些为嵌入式设备设计或者常用在嵌入式设备中的文件系统，以字母顺序排列：
 
 ## AXFS
 
--   [AXFS](../.././dev_portals/File_Systems/AXFS/AXFS.md "AXFS") - Advanced XIP File System
-    -   Website:
-        [http://axfs.sourceforge.net/](http://axfs.sourceforge.net/)
-    -   This file system is designed specifically to support
-        Execute-in-place operations. It uses a bi-phased approach. The
-        first phase is to have the filesystem in flash and run it to
-        collect profile data, stating what pages are used. In the second
-        phase you build a filesystem using these profile data. This
-        filesystem makes all pages metioned in the profile file as XIP
-        data, which can then will be loaded to RAM upon mounting (and
-        executed as XIP). It is also possible to put the XIP pages in
-        NOR flash and run them from there.
+-   [AXFS](../.././dev_portals/File_Systems/AXFS/AXFS.md "AXFS") - 高级就地执行（XIP）文件系统
+    -   网站：[http://axfs.sourceforge.net/](http://axfs.sourceforge.net/)
+    -   此文件系统是为 XIP 操作特别设计的，它使用双阶段的办法。第一阶段是把文件系统放在闪存上并运行它获取分析数据，并注明哪些页面有被用到。二阶段使用这些分析数据来构建一个文件系统。该文件系统把所有分析文件中记录的页面作为 XIP 数据，这些数据之后被加载到内存并被挂载（然后作为 XIP 执行）。也可能把 XIP 页面放到 NOR 闪存中并直接在上面执行。
 
 ## Btrfs
 
--   [btrfs](https://btrfs.wiki.kernel.org/index.php/Main_Page) is a new
-    copy-on-write filesystem that first appeared in the kernel in
-    2.6.29-rc1 and [was merged in
-    2.6.30](http://lwn.net/Articles/342892/).
--   Btrfs is [not yet supported by many popular Linux filesystem tools
-    such as gparted](http://gparted.sourceforge.net/features.php) as of
-    April 2011.
--   Btrfs has been adopted as the [MeeGo platform's
-    filesystem](http://lwn.net/Articles/387196/).
--   [Nice Introduction Video on btrfs by Chris
-    Mason](http://training.linuxfoundation.org/linux-tutorials/introduction-to-btrfs)
+-   [btrfs](https://btrfs.wiki.kernel.org/index.php/Main_Page) 是一种新的写时复制文件系统，首次出现在 2.6.29-rc1 内核并且 [被合入到了 2.6.30](http://lwn.net/Articles/342892/)。
+-   截止 2011 年 4 月，Btrfs [还没有被许多流行的 Linux 文件系统工具（如 gparted）支持](http://gparted.sourceforge.net/features.php)
+-   Btrfs 已经被用作 [MeeGo 平台的文件系统](http://lwn.net/Articles/387196/)。
+-   [一个很赞的 btrfs 视频，来自 Chris Mason](http://training.linuxfoundation.org/linux-tutorials/introduction-to-btrfs)
 
 ## CramFS
 
--   [CRAMFS](http://en.wikipedia.org/wiki/Cramfs) - A compressed
-    read-only file system for Linux. The maximum size of CRAMFS is
-    256MB.
-    -   "Linear Cramfs" is the name of a special feature to use
-        uncompressed file, in a linear block layout with the Cramfs file
-        system. This is useful for storing files which can be executed
-        in-place. For more information on Linear Cramfs, see
-        [Application XIP](../.././dev_portals/Boot_Time/Application_XIP/Application_XIP.md "Application XIP")
+-   [CRAMFS](http://en.wikipedia.org/wiki/Cramfs) - Linux 的一个压缩的只读文件系统，CRAMFS 的最大尺寸是 256M。
+    -   "线性 Cramfs" 是指这样一种功能，即采用 Cramfs 文件系统，但是在线性块布局中使用非压缩文件。这个对于存储用于可就地执行的文件很有用。如果想了解更多线性 Cramfs 的信息，可以查看[应用程序就地执行（XIP）](../.././dev_portals/Boot_Time/Application_XIP/Application_XIP.md "Application XIP")一文。
 
 ## F2FS
 
--   [F2FS](../.././dev_portals/File_Systems/F2FS/F2FS.md "F2FS")[(wikipedia
-    entry)](http://en.wikipedia.org/wiki/F2FS) is a flash-friendly file
-    system for Linux, developed by Samsung.
+-   [F2FS](../.././dev_portals/File_Systems/F2FS/F2FS.md "F2FS")[（维基百科入口）](http://en.wikipedia.org/wiki/F2FS) 是 Linux 的一款闪存友好的文件系统，由三星开发。
 
 ## InitRAMFS
 
-From March 2006 [Linux Devices](../.././dev_portals/File_Systems/Linux_Devices/Linux_Devices.md "Linux Devices"):
+来自 2006 年 3 月的 [Introducing initramfs, a new model for initial RAM disks](http://archive.linuxgizmos.com/introducing-initramfs-a-new-model-for-initial-ram-disks-a/) 一文显示：
 
-INTRODUCING INITRAMFS, A NEW MODEL FOR INITIAL RAM DISKS This clear,
-technical article introduces initramfs, a Linux 2.6 feature that enables
-an initial root filesystem and init program to reside in the kernel's
-memory cache, rather than on a ramdisk (as with initrd filesystems).
-Compared to initrd, intramfs can increase boot-time flexibility, memory
-efficiency, and simplicity, the author says. One especially interesting
-feature for embedded Linux developers is that relatively simple, deeply
-embedded systems can use initramfs as their sole filesystem.
+> 引入 INITRAMFS 之初，是作为初始化内存盘的一个新模型，这点是很清楚的。技术性文章介绍 initramfs 时，把它描述为 Linux 2.6 内核的一个功能，该功能允许初始化根文件系统和初始化程序驻留在内核内存缓冲区中，而不是驻留在内存盘中（对于 initrd 文件系统是这样）。initramfs 作者提到，相比 initrd，initramfs 能够增加启动时间的灵活性、内存的有效性和简便性。对于嵌入式开发者而言，一个特别有趣的功能是，一个相对简单的嵌入式系统能够只用 initramfs 作为它们唯一的文件系统。
 
-[http://www.linuxfordevices.com/c/a/Linux-For-Devices-Articles/Introducing-initramfs-a-new-model-for-initial-RAM-disks/](http://www.linuxfordevices.com/c/a/Linux-For-Devices-Articles/Introducing-initramfs-a-new-model-for-initial-RAM-disks/)
-
-Here is a good article about how to build an initramfs:
+这里有一篇不错的文章介绍了如何构建 initramfs：
 
 -   [http://www.landley.net/writing/rootfs-howto.html](http://www.landley.net/writing/rootfs-howto.html)
 
-For more information, look in: Documentation/early-userspace/README
+更多信息可以查看这里：[Documentation/early-userspace/README](https://www.kernel.org/doc/Documentation/early-userspace/README)
 
 ## JFFS2
 
--   [JFFS2](http://sourceware.org/jffs2/) - The Journalling Flash File
-    System, version 2. This is the most commonly used flash filesystem.
-    -   The maximum size of JFFS2 is 128MB.
-    -   [http://sourceforge.net/projects/mtd-mods](http://sourceforge.net/projects/mtd-mods)
-        has some patches by Alexey Korolev for improvements to JFFS2
-        -   See the presentation on Alexey's patches at:
-    -   To improve mount time substantially verify that the erase block
-        summary patch is in your image. This patch is part of the jffs2
-        driver since 2005-09-07. A patch for an earlier version can be
-        found at:
-        [http://www.inf.u-szeged.hu/jffs2/jffs2-summary-20050211.patch](http://www.inf.u-szeged.hu/jffs2/jffs2-summary-20050211.patch)
-        (or try your luck at
-        [http://web.archive.org/web/\*/http://www.inf.u-szeged.hu/jffs2/mount.php](http://web.archive.org/web/*/http://www.inf.u-szeged.hu/jffs2/mount.php)).
-    -   [JFFS2](http://eLinux.org/index.php?title=JFFS2&action=edit&redlink=1 "JFFS2 (page does not exist)")
-        has undergone improvement since early versions (\~2.4.30).
-        Modern versions of the driver in newer kernels have show
-        stopping bugs fixed.
+-   [JFFS2](http://sourceware.org/jffs2/) - v2.0 的日志闪存文件系统。这个是最常用的闪存文件系统。
+    -   JFFS2 的最大尺寸是 128MB。
+    -   [http://sourceforge.net/projects/mtd-mods](http://sourceforge.net/projects/mtd-mods) 有一些来自 Alexey Korolev 的补丁，用于改善 JFFS2。
 
 ## LogFS
 
-LogFS was a scalable flash filesystme aimed at replacing JFFS2 for most
-uses.
+LogFS 是一个可伸缩性的闪存文件系统，致力于在大多数使用场景中替换掉 JFFS2。
 
-Unfortunately, it seems to be abandoned at present.
+不幸地是，它貌似现在已经被遗弃了。
 
-See [LogFS](../.././dev_portals/File_Systems/LogFS/LogFS.md "LogFS") for details.
-
+可通过 [LogFS](../.././dev_portals/File_Systems/LogFS/LogFS.md "LogFS") 查看更多细节。
 
 
 ## NFS
 
-Due to space constraints on embedded devices, it is common during
-development to use a network file system for the root filesystem for the
-target. This allows the target to have a very large area where full-size
-binaries and lots of development tools can be placed during development.
-One drawback to this approach is that the system will need to be
-re-configured with local file systems (and most likely re-tested) for
-final product shipment, at some time during the development cycle.
+鉴于嵌入式设备的空间有限，通常在开发过程中会用一个网络文件系统来作为目标开发板的根文件系统。这样就允许目标开发板在开发时能够有一个非常大的空间来存放全尺寸（译者注：例如，包括各种调试符号）的二进制文件和各种开发工具。不过有一个缺点是在产品最终发布时（或者开发周期中的某些时候），系统还需要被重新配置以便支持本地文件系统（通常还需要被重新测试）。
 
-An NFS client can be built into the Linux kernel, and the kernel can be
-configured to use NFS as the root filesystem. This requires support for
-networking, and mechanisms for specifying the IP address for the target,
-and the path to the filesystem on the NFS host. Also, the host must be
-configured to run an NFS server. Often, the host also provides the
-required address and path information to the target board by running a
-DHCP server.
+NFS 客户端可以被编译到内核中，然后内核就可以通过配置来用 NFS 作为根文件系统。这个需要支持网络以及为目标开发板设置 IP 地址的机制，还需要指定 NFS 主机上的文件系统路径。通常，主机还需要通过运行 DHCP 服务器为目标板提供需要的 IP 地址和路径信息。
 
-See the the file Documentation/nfsroot.txt in the Linux kernel source
-for more information about mounting an NFS root filesystem with the
-kernel.
+可以通过内核源码下的 [Documentation/filesystems/nfs/nfsroot.txt](https://www.kernel.org/doc/Documentation/filesystems/nfs/nfsroot.txt) 查看更多关于如何通过内核挂载 NFS 根文件系统的信息。
 
 ## PRAMFS
 
--   [PRAMFS](../.././dev_portals/File_Systems/Pram_Fs/Pram_Fs.md "Pram Fs") - Persistent and protected RAM File
-    System
+-   [PRAMFS](../.././dev_portals/File_Systems/Pram_Fs/Pram_Fs.md "Pram Fs") - 持久并且受保护的文件系统
 
-The Persistent/Protected RAM Special Filesystem (PRAMFS) is a
-full-featured read/write filesystem that has been designed to work with
-fast I/O memory, and if the memory is non-volatile, the filesystem will
-be persistent. In addition, it has Execute-in-place support.
 
-Info on the PRAMFS specification can be found at [Pram Fs
-Specification](../.././dev_portals/File_Systems/Pram_Fs/Pram_Fs.md_Specification "Pram Fs Specification")
+    PRAMFS 是一个全功能的可读/写文件系统，被设计于，可以与更快的 I/O 内存协同工作，并且如果使用非易失内存，那么文件系统就具有持久性。另外，它还支持就地执行（XIP）。
+
+    关于 PRAMFS 规范相关的信息，可以查看：[PRAMFS 规范](../.././dev_portals/File_Systems/Pram_Fs/Pram_Fs.md_Specification "Pram Fs Specification")。
 
 ## Romfs
 
--   [RomFs](http://romfs.sourceforge.net) - A small space-efficient
-    read-only filesystem. A description can be found in
-    Documentation/filesystems/romfs.txt or
-    [http://lxr.linux.no/linux/Documentation/filesystems/romfs.txt](http://lxr.linux.no/linux/Documentation/filesystems/romfs.txt)
+-   [RomFs](http://romfs.sourceforge.net) - 一个小型的空间有效的只读文件系统。相关描述可以查看：[Documentation/filesystems/romfs.txt](https://www.kernel.org/doc/Documentation/filesystems/romfs.txt)。
 
 ## SquashFS
 
-[Squash Fs](../.././dev_portals/File_Systems/Squash_Fs/Squash_Fs.md "Squash Fs") is a (more) compressed read-only
-file system for Linux. This file system has better compression than
-JFFS2 or CRAMFS. After spending a long time outside of the mainline
-kernel, Squashfs have finally been merged and released with [kernel
-2.6.29](http://kernelnewbies.org/LinuxChanges#head-5ca2504b2b4f4e6583f50dcdf23b2e75b383252f).
+[Squash Fs](../.././dev_portals/File_Systems/Squash_Fs/Squash_Fs.md "Squash Fs") 是 Linux 的一个具有更高压缩比的可压缩只读文件系统。该文件系统相比 JFFS2 或者 CRAMFS 有更高压缩比。 在主线内核之外游离了很长一段时间后，Squashfs 最终被合并并发布在 [2.6.29 内核](http://kernelnewbies.org/LinuxChanges#head-5ca2504b2b4f4e6583f50dcdf23b2e75b383252f) 中。
 
-It is possible to tune the amount of compression when running
-mksquashfs. The -b option allows you to specify the block size. A
-smaller block size generally gives less compression and a larger -b
-option gives more compression. However there is a downside to this. Data
-is read from the flash using blocks. So if you use a block size of 128k,
-and you need a page of 4k, still the compressed equivalent of 128k data
-will be read from flash. As 128k comprises 32 pages, it will result in
-32 pages being read into the buffer cache, even though at the moment of
-reading you only need one. Often the other 31 pages will be needed as
-well, but if not you wasted some tiem to read and decompress the unused
-data. Also you got some unneeded data in the buffer cache (possibly the
-system even had to kick used pages from the cache in order to make room
-for these 31 pages).
+在运行 `mksquashfs` 时，可以调节压缩比。`-b` 选项允许我们指定块大小。更小的块大小通常产生更小的压缩比，相应地，`-b` 设置越大，压缩比更高。但是，这里也有一个缺点，那就是数据以块的方式从磁盘读出来，所以如果使用 128k 大小的块，使用 4k 大小的内存页，然后压缩过的相当于 128k 的数据会从闪存读出来。因为 128k 需要 32 个内存页，这会导致一次性读取 32 页的内容到缓冲区中，即使当时只需要读 1 页内容。通常，另外 31 页也可能会被用到，但是如果用不到(but if not)，就会浪费掉读取和解压未用数据的时间，而且会让未用数据平白无故占用缓冲区（甚至系统还会为了给这 31 个页面预留空间而把其他用到的页面从缓冲区中踢出去），从而会降低资源利用率并影响性能。
 
-If you care for the smallest filesystem you probably want to go with the
-largest block size. However, if your primary concern is performance you
-might want to experiment a little bit to see what works out best for you
-(and that could even be applying no compression at all! Mksquashfs has
-options: -noInodeCompression, -noDataCompression and
-–noFragmentCompression to control this). If you also applied function
-reordering (see [Boot Time\#User-space and application
-speedups](http://eLinux.org/Boot_Time#User-space_and_application_speedups "Boot Time") a
-large block size will probably work out well for you.
+如果想获得一个最小的文件系统，那么可以考虑用最大的块。但是，如果更关心性能的话，那么可以考虑尝试更多选项来看下哪个最适合你（甚至可以完全不用压缩，`mksquashfs`提供了这些相应的控制选项：`-noInodeCompression, -noDataCompression`, `–noFragmentCompression`）。如果还想采用函数重排（[启动时间\#用户空间和应用程序加速](http://eLinux.org/Boot_Time "Boot Time")），大的块可能更适合你。
 
-The table below gives an idea of the amount of compression that is
-achieved by the various block sizes. Input was a root filesystem of an
-embedded device.
+下表给出了不同块大小可以达到的压缩比信息，这些尺寸信息都是针对一个嵌入式设备的根文件系统测试出来的。
 
-<table>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="left">size</th>
-<th align="left">compression</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">Initial</td>
-<td align="left">53128K</td>
-<td align="left">100 %</td>
-</tr>
-<tr class="even">
-<td align="left">4K</td>
-<td align="left">17643K</td>
-<td align="left">33.2 %</td>
-</tr>
-<tr class="odd">
-<td align="left">8K</td>
-<td align="left">16572K</td>
-<td align="left">31.2 %</td>
-</tr>
-<tr class="even">
-<td align="left">16K</td>
-<td align="left">15780K</td>
-<td align="left">29.7 %</td>
-</tr>
-<tr class="odd">
-<td align="left">32K</td>
-<td align="left">15204K</td>
-<td align="left">28.6 %</td>
-</tr>
-<tr class="even">
-<td align="left">64K</td>
-<td align="left">14812K</td>
-<td align="left">27.9 %</td>
-</tr>
-</tbody>
-</table>
+|       |  大小  | 压缩比   |
+|-------|--------|----------|
+|初始值  | 53128K |  100 %   |
+|4K     | 17643K |  33.2 %  |
+|8K     | 16572K |  31.2 %  |
+|16K    | 15780K |  29.7 %  |
+|32K    | 15204K |  28.6 %  |
+|64K    | 14812K |  27.9 %  |
 
-A presentation on Squash FS by Phillip Lougher at ELC Europe 2008:
-[slides](http://tree.celinuxforum.org/CelfPubWiki/ELCEurope2008Presentations?action=AttachFile&do=get&target=squashfs-elce.pdf)
-and
-[video](http://free-electrons.com/pub/video/2008/elce/elce2008-lougher-squashfs.ogv).
+在 2008 年欧洲嵌入式 Linux 会议上，Phillip Lougher 做了一个关于 SquashFS 的报告：
+
+- [演讲稿](http://tree.celinuxforum.org/CelfPubWiki/ELCEurope2008Presentations?action=AttachFile&do=get&target=squashfs-elce.pdf)
+
+和
+
+- [演讲视频](http://free-electrons.com/pub/video/2008/elce/elce2008-lougher-squashfs.ogv).
 
 ## UBIFS
 
-[UBIFS](../.././dev_portals/File_Systems/UBIFS/UBIFS.md "UBIFS") is a flash-based filesystem, implemented on top
-of the Unsorted Block Images ([UBI](http://eLinux.org/File_Systems#UBI "File Systems"))
-interface.
+[UBIFS](../.././dev_portals/File_Systems/UBIFS/UBIFS.md "UBIFS") 是构建在 [UBI](http://eLinux.org/File_Systems#UBI "File Systems") 之上的一个闪存文件系统。
 
-It has good performance compared to Jffs2 and yaffs.
+UBIFS 相比于 JFFS2 和 YAFFS，拥有更好的性能。
 
-Please see the [UBIFS](../.././dev_portals/File_Systems/UBIFS/UBIFS.md "UBIFS") page for more details.
+可以通过 [UBIFS](../.././dev_portals/File_Systems/UBIFS/UBIFS.md "UBIFS") 获取更多详细信息。
 
 ## YAFFS2
 
--   [YAFFS](http://www.yaffs.net/yaffs-overview) - Yet Another Flash
-    File System - a file system designed specifically for NAND flash.
+-   [YAFFS](http://www.yaffs.net/yaffs-overview) - Yet Another Flash File System（另一个闪存文件系统，名副其实！） - 一个专门为 NAND 闪存设计的文件系统
 
-YAFFS2 is simple, portable, reliable and self-contained. It is widely
-used in embedded OSes other than Linux, and can also be used stand-alone
-without an OS, e.g. in bootloaders. When used with Linux it can use MTD
-or its own flash driver. Similarly it can use the VFS or its own posix
-layer. It is log-structured, and single-threaded. It does not do
-compression itself - either compress the data itself or use squashfs on
-top of YAFFS2.
+    YAFFS2 是一个简单、可移植、可靠而且完备的文件系统。除了 Linux，它还广泛应用于各类嵌入式操作系统，并且能够脱离操作系统独立使用，例如可直接用于引导程序中。当和 Linux 一起使用时，它能够用 MTD 或者是它自己的闪存驱动。类似地，它能用 VFS 或者它自己的 POSIX 层。它采用日志结构和单线程。它自身并不支持压缩 - （如果要支持压缩的话）要么压缩数据本身，要么在 YAFFS2 之上用 Squashfs。
 
-YAFFS2 is designed to boot quickly (insofar as a log-structured FS that
-has to scan the flash can). It uses checkpointing so that if a partition
-was unmounted cleanly then there is no need to rescan the flash on
-power-up. All the features of the FS are configuable so you can trade
-off things like maximum file/partition size, flash block size, file
-granulaity etc. Data is written straight through to the flash except for
-caching to ensure efficienct use of blocks. YAFFS2 normally uses the OOB
-are of the flash for its metadata, allowing faster booting as only the
-OOB needs to be read for flash scan. It can keep its metadata inside the
-main page area at the expense of some speed.
+    YAFFS 设计时就考虑了快速启动（作为一个日志结构文件系统，必须扫描闪存）。它使用检查点技术（Checkpointing），所以如果分区被干净地卸载，那么上电时就不需要重新扫描闪存。该 FS 的所有功能都可以配置，所以可以充分权衡像最大文件/分区大小，闪存块大小，文件粒度之类的各类参数。除了确保有效使用块的缓存外，数据被直接写透到闪存中。YAFFS2 通过使用闪存的 OOB 作为其元数据，因为只需要读取 OOB 来做闪存扫描，所以允许更快引导。另外，在牺牲一些性能的情况下，它也能把元数据保留在主页区上。
 
-Despite having been in use on Linux in real products since 2004 it has
-not yet made it to the mainline.
+    尽管从 2004 年开始，YAFFS 就已经结合 Linux 用在真实产品上，但是至今它还没有进入内核主线。
 
--   -   Presentation on YAFFS2 by Wookey at ELC Europe 2007:
-        [yaffs.pdf](http://tree.celinuxforum.org/CelfPubWiki/ELCEurope2007Presentations?action=AttachFile&do=get&target=yaffs.pdf)
-    -   Presentation from CELF Jamboree 17 comparing YAFFS and JFFS2 on
-        2.6.10:
-        [celf\_flash.pdf](http://tree.celinuxforum.org/CelfPubWiki/JapanTechnicalJamboree17?action=AttachFile&do=view&target=celf_flashfs.pdf)
+    -  在 2007 年欧洲嵌入式 Linux 会议上，由 Wookey 做的关于 YAFFS2 的报告：[yaffs.pdf](http://tree.celinuxforum.org/CelfPubWiki/ELCEurope2007Presentations?action=AttachFile&do=get&target=yaffs.pdf)
+    -  在第 17 届 CELF 盛会上做的关于 2.6.10 内核上的 YAFFS 和 JFFS2 比较的报告：[celf\_flash.pdf](http://tree.celinuxforum.org/CelfPubWiki/JapanTechnicalJamboree17?action=AttachFile&do=view&target=celf_flashfs.pdf)
 
-YAFFS2 is GPLed, but is also available under dual-licensing terms for
-use in non-free contexts from Aleph One Ltd.
+    YAFFS2 遵守 GPL 许可，但是也可以在双重授权条款（来自Aleph One Ltd）下，用于商业领域。
 
-# Mounting the root filesystem
+# 挂载文件系统
 
-The root filesystem is mounted by the kernel, using a kernel command
-line option. Other file systems are mounted from user space, usually by
-init scripts or an init program, using the 'mount' command.
+根文件系统由内核挂载，它通过使用一个内核命令行选项来做到。其他的文件系统从用户空间挂载，通常是 init 脚本或者是 init 程序用 `mount` 命令来实现。
 
-The following are examples of command lines used for mounting a root
-filesystem with Linux:
+下面是 Linux 通过命令行挂载根文件系统的一些例子：
 
--   Use the first partition on the first IDE hard drive:
-    -   root=/dev/hda1
--   or in later kernels:
-    -   root=/dev/sda1
+-   使用首个 IDE 驱动的第一个分区作为根文件系统（老内核）：
+    -   `root=/dev/hda1`
+-   在最新的内核中则这么用：
+    -   `root=/dev/sda1`
 
--   Use NFS root filesystem (kernel config must support this)
-    -   root=/dev/nfs
+-   使用 NFS 根文件系统（必须有相应内核配置支持）
+    -   `root=/dev/nfs`
 
-(Usually you need to add some other arguments to make sure the kernel IP
-address gets configured, or to specify the host NFS path.)
+    通常还需要添加一些其他参数来确保配置好内核 IP 地址或者指定好主机的 NFS 文件系统路径。
 
--   Use flash device partition 2:
-    -   root=/dev/mtdblock2
+-   使用闪存文件系统的第 2 个分区：
+    -   `root=/dev/mtdblock2`
 
-<!-- -->
+-   使用 initramfs
+    -   `root=/dev/ram0`
 
-    [FIXTHIS - should probably mention initrd's here somewhere]
+    通常，还需要指定 ramdisk_size 之类并且要使能相应的内核配置选项。
 
-## Mounting JFFS2 image on PC using mtdram
+## 在 PC 上用 mtdram 挂载 JFFS2 镜像
 
-Since it is not possible to use the loopback device to mount JFFS2
-images, mtdram needs to be used instead. Usually three modules are
-needed to get it working:
+因为不可能用 loopback 设备挂载 JFFS2 镜像，所以需要用到 `mtdram`。通常要工作起来得用到三部分：
 
--   mtdram: Provides an MTD partition in RAM. The size can be defined
-    with the total\_size parameter in kilobytes.
+-   mtdram: 在内存中创建一个 MTD 分区。以 kb 为单位，用 `total_size` 设置文件大小参数。
 
--   mtdblock: This will create a block device for access to the
-    partition.
+-   mtdblock: 用于创建访问上述分区的块设备。
 
--   jffs2: Since JFFS2 is usually not used as a filesystem on a PC,
-    support needs to be loaded manually.
+-   jffs2: 因为 JFFS2 通常并不作为 PC 上的文件系统使用，所以需要手动加载该模块。
 
 <!-- -->
 
@@ -452,217 +245,154 @@ needed to get it working:
     modprobe mtdblock
     modprobe jffs2
 
-Depending on the target's endianess the image file might need conversion
-to PC endianess. jffs2dump from the MTD tools can be used to archive
-this.
+
+取决于目标板的字节序（endianess），如果不同，镜像文件可能需要转换为 PC 上的字节序。MTD 工具套件中的 `jffs2dump` 可以用来做这个事情。
 
     jffs2dump -b -c -e <output-filename> <input-filename>
 
-The final image can be copied to the block device using dd.
+最后的镜像文件可以用 `dd` 命令拷贝到块设备上：
 
     dd if=<image-file> of=/dev/mtdblock0
 
-Mounting is done in the usuall way.
+挂载则跟往常一样：
 
     mount /dev/mtdblock0 /tmp/jffs2 -t jffs2
 
 
+## 在 PC 上用 nandsim 挂载 UBI 镜像
 
-## Mounting UBI Image on PC using nandsim
-
-First create a simulated NAND device (this one is 256MB, 2048 page
-size). \<number\>\_id\_byte= corresponds to the ID bytes sent back from
-the NAND.
+首先创建一个模拟的 NAND 设备（大小为 256MB，2048 页）。`<number>_id_byte=` 设置为发回给 NAND 的 ID 字节数。
 
     $ sudo modprobe nandsim first_id_byte=0x20 second_id_byte=0xaa third_id_byte=0x00 fourth_id_byte=0x15
 
-Check it was created.
+检查确保创建好设备：
 
     $ cat /proc/mtd
     dev:    size   erasesize  name
     mtd0: 10000000 00020000 "NAND simulator partition 0"
 
-Next, attach it to a mtd device.
+接下来，挂到一个 MTD 设备上：
 
     $ sudo modprobe ubi mtd=0
 
-I had to detach it prior to formatting it.
+然后，为了格式化，需要先卸载：
 
     $ sudo ubidetach /dev/ubi_ctrl -m 0
 
-If that ubidetach step fails when you enter it, just proceed to the next
-step to format the mtd device.
+如果上面的 `ubidetech` 这步失败了，直接跳到下面格式化该 MTD 设备：
 
     $ sudo ubiformat /dev/mtd0 -f <image>.ubi
     ubiformat: mtd0 (nand), size 268435456 bytes (256.0 MiB), 2048 eraseblocks of 131072 bytes (128.0 KiB), min. I/O size 2048 bytes
-    libscan: scanning eraseblock 2047 -- 100 % complete
+    libscan: scanning eraseblock 2047 -- 100 % complete
     ubiformat: 2048 eraseblocks have valid erase counter, mean value is 1
-    ubiformat: flashing eraseblock 455 -- 100 % complete
-    ubiformat: formatting eraseblock 2047 -- 100 % complete
+    ubiformat: flashing eraseblock 455 -- 100 % complete
+    ubiformat: formatting eraseblock 2047 -- 100 % complete
 
-Then, attach it.
+再次挂上：
 
     $ sudo ubiattach /dev/ubi_ctrl -m 0
     UBI device number 0, total 2048 LEBs (264241152 bytes, 252.0 MiB), available 0 LEBs (0 bytes), LEB size 129024 bytes (126.0 KiB)
 
-Make a target directory, and mount the device.
+创建目录，并挂载该设备：
 
     $ mkdir temp
     $ sudo mount -t ubifs ubi0 temp
 
-# Issues with General Purpose filesystems used in embedded
+# 在嵌入式中使用通用文件系统的问题
 
-## MMC/sdcard card characteristics
+## MMC/sdcard 卡特性
 
-MMCs and SDcards are flash devices which present a block-oriented
-interface to their host computer. Often, these devices are used in
-embedded devices and have characteristics that are tuned for block
-access using a FAT filesystem. But they are presented at "black boxes",
-with internal logic and algorithms that are not exposed to the host
-computer.
+MMCs 和 SDcards 都是闪存设备，对于它们的主机而言，都呈现为面向块的接口。
 
-Some work is in progress to survey characterize these attributes, and to
-adapt Linux to be able to use these devices more efficiently.
+通常，它们用在嵌入式设备中并且针对使用 FAT 文件系统的块访问进行了特定优化。但是，它们呈现出来像个“黑盒子”，里头有内置逻辑和算法，这些并没有暴露给主机。
 
-See
-[https://wiki.linaro.org/WorkingGroups/KernelConsolidation/Projects/FlashCardSurvey](https://wiki.linaro.org/WorkingGroups/KernelConsolidation/Projects/FlashCardSurvey)
+有些工作正在进行中，例如调查刻画这些属性，进而可以使 Linux 能够更有效地使用这些设备：
 
-and
-[https://wiki.linaro.org/WorkingGroups/KernelConsolidation/Projects/FlashDeviceMapper](https://wiki.linaro.org/WorkingGroups/KernelConsolidation/Projects/FlashDeviceMapper)
-(These projects appear to be the work of Arnd Bergmann)
+- [https://wiki.linaro.org/WorkingGroups/KernelConsolidation/Projects/FlashCardSurvey](https://wiki.linaro.org/WorkingGroups/KernelConsolidation/Projects/FlashCardSurvey)
+- [https://wiki.linaro.org/WorkingGroups/KernelConsolidation/Projects/FlashDeviceMapper](https://wiki.linaro.org/WorkingGroups/KernelConsolidation/Projects/FlashDeviceMapper) 
 
-
-
-# Special-purpose Filesystems
+# 专用文件系统
 
 ## ABISS
 
-The Active Block I/O Scheduling System is a file system designed to be
-able to provide real-time features for file system I/O activities.
+主动块 IO 调度系统（The Active Block I/O Scheduling System）是一个文件系统，其设计初衷是为文件系统 I/O 活动提供实时功能。
 
-See [ABISS](http://abiss.sourceforge.net/)
+- [ABISS](http://abiss.sourceforge.net/)
 
-## Layered Filesystems
+## 分层的文件系统
 
-Layered filesystems enable you to mount read-only media and still have
-the possibility to write to it. At least, the writing part will end up
-somewhere else, which is transparantly handled by the layered
-filesystem. It has been around for quite some time and below are some
-examples of filesystems already usable on (embedded) Linux systems
-out-of-the-box.
+分层的文件系统允许我们挂载只读介质，但是也提供写入的能力。当然，写操作会在某些地方终止，这部分由分层文件系统透明地处理。这类文件系统存在了有相当一段时间，下面是已经在嵌入式 Linux 系统中使用的一些例子。
 
 ### UnionFS
 
-Sometimes it is handy to be able to overlay file systems on top of each
-other. For example, it can be useful in embedded products to use a
-compressed read-only file system, mounted "underneath" a read/write file
-system. This give the appearance of a full read-write file system, while
-still retaining the space savings of the compressed file system, for
-those files that won't change during the life of the product.
+要是文件系统能覆盖彼此的话，有时候还是挺方便的。举个例子来说，在嵌入式产品中，如果在一个可读写的文件系统下面，挂载一个压缩的只读文件系统，那会很有用。因为它看上去不仅提供了一个完整的可读写文件系统，而且，因为这些文件在产品生命周期内并不会被改变，所以依然能够享受压缩的文件系统带来的空间节省的好处。
 
-UnionFS is a project to provide such a system (providing a "union" of
-multiple file systems).
+UnionFS 是提供这样一个文件系统（提供了多种文件系统的“联合”）的项目。可以看下[这里](http://www.filesystems.org/project-unionfs.html)。
 
-See
-[http://www.filesystems.org/project-unionfs.html](http://www.filesystems.org/project-unionfs.html)
-
-See also union mounts, which are described at
-[http://lkml.org/lkml/2007/6/20/18](http://lkml.org/lkml/2007/6/20/18)
-(and also in Documentation/union-mounts.txt in the kernel source tree -
-or will be, when this feature is merged.)
+也可以看下联合挂载，描述在[这里](http://lkml.org/lkml/2007/6/20/18)（如果该功能合并后，也可以看下内核源码下的 Documentation/union-mounts.txt）。
 
 ### aufs
 
-Another UnionFS. Go to
-[http://aufs.sourceforge.net](http://aufs.sourceforge.net) for more
-details.
+另外一个 UnionFS，可从 [http://aufs.sourceforge.net](http://aufs.sourceforge.net) 获取更多信息。
 
 ### mini\_fo
 
-minifo = mini fanout overlay file system.
+minifo = 迷你展开覆盖文件系统（fanout overlay file system）.
 
-Go to
-[http://www.denx.de/wiki/Know.MiniFOHome](http://www.denx.de/wiki/Know.MiniFOHome)
-for more details.
+从 [http://www.denx.de/wiki/Know.MiniFOHome](http://www.denx.de/wiki/Know.MiniFOHome) 可以获得更多信息。
 
-Apparently this is not maintained any more. Last information is from
-2005.
+显然该项目已经没人维护了，最后的信息还是 2005 年的。
 
-# Performance and benchmarks
+# 性能和基准测试
 
-## Tools to measure performance
+## 性能评测工具
 
-For a very simple disk performance measurement, you can use 'dd'. The
-following writes a 2G file of all zeros to a filesystem, then clears the
-page cache, and reads the file back:
+对于一个非常简单的磁盘性能测试，可以用 `dd` 命令做到。下面往文件系统写入一个内容为全零的 2G 文件，然后清掉缓存，再读回来：
 
 -   dd if=/dev/zero of=test bs=1048576 count=2048
 -   sync
 -   sudo echo 3 \>/proc/sys/vm/drop\_caches
 -   dd if=test of=/dev/null bs=1048576
 
-You can also use IOZone to measure the performance of a Linux
-filesystem.
+我们也可以用 IOZone 来测试一个 Linux 文件系统的性能，看[这里](http://www.iozone.org/)。
 
-See [http://www.iozone.org/](http://www.iozone.org/)
-
-Some benchmark systems that are commonly used with desktop linux are
+Linux 桌面上常用的一些基准测试工具有：
 
 -   [bonnie](http://www.coker.com.au/bonnie++/)
 -   [dbench](http://samba.org/ftp/tridge/dbench/)
--   [Portable, fully-threaded I/O benchmark program
-    (tiobench)](http://sourceforge.net/projects/tiobench/)
--   [Flexible File System Benchmark
-    (ffsb)](http://sourceforge.net/projects/ffsb/)
+-   [tiobench：可移植的，完全线程化的 I/O 基准测试程序](http://sourceforge.net/projects/tiobench/)
+-   [ffsb：灵活的文件系统基准测试程序](http://sourceforge.net/projects/ffsb/)
 
-## Comparison of flash filesystems
+## 闪存文件系统比较
 
-### Cogent Embedded tests (2013)
+### Cogent Embedded 公司的测试 (2013)
 
-This section has links to benchmarks, testing and tuning information.
+本节有一些链接，有关于基准测试程序、测试和调优的信息。
 
--   [eMMC/SSD Filesystem Tuning Methodology
-    v1.0](http://eLinux.org/images/b/b6/EMMC-SSD_File_System_Tuning_Methodology_v1.0.pdf "EMMC-SSD File System Tuning Methodology v1.0.pdf")
-    document
-    -   Contains testing methodology, and results (performance and
-        robustness) for tuning different filesystems (btrfs, ext3, and
-        f2fs) on different flash media
+-   [eMMC/SSD 文件系统调优方法 v1.0](http://eLinux.org/images/b/b6/EMMC-SSD_File_System_Tuning_Methodology_v1.0.pdf "EMMC-SSD File System Tuning Methodology v1.0.pdf")
+    -   包含测试方法和结果（性能和鲁棒性），在不同的闪存设备上调优不同的文件系统（包括 btrfs, ext3 和 f2fs）
 
-### Free Electrons tests (2011)
+### Free Electrons 公司的测试 (2011)
 
-In 2011, the CE Linux Forum contracted with Free Electrons to perform
-systematic testing of multiple flash filesystems over multiple kernel
-versions.
+2011 年时, CE Linux 论坛联合 Free Electrons，针对多个内核版本上的多种闪存文件系统做了系统性的测试。
 
-The results are here:
-[Flash\_Filesystem\_Benchmarks](../.././dev_portals/File_Systems/Flash_Filesystem_Benchmarks/Flash_Filesystem_Benchmarks.md "Flash Filesystem Benchmarks")
+测试结果在 [Flash\_Filesystem\_Benchmarks](../.././dev_portals/File_Systems/Flash_Filesystem_Benchmarks/Flash_Filesystem_Benchmarks.md "Flash Filesystem Benchmarks")。
 
-# Other projects
+# 其他项目
 
-## Multi-media file systems
+## 多媒体文件系统
 
--   XPRESS file system - [See OLS 2006 proceedings, presentation by
-    Joo-Young Hwang]
-    -   I found out at ELC 2007 that this FS project was recently
-        suspended internally at Samsung
+-   XPRESS 文件系统
+    -   从 ELC 2007 上发现该文件系统项目最近在三星内部已经暂停
 
-## WikipediaFS
+## 维基百科文件系统
 
-A mountable virtual filesystem that allows accessing mediawiki based
-sites as regular files using a regular editor. Currently this filesystem
-is unmaintained. See
-[http://wikipediafs.sourceforge.net/](http://wikipediafs.sourceforge.net/)
-for more info.
+一个可以挂载的虚拟文件系统，允许把基于 mediawiki 搭建的网站用普通编辑器当作普通文件访问。目前该文件系统没人维护了，通过[这里](http://wikipediafs.sourceforge.net/)查看更多信息。
 
-## wikifs
+## 维基文件系统
 
-This one seems similar to WikipediaFS, but aimed at Plan9 and inferno.
-See
-[http://www.cs.bell-labs.com/magic/man2html/4/wikifs](http://www.cs.bell-labs.com/magic/man2html/4/wikifs)
-for more info.
+类似 维基百科文件系统，但是志在 Plan9 和 inferno，查看[这里](http://www.cs.bell-labs.com/magic/man2html/4/wikifs) 可获取更多信息。
 
+[分类](http://eLinux.org/Special:Categories "Special:Categories"):
 
-[Category](http://eLinux.org/Special:Categories "Special:Categories"):
-
--   [File Systems](http://eLinux.org/Category:File_Systems "Category:File Systems")
-
+-   [文件系统](http://eLinux.org/Category:File_Systems "Category:File Systems")
