@@ -18,9 +18,13 @@
 -   [7 开源项目/邮件列表](#open-source-projects-mailing-lists)
 
 
+<span id="introduction"></span>
+
 ## 简介
 
 本文介绍 Linux 电源管理相关信息。电源管理因手持或者移动产品大量出现而存在，并且消费者越来越关心他们的产品续航体验。
+
+<span id="power-management-technology-project-pages"></span>
 
 ## 电源管理技术与项目网页
 
@@ -32,7 +36,11 @@
 -   [OMAP 电源管理](http://eLinux.org/OMAP_Power_Management "OMAP Power Management")
     -   [TI](http://eLinux.org/Texas_Instruments "Texas Instruments") OMAP 系列处理器上的电源管理。
 
+<span id="linux-power-management-mini-summit"></span>
+
 ## Linux 电源管理迷你峰会
+
+<span id="mini-summit-notes"></span>
 
 ### 峰会记录
 
@@ -40,9 +48,13 @@
 -   [2009 蒙特利尔 Linux 电源管理迷你峰会记录](http://lwn.net/Articles/345007/)
 -   [2008 渥太华 Linux 电源管理迷你峰会记录](http://lwn.net/Articles/292447/)
 
+<span id="ce-linux-forum-standards"></span>
+
 ## CE Linux 论坛的需求标准
 
 见链接: [2006 年 CE Linux 论坛的电源管理需求](http://www.elinux.org/CELF_PM_Requirements_2006)
+
+<span id="documents"></span>
 
 ## 资料文档
 
@@ -73,6 +85,8 @@
 -   [电源管理规范](http://eLinux.org/Power_Management_Specification "Power Management Specification")
 
 -   [静态电源管理规范](http://eLinux.org/Static_Power_Management_Specification "Static Power Management Specification")
+
+<span id="open-source-projects-mailing-lists"></span>
 
 ## 开源项目/邮件列表
 
