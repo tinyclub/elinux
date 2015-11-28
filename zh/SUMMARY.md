@@ -89,7 +89,7 @@
         - [Pram Fs Specification](./dev_portals/File_Systems/Pram_Fs_Specification/Pram_Fs_Specification.md)
         - [Squash Fs](./dev_portals/File_Systems/Squash_Fs/Squash_Fs.md)
         - [UBIFS](./dev_portals/File_Systems/UBIFS/UBIFS.md)
-    * [功耗管理](dev_portals/Power_Management/Power_Management.md)
+    * [电源管理](dev_portals/Power_Management/Power_Management.md)
         - [Device Power Management Specification](./dev_portals/Power_Management/Device_Power_Management_Specification/Device_Power_Management_Specification.md)
         - [Dynamic Power Management Specification](./dev_portals/Power_Management/Dynamic_Power_Management_Specification/Dynamic_Power_Management_Specification.md)
         - [OMAP Power Management](./dev_portals/Power_Management/OMAP_Power_Management/OMAP_Power_Management.md)
