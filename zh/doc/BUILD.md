@@ -14,7 +14,7 @@
                        gitbook-plugin-google_code_prettify \
                        gitbook-plugin-collapsible-menu \
                        gitbook-plugin-maxiang \
-                       gitbook-plugin-livereload
+                       gitbook-plugin-livereload -g
 
 ## 下载
 
