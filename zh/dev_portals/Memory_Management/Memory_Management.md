@@ -1,239 +1,169 @@
-> From: [eLinux.org](http://eLinux.org/Memory_Management "http://eLinux.org/Memory_Management")
+> 原文：[eLinux.org](http://eLinux.org/Memory_Management "http://eLinux.org/Memory_Management")<br/>
+> 翻译：[@zipper1956](https://github.com/zipper)<br/>
+> 校订：[@wengpingbo](https://github.com/wengpingbo), [@lzufalcon](https://github.com/lzufalcon)<br/>
 
+# 内存管理
 
-# Memory Management
+本文包括许多嵌入式 Linux 开发者感兴趣的各种内存管理相关项目和活动。
 
+## 目录
 
+-   [1 感兴趣的领域](#areas-of-interest)
+    -   [1.1 内存检测和分析](#memory-measurement-and-analysis)
+    -   [1.2 巨页/大页/超级页](#huge-large-superpages)
+    -   [1.3 页缓存压缩](#page-cache-compression)
+    -   [1.4 启动时预留和访问高地址内存](#reserving-and-accessing-the-top-of-memory-on-startup)
+    -   [1.5 OOM 处理机制的优化/改进](#enhanced-out-of-memory-handling)
+        -   [1.5.1 cgroup (控制组)中的 OOM 通知](#oom-notification-in-cgroups)
+        -   [1.5.2 mem_notify 补丁](#mem-notify-patches)
+        -   [1.5.3 谷歌 cgroup (控制组) OOM 处理方法](#google-cgroup-oom-handler)
+        -   [1.5.4 诺基亚对 OOM 的改进](#nokia-oom-enhancements)
+        -   [1.5.5 基于 LSM 的低内存通知](#lsm-based-low-memory-notification)
+    -   [1.6 基于类型的内存分配(老旧的方法)](#type-based-memory-allocation-old)
+-   [2 附加资源/邮件列表](#additional-resources-mailing-lists)
+    -   [2.1 关于缓存的文章](#articles-on-caches)
 
-This page has information about various memory management projects and
-activities which are of interest to embedded Linux developers.
+<span id="areas-of-interest"></span>
 
-## Contents
+## 感兴趣的领域
 
--   [1 Areas of Interest](#areas-of-interest)
-    -   [1.1 Memory Measurement and
-        Analysis](#memory-measurement-and-analysis)
-    -   [1.2 Huge/large/superpages](#huge-large-superpages)
-    -   [1.3 Page cache compression](#page-cache-compression)
-    -   [1.4 Reserving (and accessing) the top of memory on
-        startup](#reserving-and-accessing-the-top-of-memory-on-startup)
-    -   [1.5 Enhanced Out-Of-Memory
-        handling](#enhanced-out-of-memory-handling)
-        -   [1.5.1 OOM notification in
-            cgroups](#oom-notification-in-cgroups)
-        -   [1.5.2 mem\-notify patches](#mem-notify-patches)
-        -   [1.5.3 Google cgroup OOM
-            handler](#google-cgroup-oom-handler)
-        -   [1.5.4 Nokia OOM enhancements](#nokia-oom-enhancements)
-        -   [1.5.5 LSM-based low-memory
-            notification](#lsm-based-low-memory-notification)
-    -   [1.6 Type-based memory allocation
-        (old)](#type-based-memory-allocation-old)
--   [2 Additional Resources/Mailing
-    Lists](#additional-resources-mailing-lists)
-    -   [2.1 Articles on caches](#articles-on-caches)
+大部分内存管理技术牵扯的面很广，但对于嵌入式领域，相对容易一些，这主要得益于嵌入式领域天生不需要和内存交换之类的东西打交道（译者：这种说法太片面了）。更简单的内存管理机制和对产品计划偏离主流设计的放纵，让供应商在内存管理和虚拟内存空间上，有着更广大的空间去试验新技术。
 
-## Areas of Interest
+<span id="memory-measurement-and-analysis"></span>
 
-Most of these areas have wider reaching implications, but are relatively
-simpler in the embedded case, largely thanks to not having to contend
-with swap and things of that nature. Simpler memory management as well
-as vendors not afraid of deviation from mainline for product programs
-makes for an excellent playground for experimenting with new things in
-the memory management and virtual memory space.
+### 内存检测和分析
 
-### Memory Measurement and Analysis
+分析系统内存使用量和剩余量比听起来更棘手。
 
-Analyzing the amount of system memory in use and available is trickier
-than it sounds.
+- 检测和分析系统内存的各种不同方法见：[运行时内存检测](../.././dev_portals/Memory_Management/Runtime_Memory_Measurement/Runtime_Memory_Measurement.md "Runtime Memory Measurement")。
+- 处理现有内存检测系统不足的一些技术见：[精确内存检测](../.././dev_portals/Memory_Management/Accurate_Memory_Measurement/Accurate_Memory_Measurement.md "Accurate Memory Measurement")。
+- 一些针对 ARM 架构的内存管理的信息见：[Tims 关于 ARM 架构内存分配的建议](../.././dev_portals/Memory_Management/Tims_Notes_on_ARM_memory_allocation/Tims_Notes_on_ARM_memory_allocation.md "Tims Notes on ARM memory allocation")。
 
--   See [Runtime Memory
-    Measurement](../.././dev_portals/Memory_Management/Runtime_Memory_Measurement/Runtime_Memory_Measurement.md "Runtime Memory Measurement")
-    for different methods of measuring and analyzing system memory.
+<span id="huge-large-superpages"></span>
 
--   See [Accurate Memory
-    Measurement](../.././dev_portals/Memory_Management/Accurate_Memory_Measurement/Accurate_Memory_Measurement.md "Accurate Memory Measurement")
-    for some different techniques for dealing with inadequacies in
-    current memory measurement systems.
+### 巨页/大页/超级页
 
--   See [Tims Notes on ARM memory
-    allocation](../.././dev_portals/Memory_Management/Tims_Notes_on_ARM_memory_allocation/Tims_Notes_on_ARM_memory_allocation.md "Tims Notes on ARM memory allocation")
-    for some ARM-specific memory management information.
+- 这适用于使用透明的大页以及大部分静态使用模型，主要涉及到 hugetlb 接口：`/libhugetlbfs` 之外的工作。
+- 嵌入式系统普遍受到小 TLB 的拖累，通常只使用一个页的大小(4KB)。在大多数情况下，用户空间的任务造成系统压力巨大和性能下降，并且任何时候大多数应用程序的 5-40％ CPU 时间耗费在处理页面错误上。
+- 关于这个问题的初步讨论和其他相关信息可以在如下维基上找到：[巨页](http://linux-mm.org/)　　
 
-### Huge/large/superpages
+<span id="page-cache-compression"></span>
 
--   This applies to both transparent large page usage as well as the
-    more static usage models, primarily relating to work outside of the
-    hugetlb interface/libhugetlbfs.
--   Embedded systems suffer from very small TLBs generally using
-    PAGE\_SIZE'd pages (4kB) for coverage. In most cases this places the
-    system under very heavy pressure for any kind of userspace work, and
-    very visibly degrading performance, with most applications taking
-    anywhere from 5-40% of their time on the CPU servicing page faults.
--   Preliminary discussion on this subject as well as links to
-    additional information is happening through the wiki here: [Huge
-    Pages](http://linux-mm.org/)
+### 页缓存压缩
 
-### Page cache compression
+- 页缓存压缩主要工作是使用多种压缩算法进行页缓存（page cache）页的动态压缩和解压缩，具体来说，是既要降低内存压力，也要提升特定负载下的性能。
+- 更多的信息可以在 [缓存压缩](http://linux-mm.org/CompressedCaching) 和 [SF 缓存压缩](http://linuxcompressed.sourceforge.net/) 中找到。
 
--   This relates to using various compression algorithms for performing
-    run-time compression and decompression of page cache pages,
-    specifically aimed at both reducing memory pressure as well as
-    helping performance in certain workloads.
--   More information can be found on the wiki here
-    [CompressedCaching](http://linux-mm.org/CompressedCaching) as well
-    as at the [SF Compressed
-    Caching](http://linuxcompressed.sourceforge.net) home page.
+<span id="reserving-and-accessing-the-top-of-memory-on-startup"></span>
 
-### Reserving (and accessing) the top of memory on startup
+### 启动时预留和访问高地址内存
 
-A quote from Todd's email on how to use the reserved physical memory in
-"mem=".
+引用 Todd 关于怎么用 `mem=` 命令来保留物理内存的邮件：
 
 * * * * *
 
-Given that you have a fixed address for your memory, and is already
-reserved, the easier way to use it is by calling mmap() over the /dev/
-mem device, use 0 as the start address, and the physical address of the
-reserved memory as the offset. The flags could be MAP\_WRITE| MAP\_READ.
-That will return you a pointer on user space for your memory mapped by
-the kernel. For example
+假设内存拥有一个固定的地址并且该地址已经是预留的，那么更简单的方法是在 `/dev/mem` 设备节点上调用 `mmap()` 函数，其中使用 0 作为起始地址，用保留内存的物理地址作为偏移量。标志位可以是 `MAP_WRITE| MAP_READ` 。这样的话函数就会返回一个指向内核在用户空间映射的内存指针。例如：
 
-If your SDRAM base address is 0x80000000 and your memory is of 64MB, but
-you use the cmdline mem=60M to reserve 4MB at the end. Then your
-reserved memory will be at 0x83c00000, so all you need to do is
+如果你的 SDRAM 基地址为 `0x80000000` ，内存大小为 64MB ，但是你使用命令 `mem=60M` 保留了内存末端的 4M 内存。这样你保留的内存地址就是 `0x83c00000` ，所以要做的就是：
 
     int fd;
     char *reserved_memory;
-     
-    fd = open("/dev/mem",O_RDWR);
+
+    fd = open("/dev/mem",0_RDWR);
     reserved_memory = (char *) mmap(0,4*1024*1024,PROT_READ|PROT_WRITE,MAP_SHARED,fd,0x83c00000);
 
 * * * * *
 
-### Enhanced Out-Of-Memory handling
+<span id="enhanced-out-of-memory-handling"></span>
 
-Several technologies have been developed and suggested for improving the
-handling Out-Of-Memory (OOM) conditions with Linux systems.
+### OOM 处理机制的优化/改进
 
-See [http://linux-mm.org/OOM\_Killer](http://linux-mm.org/OOM_Killer)
-for information about the OOM killer in the Linux kernel.
+多种改进 OOM 处理的技术已经被开发出来并被建议在 Linux 中使用。
 
-Part of OOM avoidance is for the kernel to have an accurate measure of
-memory utilization. See [Accurate Memory
-Measurement](../.././dev_portals/Memory_Management/Accurate_Memory_Measurement/Accurate_Memory_Measurement.md "Accurate Memory Measurement")
-for information on technology in this area.
+关于 Linux 中 OOM Killer 的信息，可以查看：<http://linux-mm.org/OOM_Killer>
 
-Here are some technologies that I know about (these need to be
-researched and documented better):
+部分 OOM 避免机制要靠内核对内存使用情况的精确检测。查看[精确内存检测](../.././dev_portals/Memory_Management/Accurate_Memory_Measurement/Accurate_Memory_Measurement.md "Accurate Memory Measurement") 可了解更多关于该领域的技术信息。
 
-#### OOM notification in cgroups
+下面是我了解的几种技术（这些需要进行更好的研究和文档化）：
 
--   Memory usage limit notification (By Embedded Alley, sponsored by CE
-    Linux Forum)
-    -   This patch updates the Memory Controller cgroup to add a
-        configurable memory usage limit notification. The feature was
-        presented at the April 2009 Embedded Linux Conference.
-    -   See [Memory - A Most Precious Resource
-        (PDF)](http://tree.celinuxforum.org/CelfPubWiki/ELC2009Presentations?action=AttachFile&do=get&target=celf_mem_notify.pdf)
-        - Dan Malek presentation at ELC 2009
-    -   See
-        [http://lwn.net/Articles/328403/](http://lwn.net/Articles/328403/)
-        - article about first submission to LKML in April 2009
-    -   [http://lkml.org/lkml/2009/7/7/410](http://lkml.org/lkml/2009/7/7/410)
-        - thread about second submission to LKML in July 2009
-        -   [http://lkml.org/lkml/2009/7/16/468](http://lkml.org/lkml/2009/7/16/468)
-            - Balbir Singh wants to take time to evaluate the change....
+<span id="oom-notification-in-cgroups"></span>
 
-#### mem\_notify patches
+#### Cgroups （控制组）中的 OOM 通知
 
--   mem\_notify patches
-    -   This set of patches provided a mechanism to notify user-space
-        when memory is getting low, allowing for application-based
-        handling of the condition. These patches were submitted in
-        January 2008.
-    -   This patch cannot be applied to versions beyond 2.6.28 because
-        the memory management reclaiming sequence have changed.
-    -   See
-        [http://lwn.net/Articles/267013/](http://lwn.net/Articles/267013/)
+- 内存使用限制通知（由 Embedded Alley 开发, 由 CE Linux Forum 赞助）
+    - 这个补丁更新了内存控制 Cgroup ，使其获得了可配置的内存使用限制通知功能。这个特性在 2009 年的嵌入式 Linux 大会上得到展示。
+    - [内存-最精确的资源](http://tree.celinuxforum.org/CelfPubWiki/ELC2009Presentations?action=AttachFile&do=get&target=celf_mem_notify.pdf)，该文章由 Dan Malek 在 ELC 2009 上展示。
+    - 查看<http://lwn.net/Articles/328403/>了解在 2009 年 4 月第一次交到 LKML 的信息。
+    - <http://lkml.org/lkml/2009/7/7/410> -　为关于在 2009 年第二次交到 LKML 的的信息。
+        - <http://lkml.org/lkml/2009/7/16/468>　- Balbir Singh 需要一些时间评估这个改变 。
 
-#### Google cgroup OOM handler
+<span id="mem-notify-patches"></span>
 
--   Google per-cgroup OOM handler
-    -   Google posted a Request For Comments (RFC) for OOM handling
-        implemented in a per-cgroup fashion. See
-        [http://article.gmane.org/gmane.linux.kernel.mm/28376](http://article.gmane.org/gmane.linux.kernel.mm/28376)
+#### mem_notify 补丁
 
-#### Nokia OOM enhancements
+- mem_notify 补丁
+    - 这组补丁在系统内存越来越少的时候提供一种通知用户空间的方法，让上层应用可以在这种情况下做一些处理。这些补丁提交于2008年1月份。
+    - 因为内存管理的回收顺序的改变，这些补丁无法应用在 2.6.38 之后版本的内核中。
+    - 见：[http://lwn.net/Articles/267013/](<http://lwn.net/Articles/267013/>)　　
 
--   Nokia OOM enhancements
-    -   Maemo application enhancements referenced at:
-        [http://lwn.net/Articles/267013/](http://lwn.net/Articles/267013/)
-        (search for "killable" in the comments)
+<span id="google-cgroup-oom-handler"></span>
+
+#### 谷歌 cgroup (控制组) OOM 处理方法
+
+- 谷歌 per-cgroup OOM 处理方法
+    - 谷歌提交了一个使用 per-cgroup 风格的 OOM 处理方法的 RFC（Request for Comments） ，见：<http://article.gmane.org/gmane.linux.kernel.mm/28376>
+
+<span id="nokia-oom-enhancements"></span>
+
+#### 诺基亚对 OOM 的改进
+
+- 诺基亚对 OOM 的改进
+    - Maemo 应用增强参考：<http://lwn.net/Articles/267013/>（在评论中搜索 “killable” ）
 
 <!-- -->
 
-    User "oak" writes (commenting on the mem_notify patches):
+> 用户 "oak" 写到 （对 mem_notify 补丁的评论）：
 
-    Posted Feb 3, 2008 14:02 UTC (Sun) by oak (guest, #2786) [Link]
+> 发表于 2008.02.03 14:02 UTC (Sun),oak (guest, #2786) [Link]
 
-    ...
+> ...
 
-    I thought the point of the patch is for user-space to be able to do the
-    memory management in *manageable places* in code.   As mentioned earlier,
-    a lot of user-space code[1] doesn't handle memory allocation failures. And
-    even if it's supposed to be, it can be hard to verify (test) that the
-    failures are handled in *all* cases properly.  If user-space can get a
-    pre-notification of a low-memory situation, it can in suitable place in
-    code free memory so that further allocations will succeed (with higher
-    propability).
+> 我认为这个用户空间的补丁的目的是使上层应用可以在代码容易管理的地方做内存管理操作。如前所述，许多用户空间的代码根本不处理内存分配失败的情况。就算做了，这也很难去验证所有失败的可能都被正确处理了。如果用户空间事先得到了内存不足的通知，那么用户空间可以在代码中适当的地方释放内存从而使接下来的内存分配能够成功(可能性更高)。
 
-    That also allows doing somehing like what maemo does.  If system gets
-    notified about kernel low memory shortage, it kills processes which have
-    notified it that they are in "background-killable" state (saved their UI
-    state, able to restore it and not currently visible to user). I think it
-    also notifies applications (currently) through D-BUS about low memory
-    condition. Applications visible to user or otherwise non-background
-    killable are then supposed to free their caches and/or disable features
-    that could take a lot of additional memory.  If the caches are from [[Heap_memory|heap]]
-    instead of memory mapped, it's less likely to help because of [[Heap_memory|heap]]
-    fragmentation and it requiring more work/time though.
+> 这同样允许做类似于 Maemo 做的事。如果系统收到内核内存不足的通知，那么它可以杀死进入后台状态的进程（保存进程界面状态, 能够恢复进程，并且对用户不可见），我认为它同样通过 D-BUS 通知当前应用系统内存不足的情况。对于用户可见或者非后台可杀死的应用应该释放它们的缓存或者关闭高内存消耗的特性。如果内存来自于堆内存而不是映射的内存，那么可能没有什么帮助，因为堆内存碎片较多而且需要更多操作时间。
 
-#### LSM-based low-memory notification
+<span id="lsm-based-low-memory-notification"></span>
 
--   Paul Mundt submitted a patch to CELF for the 2.6.12 kernel which
-    provided low-memory notifications to user space. See
-    [Accurate\_Memory\_Measurement\#Nokia\_out-of-memory\_notifier\_module](../.././dev_portals/Memory_Management/Accurate_Memory_Measurement/Accurate_Memory_Measurement.md#Nokia_out-of-memory_notifier_module "Accurate Memory Measurement")
-    for more information.
-    -   This module was based on the Linux Security Module system, which
-        has been removed from recent kernels.
+#### 基于 LSM 的低内存通知
 
-### Type-based memory allocation (old)
+- Paul Mundt 为了 2.6.12 内核提交了补丁到 CELF，该补丁提供低内存通知给用户空间的功能。可查看[精确内存检测和诺基亚内存不足通知模块](../.././dev_portals/Memory_Management/Accurate_Memory_Measurement/Accurate_Memory_Measurement.md#Nokia_out-of-memory_notifier_module "Accurate Memory Measurement")了解更多信息。
+    - 该模块基于一个 Linux 安全模块系统，但是那个系统被从新近内核中移除了。　
 
-This is a mechanism (prototyped in the 2.4 kernel by Sony and Panasonic)
-to allow the kernel to allocate different types of memory for different
-sections of a program, based on user policy.
+<span id="type-based-memory-allocation-old"></span>
 
-See [Memory Type Based
-Allocation](../.././dev_portals/Memory_Management/Memory_Type_Based_Allocation/Memory_Type_Based_Allocation.md "Memory Type Based Allocation")
+### 基于类型的内存分配（老旧的方法）
 
-## Additional Resources/Mailing Lists
+这是一套机制（由 Sony and Panasonic 在 2.4 内核中建立原型），允许内核基于用户策略，为一个程序的不同段分配不同类型的内存。
 
--   [LinuxMM](http://linux-mm.org) - links to various sub-projects, and
-    acts as a centralized point for discussion relating to memory
-    management topics ([linux-mm](mailto:majordomo@kvack.org) mailing
-    list and [archives](http://marc.theaimsgroup.com/?l=linux-mm)).
+可查看[基于类型的内存分配](../.././dev_portals/Memory_Management/Memory_Type_Based_Allocation/Memory_Type_Based_Allocation.md "Memory Type Based Allocation")获取更多信息。
 
--   [Everything about memory that a programmer should
-    know](http://lwn.net/Articles/250967/)
+<span id="additional-resources-mailing-lists"></span>
 
-### Articles on caches
+## 附加资源/邮件列表
 
-[Excellent paper (2010) by Paul McKenney on how CPU caches
-operate](http://www2.rdrop.com/~paulmck/scalability/paper/whymb.2010.07.23a.pdf)
+- [LinuxMM](http://linux-mm.org/) - 有各类子项目的链接并且扮演内存管理相关话题的讨论中心
+    - [linux-mm](mailto:majordomo@kvack.org) 邮件列表
+    - [存档](http://marc.theaimsgroup.com/?l=linux-mm)
+
+- [程序员需要知道的所有关于内存的知识](<http://lwn.net/Articles/250967/>)　　
 
 
-[Category](http://eLinux.org/Special:Categories "Special:Categories"):
+<span id="articles-on-caches"></span>
+
+### 关于缓存的文章
+
+[Paul McKenney 关于 CPU 缓存怎样工作的优秀论文](<http://www2.rdrop.com/~paulmck/scalability/paper/whymb.2010.07.23a.pdf>)
+
+[分类](http://eLinux.org/Special:Categories "Special:Categories")：
 
 -   [Linux](http://eLinux.org/Category:Linux "Category:Linux")
-
