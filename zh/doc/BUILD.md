@@ -51,8 +51,8 @@
 
 * 解决办法
 
-	$ ping elinux.org
-	PING elinux.org (140.211.15.183) 56(84) bytes of data.
+        $ ping elinux.org
+        PING elinux.org (140.211.15.183) 56(84) bytes of data.
 
-	$ sudo -s
-	$ echo "140.211.15.183 elinux.org" >> /etc/hosts
+        $ sudo -s
+        $ echo "140.211.15.183 elinux.org" >> /etc/hosts
