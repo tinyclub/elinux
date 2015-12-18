@@ -5,6 +5,8 @@
     * [如何编译](doc/BUILD.md)
     * [任务分工](doc/PLAN.md)
 
+* [译者一览](doc/Contributors.md)
+
 * [开发入口](dev_portals/README.md)
 
     * [固件](dev_portals/Firmware/Firmware.md)
