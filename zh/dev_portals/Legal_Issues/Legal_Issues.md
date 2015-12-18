@@ -4,25 +4,28 @@
 
 # 法律问题
 
-
-# 目录
+## 目录
 
 -   [1 嵌入式中使用 Linux 的法律问题](#legal-issues-using-linux-in-embedded-projects)
-    -   [1.1 内核只被 GPL V2 许可](#kernel-is-licensed-gpl-v2-only)
-    -   [1.2 署名行 (signed-off-by) 和原创开发者证书 (DCO)](#signed-off-by-lines-and-the-dco)
-    -   [1.3 有关法律分析和合规的资源](#resources-for-legal-analysis-and-compliance)
+    -	[1.1 内核只被 GPL V2 许可](#kernel-is-licensed-gpl-v2-only)
+    -	[1.2 署名行 (signed-off-by) 和原创开发者证书 (DCO)](#signed-off-by-lines-and-the-dco)
+    -	[1.3 有关法律分析和合规的资源](#resources-for-legal-analysis-and-compliance)
 -   [2 EXPORT\-SYMBOL\-GPL](#export-symbol-gpl)
-    -   [2.1 针对内核 USB API 的 EXPORT\-SYMBOL\-GPL ](#export-symbol-gpl-for-kernel-usb-api)
+    -	[2.1 针对内核 USB API 的 EXPORT\-SYMBOL\-GPL ](#export-symbol-gpl-for-kernel-usb-api)
 -   [3 二进制专有的内核模块](#binary-proprietary-kernel-modules)
 -   [4 用户空间中内核头文件的使用](#use-of-kernel-header-files-in-user-space)
 -   [5 其它链接](#other-links)
 
+
+<span id="legal-issues-using-linux-in-embedded-projects"></span>
 
 ## 嵌入式中使用 Linux 的法律问题
 
 
 使用 GPL 许可证的复杂性已经在很多其他论坛中被多次的讨论过了。
 以下是几个突出问题：
+
+<span id="kernel-is-licensed-gpl-v2-only"></span>
 
 ### 内核只被 GPL V2 许可
 
@@ -31,6 +34,8 @@ Linux 内核只在 GNU 通用公共许可协议 2.0 版本下被许可！
 这个与许多其他项目不同，它们使用的默认用词允许 GPL V2  或者后期版本。这意味着Linux 内核不会切换到 GPL V3 版本。
 
 2006 年 9 月，当 GPL V3 起草时，一群内核开发者签署了一个立场声明，表明他们反对 GPL V3 。这更加表明了内核不可能改用 GPL V3 协议。
+
+<span id="signed-off-by-lines-and-the-dco"></span>
 
 ### 署名行 (signed-off-by) 和原创开发者证书 (DCO)
 
@@ -42,17 +47,23 @@ Linux 内核只在 GNU 通用公共许可协议 2.0 版本下被许可！
 
 [2]: "http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/Documentation/SubmittingPatches" "SubmittingPatches"
 
+<span id="resources-for-legal-analysis-and-compliance"></span>
+
 ### 有关法律分析和合规的资源
 
 * 自由软件法律中心针对 GPL 有一份合规指南，很有用：
   + http://www.softwarefreedom.org/resources/2014/SFLC-Guide_to_GPL_Compliance_2d_ed.pdf -2014 年 10 月
-  
+
   + 注意不是所有人都同意这份文件中的所有法律解释，但总体而言，这是一份很好的资源
-  
+
 * 有关 copyleft 和 GNU 的通用公共许可协议的一份全面教程和指南：
    * http://www.copyleft.org/guide/comprehensive-gpl-guide.html#comprehensive-gpl-guidepa1.html
 
+<span id="export-symbol-gpl"></span>
+
 ## EXPORT\_SYMBOL\_GPL
+
+<span id="export-symbol-gpl-for-kernel-usb-api"></span>
 
 ### 针对内核 USB API 的 EXPORT_SYMBOL_GPL
 
@@ -67,6 +78,8 @@ Linux 内核只在 GNU 通用公共许可协议 2.0 版本下被许可！
 * [实际的 git commit][4]
 [4]:http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/commit/?id=782e70c6fc2290a0395850e8e02583b8b62264d8 "actual commit"
 
+<span id="binary-proprietary-kernel-modules"></span>
+
 ## 二进制专有的内核模块
 
 在嵌入式 Linux 领域中一个很重要的，也是比较显著的一个法律问题就是二进制（非 GPL）内核模块是否违反 Linux 内核 GPL 协议。关于这个话题有不同的观点。
@@ -80,6 +93,8 @@ Linux 内核只在 GNU 通用公共许可协议 2.0 版本下被许可！
   [3]:http://www.networkworld.com/article/2301701/smb/encouraging-closed-source-modules-part-3--elimating-the--api-update-tax-.html "part 3"
 
 
+<span id="use-of-kernel-header-files-in-user-space"></span>
+
 ## 在用户空间中使用内核头文件
 
 允许用户空间使用内核头文件是为了方便用户空间程序通过普通的系统调用与内核进行交互。这个被许可并且不会导致用户空间成为内核的衍生品并受限于 GPL 协议。
@@ -87,24 +102,26 @@ Linux 内核只在 GNU 通用公共许可协议 2.0 版本下被许可！
 一般情况下，头文件的使用不会产生衍生品，尽管也会有例外。过去对于头文件中包含了多少代码量（例如代码行数）有投入很多的关注，但是现如今大家都不太关心这个问题了，并且几乎从来不是一个问题。理查德．斯托曼曾表示，针对数据结构，常量还有枚举类型(甚至小内联)的头文件的使用都不会产生衍生品。请看：
 <http://lkml.indiana.edu/hypermail/linux/kernel/0301.1/0362.html>
 
-用户空间中内核头文件的使用是预料中的也是常见的。它明确的说明了非 GPL 软件使用这些文件，不会受       GPL 协议的影响。为了安抚直接使用头文件的担心，还有防止内核内部信息泄露给用户空间(可能会被滥用)，主线内核开发者给内核构建系统增加了一个选项，专门提供了一个“净化过的”头文件，这些头文件被认为可以安全用于用户空间程序，不会产生许可问题。
+用户空间中内核头文件的使用是预料中的也是常见的。它明确的说明了非 GPL 软件使用这些文件，不会受	    GPL 协议的影响。为了安抚直接使用头文件的担心，还有防止内核内部信息泄露给用户空间(可能会被滥用)，主线内核开发者给内核构建系统增加了一个选项，专门提供了一个“净化过的”头文件，这些头文件被认为可以安全用于用户空间程序，不会产生许可问题。
 
 这些是在内核构建系统中 `make headers_check` 和 `make headers_install` 的目标。
 
 一般使用下，使用这些被净化过的头文件是合法安全的(也就是说，头文件被特别地去除了大内联宏或者任何用户空间不需要的内容)。
 这篇文章解释了如何用内核构建系统来创建净化过的内核头文件：
  <http://darmawan-salihun.blogspot.jp/2008/03/sanitizing-linux-kernel-headers-strange.html>
- 
+
 需要注意的是，Android 操作系统开发者是使用不同的过程来为他们的系统净化 bionic 头文件。他们的过程与主线头文件净化特性差不多同时开始。
+
+<span id="other-links"></span>
 
 ## 其它链接
 
-* <http://gpl-violations.org/>  — 这个 gpl-violations.org 项目试图解决 GPL  违规和增强 GPL 合规性的公共意识
+* <http://gpl-violations.org/>	— 这个 gpl-violations.org 项目试图解决 GPL  违规和增强 GPL 合规性的公共意识
 
 * <http://www.softwarefreedom.org/> — 自由软件法律中心为开源项目提供法律代表并发布围绕开源相关的法律问题信息
 
 * <http://www.linuxfoundation.org/programs/legal/compliance> — Linux   基金会的开放合规计划
-  
+
 * <http://www.binaryanalysis.org/> — 一个针对二进制进行分析的工具，用于调查 GPL 合规性
 
 * <http://lwn.net/Articles/386280/> — LWN.net 上一篇关于二进制分析工具的文章（发表于 2010/05/06）
