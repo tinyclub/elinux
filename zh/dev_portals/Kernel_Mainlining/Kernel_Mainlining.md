@@ -1,347 +1,255 @@
-> From: [eLinux.org](http://eLinux.org/Kernel_Mainlining "http://eLinux.org/Kernel_Mainlining")
+> 原文：[eLinux.org](http://elinux.org/Kernel_Mainlining)<br/>
+> 翻译：[@DecJude](https://github.com/DecJude)<br/>
+> 校订：[@lzufalcon](https://github.com/lzufalcon)<br/>
 
 
-# Kernel Mainlining
+# 贡献内核补丁（Kernel Mainlining）
 
 
+本文为嵌入式开发者介绍了如何往 Linux 内核主线贡献补丁。
 
-This page has information for embedded developers about mainlining
-patches to the Linux kernel.
+## 目录
 
-## Contents
+-   [1 通用资源](#general-resources)
+    -   [1.1 相关演讲](#presentations)
+        -   [1.1.1 演讲列表](#talk-list)
+    -   [1.2 训练，指导和挑战](#training-tutorials-and-challenges)
+-   [2 具体项目](#specific-projects)
+-   [3 最佳行动说明](#notes-for-best-practices)
+    -   [3.1 来自 Andrew Morton](#from-andrew-morton)
+    -   [3.2 来自 Deepak Saxena](#from-deepak-saxena)
+    -   [3.3 来自 Jonathan Corbet](#from-jonathan-corbet)
+    -   [3.4 来自 Arnd Bergmann](#from-arnd-bergmann)
+    -   [3.5 来自 David Arlie](#from-david-arlie)
+-   [4 克服 Mainlining 遇到的障碍](#overcoming-obstacles-to-mainlining)
 
--   [1 General Resources](#general-resources)
-    -   [1.1 Presentations](#presentations)
-        -   [1.1.1 talk list](#talk-list)
-    -   [1.2 Training, tutorials and
-        challenges](#training-tutorials-and-challenges)
--   [2 Specific Projects](#specific-projects)
--   [3 Notes for Best Practices](#notes-for-best-practices)
-    -   [3.1 from Andrew Morton](#from-andrew-morton)
-    -   [3.2 from Deepak Saxena](#from-deepak-saxena)
-    -   [3.3 from Jonathan Corbet](#from-jonathan-corbet)
-    -   [3.4 from Arnd Bergmann](#from-arnd-bergmann)
-    -   [3.5 From David Arlie](#from-david-arlie)
--   [4 Overcoming Obstacles to
-    Mainlining](#overcoming-obstacles-to-mainlining)
+<span id="general-resources"></span>
 
-## General Resources
+## 通用资源
 
 -   [Documentation/HOWTO](https://www.kernel.org/doc/Documentation/HOWTO)
-    - kernel document describing how to code for the kernel and
-    contribute
+    - 说明了如何为 Linux 内核编写并贡献代码
 -   [Documentation/development-process](https://www.kernel.org/doc/Documentation/development-process/)
-    - kernel documents describing the kernel development process
+    - 讲述了内核开发流程
 
-### Presentations
+<span id="presentations"></span>
 
-Greg KH has a great presentation about how the community works, with
-links to references for getting started:
+### 相关演讲
 
--   [Linux Kernel Development
-    (pdf)](https://github.com/gregkh/kernel-development/blob/master/kernel-development.pdf?raw=true)
+Greg KH 曾做过一次伟大的演讲，主题是关于 Linux 社区是如何工作的，下面是演讲内容的链接，可以参考用以入门:
 
-An older talk (2008) by Andrew Morton discusses the reasons to
-contribute, and best practices for contributing to the upstream kernel
+-   [Linux 内核开发（PDF）](https://github.com/gregkh/kernel-development/blob/master/kernel-development.pdf?raw=true)
 
--   [Session:kernel.org development and the embedded
-    world](../.././dev_portals/Kernel_Mainlining/Session:kernel.org_development_and_the_embedded_world/Session:kernel.org_development_and_the_embedded_world.md "Session:kernel.org development and the embedded world")
-    -   In this seminal talk from 2008, Andrew lays out the case for
-        involvement of embedded companies in kernel development. He
-        describes the overall process, but more importantly what to
-        expect from kernel developers, what to do and not to do when
-        approaching mainlining, and how to structure teams for effective
-        work with the kernel community.
+更早的时候（2008 年），Andrew Morton 在一次演讲中谈到了往 Linux 内核贡献的原因，以及往内核社区贡献代码的最佳方法：
 
-#### talk list
+-   [kernel.org 开发和嵌入式世界](../.././dev_portals/Kernel_Mainlining/Session:kernel.org_development_and_the_embedded_world/Session:kernel.org_development_and_the_embedded_world.md "Session:kernel.org development and the embedded world")
+    -   在 2008 年的这次开创性的演讲中，Andrew 勾勒出了嵌入式企业参与内核开发的情景。他讲解了整个开发流程，更为重要的是，他讲到了开发者们很期待的内容，即在一步步 Mainlining（往内核贡献补丁）的过程中，要做什么，不要做什么，以及如何组建团队，以便可以和内核社区高效地协同工作。
 
-Here is a list of talks about mainlining and community involvement, from
-previous Linux conferences:
+<span id="talk-list"></span>
 
--   [How to Participate in the Kernel Development Process
-    (PDF)](http://eLinux.org/images/0/00/Corbet-dev-process.pdf "Corbet-dev-process.pdf")
-    - ELC-2007, April 2007, Jonathan Corbet
-    -   This talk is an attempt to identify the factors which lead to
-        success or failure and present them in a way that will help
-        others seeking to get code into the kernel.
--   ELC-2008 morton (noted above)
--   Appropriate Community Practices: Social and Technical Advice -
-    ELC-2008, April 2008 Deepak Saxena
-    -   Abstract: With the increasing popularity of Linux in the
-        embedded world, HW vendors are jumping on the bandwagon to add
-        kernel support for their devices/chipsets/SOCs. We in the
-        community keep seeing the same mistakes made (both technical and
-        social) repetitively. We will go over the benefits of being
-        involved with the community and utilize examples of what not do
-        when working within the Linux development ecosystem to
-        illustrate appropriate practices to increase your probability of
-        successful code adoption into the kernel.org tree.
-    -   (presentation not available)
--   [Embedded maintainers: Community and Embedded
-    Linux](http://eLinux.org/images/c/c5/Dwmw2-community_and_embedded_linux.pdf "Dwmw2-community and embedded linux.pdf")
-    ELCE-2008, David Woodhouse
-    -   This presentation introduces and discusses the new community
-        rôle of 'embedded maintainer', present David's ideas and seek
-        other opinions on what the job is actually supposed to mean.
-    -   The community at large needs to be more coherent - it's not just
-        about big companies playing nicely with us, but also about
-        building a community around embedded Linux in a way that we
-        haven't really done so far. Even the individual projects aren't
-        working together as well as they should. The 'embedded
-        maintainer' rôle isn't like other maintainers in the kernel - we
-        don't own a certain section of the code and just act as
-        gatekeeper and arbiter of taste for it. It's more about bringing
-        people together and getting them to collaborate better.
--   [Embedded Linux and Mainline
-    Kernel](http://eLinux.org/images/c/c5/Dwmw2-ELC-2009-04.pdf "Dwmw2-ELC-2009-04.pdf")
-    - ELC-2009, April 2009, David Woodhouse
-    -   Embedded Linux has more in common, technologically, with other
-        Linux use areas than many embedded developers realize. In this
-        talk, David will describe some of the important intersections
-        between the features embedded developers care about and those
-        needed for enterprise and desktop systems. The stereotype of
-        embedded developers not needing to interact with the greater
-        Linux community is wrong. David provides the technical rationale
-        for increased interaction in the community as well as tips for
-        better involvement by embedded developers.
-    -   Notes: find other parties with same requirements - look outside
-        embedded. Virtualized systems is a good place to look, as they
-        often have resource constraints as well.
--   [Cooperative Development Inside
-    Communities](http://eLinux.org/images/5/50/CommunityDevelopment.pdf "CommunityDevelopment.pdf")
-    ELC-2009 Jeff Osier-Mixon
-    -   This is the talk introducing MELD.
--   [Becoming Part of the Linux Kernel
-    Community](http://eLinux.org/images/6/63/Elc2011_bergmann_keynote.pdf "Elc2011 bergmann keynote.pdf")
-    ELC-2011, April, 2011, Arnd Bergmann
-    -   This talk give the benefits of beign integrated with the
-        community (it was the "hippy" talk)
--   [Developer's Diary: Helping the
-    Process](http://eLinux.org/images/f/fe/Elc2011_sang.pdf "Elc2011 sang.pdf") ELC-2011,
-    April 2011, Wolfram Sang
-    -   include notes on best practices for contributing to mainline
--   Contributing to the Community? Does your manager support you? -
-    ELCE-2011 Satoru Ueda
-    -   This is a "how to convince your manager" talk.
+#### 演讲列表
+
+下面是之前提到的 Linux 会议中的关于 Mainlining 和社区参与的一系列演讲:
+
+-   [如何参与内核开发过程（PDF）](http://eLinux.org/images/0/00/Corbet-dev-process.pdf "Corbet-dev-process.pdf")
+    - 2007 年嵌入式 Linux 会议，举办于 2007 年 4 月，由 Jonathan Corbet 报告
+    - 这次演讲旨在厘清那些取得成功和导致失败的因素，这将在某种程度上帮助到那些意图将代码合入内核主线的人。
+-   2008 年 Andrew Motion 的演讲 （同上）
+-   适当的社区做法: 社会和技术咨询 - 2008 年嵌入式 Linux 会议，举办于 2008 年 4 月，由 Deepak Saxena 报告
+    -   摘要：随着 Linux 在嵌入式领域越来越受欢迎，硬件厂商们都在跃跃欲试，想要为他们的设备/芯片/SoC 添加对 Linux 内核的支持。在社区内，我们不断看到同样的错误在重演（包括技术和交流方面）。参与内核社区我们可以得到一些益处，并且可以借鉴一些 Linux 开发生态系统中失败的例子，来适当加以练习，从而提高代码被收录到 kernel.org 的几率;
+-   [嵌入式 Linux 维护者：社区和嵌入式 Linux](http://eLinux.org/images/c/c5/Dwmw2-community_and_embedded_linux.pdf "Dwmw2-community and embedded linux.pdf") - 在 2008 年欧洲嵌入式 Linux 会议上，由 David Woodhouse 报告
+    -   这次演讲介绍并讨论了关于"嵌入式内核维护者" 的新的社区规则，和 David 主席的一些构想，并且在寻求大家的意见。即"嵌入式内核维护者"这个工作实际上应该意味着什么？
+    -   内核社区迫切需要更加凝聚 - 不仅仅是希望大公司和我们关系融洽，也是因为到目前为止我们还没有建立起一个围绕嵌入式 Linux 的社区。他们本应该协同工作，但即使在少数的项目中也没有做到。"嵌入式内核维护者"的角色和其他内核模块的维护者不一样 - 我们甚至没有自己的特定的整块代码，只是扮演了看门人和权威人士（arbiter of taste）的角色。所以更多的是需要把开发者聚在一起，让大家更好的合作。
+-   [嵌入式 Linux 和主线内核](http://eLinux.org/images/c/c5/Dwmw2-ELC-2009-04.pdf "Dwmw2-ELC-2009-04.pdf")
+    -   2009 年嵌入式 Linux 会议，举办于 2009 年 4 月，由 David Woodhouse 报告
+    -   在技术层面，嵌入式 Linux 和其他的 Linux 应用领域的共性，比嵌入式开发者意识到的要多得多。在这次演讲中，David 将会阐述嵌入式开发者们所关心的功能与那些企业和桌面级系统需求之间的许多重要的交叉领域。那些关于嵌入式开发者不需要和更大 Linux 社区进行互动交流的陈辞滥调是站不住脚的。David 不但讲解了应对不断增加的社区内协同工作的技术原理，也为嵌入式开发者更好的参与进来提供了一些建议。
+    -   Notes: 从嵌入式领域外找寻其他有相同需求的第三方。 虚拟化系统是一个很值得去了解的地方，因为他们经常会有资源方面的约束。
+-   [社区内的合作与发展](http://eLinux.org/images/5/50/CommunityDevelopment.pdf "CommunityDevelopment.pdf") - 在 2009 年嵌入式 Linux 会议上，由 Jeff Osier-Mixon 报告
+    -   这次演讲介绍了 MELD （MontaVista 主办的嵌入式 Linux 社区）
+-   [成为内核社区的一部分](http://eLinux.org/images/6/63/Elc2011_bergmann_keynote.pdf "Elc2011 bergmann keynote.pdf") - 在 2011 年嵌入式 Linux 会议上，由 Arnd Bergmann 报告
+    -   这次演讲介绍了被整合进 Linux 社区的好处（嬉皮士风格的演讲）。
+-   [开发者日记：去推动进程](http://eLinux.org/images/f/fe/Elc2011_sang.pdf "Elc2011 sang.pdf") 2011 年嵌入式 Linux 会议，举办于 2011 年 4 月，由 Wolfram Sang 报告
+    -   包括了往内核主线贡献代码的最佳做法的记录。
+-   为社区做贡献？你的经理支持你吗？ - 在2011 年欧洲嵌入式 Linux 会议上，由 Satoru Ueda 报告
+    -   这是一场关于"如何说服你的上司"的演讲。
 -   ELC-2013 rose
 -   ELC-2013 chalmers
 -   ELC-2014 maupin
--   [Two years of ARM SoC support Mainlining: Lessons
-    Learned](http://eLinux.org/images/d/dc/Petazzoni-soc-mainlining-lessons-learned.pdf "Petazzoni-soc-mainlining-lessons-learned.pdf")
-    ELC-2014, April 2014, Thomas Petazzoni
-    -   Give many good tips, including social ones
+-   [两年的 Mainlining ARM Soc 支持的经验与教训](http://eLinux.org/images/d/dc/Petazzoni-soc-mainlining-lessons-learned.pdf "Petazzoni-soc-mainlining-lessons-learned.pdf") - 2014 年嵌入式 Linux 会议，举办于 2014 年 4 月，由 Thomas Petazzoni 报告
+    -   给出了很多好的技巧，包括社群方面的。
 
-### Training, tutorials and challenges
+<span id="training-tutorials-and-challenges"></span>
 
--   The [KernelNewbies web site](http://kernelnewbies.org/) is
-    specifically dedicated to helping developers learn how to make
-    contributions to the Linux kernel
-    -   There's a "To Do" list of small tasks that are ready for
-        development, here
-        [http://kernelnewbies.org/KernelJanitors/Todo](http://kernelnewbies.org/KernelJanitors/Todo)
-    -   See their excellent [Guide to Upstream
-        Merging](http://kernelnewbies.org/UpstreamMerge) for a lot of
-        good technical and social tips.
+### 训练，指导和挑战
 
--   The Outreach Program For Women has an excellent tutorial on the
-    steps for contributing one's first patch to the kernel
-    -   [OPFW First Patch
-        tutorial](http://kernelnewbies.org/OPWfirstpatch)
+-   [内核新手网站](http://kernelnewbies.org/) 是一个专注于帮助开发者学习如何往 Linux 内核做贡献的网站
+    -   该网站有一个"待做" 列表，上面是一些小的开发任务，地址在[http://kernelnewbies.org/KernelJanitors/Todo](http://kernelnewbies.org/KernelJanitors/Todo)
+    -   他们有个非常好的 [上游合并指南](http://kernelnewbies.org/UpstreamMerge) 板块，那里有很多技术以及社群方面的技巧。
 
--   [Eudyptula Challenge](http://eudyptula-challenge.org/)
-    -   This is a series of 20 tasks, managed via e-mail, that help
-        people learn how to work with the kernel and submit patches
-    -   LWN.net article
-        [http://lwn.net/Articles/599231/](http://lwn.net/Articles/599231/)
+-   The Outreach Program For Women（女性推广项目）有一个非常好的指导步骤，是关于如何贡献你的第一个补丁到内核
+    -   [OPFW 第一个内核补丁教程](http://kernelnewbies.org/OPWfirstpatch)
 
--   [http://www.tuxradar.com/content/newbies-guide-hacking-linux-kernel](http://www.tuxradar.com/content/newbies-guide-hacking-linux-kernel)
+-   [Eudyptula 挑战](http://eudyptula-challenge.org/)
+    -   这是一个通过邮件来管理的一系列任务，总共 20 个， 用以帮助开发者学习如何开发内核并提交补丁。
+    -   LWN.net 的文章：[http://lwn.net/Articles/599231/](http://lwn.net/Articles/599231/)
 
-## Specific Projects
+-   [Linux 内核骇客新手指南](http://www.tuxradar.com/content/newbies-guide-hacking-linux-kernel)
 
--   [CE Workgroup Device Mainlining
-    Project](../.././dev_portals/Kernel_Mainlining/CE_Workgroup_Device_Mainlining_Project/CE_Workgroup_Device_Mainlining_Project.md "CE Workgroup Device Mainlining Project")
--   [Qualcomm SOC Mainlining
-    Project](../.././dev_portals/Kernel_Mainlining/Qualcomm_SOC_Mainlining_Project/Qualcomm_SOC_Mainlining_Project.md "Qualcomm SOC Mainlining Project")
--   [Allwinner mainlining
-    effort](http://linux-sunxi.org/Linux_mainlining_effort)
-    -   this is a really good page with a write-up of the status of
-        mainlined items for each kernel, and what tasks remain
+<span id="specific-projects"></span>
 
-## Notes for Best Practices
+## 具体项目
 
-### from Andrew Morton
+-   [CE 工作组设备 Mailining 项目](../.././dev_portals/Kernel_Mainlining/CE_Workgroup_Device_Mainlining_Project/CE_Workgroup_Device_Mainlining_Project.md "CE Workgroup Device Mainlining Project")
+-   [高通 SOC Mainlining 的项目](../.././dev_portals/Kernel_Mainlining/Qualcomm_SOC_Mainlining_Project/Qualcomm_SOC_Mainlining_Project.md "Qualcomm SOC Mainlining Project")
+-   [全志 Mainlining 的努力](http://linux-sunxi.org/Linux_mainlining_effort)
+    -   这是一个相当好的网站，上面更新了已经合入各内核分支的补丁的状态，以及哪些些任务仍在进行中。
 
--   Industry should have an embedded maintainer
--   Report problems and requirements upstream
--   Participate in community forums
--   Companies should dedicate a few developers separate from product
-    teams
--   Develop product on latest mainline kernel, freeze it at end of
-    product development
-    -   My aside: Current nature of Android features and board support
-        preclude this
--   Ask the community (Andrew) for help
+<span id="notes-for-best-practices"></span>
 
-### from Deepak Saxena
+## 最佳行动说明
 
--   don't be arrogant - don't assume your experience in proprietary
-    development methods translates into open source
-    -   be humble and listen to others
--   release early and often
-    -   not doing this wastes a lot of time on implementations that get
-        discarded, rewritten
--   do your homework
-    -   see what's already there in Linux, and whether it can be
-        extended to support your case
-    -   add to existing abstractions rather than add your uniqe solution
-        (be willing to abandon your code, as long as you ultimately get
-        support for your feature upstream)
--   don't add OS abstractions (or, HALS for other OSes)
-    -   drivers must be Linux native - other layers and abstractions
-        complicate the drivers - they can't be maintained by Linux
-        kernel developers
--   do add abstractions - don't just solve your immediate problem
-    -   write systems that suport multiple related hardware
-    -   be willing to generalize
--   do your homework
-    -   use mainlining resources
-    -   ask informed questions
--   work with the community - treat them as equals on your team
-    -   treat external developers input as you would your own team
-        members
-    -   be respectful
+<span id="from-andrew-morton"></span>
 
-### from Jonathan Corbet
+### 来自 Andrew Morton
 
--   why - \<check out the presentation\>
--   difference between proprietary and open source software
-    -   proprietary = product-driven, top-down requirements, short-term,
-        internal QA, hierarchical decisions, private code base, complete
-        control
-    -   open source = process-drive, bottom-up requirements, long-term,
-        external QA, consensus decisions, public code, little control
--   Understand the patch life-cycle
-    -   post early, fix things with community
-    -   get to staging
-    -   acceptance into mainline
--   post early and often
--   submitting patches
-    -   send changes - can influence direction even if not accepted
-    -   no: multi-purpose patches - make each patch small and indpendent
-    -   make patch serieses bisectable
-    -   follow submission rules
-        -   use diff -u, no MIME, correct format, Signed-off-by line,
+-   工业界应当有一个嵌入式内核维护者
+-   向内核社区上报问题和需求
+-   参与社区论坛
+-   企业应该贡献出几位工程师，独立于产品开发团队
+-   基于最新的内核主线开发产品，产品开发结束时冻结它（译者注：不再和主线保持同步）。
+    -   从我所了解的看：目前 Android 相关模块和板级支持不在此列（译者注：主流 Android 设备都会不定时获得系统更新，包括了 Linux 内核)。
+-   向社区（Andrew）寻求帮助
+
+<span id="from-deepak-saxena"></span>
+
+### 来自 Deepak Saxena
+
+-   不要傲慢 - 不要试图把你在特定领域开发的经验照搬到开源领域
+    -   保持谦逊并听取其他人的想法
+-   早点发布，频繁发布
+    -   不这样做的话，以后会浪费很多时间在实现的推翻和重写上面
+-   个人练习
+    -   看看那些 Linux 内核已经实现了的部分，看它是否可以扩展来支持你的案子。
+    -   把实现加入到现有的抽象层，而不是用你自己的新潮的方案 (愿意去舍弃你自己的部分代码，只要最终你的相关模块可以得到社区支持)
+-   不要添加 OS 层面的抽象实现（或者是来自其他操作系统的 HAL 层）
+    -   驱动程序必须是位于 Linux 内核层面 - 位于其他层和复杂的驱动程序没有办法被 Linux 内核开发者所维护
+-   添加抽象实现 - 不要仅仅只解决你眼前的问题
+    -   实现支持多个相关硬件的系统方案
+    -   有意愿去推广普及
+-   个人练习
+    -   使用 Mainlining 资源
+    -   提出有见解的问题
+-   和社区协同工作，把他们看作是你自己的团队
+    -   把来自外部的开发者当作你的团队成员
+    -   尊重他们
+
+<span id="from-jonathan-corbet"></span>
+
+### 来自 Jonathan Corbet
+
+-   原因 <查看演讲稿>
+-   专有软件和开源软件的差异
+    -   专有软件 = 产品驱动，自上而下的需求，短期，内部品控，层层决策，私有代码库，完全控制
+    -   开源软件 = 流程驱动，自下而上的需求，长期，外部品控，一致决策，公共代码库，轻度控制
+-   理解补丁的生命周期
+    -   尽早发出来，通过社区解决问题
+    -   进入 staging 目录
+    -   被内核主线接纳
+-   尽早发布，频繁发布
+-   提交补丁
+    -   发送变更，即使不被接受也可以影响相关方向
+    -   不要有一对多的补丁， 把每个补丁做到简单和独立
+    -   做出一分为二的补丁系列
+    -   遵循提交规则
+        -   使用 `diff -u`，不带媒体信息，格式正确，添加署名行（Signed-off-by），避免自动换行
             watch word-wrapping
-    -   send to correct place: MAINTAINERS, get-maintainer.pl
-    -   listen to reviewers, be polite, don't ignore feedback
--   let go
-    -   your code may be re-written or replaced
--   Coding
-    -   follow the style guides
-        -   not too much (HAL layers, unused parameters, single-line
-            functions)
-            -   no multi-OS code
-        -   not too little - should generalize if there's already
-            existing code
-    -   don't break APIs
-        -   can break internal APIs (only with very good reason), but
-            you must fix all in-tree code
-        -   NEVER, NEVER break user-space API
-    -   don't cause regressions
+    -   发送到正确的地方: MAINTAINERS（维护人员），可通过 get-maintainer.pl 工具自动获得
+    -   听取审核人的意见，要有礼貌，不要忽略他们的反馈
+-   看开点
+    -   你的代码或许要重写或者被替换
+-   写代码
+    -   遵循代码风格规范
+        -   不要太多 (HAL 层，没有用到的参数，只有一行代码的函数)
+            -   不要有支持多个 OS 的代码
+        -   不要太少 - 如果相关实现已经有了，应当推广之
+    -   不要破坏 API
+        -   只有在理由充分时才可以破坏内核的 API，但是你也必须把整个内核的相关部分都修复
+        -   永远不要破坏用户空间的 API
+    -   不要引发衰退
 
-### from Arnd Bergmann
+<span id="from-arnd-bergmann"></span>
 
--   Friend, Fans and Freeloaders
--   don't annoy your kernel maintainer
-    -   publish all your code, including device drivers
-    -   would really like open source 3d embedded graphics drivers
--   Being part of the community
--   Give and Take
-    -   Divide and Conquer
-        -   Use public source code
-        -   break up source code - make a git branch for each feature
-        -   each branch should chance of getting upstream
-    -   Riding the Wave
-        -   all should be re-based as often as possible
-    -   Separate product and development trees
-        -   keep development in separate branches
-    -   Review
-        -   provides learning experience
-        -   newcomers can review and learn in the process as well
-    -   Respect
-        -   reviewers - should acknowledge effort of people working
-            hard, even if you have to reject their stuff
-        -   submitters - should respect experience and knowledge of
-            reviewers - follow their advice even if you don't agree with
-            it
-    -   Rejection
-        -   maintainers - rejecting bad code is more important than
-            accepting good code
-    -   Responsibility
-        -   don't duplicate infrastructure - extend it, generalize it
+### 来自 Arnd Bergmann
 
-### From David Arlie
+-   朋友，支持者和不速之客
+-   不要（通过下述方式之一）骚扰你的内核维护者
+    -   公开你所有的代码，包括设备驱动
+    -   他们会很喜欢开源的 3D 嵌入式图形驱动
+-   成为社区的一份子
+-   付出和回报
+    -   分步解决
+        -   使用公开的源代码
+        -   修改源代码 - 给每个功能做一个 git 分支
+        -   每个分支都应该有机会向社区提交
+    -   跨越浪潮
+        -   尽可能的多去重构（译者注：应该是指 `git rebase` 来重构内核补丁，确保准备提交往内核的补丁足够逻辑清晰、代码干净）
+    -   把产品的代码树和开发的代码树分开
+        -   把开发一直放在单独的分支进行
+    -   审核
+        -   提供学习经验
+        -   新来的人也可以评审，并且在这个过程中学习
+    -   尊重
+        -   审核人 - 要认可开发者的努力工作，即使你不得不打回他们的提交
+        -   提交人 - 应当尊重审核人的经验和知识，按他们的建议来做，即使你可能并不认同
+    -   拒绝
+        -   维护者 - 拒绝差的代码比接受好的代码更为重要
+    -   责任
+        -   不要仅仅只复制这些基础的部分，还要扩展它，推广它
+
+<span id="from-david-arlie"></span>
+
+### 来自 David Arlie
 
 [http://airlied.livejournal.com/80112.html](http://airlied.livejournal.com/80112.html)
 
 * * * * *
 
-you have a long road to walk, but first you have to leave the house
+你有很长的一段路要走，但首先你要从家里离开
 
-or why publishing code is STEP ZERO.
+或是为什么公开代码才是 STEP ZERO.
 
-If you've been developing code internally for a kernel contribution,
-you've probably got a lot of reasons not to default to working in the
-open from the start, you probably don't work for Red Hat or other
-companies with default to open policies, or perhaps you are scared of
-the scary kernel community, and want to present a polished gem.
+如果你已经在内部开发好了准备往内核贡献的代码，你也许有很多原因不能一开始就默认选择开源，你也许不是在像 Red Hat 这样的默认支持开源政策的公司工作，或者是你可能害怕恐怖的内核社区，想自己成为一块闪亮的宝石。
 
-If your company is a pain with legal reviews etc, you have probably
-spent/wasted months of engineering time on internal reviews and stuff,
-so think all of this matters later, because why wouldn't it, you just
-spent (wasted) a lot of time on it, so it must matter.
+如果你的公司正在遭受代码合法性评审等等之类的痛苦，可能你已经花费/浪费了好几个月的工程时间在内部评审和相关事项上，所以你还有什么理由不去考虑这些问题呢？你都已经浪费了这么多的时间在这些事上了，这绝对是个问题
 
-So you have your polished codebase, why wouldn't those kernel
-maintainers love to merge it.
+所以如果你都有了优雅的代码库，那么内核维护者们有什么理由不喜欢去合入它们呢？！
 
-Then you publish the source code.
+然后，你就公开了你的代码。
 
-Oh, look you just left your house. The merging of your code is many many
-miles distant and you just started walking that road, just now, not when
-you started writing it, not when you started legal review, not when you
-rewrote it internally the 4th time. You just did it this moment.
+看吧，你才离开你的屋子。而合入你的代码还有数英里远的距离，你才刚刚踏上路途，是从现在开始算起，不是在你开始写代码的时候，不是在你开始做代码合法性评审的时候，也不是当你私底下第四次重写代码的时候。 你只是从现在开始。
 
-You might have to rewrite it externally 6 times, you might never get it
-merged, it might be something your competitors are also working on, and
-the kernel maintainers would rather you cooperated with people your
-management would lose their minds over, that is the kernel development
-process.
+也许你不得不公开重写的你代码多达 6 次， 也许你永远没有机会让它合入进去，也许你的竞争对手也在进行这方面的工作，内核维护者更希望你去跟他人合作，"操纵民意"的做法只会让他们大发雷霆，这就是内核开发的过程。
 
-step zero: publish the code. leave the house.
+STEP ZERO: 公开你的代码。离开屋子。
 
-(lately I've been seeing this problem more and more, so I decided to
-write it up, and it really isn't directed at anyone in particular, I
-think a lot of vendors are guilty of this).
+（最近我看到这样的问题越来越多，所以我决定把它写出来，这真的不是针对特定的任何人，因为我想大部分的厂商都会犯这样的问题）。
 
 * * * * *
 
-\< article is about why you should publish code immediately \>
+\< 文章是关于为何你应该立即公开你的代码\>
 
--   This raises these issues:
-    -   why publish early? - because not doing so is possibly twice as
-        much work
-    -   what barriers are there to publishing immediately:
-        -   dependencies!!! (mostly version gap)
+-  这引发了这些问题:
+    -   为何要尽早开源？ 因为如果不这样的话，后续的工作量可能会加倍
+    -   立即开源代码的障碍是什么:
+        -   依赖关系!!! （大部分是版本之间的差异）
 
-## Overcoming Obstacles to Mainlining
+<span id="overcoming-obstacles-to-mainlining"></span>
 
-Tim Bird has prepared a talk about [Overcoming Obstacles to
-Mainlining](../.././dev_portals/Kernel_Mainlining/Overcoming_Obstacles_to_Mainlining/Overcoming_Obstacles_to_Mainlining.md "Overcoming Obstacles to Mainlining")
-for ELCE 2014. See that page for information about this presentation and
-a link to his slides.
+## 克服 Mainlining 遇到的障碍
+
+Tim Bird 为 2014 年欧洲嵌入式 Linux 会议准备了一篇关于 [克服 Mainlining 障碍](../.././dev_portals/Kernel_Mainlining/Overcoming_Obstacles_to_Mainlining/Overcoming_Obstacles_to_Mainlining.md "Overcoming Obstacles to Mainlining") 的演讲。那篇文章里头有演讲信息和演讲稿的下载链接。
 
 
-[Category](http://eLinux.org/Special:Categories "Special:Categories"):
+[类别](http://eLinux.org/Special:Categories "Special:Categories"):
 
--   [Kernel](http://eLinux.org/Category:Kernel "Category:Kernel")
-
+-   [内核](http://eLinux.org/Category:Kernel "Category:Kernel")
