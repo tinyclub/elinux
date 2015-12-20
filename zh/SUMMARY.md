@@ -1,11 +1,11 @@
 # Summary
 
-* [译者须知](doc/README.md)
+* [翻译须知](doc/README.md)
 
     * [如何编译](doc/BUILD.md)
     * [任务分工](doc/PLAN.md)
 
-* [译者一览](doc/Contributors.md)
+* [贡献者](doc/Contributors.md)
 
 * [开发入口](dev_portals/README.md)
 
