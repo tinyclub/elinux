@@ -1,23 +1,9 @@
-> 原文：[eLinux.org](http://eLinux.org/Legal_Issues "http://eLinux.org/Legal_Issues")<br/>
-> 翻译：[@zxqhbd](https://github.com/zxqhbd)<br/>
-> 校订：[@lzufalcon](https://github.com/lzufalcon)<br/>
+> 书籍：[嵌入式 Linux 知识库](http://tinylab.gitbooks.io/elinux)
+> 原文：[eLinux.org](http://eLinux.org/Legal_Issues "http://eLinux.org/Legal_Issues")
+> 翻译：[@zxqhbd](https://github.com/zxqhbd)
+> 校订：[@lzufalcon](https://github.com/lzufalcon)
 
 # 法律问题
-
-## 目录
-
--   [1 嵌入式中使用 Linux 的法律问题](#legal-issues-using-linux-in-embedded-projects)
-    -	[1.1 内核只被 GPL V2 许可](#kernel-is-licensed-gpl-v2-only)
-    -	[1.2 署名行 (signed-off-by) 和原创开发者证书 (DCO)](#signed-off-by-lines-and-the-dco)
-    -	[1.3 有关法律分析和合规的资源](#resources-for-legal-analysis-and-compliance)
--   [2 EXPORT\-SYMBOL\-GPL](#export-symbol-gpl)
-    -	[2.1 针对内核 USB API 的 EXPORT\-SYMBOL\-GPL ](#export-symbol-gpl-for-kernel-usb-api)
--   [3 二进制专有的内核模块](#binary-proprietary-kernel-modules)
--   [4 用户空间中内核头文件的使用](#use-of-kernel-header-files-in-user-space)
--   [5 其它链接](#other-links)
-
-
-<span id="legal-issues-using-linux-in-embedded-projects"></span>
 
 ## 嵌入式中使用 Linux 的法律问题
 
@@ -25,7 +11,6 @@
 使用 GPL 许可证的复杂性已经在很多其他论坛中被多次的讨论过了。
 以下是几个突出问题：
 
-<span id="kernel-is-licensed-gpl-v2-only"></span>
 
 ### 内核只被 GPL V2 许可
 
@@ -35,7 +20,6 @@ Linux 内核只在 GNU 通用公共许可协议 2.0 版本下被许可！
 
 2006 年 9 月，当 GPL V3 起草时，一群内核开发者签署了一个立场声明，表明他们反对 GPL V3 。这更加表明了内核不可能改用 GPL V3 协议。
 
-<span id="signed-off-by-lines-and-the-dco"></span>
 
 ### 署名行 (signed-off-by) 和原创开发者证书 (DCO)
 
@@ -47,7 +31,6 @@ Linux 内核只在 GNU 通用公共许可协议 2.0 版本下被许可！
 
 [2]: "http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/Documentation/SubmittingPatches" "SubmittingPatches"
 
-<span id="resources-for-legal-analysis-and-compliance"></span>
 
 ### 有关法律分析和合规的资源
 
@@ -59,11 +42,9 @@ Linux 内核只在 GNU 通用公共许可协议 2.0 版本下被许可！
 * 有关 copyleft 和 GNU 的通用公共许可协议的一份全面教程和指南：
    * http://www.copyleft.org/guide/comprehensive-gpl-guide.html#comprehensive-gpl-guidepa1.html
 
-<span id="export-symbol-gpl"></span>
 
 ## EXPORT\_SYMBOL\_GPL
 
-<span id="export-symbol-gpl-for-kernel-usb-api"></span>
 
 ### 针对内核 USB API 的 EXPORT_SYMBOL_GPL
 
@@ -78,7 +59,6 @@ Linux 内核只在 GNU 通用公共许可协议 2.0 版本下被许可！
 * [实际的 git commit][4]
 [4]:http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/commit/?id=782e70c6fc2290a0395850e8e02583b8b62264d8 "actual commit"
 
-<span id="binary-proprietary-kernel-modules"></span>
 
 ## 二进制专有的内核模块
 
@@ -93,7 +73,6 @@ Linux 内核只在 GNU 通用公共许可协议 2.0 版本下被许可！
   [3]:http://www.networkworld.com/article/2301701/smb/encouraging-closed-source-modules-part-3--elimating-the--api-update-tax-.html "part 3"
 
 
-<span id="use-of-kernel-header-files-in-user-space"></span>
 
 ## 在用户空间中使用内核头文件
 
@@ -112,7 +91,6 @@ Linux 内核只在 GNU 通用公共许可协议 2.0 版本下被许可！
 
 需要注意的是，Android 操作系统开发者是使用不同的过程来为他们的系统净化 bionic 头文件。他们的过程与主线头文件净化特性差不多同时开始。
 
-<span id="other-links"></span>
 
 ## 其它链接
 
@@ -129,4 +107,5 @@ Linux 内核只在 GNU 通用公共许可协议 2.0 版本下被许可！
 * <http://fossology.org/> —fossology 是一个框架用来扫描开源代码：它目前扫描版权和许可证信息，并能够很容易的进行扩展
 
 [分类](http://eLinux.org/Special:Categories "Special:Categories"):
+
 -   [开放源码许可](http://eLinux.org/Category:OpenSource_Licensing "Category:OpenSource Licensing")
