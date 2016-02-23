@@ -11,7 +11,7 @@
 -    [@zipper1956](https://github.com/zipper) (1) <br/>
 -    [@zhongbin](https://github.com/qkhhyga) (1) <br/>
 -    [@wengpingbo](https://github.com/wengpingbo) (1) <br/>
--    [@sdfd](https://github.com/lzufalcon) (1) <br/>
+-    [@sdfd](https://github.com/sdfd) (1) <br/>
 -    [@mintisan](https://github.com/mintisan) (1) <br/>
 -    [@DecJude](https://github.com/DecJude) (1) <br/>
 
@@ -19,5 +19,5 @@
 ## 校订
 
 
--    [@lzufalcon](https://github.com/lzufalcon) (18) <br/>
+-    [@lzufalcon](https://github.com/lzufalcon) (19) <br/>
 -    [@ibrother](https://github.com/ibrother) (3) <br/>
