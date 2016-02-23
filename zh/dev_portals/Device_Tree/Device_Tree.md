@@ -1,6 +1,6 @@
 > 原文：[eLinux.org](http://elinux.org/Boot_Time.md)<br/>
 > 翻译：[@sdfd](https://github.com/sdfd)<br/>
-> 校订：[@falcon](https://github.com/falcon)
+> 校订：[@lzufalcon](https://github.com/lzufalcon)
 
 # 设备树
 
