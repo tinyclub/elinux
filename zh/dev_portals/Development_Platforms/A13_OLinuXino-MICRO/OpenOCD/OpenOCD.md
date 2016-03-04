@@ -23,7 +23,7 @@
 
 此页面内容来源于[OpenOCD](http://openocd.sourceforge.net/) 项目主页.
 
-OpenOCD 是一款使用[ JTAG ](http://eLinux.org/JTAG "JTAG")硬件调试端口的开源调试器。OpenOCD支持对目标嵌入式设备进行调试和在系统编程(ISP, in-system programming)。OpenOCD 可以对目标处理器上所连接的NAND FLASH 和 NOR FLASH 储存设备进行编程。OpenBCD 支持对兼容CFI的外部FLASH(Intel and AMD/Spansion
+OpenOCD 是一款使用[ JTAG ](http://eLinux.org/JTAG "JTAG")硬件调试端口的开源调试器。OpenOCD支持对目标嵌入式设备进行调试和在系统编程(ISP, in-system programming)。OpenOCD 可以对目标处理器上所连接的NAND FLASH 和 NOR FLASH 储存设备进行编程。FLASH编程支持兼容CFI的外部FLASH(Intel and AMD/Spansion
 command set)进行编程，也支持对数种内部FLASH进行编程(LPC2000, AT91SAM7, STR7x,
 STR9x, LM3 and STM32x)。
 
