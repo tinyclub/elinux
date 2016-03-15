@@ -1,43 +1,38 @@
-> From: [eLinux.org](http://eLinux.org/OpenOCD "http://eLinux.org/OpenOCD")
+> 原文：[eLinux.org](http://eLinux.org/Device_drivers "http://eLinux.org/Device_drivers")<br/>
+> 翻译：[@EmbolismSoil](https://github.com/EmbolismSoil)
 
 
 # OpenOCD
 
 
 
-## Contents
+## 目录
 
--   [1 Introduction](#introduction)
--   [2 Supported Cores Types](#supported-cores-types)
--   [3 Technical Support](#technical-support)
--   [4 Installing OpenOCD](#installing-openocd)
--   [5 Running OpenOCD](#running-openocd)
-    -   [5.1 General Instructions](#general-instructions)
-    -   [5.2 OpenOCD Configuration Files](#openocd-configuration-files)
-    -   [5.3 Board Specific Instructions](#board-specific-instructions)
--   [6 External Links](#external-links)
+-   [1 前言 ](#introduction)
+-   [2 支持的处理器核](#supported-cores-types)
+-   [3 技术支持 ](#technical-support)
+-   [4 安装 OpenOCD ](#installing-openocd)
+-   [5 运行 OpenOCD ](#running-openocd)
+    -   [5.1 通用操作指南 ](#general-instructions)
+    -   [5.2 OpenOCD 的配置文件 ](#openocd-configuration-files)
+    -   [5.3 特定开发板操作指南 ](#board-specific-instructions)
+-   [6 外部链接 ](#external-links)
 
-## Introduction
+## 前言
 
-This page builds on content from the main
-[OpenOCD](http://openocd.sourceforge.net/) project site.
 
-OpenOCD (Open On-Chip Debugger) is open-source software that interfaces
-with a hardware debugger's [JTAG](http://eLinux.org/JTAG "JTAG") port. OpenOCD provides
-debugging and in-system programming for embedded target devices. OpenOCD
-provides the ability to flash NAND and NOR FLASH memory devices that are
-attached to the processor on the target system. Flash programming is
-supported for external CFI compatible flashes (Intel and AMD/Spansion
-command set) and several internal flashes (LPC2000, AT91SAM7, STR7x,
-STR9x, LM3 and STM32x).
+此页面内容来源于[OpenOCD](http://openocd.sourceforge.net/) 项目主页.
 
-OpenOCD was originally developed by Dominic Rath at the University of
-Applied Sciences Augsburg. The OpenOCD source code is now available
-through the GNU General Public License (GPL).
+OpenOCD 是一款使用[ JTAG ](http://eLinux.org/JTAG "JTAG")硬件调试端口的开源调试器。OpenOCD支持对目标嵌入式设备进行调试和在系统编程(ISP, in-system programming)。OpenOCD 可以对目标处理器上所连接的NAND FLASH 和 NOR FLASH 储存设备进行编程。FLASH编程支持兼容CFI的外部FLASH(Intel and AMD/Spansion
+command set)进行编程，也支持对数种内部FLASH进行编程(LPC2000, AT91SAM7, STR7x,
+STR9x, LM3 and STM32x)。
 
-## Supported Cores Types
+OpenOCD最初由 Dominic Rath 在 University of
+Applied Sciences Augsburg 大学开发。OpenOCD的源码现已通过GPL协议发布。
 
-OpenOCD supports the following cores:
+## 支持的处理器核
+
+OpenOCD 支持下列处理器核：
 
 <table>
 <thead>
@@ -122,56 +117,48 @@ OpenOCD supports the following cores:
 </tbody>
 </table>
 
-## Technical Support
+## 技术支持
 
--   [OpenOCD website](http://openocd.org/)
--   [OpenOCD User Support mailing
-    list](https://lists.sourceforge.net/lists/listinfo/openocd-user/)
--   [OpenOCD Development mailing
-    list](https://lists.sourceforge.net/lists/listinfo/openocd-devel)
+-   [OpenOCD 网站](http://openocd.org/)
+-   [OpenOCD 用户支持邮件列表
+    ](https://lists.sourceforge.net/lists/listinfo/openocd-user/)
+-   [OpenOCD
+     开发邮件列表](https://lists.sourceforge.net/lists/listinfo/openocd-devel)
 -   [Sparkfun.com OpenOCD
-    forum](http://forum.sparkfun.com/viewforum.php?f=18)
--   [OpenOCD User's
-    Guide](http://openocd.sourceforge.net/doc/html/index.html)
+    论坛](http://forum.sparkfun.com/viewforum.php?f=18)
+-   [OpenOCD 用户指南](http://openocd.sourceforge.net/doc/html/index.html)
 -   \#openocd channel on irc.freenode.net
 
-## Installing OpenOCD
+## 安装 OpenOCD
 
--   [Compiling OpenOCD](http://eLinux.org/Compiling_OpenOCD "Compiling OpenOCD")
+-   [编译 OpenOCD](http://eLinux.org/Compiling_OpenOCD "Compiling OpenOCD")
 -   [OpenOCD Ubuntu
-    Package](http://eLinux.org/OpenOCD_Ubuntu_Package "OpenOCD Ubuntu Package")
--   [OpenOCD Patches](http://eLinux.org/OpenOCD_Patches "OpenOCD Patches")
--   [OpenOCD Config Files](http://eLinux.org/OpenOCD_Config_Files "OpenOCD Config Files")
+    软件包](http://eLinux.org/OpenOCD_Ubuntu_Package "OpenOCD Ubuntu Package")
+-   [OpenOCD 补丁](http://eLinux.org/OpenOCD_Patches "OpenOCD Patches")
+-   [OpenOCD 配置文件](http://eLinux.org/OpenOCD_Config_Files "OpenOCD Config Files")
 -   [libFDTI vs. libFTD2xx](http://eLinux.org/Libftdi_vs_FTD2XX "Libftdi vs FTD2XX")
-    license and performance comparison
+    许可证和性能的比较
 -   [The GNU ARM Eclipse
-    OpenOCD](http://gnuarmeclipse.livius.net/blog/openocd/) - new
-    OpenOCD distribution, with better Eclipse integration
+    OpenOCD](http://gnuarmeclipse.livius.net/blog/openocd/) - 具有更好Eclipse集成度的新 OpenOCD 发行版
 
-## Running OpenOCD
+## 运行 OpenOCD
 
-#### General Instructions
+#### 通用操作指南
 
--   [Running OpenOCD](http://eLinux.org/Running_OpenOCD "Running OpenOCD")
--   [Running OpenOCD on
-    Linux](http://eLinux.org/Running_OpenOCD_on_Linux "Running OpenOCD on Linux")
--   [Running OpenOCD on
-    Windows](http://eLinux.org/Running_OpenOCD_on_Windows "Running OpenOCD on Windows")
+-   [运行 OpenOCD ](http://eLinux.org/Running_OpenOCD "Running OpenOCD")
+-   [在 Linux下运行 OpenOCD](http://eLinux.org/Running_OpenOCD_on_Linux "Running OpenOCD on Linux")
+-   [在 Windows下运行 OpenOCD](http://eLinux.org/Running_OpenOCD_on_Windows   "Running OpenOCD on Windows")
 -   [OpenOCD
-    Troubleshooting](http://eLinux.org/OpenOCD_Troubleshooting "OpenOCD Troubleshooting")
+    排障](http://eLinux.org/OpenOCD_Troubleshooting "OpenOCD Troubleshooting")
 
-#### OpenOCD Configuration Files
+#### OpenOCD 配置文件
 
--   [OpenOCD Configuration Files
-    Overview](http://eLinux.org/OpenOCD_Configuration_Files_Overview "OpenOCD Configuration Files Overview")
--   [How To Write an Interface Configuration
-    Script](http://eLinux.org/index.php?title=How_To_Write_an_Interface_Configuration_Script&action=edit&redlink=1 "How To Write an Interface Configuration Script (page does not exist)")
--   [How To Write a Board Configuration
-    Script](http://eLinux.org/How_To_Write_a_Board_Configuration_Script "How To Write a Board Configuration Script")
--   [How To Write a Target Configuration
-    Script](http://eLinux.org/index.php?title=How_To_Write_a_Target_Configuration_Script&action=edit&redlink=1 "How To Write a Target Configuration Script (page does not exist)")
+-   [OpenOCD 配置文件概述](http://eLinux.org/OpenOCD_Configuration_Files_Overview "OpenOCD Configuration Files Overview")
+-   [如何编写接口配置脚本](http://eLinux.org/index.php?title=How_To_Write_an_Interface_Configuration_Script&action=edit&redlink=1 "How To Write an Interface Configuration Script (page does not exist)")
+-   [如何编写开发板配置脚本](http://eLinux.org/How_To_Write_a_Board_Configuration_Script "How To Write a Board Configuration Script")
+-   [如何编写目标配置脚本](http://eLinux.org/index.php?title=How_To_Write_a_Target_Configuration_Script&action=edit&redlink=1 "How To Write a Target Configuration Script (page does not exist)")
 
-#### Board Specific Instructions
+#### 特定开发板操作指南
 
 -   [BeagleBoard](http://eLinux.org/Running_OpenOCD_on_Linux_with_the_Beagleboard "Running OpenOCD on Linux with the Beagleboard")
 -   [Beagleboard
@@ -180,16 +167,15 @@ OpenOCD supports the following cores:
 -   [PandaBoard](http://eLinux.org/OpenOCD_PandaBoard "OpenOCD PandaBoard")
 -   [Snowball](http://eLinux.org/OpenOCD_Snowball "OpenOCD Snowball")
 
-## External Links
+## 外部链接
 
-[OpenOCD](http://openocd.sourceforge.net/) project.
+[OpenOCD](http://openocd.sourceforge.net/) 项目.
 
 [OpenOCD
-source](http://openocd.git.sourceforge.net/git/gitweb.cgi?p=openocd/openocd;a=summary)
+源码](http://openocd.git.sourceforge.net/git/gitweb.cgi?p=openocd/openocd;a=summary)
 
 
-[Categories](http://eLinux.org/Special:Categories "Special:Categories"):
+[分类](http://eLinux.org/Special:Categories "Special:Categories"):
 
 -   [TinCanTools](http://eLinux.org/Category:TinCanTools "Category:TinCanTools")
 -   [OpenOCD](http://eLinux.org/Category:OpenOCD "Category:OpenOCD")
-
