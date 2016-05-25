@@ -2,7 +2,7 @@
     "author": "http://www.celinuxforum.org/",
     "description": "这是 elinux.org 的中文版本",
     "generator": "site",
-    "plugins" : [ "disqus", "google_code_prettify", "collapsible-menu", "maxiang", "livereload"],
+    "plugins" : [ "disqus", "collapsible-menu"],
     "pluginsConfig": {
         "disqus": {
             "shortName": "tinylab"
