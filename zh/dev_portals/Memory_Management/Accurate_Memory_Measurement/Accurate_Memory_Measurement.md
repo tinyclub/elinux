@@ -1,173 +1,140 @@
-> From: [eLinux.org](http://eLinux.org/Accurate_Memory_Measurement "http://eLinux.org/Accurate_Memory_Measurement")
+> 原文： [eLinux.org](http://eLinux.org/Accurate_Memory_Measurement "http://eLinux.org/Accurate_Memory_Measurement")<br/>
+> 翻译：[@zipper1956](https://github.com/zipper1956)<br/>
+> 校订：[@lzufalcon](https://github.com/lzufalcon)<br/>  
 
 
-# Accurate Memory Measurement
+# 精确内存检测
 
 
 
-## Contents
+## 目录
 
--   [1 Introduction](#introduction)
--   [2 Panasonic API for accurate memory
-    count](#panasonic-api-for-accurate-memory-count)
-    -   [2.1 Description Overview](#description-overview)
-        -   [2.1.1 Panasonic Presentation
-            Excerpts](#panasonic-presentation-excerpts)
-    -   [2.2 Description of algorithm](#description-of-algorithm)
-    -   [2.3 Patch](#patch)
-    -   [2.4 Kernel 2.6 status](#kernel-2-6-status)
--   [3 Sony detailed memory
-    accounting](#sony-detailed-memory-accounting)
-    -   [3.1 Watching user space program memory
-        usage](#watching-user-space-program-memory-usage)
-    -   [3.2 Kernel 2.6 status](#kernel-2-6-status-2)
-    -   [3.3 Actual Patch](#actual-patch)
--   [4 Nokia out-of-memory notifier
-    module](#nokia-out-of-memory-notifier-module)
-    -   [4.1 Description](#description)
-    -   [4.2 lowmem.c source](#lowmem-c-source)
-    -   [4.3 lowmem patch](#lowmem-patch)
+-   [1 简介](#introduction)
+-   [2 松下精确内存计数 API](#panasonic-api-for-accurate-memory-count)
+    -   [2.1 描述概览](#description-overview)
+        -   [2.1.1 松下的报告摘要](#panasonic-presentation-excerpts)
+    -   [2.2 算法描述](#description-of-algorithm)
+    -   [2.3 补丁](#patch)
+    -   [2.4 内核 2.6 状态](#kernel-2-6-status)
+-   [3 索尼详细内存统计](#sony-detailed-memory-accounting)
+    -   [3.1 监视用户空间程序内存使用](#watching-user-space-program-memory-usage)
+    -   [3.2 内核 2.6 状态](#kernel-2-6-status-2)
+    -   [3.3 实际的补丁](#actual-patch)
+-   [4 诺基亚内存不足通知模块](#nokia-out-of-memory-notifier-module)
+    -   [4.1 概述](#description)
+    -   [4.2 lowmem.c 源代码](#lowmem-c-source)
+    -   [4.3 lowmem 补丁](#lowmem-patch)
 -   [5 kpagemap](#kpagemap)
--   [6 Kernelnewbies question about measuring
-    memory](#kernelnewbies-question-about-measuring-memory)
+-   [6 内核新手关于内存检测的问题](#kernelnewbies-question-about-measuring-memory)
 
-## Introduction
+## 简介
 
-This page describes techniques and issues with measuring Linux system
-memory accurately. This is important for embedded systems since usually
-there is limited memory, and no swap space, available. It is currently
-(as of 2.4 and 2.6 kernels) very difficult to get an accurate count of
-used and free memory for the system. Having an accurate count could
-potentially enable better error handling for out-of-memory conditions,
-or error avoidance for low-memory conditions, in CE products.
+本文介绍了将却检测 Linux 系统内存相关的技术和问题。这对嵌入式系统很重要，因为其有限的内存并且没有可用交换空间。目前（２.4 和 2.6 内核）很难获取系统中已使用和未使用内存的精确统计。在通过 CE 认证的产品中，能够精确统计内存使用可以潜在地改善内存耗尽的错误处理或者内存不足时的错误避免。
 
-This page currently lists 3 systems which aid in getting an accurate
-memory measurement for the Linux kernel:
+本文目前列举了三个有助于获取 Linux 内核精确内存检测的系统：
 
--   Panasonic's memory usage API
--   Sony's detailed memory accounting
--   Nokia's out-of-memory notifier module (LSM)
+-   松下的内存使用 API
+-   索尼的详细内存统计
+-   诺基亚的内存不足通知模块 (LSM)
 
-## Panasonic API for accurate memory count
+## 松下精确内存计数 API
 
-### Description Overview
+### 描述概览
 
-This technique and API were presented by Panasonic on pages 15-18 of a
-presentation available
+这项技术和 API 由松下展示在一份可获得的报告中 15-18 页中 
 [http://elinux.org/images//8/83/Pdf.gif](http://elinux.org/images//8/83/Pdf.gif)
 [here](http://eLinux.org/images/a/a5/CELF_Technical_Jamboree_June13.pdf "CELF Technical Jamboree June13.pdf")
 [http://elinux.org/images/d/da/Info\_circle.png](http://elinux.org/File:CELF_Technical_Jamboree_June13.pdf)
 
-##### Panasonic Presentation Excerpts
+##### 松下的报告摘要
 
-Page 15 - Memory Usage API 1/4
+第 15 页- 内存使用 API 1/4
 
-**Motivation:**
+**目的：**
 
-Customer requirements:
+客户需求：
 
--   Consumer expects mobile phones to be more stable than PC.
+-   客户希望移动电话比 PC 更加稳定。
 
-Dynamic characteristics
+动态特性：
 
--   Dynamic chracteristics of memory usage introduced by Linux
--   Difficult to estimate maximum memory usage at design time
+-   Linux 系统中介绍的内存使用动态特性
+-   设计阶段难以估计最大内存使用量
 
-Narrow margin:
+苛刻的限制:
 
--   amount of usual memory usage level is close to the limit of real
-    capacity
+-   通常的内存使用量是接近实际容量的限制
 
 
 
 <table>
 <tbody>
 <tr class="odd">
-<td align="left"><em>Mobile phone should not crash or freeze when it accidentally hit the limit of memory.</em></td>
+<td align="left"><em>当移动电话使用内存偶然到达极限时不应该崩溃或死机</em></td>
 </tr>
 </tbody>
 </table>
 
 
- Page 16 - Memory Usage API 2/4
+ 第 16 页- 内存使用量 API 2/4
 
-**Strategy:**
+**策略：**
 
--   Estimate room of memory at runtime
+-   在运行时估计内存空间
 -   Refrain fro activating new application if current room cannot
     satisfy it.
 
-(a "memory alert" window pops up)
+（一个 “内存警告” 窗口弹出）
 
--   Existing means for estimating room of memory:
+-   现有估计内存空间的方法：
 
 /proc/meminfo: underestimates room by excluding pages which can shrink.
 
--   Therefore: we implemented a *memory usage API* to estimate current
-    room of memory more exactly.
+-   因此：我们实现了一种“内存使用量 API ”来更准确地估计当前内存空间。
 
-Page 17 - Memory Usage API 3/4
+第 17 页 - 内存使用 API 3/4
 
-**Memory Usage API:**
+**内存使用量 API ：**
 
--   Estimates amount of page cache and slabs to be reclaimed by shrink
-    in addition to free pages.
--   Execution time \< 1 msec
--   Remaining issues:
+-   估算除了空闲内存页之外页缓存和因页面回收机制被回收的 slab 数量.
+-   执行时间 < 1 毫秒
+-   遗留问题：
 
--   Excludes i-node cache and directory entry cache which could be
-    reclaimed
+-   不包括可能被回收的 i-node 和目录入口的缓存
 
--   omitted for complexity and time consumption
+-   忽略该项是出于复杂度和时间消耗考虑
 
--   Race condition with shrink\_caches() may cause inaccurate result
+-   shrink\_caches() 伴随的竞态可能导致不准确的结果
 
-Page 18 - Memory Usage API 4/4
+第 18 页 - 内存使用 API 4/4
 
--   Memory Usage API gives a fairly good estimate of memory remaining.
+-   内存使用量 API 给出了一个非常好的剩余内存量估算.
 
 
- Description:
+ 描述:
 
-A process was run to constantly allocate memory, eventually exhausting
-the memory of the machine. While this was running, the memory usage API
-was called to determine the amount of free memory remaining in the
-machine. The machine had no other activity on it. The amount of memory
-used by the process and the amount of memory remaining should add up to
-the total memory on the machine. The diagram shows a pink line (B)
-indicating the amount of memory used by the test program, a blue line
-(A) indicating the return value from the memory usage API, and a yellow
-line (A+B) showing the addition of the two values. The yellow line
-fluctuates slightly due to some inaccuracies (a race condition with
-shrink\_caches), but overall stays fairly constant.
+一个进程被启动用于不断分配内存，直到机器的内存用尽。当该进程在运行时，内存使用量 API 被调用确定机器上剩余的空闲内存数量。该机器上没有其他进程运行。进程使用的内存量和剩余的内存量总和要与机器上的总内存相同。图表中的粉色线条 (B) 表示测试程序使用的内存量，蓝色线 (A) 表示内存使用量 API 返回的数值，黄色线条 (A+B) 表示两者数值相加。因为一些不准确因素 ( shrink\_caches 引起的竞态)黄色线条有轻微的波动，但是总体来说保持得很稳定。
 
-[![Memory Usage API
-diagram.jpg](http://eLinux.org/images/e/eb/Memory_Usage_API_diagram.jpg)](http://eLinux.org/File:Memory_Usage_API_diagram.jpg)
+[![内存使用 API 图标.jpg](http://eLinux.org/images/e/eb/Memory_Usage_API_diagram.jpg)](http://eLinux.org/File:Memory_Usage_API_diagram.jpg)
 
-### Description of algorithm
+### 算法描述
 
-When the is API invoked:
+当 API 被调用时：
 
-1.  Get the number of free pages using nr\_free\_pages()
+1.  使用　nr\_free\_pages()　获取可用内存页面数量。
 2.  Get the number of shrinkable page cache by inspecting active- and
     inactive- page cache list, and counting pages that can be free'ed.
-    The inspection logic is basically same as shrink\_cache(). The
-    Difference is whether pages are actually free'ed or not.
-3.  Get the number of pages in slab free list.
-4.  Get the number of i-node cache and directory entry cache. We do not
-    inspect the status of those caches in detail for saving time.
+    The inspection logic is basically same as shrink\_cache().区别是页面是否实际上被释放了。
+3.  获取在 slab 中空闲链表的页面数量。
+4.  获取 i-node 和目录入口的缓存的数量。为了节省时间我们不详细检查这些 cache 的状态。
 
-I think this implementation is not mature enough. For example, race
-condition between kswapd and this API can create some amount of error in
-the free page count.
+我认为这种实现方法还不够成熟。比如， kswapd 和 该 API 之间的竞态可能会产生空闲页面统计错误。
 
-### Patch
+### 补丁
 
-Here's a patch which adds a new function to determine the "shrinkable"
-size of memory. This is against a 2.4.x kernel.
+这个补丁添加了一个用来决策内存可以“压缩”大小的函数。这个补丁针2.对 2.4.x 内核.
 
--   [Information about this
-    patch](http://eLinux.org/images/e/eb/README.getfreemem.txt "README.getfreemem.txt")
+-   [关于补丁的信息](http://eLinux.org/images/e/eb/README.getfreemem.txt "README.getfreemem.txt")
 
 <!-- -->
 
@@ -354,109 +321,83 @@ size of memory. This is against a 2.4.x kernel.
 
 
 
-### Kernel 2.6 status
+### 内核 2.6 状态
 
-Sony has been ported this feature to 2.6.11; See the next section.
+索尼已经将这个特性移植到内核 2.6.11 中；详细信息见下一节。
 
-## Sony detailed memory accounting
+## 索尼详细内存统计
 
-### Watching user space program memory usage
+### 监视用户空间程序内存使用
 
-The Linux kernel provides the ability to view certain pieces of
-information about system and per-process memory usage. However, the
-information currently provided is not detailed enough. The feature
-described here adds some extra memory instrumentation to the kernel, and
-reports more detailed information about process memory usage, via some
-new entries in the /proc filesystem.
+Linux 内核提供查看关于系统的特定部分信息和每个进程的内存使用情况。然而目前所提供的关于系统的信息还不够详细。此处描述的特性就是通过 /proc 文件系统的一些新入口在内核中加入一些额外的内存测量，并且呈现更多关于进程内存使用的详细信息。
 
-The feature is described in detail in the specification below. In
-summary, however, the feature adds some global and some per-process
-entries in the /proc filesystem to provide detailed memory usage
-information. The following system-wide entries are added:
+该特性在一下规范中进行详细描述。总之，该特性在 /proc 文件系统中添加了一些全局和每个进程的独有的入口来提供内存使用的详细信息。下面这些系统级的入口是新增的：
 
--   /proc/nodeinfo - shows memory nodes on system (NUMA machines may
-    have multiple, discontiguous nodes)
+-   /proc/nodeinfo - 展示系统内存节点 (NUMA 的机器可能会有多样和不连续的节点)
 
--   /proc/memmap - shows the number of users for each physical page on
-    the system
+-   /proc/memmap - 展示系统中每个物理内存页面的使用者数量
 
-The new per-process entries are:
+新增的每个进行的入口如下：
 
--   /proc/\<pid\>/memmap - shows number of users for each page mapped
-    into the process address space
+-   /proc/\<pid\>/memmap - 展示每个映射到进程地址空间的页面的使用者数
 
--   /proc/\<pid\>/nodemap - shows node \# for each page in process
-    address space
+-   /proc/\<pid\>/nodemap - 展示在进程地址空间的每个页面的节点 \#
 
--   /proc/\<pid\>/statrm - shows total, resident, shared and dirty
-    counts for pages for each VM area of a process
+-   /proc/\<pid\>/statrm - 展示每个进程虚拟内存区域的总页面、驻留页面和脏页的数量统计
 
--   /proc/\<pid\>/statm - shows stats for page counts for different
-    categories of pages of a process (lib, text, data, dirty, etc.)
+-   /proc/\<pid\>/statm - 展示一个进程不同种类页面的数量统计 (lib, text, data, dirty, etc.)
 
--   User Proc Memory Usage monitor
+-   用户进程内存使用量监测
 
--   Kernel 2.4 - joint dev with MV/Panasonic
+-   内核 2.4 - 与松下联合开发
 
-The following specification was developed by Monta Vista as part of a
-joint development project with Sony and Panasonic
+下面的规范是作为索尼和松下联合开发项目的一部分，由 Monta Vista 开发。
 
 -   [http://elinux.org/images//8/83/Pdf.gif](http://elinux.org/images//8/83/Pdf.gif)
     [Memory Accounting Tools Tech
     Spec](http://eLinux.org/images/5/5c/Memory_Accounting_Tools_Tech_Spec.pdf "Memory Accounting Tools Tech Spec.pdf")
     [http://elinux.org/images/d/da/Info\_circle.png](http://elinux.org/File:Memory_Accounting_Tools_Tech_Spec.pdf)
 
--   Code
+-   代码
 
 -   \~/linux-mta-041004/fs/proc/proc\_misc.c
--   You can easily isolate this function using
-    CONFIG\_MEMORY\_ACCOUNTING
+-   你可以很容易地使用 CONFIG\_MEMORY\_ACCOUNTING 分割这个函数Y
 
--   Doing this on the CELF 2005-05-03 tree yeilds the following patch:
+-   在 CELF 2005-05-03 树上使用该方法得到以下的补丁：
 -   [Media:celf-2.4.20-memory-accounting.patch](http://eLinux.org/images/c/cc/Celf-2.4.20-memory-accounting.patch "Celf-2.4.20-memory-accounting.patch")
 
--   This function utilizes Memory Typed Allocation to handle different
-    type memories with NUMA based thecnology. If you want to port this
-    function to vanilla 2.4/2.6 kernel you should remove this
-    dependancy.
+-   基于　NUMA　技术，这个函数使用内存类型分配法处理不同类型的内存。如果你想移至这个函数到　２.4/2.6 内核，那么你需要移除这个依赖关系。
 
--   for Kernel 2.6
+-   针对内核 2.6
 
--   Show detail page stat info, like PG\_\* flags; pages could be
-    categorized as following; (need to check this categorization)
+-   展示详细的页面状态信息，比如 PG\_\* flags ；页面可以按照以下进行分类；(需要验证这种分类方法)
 
--   PTE none (page table entry is not allocated yet)
--   Otherwise
+-   PTE none (页表入口还没有分配)
+-   其他
 
--   Resident (in-core)
+-   常驻 (在内核中)
 
--   shared/non-shared
+-   共享/非共享
 
--   shared COW zero page (page not yet copyed/dirtyed and shared system
-    wide zero page
--   shared COW page (page not yet copyed/dirtyed)
--   other type of shared page (need to show how many processes/threads
-    share this)
--   non-shared page
+-   共享的 COW zero 页面 (没有复制的/脏的页面和共享的系统级的 zero 页面)
+-   共享的 COW 页面 (没有复制的/脏的页面)
+-   其他类型的共享页面 (需要查看有多少进程/线程共享这个页面)
+-   非共享页面
 
--   active/inactive
--   dirty/clean
--   reseved/not
--   locked/not
+-   活动/非活动的
+-   脏的/干净的
+-   保留的/非保留的
+-   锁住的/没有锁住的
 
--   pageout (not in-core)
+-   换出的页 (不在内核中)
 
--   cached/not cached
+-   缓存的/非缓存的
 
--   How about "/proc/\<process id\>/smaps" ? It shows the categorized
-    memory usage of each sections of a process.
+-   那么 "/proc/\<process id\>/smaps" 是怎样的? 它展示了进程每个段的分类化内存使用情况。
 
-### Kernel 2.6 status
+### 内核 2.6 状态
 
-Sony has ported the above features and Panasonic's "accurate memory
-counting API" mentioned to kernel 2.6.11. We replace new system call
-introduced by original 2.4 patch from Panasonic, to new /proc interface
-"/proc/freemem" for better acceptance.
+索尼已经把以上的特性和上文提到松下的 “精确内存计数 API ”移植到内核 2.6.11 中。为了有更好的接受度，我们把来自松下的原始 2.4 补丁介绍的新的系统调用替换为新的 /proc 接口 /proc/freemem. 
 
 
 
@@ -465,66 +406,58 @@ introduced by original 2.4 patch from Panasonic, to new /proc interface
 <tr class="odd">
 <td align="left">/proc/&lt;pid&gt;/statrm</td>
 <td align="left">memory-accounting.patch</td>
-<td align="left">Summary of Resident/Shared page info</td>
+<td align="left">常驻/共享内存页面信息的简要统计</td>
 </tr>
 <tr class="even">
 <td align="left">/proc/&lt;pid&gt;/pgstat</td>
 <td align="left">memory-accounting-1.patch</td>
-<td align="left">Detailed page info</td>
+<td align="left">详细的页面信息</td>
 </tr>
 <tr class="odd">
 <td align="left">/proc/&lt;pid&gt;/memmap</td>
 <td align="left">memory-accounting.patch</td>
-<td align="left">Detailed page info of Shared mem</td>
+<td align="left">共享内存的详细页面信息</td>
 </tr>
 <tr class="even">
 <td align="left">/proc/memmap</td>
 <td align="left">memory-accounting.patch</td>
-<td align="left">Usage of phy mem</td>
+<td align="left">物理内存使用量</td>
 </tr>
 <tr class="odd">
 <td align="left">/proc/freemem</td>
 <td align="left">freemem-1.patch</td>
-<td align="left">Accurate memory counting API, see above.</td>
+<td align="left">精确内存统计 API， 见上文。</td>
 </tr>
 </tbody>
 </table>
 
-### Actual Patch
+### 实际的补丁
 
-All patches are included in
+所有的补丁都包含在
 
 -   [Media:20060410-runtime-mem-usage.tgz](http://eLinux.org/images/5/53/20060410-runtime-mem-usage.tgz "20060410-runtime-mem-usage.tgz")
 
-A brief description of the features are in:
+对这些特性的一个简单介绍见链接：
 
 -   [http://elinux.org/images//8/83/Pdf.gif](http://elinux.org/images//8/83/Pdf.gif)
     [20060410-meminfo.pdf](http://eLinux.org/images/1/11/20060410-meminfo.pdf "20060410-meminfo.pdf")
     [http://elinux.org/images/d/da/Info\_circle.png](http://elinux.org/File:20060410-meminfo.pdf)
 
-## Nokia out-of-memory notifier module
+## 诺基亚内存不足通知模块
 
-### Description
+### 概述
 
-The issue of low memory notification prior to OOM killing was raised at
-a previous AG meeting. Nokia pointed out that they had an LSM module for
-this and would see about getting the source available for it. This
-module was part of the kernel source for their 770 internet tablet. The
-code is implemented as an LSM module. Below is security/lowmem.c from
-the 770 kernel source
+在 OOM killing 之前的内存不足通知的问题在一次以前的 AG 会议上提出。诺基亚指出对此他们拥有一个 LSM 模块并且将会留意获取到有关可用的源。这个模块是诺基亚 770 平板电脑内核源代码的一部分。
 
-tree (2.6.12.3):
+内核代码树 (2.6.12.3):
 
-(Code was originally obtained from
+(代码最初有此处获得
 [here](http://repository.maemo.org/pool/maemo1.1rc5/free/k/kernel-source-2.6.12.3/)
-There is a .deb file, which I de-archived with 'ar -x', then un-tarred
-data.tar.gz, and then un-tarred kernel-source-2.6.12.3.tar.bz2 and
-copied the file `security/lowmem.c`).
+这是一个 .deb 文件，我用 'ar -x' 命令解压后用 tar 工具解压了 data.tar.gz 文件，然后使用 tar 解压了 kernel-source-2.6.12.3.tar.bz2 并且复制了文件 `security/lowmem.c`).
 
-The heart of the measurement feature of this module is in the
-low\_vm\_enough\_memory() routine, about midway through the source:
+这个模块的核心检测特性在函数 low\_vm\_enough\_memory() 中, 大概在源文件的中间位置：
 
-### lowmem.c source
+### lowmem.c 源代码
 
     #include <linux/config.h>
     #include <linux/module.h>
@@ -824,7 +757,7 @@ low\_vm\_enough\_memory() routine, about midway through the source:
     MODULE_DESCRIPTION("Low watermark LSM module");
     MODULE_LICENSE("GPL");
 
-### lowmem patch
+### lowmem 补丁
 
 Here's the feature in patch format (presumably against a 2.6.12.3
 kernel, but I suspect the patch is fairly independent of minor kernel
@@ -834,24 +767,17 @@ version):
 
 ## kpagemap
 
-Matt Mackall mainlined a new "kpagemap" system in kernel version 2.6.25.
+Matt Mackall 将一种新的 “kpagemap”  系统加入到了 2.6.25 版本内核的主线中。
 
-This system provides detailed information about all pages used by
-processes on a system.
+该系统提供了关于系统中所有进程所用内存页面的详细信息。
 
-See the file `Documentation/vm/pagemap.txt` in the kernel source tree to
-learn about the /proc interfaces used to obtain information from this
-system.
+查看内核中 `Documentation/vm/pagemap.txt` 文件可以了解用来从该系统中获取信息的 /proc 接口。
 
-Matt gave a presentation on this system (before it was merged?) at
-Embedded Linux Conference 2007. See [Matt's
-presentation](http://selenic.com/repo/pagemap/raw-file/tip/memory-profiling.html)
-for details.
+在 2007 年嵌入式 Linux 大会上，Matt针对该系统做了一次介绍 (在该系统被合并之前？)。 查看链接 [Matt's presentation](http://selenic.com/repo/pagemap/raw-file/tip/memory-profiling.html) 可以获取详细的内容.
 
-## Kernelnewbies question about measuring memory
+## 内核新手关于内存检测的问题
 
-Here are some miscellaneous e-mails from the kernelnewbies list, on this
-topic:
+下面一些是来自内核新手们关于该话题的各种邮件：:
 
     >I know that some part of memory is free, but they are used in caches
     >> to optimise the performance when the system needs to allocate more
@@ -883,9 +809,11 @@ topic:
     also, check /proc/slabinfo
 
 
-[Categories](http://eLinux.org/Special:Categories "Special:Categories"):
+[分类](http://eLinux.org/Special:Categories "Special:Categories"):
 
--   [Memory
-    measurement](http://eLinux.org/Category:Memory_measurement "Category:Memory measurement")
--   [System Size](http://eLinux.org/Category:System_Size "Category:System Size")
+-   [内存检测](http://eLinux.org/Category:Memory_measurement "Category:Memory measurement")
+-   [系统剪裁](http://eLinux.org/Category:System_Size "Category:System Size")
+
+
+
 
