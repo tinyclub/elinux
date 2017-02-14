@@ -1,54 +1,40 @@
-> From: [eLinux.org](http://eLinux.org/Ftrace "http://eLinux.org/Ftrace")
+> From: [eLinux.org](http://elinux.org/Ftrace "http://eLinux.org/Ftrace")
+
+原文：[eLinux.org](http://eLinux.org/Ftrace) <br />
+翻译：@[unicornx](https://github.com/unicornx) <br />
+校订：@ <br />
 
 
 # Ftrace
 
+Ftrace 是 Linux 内核内置的跟踪器，从 2.6.27 版本开始进入 Linux 内核。虽然当初被命名为 Ftrace 的原因是取自 function tracer 的缩写（译者注，即“函数跟踪器”的意思），但目前的 Ftrace 也包含了许多其他的特性。Ftrace 的函数跟踪功能十分强大，它可以跟踪几乎内核中的所有函数。Ftrace 支持动态开关，平时处于关闭状态下对内核的性能开销几乎没有影响。
 
-
-Ftrace is the Linux kernel internal tracer that was included in the
-Linux kernel in 2.6.27. Although Ftrace is named after the function
-tracer it also includes many more functionalities. But the function
-tracer is the part of Ftrace that makes it unique as you can trace
-almost any function in the kernel and with dynamic Ftrace, it has no
-overhead when not enabled.
-
-The interface for Ftrace resides in the debugfs file system in the
-tracing directory. Documentation for this can be found in the Linux
-kernel source tree at
+使用者可以通过 debugfs 文件系统下的 traceing 目录访问 Ftrace 子系统的功能。更详细的信息可以通过访问
 [Documentation/trace/ftrace.txt](http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=blob;f=Documentation/trace/ftrace.txt;).
 
-## Contents
+## 目录
 
 -   [1 trace-cmd](#trace-cmd)
--   [2 Tips](#tips)
-    -   [2.1 Tracing a specific process with the Ftrace
-        interface](#tracing-a-specific-process-with-the-ftrace-interface)
-    -   [2.2 Tracing a specific process with
-        trace-cmd](#tracing-a-specific-process-with-trace-cmd)
-    -   [2.3 Capturing an oops (from startup) to the serial
-        console](#capturing-an-oops-from-startup-to-the-serial-console)
-    -   [2.4 Find latencies on kernel
-        startup](#find-latencies-on-kernel-startup)
-    -   [2.5 Find deepest kernel stack](#find-deepest-kernel-stack)
-    -   [2.6 additional resources](#additional-resources)
+-   [2 小贴士](#tips)
+    -   [2.1 使用 Ftrace 跟踪一个指定的进程](#tracing-a-specific-process-with-the-ftrace-interface)
+    -   [2.2 使用 trace-cmd 跟踪一个指定的进程](#tracing-a-specific-process-with-trace-cmd)
+    -   [2.3 捕获内核启动过程中的异常并输出到串口控制台](#capturing-an-oops-from-startup-to-the-serial-console)
+    -   [2.4 定位内核启动过程中的延迟](#find-latencies-on-kernel-startup)
+    -   [2.5 内核栈的跟踪](#find-deepest-kernel-stack)
+    -   [2.6 附加资源](#additional-resources)
     -   [2.7 pytimechart](#pytimechart)
-    -   [2.8 bootchart like traces with ftrace and
-        pytimechart](#bootchart-like-traces-with-ftrace-and-pytimechart)
-    -   [2.9 output](#output)
+    -   [2.8 另一种类似的在内核引导阶段产生跟踪结果的方法](#bootchart-like-traces-with-ftrace-and-pytimechart)
+    -   [2.9 输出](#output)
 
 ## trace-cmd
 
-Using the Ftrace debugfs interface can be awkward and time consuming.
-trace-cmd was created to interface with Ftrace using a binary tool which
-comes with full documentation in man pages.
+直接使用 debugfs 访问控制 Ftrace 十分繁琐耗时。所以系统提供了一个命令行的小工具 trace-cmd 来和 Ftrace 交互，详细的说明可以参考 man 手册。
 
-Here's some examples of trace-cmd:
+这里给出一些使用 trace-cmd 的例子：
 
     # trace-cmd record -e sched myprogram
 
-The above will enable all the Ftrace tracepoints that are grouped under
-the sched system. You can find these tracepoints by looking at the
-debugfs system:
+上面的例子会使能所有调度（sched）子系统下的 Ftrace 跟踪点。通过查看 debugfs 文件系统可以找到这些跟踪点：
 
     # mount -t debugfs nodev /sys/kernel/debug
     # ls /sys/kernel/debug/tracing/events/sched
@@ -59,8 +45,7 @@ debugfs system:
     sched_migrate_task      sched_stat_iowait   sched_wakeup
     sched_process_exit      sched_stat_runtime  sched_wakeup_new
 
-trace-cmd allows you to see the possible events without needing to look
-at this directory as well.
+使用 trace-cmd 命令允许你无需访问 debugfs 文件系统就可以获取以上信息.
 
     # trace-cmd list -e | grep sched:
     sched:sched_kthread_stop
@@ -80,31 +65,19 @@ at this directory as well.
     sched:sched_stat_sleep
     sched:sched_stat_iowait
 
-You can find trace-cmd in its
-[git](http://git.kernel.org/?p=linux/kernel/git/rostedt/trace-cmd.git;a=summary)
-repository.
+trace-cmd 代码的[git库](http://git.kernel.org/?p=linux/kernel/git/rostedt/trace-cmd.git;a=summary)
 
-Also within that same repository is KernelShark, which is a graphical
-user interface to trace-cmd. trace-cmd is built with just "make" and
-KernelShark is created with "make gui". This allows building trace-cmd
-on your embedded device and keeping the build from needing the GTK
-libraries required by KernelShark.
+在该代码库中还有一个工具叫做 KernelShark，它是 trace-cmd 的图形用户界面。我们可以使用 "make" 命令制作 trace-cmd，如果要制作 KernelShark 可以使用 "make gui" 命令。使用独立的命令是为了方便嵌入式系统单独编译制作基于命令行的 trace-cmd 而制作 KernelShark 需要依赖于 GTK 库。
 
+## 小贴士
 
+### 使用 Ftrace 跟踪一个指定的进程
 
-## Tips
+（摘自 Steven Rostedt 的电子邮件）如果要跟踪某个函数中调用的内核函数，可以设置一个虚拟变量 'set-ftrace-pid' 的值为执行该函数的进程的进程号（pid）。
 
-### Tracing a specific process with the Ftrace interface
+如果执行该函数的进程还未运行，那么我们获得该进程号并设置呢？方法是编写一个 shell 脚本并调用 'exec' 命令来实现。
 
-(Adapted from email by Steven Rostedt) To trace just the kernel
-functions executed in the context of a particular function, set the
-pseudo-variable 'set-ftrace-pid', to the process id (pid) of the
-process.
-
-If the process is not already running, you can use a wrapper shell
-script and the 'exec' command, to execute a command as a known pid.
-
-Like so:
+方法如下：
 
     #!/bin/sh
     echo $$ > /debug/tracing/set_ftrace_pid
@@ -112,38 +85,29 @@ Like so:
     echo function > /debug/tracing/current_tracer
     exec $*
 
-In this example, '\$\$' is the pid of the currently executing process
-(the shell script. This is set into the 'set\_ftrace\_pid' variable,
-then the 'function' tracer is enabled. Then this script exec's the
-command (specified by the first argument to the script).
+在这个例子里，'\$\$' 可以获得当前执行进程的进程号（也就是执行该 shell 脚本的进程的进程号。将该进程号设置到 'set\_ftrace\_pid' 变量中，然后使能 'function' 跟踪器。然后该脚本调用 'exec' 命令执行该命令（命令由脚本的参数指定）。
 
-Example usage (assuming script is called 'trace\_command'):
+一个例子（假设脚本的名字为'trace\_command'）：
 
     trace_command ls
 
-### Tracing a specific process with trace-cmd
+### 使用 trace-cmd 跟踪一个指定的进程
 
     # trace-cmd record -p function -F ls
 
-### Capturing an oops (from startup) to the serial console
+### 捕获内核启动过程中的异常并输出到串口控制台
 
-You can capture the function calls leading up to a panic by placing the
-following on the kernel command line:
+捕获一个导致异常的函数调用的方法是在内核的启动命令行参数中指定如下值：
 
     ftrace=function ftrace_dump_on_oops
 
-*Note: You can also use 'ftrace=function\_graph' if you would prefer
-that instead.*
+*注意：如果你愿意也可以使用 'ftrace=function\_graph' 。*
 
-The ftrace documentation, in Documentation/trace/ftrace.txt mentions how
-to set ftrace\_dump\_on\_oops in a running system, but I have found it
-very handy to have it configured to dump the trace from kernel startup,
-so that any panics that occur during boot (before user-space is started)
-are also captured.
+内核的 Documentation/trace/ftrace.txt 介绍了如何在内核运行过程中去动态设置 ftrace\_dump\_on\_oops 这个参数，但我发现希望通过这个方法捕获内核启动过程中的异常非常困难，所以比较靠谱的方法还是在内核启动前就通过命令行参数设置，这么做的不好的地方在于会输出内核引导过程中（用空空间程序启动之前）所有的异常信息。
 
-Note that the output will be VERY long. Please be patient.
+注意这样的话，输出的内容会非常长，请保持耐心。
 
-The output will look something like the following:
+输出的例子大致如下：
 
          ash-56      0d..2. 159400967us : _raw_spin_lock <-vprintk
          ash-56      0d..2. 159400972us : __raw_spin_lock <-_raw_spin_lock
@@ -263,82 +227,67 @@ The output will look something like the following:
     [<802efff0>] (secondary_start_kernel+0x0/0x164) from [<402efab4>] (0x402efab4)
      r5:00000015 r4:5fb4806a
 
-### Find latencies on kernel startup
+### 定位内核启动过程中的延迟
 
-It is possible to use ftrace to record functions that exceed a certain
-amount of time, using the 'tracing\_thresh' option. This can be used for
-finding routines that are taking a long time on kernel startup, to help
-optimize bootup time:
+使用 ftrace 的 'tracing\_thresh' 选项可以记录函数执行是否超过了一个特定的时长。这可以被用来检查函数在内核启动过程中是否消耗了较长的时间，从而帮助我们优化启动时长：
 
--   Make sure the following kerne configuration options are set:
+-   确保如下内核配置选项打开：
     -   CONFIG\_FTRACE: "Tracers"
     -   CONFIG\_FUNCTION\_TRACER: "Kernel Function Tracer"
     -   CONFIG\_FUNCTION\_GRAPH\_TRACER: "Kernel Function Graph Tracer"
--   Use the following on the kernel command line:
+-   在内核启动命令行参数中使用如下选项：
     -   tracing\_thresh=200 ftrace=function\_graph
-        -   this traces all functions taking longer than 200
-            microseconds (.2 ms). You can use any duration threshhold
-            you want.
--   to get the data:
+        -   这样设置会跟踪所有执行超过200微秒（0.2毫秒）的函数。你可以根据自己的需要指定时间阈值。
+-   获取跟踪结果的方法：
     -   \$ mount -t debugfs debugfs /debug
     -   \$ cat /debug/tracing/trace
 
-These command should be probably be done programatically (as part of an
-init script), to avoid data loss
+如上命令可能需要编写在初始化脚本中（作为 init 脚本的一部分）以避免数据丢失。
 
--   scope of operation
-    -   the tracer starts sometime during initialization, and you only
-        get timings after it starts
+-   捕获操作的生效范围
+    -   跟踪发生在初始化期间，而且必然发生在时间初始化完成之后。
 
 
+### 内核栈的跟踪
 
-### Find deepest kernel stack
+如果能够跟踪函数调用栈的最大深度对调试系统将是一件很有用的事。Ftrace 可以持续地监视所有进程的函数调用栈的深度，当超出最大深度时可以将此时的函数调用过程完整记录下来。
 
-This is useful to find the routine with the deepest kernel stack The
-system continually monitors the stack depth of all processes, and
-whenever a low-water mark is hit (deepest stack), it records the list of
-functions.
+（下面的说明适用于 Linux 的 v3.0 的内核）
 
-(The following instructions work for a v3.0 Linux kernel)
-
--   Kernel configuration: Set the following kernel configuration
-    options:
+-   内核配置：需要设置如下内核配置选项：
     -   CONFIG\_FTRACE: "Tracers"
     -   CONFIG\_FUNCTION\_TRACER: "Kernel Function Tracer"
     -   CONFIG\_STACK\_TRACER: "Trace max stack"
--   Turning it on: You can turn it on at boot time or at runtime.
-    -   At boot time, use the following on the kernel command line:
+-   功能开关：在引导阶段或者任何运行期间都可以打开或者关闭该功能。
+    -   在内核引导阶段，使用如下内核命令行参数：
         -   stacktrace
-    -   or, at runtime do:
+    -   在内核运行阶段：
         -   echo 1 \>/proc/sys/kernel/stack\_tracer\_enabled
--   To get the data:
+-   获取跟踪结果的方法：
     -   \$ mount -t debugfs debugfs /debug
     -   \$ cat /debug/tracing/stack\_trace
--   scope of operation
-    -   the stack tracer will continue operating until you turn it off,
-        which can be done with:
+-   捕获操作的生效范围
+    -   对函数栈的跟踪会持续进行指导你关闭该功能，关闭的方法如下：
         -   echo 0 \>/proc/sys/kernel/stack\_tracer\_enabled
 
-### additional resources
+### 附加资源
 
-See [http://lwn.net/Articles/295955/](http://lwn.net/Articles/295955/)
+参考 [http://lwn.net/Articles/295955/](http://lwn.net/Articles/295955/)
 
 ### pytimechart
 
-You can use pytimechart to explore ftrace traces visually. See
+pytimechart 是一款可以将 ftrace 的跟踪结果可视化输出的工具。参考
 [http://packages.python.org/pytimechart/userguide.html](http://packages.python.org/pytimechart/userguide.html)
 
-### bootchart like traces with ftrace and pytimechart
+### 另一种类似的在内核引导阶段产生跟踪结果的方法
 
-You can use the following kernel command line parameters to generate a
-trace at boot, which can then be open with pytimechart to have a
-browsable bootchart.
+如下内核启动命令行参数也可以在内核启动过程中产生跟踪结果，其输出可以采用 pytimechart 打开并适用于人进行观察。
 
         trace_event=sched:*,timer:*,irq:* trace_buf_size=40M
 
-### output
+### 输出
 
-Here is what the output looks like, on ARM:
+在ARM架构上输出的例子：
 
     /debug/tracing # cat stack_trace
             Depth    Size   Location    (42 entries)
