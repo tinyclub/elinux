@@ -28,19 +28,19 @@ Ftrace 是 Linux 内核内置的跟踪器，从 2.6.27 版本开始进入 Linux 
     -   [2.5 内核栈的跟踪](#find-deepest-kernel-stack)
     -   [2.6 附加资源](#additional-resources)
     -   [2.7 pytimechart](#pytimechart)
-    -   [2.8 使用 Ftrace 和 pytimechart 产生和 bootchart 同样的效果](#bootchart-like-traces-with-ftrace-and-pytimechart)
+    -   [2.8 使用 Ftrace 和 pytimechart 生成类似 bootchart 的输出效果](#bootchart-like-traces-with-ftrace-and-pytimechart)
     -   [2.9 输出](#output)
 
 ## trace-cmd
 
-直接使用 debugfs 访问控制 Ftrace 十分繁琐耗时。所以系统提供了一个命令行的小工具
+直接通过 debugfs 访问 Ftrace 十分繁琐耗时。所以系统提供了一个命令行的小工具
  trace-cmd 来和 Ftrace 交互，详细的说明可以参考 man 手册。
 
 这里给出一些使用 trace-cmd 的例子：
 
     # trace-cmd record -e sched myprogram
 
-上面的例子会使能所有调度（sched）子系统下的 Ftrace 跟踪点。通过查看 debugfs 文件
+上例中，使能了所有调度子系统（即 sched ）下的 Ftrace 跟踪点。通过查看 debugfs 文件
 系统获得所有跟踪点的列表：
 
     # mount -t debugfs nodev /sys/kernel/debug
@@ -76,8 +76,7 @@ trace-cmd 代码的[git库](http://git.kernel.org/?p=linux/kernel/git/rostedt/tr
 
 在该代码库中还有一个工具叫做 KernelShark，它是 trace-cmd 的图形用户界面。我们可
 以使用 "make" 命令制作 trace-cmd，如果要制作 KernelShark 可以使用 "make gui" 命令。
-KernelShark 额外依赖 GTK 库，而 trace-cmd 不需要。故允许 trace-cmd 单独编译，便于
-在嵌入式环境中使用。
+KernelShark 额外依赖 GTK 库，而 trace-cmd 不需要。故允许 trace-cmd 单独编译，便于在嵌入式环境中使用。
 
 ## 小贴士
 
@@ -111,16 +110,16 @@ KernelShark 额外依赖 GTK 库，而 trace-cmd 不需要。故允许 trace-cmd
 
 ### 捕获内核启动过程中的异常并输出到串口控制台
 
-若要捕获一个导致异常的函数调用，采用的方法是在内核的启动命令行参数中指定如下值：
+若要捕获一个导致异常的函数调用，可在内核启动命令行加入下述参数：
 
     ftrace=function ftrace_dump_on_oops
 
 *注意：如果你愿意也可以使用 'ftrace=function\_graph' 。*
 
 内核的 Documentation/trace/ftrace.txt 介绍了如何在内核运行过程中去动态设置 
-ftrace\_dump\_on\_oops 这个参数，但我发现希望通过这个方法来捕获内核启动过程中的
-异常真的是非常困难，所以比较靠谱的方法还是在内核启动前就通过命令行参数设置，但这
-么做不好的地方在于会输出内核引导过程中（用空空间程序启动之前）所有的异常信息。
+ftrace\_dump\_on\_oops 这个参数，但我发现，试图借此捕获内核启动中的异常，非常困难。
+所以比较靠谱的方法还是在内核启动前就通过命令行参数设置，只不过该方法的缺点在于
+会输出内核启动中（用户空间程序启动前）的所有异常信息。
 
 注意这样的话，输出的内容会非常长，请保持耐心。
 
@@ -270,8 +269,7 @@ ftrace\_dump\_on\_oops 这个参数，但我发现希望通过这个方法来捕
 ### 内核栈的跟踪
 
 若能跟踪函数调用栈的最大深度，那对于调试系统将是一件很有用的事。Ftrace 可以持续
-地监视所有进程的函数调用栈的深度，当超出最大深度时可以将此时的函数调用过程完整记
-录下来。
+地监视所有进程的函数调用栈的深度，当超出最大深度时可以将此时的函数栈完整记录下来。
 
 （下面的说明适用于 Linux 的 v3.0 的内核）
 
@@ -300,9 +298,9 @@ ftrace\_dump\_on\_oops 这个参数，但我发现希望通过这个方法来捕
 pytimechart 是一款可以将 ftrace 的跟踪结果可视化输出的工具。参考
 [http://packages.python.org/pytimechart/userguide.html](http://packages.python.org/pytimechart/userguide.html)
 
-### 使用 Ftrace 和 pytimechart 产生和 bootchart 同样的效果
+### 使用 Ftrace 和 pytimechart 生成类似 bootchart 的输出效果
 
-如下内核启动命令行参数也可以在内核启动过程中产生跟踪结果，可以使用 pytimechart 
+添加如下内核启动命令行参数可以在内核启动过程中启动跟踪采样，可以使用 pytimechart 
 对其输出进行处理产生方便人观察的结果。
 
         trace_event=sched:*,timer:*,irq:* trace_buf_size=40M
