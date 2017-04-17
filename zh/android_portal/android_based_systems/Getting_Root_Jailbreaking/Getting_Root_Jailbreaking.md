@@ -2,10 +2,11 @@
 
 [Rooting_Android_OS]:https://en.wikipedia.org/wiki/Rooting_(Android_OS)
 
-# Getting Root (Jailbreaking)
+# 获取 Root (越狱)
 
-> Rooting is the process of allowing users of smartphones, tablets and other devices running the Android mobile operating system to attain privileged control (known as root access) over various Android's subsystems. As Android uses the Linux kernel, rooting an Android device gives similar access to administrative permissions as on Linux or any other Unix-like operating system such as FreeBSD or OS X.
+> 获取 root 是允许智能手机、平板或其他设备的用户运行 Android
+移动操作系统在各种 Android 子系统上获得特权（称为 root 访问权限）控制的过程。 由于 Android 使用 Linux 内核,获取 root 后的 Android 设备提供类似 Linux 或其他类 Unix 系统例如 FreeBSD 和 OS X 的管理者的访问权限。
 
-> Rooting is often performed with the goal of overcoming limitations that carriers and hardware manufacturers put on some devices. Thus, rooting gives the ability (or permission) to alter or replace system applications and settings, run specialized apps that require administrator-level permissions, or perform other operations that are otherwise inaccessible to a normal Android user. On Android, rooting can also facilitate the complete removal and replacement of the device's operating system, usually with a more recent release of its current operating system.
+> 获取 root 往往要克服运营商和硬件制造商在设备上设定的限制。因此，获取 root 可以提供权限来选择或替换系统应用和设置，以管理者级别的权限运行特定应用，或者执行其他一些正常 Android 用户不可访问的操作。在Android 上，获取 root 也可以更容易的实现完整的移除或代替设备的操作系统，通常是使用当前操作系统的更新版本。
 
-> Root access is sometimes compared to jailbreaking devices running the Apple iOS operating system. However, these are different concepts. Jailbreaking describes the bypass of several types of Apple prohibitions for the end user: modifying the operating system (enforced by a "locked bootloader"), installing non-officially approved apps via sideloading, and granting the user elevated administration-level privileges. Only a minority of Android devices lock their bootloaders, and many vendors such as HTC, Sony, Asus and Google explicitly provide the ability to unlock devices, and even replace the operating system entirely.[1][2][3] Similarly, the ability to sideload apps is typically permissible on Android devices without root permissions. Thus, it is primarily the third aspect of iOS jailbreaking relating to giving users superuser administrative privileges that most directly correlates to Android rooting.
+> Root 访问有时会和运行 Apple iOS 操作系统的越狱设备对比。然而，它们是不同的概念。 越狱是指绕过 Apple 禁止终端用户使用的几种行为：修改操作系统（强制锁 bootloader ），通过侧面载入安装非官方认证的应用和授予用户更高管理级别的权限。只有极少数的 Android 设备是锁定 bootloader 的，许多厂商例如 HTC、Sony、华硕和 Google 直接提供解锁设备的说明甚至能完全的替换操作系统[1][2][3]。 同样的，可侧面载入应用在没有 root 过的 Android 设备上是允许的。因此，根本上说 iOS 的三方越狱是给用户和 Android root 绝大部分相关的一些超级用户管理权限。

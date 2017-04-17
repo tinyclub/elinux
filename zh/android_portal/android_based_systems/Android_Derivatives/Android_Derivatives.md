@@ -1,90 +1,72 @@
 > From: [eLinux.org](http://eLinux.org/Android_Derivatives "http://eLinux.org/Android_Derivatives")
 
 
-# Android Derivatives
+# Android 衍生系统
 
 
 
-This page has information about systems that are derived from Android.
+本页面包含了 Android 衍生系统的信息。
 
-## Why non-Google Android
+## 为什么使用非 Google 官方的 Android 系统
 
 -   [http://www.reliableembeddedsystems.com/pdfs/2012-07-03-penguin-and-droid.pdf](http://www.reliableembeddedsystems.com/pdfs/2012-07-03-penguin-and-droid.pdf)
-    - presentation by Robert Berger discussing non-Google Android
-    markets
+    - Robert Berger 关于非 Google 官方 Android 市场的演讲
 
 ## Cyborgstack
 
-This project aims to utilizes the Android system in other product
-categories, including deeply embedded:
+本项目旨在在其他产品类别中使用 Android 系统，包括深度嵌入:
 
--   web site: [http://www.cyborgstack.org](http://www.cyborgstack.org)
+-   网站: [http://www.cyborgstack.org](http://www.cyborgstack.org)
 -   wiki: [http://wiki.cyborgstack.org](http://wiki.cyborgstack.org)
 -   github:
     [http://github.com/cyborgstack](http://github.com/cyborgstack)
 -   twitter: @cyborgstack
--   list:
+-   邮件列表:
     [http://lists.cyborgstack.org/listinfo/dev](http://lists.cyborgstack.org/listinfo/dev)
 
 ### Headless Android
 
-From:
+来自:
 [https://lkml.org/lkml/2012/2/15/443](https://lkml.org/lkml/2012/2/15/443)
 
-As an FYI, I thought some of you might be interested in knowing that
-Android's user-space can be modified to run on headless systems (i.e.
-without a framebuffer.) IOW, you can configure the FB stuff completely
-out or have a kernel port that doesn't have an FB (yet?) and still run
-the Android use-space.
+作为参考，我认为你们中的一些人可能对 Android 用户空间可以被修改成在“无头”系统（例如没有 framebuffer）上运行感兴趣。换句话说，可以配置 FB 完全无用或配置一个没有 FB 的内核接口但仍能运行 Android
+用户空间。
 
-I've put this up as part of the Cyborgstack project:
+我已经把这部分上传作为 Cyborgstack 项目的一部分了：
 
     $ repo init -u git://github.com/cyborgstack/android.git -b headless
     $ repo sync
     $ ...
 
-The relevant presentation from the Android Builders Summit is here:
+Android Builders 大会相关的介绍如下：
 [cyborgstack-120213.pdf](http://eLinux.org/images/6/6f/Cyborgstack-120213.pdf "Cyborgstack-120213.pdf")
 
-Essentially, Headless Android is the AOSP but WITHOUT:
+本质上来说，Headless Android 是没有如下部分的 AOSP :
 
 -   SurfaceFlinger
 -   WindowManager
 -   WallpaperService
 -   InputMethodManager
 
-It gives you is all the Android framework but for ui-less systems (no
-FB.) What it means, is that, save for Activities, you can use the
-standard Android development tools (Eclipse, SDK/NDK, etc.) to create
-apps that use:
+它有着除 UI 之外的所有 Android
+ framework 部分（没有 FB）。这意味着可以使用标准 Android 开发工具（ Eclipse、SDK/NDK等等）来创建除了 Activities 组件之外的应用：
 
 -   ContentProviders
 -   Services
 -   BroadcastReceivers
 
-Why would you want this instead of using "Embedded Linux"? Honestly I
-was very skeptical when some developers first mentioned to me that they
-were interested in doing this. I was in fact very dismissive of it. But
-I kept getting more and more inquiries about this. So I decided to bite
-the bullet and give it a try.
+为什么要使用它而不是“嵌入式 Linux”？说实话，当很多开发者第一次向我提起他们对做这个事情很感兴趣时，我感到很怀疑。事实上当时我很不重视它。但是我一直以来收到越来越多关于它的询问。于是我决定努力尝试一下。
 
-Now that I have, I think there are 2 clear benefits to using this
-instead of "embedded Linux": 1) you get one platform for all your device
-development, whether it has a UI or not 2) your devices become
-programmable by any developer that knows the Android API (and, as you
-may know, there's growing number of those.)
+由于我做到了，所以我认为有两个明显的好处来使用它而不是“嵌入式 Linux”：1)得到一个适合所有设备开发的平台，不论有没有 UI 2) 设备对任何了解 Android API（正如可能知道的那样，Android 开发者越来越多）的开发者来说是可编程的。
 
-That said, what I've done is very much a proof of concept. It's in fact
-a dirty hack at this point. Please don't ship this just yet. It needs a
-lot more eyeballs and certainly a lot more work. But, it's good enough
-to give you a taste of what's possible and allow you play with it.
+即便如此，我所做的更多只是概念的验证。实际上这时它还是一个 dirty hack。现在还请不要急于求成。它需要吸引更多的眼球并来完成更多的工作。但是，它足以给你一个好的体验让你去玩味它。
 
-Cheers,
+谢谢,
 
 -- Karim Yaghmour
 
 
-[Category](http://eLinux.org/Special:Categories "Special:Categories"):
+[分类](http://eLinux.org/Special:Categories "Special:Categories"):
 
 -   [Android](http://eLinux.org/Category:Android "Category:Android")
 
