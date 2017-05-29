@@ -7,6 +7,20 @@
 
 
 BeagleBone 是一个信用卡大小的连接以太网的可扩展 Linux 计算机，运行例如安卓4.0和 Ubuntu 这样的软件。 允许开发者用单个电缆对 Sitara™ AM335x ARM®
+<span id="####"></span>
+
+<span id="点击"></span>
+
+<span id="[这里](http://www.youtube.com/watch?v=FcqQvH41OR4)"></span>
+
+<span id="去观看"></span>
+
+<span id="BeagleBone"></span>
+
+<span id="Black"></span>
+
+<span id="的产品视频"></span>
+
 Cortex™-A8  处理器进行评估，10秒Linux启动，5分钟内启动开发。增加附属插件板到流行的 BeagleBone 计算机，允许业余爱好者，制作者和开发者能够通过 LCD 屏幕，电机控制和电池，快速和容易地增加 BeagleBone 的能力，创建他们自己的电路板。
 
 
@@ -21,7 +35,11 @@ Cortex™-A8  处理器进行评估，10秒Linux启动，5分钟内启动开发�
 -   [4 BeagleBone Capes 目录](#beaglebone-capes-catalog)
 -   [5 Capes 列表](#capes-listing)
 
+<span id="click-here-to-view-the-production-video-for-beaglebone-black"></span>
+
 #### 点击 [这里](http://www.youtube.com/watch?v=FcqQvH41OR4) 去观看 BeagleBone Black 的产品视频
+
+<span id="compatibility-between-different-capes-matrix"></span>
 
 ## 不同附属板矩阵的兼容性
 
@@ -29,12 +47,16 @@ Cortex™-A8  处理器进行评估，10秒Linux启动，5分钟内启动开发�
 
 -   [File:BeagleBone-Cape-Compatibility-Matrix-12-09-11.xls](http://eLinux.org/File:BeagleBone-Cape-Compatibility-Matrix-12-09-11.xls "File:BeagleBone-Cape-Compatibility-Matrix-12-09-11.xls")
 
+<span id="beaglebone-black-compatibilty-matrix"></span>
+
 ## BeagleBone Black 兼容性矩阵
 
 BeagleBone Black 兼容性的信息请看
 [Beagleboard:BeagleBone Black
 Capes](http://eLinux.org/Beagleboard:BeagleBone_Black_Capes "Beagleboard:BeagleBone Black Capes")
 维基页面
+
+<span id="beaglebone-capes-catalog"></span>
 
 ## BeagleBone Capes 目录
 
@@ -665,6 +687,8 @@ BeagleBoardToys
 Cape](http://eLinux.org/CircuitCo:BeagleBone_ProfiBus "CircuitCo:BeagleBone ProfiBus")**
 
 BeagleBoardToys
+
+<span id="capes-listing"></span>
 
 ## 附属板列表
 

@@ -15,6 +15,8 @@
 -   [5 一些性能测量](#some-performance-measurements)
 -   [6 链接](#links)
 
+<span id="introduction"></span>
+
 ## 简介
 
 SystemTap 是一个灵活而且可扩展的系统，允许为运行中的 Linux 内核添加跟踪信息的收集和分析。
@@ -22,6 +24,8 @@ SystemTap 是一个灵活而且可扩展的系统，允许为运行中的 Linux 
 SystemTap 设计得非常灵活（允许插入任意的 C 代码），而且易用（大多数跟踪语句用一种简单的脚本语言编写，并且附带有数据收集和聚合的例程，这些例程基本上以库的形式呈现）。
 
 SystemTap 的一个关键点是它意图允许大家创建一个跟踪集（一个 tapset），无须修改或者重新编译系统所需，就可以执行于运行中的 Linux 系统。为了达到该目的，它使用内核 [Kprobes](http://www-users.cs.umn.edu/~boutcher/kprobes/) 接口和可加载的内核模块来动态地添加探针和新生成的代码到运行中的内核中。
+
+<span id="open-source-projects-mailing-lists"></span>
 
 ## 开源项目/邮件列表
 
@@ -34,7 +38,11 @@ SystemTap 的邮件列表归档：
 一本教程，很好地概述了本系统：
 [http://sourceware.org/systemtap/tutorial/](http://sourceware.org/systemtap/tutorial/)
 
+<span id="miscellaneous-notes"></span>
+
 ## 杂记
+
+<span id="probe-types"></span>
 
 ### 探针类型
 
@@ -52,15 +60,21 @@ SystemTap 的邮件列表归档：
 -   watchpoint probes (kernel & user) （监视点探针（内核空间 & 用户空间））
 -   and more（更多）
 
+<span id="see-also"></span>
+
 ## 参阅
 
 请注意 Systemap 是 Linux 内核最主要的跟踪系统之一。
 
 截至 2006 年春，有一项进行中的工作是尝试合作解决一些主要的跟踪项目之间存在的各类问题。参看 [跟踪协作项目](http://eLinux.org/Tracing_Collaboration_Project“跟踪合作项目”)页面获取更多信息。
 
+<span id="arm-support"></span>
+
 ### ARM 支持
 
 可以从 [这里](http://omappedia.org/wiki/Systemtap) 找到 ARM & OMAP 平台上使能 System Tap 的详细用法。
+
+<span id="some-performance-measurements"></span>
 
 ## 一些性能测量
 
@@ -145,6 +159,8 @@ Jian Gui 写道（2006 年 7 月在 **System Tap** 邮件列表）：
     测试环境：
     硬件: Open Power 720/ 8 cpus/ 2 cores/ 6GB RAM (tiobench use 1G)
     软件: RHEL4-U3GA/ 2.6.17.2/ systemtap-20060718/ elfutils-0.122-0.4
+
+<span id="links"></span>
 
 ## 链接
 

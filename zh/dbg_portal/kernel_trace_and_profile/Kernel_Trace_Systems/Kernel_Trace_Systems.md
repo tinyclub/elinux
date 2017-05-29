@@ -17,6 +17,8 @@
 -   [6 其他系统](#other-systems)
 -   [7 合作成果](#collaboration-efforts)
 
+<span id="general-purpose-tracing-systems"></span>
+
 ## 通用跟踪系统
 
 一些主要的 Linux 通用跟踪系统是：
@@ -33,6 +35,8 @@
 -   LTTng - [Linux Trace Toolkit](../../../dbg_portal/kernel_trace_and_profile/Linux_Trace_Toolkit/Linux_Trace_Toolkit.md "Linux Trace Toolkit"), next generation （Linux 跟踪工具套件，下一代）
 -   LKST - [Linux Kernel State Tracer](../../../dbg_portal/kernel_trace_and_profile/Linux_Kernel_State_Tracer/Linux_Kernel_State_Tracer.md "Linux Kernel State Tracer")（Linux 内核状态跟踪器）
 
+<span id="special-purpose-tracing-systems"></span>
+
 ## 专用跟踪系统
 
 有一些其他重要的专用内核跟踪系统:
@@ -48,6 +52,8 @@
 -   delay accounting patches（延时统计补丁） - 统计并收集系统中每个任务的延时
     -   见 [delay accounting patches](http://lkml.org/lkml/2006/5/2/30)
 
+<span id="trace-infrastructure"></span>
+
 ## 跟踪基本架构
 
 -   KProbes - 前身是 dprobes, 相关信息在这里: [dprobes](http://dprobes.sourceforge.net/)
@@ -55,6 +61,8 @@
     -   主线内核的 KProbes 已经支持 x86, Alpha 和 PPC64 架构，一个 MIPS 的实现也在 2.6.16 内核上完成并且在 Toshiba TX 49 平台上验证过，补丁可以从[补丁存档](http://eLinux.org/Patch_Archive)下载到。
 
 -   [如果在这里加一些 djprobe 的资料就更好了]
+
+<span id="sampling-systems"></span>
 
 ## 采样系统
 
@@ -68,6 +76,8 @@
 -   BootChart - 对启动过程分析和提供进程启动的可视化数据和系统利用率
     -   见 [Bootchart](../../.././dev_portals/Boot_Time/Bootchart/Bootchart.md "Bootchart")
 
+<span id="related-facilities"></span>
+
 ## 相关工具
 
 -   in-kernel statistics infrastructure - 一种提案，目标是在内核中实现一种通用的统计工具
@@ -76,10 +86,14 @@
     -   见 [perfmon](http://perfmon2.sourceforge.net/)
 -   inotify - [inotify](http://www-128.ibm.com/developerworks/linux/library/l-inotify.html)
 
+<span id="other-systems"></span>
+
 ## 其他系统
 
 这里有一些我尚未分类的系统:
 -   Datastreams - 一个可以创建和监控跟踪点的系统 - 见 [datastreams](http://kusp.ittc.ku.edu/wiki/index.php/Main_Page)
+
+<span id="collaboration-efforts"></span>
 
 ## 合作成果
 

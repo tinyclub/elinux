@@ -38,6 +38,8 @@
 -   [20 W](#w)
 -   [21 Z](#z)
 
+<span id="a"></span>
+
 ## A
 
 **[aapt]**(http://eLinux.org/Android_aapt "Android aapt") 
@@ -73,6 +75,8 @@ Android 第一款开发机器
 Android 脚本环境 - Android 脚本语言层的曾用名。见：
 [Android 脚本](../../../android_portal/software_dev/Android_Scripting/Android_Scripting.md "Android Scripting")
 
+<span id="b"></span>
+
 ## B
 
 **Binder**
@@ -87,6 +91,8 @@ Android 脚本环境 - Android 脚本语言层的曾用名。见：
 **Bootchart**
  一种创建 Linux 引导程序的可视化图表的机制，包括进程启动和执行的时序。见 [在 Android 上使用 Bootchart](http://eLinux.org/Using_Bootchart_on_Android "Using Bootchart on Android")
 
+<span id="c"></span>
+
 ## C
 
 **Cliq**
@@ -99,6 +105,8 @@ Android 脚本环境 - Android 脚本语言层的曾用名。见：
 
 **Cupcake**
 Android 1.5 版本的代号
+
+<span id="d"></span>
 
 ## D
 
@@ -118,10 +126,14 @@ Android 1.6 版本的代号
 **Droid** 
 摩托罗拉生产的，即将上市的 Android 手机的代号（我相信这是一款高端手机，所以， Cliq 应该是一款低端手机？）
 
+<span id="e"></span>
+
 ## E
 
 **Eclair** 
 Android 2.1 版本的代号
+
+<span id="f"></span>
 
 ## F
 
@@ -133,6 +145,8 @@ Android 2.1 版本的代号
 
 **Froyo** 
 **冻酸奶** - Android 2.2 版本的代号
+
+<span id="g"></span>
 
 ## G
 
@@ -153,10 +167,14 @@ Goldfish 执行 ARM926T 指令，并带有输入和输出 -- 比如通过在仿�
 **Google** 
 一个大型网页搜索公司，并是 Android 的主要开发者
 
+<span id="h"></span>
+
 ## H
 
 **Honeycomb**
 Android 3.0 版本的代号 - 主要针对平板电脑
+
+<span id="i"></span>
 
 ## I
 
@@ -169,6 +187,8 @@ Booting\#'init'](http://eLinux.org/Android_Booting#.27init.27 "Android Booting")
 
 **Intent** 
 能在不同的 Android 组件中传递消息的一个方法。通过一个 Intent 结构体表达的消息，它是一个包含了能被执行的操作描述，或者已经发生，或着正进行的事件的数据结构体。
+
+<span id="j"></span>
 
 ## J
 
@@ -186,10 +206,14 @@ Android 版本 4.1, 4.2 和 4.3 代号
 **JNI** 
 Java 本地接口 ([wikipedia entry](http://wikipedia.org/wiki/Java_Native_Interface)) 是允许 Java 代码调用或者被 "本地"（是指，其他的语言所编译的，例如C, C++ 或者 汇编) 代码调用的程序框架。
 
+<span id="k"></span>
+
 ## K
 
 **KitKat**
 Android 版本 4.4 的发布名称
+
+<span id="l"></span>
 
 ## L
 
@@ -202,6 +226,8 @@ Android 版本 4.4 的发布名称
 **logcat**
 查看系统 log 的命令之一。见 [Android 记录](http://eLinux.org/Android_logger "Android logger")
 
+<span id="m"></span>
+
 ## M
 
 **manifest file**
@@ -213,15 +239,21 @@ Android 版本 4.4 的发布名称
 **MSM**
 移动站调制解调器。该芯片组由高通生产。在包含骁龙芯片组的手机内可以发现（HTC Desire 手机／Nexus One 手机）。
 
+<span id="n"></span>
+
 ## N
 
 **NDK**
 [原生开发套件](http://developer.android.com/sdk/ndk/index.html)。一个用于 Android 系统上编译打包文件和“说明”生成‘本地’代码（通常是库的形式）的工具集。原生库绝大多数使用在 JNI 部分（用来允许 Java 代码调用 C 代码，或者 C 代码调用 Java 代码）。
 
+<span id="o"></span>
+
 ## O
 
 **OpenGL ES**
 Android 应用的 3 维图像系统和 API 接口。
+
+<span id="r"></span>
 
 ## R
 
@@ -230,6 +262,8 @@ Andorid 代码仓库管理器。这个是一个基于 git 工具之上的一个�
 
 **rild** 
 无线电接口守护进程。它是一个处理 Android 系统其他部分与“无线接口”（除此之外，也称为基于 Android 移动电话系统的的电话部分）通讯的一个守护进程。在仿真器中，由于手机硬件是不存在的，所以有一个运行模拟无线接口的程序。
+
+<span id="s"></span>
 
 ## S
 
@@ -243,6 +277,8 @@ Android 应用的 2 维图层
 
 **SQLite** 
 一个功能强大，轻量级的关系型数据库引擎，用于 Android 系统的各个组件中，并且能被所有的 Android 应用程序使用。
+
+<span id="t"></span>
 
 ## T
 
@@ -261,10 +297,14 @@ TARGET\_PRODUCT 的选项取决于 AndroidProducts.mk 的项。AndroidProducts.m
 
 见 [http://www.arm.linux.org.uk/developer/machines/list.php?id=1440](http://www.arm.linux.org.uk/developer/machines/list.php?id=1440)
 
+<span id="v"></span>
+
 ## V
 
 **vold**
 存储守护进程 - 一个在 Android 系统上负责管理加载或卸载文件系统的进程（volumes)
+
+<span id="w"></span>
 
 ## W
 
@@ -272,6 +312,8 @@ TARGET\_PRODUCT 的选项取决于 AndroidProducts.mk 的项。AndroidProducts.m
 一个 Android 电源管理的内核机制。当一个线程获取了一个 wakelock, 内核将会避免进入低功耗状态。
 
 回到 [Android Portal](http://eLinux.org/Android_Portal "Android Portal")
+
+<span id="z"></span>
 
 ## Z
 

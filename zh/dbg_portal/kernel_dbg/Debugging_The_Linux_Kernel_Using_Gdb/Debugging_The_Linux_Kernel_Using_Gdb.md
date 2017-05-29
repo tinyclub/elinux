@@ -19,6 +19,8 @@
     -   [1.4 加载已载入内存的内核模块的符号信息](#loading-symbols-of-a-loaded-module)
     -   [1.5 提示](#pointers)
 
+<span id="debugging-the-linux-kernel-using-gdb"></span>
+
 # 使用 gdb 调试 linux 内核
 
 在代码中添加 printk 打印语句是日常内核调试中最主要的方法，该方法在 [Kernel Debugging
@@ -32,6 +34,8 @@ Tips](http://eLinux.org/Kernel_Debugging_Tips "Kernel Debugging Tips") 中有很
 
 开源的 JTAG 调试工具并不多，OpenOCD 是其中调试能力比较优秀的一个。在本文中，主要也是使用这一工具进行调试。
 经我们的实测，[OpenOCD](http://openocd.berlios.de/web/) 在 ARM11 和 ARM9 平台下，都可以很好的完成调试任务。
+
+<span id="requirements"></span>
 
 ## 需求
 
@@ -50,6 +54,8 @@ A JTAG Dongle:
 
 TODO...
 
+<span id="the-basics"></span>
+
 ## 基础
 
 [![Kernel gdb debugging component overvierw
@@ -59,6 +65,8 @@ small.png](http://eLinux.org/images/3/3c/Kernel_gdb_debugging_component_overvier
 就可以开始内核的调试。
 
 - 启动OpenOCD
+
+<span id="vmlinuz-v-s-zimage"></span>
 
 ### vmlinuz 与 zImage
 
@@ -75,6 +83,8 @@ small.png](http://eLinux.org/images/3/3c/Kernel_gdb_debugging_component_overvier
 
 vmlinux 就是我们进行 Linux 内核调试时需要用到的内核镜像。
 
+<span id="debugging-the-kernel"></span>
+
 ### 调试内核
 
 这里描述的基于 JTAG 的调试方法是非侵入式的，即除了配置添加符号信息外，
@@ -86,6 +96,8 @@ vmlinux 就是我们进行 Linux 内核调试时需要用到的内核镜像。
 
     load vmlinuz
     target remote :3333
+
+<span id="loading-a-kernel-in-memory"></span>
 
 ### 加载内核到内存
 
@@ -119,6 +131,8 @@ bootloader 会启动并且初始化开发板，接着代码的执行会停留在
     (gdb) cont
 
 按照上述操作执行就可以通过 JTAG 加载内核到内存并启动。
+
+<span id="getting-the-kernel-log-buffer"></span>
 
 ### 获取内核日志缓冲区
 
@@ -154,9 +168,13 @@ bootloader 会启动并且初始化开发板，接着代码的执行会停留在
 
     dmesg __log_buf log_start log_end
 
+<span id="debugging-a-kernel-module-o-and-ko"></span>
+
 ### 调试内核模块（.o和.ko）
 
 调试内核模块是一件更为困难的事
+
+<span id="determining-the-module-load-address"></span>
 
 ## 确定内核模块的加载地址
 
@@ -183,11 +201,15 @@ gdb 本身不能识别内核模块，同时也不清楚是否正在调试内核�
             end
     end
 
+<span id="loading-symbols-of-a-loaded-module"></span>
+
 ## 加载已载入内存的内核模块的符号信息
 
     add-symbol-file drivers/mydrivers/mydriver.o 0xbf098000
 
 上面命令中需要注意的是，我们使用的是 .o 文件，而不是 .ko 文件。命令的最后是内核加载模块的地址。
+
+<span id="pointers"></span>
 
 ## 提示
 

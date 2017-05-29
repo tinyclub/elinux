@@ -20,6 +20,8 @@
 -   [5 Java](#java)
         -   [5.1 Java/面向对象思想](#java-object-oriented-phoilosophy)
 
+<span id="architecture-diagram"></span>
+
 ## 架构图
 
 Android 架构图出自于：
@@ -38,6 +40,8 @@ Android 架构图出自于：
 -   Linux 内核。包括
     -   硬件驱动，网络，文件系统以及进程间通信
 
+<span id="overview-presentations"></span>
+
 ## 概要介绍
 
 -   [Android 不仅仅是基于 Linux 的 Java](http://kobablog.wordpress.com/2011/05/22/android-is-not-just-java-on-linux/)
@@ -51,19 +55,27 @@ Android 架构图出自于：
     Matt Porter 在欧洲 Linux 嵌入式峰会上的报告
     -   关于有疑问的 Android 代码以及策略的林林总总
 
+<span id="breakdown-of-running-android-system"></span>
+
 ## Android 系统运行明细
 
 快速查阅 Android 启动时的服务和程序：
 
 -   [http://benno.id.au/blog/2007/11/13/android-under-the-hood](http://benno.id.au/blog/2007/11/13/android-under-the-hood)
 
+<span id="relation-to-the-linux-kernel"></span>
+
 ## 与 Linux 内核的关系
 
 来自于 2010 年 CELF 峰会的[Greg Kroah-Hartmans presentation on Android](http://github.com/gregkh/android-presentation/downloads)就 Google/Android 与 Linux 社区如何协作（或者不配合）进行了讨论。
 
+<span id="java"></span>
+
 ## Java
 
 Java 是应用程序编程语言，但是它会通过定制的解释器（Dalvik）解析为运行时的非 Java 字节码。
+
+<span id="java-object-oriented-phoilosophy"></span>
 
 ### Java/面向对象思想
 

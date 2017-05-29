@@ -18,6 +18,10 @@
     -   [5.3 特定开发板操作指南 ](#board-specific-instructions)
 -   [6 外部链接 ](#external-links)
 
+<span id="introduction"></span>
+
+<span id="introduction"></span>
+
 ## 前言
 
 
@@ -29,6 +33,10 @@ STR9x, LM3 and STM32x)。
 
 OpenOCD最初由 Dominic Rath 在 University of
 Applied Sciences Augsburg 大学开发。OpenOCD的源码现已通过GPL协议发布。
+
+<span id="supported-cores-types"></span>
+
+<span id="supported-cores-types"></span>
 
 ## 支持的处理器核
 
@@ -117,6 +125,10 @@ OpenOCD 支持下列处理器核：
 </tbody>
 </table>
 
+<span id="technical-support"></span>
+
+<span id="technical-support"></span>
+
 ## 技术支持
 
 -   [OpenOCD 网站](http://openocd.org/)
@@ -128,6 +140,10 @@ OpenOCD 支持下列处理器核：
     论坛](http://forum.sparkfun.com/viewforum.php?f=18)
 -   [OpenOCD 用户指南](http://openocd.sourceforge.net/doc/html/index.html)
 -   \#openocd channel on irc.freenode.net
+
+<span id="installing-openocd"></span>
+
+<span id="installing-openocd"></span>
 
 ## 安装 OpenOCD
 
@@ -141,7 +157,15 @@ OpenOCD 支持下列处理器核：
 -   [The GNU ARM Eclipse
     OpenOCD](http://gnuarmeclipse.livius.net/blog/openocd/) - 具有更好Eclipse集成度的新 OpenOCD 发行版
 
+<span id="running-openocd"></span>
+
+<span id="running-openocd"></span>
+
 ## 运行 OpenOCD
+
+<span id="general-instructions"></span>
+
+<span id="general-instructions"></span>
 
 #### 通用操作指南
 
@@ -151,12 +175,20 @@ OpenOCD 支持下列处理器核：
 -   [OpenOCD
     排障](http://eLinux.org/OpenOCD_Troubleshooting "OpenOCD Troubleshooting")
 
+<span id="openocd-configuration-files"></span>
+
+<span id="openocd-configuration-files"></span>
+
 #### OpenOCD 配置文件
 
 -   [OpenOCD 配置文件概述](http://eLinux.org/OpenOCD_Configuration_Files_Overview "OpenOCD Configuration Files Overview")
 -   [如何编写接口配置脚本](http://eLinux.org/index.php?title=How_To_Write_an_Interface_Configuration_Script&action=edit&redlink=1 "How To Write an Interface Configuration Script (page does not exist)")
 -   [如何编写开发板配置脚本](http://eLinux.org/How_To_Write_a_Board_Configuration_Script "How To Write a Board Configuration Script")
 -   [如何编写目标配置脚本](http://eLinux.org/index.php?title=How_To_Write_a_Target_Configuration_Script&action=edit&redlink=1 "How To Write a Target Configuration Script (page does not exist)")
+
+<span id="board-specific-instructions"></span>
+
+<span id="board-specific-instructions"></span>
 
 #### 特定开发板操作指南
 
@@ -166,6 +198,10 @@ OpenOCD 支持下列处理器核：
 -   [BeagleBone](http://eLinux.org/Running_OpenOCD_on_Linux_with_the_Beaglebone "Running OpenOCD on Linux with the Beaglebone")
 -   [PandaBoard](http://eLinux.org/OpenOCD_PandaBoard "OpenOCD PandaBoard")
 -   [Snowball](http://eLinux.org/OpenOCD_Snowball "OpenOCD Snowball")
+
+<span id="external-links"></span>
+
+<span id="external-links"></span>
 
 ## 外部链接
 

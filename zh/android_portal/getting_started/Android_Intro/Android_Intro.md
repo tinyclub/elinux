@@ -15,6 +15,8 @@
     -   [2.2 G1 手机产品视频](#g1-product-video)
 -   [3 技术信息](#technical-information)
 
+<span id="overview"></span>
+
 ## 概述
 
 Android 是 Google 和开放手机者联盟共同编写的一个软件平台和操作系统，为小型设备和智能手机设计。
@@ -31,11 +33,17 @@ Android 的官方网址是[http://www.android.com/](http://www.android.com/)。�
 
 点击 "Waht is Android" 标签进入到： [http://www.android.com/about/](http://www.android.com/about/)，有一些 Android 关键要点，和一小段 Android 历史相关的的视频。
 
+<span id="videos"></span>
+
 ## 视频
+
+<span id="prototype-video"></span>
 
 ### 原型视频
 
 2007 年 11 月，Google 发布了一段视频，展示了一些他们在 Android 上早期的功能原型。见 [http://www.youtube.com/watch?v=1FJHYqE0RDg](http://www.youtube.com/watch?v=1FJHYqE0RDg)
+
+<span id="g1-product-video"></span>
 
 ### G1 手机产品视频
 
@@ -44,6 +52,8 @@ Android 的官方网址是[http://www.android.com/](http://www.android.com/)。�
 G1 主页是：[http://www.t-mobileg1.com/](http://www.t-mobileg1.com/)。该网址包含了许多视频以及配音，描述了 G1 手机和 Android 的一些特性。
 
 瘾科技 Engadget 上手操作展示了 G1 手机 (2008 年 9 月)[http://www.engadget.com/2008/09/23/video-android-walkthrough-on-t-mobile-g1/](http://www.engadget.com/2008/09/23/video-android-walkthrough-on-t-mobile-g1/)
+
+<span id="technical-information"></span>
 
 ## 技术信息
 

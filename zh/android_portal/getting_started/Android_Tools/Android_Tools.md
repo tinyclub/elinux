@@ -40,9 +40,15 @@
 -   [4 Hardware](#hardware)
     -   [4.1 Serial Cable for G1](#serial-cable-for-g1)
 
+<span id="android-sdk"></span>
+
 ## Android SDK
 
+<span id="host-side-tools"></span>
+
 ### host-side tools
+
+<span id="adb"></span>
 
 #### adb
 
@@ -69,6 +75,8 @@ adb 是 Android 调试器 - 同时也可以用于双向文件传输。
 -   现在你应该会在开发板上得到一个提示框，如有需要，你可以退出提示。
 -   `tools/adb devices` 应该就显示了该设备。
 
+<span id="running-adbd-on-non-android-systems"></span>
+
 ##### 在非 Android 系统上运行 adbd
 
 有时候，在非 Android 嵌入式 Linux 系统中使用 adb 是很有用的。有一个用于 adb(源于2104-04-05)　的 patch 补丁来规避 "Android-isms"。说明文档在 README.NONANDROID.TXT 文件中。
@@ -78,6 +86,8 @@ adb 是 Android 调试器 - 同时也可以用于双向文件传输。
 'cd' 命令进入 /system/core/adb 目录，打补丁到你的 adb 目录下:
 
     $ git am 0001-Add-support-for-non-Android-use-of-adbd.patch
+
+<span id="aapt"></span>
 
 #### aapt
 
@@ -89,6 +99,8 @@ adb 是 Android 调试器 - 同时也可以用于双向文件传输。
 
 查阅 [Android aapt](http://eLinux.org/Android_aapt "Android aapt") 可以获取更多实质性的信息。
 
+<span id="ddms"></span>
+
 #### ddms
 
 Dalvik 调试监控服务是一个基于主机运行的工具，用于和 Android 目标系统进行交互，并可以显示大量的信息，包括 log, cpu 和内存占用，以及许多独立进程的信息。
@@ -97,15 +109,21 @@ Dalvik 调试监控服务是一个基于主机运行的工具，用于和 Androi
 
 
 
+<span id="fastboot"></span>
+
 #### Fastboot
 
 [Android Fastboot](http://eLinux.org/Android_Fastboot "Android Fastboot") 是一个用于 Android 工程机引导和修改分区的工具。
+
+<span id="toolchains"></span>
 
 #### Toolchains
 
 Android 提供了预先构建的工具链（C/C++ 编译器和连接器），但是要求安装外部源的一个 java 编译器（JDK）。
 
 从 NDK r5 版本起（2010 年 12 月)，toolchains 可以用于独立交叉编译模式。见 NDK 里面 dos/STANDALONE-TOOLCHAIN.html 了解详情。之前，toolchains 可以用于系统编译，但是它比较麻烦，并且在编译 Android 系统之外的本地层程序时容易出错。
+
+<span id="emulator"></span>
 
 #### Emulator
 
@@ -123,6 +141,8 @@ emulator 是 QEMU 的版本之一，模仿手机上能够找到的 ARM 处理器
     -   x86 内核 -\>
     -   真正硬件
 
+<span id="traceview"></span>
+
 #### traceview
 
 -   Google 主页如下描述 traceview:
@@ -134,15 +154,23 @@ emulator 是 QEMU 的版本之一，模仿手机上能够找到的 ARM 处理器
 -   [Android 应用的性能调试](http://newfoo.net/2009/04/18/performance-tuning-android-applications.html)
     - 该文章直截了当的讨论了如何利用 traceview 工具找到应用程序瓶颈。发表于 2009 年 4 月。
 
+<span id="target-side-tools"></span>
+
 ### target-side tools
+
+<span id="am"></span>
 
 #### am
 
 Activity 管理器 - 可以用于通过命令行启动应用程序，或者发送 intends 来运行应用程序。
 
+<span id="dumpstate"></span>
+
 #### dumpstate
 
 打印出系统状态信息。扫描 /proc 文件系统，收集各种系统属性，存放到单一报告中，并能容易的发送该报告给需要的人或者开发帮助。
+
+<span id="logcat"></span>
 
 #### logcat
 
@@ -150,11 +178,17 @@ Activity 管理器 - 可以用于通过命令行启动应用程序，或者发�
 
 你可以找到更多有关 logcat 的信息, 在 [Android logger](http://eLinux.org/Android_logger "Android logger") 和 [http://developer.android.com/guide/developing/tools/adb.html\#logcat](http://developer.android.com/guide/developing/tools/adb.html#logcat)
 
+<span id="monkey"></span>
+
 #### monkey
+
+<span id="procrank"></span>
 
 #### procrank
 
 procrank 显示系统上的进程列表，并通过内存利用率的其中某一个选项进行排序(如： -v 通过VSS排序）。见 [Android Memory Usage\#procrank](http://eLinux.org/Android_Memory_Usage#procrank "Android Memory Usage")
+
+<span id="service"></span>
 
 #### service
 
@@ -176,11 +210,15 @@ procrank 显示系统上的进程列表，并通过内存利用率的其中某�
 
 "service list"　将展示各种可以通讯的service 列表。
 
+<span id="sqlite3"></span>
+
 #### sqlite3
 
 sqlite3 是一个命令行数据库的客户端程序，用于管理 sqlite 数据库。
 
 见 [http://www.higherpass.com/Android/Tutorials/Accessing-Data-With-Android-Cursors/](http://www.higherpass.com/Android/Tutorials/Accessing-Data-With-Android-Cursors/)，获取教程和一些使用sqlite 的例子。
+
+<span id="toolbox"></span>
 
 #### toolbox
 
@@ -188,16 +226,24 @@ sqlite3 是一个命令行数据库的客户端程序，用于管理 sqlite 数�
 
 见 [Android toolbox](http://eLinux.org/Android_toolbox "Android toolbox"), 了解各个命令的细节。
 
+<span id="other-tools"></span>
+
 ## other tools
+
+<span id="agcc"></span>
 
 ### agcc
 
 -   [agcc](http://plausible.org/andy/agcc) - 一个用户编译本地层 Android 应用的打包工具（直接链接到 bionic）
     -   见 http://android-tricks.blogspot.com/2009/02/hello-world-c-program-on-using-android.html](http://android-tricks.blogspot.com/2009/02/hello-world-c-program-on-using-android.html)
 
+<span id="bootchart"></span>
+
 ### bootchart
 
 -   见 [Using Bootchart on Android](http://eLinux.org/Using_Bootchart_on_Android "Using Bootchart on Android")
+
+<span id="busybox"></span>
 
 ### busybox
 
@@ -210,10 +256,14 @@ Android 集成了一个程序套件 （叫做 'toolbox')，但不是 busybox。
 -   编译的二进制文件[点击这里](https://github.com/Gnurou/busybox-android)
 -   [视频资料](https://video.linux.com/videos/busybox-integration-on-android) 展示了如何编译和集成 busybox 到平台编译环境（幻灯片介绍[点击这里](https://events.linuxfoundation.org/images/stories/pdf/lf_abs12_sun.pdf)).
 
+<span id="smem"></span>
+
 ### smem
 
 -   seme - seme 是一个分析系统内存使用的工具
     -   见 [在 Android 上使用 seme](http://eLinux.org/Using_smem_on_Android "Using smem on Android") 获取更多信息。
+
+<span id="strace"></span>
 
 ### strace
 
@@ -221,11 +271,17 @@ Android 集成了一个程序套件 （叫做 'toolbox')，但不是 busybox。
     -   静态链接的二进制文件：[http://benno.id.au/blog/2007/11/18/android-runtime-strace](http://benno.id.au/blog/2007/11/18/android-runtime-strace)
     -   编译 Android strace 的说明 - [http://discuz-android.blogspot.com/2008/01/create-google-android-strace-tool.html](http://discuz-android.blogspot.com/2008/01/create-google-android-strace-tool.html)
 
+<span id="eclipse"></span>
+
 ## Eclipse
 
 [Eclipse](http://www.eclipse.org/) (当前版本 3.4 或者 3.5) 是官方支持的集成化开发环境(IDE)，使用了 Android 开发者工具(ADT)插件，通过它，开发人员可以使用任意的文本编辑器编写 Java 和 XML 文件，然后使用命令行工具（要求有 JDK 和 Apache Ant）来创建，编译和调试 Android 应用程序，同时控制连接的 Android 设备（比如，远程触发重启，安装软件包等）。
 
+<span id="hardware"></span>
+
 ## Hardware
+
+<span id="serial-cable-for-g1"></span>
 
 ### Serial Cable for G1
 

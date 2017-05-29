@@ -19,6 +19,8 @@
 -   [5 2009](#2009)
 -   [6 2010](#2010)
 
+<span id="overview"></span>
+
 ## 概述
 
 -   [Google 的 Android 操作系统开源代码将要免费公布于网络](http://www.wired.com/techbiz/media/magazine/16-07/ff_android?currentPage=all)
@@ -28,12 +30,16 @@
         [The forgotten history of
         Android](http://news.netapex.org/?page_id=463)
 
+<span id="2005"></span>
+
 ## 2005
 
 2005 年 8 月 - Google 收购 Android
 
 -   见 [Google 购买 Android 作为其移动领域的宝藏](http://www.businessweek.com/technology/content/aug2005/tc20050817_0949_tc024.htm)
     - 2005 年 8 月，美国商业周刊
+
+<span id="2007"></span>
 
 ## 2007
 
@@ -42,9 +48,13 @@
 
 2007 年 11 月 - 开放手机联盟成立
 
+<span id="2008"></span>
+
 ## 2008
 
 2008 年 8 月 - 第一部 Android 手机， G1，在美国上市
+
+<span id="2009"></span>
 
 ## 2009
 
@@ -64,6 +74,8 @@
 2009 年 11 月 - Google [发布](http://googleblog.blogspot.com/2009/10/announcing-google-maps-navigation-for.html) 了[地图导航](http://www.google.com/mobile/navigation/index.html#p=default) 应用
 
 - 商业分析：[Google 重新定义打破常规: "比免费更便宜" 的商业模式](http://abovethecrowd.com/2009/10/29/google-redefines-disruption-the-%E2%80%9Cless-than-free%E2%80%9D-business-model/)
+
+<span id="2010"></span>
 
 ## 2010
 
