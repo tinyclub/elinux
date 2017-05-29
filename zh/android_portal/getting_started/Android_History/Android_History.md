@@ -1,6 +1,6 @@
 > 原文：[eLinux.org](http://eLinux.org/Android_History "http://eLinux.org/Android_History") </br>
 > 翻译：[@willis](https://github.com/lovelers) </br>
-> 校订：[@lzufalcon](https://github.com/lzufalcon, @zipper1956(https://github.com/zipper1956) </br>
+> 校订：[@lzufalcon](https://github.com/lzufalcon), [@zipper1956](https://github.com/zipper1956) </br>
 
 
 # Android 历史

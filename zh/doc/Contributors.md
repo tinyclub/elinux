@@ -28,4 +28,4 @@
 
 -    [@lzufalcon](https://github.com/lzufalcon) (26) <br/>
 -    [@ibrother](https://github.com/ibrother) (3) <br/>
--    [@lzufalcon](https://github.com/lzufalcon, @zipper1956(https://github.com/zipper1956) (1) <br/>
+-    [@zipper1956](https://github.com/zipper1956) (1) <br/>
