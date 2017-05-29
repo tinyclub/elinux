@@ -339,13 +339,13 @@
 
     * [新手入门](android_portal/getting_started/README.md)
 
-        * [Introduction to Android](android_portal/getting_started/Android_Intro/Android_Intro.md)
-        * [Design and Architecture](android_portal/getting_started/Android_Architecture/Android_Architecture.md)
-        * [Necessary tools](android_portal/getting_started/Android_Tools/Android_Tools.md)
-        * [Glossary](android_portal/getting_started/Android_Glossary/Android_Glossary.md)
-        * [Tutorials and Courseware](android_portal/getting_started/Android_Tutorials/Android_Tutorials.md)
-        * [Android History](android_portal/getting_started/Android_History/Android_History.md)
-        * [Versions](android_portal/getting_started/Android_Versions/Android_Versions.md)
+        * [简介](android_portal/getting_started/Android_Intro/Android_Intro.md)
+        * [设计与架构](android_portal/getting_started/Android_Architecture/Android_Architecture.md)
+        * [工具集](android_portal/getting_started/Android_Tools/Android_Tools.md)
+        * [词汇表](android_portal/getting_started/Android_Glossary/Android_Glossary.md)
+        * [教程与课件](android_portal/getting_started/Android_Tutorials/Android_Tutorials.md)
+        * [历史](android_portal/getting_started/Android_History/Android_History.md)
+        * [版本](android_portal/getting_started/Android_Versions/Android_Versions.md)
 
     * [Android Linux 内核](android_portal/android_linux/README.md)
 
