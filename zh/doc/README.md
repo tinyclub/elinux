@@ -37,7 +37,7 @@
 
 * 注册并登录 github fork [代码仓库](https://github.com/tinyclub/elinux)
 
-* 注册 gitbook.com，在 gitbook.com 建立书籍并绑定到 github.com 刚 fork 的仓库。
+* 可选：注册 gitbook.com，在 gitbook.com 建立书籍并绑定到 github.com 刚 fork 的仓库。
 
 * clone 代码仓库并切到 develop 分支
 
@@ -68,7 +68,7 @@
     * *注*：请不要直接翻译 `en/` 下的内容，只翻译 `zh/` 下的即可。
 
 
-* 翻译前请参照如下安装 `gitbook` 环境，以 Ubuntu 为例
+* 可选：翻译前请参照如下安装 `gitbook` 环境，以 Ubuntu 为例
 
         $ sudo aptitude install -y retext git nodejs npm
         $ sudo ln -fs /usr/bin/nodejs /usr/bin/node
@@ -124,7 +124,7 @@
                     V2: ...
                     V3: ...
 
-* 翻译后预览和编译
+* 可选：翻译后预览和编译
 
     * 在本地编写可用 `Retext` 工具 预览，也可用 `pandoc` 转为 html（**注**：`pandoc` 转换结果跟 `gitbook` 略有差异）
 
