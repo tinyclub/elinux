@@ -39,10 +39,10 @@
 
 * 可选：注册 gitbook.com，在 gitbook.com 建立书籍并绑定到 github.com 刚 fork 的仓库。
 
-* clone 代码仓库并切到 develop 分支
+* Clone 代码仓库
 
         git clone https://github.com/tinyclub/elinux.git
-        cd elinux && git checkout develop
+        cd elinux
 
 * 找到自己认领的模块，先翻译一级链接，再翻译二级链接
 
@@ -50,10 +50,10 @@
 
         git remote add myelinux git@github.com:lzufalcon/elinux.git
 
-* 基于自己计划翻译的内容创建分支， 以 `zh/dev_portals/Boot_Time/Boot_Time.md` 为例，可以基于远程 `develop` 分支创建 `boot_time` 分支：
+* 基于自己计划翻译的内容创建分支， 以 `zh/dev_portals/Boot_Time/Boot_Time.md` 为例，可以创建 `boot_time` 分支：
 
         git fetch --all
-        git checkout -b boot_time tinyclub/develop
+        git checkout -b boot_time tinyclub/master
 
 * 先检测英文原文是否和“From”（即 eLinux.org）原稿一致，不一致就修复并提交。
     * 因为是脚本自动导入，所以难免会存在一定的出错几率。
@@ -153,11 +153,11 @@
 <!-- -->
         git checkout -b boot_time_upstream boot_time
         git fetch --all
-        git rebase --onto tinyclub/develop --root
+        git rebase --onto tinyclub/master --root
         git push myelinux boot_time_upstream
 
 
-* 之后，通过 Github 发送 Pull Request：本地选 `boot_time_upstream`，远程选 `develop`，也即是说要把自己仓库中的 `boot_time_upstream` 合并到远程的 `develop`
+* 之后，通过 Github 发送 Pull Request：本地选 `boot_time_upstream`，远程选 `master`，也即是说要把自己仓库中的 `boot_time_upstream` 合并到远程的 `master`
 
 * 评审人员收到后会分配人员评审
 
@@ -168,7 +168,7 @@
         // 处理来自校订人员的各种反馈
 
         git fetch --all
-        git rebase --onto tinyclub/develop --root
+        git rebase --onto tinyclub/master --root
         git push myelinux boot_time_upstream_v1
 
 * 重复上述 Pull Request 步骤，直到被 Merge 到主线
