@@ -11,7 +11,8 @@
     "links": {
         "sidebar": {
             "CE Linux Forum": "http://www.celinuxforum.org/",
-            "Embedded Linux Wiki": "http://elinux.org"
+            "Embedded Linux Wiki": "http://elinux.org",
+            "Cloud Lab": "http://tinylab.cloud:6080"
         }
     },
     "title": "Embedded Linux Wiki"
