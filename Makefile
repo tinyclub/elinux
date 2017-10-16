@@ -1,10 +1,13 @@
-all:
+all: install
 	gitbook build
 
-pdf:
+pdf: install
 	gitbook pdf
 
-test:
+install:
+	gitbook install
+
+test: install
 	sed -i -e "/English/d" LANGS.md
 	gitbook build
 	git checkout -- LANGS.md
