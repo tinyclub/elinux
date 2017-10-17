@@ -1,21 +1,9 @@
 
 # Build HowTo and Tips
 
-## Install
-
-    $ sudo aptitude install -y retext git nodejs npm
-    $ sudo ln -fs /usr/bin/nodejs /usr/bin/node
-    $ sudo aptitude install -y calibre fonts-arphic-gbsn00lp
-    $ sudo npm install gitbook-cli -g
-
-## Download
-
-    $ git clone https://github.com/tinyclub/elinux.git && cd elinux/
-
 ## Build
 
-    $ gitbook build // make
-    $ gitbook pdf   // make pdf
+To build this book, please use [Markdown Lab](http://tinylab.org/markdown-lab).
 
 ## Tips
 

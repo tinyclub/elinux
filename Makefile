@@ -1,28 +1,33 @@
-all: install
+all: serve
+
+html:
 	gitbook build
 
-pdf: install
+pdf:
 	gitbook pdf
 
-install:
-	gitbook install
+serve:
+	gitbook serve > .gitbook-serve.log 2>&1 &
 
-test: install
+view:
+	chromium-browser http://localhost:4000 >/dev/null 2>&1 &
+
+read: view
+
+test:
 	sed -i -e "/English/d" LANGS.md
 	gitbook build
 	git checkout -- LANGS.md
 	chromium-browser _book/index.html
 
 read-pdf:
-	evince book.pdf
-
-read: read-html
+	chromium-browser book*.pdf >/dev/null 2>&1 &
 
 read-html:
-	chromium-browser _book/index.html
+	chromium-browser _book/index.html >/dev/null 2>&1 &
 
 clean:
 	@rm -rf _book
 
 distclean: clean
-	@rm book.pdf
+	@rm book*.pdf

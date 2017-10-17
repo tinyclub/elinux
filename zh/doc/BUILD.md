@@ -1,29 +1,9 @@
 
 # 如何构建 GitBook
 
-## 安装
+## 构建
 
-    $ sudo aptitude install -y retext git nodejs npm
-    $ sudo ln -fs /usr/bin/nodejs /usr/bin/node
-    $ sudo aptitude install -y calibre fonts-arphic-gbsn00lp
-    $ npm config set registry https://registry.npm.taobao.org
-    $ npm config set ca ""
-    $ sudo npm install gitbook-cli -g
-
-    $ sudo npm install gitbook-plugin-disqus \
-                       gitbook-plugin-google_code_prettify \
-                       gitbook-plugin-collapsible-menu \
-                       gitbook-plugin-maxiang \
-                       gitbook-plugin-livereload -g
-
-## 下载
-
-    $ git clone https://github.com/tinyclub/elinux.git && cd elinux/
-
-## 构建 GitBook
-
-    $ gitbook build // make
-    $ gitbook pdf   // make pdf
+要编译本书，请使用 [Markdown Lab](http://tinylab.org/markdown-lab)。
 
 ## 小贴士
 
