@@ -1,5 +1,7 @@
 # Summary
 
+* [项目简介](README.md)
+
 * [翻译须知](doc/README.md)
 
     * [如何编译](doc/BUILD.md)
