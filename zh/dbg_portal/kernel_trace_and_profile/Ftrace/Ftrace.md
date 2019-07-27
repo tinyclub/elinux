@@ -1,3 +1,8 @@
+**关注译者公众号**：
+<br/>
+<img src='../../../../pic/tinylab-wechat.jpg' width='110px'/>
+<br/>
+
 > From: [eLinux.org](http://elinux.org/Ftrace "http://eLinux.org/Ftrace")
 
 原文：[eLinux.org](http://eLinux.org/Ftrace) <br />

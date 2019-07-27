@@ -1,4 +1,10 @@
-﻿> 原文：[eLinux.org](http://elinux.org/Kernel_Trace_Systems) <br />
+﻿**关注译者公众号**：
+<br/>
+<img src='../../../../pic/tinylab-wechat.jpg' width='110px'/>
+<br/>
+
+
+> 原文：[eLinux.org](http://elinux.org/Kernel_Trace_Systems) <br />
 > 翻译：[@Lotte-Bai](https://github.com/Lotte-Bai) <br />
 > 校订：[@lzufalcon](https://github.com/lzufalcon) <br />
 

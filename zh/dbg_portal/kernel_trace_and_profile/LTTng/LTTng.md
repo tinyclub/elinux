@@ -1,3 +1,9 @@
+**关注译者公众号**：
+<br/>
+<img src='../../../../pic/tinylab-wechat.jpg' width='110px'/>
+<br/>
+
+
 > From: [eLinux.org](http://elinux.org/LTTng "http://eLinux.org/LTTng")
 
 原文：[eLinux.org](http://eLinux.org/LTTng) <br />
