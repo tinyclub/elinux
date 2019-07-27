@@ -1,3 +1,9 @@
+**关注译者公众号**：
+<br/>
+<img src='../../../pic/tinylab-wechat.jpg' width='110px'/>
+<br/>
+
+
 > 书籍：[嵌入式 Linux 知识库](http://tinylab.gitbooks.io/elinux)
 > 原文：[eLinux.org](http://eLinux.org/Legal_Issues "http://eLinux.org/Legal_Issues")
 > 翻译：[@zxqhbd](https://github.com/zxqhbd)

@@ -1,3 +1,9 @@
+**关注译者公众号**：
+<br/>
+<img src='../../../../pic/tinylab-wechat.jpg' width='110px'/>
+<br/>
+
+
 > 原文：[eLinux.org](http://eLinux.org/Mandatory_Access_Control_Comparison.md)<br/>
 > 翻译：[@lzz5235](https://github.com/lzz5235)<br/>
 > 校订：[@lzufalcon](https://github.com/lzufalcon)<br/>

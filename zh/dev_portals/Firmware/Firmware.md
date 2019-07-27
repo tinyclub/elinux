@@ -1,3 +1,8 @@
+**关注译者公众号**：
+<br/>
+<img src='../../../pic/tinylab-wechat.jpg' width='110px'/>
+<br/>
+
 > 原文：[eLinux.org](http://eLinux.org/Firmware "http://eLinux.org/Firmware")<br/>
 > 翻译：[@lzufalcon](https://github.com/lzufalcon)
 

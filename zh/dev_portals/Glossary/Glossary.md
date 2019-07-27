@@ -1,3 +1,9 @@
+**关注译者公众号**：
+<br/>
+<img src='../../../pic/tinylab-wechat.jpg' width='110px'/>
+<br/>
+
+
 > 原文: [eLinux.org](http://eLinux.org/Glossary "http://eLinux.org/Glossary")<br/>
 > 翻译：[@mintisan](https://github.com/mintisan)<br/>
 > 校订：[@lzufalcon](https://github.com/lzufalcon)

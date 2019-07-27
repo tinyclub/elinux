@@ -1,3 +1,9 @@
+**关注译者公众号**：
+<br/>
+<img src='../../../pic/tinylab-wechat.jpg' width='110px'/>
+<br/>
+
+
 > 书籍：[嵌入式 Linux 知识库](http://tinylab.gitbooks.io/elinux)
 > 原文：[eLinux.org](http://eLinux.org/System_Size "http://eLinux.org/System_Size")
 > 翻译：[@wengpingbo](https://github.com/wengpingbo)

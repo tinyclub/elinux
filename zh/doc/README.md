@@ -1,3 +1,7 @@
+**关注译者公众号**：
+<br/>
+<img src='../../pic/tinylab-wechat.jpg' width='110px'/>
+<br/>
 
 # 嵌入式 Linux 知识库翻译小组用户手册
 

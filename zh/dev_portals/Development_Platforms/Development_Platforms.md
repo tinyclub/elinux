@@ -1,3 +1,9 @@
+**关注译者公众号**：
+<br/>
+<img src='../../../pic/tinylab-wechat.jpg' width='110px'/>
+<br/>
+
+
 > 原文：[eLinux.org](http://eLinux.org/Development_Platforms "http://eLinux.org/Development_Platforms")<br/>
 > 翻译：[@lzufalcon](https://github.com/lzufalcon)
 

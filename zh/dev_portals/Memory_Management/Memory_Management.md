@@ -1,3 +1,9 @@
+**关注译者公众号**：
+<br/>
+<img src='../../../pic/tinylab-wechat.jpg' width='110px'/>
+<br/>
+
+
 > 原文：[eLinux.org](http://eLinux.org/Memory_Management "http://eLinux.org/Memory_Management")<br/>
 > 翻译：[@zipper1956](https://github.com/zipper)<br/>
 > 校订：[@wengpingbo](https://github.com/wengpingbo), [@lzufalcon](https://github.com/lzufalcon)<br/>

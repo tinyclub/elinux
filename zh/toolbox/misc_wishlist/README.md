@@ -1,3 +1,8 @@
+**关注译者公众号**：
+<br/>
+<img src='../../../pic/tinylab-wechat.jpg' width='110px'/>
+<br/>
+
 
 # 杂项与收藏
 
