@@ -10,8 +10,10 @@
     },
     "links": {
         "sidebar": {
-            "项目首页": "http://www.tinylab.org/elinux",
-            "泰晓科技": "http://www.tinylab.org",
+            "泰晓科技-项目首页": "http://www.tinylab.org/elinux",
+            "泰晓学院-视频课堂": "https://m.cctalk.com/inst/sh8qtdag",
+            "知识星球-Linux频道": "https://t.zsxq.com/uB2vJyF",
+            "开源小店-相关产品": "https://shop155917374.taobao.com/",
             "Linux 内核文档": "http://tinylab.gitbooks.io/linux-doc"
         }
     },
